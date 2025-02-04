@@ -2,7 +2,7 @@
 title: 雲端基礎結構上的Commerce
 description: 瞭解如何在雲端基礎結構上建立、部署和管理Commerce。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 2cd0f97b89b3a87b40ac36655304b2c1cd11b4b1
+source-git-commit: 10818a862fbba14bdfb3de1e6107d745104e4791
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -61,3 +61,4 @@ Commerce雲端基礎結構指南假設您具備一些關於Adobe Commerce應用�
 - [Adobe Commerce開發人員檔案](https://developer.adobe.com/commerce/docs/) (Adobe Developer網站) — 開發、自訂、整合、擴充及使用進階功能
 
 - [Adobe Commerce檔案](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的[!DNL Commerce]專案
+
