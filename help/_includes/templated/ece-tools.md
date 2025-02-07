@@ -1,5 +1,5 @@
 ---
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+source-git-commit: 6a686858394e65dfbb665bb76332ee13348dad7e
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 3%
@@ -7,7 +7,7 @@ ht-degree: 3%
 ---
 # ece-tools
 
-**版本**： 2002.2.0
+**版本**： 2002.2.1
 
 此參考包含34個可透過`ece-tools`命令列工具使用的命令。
 在雲端基礎結構上的Adobe Commerce中使用`ece-tools list`命令會自動產生初始清單。
@@ -453,7 +453,7 @@ ece-tools build:transfer
 ece-tools cloud:config:create <configuration>
 ```
 
-使用指定的組建、部署和部署後變陣列態建立`.magento.env.yaml`檔案。 覆寫任何現有的`.magento,.env.yaml`檔案。
+使用指定的組建、部署和部署後變陣列態建立`.magento.env.yaml`檔案。 覆寫任何現有的`.magento.env.yaml`檔案。
 
 ### 引數
 
