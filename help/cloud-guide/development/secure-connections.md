@@ -4,9 +4,10 @@ description: 瞭解如何在雲端基礎結構專案上將SSH金鑰套用至您�
 role: Developer
 feature: Cloud, Security
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 73af13d8-7085-4ac8-9cfe-9772bc6bc112
+source-git-commit: c25e5b74ae8105995107860246ecb9ba45910bb1
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ Secure Shell (SSH)是用來安全登入遠端伺服器和系統的常見通訊�
 
 ## 新增SSH公開金鑰至您的帳戶
 
-在雲端基礎結構帳戶上將SSH公開金鑰新增到Adobe Commerce後，請在您的帳戶上重新部署所有作用中的環境來安裝金鑰。
+在您新增或更新雲端基礎結構帳戶上的SSH公開金鑰至您的Adobe Commerce後，請在您的帳戶上[重新部署所有使用中的環境](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)以安裝金鑰。
 
 您可以使用下列其中一種方法將SSH金鑰新增至您的帳戶： Cloud CLI或[!DNL Cloud Console]。
 
