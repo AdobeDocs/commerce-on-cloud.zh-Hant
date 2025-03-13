@@ -2,9 +2,10 @@
 title: Pro專案工作流程
 description: 瞭解如何使用Pro開發和部署工作流程。
 feature: Cloud, Iaas, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: efe41991-8940-4d5c-a720-80369274bee3
+source-git-commit: b4905acf71e4cb71eb369cb6d4bb3abe9ada4e9d
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ Pro專案包含單一Git存放庫，其中包含全域`master`分支和三個主
 
 ## 開發工作流程
 
-整合環境提供單一、基礎`integration`分支，其中包含雲端基礎結構程式碼上的Adobe Commerce。 您可以建立一個額外的使用中環境分支。 這允許將最多兩個作用中的分支部署到Platform as a Service (PaaS)容器。 非使用中環境的數量沒有限制。
+整合環境提供單一、基礎`integration`分支，其中包含雲端基礎結構程式碼上的Adobe Commerce。 您可以建立一個額外的使用中環境分支。 這允許將最多兩個作用中的分支部署到Platform as a Service (PaaS)容器。 非作用中環境的數量沒有限制，但是非作用中環境越多，載入Cloud Console所需的時間就越長。
 
 {{enhanced-integration-envs}}
 
