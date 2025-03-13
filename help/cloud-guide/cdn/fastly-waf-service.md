@@ -2,7 +2,8 @@
 title: Web應用程式防火牆(WAF)
 description: 瞭解Fastly WAF服務如何偵測、記錄並封鎖惡意請求流量，以免損害Adobe Commerce網路或網站。
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f00e35f2-9800-4e24-a4d0-d36fde59a003
+source-git-commit: 7e61673b343fb954b53bf7cbae88efaf7bbfab4c
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 0%
@@ -17,9 +18,9 @@ WAF服務提供下列優點：
 
 - **PCI法規遵循**—WAF啟用可確保生產環境中的Adobe Commerce店面符合PCI DSS 6.6安全性需求。
 - **預設WAF原則** — 由Fastly設定和維護的預設WAF原則，提供量身打造的安全性規則集合，可保護您的Adobe Commerce Web應用程式免受各種攻擊，包括插入攻擊、惡意輸入、跨網站指令碼、資料匯出、HTTP通訊協定違規，以及其他[OWASP十大](https://owasp.org/www-project-top-ten/)安全性威脅。
-- **WAF上線和啟用** — 布建完成後的2至3週內，Adobe在您的生產環境中部署並啟用預設WAF原則。
+- **WAF上線和啟用** — 布建完成後的2至3週內，Adobe會在您的生產環境中部署並啟用預設WAF原則。
 - **操作與維護支援**—
-   - Adobe和Fastly為WAF服務設定和管理您的記錄、規則和警示。
+   - Adobe和Fastly會設定及管理WAF服務的記錄、規則和警示。
    - Adobe會分類與WAF服務問題相關的客戶支援票證，這些服務問題會將合法流量封鎖為優先順序1問題。
    - 自動升級至WAF服務版本，確保可立即涵蓋新的或不斷演變的利用漏洞行為。 請參閱[WAF維護與升級](#waf-maintenance-and-updates)。
 
@@ -29,7 +30,7 @@ WAF服務提供下列優點：
 
 ## 啟用WAF
 
-Adobe功能會在布建完成後的2至3週內，針對新帳戶啟用WAF服務。 WAF是透過Fastly CDN服務實作。 您不需要安裝或維護任何硬體或軟體。
+Adobe會在布建完成後的2至3週內，針對新帳戶啟用WAF服務。 WAF是透過Fastly CDN服務實作。 您不需要安裝或維護任何硬體或軟體。
 
 >[!NOTE]
 >
@@ -39,7 +40,7 @@ Adobe功能會在布建完成後的2至3週內，針對新帳戶啟用WAF服務�
 
 WAF服務與Fastly整合，並使用Fastly CDN服務中的快取邏輯來篩選Fastly全域節點的流量。 我們在您的生產環境中啟用WAF服務，預設的WAF原則是根據Trustwave SpiderLabs](https://github.com/owasp-modsecurity/ModSecurity)的[ModSecurity規則和OWASP十大安全性威脅。
 
-WAF服務會針對WAF規則集檢查HTTP和HTTPS流量(GET和POST請求)，並封鎖惡意流量或不遵守特定規則的流量。 此服務只會檢查嘗試重新整理快取的原始繫結流量。 因此，我們會在Fastly快取中停止大多數的攻擊流量，保護原始流量免受惡意攻擊。 若僅處理原始流量，WAF服務可以保留快取效能，只對每個非快取要求引進估計為1.5毫秒至20毫秒的延遲。
+WAF服務會針對WAF規則集檢查HTTP和HTTPS流量(GET和POST要求)，並封鎖惡意流量或不遵守特定規則的流量。 此服務只會檢查嘗試重新整理快取的原始繫結流量。 因此，我們會在Fastly快取中停止大多數的攻擊流量，保護原始流量免受惡意攻擊。 若僅處理原始流量，WAF服務可以保留快取效能，只對每個非快取要求引進估計為1.5毫秒至20毫秒的延遲。
 
 ## 疑難排解封鎖的請求
 
@@ -49,7 +50,7 @@ WAF服務啟用時，會根據WAF規則檢查所有網頁和管理員流量，�
 
 您可以從管理員自訂此錯誤回應頁面。 請參閱[自訂WAF回應頁面](fastly-custom-response.md#customize-the-waf-error-page)。
 
-如果您的Adobe Commerce管理頁面或店面傳回`403 Forbidden`錯誤頁面以回應合法的URL請求，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 從錯誤回應頁面複製參考ID，並將其貼到票證說明中。
+如果您的Adobe Commerce管理頁面或店面傳回`403 Forbidden`錯誤頁面以回應合法的URL請求，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)。 從錯誤回應頁面複製參考ID，並將其貼到票證說明中。
 
 若要使用New Relic識別特定請求的WAF回應，請參閱下列內容：
 
