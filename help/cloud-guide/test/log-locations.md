@@ -2,7 +2,8 @@
 title: 檢視和管理記錄檔
 description: 瞭解雲端基礎結構中可用的記錄檔型別以及在何處可以找到它們。
 last-substantial-update: 2023-05-23T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
+source-git-commit: 7615347cd5b528406c2a0e72be3450350655eeb9
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 0%
@@ -208,13 +209,13 @@ type: warning
 
 | 記錄檔 | Pro Staging | Pro Production |
 | ------------------- | --------------------------------------------------- | ----------------------------------------------- |
-| **部署記錄檔** | 僅第一個節點：<br>`/var/log/platform/<project-ID>_stg/deploy.log` | 僅第一個節點：<br>`/var/log/platform/<project-ID>/deploy.log` |
-| **部署後記錄檔** | 僅第一個節點：<br>`/var/log/platform/<project-ID>_stg/post_deploy.log` | 僅第一個節點：<br>`/var/log/platform/<project-ID>/post_deploy.log` |
-| **Cron記錄檔** | 僅第一個節點：<br>`/var/log/platform/<project-ID>_stg/cron.log` | 僅第一個節點：<br>`/var/log/platform/<project-ID>/cron.log` |
-| **Nginx存取記錄檔** | `/var/log/platform/<project-ID>_stg/access.log` | `/var/log/platform/<project-ID>/access.log` |
-| **Nginx錯誤記錄** | `/var/log/platform/<project-ID>_stg/error.log` | `/var/log/platform/<project-ID>/error.log` |
-| **PHP存取記錄檔** | `/var/log/platform/<project-ID>_stg/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
-| **PHP FPM記錄檔** | `/var/log/platform/<project-ID>_stg/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
+| **部署記錄檔** | 僅第一個節點：<br>`/var/log/platform/<project-ID>_stg*/deploy.log` | 僅第一個節點：<br>`/var/log/platform/<project-ID>/deploy.log` |
+| **部署後記錄檔** | 僅第一個節點：<br>`/var/log/platform/<project-ID>_stg*/post_deploy.log` | 僅第一個節點：<br>`/var/log/platform/<project-ID>/post_deploy.log` |
+| **Cron記錄檔** | 僅第一個節點：<br>`/var/log/platform/<project-ID>_stg*/cron.log` | 僅第一個節點：<br>`/var/log/platform/<project-ID>/cron.log` |
+| **Nginx存取記錄檔** | `/var/log/platform/<project-ID>_stg*/access.log` | `/var/log/platform/<project-ID>/access.log` |
+| **Nginx錯誤記錄** | `/var/log/platform/<project-ID>_stg*/error.log` | `/var/log/platform/<project-ID>/error.log` |
+| **PHP存取記錄檔** | `/var/log/platform/<project-ID>_stg*/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
+| **PHP FPM記錄檔** | `/var/log/platform/<project-ID>_stg*/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
 
 ### 存檔的記錄檔
 
@@ -234,7 +235,7 @@ type: warning
 
 由於每個服務都在個別的容器中執行，因此整合環境中無法使用服務記錄檔。 雲端基礎結構上的Adobe Commerce僅提供對整合環境中Web伺服器容器的存取權。 以下服務記錄位置適用於Pro生產和中繼環境：
 
-- **Redis記錄檔**： `/var/log/platform/<project-ID>_stg/redis-server-<project-ID>_stg.log`
+- **Redis記錄檔**： `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
 - **Elasticsearch記錄檔**： `/var/log/elasticsearch/elasticsearch.log`
 - **Java記憶體回收記錄**： `/var/log/elasticsearch/gc.log`
 - **郵件記錄檔**： `/var/log/mail.log`
