@@ -2,9 +2,10 @@
 title: PHP設定
 description: 瞭解在雲端基礎結構中用於Commerce應用程式配置的最佳PHP設定。
 feature: Cloud, Configuration, Extensions
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
+source-git-commit: 1725741cfab62a2791fe95cfae9ed9dffa352339
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -66,10 +67,16 @@ realpath_cache_ttl = 7200
 
 ### 檢查自訂PHP設定
 
-將`php.ini`變更推送至雲端環境後，您可以檢查自訂PHP設定是否已新增至您的環境。 例如，使用SSH登入遠端環境，並使用類似下列的程式檢視檔案：
+將`php.ini`變更推送至雲端環境後，您可以檢查自訂PHP設定是否已新增至您的環境。 例如，使用SSH登入遠端環境、顯示PHP組態資訊，以及篩選`register_argc_argv`指示詞：
 
 ```bash
-cat /etc/php/<php-version>/fpm/php.ini
+php -i | grep register_argc_ar
+```
+
+範例輸出：
+
+```text
+register_argc_argv => On => On
 ```
 
 >[!WARNING]
@@ -127,7 +134,7 @@ PHP模組需求與Adobe Commerce版本繫結。 請參閱[PHP需求](https://exp
 sourceguardian.restrict_unencoded = "1"
 ```
 
-請參閱SourceGuardian檔案的[第3.5節](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf)。 _這是PDF_&#x200B;的連結。
+請參閱SourceGuardian檔案的[第3.5節](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf)。 _這是PDF的連結_。
 
 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，以取得在所有生產環境和Pro測試環境中安裝這些PHP擴充功能的協助。 包含更新的`.magento/services.yaml`檔案、`.magento.app.yaml`檔案（包含更新的PHP版本和任何其他PHP副檔名）。 若是即時生產環境的變更，您至少必須提供48小時的通知。 雲端基礎結構團隊更新您的專案最多可能需要48小時的時間。
 
