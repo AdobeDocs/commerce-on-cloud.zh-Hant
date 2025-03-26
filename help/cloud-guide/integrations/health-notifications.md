@@ -1,10 +1,11 @@
 ---
 title: 健康狀態通知
-description: 瞭解如何在雲端基礎結構專案的Adobe Commerce上設定磁碟空間使用情形的Slack、電子郵件和尋呼通知。
+description: 瞭解如何設定Slack、電子郵件和PagerDuty通知，以取得雲端基礎結構專案上Adobe Commerce的磁碟空間使用量。
 feature: Cloud, Observability, Integration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 5a7f37e9-e8f9-4b6b-b628-60dcaa60cc64
+source-git-commit: c3c708656e3d79c0893d1c02e60dcdf2ad8d7c7c
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ magento-cloud integration:add --type health.email --from-address you@example.com
 
 ## Slack頻道通知
 
-Slack是一種外部服務，使用稱為機器人的互動式應用程式在聊天室中張貼訊息。 您必須先為您的Slack群組建立自訂[機器人使用者](https://api.slack.com/bot-users)，才能以Slack接收健康情況通知。 為您的管道或管道設定機器人使用者後，請儲存Slack提供的[機器人Token](https://api.slack.com/docs/token-types#bot)以註冊您的整合。 以下範例會在Slack頻道中註冊健康情況通知：
+Slack是一項外部服務，使用稱為機器人的互動式應用程式在聊天室中張貼訊息。 您必須先為您的Slack群組建立自訂[機器人使用者](https://api.slack.com/bot-users)，才能在Slack中接收健康情況通知。 為您的管道或管道設定機器人使用者後，請儲存Slack提供的[機器人Token](https://api.slack.com/docs/token-types#bot)以註冊您的整合。 以下範例會在Slack頻道中註冊健康情況通知：
 
 ```bash
 magento-cloud integration:add --type health.slack --token SLACK_BOT_TOKEN --channel '#slack-channel-name'
@@ -44,3 +45,13 @@ PagerDuty是一項外部服務，可將重要問題通知隨叫隨到的團隊�
 ```bash
 magento-cloud integration:add --type health.pagerduty --routing-key PAGERDUTY_ROUTING_KEY
 ```
+
+## 記錄管理
+
+若要增加可用磁碟空間，您可以截斷或移除環境中的記錄檔。 如果已啟用logrotate，請先下載記錄檔的備份復本，然後移除它們：
+
+```bash
+rm -rf some-log-file.log.gz
+```
+
+或者，您可以截斷個別記錄檔以縮減其大小。 如需記錄檔截斷的詳細範例，請參閱視訊教學課程：截斷記錄檔{target="_blank"}。
