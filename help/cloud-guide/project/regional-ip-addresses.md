@@ -1,16 +1,17 @@
 ---
 title: 地區IP位址
 description: 檢視Adobe Commerce在整合環境的雲端基礎結構上使用的AWS和Azure區域的IP位址清單。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1137f5cf-4879-46d7-878c-bf47de7a0e34
+source-git-commit: f2214dd56625847132298892635c7cf738c3d71f
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
 
 # 地區IP位址
 
-下表列出Adobe Commerce在雲端基礎結構[整合環境](../architecture/pro-architecture.md#integration-environment)上使用的傳入和傳出IP位址。 這些IP位址穩定，但可能會變更。 Adobe會在進行任何IP位址變更前通知客戶。
+下表列出Adobe Commerce在雲端基礎結構[整合環境](../architecture/pro-architecture.md#integration-environment)上使用的傳入和傳出IP位址。 這些IP位址穩定，但可能會變更。 Adobe會先通知客戶，然後再進行任何IP位址變更。
 
 處理整合環境的語法如下：
 
@@ -22,7 +23,9 @@ ht-degree: 0%
 - **專案識別碼** = 13字元的專案識別碼
 - **地區** = AWS或Azure地區名稱
 
-您可以使用`ping`命令來擷取傳入的IP位址：
+您可以使用`ping`或`dig`命令來擷取傳入的IP位址：
+
+**Ping**
 
 ```bash
 ping integration-abcd123-abcd78910.us-3.magentosite.cloud
@@ -35,6 +38,18 @@ PING integration-abcd123-abcd78910.us-3.magentosite.cloud (34.210.133.187): 56 d
 Request timeout for icmp_seq 0
 Request timeout for icmp_seq 1
 Request timeout for icmp_seq 2
+```
+
+**Dig**
+
+```bash
+dig +short integration-abcd123-abcd78910.us-3.magentosite.cloud
+```
+
+範例回應
+
+```bash
+34.210.133.187
 ```
 
 如果您有封鎖傳出SSH連線的公司防火牆，您可以將傳入的IP位址新增至允許清單。
