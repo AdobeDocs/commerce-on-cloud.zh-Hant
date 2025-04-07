@@ -2,11 +2,11 @@
 title: ECE-Tools發行說明
 description: 請參閱ECE-Tools套件的最新改良清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-02-06T00:00:00Z
+last-substantial-update: 2024-04-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: 2522e606aebac79285793cd40428d3e064a3c1db
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3065'
 ht-degree: 0%
 
 ---
@@ -28,13 +28,19 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.1 {#latest}
+## v2002.2.2 {#latest}
 
+發行日期： 2025年4月7日
+
+- ![新圖示](../../assets/new.svg) **Valkey** — 已新增對新服務(Valkey)的支援，此服務是取代Redis的替代服務。&lt;！— MCLOUD-13455 —>
+- ![修正圖示](../../assets/fix.svg) **適用於2.4.4/2.4.5**&#x200B;的Opensearch2 — 已在Adobe Commerce版本2.4.4/2.4.5中新增對`opensearch2`的支援。 &lt;！— MCLOUD-13493 —>
+
+## v2002.2.1
 
 發行日期： 2024年2月6日
 
-- ![新圖示](../../assets/new.svg) **PHP 8.4** — 已新增對PHP 8.4的支援。<!-- MCLOUD-13145	 - -->
-- ![修正圖示](../../assets/fix.svg) **Opensearch的驗證器** — 修正產生錯誤服務版本之錯誤訊息的驗證器。<!-- MCLOUD-13184	 - -->
+- ![新圖示](../../assets/new.svg) **PHP 8.4** — 已新增對PHP 8.4的支援。<!-- MCLOUD-13145     - -->
+- ![修正圖示](../../assets/fix.svg) **Opensearch的驗證器** — 修正產生錯誤服務版本之錯誤訊息的驗證器。&lt;！— MCLOUD-13184 —>
 
 
 ## v2002.2.0
@@ -51,7 +57,7 @@ ht-degree: 0%
 發行日期： 2024年5月21日
 
 - ![新圖示](../../assets/new.svg) **Lua** — 已為CACHE_CONFIGURATION新增選項useLua。
-- ![修正圖示](../../assets/fix.svg) **驗證器** — 已更新Redis和RabbitMQ新版本的驗證器。
+- ![修正圖示](../../assets/fix.svg) **驗證器** — 已更新新版Redis和RabbitMQ的驗證器。
 
 ## v2002.1.18
 
@@ -64,7 +70,7 @@ ht-degree: 0%
 
 發行日期： 2024年1月16日
 
-- ![修正圖示](../../assets/fix.svg) **Elasticsearch與OpenSearch的驗證器** — 修正啟用LiveSearch時，產生錯誤訊息以安裝搜尋服務的驗證器。<!-- MCLOUD-10167 -->
+- ![修正圖示](../../assets/fix.svg) **Elasticsearch與OpenSearch的驗證器** — 修正啟用LiveSearch時，產生誤導性訊息的安裝搜尋服務的驗證器。<!-- MCLOUD-10167 -->
 - ![修正圖示](../../assets/fix.svg) **部署警告** — 修正導致非空白資料夾出現部署警告的問題。<!-- MCLOUD-8958 -->
 
 ## v2002.1.16
@@ -79,7 +85,7 @@ ht-degree: 0%
 
 - ![修正圖示](../../assets/fix.svg) **錯誤碼** — 已更新錯誤碼結構描述和錯誤碼檔案產生器。
 - ![修正圖示](../../assets/fix.svg) **自訂Redis模型的驗證器** — 已更新自訂Redis後端模型的驗證器。 [檢視快取組態的範例](../environment/variables-deploy.md#cache_configuration)。
-- ![修正圖示](../../assets/fix.svg) **RabbitMQ的驗證器** — 新增RabbitMQ 3.11的支援
+- ![修正圖示](../../assets/fix.svg) **RabbitMQ的驗證器** — 已新增RabbitMQ 3.11的支援
 - ![修正圖示](../../assets/fix.svg) **修正錯誤的連結** — 修正歡迎電子郵件範本中上線檔案的錯誤連結。
 
 ## v2002.1.14
@@ -94,7 +100,7 @@ ht-degree: 0%
 
 發行日期： 2022年10月27日
 
-- ![新圖示](../../assets/new.svg) **已新增Adobe Commerce的Adobe I/O Events支援**。 擴充功能開發人員現在可以使用[Adobe I/O Events](https://developer.adobe.com/events/docs/)架構，將Commerce事件資訊從雲端執行個體傳送至其為[AdobeApp Builder](https://developer.adobe.com/app-builder/docs/overview/)撰寫的應用程式。 適用於Adobe Commerce的Adobe I/O Events在合作夥伴預覽中。<!-- CEXT-932 -->
+- ![新圖示](../../assets/new.svg) **已新增Adobe Commerce的Adobe I/O Events支援**。 擴充功能開發人員現在可以使用[Adobe I/O Events](https://developer.adobe.com/events/docs/)架構，將Commerce事件資訊從雲端執行個體傳送至其為[Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)撰寫的應用程式。 適用於Adobe Commerce的Adobe I/O Events在合作夥伴預覽中。<!-- CEXT-932 -->
 - ![新圖示](../../assets/new.svg) **OPcache組態的驗證器** — 新增驗證器以檢查排除路徑的OPcache組態。<!-- MCLOUD-9485 -->
 - ![修正圖示](../../assets/fix.svg) **修正GraphQL快取組態的問題** — 現在ECE-Tools會將GraphQL `id_salt`值保留在`app/etc/env.php`檔案的`cache`組態中。<!-- MCLOUD-9486 -->
 
@@ -117,7 +123,7 @@ ht-degree: 0%
 
 發行日期： 2022年3月31日
 
-- ![修正圖示](../../assets/fix.svg) **Elasticsearch7.10** — 更新驗證器以支援7.10版本的Elasticsearch。<!-- MCLOUD-8548 -->
+- ![修正圖示](../../assets/fix.svg) **Elasticsearch 7.10** — 更新驗證器以支援Elasticsearch 7.10版本。<!-- MCLOUD-8548 -->
 
 ## v2002.1.9
 
@@ -151,7 +157,7 @@ ht-degree: 0%
 
 - ![修正圖示](../../assets/fix.svg) **已更新`symphony/console`**&#x200B;的撰寫器需求 — 已更新`symphony/console`套件的ECE-Tools `composer.json`版本需求，以修正導致`di:compile`命令失敗並出現下列錯誤的問題： `Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
 
-- ![修正圖示](../../assets/fix.svg)已更新終止軟體檢查(`eol.yaml`)以包含Elasticsearch7.9.x。<!--MCLOUD-7938-->
+- ![修正圖示](../../assets/fix.svg)已更新終止軟體檢查(`eol.yaml`)以包含Elasticsearch 7.9.x。<!--MCLOUD-7938-->
 
 ## v2002.1.6
 
@@ -159,7 +165,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **Redis驗證認證** — 已新增在部署階段從`relationships`屬性讀取Redis授權認證的功能。<!--MCLOUD-7694-->
 
-- ![新圖示](../../assets/new.svg) **Elasticsearch授權認證** — 已新增在部署階段從`relationships`屬性讀取Elasticsearch授權認證的能力。<!--MCLOUD-7695-->
+- ![新圖示](../../assets/new.svg) **Elasticsearch授權認證** — 已新增在部署階段從`relationships`屬性讀取Elasticsearch授權認證的功能。<!--MCLOUD-7695-->
 
 - ![新圖示](../../assets/new.svg) **專用工作階段存放服務** — 已新增`redis-session`作為工作階段存放的第二個選項。 您可以使用`redis-session`服務來儲存工作階段資訊，並使用`redis`服務來快取，以提供更好的效能。<!--MCLOUD-7698-->
 
@@ -219,7 +225,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg)已新增Elasticsearch驗證，以檢查Elasticsearch服務版本與Adobe Commerce版本之間的相容性。<!--MCLOUD-7193-->
 
-- ![新圖示](../../assets/new.svg)已更新Elasticsearch相容性錯誤訊息，以顯示與Adobe CommerceElasticsearch模組相容的Elasticsearch版本。 錯誤訊息現在會提供要在您的雲端基礎結構中安裝的特定Elasticsearch版本，以便與您的Adobe Commerce版本使用的Elasticsearch模組相容。 檢視[警告錯誤，部署階段](../dev-tools/error-reference.md#deploy-stage-1).<!--MCLOUD-6698-->
+- ![新圖示](../../assets/new.svg)已更新Elasticsearch相容性錯誤訊息，以顯示與Adobe Commerce Elasticsearch模組相容的Elasticsearch版本。 錯誤訊息現在會提供要在您的雲端基礎結構中安裝的特定Elasticsearch版本，以便與您的Adobe Commerce版本使用的Elasticsearch模組相容。 檢視[警告錯誤，部署階段](../dev-tools/error-reference.md#deploy-stage-1).<!--MCLOUD-6698-->
 
 - ![新圖示](../../assets/new.svg)已針對無效的`MAGE_MODE`環境變數設定新增警告錯誤`2026`和`2027`。 唯一有效值為`production`。 在此修正之前，`MAGE_MODE`可以設定為`developer`且沒有部署錯誤，只會在稍後嘗試寫入唯讀檔案時造成錯誤。 檢視[警告錯誤](../dev-tools/error-reference.md#warning-errors).<!--MCLOUD-6708-->
 
@@ -253,7 +259,7 @@ ht-degree: 0%
 
    - 錯誤碼102 — 新增當`env.php`檔案不可寫入<!--MCLOUD-6221-->時所發生問題的額外檢查
 
-- ![新圖示](../../assets/new.svg)已新增&#x200B;**QUALITY_PATCH**&#x200B;環境變數，以指定一或多個要在部署過程中套用的品質修補程式。 檢視[建置變數](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->
+- ![新圖示](../../assets/new.svg)已新增&#x200B;**QUALITY_PATCHES**&#x200B;環境變數，以指定一或多個要在部署過程中套用的品質修補程式。 檢視[建置變數](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->
 
 ## v2002.1.1
 
@@ -293,7 +299,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **驗證改善**—
 
-   - ![新圖示](../../assets/new.svg) **Elasticsearch7.x相容性檢查** — 已更新Elasticsearch7.x軟體相容性檢查的Elasticsearch驗證。<!--MCLOUD-5542-->
+   - ![新圖示](../../assets/new.svg) **Elasticsearch 7.x相容性檢查** — 已針對Elasticsearch 7.x軟體相容性檢查更新Elasticsearch驗證。<!--MCLOUD-5542-->
 
    - ![新圖示](../../assets/new.svg) **已更新服務版本和EOL驗證檢查** — 已更新驗證以根據Adobe Commerce 2.4檢查已安裝的服務版本。<!--MCLOUD-6144-->
 
