@@ -3,9 +3,9 @@ user-guide-title: 雲端型 Commerce 的指南
 user-guide-description: 了解如何在雲端基礎結構上管理 Adobe Commerce 應用程式。
 product: magento
 feature: Cloud
-source-git-commit: 4e107bb8696c3c7cb76a0a702624aeb754648f70
+source-git-commit: fd7879e8f3c9e1965cf4aa3d99824e577971529d
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '357'
 ht-degree: 7%
 
 ---
@@ -136,6 +136,7 @@ ht-degree: 7%
       + [OpenSearch](services/opensearch.md)
       + [RabbitMQ](services/rabbitmq.md)
       + [Redis](services/redis.md)
+      + [Valkey](services/valkey.md)
 + Fastly服務{#cdn}
    + [概觀](cdn/fastly.md)
    + Fastly設定{#setup-fastly}
