@@ -5,7 +5,8 @@ role: Developer
 feature: Cloud, Install
 topic: Development
 last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 14fb0b41-1c3a-4abc-8726-cea16ab00ba8
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 ## 必要的套件
 
-雲端基礎結構上的Adobe Commerce使用Composer來管理專案的相依性和升級。 對於本機開發，您必須安裝與您的雲端專案相容的PHP和Composer版本。 例如，如果您使用[!DNL Commerce] 2.4.7雲端範本，您會看到[`.magento.app.yaml`](https://github.com/magento/magento-cloud/blob/2.4.7/.magento.app.yaml)設定檔使用&#x200B;**PHP 8.3**&#x200B;和&#x200B;**Composer 2.7.2**。
+雲端基礎結構上的Adobe Commerce使用Composer來管理專案的相依性和升級。 對於本機開發，您必須安裝與您的雲端專案相容的PHP和Composer版本。 例如，如果您使用[!DNL Commerce] 2.4.8雲端範本，您會看到[`.magento.app.yaml`](https://github.com/magento/magento-cloud/blob/2.4.8/.magento.app.yaml)組態檔使用&#x200B;**PHP 8.4**&#x200B;和&#x200B;**Composer 2.8.4**。
 
 Composer會將專案所需的程式庫和相依性安裝在`vendor`目錄中。 下列必要的撰寫器檔案位於專案根目錄中：
 
@@ -46,10 +47,10 @@ Composer會將專案所需的程式庫和相依性安裝在`vendor`目錄中。 
 >=current_version <next_version
 ```
 
-例如，若要使用最新的Adobe Commerce 2.4.7版，請在`composer.json`檔案中將`2.4.7`設定為「目前」版本，並將`2.4.8`設定為「下一個」版本：
+例如，若要使用最新的Adobe Commerce 2.4.9版，請在`composer.json`檔案中將`2.4.8`設定為「目前」版本，並將`2.4.9`設定為「下一個」版本：
 
 ```text
-"magento/magento-cloud-metapackage": ">=2.4.7 <2.4.8"
+"magento/magento-cloud-metapackage": ">=2.4.8 <2.4.9"
 ```
 
 此中繼封裝的主要封裝如下：

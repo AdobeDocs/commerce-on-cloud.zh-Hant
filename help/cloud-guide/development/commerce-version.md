@@ -1,33 +1,34 @@
 ---
 title: 升級Commerce版本
-description: 瞭解如何在雲端基礎結構專案中升級Adobe Commerce版本。
+description: 瞭解如何將 Adobe Systems Commerce 版本升級在雲端基礎結構專案。
 feature: Cloud, Upgrade
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 0%
 
 ---
 
-# 升級Commerce版本
+# 升級 Commerce 版本
 
-您可以將Adobe Commerce程式碼基底升級至較新版本。 升級專案之前，請檢閱&#x200B;_安裝_&#x200B;指南中的[系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)，以取得最新的軟體版本需求。
+您可以將 Adobe Systems Commerce 程式代碼庫升級至較新版本。 在升級專案之前，請查看安裝&#x200B;_指南中的_&#x200B;系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)，瞭解[最新的軟體版本要求。
 
-根據您的專案組態，您的升級任務可能包括以下內容：
+根據您的專案配置，升級任務可能包括以下內容：
 
-- 更新服務(例如MariaDB (MySQL)、OpenSearch、RabbitMQ和Redis)以與新Adobe Commerce版本相容。
+- 更新服務（如MariaDB（MySQL），OpenSearch，RabbitMQ和Redis，以便與新的Adobe Systems Commerce版本相容。
 - 轉換較舊的組態管理檔案。
 - 以掛接和環境變數的新設定更新`.magento.app.yaml`檔案。
-- 將協力廠商擴充功能升級至最新支援的版本。
-- 更新`.gitignore`檔案。
+- 協力廠商擴充功能升級至支援的最新版本。
+- `.gitignore`更新檔案。
 
 {{upgrade-tip}}
 
 {{pro-update-service}}
 
-## 從舊版升級
+## 從舊版本升級
 
-如果您正在開始從2.1之前的Commerce版本升級，Adobe Commerce程式碼庫中的某些限制可能會影響您&#x200B;_更新_&#x200B;至特定ECE-Tools版本或&#x200B;_升級_&#x200B;至下一個支援的Commerce版本的能力。 請使用下表來決定最佳路徑：
+如果要從早於 2.1 的 Commerce 版本開始升級，則 Adobe Systems Commerce 代碼庫中的某些限制可能會影響您 _更新_ 到特定 ECE-工具 版本或 _升級到_ 下一個受支援的 Commerce 版本的能力。 請使用下表來決定最佳路徑：
 
 | 目前版本 | 升級路徑 |
 | ----------------- | ------------ |
@@ -44,7 +45,7 @@ ht-degree: 0%
 
 舊版Adobe Commerce （例如2.1.4或更新版本至2.2.x或更新版本）使用`config.local.php`檔案進行組態管理。 Adobe Commerce 2.2.0版和更新版本使用`config.php`檔案，其運作方式與`config.local.php`檔案完全相同，但其組態設定不同，其中包含已啟用模組的清單和其他組態選項。
 
-從舊版升級時，您必須移轉`config.local.php`檔案以使用較新的`config.php`檔案。 使用下列步驟來備份設定檔並建立設定檔。
+從舊版本升級時，必須遷移 `config.local.php` 檔以使用較新的 `config.php` 檔。 使用以下步驟備份配置檔並創建一個配置檔。
 
 **若要建立暫存`config.php`檔案**：
 
@@ -64,7 +65,7 @@ ht-degree: 0%
 
 ### 驗證Zend Framework撰寫器相依性
 
-從2.2.x **升級至** 2.3.x或更新版本時，請確認Zend Framework相依性已新增至`composer.json`檔案的`autoload`屬性，以支援Laminas。 此外掛程式支援Zend Framework的新需求，此架構已移轉至Laminas專案。 請參閱&#x200B;_MagentoDevBlog_&#x200B;上的[Zend Framework移轉至Laminas專案](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251)。
+從2.2.x **升級至** 2.3.x或更新版本時，請確認Zend Framework相依性已新增至`composer.json`檔案的`autoload`屬性，以支援Laminas。 此外掛程式支援Zend Framework的新需求，此架構已移轉至Laminas專案。 請參閱&#x200B;_Magento DevBlog_&#x200B;上的[將Zend架構移轉至Laminas專案](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251)。
 
 **若要檢查`auto-load:psr-4`組態**：
 
@@ -123,7 +124,7 @@ ht-degree: 0%
 
 ### .magento.app.yaml
 
-請一律檢閱[.magento.app.yaml](../application/configure-app-yaml.md)檔案中包含的值以取得您安裝的版本，因為它會控制應用程式建置和部署到雲端基礎結構的方式。 以下範例適用於版本2.4.7，並使用撰寫器2.7.2。`build: flavor:`屬性不用於Composer 2.x；請參閱[安裝及使用Composer 2](../application/properties.md#installing-and-using-composer-2)。
+請一律檢閱[.magento.app.yaml](../application/configure-app-yaml.md)檔案中包含的值以取得您安裝的版本，因為它會控制應用程式建置和部署到雲端基礎結構的方式。 以下範例適用於版本2.4.8，並使用撰寫器2.8.4。`build: flavor:`屬性不用於Composer 2.x；請參閱[安裝及使用Composer 2](../application/properties.md#installing-and-using-composer-2)。
 
 **若要更新`.magento.app.yaml`檔案**：
 
@@ -134,13 +135,13 @@ ht-degree: 0%
 1. 更新PHP選項。
 
    ```yaml
-   type: php:8.3
+   type: php:8.4
    
    build:
        flavor: none
    dependencies:
        php:
-           composer/composer: '2.7.2'
+           composer/composer: '2.8.4'
    ```
 
 1. 修改`hooks`屬性`build`和`deploy`命令。
@@ -163,7 +164,7 @@ ht-degree: 0%
 
 1. 將下列環境變數新增至檔案結尾。
 
-   適用於Adobe Commerce 2.2.x至2.3.x-
+   對於 Adobe Systems Commerce 2.2.x 至 2.3.x–
 
    ```yaml
    variables:
@@ -173,7 +174,7 @@ ht-degree: 0%
            CONFIG__STORES__DEFAULT__PAYPAL__NOTATION_CODE: 'Magento_Enterprise_Cloud'
    ```
 
-   適用於Adobe Commerce 2.4.x-
+   對於 Adobe Systems Commerce 2.4.x–
 
    ```yaml
    variables:
@@ -182,7 +183,7 @@ ht-degree: 0%
            CONFIG__STORES__DEFAULT__PAYPAL__NOTATION_CODE: 'Magento_Enterprise_Cloud'
    ```
 
-1. 儲存檔案。 請勿認可或推送變更至遠端環境。
+1. 儲存文件。 請還不要提交或推送對遠端環境的更改。
 
 1. 繼續進行升級程式。
 
@@ -190,9 +191,9 @@ ht-degree: 0%
 
 升級之前，請一律檢查`composer.json`檔案中的相依性是否與Adobe Commerce版本相容。
 
-**若要更新Adobe Commerce 2.4.4版和更新版本的`composer.json`檔案**：
+**要更新 `composer.json` Adobe Systems Commerce 版本 2.4.4 及更高**&#x200B;版本的檔，請執行以下作：
 
-1. 將下列`allow-plugins`新增至`config`區段：
+1. 將以下內容 `allow-plugins` 新增到該 `config` 部份：
 
    ```json
    "config": {
@@ -204,7 +205,7 @@ ht-degree: 0%
    },
    ```
 
-1. 將下列外掛程式新增至`require`區段：
+1. 將下列外掛程式新增至該 `require` 小節：
 
    ```json
    "require": {
@@ -212,7 +213,7 @@ ht-degree: 0%
    },
    ```
 
-1. 將下列元件新增至`extra:component_paths`區段：
+1. 將下列元件新增至該 `extra:component_paths` 小節：
 
    ```json
    "extra": {
@@ -222,7 +223,7 @@ ht-degree: 0%
    },
    ```
 
-1. 儲存檔案。 尚未認可或推送變更至您的分支。
+1. 儲存文件。 尚未認可或推送變更至您的分支。
 
 1. 繼續進行升級程式。
 
@@ -264,7 +265,7 @@ ht-degree: 0%
 
 ## 應用程式升級
 
-請先檢閱[服務版本](../services/services-yaml.md#service-versions)資訊，瞭解最新的軟體版本需求，然後再升級您的應用程式。
+[在升級應用程式之前，請查看服務版本](../services/services-yaml.md#service-versions)信息以了解最新的軟體版本要求。
 
 **若要升級應用程式版本**：
 
@@ -367,29 +368,29 @@ ht-degree: 0%
 
 **若要驗證並升級您的擴充功能**：
 
-1. 在您的本機工作站上建立分支。
+1. 建立您本地工作站上的分支。
 
 1. 視需要停用您的擴充功能。
 
-1. 可用時，下載擴充功能升級。
+1. 如果可用，下載功能會升級。
 
-1. 安裝第三方檔案記錄的升級。
+1. 按照協力廠商文檔的說明安裝升級。
 
 1. 啟用並測試擴充功能。
 
-1. 新增、提交程式碼變更，並將其推播至遠端。
+1. 添加、提交代碼更改並將其推送到遠端。
 
 1. 推送至並在您的整合環境中測試。
 
 1. 推送至測試環境，以便在預先生產環境中測試。
 
-Adobe強烈建議您在網站啟動程式中&#x200B;_之前升級您的生產環境_，包括升級的擴充功能。
+Adobe Systems強烈建議先升級生產環境 _，然後再_ 將升級后的擴展添加到網站啟動流程中。
 
 >[!NOTE]
 >
->當您升級應用程式版本時，升級程式會自動更新為[Fastly CDN模組](../cdn/fastly.md#fastly-cdn-module-for-magento-2)的最新版本。
+>升級 應用程式 版本時，升級過程會自動更新到最新版本的 [Fastly CDN 模組](../cdn/fastly.md#fastly-cdn-module-for-magento-2) 。
 
-## 疑難排解升級
+## 疑難解答升級
 
 如果升級失敗，您會在瀏覽器中收到一則錯誤訊息，指出您無法存取店面或管理面板：
 

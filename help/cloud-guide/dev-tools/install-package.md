@@ -2,7 +2,8 @@
 title: 升級專案以使用ECE-Tools
 description: 瞭解如何在雲端基礎結構專案上升級Adobe Commerce，以使用ECE-Tools套件並利用最新的修正和功能。
 feature: Cloud, Install
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 164c47e4-c871-41a3-b268-581d426e7a7f
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -11,7 +12,7 @@ ht-degree: 0%
 
 # 升級專案以使用ECE-Tools套件
 
-Adobe已棄用`magento/magento-cloud-configuration`和`magento/ece-patches`封裝，而改用`ece-tools`封裝，這會簡化許多雲端程式。 如果您在雲端基礎結構專案上使用舊版的Adobe Commerce，但&#x200B;_不_&#x200B;包含`ece-tools`套件，則必須執行一次性的手動&#x200B;_升級_&#x200B;程式至您的專案。
+Adobe已棄用`magento/magento-cloud-configuration`和`magento/ece-patches`套件，而改用`ece-tools`套件，這會簡化許多雲端程式。 如果您在雲端基礎結構專案上使用舊版的Adobe Commerce，但&#x200B;_不_&#x200B;包含`ece-tools`套件，則必須執行一次性的手動&#x200B;_升級_&#x200B;程式至您的專案。
 
 >[!WARNING]
 >
@@ -43,11 +44,11 @@ Adobe已棄用`magento/magento-cloud-configuration`和`magento/ece-patches`封�
 
 您一律可以在[`magento-cloud`範本](https://github.com/magento/magento-cloud/blob/master/composer.json)中找到最新的中繼封裝條件約束。
 
-下列範例會將雲端基礎結構中繼資料上Adobe Commerce的限制，設為大於或等於目前版本2.4.7且小於下一個版本2.4.8的任何版本：
+下列範例會將雲端基礎結構中繼資料上Adobe Commerce的限制，設為大於或等於目前版本2.4.8且小於下一個版本2.4.9的任何版本：
 
 ```json
 "require": {
-    "magento/magento-cloud-metapackage": ">=2.4.7 <2.4.8"
+    "magento/magento-cloud-metapackage": ">=2.4.8 <2.4.9"
 },
 ```
 
@@ -60,7 +61,7 @@ Adobe已棄用`magento/magento-cloud-configuration`和`magento/ece-patches`封�
 1. 更新`composer.json`檔案中的`magento/magento-cloud-metapackage`版本限制。
 
    ```bash
-   composer require "magento/magento-cloud-metapackage":">=2.4.7 <2.4.8" --no-update
+   composer require "magento/magento-cloud-metapackage":">=2.4.8 <2.4.9" --no-update
    ```
 
 1. 更新中繼資料。
