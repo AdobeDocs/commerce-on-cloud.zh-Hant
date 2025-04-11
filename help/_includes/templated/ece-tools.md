@@ -1,5 +1,5 @@
 ---
-source-git-commit: 9fbcca6f545276e7afedcdb6e6061a87dd8f2dd9
+source-git-commit: 713008d26d05f05e3e39e33c0d0df766f4dbe0b0
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 3%
@@ -7,10 +7,10 @@ ht-degree: 3%
 ---
 # ece-tools
 
-**版本**： 2002.2.2
+**版本**： 2002.2.3
 
-This reference contains 34 commands available through the `ece-tools` command-line tool.
-The initial list is auto generated using the `ece-tools list` command at Adobe Commerce on cloud infrastructure.
+此參考包含34個可透過`ece-tools`命令列工具使用的命令。
+在雲端基礎結構上的Adobe Commerce中使用`ece-tools list`命令會自動產生初始清單。
 
 ## 一般
 
@@ -20,9 +20,9 @@ The initial list is auto generated using the `ece-tools list` command at Adobe C
 
 #### `--help`，`-h`
 
-顯示指定指令的說明。 如果未提供任何命令，則顯示 清單 命令的説明
+顯示指定指令的說明。 當沒有指定命令時，顯示清單命令的說明
 
-- 違約： `false`
+- 預設： `false`
 - 不接受值
 
 #### `--quiet`，`-q`
@@ -36,7 +36,7 @@ The initial list is auto generated using the `ece-tools list` command at Adobe C
 
 增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
 
-- 違約： `false`
+- 預設： `false`
 - 不接受值
 
 #### `--version`，`-V`
@@ -63,7 +63,7 @@ The initial list is auto generated using the `ece-tools list` command at Adobe C
 
 請勿詢問任何互動式問題
 
-- 違約： `false`
+- 預設： `false`
 - 不接受值
 
 
@@ -85,11 +85,11 @@ ece-tools _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT]
 
 - 需要值
 
-#### `--input`, `-i`
+#### `--input`，`-i`
 
-輸入權杖陣列（例如 COMP_WORDS或 argv）
+輸入權杖的陣列（例如COMP_WORDS或argv）
 
-- 違約： `[]`
+- 預設： `[]`
 - 需要值
 
 #### `--current`，`-c`
@@ -104,9 +104,9 @@ ece-tools _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT]
 
 - 需要值
 
-#### `--symfony`, `-S`
+#### `--symfony`，`-S`
 
-荒廢的
+已棄用
 
 - 需要值
 
@@ -121,7 +121,7 @@ ece-tools build
 
 ### 選項
 
-有關全域選項，請參閱 [全域選項](#global-options)。
+如需全域選項，請參閱[全域選項](#global-options)。
 
 
 ## `completion`
@@ -130,7 +130,7 @@ ece-tools build
 ece-tools completion [--debug] [--] [<shell>]
 ```
 
-轉儲外殼完成腳本
+傾印殼層完成指令碼
 
 ```
 The completion command dumps the shell completion script required
@@ -161,11 +161,11 @@ Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
     eval "$(/var/jenkins/workspace/gendocs-ece-tools-cli/bin/ece-tools completion )"
 ```
 
-### 參數
+### 引數
 
 #### `shell`
 
-如果未給出外殼類型（例如“bash”），將使用“$SHELL”env var的值
+如果未指定shell型別（例如&quot;bash&quot;），則會使用&quot;$SHELL&quot;環境變數的值
 
 ### 選項
 
@@ -185,7 +185,7 @@ Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
 ece-tools db-dump [-d|--remove-definers] [-a|--dump-directory DUMP-DIRECTORY] [--] [<databases>...]
 ```
 
-Creates database backups.
+建立資料庫備份。
 
 ### 引數
 
@@ -198,18 +198,18 @@ Creates database backups.
 
 ### 選項
 
-有關全域選項，請參閱 [全域選項](#global-options)。
+如需全域選項，請參閱[全域選項](#global-options)。
 
-#### `--remove-definers`, `-d`
+#### `--remove-definers`，`-d`
 
-從資料庫轉儲移除定義器
+從資料庫傾印中移除定義項
 
 - 預設： `false`
 - 不接受值
 
 #### `--dump-directory`，`-a`
 
-Use alternative directory for saving dump
+使用替代目錄來儲存傾印
 
 - 需要值
 
@@ -224,7 +224,7 @@ ece-tools deploy
 
 ### 選項
 
-有關全域選項，請參閱 [全域選項](#global-options)。
+如需全域選項，請參閱[全域選項](#global-options)。
 
 
 ## `help`
@@ -342,7 +342,7 @@ ece-tools patch
 
 ### 選項
 
-有關全域選項，請參閱 [全域選項](#global-options)。
+如需全域選項，請參閱[全域選項](#global-options)。
 
 
 ## `post-deploy`
@@ -351,7 +351,7 @@ ece-tools patch
 ece-tools post-deploy
 ```
 
-在執行完部署後執行。
+在部署作業之後執行。
 
 ### 選項
 
@@ -372,7 +372,7 @@ ece-tools run <scenario>...
 
 個案例
 
-- 違約： `[]`
+- 預設： `[]`
 - 必填
 
 - 陣列
@@ -401,7 +401,7 @@ ece-tools backup:list
 ece-tools backup:restore [-f|--force] [--file [FILE]]
 ```
 
-Restore important configuration files. 執行backup：list以顯示備份檔案的清單。
+還原重要的組態檔。 執行backup：list以顯示備份檔案的清單。
 
 ### 選項
 
@@ -416,7 +416,7 @@ Restore important configuration files. 執行backup：list以顯示備份檔案�
 
 #### `--file`
 
-特定的文件恢復路徑
+特定檔案復原路徑
 
 - 接受值
 
@@ -440,11 +440,11 @@ ece-tools build:generate
 ece-tools build:transfer
 ```
 
-Transfers generated files into init directory.
+將產生的檔案傳輸到init目錄中。
 
 ### 選項
 
-有關全域選項，請參閱 [全域選項](#global-options)。
+如需全域選項，請參閱[全域選項](#global-options)。
 
 
 ## `cloud:config:create`
@@ -453,7 +453,7 @@ Transfers generated files into init directory.
 ece-tools cloud:config:create <configuration>
 ```
 
-使用 `.magento.env.yaml` 指定的版本編號、部署和貼文部署變數配置创建文件。 覆蓋任何現有 `.magento.env.yaml` 檔。
+使用指定的組建、部署和部署後變陣列態建立`.magento.env.yaml`檔案。 覆寫任何現有的`.magento.env.yaml`檔案。
 
 ### 引數
 
@@ -480,7 +480,7 @@ ece-tools cloud:config:update <configuration>
 
 #### `configuration`
 
-JSON 格式 中的設定
+JSON格式的設定
 
 - 必填
 
@@ -508,11 +508,11 @@ ece-tools cloud:config:validate
 ece-tools config:dumpdump
 ```
 
-静態內容部署的轉儲配置。
+靜態內容部署的傾印設定。
 
 ### 選項
 
-有關全域選項，請參閱 [全域選項](#global-options)。
+如需全域選項，請參閱[全域選項](#global-options)。
 
 
 ## `cron:disable`
@@ -564,11 +564,11 @@ ece-tools cron:unlock [--job-code [JOB-CODE]]
 
 ### 選項
 
-有關全域選項，請參閱 [全域選項](#global-options)。
+如需全域選項，請參閱[全域選項](#global-options)。
 
 #### `--job-code`
 
-要解鎖的cron作業代碼。
+要解除鎖定的Cron工作代碼。
 
 - 預設： `[]`
 - 接受多個值
@@ -584,7 +584,7 @@ ece-tools dev:generate:schema-error
 
 ### 選項
 
-有關全域選項，請參閱 [全域選項](#global-options)。
+如需全域選項，請參閱[全域選項](#global-options)。
 
 
 ## `dev:git:update-composer`
@@ -593,11 +593,11 @@ ece-tools dev:generate:schema-error
 ece-tools dev:git:update-composer
 ```
 
-從 git 更新 部署 的撰寫器。
+從Git更新部署的撰寫器。
 
 ### 選項
 
-有關全域選項，請參閱 [全域選項](#global-options)。
+如需全域選項，請參閱[全域選項](#global-options)。
 
 
 ## `env:config:show`
@@ -638,11 +638,11 @@ ece-tools error:show [-j|--json] [--] [<error-code>]
 
 ### 選項
 
-有關全域選項，請參閱 [全域選項](#global-options)。
+如需全域選項，請參閱[全域選項](#global-options)。
 
-#### `--json`, `-j`
+#### `--json`，`-j`
 
-用於在 JSON 格式中獲取結果
+用於取得JSON格式的結果
 
 - 預設： `false`
 - 不接受值
@@ -680,7 +680,7 @@ ece-tools schema:generate
 ece-tools wizard:ideal-state
 ```
 
-Verifies ideal state of configuration.
+驗證設定的理想狀態。
 
 ### 選項
 
@@ -710,7 +710,7 @@ ece-tools wizard:scd-on-build
 
 ### 選項
 
-有關全域選項，請參閱 [全域選項](#global-options)。
+如需全域選項，請參閱[全域選項](#global-options)。
 
 
 ## `wizard:scd-on-demand`
@@ -732,11 +732,11 @@ ece-tools wizard:scd-on-demand
 ece-tools wizard:scd-on-deploy
 ```
 
-Verifies SCD on deploy configuration.
+驗證部署組態上的SCD。
 
 ### 選項
 
-有關全域選項，請參閱 [全域選項](#global-options)。
+如需全域選項，請參閱[全域選項](#global-options)。
 
 
 ## `wizard:split-db-state`
@@ -745,7 +745,7 @@ Verifies SCD on deploy configuration.
 ece-tools wizard:split-db-state
 ```
 
-驗證拆分資料庫的能力以及資料庫是否已拆分。
+驗證分割DB的能力以及DB是否已分割。
 
 ### 選項
 
