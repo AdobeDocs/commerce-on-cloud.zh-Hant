@@ -2,11 +2,11 @@
 title: Commerce雲端修補程式
 description: 請參閱「雲端修補程式」套裝軟體的最新改良專案清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-02-06T00:00:00Z
+last-substantial-update: 2025-04-15T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 4c8da3e40561a43674906cdf7f461bbcb1066c30
+source-git-commit: cebf68dfc1722a055a6217fa50552116d216d579
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2372'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,13 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 <!--Add release notes below-->
 
-## v1.1.4 {#latest}
+## v1.1.5 {#latest}
+
+發行日期： 2025年4月15日
+
+- ![新圖示](../../assets/new.svg) **已新增B2B 1.5.2**&#x200B;的修補程式 — 修正問題ACP2E-3833 (含B2B模組1.5.2和MariaDB 10.6<!-- MCLOUD-13605	-->
+
+## v1.1.4
 
 發行日期： 2025年2月13日
 
