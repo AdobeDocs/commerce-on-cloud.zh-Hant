@@ -2,11 +2,11 @@
 title: Commerce雲端修補程式
 description: 請參閱「雲端修補程式」套裝軟體的最新改良專案清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-04-15T00:00:00Z
+last-substantial-update: 2025-04-24T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: cebf68dfc1722a055a6217fa50552116d216d579
+source-git-commit: db8d20cdf999657c059202131111e71faf50b8e9
 workflow-type: tm+mt
-source-wordcount: '2372'
+source-wordcount: '2402'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,13 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 <!--Add release notes below-->
 
-## v1.1.5 {#latest}
+## v1.1.6 {#latest}
+
+發行日期： 2025年4月24日
+
+- ![新圖示](../../assets/new.svg) **已將Commerce 2.4.4的修補程式更新至2.4.7** — 這是[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)的更新修補程式，已在1.1.4<!-- MCLOUD-13240 -->中發行
+
+## v1.1.5
 
 發行日期： 2025年4月15日
 

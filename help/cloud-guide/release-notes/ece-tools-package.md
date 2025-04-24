@@ -2,11 +2,11 @@
 title: ECE-Tools發行說明
 description: 請參閱ECE-Tools套件的最新改良清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-09T00:00:00Z
+last-substantial-update: 2024-04-24T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 933e0c1b8bfbafeb6a477ec7bba7dcf7667dc6ec
+source-git-commit: dff5792f310382eb97c9595da08faac90e602126
 workflow-type: tm+mt
-source-wordcount: '3092'
+source-wordcount: '3117'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.3 {#latest}
+## v2002.2.4 {#latest}
+
+發行日期： 2025年4月24日
+
+- ![修正圖示](../../assets/fix.svg) **適用於2.4.4/2.4.5**&#x200B;的Opensearch2 — 修正Adobe Commerce版本2.4.4/2.4.5.<!-- MCLOUD-13607 -->中支援`opensearch2`的相關問題
+
+## v2002.2.3
 
 發行日期： 2025年4月9日
 
@@ -160,23 +166,23 @@ ht-degree: 0%
 
 ## v2002.1.7
 
-發佈日期：2021年7月29日
+發行日期： 2021年7月29日
 
 **設定更新**—
 
-- ![新圖示](../../assets/new.svg) 新增對 Composer 2.0 的支援。<!--MCLOUD-8003-->
+- ![新圖示](../../assets/new.svg)已新增對Composer 2.0的支援。<!--MCLOUD-8003-->
 
-- ![修復圖示](../../assets/fix.svg) **更新了 的`symphony/console`**&#x200B;作曲家要求 - 更新了軟體包的 `symphony/console` ECE-工具 `composer.json` 版本要求，以修復導致`di:compile`命令失敗並出現以下錯誤的問題：`Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
+- ![修正圖示](../../assets/fix.svg) **已更新`symphony/console`**&#x200B;的撰寫器需求 — 已更新`symphony/console`套件的ECE-Tools `composer.json`版本需求，以修正導致`di:compile`命令失敗並出現下列錯誤的問題： `Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
 
 - ![修正圖示](../../assets/fix.svg)已更新終止軟體檢查(`eol.yaml`)以包含Elasticsearch 7.9.x。<!--MCLOUD-7938-->
 
 ## v2002.1.6
 
-發佈日期：2021年4月20日
+發行日期： 2021年4月20日
 
-- ![新圖示](../../assets/new.svg) **Redis 身份驗證憑證** - 添加了在部署階段從 屬性 讀取 `relationships` Redis 授權憑證的功能。<!--MCLOUD-7694-->
+- ![新圖示](../../assets/new.svg) **Redis驗證認證** — 已新增在部署階段從`relationships`屬性讀取Redis授權認證的功能。<!--MCLOUD-7694-->
 
-- ![授權憑證&#x200B;**Elasticsearch新圖示](../../assets/new.svg)**- 添加了在部署階段從屬性讀取`relationships`Elasticsearch授權憑證的功能。<!--MCLOUD-7695-->
+- ![新圖示](../../assets/new.svg) **Elasticsearch授權認證** — 已新增在部署階段從`relationships`屬性讀取Elasticsearch授權認證的功能。<!--MCLOUD-7695-->
 
 - ![新圖示](../../assets/new.svg) **專用工作階段存放服務** — 已新增`redis-session`作為工作階段存放的第二個選項。 您可以使用`redis-session`服務來儲存工作階段資訊，並使用`redis`服務來快取，以提供更好的效能。<!--MCLOUD-7698-->
 
@@ -242,11 +248,11 @@ ht-degree: 0%
 
 - ![修正圖示](../../assets/fix.svg)修正Redis、RabbitMQ和MySQL服務的驗證，以確保這些版本與Adobe Commerce版本相容。 這些服務的有效版本現在已寫入`cloud.log`.<!--MCLOUD-7098-->
 
-- ![修復圖示](../../assets/fix.svg) 更新了 以 `cloud.log` 包含緩存預熱期間發送請求的併發請求限制。 此值在 [WARM_UP_CONCURRENCY](../environment/variables-post-deploy.md#warm_up_concurrency) 貼文-部署 變數中配置。<!--MCLOUD-5563-->
+- ![修正圖示](../../assets/fix.svg)已更新`cloud.log`以納入快取熱身期間傳送要求的並行要求限制。 此值是在[WARM_UP_CONCURRENCY](../environment/variables-post-deploy.md#warm_up_concurrency)部署後變數中設定。<!--MCLOUD-5563-->
 
-**CLI 命令更新** —
+**CLI命令更新**—
 
-- ![新圖示](../../assets/new.svg) 添加了 CLI 命令（`cloud:config:create``cloud:config:update`和），以使用可包含一個或多個 版本編號、部署 和 貼文-部署 變數的配置創建和更新`.magento.env.yaml`文件。請參閱 [CLI](../environment/configure-env-yaml.md#create-configuration-file-from-cli) 中的建立設定檔。<!--MCLOUD-7072-->
+- ![新圖示](../../assets/new.svg)已新增CLI命令（`cloud:config:create`和`cloud:config:update`），以使用可包含一或多個組建、部署和部署後變數的設定來建立和更新`.magento.env.yaml`檔案。 請參閱[從CLI建立組態檔](../environment/configure-env-yaml.md#create-configuration-file-from-cli)。<!--MCLOUD-7072-->
 
 **環境變數更新**—
 
@@ -254,15 +260,15 @@ ht-degree: 0%
 
 ## v2002.1.2
 
-發行日期：2020 年 8 月 5 日
+發行日期： 2020年8月5日
 
-**驗證和日誌改進**—
+**驗證和記錄改善**—
 
-- ![新圖示](../../assets/new.svg) 添加了該文件 `schema.error.yaml` ，其中包含在版本編號、部署和貼文部署過程中可能發生的所有錯誤和警告通知以及解決錯誤的建議。 此文件中的資訊也可在商務&#x200B;_雲指南中找到_。請參閱 [錯誤ece工具](../dev-tools/error-reference.md)的消息參考。<!--MCLOUD-5878-->
+- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!--MCLOUD-5878-->
 
-- ![新圖示](../../assets/new.svg) 將雲錯誤日誌 （`/var/log/cloud.error.log`） 條目更改為 JSON 格式，使日誌更易於以程式設計方式解析。<!--MCLOUD-5879-->
+- ![新圖示](../../assets/new.svg)已將雲端錯誤記錄(`/var/log/cloud.error.log`)專案變更為JSON格式，以便以程式設計方式更輕鬆地剖析記錄。<!--MCLOUD-5879-->
 
-- ![新圖示](../../assets/new.svg) 對 版本編號、部署 和 貼文-部署 處理添加了其他錯誤檢查，並改進了現有檢查：
+- ![新圖示](../../assets/new.svg)已新增其他錯誤檢查以建置、部署和部署後處理，並改善現有檢查：
 
    - 錯誤碼2026 — 無法將在建置階段產生的一些資料還原到掛載的目錄
 
@@ -270,7 +276,7 @@ ht-degree: 0%
 
    - 錯誤碼102 — 新增當`env.php`檔案不可寫入<!--MCLOUD-6221-->時所發生問題的額外檢查
 
-- ![新圖示](../../assets/new.svg) 添加了 **QUALITY_PATCHES** 環境變數，以指定要在部署過程中應用的一個或多個品質修補程式。 檢視[建置變數](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->
+- ![新圖示](../../assets/new.svg)已新增&#x200B;**QUALITY_PATCHES**&#x200B;環境變數，以指定一或多個要在部署過程中套用的品質修補程式。 檢視[建置變數](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->
 
 ## v2002.1.1
 
@@ -364,15 +370,15 @@ ht-degree: 0%
 
    - ![新圖示](../../assets/new.svg)現在您可以使用XML組態檔自訂建置、部署和部署後程式，以覆寫或自訂預設組態。
 
-   - ![新圖示](../../assets/new.svg) **已在`.magento.app.yaml`**&#x200B;中變更`hooks`設定 — 我們已更新`hooks`設定格式以支援案例部署。 早期 ECE-工具 2002.0.x 版本中的舊版格式仍受支援。 但是，您必須更新到新格式才能使用基於方案的部署功能。 請參閱 [基於方案的部署](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks)。
+   - ![新圖示](../../assets/new.svg) **已在`.magento.app.yaml`**&#x200B;中變更`hooks`設定 — 我們已更新`hooks`設定格式以支援案例部署。 舊版ECE-Tools 2002.0.x仍受支援。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。 請參閱[案例部署](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks)。
 
 >[!NOTE]
 >
->在更新到 ECE-工具 版本 2002.1.0 之前，請查看向後不相容的 [更改](backward-incompatible-changes.md) ，以瞭解可能需要在雲端基礎結構專案配置或流程上更新 Adobe Systems Commerce 的更改。
+>在更新至ECE-Tools 2002.1.0版之前，請先向後檢閱[   不相容的變更](backward-incompatible-changes.md)，瞭解可能需要您執行的變更   在雲端基礎結構專案設定或流程上更新Adobe Commerce。
 
 - ![新圖示](../../assets/new.svg) **服務更新**—
 
-   - ![新圖示](../../assets/new.svg) 新增對 PHP 7.3 的支援。<!--MAGECLOUD-4022-->
+   - ![新圖示](../../assets/new.svg)已新增對PHP 7.3的支援。<!--MAGECLOUD-4022-->
 
    - ![新圖示](../../assets/new.svg)已新增對RabbitMQ 3.8的支援。<!--MAGECLOUD-4674-->
 
@@ -382,25 +388,25 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->請参閱服務版本](../services/services-yaml.md#service-versions)，了解 [雲端基礎結構 上的 Adobe Systems Commerce 中使用的服務清單及其與雲範本的版本相容性。
+>請參閱[服務版本](../services/services-yaml.md#service-versions)，以取得雲端基礎結構上Adobe Commerce中所使用的服務清單，及其版本與雲端範本的相容性。
 
 - ![新圖示](../../assets/new.svg) **環境變數更新**—
 
-   - ![新圖示](../../assets/new.svg) 擴展了 環境 變數的功能 `WARM_UP_PAGES` ，以支援特定產品頁面的緩存預載入。 請參閱貼文-部署變數](../environment/variables-post-deploy.md#warm_up_pages)主題中的[擴展定義。<!--MAGECLOUD-4444-->
+   - ![新圖示](../../assets/new.svg)已擴充`WARM_UP_PAGES`環境變數的功能，以支援特定產品頁面的快取預先載入。 請參閱[部署後變數](../environment/variables-post-deploy.md#warm_up_pages)主題中的展開定義。<!--MAGECLOUD-4444-->
 
-   - ![新圖示](../../assets/new.svg) 新增環境 `ERROR_REPORT_DIR_NESTING_LEVEL` 變數以簡化目錄中的錯誤報告資料管理 `<magento_root>/var/report/` 。 請参閱版本編號變數](../environment/variables-build.md#error_report_dir_nesting_level)主題中的[變數說明。
+   - ![新圖示](../../assets/new.svg)已新增`ERROR_REPORT_DIR_NESTING_LEVEL`環境變數，以簡化`<magento_root>/var/report/`目錄中的錯誤報告資料管理。 請參閱[組建變數](../environment/variables-build.md#error_report_dir_nesting_level)主題中的變數說明。
 
-   - ![修正圖示](../../assets/fix.svg) 移除 `SCD_EXCLUDE_THEMES`、`STATIC_CONTENT_THREADS``DO_DEPLOY_STATIC_CONTENT`、 和 `STATIC_CONTENT_SYMLINK` 環境 變數。請參閱 [向後不相容的更改](backward-incompatible-changes.md#environment-configuration-changes)。<!--MAGECLOUD-4407, MAGECLOUD-3873-->
+   - ![修正圖示](../../assets/fix.svg)已移除`SCD_EXCLUDE_THEMES`、`STATIC_CONTENT_THREADS`、`DO_DEPLOY_STATIC_CONTENT`和`STATIC_CONTENT_SYMLINK`環境變數。 請參閱[回溯不相容的變更](backward-incompatible-changes.md#environment-configuration-changes).<!--MAGECLOUD-4407, MAGECLOUD-3873-->
 
    - ![修正圖示](../../assets/fix.svg)修正Elastic Suite組態程式中的問題，以便在您設定不含`_merge`選項的`ELASTICSUITE_CONFIGURATION`部署變數時，依照預期覆寫預設組態。<!--MAGECLOUD-4388-->
 
 - ![新圖示](../../assets/new.svg) **CLI命令更新**—
 
-   - ![新圖示](../../assets/new.svg) **新cron命令** — 您現在可以使用`cron:disable`和`cron:enable`命令，在雲端基礎結構環境上的Adobe Commerce中手動管理cron處理。 使用disable命令可停止所有作用中的cron處理序，並停用所有cron工作。 使用enable指令可在準備就緒時重新啟用cron作業。 請參閱 [禁用cron作業](../application/crons-property.md#disable-cron-jobs)。
+   - ![新圖示](../../assets/new.svg) **新cron命令** — 您現在可以使用`cron:disable`和`cron:enable`命令，在雲端基礎結構環境上的Adobe Commerce中手動管理cron處理。 使用disable命令可停止所有作用中的cron處理序，並停用所有cron工作。 使用enable指令可在準備就緒時重新啟用cron作業。 請參閱[停用cron工作](../application/crons-property.md#disable-cron-jobs)。
 
-   - ![新圖標](../../assets/new.svg) **改進的錯誤報告** - 為 ECE-工具 處理過程中發生的 CLI 命令故障添加了更好的記錄。<!--MAGECLOUD-4849-->
+   - ![新圖示](../../assets/new.svg) **已改善錯誤報告** — 已針對ECE-Tools處理期間發生的CLI命令失敗新增更佳的記錄。<!--MAGECLOUD-4849-->
 
-   - ![新圖標](../../assets/new.svg)**移除 已棄用的 版本編號 命令**— — 刪除了以下版本編號命令：`m2-ece-build`、`m2-ece-deploy`、 `m2-ece-scd-dump`，並將命令重命名`ece-tools docker`為 `ece-docker`。請參閱[回溯不相容的變更](backward-incompatible-changes.md)<!--MAGECLOUD-4392-->
+   - ![新圖示](../../assets/new.svg) **移除已棄用的組建命令** — 移除下列組建命令： `m2-ece-build`、`m2-ece-deploy`、`m2-ece-scd-dump`，並將`ece-tools docker`命令重新命名為`ece-docker`。 請參閱[回溯不相容的變更](backward-incompatible-changes.md)<!--MAGECLOUD-4392-->
 
 - ![新圖示](../../assets/new.svg)已移除已棄用的`build_options.ini`檔案，並新增驗證，以便在檔案存在時讓組建失敗。 使用[.magento.env.yaml](../environment/configure-env-yaml.md)檔案來設定組建選項。
 
