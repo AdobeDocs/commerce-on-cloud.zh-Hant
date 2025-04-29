@@ -2,9 +2,10 @@
 title: 自訂快取設定
 description: 瞭解如何在Fastly服務設定完成後檢閱及自訂快取配置設定。
 feature: Cloud, Configuration, Iaas, Cache
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
+source-git-commit: dcf585e25a4b06ff903642e42e72a71820bad008
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
@@ -13,11 +14,11 @@ ht-degree: 0%
 
 在測試和生產環境中設定並測試Fastly服務後，請檢閱並自訂快取組態設定。 例如，您可以更新設定以啟用強制TLS將HTTP請求重新導向到Fastly、更新清除設定，以及啟用基本驗證以在開發期間以密碼保護您的網站。
 
-以下小節提供設定某些快取設定的概觀和指示。 在[Fastly CDN模組(適用於Magento2](https://github.com/fastly/fastly-magento2/tree/master/Documentation)檔案)中尋找有關可用設定選項的其他資訊。
+以下小節提供設定某些快取設定的概觀和指示。 在Magento 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation)適用的[Fastly CDN模組檔案中尋找有關可用設定選項的其他資訊。
 
 ## 強制TLS
 
-Fastly提供&#x200B;_強制TLS_&#x200B;選項，可將未加密的請求(HTTP)重新導向至Fastly。 為您的預備或生產環境布建了[有效的SSL/TLS憑證](fastly-configuration.md#provision-ssltls-certificates)後，您可以更新存放區的Fastly設定以啟用「強制TLS」選項。 請參閱&#x200B;_Fastly CDN模組中的Fastly [強制TLS指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)以取得Magento2_&#x200B;檔案。
+Fastly提供&#x200B;_強制TLS_&#x200B;選項，可將未加密的請求(HTTP)重新導向至Fastly。 為您的預備或生產環境布建了[有效的SSL/TLS憑證](fastly-configuration.md#provision-ssltls-certificates)後，您可以更新存放區的Fastly設定以啟用「強制TLS」選項。 請參閱Magento 2 _的_ Fastly CDN模組檔案中的Fastly [強制TLS指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)。
 
 >[!NOTE]
 >
@@ -30,6 +31,8 @@ Fastly服務設定為管理員的HTTPS請求指定180秒的預設逾時期間。
 若要完成超過3分鐘的批次處理動作，請變更&#x200B;_管理路徑逾時_ value_以避免503錯誤。
 
 >[!NOTE]
+>
+>如果您已在&#x200B;**商店** > **設定** > **進階** > **管理員** > **管理員基底URL**&#x200B;中的&#x200B;**自訂管理員路徑**&#x200B;欄位中指定自訂管理員路徑端點，您也必須將該環境中的[ADMIN_URL變數](../environment/variables-admin.md#change-the-admin-url)設定為相同的值。 如果設定不同，逾時將無法運作。
 >
 >若要延伸Fastly UI中管理員以外的Fastly逾時引數，請參閱[增加長工作的逾時](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-INCREASE-TIMEOUTS-LONG-JOBS.md)。
 
@@ -51,7 +54,7 @@ Fastly會擷取Admin路徑，以從`app/etc/env.php`組態檔產生VCL檔案。
 
 ## 設定清除選項
 
-Fastly在您的「Magento快取管理」頁面上提供多種型別的清除選項，包括清除產品類別、產品資產和內容的選項。 啟用後，Fastly會監視事件以自動清除這些快取。 如果停用永久刪除選項，您可以在完成更新後，透過「快取管理」頁面手動永久刪除Fastly快取。
+Fastly在您的Magento Cache Management頁面上提供多種型別的清除選項，包括清除產品類別、產品資產和內容的選項。 啟用後，Fastly會監視事件以自動清除這些快取。 如果停用永久刪除選項，您可以在完成更新後，透過「快取管理」頁面手動永久刪除Fastly快取。
 
 永久刪除選項包括：
 
@@ -218,4 +221,4 @@ Fastly支援自訂版本的Varnish Configuration Language (VCL)以自訂Fastly�
 
    啟用維護模式後，除了來自`maint_allowlist` ACL中IP位址的請求之外，所有流量都會遭到封鎖。 您可以更新`maint_allowlist`以變更ACL中的IP位址。
 
-   如需詳細的設定指示，請參閱Fastly CDN中的[維護模式指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md)，以取得Magento2模組檔案。
+   如需詳細的設定指示，請參閱Magento 2模組檔案的Fastly CDN中的[維護模式指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md)。
