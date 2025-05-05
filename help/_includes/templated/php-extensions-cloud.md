@@ -1,7 +1,7 @@
 ---
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+source-git-commit: c82272b1867bf72e800668c9d91f15e53f252223
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '82'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,6 @@ ht-degree: 0%
                 intl<br>
                 libxml<br>
                 mysqli<br>
-                opcache<br>
                 pcntl<br>
                 pdo_mysql<br>
                 反射<br>
@@ -77,31 +76,18 @@ ht-degree: 0%
                 xmlwriter<br>
             </td>
             <td>
-                geoip<br>
-                gmp<br>
                 igbinary<br>
-                imagick<br>
                 imap<br>
-                ldap<br>
-                mailparse<br>
                 mcrypt<br>
-                msgpack<br>
                 mysqli<br>
-                oauth<br>
                 pdo_mysql<br>
                 propro<br>
-                pspell<br>
-                raphf<br>
                 重新編碼<br>
                 redis<br>
                 shmop通訊端<br>
                 鈉<br>
-                ssh2<br>
-                整齊<br>
-                xdebug<br>
                 xmlrpc<br>
                 xsl<br>
-                yaml<br>
             </td>
         </tr>
     </tbody>
