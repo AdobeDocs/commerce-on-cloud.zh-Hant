@@ -51,7 +51,7 @@ Fastly提供下列服務，以最佳化並確保Adobe Commerce在雲端基礎結
 
 ## Magento2的Fastly CDN模組
 
-雲端基礎結構上Adobe Commerce的Fastly服務使用安裝在以下環境中的Magento2]的[Fastly CDN模組： Pro Staging and Production， Starter Production （`master`分支）。
+雲端基礎結構上Adobe Commerce的Fastly服務使用安裝在以下環境中的Magento2&rbrack;的&lbrack;Fastly CDN模組： Pro Staging and Production， Starter Production （`master`分支）。
 
 在初始布建或升級您的Adobe Commerce專案時，Adobe會在您的中繼和生產環境中安裝最新版本的Fastly CDN模組。 Fastly發行模組更新時，您會在管理員中收到環境的通知。 Adobe建議您更新環境以使用最新版本。 請參閱[Fastly升級](fastly-configuration.md#upgrade-the-fastly-module)。
 

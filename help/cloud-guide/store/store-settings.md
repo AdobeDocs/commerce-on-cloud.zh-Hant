@@ -77,7 +77,7 @@ ht-degree: 0%
 
 如果您在傾印設定後啟用了「設定管理」，您應該將SCD_*變數從部署階段移至建置階段，以在建置階段正確啟用靜態內容產生。 請參閱[環境變數](../environment/configure-env-yaml.md#environment-variables)。
 
-組態管理前&#x200B;****：
+組態管理前&#x200B;**&#x200B;**：
 
 ```yaml
   deploy:

@@ -189,7 +189,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-大多數錯誤訊息都包含說明和建議的動作。 使用ECE-Tools](../dev-tools/error-reference.md)的[錯誤訊息參考來查詢錯誤碼，以取得進一步的指引。 如需進一步的指引，請使用[Adobe Commerce部署疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
+大多數錯誤訊息都包含說明和建議的動作。 使用ECE-Tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考來查詢錯誤碼，以取得進一步的指引。 如需進一步的指引，請使用[Adobe Commerce部署疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
 
 ## 應用程式記錄
 
@@ -247,7 +247,7 @@ type: warning
 
 >[!TIP]
 >
->縮放架構中的記錄檔位置取決於節點型別。 請參閱縮放架構](../architecture/scaled-architecture.md#log-locations)主題中的[記錄檔位置。
+>縮放架構中的記錄檔位置取決於節點型別。 請參閱縮放架構[&#128279;](../architecture/scaled-architecture.md#log-locations)主題中的記錄檔位置。
 
 ## 記錄Pro生產和測試所需的資料
 

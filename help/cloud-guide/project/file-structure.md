@@ -59,7 +59,7 @@ ht-degree: 0%
 
 ## 忽略檔案
 
-雲端基礎結構專案存放庫中有具有Adobe Commerce的基底`.gitignore`檔案。 檢視magento-cloud存放庫](https://github.com/magento/magento-cloud/blob/master/.gitignore)中的最新[.gitignore檔案。 若要新增位於`.gitignore`清單中的檔案，您可以在暫存認可時使用`-f` （強制）選項：
+雲端基礎結構專案存放庫中有具有Adobe Commerce的基底`.gitignore`檔案。 檢視magento-cloud存放庫[&#128279;](https://github.com/magento/magento-cloud/blob/master/.gitignore)中的最新.gitignore檔案。 若要新增位於`.gitignore`清單中的檔案，您可以在暫存認可時使用`-f` （強制）選項：
 
 ```bash
 git add <path/filename> -f
@@ -80,7 +80,7 @@ git add <path/filename> -f
    }
    ```
 
-1. 新增為基底範本設計的`.gitignore`檔案。 例如，如果您需要2.2.6版範本的`.gitignore`檔案，請使用2.2.6](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore)檔案的[.gitignore作為參考。
+1. 新增為基底範本設計的`.gitignore`檔案。 例如，如果您需要2.2.6版範本的`.gitignore`檔案，請使用2.2.6[&#128279;](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore)檔案的.gitignore作為參考。
 
 1. 清除Git快取。
 

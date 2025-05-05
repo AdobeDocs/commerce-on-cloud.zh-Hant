@@ -90,9 +90,9 @@ Edge ACL會建立IP位址清單，用於管理對您網站的存取。 在此範
 
 檢閱並更新您環境的程式碼後，請使用下列其中一種方法，將自訂VCL程式碼片段新增至您的Fastly服務設定：
 
-- [從Admin](#add-the-custom-vcl-snippet)新增自訂VCL程式碼片段。 如果您可以存取Admin，則建議使用此方法。 (需要Magento2 1.2.58](fastly-configuration.md#upgrade)或更新版本的[Fastly CDN模組。)
+- [從Admin](#add-the-custom-vcl-snippet)新增自訂VCL程式碼片段。 如果您可以存取Admin，則建議使用此方法。 (需要Magento2 1.2.58[&#128279;](fastly-configuration.md#upgrade)或更新版本的Fastly CDN模組。)
 
-- 將JSON程式碼範例儲存至檔案（例如，`allowlist.json`）並使用Fastly API](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)上傳[。 如果您無法存取Admin，請使用此方法。
+- 將JSON程式碼範例儲存至檔案（例如，`allowlist.json`）並使用Fastly API[&#128279;](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)上傳。 如果您無法存取Admin，請使用此方法。
 
 ## 新增自訂VCL片段
 

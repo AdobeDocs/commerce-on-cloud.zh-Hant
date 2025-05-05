@@ -57,7 +57,7 @@ Adobe建議將[環境變數](#composer-auth-environment-variable)方法與您的
 
 **若要使用環境變數**&#x200B;新增驗證金鑰：
 
-1. 在&#x200B;_[!DNL Cloud Console]_中，按一下專案導覽右側的設定圖示。
+1. 在&#x200B;_[!DNL Cloud Console]_&#x200B;中，按一下專案導覽右側的設定圖示。
 
    ![設定專案](../../assets/icon-configure.png){width="36"}
 

@@ -30,7 +30,7 @@ ht-degree: 0%
 
 - 內容最多可包含65,535個字元。
 - 指定HTML來源中的所有CSS內嵌。
-- 使用base64在HTML頁面中捆綁影像，以便即使Fastly離線也能顯示。 檢視css-tricks網站](https://css-tricks.com/data-uris/)上的[資料URI。
+- 使用base64在HTML頁面中捆綁影像，以便即使Fastly離線也能顯示。 檢視css-tricks網站[&#128279;](https://css-tricks.com/data-uris/)上的資料URI。
 
 ## 自訂503錯誤頁面
 

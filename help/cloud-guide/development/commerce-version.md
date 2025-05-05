@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 升級 Commerce 版本
 
-您可以將 Adobe Systems Commerce 程式代碼庫升級至較新版本。 在升級專案之前，請查看安裝&#x200B;_指南中的_&#x200B;系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)，瞭解[最新的軟體版本要求。
+您可以將 Adobe Systems Commerce 程式代碼庫升級至較新版本。 在升級專案之前，請查看安裝&#x200B;_指南中的_&#x200B;系統需求[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)，瞭解最新的軟體版本要求。
 
 根據您的專案配置，升級任務可能包括以下內容：
 

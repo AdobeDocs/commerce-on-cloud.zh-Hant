@@ -39,7 +39,7 @@ ht-degree: 0%
 
 **若要使用[!DNL Cloud Console]**&#x200B;設定變數：
 
-1. 在&#x200B;_[!DNL Cloud Console]_中，按一下專案導覽右側的設定圖示。
+1. 在&#x200B;_[!DNL Cloud Console]_&#x200B;中，按一下專案導覽右側的設定圖示。
 
    ![設定專案](../../assets/icon-configure.png){width="36"}
 

@@ -87,7 +87,7 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
 
 1. 按一下頂端導覽列右側的設定圖示，開啟環境設定。
 
-1. 在&#x200B;_[!UICONTROL General]_標籤上，向下捲動至_[!UICONTROL Deactivate environment]_&#x200B;區段，然後按一下&#x200B;**[!UICONTROL Deactivate environment and delete data]**&#x200B;並遵循指示。
+1. 在&#x200B;_[!UICONTROL General]_&#x200B;標籤上，向下捲動至&#x200B;_[!UICONTROL Deactivate environment]_&#x200B;區段，然後按一下&#x200B;**[!UICONTROL Deactivate environment and delete data]**&#x200B;並遵循指示。
 
 ## 同步環境
 

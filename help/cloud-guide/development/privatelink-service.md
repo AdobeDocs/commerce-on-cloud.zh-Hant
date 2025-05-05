@@ -104,7 +104,7 @@ ht-degree: 0%
 
 以下工作流程概述PrivateLink與雲端基礎結構上Adobe Commerce整合的啟用程式。
 
-1. **客戶**&#x200B;提交支援票證，以主旨列`PrivateLink support for <company>`要求PrivateLink啟用。 在票證中包含啟用](#prerequisites)所需的[資料。 Adobe使用支援票證在啟用流程中協調通訊。
+1. **客戶**&#x200B;提交支援票證，以主旨列`PrivateLink support for <company>`要求PrivateLink啟用。 在票證中包含啟用[&#128279;](#prerequisites)所需的資料。 Adobe使用支援票證在啟用流程中協調通訊。
 
 1. **Adobe**&#x200B;可讓客戶帳戶存取AdobeVPC中的端點服務。
 

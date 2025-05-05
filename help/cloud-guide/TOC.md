@@ -145,7 +145,7 @@ ht-degree: 7%
       + [自訂錯誤和維護頁面](cdn/fastly-custom-response.md)
    + [Web應用程式防火牆](cdn/fastly-waf-service.md)
    + [影像最佳化](cdn/fastly-image-optimization.md)
-   + 使用VCL {#custom-vcl-snippets}自訂
+   + 使用VCL自訂 {#custom-vcl-snippets}
       + [開始使用](cdn/fastly-vcl-custom-snippets.md)
       + [將請求重新路由到CMS後端](cdn/fastly-vcl-wordpress.md)
       + [封鎖轉介垃圾訊息](cdn/fastly-vcl-badreferer.md)

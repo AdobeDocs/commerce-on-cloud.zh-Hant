@@ -177,7 +177,7 @@ https://www.example.com/blog
 | ---------------- | ----------- |
 | `type: upstream` | 為應用程式提供服務。 此外，它有`upstream`屬性，指定了應用程式的名稱（如`.magento.app.yaml`中所定義），後面接著`:http`端點。 |
 | `type: redirect` | 重新導向至其他路由。 它後面接著的是`to`屬性，這是HTTP重新導向至由其範本識別的另一個路由。 |
-| `cache:` | 控制路由](caching.md)的[快取。 |
+| `cache:` | 控制路由[&#128279;](caching.md)的快取。 |
 | `redirects:` | 控制[重新導向規則](redirects.md)。 |
 | `ssi:` | 控制項啟用[伺服器端包含](server-side-includes.md)。 |
 

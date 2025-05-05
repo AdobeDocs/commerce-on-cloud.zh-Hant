@@ -72,7 +72,7 @@ mysql:
             optimizer_use_condition_selectivity: 1
 ```
 
-上述範例中的`properties`將預設`optimizer`設定修改為「效能最佳實務指南](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#indexers)」中的[建議。
+上述範例中的`properties`將預設`optimizer`設定修改為「效能最佳實務指南[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#indexers)」中的建議。
 
 **MariaDB組態選項**：
 

@@ -38,7 +38,7 @@ Adobe會在布建完成後的2至3週內，針對新帳戶啟用WAF服務。 WAF
 
 ## 運作方式
 
-WAF服務與Fastly整合，並使用Fastly CDN服務中的快取邏輯來篩選Fastly全域節點的流量。 我們在您的生產環境中啟用WAF服務，預設的WAF原則是根據Trustwave SpiderLabs](https://github.com/owasp-modsecurity/ModSecurity)的[ModSecurity規則和OWASP十大安全性威脅。
+WAF服務與Fastly整合，並使用Fastly CDN服務中的快取邏輯來篩選Fastly全域節點的流量。 我們在您的生產環境中啟用WAF服務，預設的WAF原則是根據Trustwave SpiderLabs[&#128279;](https://github.com/owasp-modsecurity/ModSecurity)的ModSecurity規則和OWASP十大安全性威脅。
 
 WAF服務會針對WAF規則集檢查HTTP和HTTPS流量(GET和POST要求)，並封鎖惡意流量或不遵守特定規則的流量。 此服務只會檢查嘗試重新整理快取的原始繫結流量。 因此，我們會在Fastly快取中停止大多數的攻擊流量，保護原始流量免受惡意攻擊。 若僅處理原始流量，WAF服務可以保留快取效能，只對每個非快取要求引進估計為1.5毫秒至20毫秒的延遲。
 

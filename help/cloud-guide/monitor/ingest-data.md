@@ -22,7 +22,7 @@ New Relic提供&#x200B;_資料管理_&#x200B;檢視，可依資料來源彙總�
 
    ![資料管理](../../assets/new-relic/data-ingestion.png)
 
-   **[!UICONTROL Data ingestion]**索引標籤會顯示擷取的當天資料以及資料來源。
+   **[!UICONTROL Data ingestion]**&#x200B;索引標籤會顯示擷取的當天資料以及資料來源。
 資料保留索引標籤會顯示並控制資料儲存的時間。
 
 1. 選取「**[!UICONTROL Limits]**」標籤，並檢視您帳戶的限制。

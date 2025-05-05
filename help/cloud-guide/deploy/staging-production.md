@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >Adobe建議在部署之前建立環境的[備份](../storage/snapshots.md)。
 
-此外，您可以使用New Relic](../monitor/track-deployments.md)啟用[追蹤部署，以監視部署事件，並協助您分析部署之間的效能。
+此外，您可以使用New Relic[&#128279;](../monitor/track-deployments.md)啟用追蹤部署，以監視部署事件，並協助您分析部署之間的效能。
 
 ## 入門部署流程
 

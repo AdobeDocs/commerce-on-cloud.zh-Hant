@@ -89,9 +89,9 @@ ht-degree: 0%
 
    - ![新圖示](../../assets/new.svg)您現在可以在Docker環境中使用`ece-tools`套件執行功能測試。 請參閱[應用程式測試](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/).<!-- MAGECLOUD-3129/3684 -->
 
-   - ![新圖示](../../assets/new.svg)已新增使用`.magento.app.yaml`檔案設定PHP模組的支援。 在`.magento.app.yaml`檔案](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)中指定的任何[PHP副檔名都可在Docker PHP容器中使用。<!-- MAGECLOUD-3357 -->
+   - ![新圖示](../../assets/new.svg)已新增使用`.magento.app.yaml`檔案設定PHP模組的支援。 在`.magento.app.yaml`檔案[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)中指定的任何PHP副檔名都可在Docker PHP容器中使用。<!-- MAGECLOUD-3357 -->
 
-   - ![新圖示](../../assets/new.svg)有新命令可用來改善Docker命令列體驗。 檢視Docker參考](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/#cloud-docker-cli).<!-- MAGECLOUD-3569 -->的[`bin/magento-docker`區段
+   - ![新圖示](../../assets/new.svg)有新命令可用來改善Docker命令列體驗。 檢視Docker參考&rbrack;(https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/#cloud-docker-cli).<!-- MAGECLOUD-3569 -->的&lbrack;`bin/magento-docker`區段
 
    - ![新圖示](../../assets/new.svg)已新增使用Mutagen.io在本機主機和Docker之間的開發期間同步檔案的功能。<!-- MAGECLOUD-3559 -->
 
@@ -143,7 +143,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **Docker更新**—
 
-   - ![新圖示](../../assets/new.svg)現在，Docker環境支援.magento.app.yaml檔案](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)的[crons屬性中定義的cron設定。<!-- MAGECLOUD-3150 -->
+   - ![新圖示](../../assets/new.svg)現在，Docker環境支援.magento.app.yaml檔案[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)的crons屬性中定義的cron設定。<!-- MAGECLOUD-3150 -->
 
    - ![新圖示](../../assets/new.svg) **新Docker容器** — 已新增[TLS終止Proxy容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#varnish-container)，以方便透過HTTPS終止Varnish SSL。<!-- MAGECLOUD-2890 -->
 

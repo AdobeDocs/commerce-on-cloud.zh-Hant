@@ -146,7 +146,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. 在&#x200B;_存取_&#x200B;檢視中，按一下&#x200B;**[!UICONTROL Add]**。
 
-1. 完成&#x200B;_[!UICONTROL Add User]_表單：
+1. 完成&#x200B;_[!UICONTROL Add User]_&#x200B;表單：
 
    - 輸入使用者電子郵件地址。
 
@@ -227,7 +227,7 @@ magento-cloud user:update alice@example.com -r production:a
 
    - 將復原始碼複製到其他位置，或寫下代碼，以防您失去對裝置或驗證應用程式的存取權。
 
-   - 按一下[儲存]****&#x200B;將程式碼儲存至您的帳戶，以便您可從帳戶安全性設定檢視和管理程式碼。
+   - 按一下[儲存]&#x200B;**&#x200B;**&#x200B;將程式碼儲存至您的帳戶，以便您可從帳戶安全性設定檢視和管理程式碼。
 
      >[!WARNING]
      >

@@ -55,7 +55,7 @@ ht-degree: 4%
 | 106 |  | 無法讀取`.schema.yaml`檔案 |  |
 | 107 | pre-部署： clean-redis-cache | 無法清理 Redis 快取 | 無法清理 Redis 快取。 檢查 Redis 快取配置是否正確，以及 Redis 服務是否可用。 請參閱[安裝Redis服務](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/redis)。 |
 | 140 | 預先部署： clean-valkey-cache | 無法清除Valkey快取 | 無法清除Valkey快取。 檢查Valkey快取設定是否正確，以及Valkey服務是否可用。 請參閱[Setup Valkey服務](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey)。 |
-| 108 | 預先部署：set-production-mode | 命令`/bin/magento maintenance:enable`失敗 | 查看瞭解更多資訊 `cloud.log` 。 有關更詳細的命令輸出，請將選項添加到`VERBOSE_COMMANDS: '-vvv'``.magento.env.yaml`檔中。 |
+| 108 | 預先部署：set-production-mode | 命令`/bin/magento maintenance:enable`失敗 | 查看瞭解更多資訊 `cloud.log` 。 有關更詳細的命令輸出，請將選項添加到`VERBOSE_COMMANDS: '-vvv'` `.magento.env.yaml`檔中。 |
 | 109 | 驗證設定 | 資料庫配置不正確 | 檢查`DATABASE_CONFIGURATION`環境變數是否已正確設定。 |
 | 110 | validate-config | 不正確的工作階段設定 | 檢查`SESSION_CONFIGURATION`環境變數是否已正確設定。 配置必須至少 `save` 包含參數。 |
 | 111 | validate-config | 不正確的搜尋設定 | 檢查`SEARCH_CONFIGURATION`環境變數是否已正確設定。 組態至少必須包含`engine`引數。 |
@@ -63,18 +63,18 @@ ht-degree: 4%
 | 113 | 驗證配置：ElasticSuite-integrity | ElasticSuite已安裝，但Elasticsearch服務無法使用 | 檢查`SEARCH_CONFIGURATION`環境變數是否已正確設定，並驗證Elasticsearch服務是否可用。 |
 | 114 | validate-config：elasticsuite-integrity | ElasticSuite已安裝，但使用的是其他搜尋引擎 | ElasticSuite已安裝，但已設定其他搜尋引擎。 更新`SEARCH_CONFIGURATION`環境變數以啟用Elasticsearch，並在`services.yaml`檔案中驗證Elasticsearch服務設定。 |
 | 115 |  | 資料庫查詢執行失敗 |  |
-| 116 | install-update： setup | `/bin/magento setup:install`命令失敗 | `cloud.log`查看和 `install_upgrade.log` 瞭解更多資訊。有關更詳細的命令輸出，請將選項添加到`VERBOSE_COMMANDS: '-vvv'``.magento.env.yaml`檔中。 |
+| 116 | install-update： setup | `/bin/magento setup:install`命令失敗 | `cloud.log`查看和 `install_upgrade.log` 瞭解更多資訊。有關更詳細的命令輸出，請將選項添加到`VERBOSE_COMMANDS: '-vvv'` `.magento.env.yaml`檔中。 |
 | 117 | 安裝-更新： 設定-匯入 | `app:config:import`命令失敗 | 如需詳細資訊，請檢視`cloud.log`。 如需更詳細的命令輸出，請將`VERBOSE_COMMANDS: '-vvv'`選項新增至`.magento.env.yaml`檔案。 |
 | 118 |  | 找不到所需的公用程式 （逾時、bash） |  |
 | 119 | 安裝-更新： 部署-静態-內容 | 命令`/bin/magento setup:static-content:deploy`失敗 | 如需詳細資訊，請檢視`cloud.log`。 如需更詳細的命令輸出，請將`VERBOSE_COMMANDS: '-vvv'`選項新增至`.magento.env.yaml`檔案。 |
 | 120 | compress-static-content | 靜態內容壓縮失敗 | 查看瞭解更多資訊 `cloud.log` 。 |
 | 121 | deploy-static-content：generate | 無法更新已部署的版本 | 無法更新`./pub/static/deployed_version.txt`檔案。 檢查您的檔案系統許可權。 |
 | 122 | clean-static-content | 無法清除靜態內容檔案 |  |
-| 123 | install-update： split-db | 命令`/bin/magento setup:db-schema:split`失敗 | 如需詳細資訊，請檢視`cloud.log`。 有關更詳細的命令輸出，請將選項添加到`VERBOSE_COMMANDS: '-vvv'``.magento.env.yaml`檔中。 |
+| 123 | install-update： split-db | 命令`/bin/magento setup:db-schema:split`失敗 | 如需詳細資訊，請檢視`cloud.log`。 有關更詳細的命令輸出，請將選項添加到`VERBOSE_COMMANDS: '-vvv'` `.magento.env.yaml`檔中。 |
 | 124 | 清潔視圖預處理 | 無法清理 `var/view_preprocessed` 資料夾 | 無法清理 `./var/view_preprocessed` 資料夾。 檢查檔案系統許可權。 |
 | 125 | install-update： reset-password | 無法更新`/var/credentials_email.txt`檔案 | 無法更新 `/var/credentials_email.txt` 檔案。 檢查檔案系統許可權。 |
 | 126 | install-update： update | 命令`/bin/magento setup:upgrade`失敗 | 如需詳細資訊，請檢視`cloud.log`和`install_upgrade.log`。 如需更詳細的命令輸出，請將`VERBOSE_COMMANDS: '-vvv'`選項新增至`.magento.env.yaml`檔案。 |
-| 127 | clean-cache | `/bin/magento cache:flush`命令失敗 | 查看瞭解更多資訊 `cloud.log` 。 有關更詳細的命令輸出，請將選項添加到`VERBOSE_COMMANDS: '-vvv'``.magento.env.yaml`檔中。 |
+| 127 | clean-cache | `/bin/magento cache:flush`命令失敗 | 查看瞭解更多資訊 `cloud.log` 。 有關更詳細的命令輸出，請將選項添加到`VERBOSE_COMMANDS: '-vvv'` `.magento.env.yaml`檔中。 |
 | 128 | 禁用維護模式 | 命令`/bin/magento maintenance:disable`失敗 | 如需詳細資訊，請檢視`cloud.log`。 將`VERBOSE_COMMANDS: '-vvv'`新增至`.magento.env.yaml`，以取得更詳細的命令輸出。 |
 | 129 | install-update： reset-password | 無法讀取重設密碼範本 |  |
 | 130 | install-update： cache_type | 命令失敗： `php ./bin/magento cache:enable` | 命令`php ./bin/magento cache:enable`只有在安裝Adobe Commerce時執行，但在部署開始時有`./app/etc/env.php`檔案不存在或空白。 如需詳細資訊，請檢視`cloud.log`。 將`VERBOSE_COMMANDS: '-vvv'`新增至`.magento.env.yaml`，以取得更詳細的命令輸出。 |

@@ -29,7 +29,7 @@ ht-degree: 0%
 >
 >在整合環境中，您無法從[!DNL Cloud Console]檢視部署記錄檔。 此功能僅適用於生產和測試環境。 不過，您可以使用[建置和部署](../test/log-locations.md#build-and-deploy-logs)記錄檔，檢視任何環境中每個部署階段的記錄。 如需疑難排解資訊，請參閱[部署錯誤參考](../dev-tools/error-reference.md)。
 
-您可以使用New Relic](../monitor/track-deployments.md)啟用[追蹤部署，以監視部署事件並分析部署之間的效能。
+您可以使用New Relic[&#128279;](../monitor/track-deployments.md)啟用追蹤部署，以監視部署事件並分析部署之間的效能。
 
 ## 建置和部署的最佳實務
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 - **請確定您執行的是`ece-tools`封裝的最新版本**
 
-  請參閱ECE-Tools](../release-notes/ece-tools-package.md)的[發行說明。
+  請參閱ECE-Tools[&#128279;](../release-notes/ece-tools-package.md)的發行說明。
 
 - **遵循建置和部署程式**
 
@@ -172,7 +172,7 @@ ht-degree: 0%
 
 - 如果Adobe Commerce為&#x200B;**未安裝**，則會安裝`bin/magento setup:install`、更新部署組態`app/etc/env.php`以及您指定環境的資料庫，例如Redis和網站URL。 **重要：**&#x200B;當您在安裝期間完成[首次部署](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html)時，Adobe Commerce已安裝在所有環境中並已部署。
 
-- 如果已安裝Adobe Commerce ****，請執行任何必要的升級。 部署指令碼執行`bin/magento setup:upgrade`以更新資料庫結構描述和資料（在擴充功能或核心程式碼更新後需要），也會更新您環境的部署組態、`app/etc/env.php`和資料庫。 最後，部署指令碼會清除Adobe Commerce快取。
+- 如果已安裝Adobe Commerce **&#x200B;**，請執行任何必要的升級。 部署指令碼執行`bin/magento setup:upgrade`以更新資料庫結構描述和資料（在擴充功能或核心程式碼更新後需要），也會更新您環境的部署組態、`app/etc/env.php`和資料庫。 最後，部署指令碼會清除Adobe Commerce快取。
 
 - 指令碼可選擇使用命令`magento setup:static-content:deploy`產生靜態網頁內容。
 

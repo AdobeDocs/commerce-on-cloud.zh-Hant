@@ -18,7 +18,7 @@ ht-degree: 0%
 
 - **應用程式測試** — 使用[Magento功能測試架構(MFTF)](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/)在Cloud Docker環境中測試應用程式。
 
-- **程式碼測試** — 使用PHP](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/)的[Codeception測試架構來驗證要貢獻到Cloud封裝存放庫的程式碼。
+- **程式碼測試** — 使用PHP[&#128279;](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/)的Codeception測試架構來驗證要貢獻到Cloud封裝存放庫的程式碼。
 
 ## 啟動前最佳實務
 

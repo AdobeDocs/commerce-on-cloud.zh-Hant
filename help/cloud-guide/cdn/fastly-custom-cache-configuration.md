@@ -14,7 +14,7 @@ ht-degree: 0%
 
 在測試和生產環境中設定並測試Fastly服務後，請檢閱並自訂快取組態設定。 例如，您可以更新設定以啟用強制TLS將HTTP請求重新導向到Fastly、更新清除設定，以及啟用基本驗證以在開發期間以密碼保護您的網站。
 
-以下小節提供設定某些快取設定的概觀和指示。 在Magento 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation)適用的[Fastly CDN模組檔案中尋找有關可用設定選項的其他資訊。
+以下小節提供設定某些快取設定的概觀和指示。 在Magento 2[&#128279;](https://github.com/fastly/fastly-magento2/tree/master/Documentation)適用的Fastly CDN模組檔案中尋找有關可用設定選項的其他資訊。
 
 ## 強制TLS
 
@@ -158,7 +158,7 @@ _來源遮蔽_&#x200B;會將您存放區的所有要求路由到特定顯示點(
 ## 基本驗證
 
 基本驗證功能可保護您網站上的每個頁面和資產
-使用使用者名稱和密碼。 我們**不建議**啟用基本功能
+使用使用者名稱和密碼。 我們&#x200B;**不建議**&#x200B;啟用基本功能
 驗證您的生產環境。 您可以在測試環境上加以設定
 以在開發過程中保護您的網站。 請參閱Fastly CDN模組檔案中的[基本驗證指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md)。
 

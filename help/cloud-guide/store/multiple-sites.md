@@ -212,7 +212,7 @@ https://store.com/second/
 
 ### 設定網站、商店和商店檢視
 
-在&#x200B;_管理UI_&#x200B;中，設定您的Adobe Commerce **網站**、**商店**&#x200B;和&#x200B;**商店檢視**。 請參閱&#x200B;_設定指南_&#x200B;的Admin](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html)中的[設定多個網站、商店和商店檢視。
+在&#x200B;_管理UI_&#x200B;中，設定您的Adobe Commerce **網站**、**商店**&#x200B;和&#x200B;**商店檢視**。 請參閱&#x200B;_設定指南_&#x200B;的Admin[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html)中的設定多個網站、商店和商店檢視。
 
 當您設定本機安裝時，請務必使用管理員提供的相同名稱和程式碼，代表您的網站、商店和商店檢視。 更新`magento-vars.php`檔案時需要這些值。
 

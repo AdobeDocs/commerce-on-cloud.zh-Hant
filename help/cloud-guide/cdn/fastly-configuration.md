@@ -69,7 +69,7 @@ Pro和Starter專案的檢視認證方法不同。
 
 您需要以下元件來啟用和設定Fastly服務：
 
-- 安裝在測試環境和生產環境中的Magento2模組](fastly.md#fastly-cdn-module-for-magento-2)的最新版本[Fastly CDN。 請參閱[Fastly升級](#upgrade-the-fastly-module)。
+- 安裝在測試環境和生產環境中的Magento2模組[&#128279;](fastly.md#fastly-cdn-module-for-magento-2)的最新版本Fastly CDN。 請參閱[Fastly升級](#upgrade-the-fastly-module)。
 
 - 雲端基礎結構中繼和生產環境上Adobe Commerce的[Fastly認證](#get-fastly-credentials)
 
@@ -103,7 +103,7 @@ Pro和Starter專案的檢視認證方法不同。
 
    >[!NOTE]
    >
-   >請勿選取連結來建立Fastly API權杖。 請改用Adobe提供的Adobe](#get-fastly-credentials)提供的[Fastly認證（服務ID和API權杖）。
+   >請勿選取連結來建立Fastly API權杖。 請改用Adobe提供的Adobe[&#128279;](#get-fastly-credentials)提供的Fastly認證（服務ID和API權杖）。
 
 1. 按一下&#x200B;**測試認證**。
 

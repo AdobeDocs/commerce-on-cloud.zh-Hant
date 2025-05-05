@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # ECE-Tools套件
 
-[!DNL ECE-Tools]套件是一組指令碼和工具，設計用來管理和部署[!DNL Commerce]應用程式。 `ece-tools`封裝簡化了許多程式，例如管理cron工作、驗證專案組態以及套用Adobe修補程式和修補程式。 您可以在GitHub][ece-repo]上檢視並貢獻[開放原始碼 [!DNL ECE-Tools] 程式碼存放庫。
+[!DNL ECE-Tools]套件是一組指令碼和工具，設計用來管理和部署[!DNL Commerce]應用程式。 `ece-tools`封裝簡化了許多程式，例如管理cron工作、驗證專案組態以及套用Adobe修補程式和修補程式。 您可以在GitHub&rbrack;[ece-repo]上檢視並貢獻&lbrack;開放原始碼 [!DNL ECE-Tools] 程式碼存放庫。
 
 {{ece-tools-package}}
 
@@ -88,7 +88,7 @@ php ./vendor/bin/ece-tools wizard:ideal-state
 Ideal state is configured
 ```
 
-請參閱ece-tools](../release-notes/cloud-tools-suite.md)的[發行說明。
+請參閱ece-tools[&#128279;](../release-notes/cloud-tools-suite.md)的發行說明。
 
 ## Adobe修補程式和自訂修補程式
 
