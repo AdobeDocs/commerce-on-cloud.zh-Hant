@@ -9,8 +9,8 @@ ht-degree: 0%
 
 本網站包含雲端基礎結構上Commerce的最新開發人員檔案。
 
-- [雲端基礎結構上的Commerce指南](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html)
-- [開始使用雲端基礎結構上的Commerce](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
+- [雲端基礎結構上的Commerce指南](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=zh-Hant)
+- [開始使用雲端基礎結構上的Commerce](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=zh-Hant)
 
 ## Adobe Open Source行為準則
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ### 微幅變更
 
-如果您要貢獻微幅更新內容，請開啟文章並按一下&#x200B;**編輯**&#x200B;連結，系統就會將您導向文章的GitHub來源。 使用GitHub UI進行更新。 請參閱一般[Adobe檔案投稿人指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
+如果您要貢獻微幅更新內容，請開啟文章並按一下&#x200B;**編輯**&#x200B;連結，系統就會將您導向文章的GitHub來源。 使用GitHub UI進行更新。 請參閱一般[Adobe檔案投稿人指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hant)。
 
 Adobe使用條款涵蓋您在本存放庫為檔案和程式碼範例提交的小幅更正或釐清。
 
@@ -35,7 +35,7 @@ Adobe使用條款涵蓋您在本存放庫為檔案和程式碼範例提交的小
 
 社群投稿人可以使用GitHub UI進行基本編輯或建立存放庫復本，以做出重大貢獻。
 
-如需詳細資訊，請參閱[Adobe檔案貢獻者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
+如需詳細資訊，請參閱[Adobe檔案貢獻者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hant)。
 
 ## Markdown
 

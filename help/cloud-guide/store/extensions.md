@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ## 安裝擴充功能
 
-當您將擴充功能新增至實作時，Adobe建議在開發分支中工作。 安裝擴充功能時，擴充功能名稱(`<VendorName>_<ComponentName>`)會自動插入[`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html)檔案中。 不需要直接編輯檔案。
+當您將擴充功能新增至實作時，Adobe建議在開發分支中工作。 安裝擴充功能時，擴充功能名稱(`<VendorName>_<ComponentName>`)會自動插入[`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html?lang=zh-Hant)檔案中。 不需要直接編輯檔案。
 
 **若要安裝擴充功能**：
 
@@ -155,7 +155,7 @@ ht-degree: 0%
 
 ## 升級擴充功能
 
-繼續進行之前，您需要該擴充功能的撰寫器名稱和版本。 此外，請確認擴充功能與您的專案和Adobe Commerce版本相容。 特別是，在您開始之前[檢查所需的PHP版本](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)。
+繼續進行之前，您需要該擴充功能的撰寫器名稱和版本。 此外，請確認擴充功能與您的專案和Adobe Commerce版本相容。 特別是，在您開始之前[檢查所需的PHP版本](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)。
 
 **若要更新擴充功能**：
 
@@ -189,4 +189,4 @@ ht-degree: 0%
    git push origin <branch-names>
    ```
 
-如果發生錯誤，請參閱[從元件失敗復原](../deploy/recover-failed-deployment.md)。 若要進一步瞭解如何將擴充功能與Adobe Commerce搭配使用，請參閱&#x200B;_管理指南_&#x200B;中的[擴充功能](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html)。
+如果發生錯誤，請參閱[從元件失敗復原](../deploy/recover-failed-deployment.md)。 若要進一步瞭解如何將擴充功能與Adobe Commerce搭配使用，請參閱&#x200B;_管理指南_&#x200B;中的[擴充功能](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html?lang=zh-Hant)。

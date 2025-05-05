@@ -30,7 +30,7 @@ ht-degree: 0%
 
 **若要複製專案`master`環境**：
 
-1. 使用[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)帳戶登入您的本機工作站。
+1. 使用[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hant)帳戶登入您的本機工作站。
 
 1. 變更至網頁伺服器或虛擬主機&#x200B;_docroot_&#x200B;目錄。
 

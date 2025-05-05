@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在2020年6月5日之前布建的專案具有多個較小的整合環境。 如果您需要更大的整合環境以進行測試和開發，請要求升級至增強型整合環境。 如需詳細資訊，請參閱&#x200B;_Adobe Commerce說明中心_&#x200B;中的[整合環境要求](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html)文章。
+>在2020年6月5日之前布建的專案具有多個較小的整合環境。 如果您需要更大的整合環境以進行測試和開發，請要求升級至增強型整合環境。 如需詳細資訊，請參閱&#x200B;_Adobe Commerce說明中心_&#x200B;中的[整合環境要求](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=zh-Hant)文章。
 
 ## 合併選項 {#merge-options}
 
@@ -38,15 +38,15 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->有些&#x200B;**Pro專案**&#x200B;需要支援票證，才能更新`routes.yaml`檔案中的路由設定和`.magento.app.yaml`檔案中的cron設定。 Adobe建議您在整合環境中更新及測試YAML設定檔，然後將變更部署至測試環境。 如果您在重新部署後未將變更套用至測試網站，且記錄檔中沒有相關的錯誤訊息，則您&#x200B;**必須** [提交說明嘗試的組態變更的Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 在票證中包含任何更新的YAML設定檔案。
+>有些&#x200B;**Pro專案**&#x200B;需要支援票證，才能更新`routes.yaml`檔案中的路由設定和`.magento.app.yaml`檔案中的cron設定。 Adobe建議您在整合環境中更新及測試YAML設定檔，然後將變更部署至測試環境。 如果您在重新部署後未將變更套用至測試網站，且記錄檔中沒有相關的錯誤訊息，則您&#x200B;**必須** [提交說明嘗試的組態變更的Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)。 在票證中包含任何更新的YAML設定檔案。
 
 ## Pro服務支援 {#pro-update-service}
 
 >[!TIP]
 >
->對於Pro專案，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，才能僅在`Staging`和`Production`環境中安裝或更新[服務](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html)。
+>對於Pro專案，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，才能僅在`Staging`和`Production`環境中安裝或更新[服務](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=zh-Hant)。
 >
->指示所需的服務變更，包括更新的`.magento.app.yaml`和`services.yaml`檔案，並在票證中說明PHP版本。 如需自行變更PHP版本、擴充功能或環境設定，請參閱&#x200B;_應用程式組態_&#x200B;中的[PHP設定](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html)。
+>指示所需的服務變更，包括更新的`.magento.app.yaml`和`services.yaml`檔案，並在票證中說明PHP版本。 如需自行變更PHP版本、擴充功能或環境設定，請參閱&#x200B;_應用程式組態_&#x200B;中的[PHP設定](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html?lang=zh-Hant)。
 >
 >若要變更即時生產環境（**僅限Pro**），至少需要48小時的通知。 這可讓雲端基礎結構團隊有充足的時間來調配資源並進行安全升級。 通知期間從基礎架構團隊認可請求並安排升級（不包括週末）開始。 例如，若要在星期一完成服務升級，必須在星期三收到排程升級的確認。 在需求尖峰期間，處理您的請求可能需要更多時間。
 
@@ -54,9 +54,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
->在Pro測試和生產環境中，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以擷取票證中的特定備份，並註明日期、時間和時區。
+>在Pro測試和生產環境中，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以擷取票證中的特定備份，並註明日期、時間和時區。
 >
->Adobe **不**&#x200B;會從自動備份還原任何環境。 請參閱[從測試或生產還原資料庫快照](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html)，以取得選擇還原測試或生產快照的方法。
+>Adobe **不**&#x200B;會從自動備份還原任何環境。 請參閱[從測試或生產還原資料庫快照](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html?lang=zh-Hant)，以取得選擇還原測試或生產快照的方法。
 
 ## 重新部署警告 {#redeploy-warning}
 
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以變更Pro生產和中繼環境上的服務組態。
+>[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以變更Pro生產和中繼環境上的服務組態。
 
 ## 服務變更 {#service-change-tip}
 
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->若要取得停滯部署的協助，請使用&#x200B;_Adobe Commerce說明中心_&#x200B;中的[Commerce部署疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
+>若要取得停滯部署的協助，請使用&#x200B;_Adobe Commerce說明中心_&#x200B;中的[Commerce部署疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=zh-Hant)。
 
 ## ECE-Tools更新 {#ece-tools-package}
 

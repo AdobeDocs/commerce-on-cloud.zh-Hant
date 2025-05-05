@@ -26,7 +26,7 @@ ht-degree: 0%
 
 在&#x200B;_設定環境_&#x200B;檢視中使用&#x200B;**[!UICONTROL Outgoing emails]**&#x200B;切換來啟用或停用電子郵件支援。
 
-如果外寄電子郵件必須在Pro生產或測試環境中停用或重新啟用，您可以提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)。
+如果外寄電子郵件必須在Pro生產或測試環境中停用或重新啟用，您可以提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)。
 
 >[!TIP]
 >

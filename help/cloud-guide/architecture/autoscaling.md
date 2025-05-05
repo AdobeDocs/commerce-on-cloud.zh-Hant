@@ -58,14 +58,14 @@ SELECT average(cpuPercent) FROM SystemSample FACET hostname, apmApplicationNames
 
 ## 啟用自動縮放
 
-若要在雲端基礎結構專案上啟用或停用您的Adobe Commerce的自動縮放，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 在票證中選擇以下原因：
+若要在雲端基礎結構專案上啟用或停用您的Adobe Commerce的自動縮放，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)。 在票證中選擇以下原因：
 
 - **連絡原因**：基礎結構變更要求
 - **Adobe Commerce基礎結構聯絡原因**：其他基礎結構變更要求
 
 >[!IMPORTANT]
 >
->自動縮放功能會擷取未預期的事件。 即使您已啟用自動縮放，Adobe仍建議您繼續[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) （如果您預計即將發生事件）。
+>自動縮放功能會擷取未預期的事件。 即使您已啟用自動縮放，Adobe仍建議您繼續[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket) （如果您預計即將發生事件）。
 
 ### 載入測試
 

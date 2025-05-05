@@ -131,7 +131,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 >[!IMPORTANT]
 >
->對於Pro生產和中繼環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以變更磁碟空間配置。 Pro生產與測試環境的大小增加只能在特定的間隔進行，因此，根據您目前的磁碟空間使用量，支援服務可能會建議將磁碟空間配置增加至少10 GB。 配置完畢後，就無法還原Pro測試和生產的儲存空間增加。 無法重新配置儲存裝置或在資源之間重新分配儲存裝置。 若要增加更多檔案儲存空間，請減少配置給MySQL的磁碟空間。
+>對於Pro生產和中繼環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以變更磁碟空間配置。 Pro生產與測試環境的大小增加只能在特定的間隔進行，因此，根據您目前的磁碟空間使用量，支援服務可能會建議將磁碟空間配置增加至少10 GB。 配置完畢後，就無法還原Pro測試和生產的儲存空間增加。 無法重新配置儲存裝置或在資源之間重新分配儲存裝置。 若要增加更多檔案儲存空間，請減少配置給MySQL的磁碟空間。
 
 ### 應用程式磁碟空間
 
@@ -187,7 +187,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 ## 監視磁碟空間
 
-在Pro Production環境中，您可以使用New Relic的Adobe Commerce警示管理原則來監視磁碟空間和其他效能指標。 如需詳細資訊，請參閱[使用受管理警示監視效能](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)。 如需進一步的指引，請參閱[解決資料庫效能問題的最佳實務](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html)。
+在Pro Production環境中，您可以使用New Relic的Adobe Commerce警示管理原則來監視磁碟空間和其他效能指標。 如需詳細資訊，請參閱[使用受管理警示監視效能](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)。 如需進一步的指引，請參閱[解決資料庫效能問題的最佳實務](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=zh-Hant)。
 
 ## 無剩餘空間
 

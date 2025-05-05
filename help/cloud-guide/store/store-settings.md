@@ -15,14 +15,14 @@ ht-degree: 0%
 
 存放區設定參照管理員&#x200B;**存放區** > **設定** > **設定**&#x200B;區段中的設定，根據組態型別儲存在部署組態檔中：
 
-- `app/etc/config.php` — 與靜態內容部署相關的存放區、網站、模組或副檔名、靜態檔案最佳化及系統值的組態設定。 請參閱&#x200B;_組態指南_&#x200B;中的[config.php參考](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html)。
-- `app/etc/env.php` — 系統特定覆寫的值以及應該將&#x200B;_NOT_&#x200B;儲存在原始檔控制中的敏感設定。 請參閱&#x200B;_組態指南_&#x200B;中的[env.php參考](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html)。
+- `app/etc/config.php` — 與靜態內容部署相關的存放區、網站、模組或副檔名、靜態檔案最佳化及系統值的組態設定。 請參閱&#x200B;_組態指南_&#x200B;中的[config.php參考](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html?lang=zh-Hant)。
+- `app/etc/env.php` — 系統特定覆寫的值以及應該將&#x200B;_NOT_&#x200B;儲存在原始檔控制中的敏感設定。 請參閱&#x200B;_組態指南_&#x200B;中的[env.php參考](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html?lang=zh-Hant)。
 
 >[!NOTE]
 >
 >由於雲端基礎結構上的Adobe Commerce僅支援生產和維護模式，因此&#x200B;**進階** > **開發人員**&#x200B;區段無法在Admin中存取。 您必須有[環境管理員許可權](../project/user-access.md)才能完成組態管理工作。 您可以使用[環境變數](../environment/configure-env-yaml.md)來設定其他設定。
 
-配置管理提供了一種使用Pipeline部署以最小的停機時間跨環境部署一致商店設定的方法。 雲端基礎結構專案上的Adobe Commerce包括以[管線部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html)設計的組建伺服器、建置和部署指令碼以及部署環境。
+配置管理提供了一種使用Pipeline部署以最小的停機時間跨環境部署一致商店設定的方法。 雲端基礎結構專案上的Adobe Commerce包括以[管線部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=zh-Hant)設計的組建伺服器、建置和部署指令碼以及部署環境。
 
 ## 設定覆寫配置
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->請參閱&#x200B;_設定指南_&#x200B;中的[設定管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html)，以取得有關管道部署的覆寫配置的詳細資訊。
+>請參閱&#x200B;_設定指南_&#x200B;中的[設定管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=zh-Hant)，以取得有關管道部署的覆寫配置的詳細資訊。
 
 如果在多個位置中設定了相同的設定，則應用程式會仰賴下列設定階層來決定要套用至環境的值：
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 使用`bin/magento app:config:dump`命令時，任何敏感設定都會匯出至`app/etc/env.php`檔案。 您可以使用CLI命令設定敏感值： `bin/magento config:sensitive:set`。 請參閱&#x200B;_Commerce PHP擴充功能_&#x200B;指南中的[敏感設定和環境特定設定](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/)，瞭解如何將組態設定指定為敏感設定或系統特定設定。
 
-請參閱&#x200B;_設定指南_&#x200B;中的[敏感或系統特定設定](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html)清單。
+請參閱&#x200B;_設定指南_&#x200B;中的[敏感或系統特定設定](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html?lang=zh-Hant)清單。
 
 ### SCD效能
 

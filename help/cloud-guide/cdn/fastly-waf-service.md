@@ -50,7 +50,7 @@ WAF服務啟用時，會根據WAF規則檢查所有網頁和管理員流量，�
 
 您可以從管理員自訂此錯誤回應頁面。 請參閱[自訂WAF回應頁面](fastly-custom-response.md#customize-the-waf-error-page)。
 
-如果您的Adobe Commerce管理頁面或店面傳回`403 Forbidden`錯誤頁面以回應合法的URL請求，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)。 從錯誤回應頁面複製參考ID，並將其貼到票證說明中。
+如果您的Adobe Commerce管理頁面或店面傳回`403 Forbidden`錯誤頁面以回應合法的URL請求，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)。 從錯誤回應頁面複製參考ID，並將其貼到票證說明中。
 
 若要使用New Relic識別特定請求的WAF回應，請參閱下列內容：
 

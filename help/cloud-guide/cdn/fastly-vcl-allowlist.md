@@ -74,7 +74,7 @@ Edge ACL會建立IP位址清單，用於管理對您網站的存取。 在此範
 }
 ```
 
-在此範例中[建立自訂程式碼片段](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html#add-the-custom-vcl-snippet)之前，請檢閱值以判斷是否需要進行任何變更。 然後在個別欄位中輸入每個值，例如，在[型別]欄位中輸入`type`，在[內容]欄位中輸入`content`。
+在此範例中[建立自訂程式碼片段](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=zh-Hant#add-the-custom-vcl-snippet)之前，請檢閱值以判斷是否需要進行任何變更。 然後在個別欄位中輸入每個值，例如，在[型別]欄位中輸入`type`，在[內容]欄位中輸入`content`。
 
 - `name` — VCL程式碼片段名稱。 在此範例中，`allowlist`。
 

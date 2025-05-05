@@ -17,7 +17,7 @@ ht-degree: 0%
 
 背景工作僅適用於Pro預備和生產環境。 Pro整合與入門環境可以選擇使用[CRON_CONSUMERS_RUNNER](../environment/variables-deploy.md#cron_consumers_runner)變數。
 
-若要在Pro測試或生產環境中設定背景工作，[請提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)並包含下列資訊：
+若要在Pro測試或生產環境中設定背景工作，[請提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)並包含下列資訊：
 
 - 專案ID
 - 環境ID

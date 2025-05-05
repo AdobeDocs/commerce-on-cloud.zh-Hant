@@ -57,7 +57,7 @@ ht-degree: 0%
 
 ## 雲端修補程式變更
 
-- **移除已下載的修補程式**- `magento/magento-cloud-patches`套件會將[軟體下載](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html)頁面上所有可用的修補程式套裝，並在您部署至雲端時自動套用這些修補程式。 若要避免升級至ECE-Tools 2002.1.0或更新版本後發生修補程式衝突，請移除您手動下載並新增至專案的Adobe提供的任何修補程式。
+- **移除已下載的修補程式**- `magento/magento-cloud-patches`套件會將[軟體下載](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=zh-Hant)頁面上所有可用的修補程式套裝，並在您部署至雲端時自動套用這些修補程式。 若要避免升級至ECE-Tools 2002.1.0或更新版本後發生修補程式衝突，請移除您手動下載並新增至專案的Adobe提供的任何修補程式。
 
 - **更新套用修補程式命令** — 我們將套用修補程式的命令從`vendor/bin/ece-tools`目錄移至`vendor/bin/ece-patches`目錄。 如果您使用此指令來手動套用修補程式，請使用新路徑。
 

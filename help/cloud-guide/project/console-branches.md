@@ -33,7 +33,7 @@ ht-degree: 0%
 
 您的帳戶支援有限數量的![個使用中分支](../../assets/icon-active.png){width="32"} (active) and an unlimited number of ![inactive branch](../../assets/icon-inactive.png){width="32"} （非使用中）開發分支。 僅使用[!DNL Cloud Console]或雲端CLI新增或刪除分支，以管理作用中或非作用中分支。 刪除分支之前，請先停用該分支，它仍保留在&#x200B;_環境_&#x200B;清單中，做為&#x200B;_非使用中_。 您可以稍後重新啟用分支，或是在環境設定或使用Cloud CLI中[刪除分支](../dev-tools/cloud-cli-overview.md#)。
 
-如果您需要其他使用中的環境進行開發，請提交[支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
+如果您需要其他使用中的環境進行開發，請提交[支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)。
 
 **若要新增分支**：
 

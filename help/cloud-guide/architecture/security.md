@@ -66,9 +66,9 @@ Adobe會定期測試核心應用程式程式碼的安全性弱點。 為客戶�
 - OWASPZAP
 - 和SqlMap
 
-這些工具會每兩週掃描完整程式碼基底。 透過直接電子郵件、應用程式通知以及[安全性中心](https://helpx.adobe.com/security.html)通知客戶安全性修補程式。
+這些工具會每兩週掃描完整程式碼基底。 透過直接電子郵件、應用程式通知以及[安全性中心](https://helpx.adobe.com/tw/security.html)通知客戶安全性修補程式。
 
-客戶必須根據PCI准則，確保這些修補程式在發行後30天內套用至其自訂應用程式。 Adobe也提供[安全性掃描工具](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)，可讓商家定期監視其網站，並接收已知安全性風險、惡意程式碼及未經授權存取的更新。 安全掃描工具是免費服務，可在任何版本的Adobe Commerce上執行。
+客戶必須根據PCI准則，確保這些修補程式在發行後30天內套用至其自訂應用程式。 Adobe也提供[安全性掃描工具](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/security/security-scan)，可讓商家定期監視其網站，並接收已知安全性風險、惡意程式碼及未經授權存取的更新。 安全掃描工具是免費服務，可在任何版本的Adobe Commerce上執行。
 
 為了鼓勵安全性研究人員識別和報告漏洞，除了內部測試之外，Adobe Commerce還設有[bug-bounty計畫](https://hackerone.com/magento)。 此外，如有需要，客戶會獲得應用程式的完整原始程式碼，供其自行檢閱。
 
@@ -108,7 +108,7 @@ GDPR要求收集到的任何個人識別資訊（例如姓名、種族和出生�
 
 >[!NOTE]
 >
->本頁提供GDPR考量事項的一般概觀。 如需Adobe Commerce如何儲存個人資訊的詳細資訊，請參閱&#x200B;_[安全性與法規遵循指南](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview)_。 若要確定您的企業應如何遵守任何法律義務，請諮詢您的法律顧問，或參閱[官方文字](https://eur-lex.europa.eu/eli/reg/2016/679/oj)。
+>本頁提供GDPR考量事項的一般概觀。 如需Adobe Commerce如何儲存個人資訊的詳細資訊，請參閱&#x200B;_[安全性與法規遵循指南](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/security-and-compliance/overview)_。 若要確定您的企業應如何遵守任何法律義務，請諮詢您的法律顧問，或參閱[官方文字](https://eur-lex.europa.eu/eli/reg/2016/679/oj)。
 
 ## 備份
 

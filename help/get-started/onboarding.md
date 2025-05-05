@@ -53,5 +53,5 @@ Adobe在雲端基礎結構訂閱上啟用Commerce後，初始專案和程式碼�
 <!-- link definitions -->
 
 [銷售]: https://business.adobe.com/products/magento/get-demo.html
-[共用存取]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access
+[共用存取]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#shared-access
 [狀態頁面]: https://status.adobe.com/products/503473

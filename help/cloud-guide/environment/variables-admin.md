@@ -18,7 +18,7 @@ ht-degree: 0%
 
 您可以在安裝Commerce期間使用下表中的管理員變數覆寫管理員使用者認證。
 
-如果您要在安裝後變更值，請使用SSH連線至您的環境，並使用Adobe Commerce CLI [`admin:user`命令](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html)來建立或編輯管理員使用者認證。
+如果您要在安裝後變更值，請使用SSH連線至您的環境，並使用Adobe Commerce CLI [`admin:user`命令](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=zh-Hant)來建立或編輯管理員使用者認證。
 
 | 變數 | 預設 | 說明 |
 | -------------- | --------------------------- | ----------- |

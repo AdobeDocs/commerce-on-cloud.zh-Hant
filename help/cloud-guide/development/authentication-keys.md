@@ -14,7 +14,7 @@ ht-degree: 0%
 
 您必須擁有驗證金鑰才能存取Adobe Commerce存放庫，並在雲端基礎結構專案上為Adobe Commerce啟用安裝和更新命令。 指定Composer授權認證有兩個方法。
 
-- **驗證檔案** — 在雲端基礎結構根目錄上的Adobe Commerce中，包含您的Adobe Commerce [授權認證](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html)的檔案。
+- **驗證檔案** — 在雲端基礎結構根目錄上的Adobe Commerce中，包含您的Adobe Commerce [授權認證](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=zh-Hant)的檔案。
 - **環境變數** — 一個環境變數，可在Adobe Commerce雲端基礎結構專案中設定驗證金鑰，以防止意外曝光。
 
 >[!BEGINSHADEBOX]

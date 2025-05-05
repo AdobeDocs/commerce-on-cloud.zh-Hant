@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 升級 Commerce 版本
 
-您可以將 Adobe Systems Commerce 程式代碼庫升級至較新版本。 在升級專案之前，請查看安裝&#x200B;_指南中的_&#x200B;系統需求[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)，瞭解最新的軟體版本要求。
+您可以將 Adobe Systems Commerce 程式代碼庫升級至較新版本。 在升級專案之前，請查看安裝&#x200B;_指南中的_&#x200B;系統需求[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)，瞭解最新的軟體版本要求。
 
 根據您的專案配置，升級任務可能包括以下內容：
 
@@ -289,15 +289,15 @@ ht-degree: 0%
 
 1. 檢閱目前套用的修正程式：
 
-   - 如果`m2-hotfixes`目錄中有安裝任何修補程式，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)，並與Adobe Commerce支援人員合作，確認哪些修補程式仍可套用至新版本。 從`m2-hotfixes`目錄移除不適用的修補程式。
+   - 如果`m2-hotfixes`目錄中有安裝任何修補程式，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)，並與Adobe Commerce支援人員合作，確認哪些修補程式仍可套用至新版本。 從`m2-hotfixes`目錄移除不適用的修補程式。
 
    - 如果`.magento.env.yaml`檔案中套用了任何[品質修補程式]，請確認它們是否仍可套用至新版本。 從`.magento.env.yaml`檔案的`QUALITY_PATCHES`區段中移除不適用的修補程式。
 
-   **方法1**： [驗證Quality Patches發行說明中的適用版本](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **方法1**： [驗證Quality Patches發行說明中的適用版本](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **方法2**： [檢視可用的修補程式和狀態](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **方法2**： [檢視可用的修補程式和狀態](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法3**： [搜尋修補程式](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
+   **方法3**： [搜尋修補程式](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hant)
 
 
 1. 新增、提交和推送程式碼變更。

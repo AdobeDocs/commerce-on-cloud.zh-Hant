@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [Redis](https://redis.io)是選用的後端快取解決方案，可取代Adobe Commerce預設使用的Zend Framework Zend_Cache_Backend_File。
 
-請參閱&#x200B;_設定指南_&#x200B;中的[設定Redis](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/config-redis.html)。
+請參閱&#x200B;_設定指南_&#x200B;中的[設定Redis](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/config-redis.html?lang=zh-Hant)。
 
 {{service-instruction}}
 
@@ -128,7 +128,7 @@ echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
 
 請參閱下列Adobe Commerce支援文章，以取得疑難排解Redis問題的說明：
 
-- [Redis問題延遲Admin登入或簽出](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html)
-- [延伸Redis快取實作Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html)
-- [Adobe Commerce上的Managed警示： Redis記憶體警告警示](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html)
-- [Adobe Commerce上的Managed警示： Redis記憶體嚴重警示](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html)
+- [Redis問題延遲Admin登入或簽出](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html?lang=zh-Hant)
+- [延伸Redis快取實作Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html?lang=zh-Hant)
+- [Adobe Commerce上的Managed警示： Redis記憶體警告警示](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html?lang=zh-Hant)
+- [Adobe Commerce上的Managed警示： Redis記憶體嚴重警示](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html?lang=zh-Hant)

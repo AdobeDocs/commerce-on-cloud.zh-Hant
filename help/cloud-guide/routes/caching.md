@@ -131,7 +131,7 @@ cache:
 
 Cookie有下列限制：
 
-- 系統中設定了最多&#x200B;**50 Cookie**&#x200B;個。 否則，應用程式會擲回`Unable to send the cookie. Maximum number of cookies would be exceeded`例外狀況。 若要將Cookie數目增加到200，請使用[品質修補程式工具](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/tools/quality-patch-tool)套用[MDVA-12304修補程式](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html)。
+- 系統中設定了最多&#x200B;**50 Cookie**&#x200B;個。 否則，應用程式會擲回`Unable to send the cookie. Maximum number of cookies would be exceeded`例外狀況。 若要將Cookie數目增加到200，請使用[品質修補程式工具](https://experienceleague.adobe.com/zh-hant/docs/commerce-learn/tutorials/tools/quality-patch-tool)套用[MDVA-12304修補程式](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=zh-Hant)。
 - Cookie大小上限為&#x200B;**4096位元組**。 否則，應用程式會擲回`Unable to send the cookie. Size of '%name' is %size bytes`例外狀況。
 
 ### `default_ttl`

@@ -49,9 +49,9 @@ ht-degree: 0%
 
    - 使用SSH登入遠端伺服器並驗證下列專案：
 
-      - 視需要檢查索引器狀態並重新索引。 請參閱&#x200B;_設定指南_&#x200B;中的[管理索引子](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)。
+      - 視需要檢查索引器狀態並重新索引。 請參閱&#x200B;_設定指南_&#x200B;中的[管理索引子](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=zh-Hant)。
 
       - 檢查Adobe Commerce資料庫中的`cron`記錄檔和`cron_schedule`資料表以驗證cron狀態，並視需要重新執行cron工作。
-請參閱_設定指南_&#x200B;中的[記錄](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging)。
+請參閱_設定指南_&#x200B;中的[記錄](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=zh-Hant#logging)。
 
    - 在中繼和生產環境中完成升級後使用者驗收測試UAT，並修正與協力廠商和自訂擴充功能升級相關的任何問題。

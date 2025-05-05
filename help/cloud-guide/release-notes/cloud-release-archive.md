@@ -27,7 +27,7 @@ ht-degree: 0%
 
    - ![新圖示](../../assets/new.svg)已更新`ece-tools`封裝的`composer.json`檔案，以新增`magento/magento-cloud-patches` v1.0.0封裝的相依性。
 
-   - ![修正圖示](../../assets/fix.svg)修正從2.3.2-p2版或更新版本開始，在僅限安全性發行版本上套用修補程式集時，`ece-tools`修補程式中斷的問題。 此問題是由針對[僅限安全性修補程式](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/overview).<!--MAGECLOUD-4661-->採用的新版本化Scheme所引進
+   - ![修正圖示](../../assets/fix.svg)修正從2.3.2-p2版或更新版本開始，在僅限安全性發行版本上套用修補程式集時，`ece-tools`修補程式中斷的問題。 此問題是由針對[僅限安全性修補程式](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/release/notes/security-patches/overview).<!--MAGECLOUD-4661-->採用的新版本化Scheme所引進
 
 - ![修正圖示](../../assets/fix.svg) **修補程式和重要修正** — 使用`ece-tools`版本2002.0.22更新您的雲端環境，以套用下列修補程式和重要修正。 這些修補程式包含在`magento/magento-cloud-patches` v1.0.0套件中。
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg)已新增對RabitMQ 3.8.<!-- MAGECLOUD-4674-->版的支援
 
-- ![新圖示](../../assets/new.svg)已更新服務相容性的互動式驗證，以反映新的Adobe Commerce 2.3.3和2.2.10版本支援的版本。 如需建議的版本，請參閱&#x200B;_安裝指南_&#x200B;中的[系統需求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)。<!-- MAGECLOUD-4018 -->
+- ![新圖示](../../assets/new.svg)已更新服務相容性的互動式驗證，以反映新的Adobe Commerce 2.3.3和2.2.10版本支援的版本。 如需建議的版本，請參閱&#x200B;_安裝指南_&#x200B;中的[系統需求](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/system-requirements)。<!-- MAGECLOUD-4018 -->
 
 - ![修正圖示](../../assets/fix.svg)改善在部署階段的cron工作管理程式嘗試停止已完成的cron工作時，傳回的記錄訊息，以澄清此問題不是錯誤。 已將記錄層級從`INFO`變更為`DEBUG`.<!-- MAGECLOUD-3653-->
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
    - ![新圖示](../../assets/new.svg)您現在可以在Docker環境中使用`ece-tools`套件執行功能測試。 請參閱[應用程式測試](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/).<!-- MAGECLOUD-3129/3684 -->
 
-   - ![新圖示](../../assets/new.svg)已新增使用`.magento.app.yaml`檔案設定PHP模組的支援。 在`.magento.app.yaml`檔案[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)中指定的任何PHP副檔名都可在Docker PHP容器中使用。<!-- MAGECLOUD-3357 -->
+   - ![新圖示](../../assets/new.svg)已新增使用`.magento.app.yaml`檔案設定PHP模組的支援。 在`.magento.app.yaml`檔案[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)中指定的任何PHP副檔名都可在Docker PHP容器中使用。<!-- MAGECLOUD-3357 -->
 
    - ![新圖示](../../assets/new.svg)有新命令可用來改善Docker命令列體驗。 檢視Docker參考&rbrack;(https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/#cloud-docker-cli).<!-- MAGECLOUD-3569 -->的&lbrack;`bin/magento-docker`區段
 
@@ -125,7 +125,7 @@ ht-degree: 0%
 
 - ![修正圖示](../../assets/fix.svg)修正當資料庫中不存在基底URL時，造成部署失敗的問題。<!-- MAGECLOUD-3075 -->
 
-- ![新圖示](../../assets/new.svg)已將新的&#x200B;**`env:config:show`命令**&#x200B;新增到顯示環境服務、路由或變數的`ece-tools`封裝。 請參閱[服務、路由及變數](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/package-overview#services-routes-and-variables)。 [Vladimir Kerkhoff提交的功能](https://github.com/magento/ece-tools/pull/486).<!-- MAGECLOUD-3451 -->
+- ![新圖示](../../assets/new.svg)已將新的&#x200B;**`env:config:show`命令**&#x200B;新增到顯示環境服務、路由或變數的`ece-tools`封裝。 請參閱[服務、路由及變數](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/package-overview#services-routes-and-variables)。 [Vladimir Kerkhoff提交的功能](https://github.com/magento/ece-tools/pull/486).<!-- MAGECLOUD-3451 -->
 
 - ![修正圖示](../../assets/fix.svg)修正當嘗試安裝Adobe Commerce 2.2.6或更舊版本（含`ece-tools`開發）並在殼層重構後發生嚴重錯誤的問題。<!-- MAGECLOUD-3665 -->
 
@@ -143,7 +143,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **Docker更新**—
 
-   - ![新圖示](../../assets/new.svg)現在，Docker環境支援.magento.app.yaml檔案[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)的crons屬性中定義的cron設定。<!-- MAGECLOUD-3150 -->
+   - ![新圖示](../../assets/new.svg)現在，Docker環境支援.magento.app.yaml檔案[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)的crons屬性中定義的cron設定。<!-- MAGECLOUD-3150 -->
 
    - ![新圖示](../../assets/new.svg) **新Docker容器** — 已新增[TLS終止Proxy容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#varnish-container)，以方便透過HTTPS終止Varnish SSL。<!-- MAGECLOUD-2890 -->
 
@@ -151,7 +151,7 @@ ht-degree: 0%
 
    - ![新圖示](../../assets/new.svg) **Docker建置模式** — 現在您可以選擇在[生產模式或開發人員模式](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/#launch-mode)中啟動Docker環境。 開發人員模式支援具有完整可寫入檔案系統許可權的主動式開發。<!-- MAGECLOUD-3152/3511 -->
 
-   - ![修正圖示](../../assets/fix.svg)修正當快取設定為無法使用時，導致Docker部署失敗並出現`Name or service not known`錯誤的問題。 現在，您可以從[`.magento/services.yaml`檔案](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)移除服務。 Docker設定產生器會自動更新`docker/config.php.dist`檔案中的服務。<!-- MAGECLOUD-3369 -->
+   - ![修正圖示](../../assets/fix.svg)修正當快取設定為無法使用時，導致Docker部署失敗並出現`Name or service not known`錯誤的問題。 現在，您可以從[`.magento/services.yaml`檔案](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)移除服務。 Docker設定產生器會自動更新`docker/config.php.dist`檔案中的服務。<!-- MAGECLOUD-3369 -->
 
    - ![新圖示](../../assets/new.svg)已新增服務相容性的互動式驗證。 現在，如果要求的服務與Adobe Commerce版本或其他服務不相容，_互動模式_&#x200B;會以訊息提示使用者，並選擇繼續。 檢視Docker可用的[服務版本](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-containers)。 使用`-n`選項略過互動以進行CICD。<!-- MAGECLOUD-3251 -->
 
@@ -215,15 +215,15 @@ ht-degree: 0%
 
    - 修正產生`docker-compose.yml`檔案時Web服務許可權的問題。<!-- MAGECLOUD-2883 -->
 
-- ![新圖示](../../assets/new.svg) **升級改善** — 已新增驗證，以確認`composer.json`檔案中的`autoload`屬性在升級至Adobe Commerce v2.3之前包含必要的設定變更。請參閱[升級版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version)。<!-- MAGECLOUD-2392 -->
+- ![新圖示](../../assets/new.svg) **升級改善** — 已新增驗證，以確認`composer.json`檔案中的`autoload`屬性在升級至Adobe Commerce v2.3之前包含必要的設定變更。請參閱[升級版本](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version)。<!-- MAGECLOUD-2392 -->
 
-- ![新圖示](../../assets/new.svg)部署靜態內容的壓縮程式現在包含所有資產（原生產生或自訂），而且會在[`build:transfer`區段](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)開頭的建置階段期間發生。 先前，壓縮程式會在套用自訂縮制和靜態資產套件組合前進行。 [Rafael Garcia Lepper從Tryzens Limited提交的修正](https://github.com/magento/ece-tools/pull/413)。<!-- MAGECLOUD-3104 -->
+- ![新圖示](../../assets/new.svg)部署靜態內容的壓縮程式現在包含所有資產（原生產生或自訂），而且會在[`build:transfer`區段](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)開頭的建置階段期間發生。 先前，壓縮程式會在套用自訂縮制和靜態資產套件組合前進行。 [Rafael Garcia Lepper從Tryzens Limited提交的修正](https://github.com/magento/ece-tools/pull/413)。<!-- MAGECLOUD-3104 -->
 
 - ![修正圖示](../../assets/fix.svg)修正了在設定其他資料庫和服務關聯性後，立即在部署期間發生的資料庫連線錯誤。 此外，此修正會解決在入門版Commerce報告的設定程式中發生的問題。 首先，此升級為使用Commerce報告的「必備」。<!-- MAGECLOUD-3035 -->
 
 - ![修正圖示](../../assets/fix.svg)修正資料庫組態導致部署程式失敗的驗證問題。<!-- MAGECLOUD-3003 -->
 
-- ![修正圖示](../../assets/fix.svg)已使用適當版本的`symfony/yaml`封裝更新條件約束，以搭配[PHP常數](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants)使用。 使用3.2之前的`symfony/yaml`封裝版本時，常數剖析無法運作。[由Vladimir Kerkhoff提交的修正](https://github.com/magento/ece-tools/pull/404)。<!-- MAGECLOUD-2956 -->
+- ![修正圖示](../../assets/fix.svg)已使用適當版本的`symfony/yaml`封裝更新條件約束，以搭配[PHP常數](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants)使用。 使用3.2之前的`symfony/yaml`封裝版本時，常數剖析無法運作。[由Vladimir Kerkhoff提交的修正](https://github.com/magento/ece-tools/pull/404)。<!-- MAGECLOUD-2956 -->
 
 - ![新圖示](../../assets/new.svg) **環境組態檢查** — 已新增驗證，以檢查PHP版本並在使用者未使用最新建議版本時警告使用者。<!--MAGECLOUD-2903-->
 
@@ -257,7 +257,7 @@ ht-degree: 0%
 
    - **管理員變數**—<!-- MAGECLOUD-2573/MAGECLOUD-2848 -->
 
-      - 改善使用環境變數管理管理員使用者認證時的安全性。 在升級期間，您無法再使用ADMIN_EMAIL、ADMIN_USERNAME和ADMIN_PASSWORD環境變數來覆寫管理員認證。 如果您無法存取「管理員」面板，請使用&#x200B;_忘記密碼_&#x200B;功能或`admin:user:create` CLI命令來建立新的管理員使用者。 檢視[存取您的管理面板](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/onboarding#admin)。
+      - 改善使用環境變數管理管理員使用者認證時的安全性。 在升級期間，您無法再使用ADMIN_EMAIL、ADMIN_USERNAME和ADMIN_PASSWORD環境變數來覆寫管理員認證。 如果您無法存取「管理員」面板，請使用&#x200B;_忘記密碼_&#x200B;功能或`admin:user:create` CLI命令來建立新的管理員使用者。 檢視[存取您的管理面板](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/start/onboarding#admin)。
 
       - 升級或套用修補程式時不再需要ADMIN_EMAIL。
 
@@ -279,7 +279,7 @@ ht-degree: 0%
 
       - Redis 3.2和4.0<!-- MAGECLOUD-2886 -->
 
-- ![新圖示](../../assets/new.svg) **使用PHP常數進行設定** — 已在`.magento.env.yaml`組態檔中新增對[PHP常數](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants)的支援。<!-- MAGECLOUD- 2575 -->
+- ![新圖示](../../assets/new.svg) **使用PHP常數進行設定** — 已在`.magento.env.yaml`組態檔中新增對[PHP常數](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants)的支援。<!-- MAGECLOUD- 2575 -->
 
 - ![新圖示](../../assets/new.svg) **新環境變數** — 依預設，只有生產環境已啟用Google Analytics。 您可以使用[ENABLE_GOOGLE_ANALYTICS環境變數](../environment/variables-deploy.md#enable_google_analytics).<!--MAGECLOUD-2879-->在測試和整合環境中啟用Google Analytics
 
@@ -343,13 +343,13 @@ ht-degree: 0%
 
    - 現在您擁有使用Cloud Docker [資料庫容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#database-container)時的資料庫傾印功能。 此外，您可以使用`docker/mnt`目錄，在主機電腦和容器之間[共用檔案](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#sharing-data-between-host-machine-and-container)。<!-- MAGECLOUD-2577 -->
 
-   - **清漆服務支援** — 已新增清漆影像，此影像會自動部署至Docker容器。 部署後，您可以依照Adobe Commerce最佳實務手動設定Varnish。 請參閱[設定及使用清漆](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish)。&lt;！—MAGECLOUD—2358—>
+   - **清漆服務支援** — 已新增清漆影像，此影像會自動部署至Docker容器。 部署後，您可以依照Adobe Commerce最佳實務手動設定Varnish。 請參閱[設定及使用清漆](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish)。&lt;！—MAGECLOUD—2358—>
 
    - 安全網站存取 — 新增SSL支援，可存取您的Adobe Commerce商店和管理面板。&lt;！—MAGECLOUD—2360—>
 
-- ![修正圖示](../../assets/fix.svg) **改善雲端基礎結構擴充功能支援上的Adobe Commerce** — 將雲端基礎結構上Adobe Commerce中[composer.json檔案](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/overview)的guzzlehttp/guzzle封裝的最低版本需求降級為6.2版，以便`ece-tools`封裝與更多擴充功能相容。<!--MAGECLOUD-2205-->
+- ![修正圖示](../../assets/fix.svg) **改善雲端基礎結構擴充功能支援上的Adobe Commerce** — 將雲端基礎結構上Adobe Commerce中[composer.json檔案](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/overview)的guzzlehttp/guzzle封裝的最低版本需求降級為6.2版，以便`ece-tools`封裝與更多擴充功能相容。<!--MAGECLOUD-2205-->
 
-- ![新圖示](../../assets/new.svg) **在建置階段期間套用自訂變更至您的Adobe Commerce應用程式** — 我們將建置階段分割成兩個獨立的程式，以便您能使用鉤點來套用自訂變更至產生的靜態內容，然後再封裝應用程式以進行部署。 _build：generate_&#x200B;程式會產生程式碼、套用修補程式，並產生靜態內容。 _build：transfer_&#x200B;程式會將產生的程式碼和靜態內容傳輸到最終目的地。 檢視[應用程式鉤點](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property).<!--MAGECLOUD-2363-->
+- ![新圖示](../../assets/new.svg) **在建置階段期間套用自訂變更至您的Adobe Commerce應用程式** — 我們將建置階段分割成兩個獨立的程式，以便您能使用鉤點來套用自訂變更至產生的靜態內容，然後再封裝應用程式以進行部署。 _build：generate_&#x200B;程式會產生程式碼、套用修補程式，並產生靜態內容。 _build：transfer_&#x200B;程式會將產生的程式碼和靜態內容傳輸到最終目的地。 檢視[應用程式鉤點](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property).<!--MAGECLOUD-2363-->
 
 - ![修正圖示](../../assets/fix.svg) **環境設定檢查** — 已改善環境設定的驗證，以在雲端基礎結構上建置和部署Adobe Commerce之前，警告客戶版本不相容和設定錯誤。
 
@@ -357,7 +357,7 @@ ht-degree: 0%
 
    - 新增Elasticsearch相容性檢查，以警告使用者有關Elasticsearch設定問題。 現在，如果伺服器上的Elasticsearch服務版本與Adobe Commerce不相容，部署就會失敗。 以前，即使Elasticsearch版本不相容，部署也會成功，導致網站部署後出現產品目錄問題。<!--MAGECLOUD-2389-->
 
-     您可以透過[提交支援票證](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices)來解決不相容問題，以將Elasticsearch升級為相容版本，或變更Adobe Commerce組態以指定相容的ElasticsearchPHP使用者端版本。
+     您可以透過[提交支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices)來解決不相容問題，以將Elasticsearch升級為相容版本，或變更Adobe Commerce組態以指定相容的ElasticsearchPHP使用者端版本。
 
       - 若是Adobe Commerce 2.1.x版至2.2.2版，請將Elasticsearch升級至2.4版。
 
@@ -393,7 +393,7 @@ ht-degree: 0%
 
 - ![修正圖示](../../assets/fix.svg)修正部署程式期間參考壓縮檔案時，[靜態內容壓縮程式](../environment/variables-intro.md) (`gzip`)發生`not overwritten`和`no such file or directory`錯誤的問題。<!-- MAGECLOUD-2182-->
 
-- ![修正圖示](../../assets/fix.svg)修正了在傾印程式期間，如果未指定存放區地區設定，`php ./vendor/bin/ece-tools config:dump`命令無法從`config.php`檔案移除多餘區段的問題。 現在您可以輕鬆在環境之間移動設定檔案。 更新至`ece-tools` v2002.0.13後，使用改良的`config:dump`命令重新產生較舊的`config.php`檔案。 檢視存放區設定的[組態管理](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure-store/store-settings).<!--MAGECLOUD-2444-->
+- ![修正圖示](../../assets/fix.svg)修正了在傾印程式期間，如果未指定存放區地區設定，`php ./vendor/bin/ece-tools config:dump`命令無法從`config.php`檔案移除多餘區段的問題。 現在您可以輕鬆在環境之間移動設定檔案。 更新至`ece-tools` v2002.0.13後，使用改良的`config:dump`命令重新產生較舊的`config.php`檔案。 檢視存放區設定的[組態管理](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure-store/store-settings).<!--MAGECLOUD-2444-->
 
 - ![修正圖示](../../assets/fix.svg)修正當`.magento/routes.yaml`檔案中的路由設定從[apex](https://blog.cloudflare.com/zone-apex-naked-domain-root-domain-cname-supp/)網域重新導向至`www`網域時，在部署階段期間導致錯誤的問題。<!--MAGECLOUD-2556-->
 
@@ -561,7 +561,7 @@ ht-degree: 0%
 
 - **新cron命令** — 您現在可以解除鎖定特定的cron工作，而不是使用[`cron:unlock`](https://support.magento.com/hc/en-us/articles/360033099451)命令停止並重新啟動所有工作。 在2.1.<!-- MAGECLOUD-1367 -->中無法使用
 
-- **整合組態檔** — 您現在可以使用[`.magento.env.yaml`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml)檔案來設定組建和部署階段。<!-- MAGECLOUD-1369 -->
+- **整合組態檔** — 您現在可以使用[`.magento.env.yaml`](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml)檔案來設定組建和部署階段。<!-- MAGECLOUD-1369 -->
 
 - **備份組態檔** — 部署程式現在會在部署後自動建立`app/etc/env.php`與`app/etc/config.php`組態檔的備份。 我們也新增了[新的CLI命令](https://support.magento.com/hc/en-us/articles/360033182871)，以便從備份還原這些組態檔。<!-- MAGECLOUD-1372 -->
 
@@ -623,11 +623,11 @@ ht-degree: 0%
 
    - [靜態內容部署效能](../deploy/static-content.md)
 
-   - [部署程式](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices)
+   - [部署程式](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices)
 
-- **組態管理** — 我們現在會在建置階段期間，在您的Git存放庫中自動產生`app/etc/config.php`檔案（如果尚未存在）。 自動產生的檔案僅包含模組和副檔名的清單。 如果檔案已經存在，則建置階段會照常繼續。 如果您稍後再執行[組態管理](../store/store-settings.md)，這些命令會更新檔案，而不需要其他步驟。 如需詳細資訊，請參閱[部署程式](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices)。
+- **組態管理** — 我們現在會在建置階段期間，在您的Git存放庫中自動產生`app/etc/config.php`檔案（如果尚未存在）。 自動產生的檔案僅包含模組和副檔名的清單。 如果檔案已經存在，則建置階段會照常繼續。 如果您稍後再執行[組態管理](../store/store-settings.md)，這些命令會更新檔案，而不需要其他步驟。 如需詳細資訊，請參閱[部署程式](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices)。
 
-- **資料庫傾印** — 我們新增了`magento/ece-tools` CLI命令，以便在所有環境中建立資料庫傾印。 對於Pro計畫生產環境，這個命令只會從三個高可用性節點中的一個轉儲，因此在轉儲期間寫入不同節點的生產資料可能不會被複製。 我們建議在生產環境中執行資料庫傾印之前，將應用程式置於維護模式。 如需詳細資訊，請參閱[備份管理](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/snapshots)。
+- **資料庫傾印** — 我們新增了`magento/ece-tools` CLI命令，以便在所有環境中建立資料庫傾印。 對於Pro計畫生產環境，這個命令只會從三個高可用性節點中的一個轉儲，因此在轉儲期間寫入不同節點的生產資料可能不會被複製。 我們建議在生產環境中執行資料庫傾印之前，將應用程式置於維護模式。 如需詳細資訊，請參閱[備份管理](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/storage/snapshots)。
 
 - **已解除Cron間隔限制** — 針對us-3、eu-3和ap-3區域中布建的所有環境的預設Cron間隔為1分鐘。 所有其他地區的預設cron間隔為5分鐘（適用於Pro整合環境）和1分鐘（適用於Pro測試和生產環境）。 若要修改現有的cron工作，請在`.magento.app.yaml`中編輯您的設定，或建立生產/測試環境的支援票證。 如需詳細資訊，請參閱[設定cron工作](../application/crons-property.md#set-up-cron-jobs)。
 
@@ -671,7 +671,7 @@ ht-degree: 0%
 
 **新功能：**
 
-- 雲端基礎結構上的Adobe Commerce現在支援範圍和[靜態內容部署策略](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)。 我們已為靜態內容部署策略新增預設設定為`quick`的`–s`引數。 您可以使用環境變數[SCD_STRATEGY](../environment/variables-deploy.md)來自訂這些策略，並將這些策略用於您的建置和部署動作。 此變數支援選項`standard`、`quick`或`compact`。 如果您選取`compact`，我們會以`1`覆寫`STATIC_CONTENT_THREADS`值，這會減慢部署速度，尤其是在生產環境中。 在2.1.<!--- MAGECLOUD-1057 -->中無法使用
+- 雲端基礎結構上的Adobe Commerce現在支援範圍和[靜態內容部署策略](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)。 我們已為靜態內容部署策略新增預設設定為`quick`的`–s`引數。 您可以使用環境變數[SCD_STRATEGY](../environment/variables-deploy.md)來自訂這些策略，並將這些策略用於您的建置和部署動作。 此變數支援選項`standard`、`quick`或`compact`。 如果您選取`compact`，我們會以`1`覆寫`STATIC_CONTENT_THREADS`值，這會減慢部署速度，尤其是在生產環境中。 在2.1.<!--- MAGECLOUD-1057 -->中無法使用
 
 - 我們在環境上建立了記錄檔，以擷取及編譯建置和部署動作。 `var/log/cloud.log`檔案位於根應用程式目錄中。<!--- MAGECLOUD-1014 & MAGECLOUD-1023 -->
 

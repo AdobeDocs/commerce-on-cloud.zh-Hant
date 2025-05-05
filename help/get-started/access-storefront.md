@@ -25,8 +25,8 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果密碼重設失敗或您無法登入「管理員」面板，具有管理員存取許可權的使用者可以使用SSH連線至專案，並使用`admin:user:create` CLI命令新增管理員使用者。 請參閱&#x200B;_安裝指南_&#x200B;中的[建立、編輯或解除鎖定系統管理員帳戶](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html)。
+>如果密碼重設失敗或您無法登入「管理員」面板，具有管理員存取許可權的使用者可以使用SSH連線至專案，並使用`admin:user:create` CLI命令新增管理員使用者。 請參閱&#x200B;_安裝指南_&#x200B;中的[建立、編輯或解除鎖定系統管理員帳戶](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=zh-Hant)。
 
 ## 監視網站健康狀況
 
-[全網站分析工具](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/intro)是主動式自助服務工具和中央存放庫，其中包含詳細的系統分析和建議，以確保您的Adobe Commerce安裝的安全性和可操作性。 它提供全天候的即時效能監控、報告和建議，以找出潛在問題，並更清楚地瞭解網站健康狀況、安全性和應用程式設定。 這有助於縮短解決時間，並改善網站穩定性與效能。 您可以直接從[管理面板](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/access#option-2-logging-in-to-your-site-wide-analysis-tool-dashboard-from-your-stores-admin-panel)存取全網站分析工具。
+[全網站分析工具](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/tools/site-wide-analysis-tool/intro)是主動式自助服務工具和中央存放庫，其中包含詳細的系統分析和建議，以確保您的Adobe Commerce安裝的安全性和可操作性。 它提供全天候的即時效能監控、報告和建議，以找出潛在問題，並更清楚地瞭解網站健康狀況、安全性和應用程式設定。 這有助於縮短解決時間，並改善網站穩定性與效能。 您可以直接從[管理面板](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/tools/site-wide-analysis-tool/access#option-2-logging-in-to-your-site-wide-analysis-tool-dashboard-from-your-stores-admin-panel)存取全網站分析工具。

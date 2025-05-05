@@ -13,7 +13,7 @@ ht-degree: 1%
 
 `mysql`服務提供以[MariaDB](https://mariadb.com/)版本10.2到10.4為基礎的持續性資料儲存，支援[XtraDB](https://docs.percona.com/percona-xtradb-cluster/8.0/index.html)儲存引擎，並重新實作MySQL 5.6和5.7的功能。
 
-與其他MariaDB或MySQL版本相比，在MariaDB 10.4上重新索引需要更多時間。 請參閱&#x200B;_效能最佳實務_&#x200B;指南中的[索引子](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#indexers)。
+與其他MariaDB或MySQL版本相比，在MariaDB 10.4上重新索引需要更多時間。 請參閱&#x200B;_效能最佳實務_&#x200B;指南中的[索引子](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=zh-Hant#indexers)。
 
 >[!WARNING]
 >
@@ -72,7 +72,7 @@ mysql:
             optimizer_use_condition_selectivity: 1
 ```
 
-上述範例中的`properties`將預設`optimizer`設定修改為「效能最佳實務指南[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#indexers)」中的建議。
+上述範例中的`properties`將預設`optimizer`設定修改為「效能最佳實務指南[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=zh-Hant#indexers)」中的建議。
 
 **MariaDB組態選項**：
 
@@ -88,7 +88,7 @@ mysql:
 
 您可以選擇設定多個具有不同許可權的使用者來存取`main`資料庫。
 
-依預設，有一個名為`mysql`的端點擁有資料庫的管理員存取權。 若要設定多個資料庫使用者，您必須在`services.yaml`檔案中定義多個端點，並在`.magento.app.yaml`檔案中宣告關係。 對於Pro測試和生產環境，[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以請求其他使用者。
+依預設，有一個名為`mysql`的端點擁有資料庫的管理員存取權。 若要設定多個資料庫使用者，您必須在`services.yaml`檔案中定義多個端點，並在`.magento.app.yaml`檔案中宣告關係。 對於Pro測試和生產環境，[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以請求其他使用者。
 
 使用巢狀陣列來定義特定使用者存取的端點。 每個端點可以指定一個或多個結構描述（資料庫）的存取權，以及每個結構描述的不同許可權層級。
 
@@ -212,13 +212,13 @@ relationships:
 >
 >此功能僅適用於Pro Production和Staging叢集。
 
-有時候，您必須連線到次要資料庫，以改善資料庫效能或解決資料庫鎖定問題。 如果需要此組態，請使用`"port" : 3304`建立連線。 請參閱&#x200B;_實作最佳實務_&#x200B;指南中的[設定MySQL從屬連線的最佳實務](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration.html)主題。
+有時候，您必須連線到次要資料庫，以改善資料庫效能或解決資料庫鎖定問題。 如果需要此組態，請使用`"port" : 3304`建立連線。 請參閱&#x200B;_實作最佳實務_&#x200B;指南中的[設定MySQL從屬連線的最佳實務](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration.html?lang=zh-Hant)主題。
 
 ## 疑難排解
 
 請參閱下列Adobe Commerce支援文章，以取得MySQL問題疑難排解的說明：
 
-- [正在檢查緩慢的查詢和處理MySQL](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html)
-- [在雲端上建立資料庫傾印](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud.html)
-- [資料移轉工具疑難排解](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
-- [Adobe Commerce升級：壓縮至動態表格2.2.x、2.3.x至2.4.x](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html)
+- [正在檢查緩慢的查詢和處理MySQL](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html?lang=zh-Hant)
+- [在雲端上建立資料庫傾印](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud.html?lang=zh-Hant)
+- [資料移轉工具疑難排解](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hant)
+- [Adobe Commerce升級：壓縮至動態表格2.2.x、2.3.x至2.4.x](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html?lang=zh-Hant)

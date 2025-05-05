@@ -58,7 +58,7 @@ PayPal支援全球各地的PayPal Express Checkout連線，但下列限制除外
    * **沙箱模式**&#x200B;選取「是」或「否」以指出您輸入的認證是否適用於沙箱。 如果您已輸入生產認證，請選取「否」。
    * **API使用Proxy**&#x200B;如果系統使用Proxy伺服器建立Adobe Commerce與PayPal付款系統之間的連線，請選取「是」或「否」以設定。 如果是，請輸入Proxy主機和連線埠。
 
-1. 如需設定帳戶的詳細資訊和步驟，請參閱[PayPal Express結帳](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) （從步驟2開始）。完成必要的設定。
+1. 如需設定帳戶的詳細資訊和步驟，請參閱[PayPal Express結帳](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) （從步驟2開始）。完成必要的設定。
 
 設定並驗證帳戶後，您可以在「必要的PayPal設定」下啟用和停用PayPal付款選項：
 

@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->若要使用[[!DNL Cloud Console]](../project/overview.md)將環境變數新增至[覆寫組態設定](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html)，您必須在變數名稱前面加上`env:`，如下列範例所示：
+>若要使用[[!DNL Cloud Console]](../project/overview.md)將環境變數新增至[覆寫組態設定](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=zh-Hant)，您必須在變數名稱前面加上`env:`，如下列範例所示：
 >
 >![環境變數範例](../../assets/set-env-variable-ui.png)
 

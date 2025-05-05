@@ -20,4 +20,4 @@ ht-degree: 0%
 + [登入 [!DNL Cloud Console]](cloud-console.md)
 + [存取店面](access-storefront.md)
 + [準備開發](prepare-workspace.md)
-+ [返回雲端基礎結構指南](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html)
++ [返回雲端基礎結構指南](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=zh-Hant)

@@ -27,7 +27,7 @@ ht-degree: 0%
 
 - **Adobe Commerce加密金鑰**
 
-  僅匯入現有系統時，請擷取用來保護您存取和資料庫資料的加密金鑰。 如需此金鑰的詳細資訊，請參閱[解決加密金鑰的問題](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html)
+  僅匯入現有系統時，請擷取用來保護您存取和資料庫資料的加密金鑰。 如需此金鑰的詳細資訊，請參閱[解決加密金鑰的問題](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html?lang=zh-Hant)
 
 ## 開發人員工具
 

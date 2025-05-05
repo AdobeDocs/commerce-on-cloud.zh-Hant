@@ -30,7 +30,7 @@ New Relic使用PHP代理程式連線並監視您的基礎結構和[!DNL Commerce
 
 >[!TIP]
 >
->如需使用此資料疑難排解應用程式效能問題的詳細資訊，請參閱&#x200B;_Adobe Commerce說明中心_&#x200B;中的[使用New Relic疑難排解效能](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html)。
+>如需使用此資料疑難排解應用程式效能問題的詳細資訊，請參閱&#x200B;_Adobe Commerce說明中心_&#x200B;中的[使用New Relic疑難排解效能](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=zh-Hant)。
 
 ## 使用受管理警示監控效能
 
@@ -46,7 +46,7 @@ Adobe提供Adobe Commerce _警示原則的_&#x200B;受管理警示，以追蹤�
 | MariaDB查詢載入 | NRI | Pro |
 | Redis記憶體 | NRI | Pro |
 
-當網站基礎結構或應用程式條件觸發警報臨界值時，New Relic會傳送警報通知，以便您能主動解決問題。 請參閱&#x200B;_Adobe Commerce說明中心_&#x200B;中的[Adobe Commerce受管理警示](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html)，以取得警示臨界值和疑難排解步驟的詳細資訊，進而解決觸發警示的問題。
+當網站基礎結構或應用程式條件觸發警報臨界值時，New Relic會傳送警報通知，以便您能主動解決問題。 請參閱&#x200B;_Adobe Commerce說明中心_&#x200B;中的[Adobe Commerce受管理警示](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=zh-Hant)，以取得警示臨界值和疑難排解步驟的詳細資訊，進而解決觸發警示的問題。
 
 >[!TIP]
 >
@@ -76,7 +76,7 @@ Adobe提供Adobe Commerce _警示原則的_&#x200B;受管理警示，以追蹤�
 
      >[!NOTE]
      >
-     >如果Adobe Commerce _原則的_&#x200B;受管理警示無法使用，請參閱&#x200B;_Adobe Commerce說明中心_&#x200B;中的[Adobe Commerce受管理警示](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html)。
+     >如果Adobe Commerce _原則的_&#x200B;受管理警示無法使用，請參閱&#x200B;_Adobe Commerce說明中心_&#x200B;中的[Adobe Commerce受管理警示](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=zh-Hant)。
 
 1. 按一下&#x200B;**[!UICONTROL Alert conditions]**&#x200B;標籤以檢閱原則中定義的警示條件。
 

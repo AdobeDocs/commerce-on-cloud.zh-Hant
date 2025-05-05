@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->雲端專案預設不會啟用MFA。 雲端基礎結構專案上Adobe Commerce的帳戶擁有者必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)才能啟用它。 啟用MFA時，所有使用者必須在雲端基礎結構帳戶上的Adobe Commerce上啟用雙因素驗證(TFA)，才能以ssh存取專案環境。
+>雲端專案預設不會啟用MFA。 雲端基礎結構專案上Adobe Commerce的帳戶擁有者必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)才能啟用它。 啟用MFA時，所有使用者必須在雲端基礎結構帳戶上的Adobe Commerce上啟用雙因素驗證(TFA)，才能以ssh存取專案環境。
 
 ## SSH存取的憑證
 

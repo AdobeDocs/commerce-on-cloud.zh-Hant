@@ -24,7 +24,7 @@ ht-degree: 7%
    + [專業工作流程](architecture/pro-develop-deploy-workflow.md)
    + [擴充架構](architecture/scaled-architecture.md)
    + [自動縮放](architecture/autoscaling.md)
-+ [開始使用](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
++ [開始使用](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=zh-Hant)
 + 發行說明{#release-notes}
    + [雲端工具套裝](release-notes/cloud-tools-suite.md)
    + [ECE-Tools套件](release-notes/ece-tools-package.md)

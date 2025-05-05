@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## Pro環境的設定更新
 
-對於雲端基礎結構專業測試和生產環境上的Adobe Commerce，您可以更新本機開發環境中的許多設定選項，並提交變更以將其套用至這些環境。 不過，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以更新下列組態選項：
+對於雲端基礎結構專業測試和生產環境上的Adobe Commerce，您可以更新本機開發環境中的許多設定選項，並提交變更以將其套用至這些環境。 不過，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以更新下列組態選項：
 
 - 在`.magento/services.yaml`檔案中安裝或更新服務。
 - 變更`.magento.app.yaml`檔案中`mounts`和`disk`屬性的組態。

@@ -40,7 +40,7 @@ hooks:
 
 >[!NOTE]
 >
->隨著`ece-tools` 2002.1.x的發行，有新的[鉤點組態](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html)格式。 仍支援`ece-tools` 2002.0.x版的舊版格式。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。
+>隨著`ece-tools` 2002.1.x的發行，有新的[鉤點組態](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=zh-Hant)格式。 仍支援`ece-tools` 2002.0.x版的舊版格式。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。
 
 ## 檢閱案例步驟
 

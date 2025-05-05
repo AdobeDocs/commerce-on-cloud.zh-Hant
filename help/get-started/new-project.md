@@ -31,7 +31,7 @@ ht-degree: 0%
 
 請參閱&#x200B;_雲端基礎結構上的Commerce_&#x200B;指南中的[設定多個網站或商店](../cloud-guide/store/multiple-sites.md)，以取得多個或唯一網域的進一步指引。
 
-如果您有現有的Fastly帳戶連結您Adobe Commerce網站上使用的相同頂點和子網域，請參閱[多個Fastly帳戶和指派的網域](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}。
+如果您有現有的Fastly帳戶連結您Adobe Commerce網站上使用的相同頂點和子網域，請參閱[多個Fastly帳戶和指派的網域](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}。
 
 ## 異動電子郵件網域
 
