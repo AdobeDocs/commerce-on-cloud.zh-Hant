@@ -25,7 +25,7 @@ ht-degree: 0%
 >
 >如需安全性詳細資訊，請參閱[安全性啟動檢查清單](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
 
-詳細檢視[技術棧疊](architecture/tech-stack.md)，或進一步瞭解Commerce ](architecture/cloud-architecture.md)的[雲端架構中的特定功能和支援產品。
+詳細檢視[技術棧疊](architecture/tech-stack.md)，或進一步瞭解Commerce [&#128279;](architecture/cloud-architecture.md)的雲端架構中的特定功能和支援產品。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
