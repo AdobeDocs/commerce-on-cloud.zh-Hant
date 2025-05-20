@@ -2,16 +2,17 @@
 title: 設定OpenSearch服務
 description: 瞭解如何在雲端基礎結構上啟用Adobe Commerce的OpenSearch服務。
 feature: Cloud, Search, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
+source-git-commit: 81b8ac7b611f9b8c6fe3011a554786bd2e48aabc
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
 # 設定OpenSearch服務
 
-在Elasticsearch的授權變更後，[OpenSearch](https://www.opensearch.org)服務是Elasticsearch7.10.2的開放原始碼復本。 檢視GitHub中的[OpenSource專案](https://github.com/opensearch-project)。
+在Elasticsearch的授權變更後，[OpenSearch](https://www.opensearch.org)服務是Elasticsearch 7.10.2的開放原始碼復本。 檢視GitHub中的[OpenSource專案](https://github.com/opensearch-project)。
 
 {{elasticsearch-support}}
 
@@ -30,7 +31,7 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
 
 **若要啟用OpenSearch**：
 
-1. 若為Starter和Pro整合環境，請將`opensearch`服務新增至`.magento/services.yaml`檔案，並提供適當的版本和配置的磁碟空間（以MB為單位）。 在這種情況下，版本2是合適的。 不需要次要版本，因為雲端基礎結構使用最新版的OpenSearch。
+1. 針對整合環境，請使用適當的版本和配置的磁碟空間（以MB為單位），將`opensearch`服務新增至`.magento/services.yaml`檔案。 在這種情況下，版本2是合適的。 次要版本不是必要版本。
 
    ```yaml
    opensearch:
@@ -38,7 +39,7 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
        disk: 1024
    ```
 
-   對於Pro專案，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)才能在測試和生產環境中變更OpenSearch版本。
+   對於Pro專案，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)才能在測試和生產環境中變更OpenSearch版本。
 
 1. 設定或驗證`.magento.app.yaml`檔案中的`relationships`屬性。
 
@@ -91,7 +92,7 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
 
 - **專案升級** — 確認新應用程式版本中的OpenSearch PHP使用者端與安裝在雲端基礎結構上的OpenSearch服務版本相容。
 
-服務版本和相容性支援取決於在雲端基礎結構上測試和部署的版本，有時與Adobe Commerce內部部署支援的版本不同。 如需支援的版本清單，請參閱&#x200B;_安裝指南_&#x200B;中的[系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)。
+服務版本和相容性支援取決於在雲端基礎結構上測試和部署的版本，有時與Adobe Commerce內部部署支援的版本不同。 如需支援的版本清單，請參閱&#x200B;_安裝指南_&#x200B;中的[系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)。
 
 **若要驗證OpenSearch軟體相容性**：
 
