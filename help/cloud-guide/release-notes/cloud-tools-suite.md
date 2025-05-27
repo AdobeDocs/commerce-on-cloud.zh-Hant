@@ -3,7 +3,7 @@ title: Cloud Tools Suite發行說明
 description: 瞭解適用於Adobe Commerce的Cloud Tools套裝的最新改善。
 feature: Cloud, Release Notes
 exl-id: ee2bc2e9-bdf4-4f7b-9724-8f4dd1e61378
-source-git-commit: e8b0fb7a2015fca658e48153bedd8fbc4b7cb58a
+source-git-commit: fa3c52baea5f1c0805c82de937e95f6e487f16be
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 1%
@@ -15,8 +15,8 @@ ht-degree: 1%
 此發行資訊詳細說明適用於Commerce套件的Cloud Tools Suite最新改善，這些改善旨在部署和管理Cloud平台上的Adobe Commerce安裝和升級。
 
 | 發行說明 | 版本 | 說明 | Source |
-| ----------------- |-----------| ---------------------------------------- | --------------------------- |
-| [`ece-tools`封裝](ece-tools-package.md) | 2002.2.4 | 一組用來管理和部署雲端專案的指令碼和工具 | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.4) |
+| ----------------- |----------| ---------------------------------------- | --------------------------- |
+| [`ece-tools`封裝](ece-tools-package.md) | 2002.2.5 | 一組用來管理和部署雲端專案的指令碼和工具 | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.4) |
 | 適用於Commerce的[雲端修補程式](cloud-patches.md) | 1.1.7 | 一組修補程式，可改善所有Adobe Commerce版本與雲端環境的整合。 此套件包含Adobe Commerce修補程式和使用`ece-tools`部署時套用的可用Hotfix | [`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches/tree/1.1.6) |
 | 適用於Commerce的[Cloud Docker](cloud-docker.md) | 1.4.2 | Docker映像將Adobe Commerce部署到本地雲端環境的功能和設定檔案 | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.1) |
 | [Commerce的雲端元件](cloud-components.md) | 1.1.1 | 針對部署在雲端基礎結構上的網站延伸Adobe Commerce核心功能 | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.1) |
