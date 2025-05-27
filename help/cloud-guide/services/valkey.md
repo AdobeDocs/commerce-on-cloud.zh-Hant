@@ -2,7 +2,8 @@
 title: 設定Valkey服務
 description: 瞭解如何在Cloud Infrastructure上為Adobe Commerce設定及最佳化Valkey作為後端快取解決方案。
 feature: Cloud, Cache, Services
-source-git-commit: f73c742cbdbf56ac073802074d5a9cd921591f0f
+exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
+source-git-commit: 242582ea61d0d93725a7f43f2ca834db9e1a7c29
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)是選用的後端快取解決方案，可取代Adobe Commerce預設使用的`Zend Framework Zend_Cache_Backend_File`。
 
-請參閱&#x200B;_設定指南_&#x200B;中的[設定Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=zh-Hant){target="_blank"} 。
+請參閱&#x200B;_設定指南_&#x200B;中的[設定Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"}。
 
 {{service-instruction}}
 
@@ -59,7 +60,7 @@ ht-degree: 0%
 1. 開啟連線至主機的SSH通道。
 
    ```bash
-   valkey-cli -h valkeycache.internal
+   valkey-cli -h valkey.internal
    ```
 
 ## 取得已安裝的Valkey版本
@@ -67,7 +68,7 @@ ht-degree: 0%
 使用以下命令取得安裝在整合環境上的Valkey版本：
 
 ```bash
-valkey-cli -h valkeycache.internal info | grep version
+valkey-cli -h valkey.internal info | grep version
 ```
 
 回應：

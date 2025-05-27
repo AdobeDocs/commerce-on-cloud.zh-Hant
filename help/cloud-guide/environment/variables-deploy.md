@@ -4,9 +4,10 @@ description: 檢視在雲端基礎結構部署階段的Adobe Commerce中控制�
 feature: Cloud, Configuration, Cache, Deploy, SCD, Storage, Search
 recommendations: noDisplay, catalog
 role: Developer
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 980ec809-8c68-450a-9db5-29c5674daa16
+source-git-commit: 275a2a5c58b7c5db12f8f31bffed85004e77172f
 workflow-type: tm+mt
-source-wordcount: '2209'
+source-wordcount: '2483'
 ht-degree: 0%
 
 ---
@@ -62,7 +63,7 @@ stage:
             database: 11
 ```
 
-下列範例使用&#x200B;_設定指南_&#x200B;中定義的[Redis預先載入功能](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html?lang=zh-Hant#redis-preload-feature)：
+下列範例使用&#x200B;_設定指南_&#x200B;中定義的[Redis預先載入功能](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html#redis-preload-feature)：
 
 ```yaml
 stage:
@@ -97,7 +98,7 @@ stage:
 - **預設**—`true`
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-啟用或停用清除在建置或部署階段產生的[靜態內容檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=zh-Hant)。 在開發中使用預設值&#x200B;_true_&#x200B;作為最佳實務。
+啟用或停用清除在建置或部署階段產生的[靜態內容檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)。 在開發中使用預設值&#x200B;_true_&#x200B;作為最佳實務。
 
 - **`true`** — 在部署更新的靜態內容之前，移除所有現有的靜態內容。
 - **`false`** — 如果產生的內容包含較新的版本，部署只會覆寫現有的靜態內容檔案。
@@ -156,7 +157,7 @@ stage:
       consumers: []
 ```
 
-依預設，部署程式會覆寫`env.php`檔案中的所有設定。 請參閱內部部署Adobe Commerce的&#x200B;_Commerce設定指南_&#x200B;中的[管理訊息佇列](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html?lang=zh-Hant)。
+依預設，部署程式會覆寫`env.php`檔案中的所有設定。 請參閱內部部署Adobe Commerce的&#x200B;_Commerce設定指南_&#x200B;中的[管理訊息佇列](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html)。
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -186,7 +187,7 @@ stage:
 
 >[!WARNING]
 >
->透過[!DNL Cloud Console]而非`.magento.env.yaml`檔案設定`CRYPT_KEY`值，以避免公開您環境的原始程式碼存放庫中的金鑰。 請參閱[設定環境和專案變數](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html?lang=zh-Hant#configure-environment)。
+>透過[!DNL Cloud Console]而非`.magento.env.yaml`檔案設定`CRYPT_KEY`值，以避免公開您環境的原始程式碼存放庫中的金鑰。 請參閱[設定環境和專案變數](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html#configure-environment)。
 
 將資料庫從一個環境移動到另一個環境時，若沒有安裝程式，則需要相應的密碼編譯資訊。 Adobe Commerce使用[!DNL Cloud Console]中設定的加密金鑰值做為`env.php`檔案中的`crypt/key`值。
 
@@ -277,7 +278,7 @@ stage:
 
 >[!NOTE]
 >
->在[縮放架構](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)上具有三個節點（或三個服務節點）的Pro測試/生產叢集上，`indices_settings`應設定如下：
+>在[縮放架構](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)上具有三個節點（或三個服務節點）的Pro測試/生產叢集上，`indices_settings`應設定如下：
 >
 >```yaml
 >           indices_settings:
@@ -313,10 +314,10 @@ stage:
 - **預設**—`false`
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-在部署至中繼和整合環境時，啟用和停用Google Analytics。 依預設，Google Analytics僅適用於生產環境。 將此值設定為`true`以啟用中繼和整合環境中的Google Analytics。
+在部署至中繼和整合環境時，啟用或停用Google Analytics。 依預設，Google Analytics僅適用於生產環境。 將此值設定為`true`以在測試與整合環境中啟用Google Analytics。
 
-- **`true`** — 啟用中繼和整合環境上的Google Analytics。
-- **`false`** — 停用中繼和整合環境上的Google Analytics。
+- **`true`** — 在測試與整合環境中啟用Google Analytics。
+- **`false`** — 在測試與整合環境中停用Google Analytics。
 
 將`ENABLE_GOOGLE_ANALYTICS`環境變數新增至`.magento.env.yaml`檔案中的`deploy`階段：
 
@@ -356,7 +357,7 @@ stage:
     LOCK_PROVIDER: "db"
 ```
 
-請參閱&#x200B;_安裝指南_&#x200B;中的[設定鎖定](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html?lang=zh-Hant)。
+請參閱&#x200B;_安裝指南_&#x200B;中的[設定鎖定](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html)。
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
@@ -442,7 +443,7 @@ stage:
 
 >[!NOTE]
 >
->如果您指定`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`作為Redis後端模型以啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant)，`ece-tools`會自動產生快取組態。 請參閱&#x200B;_Adobe Commerce組態指南_&#x200B;中的[組態檔](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant#configuration-example)範例。 若要覆寫產生的快取組態，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
+>如果您指定`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`作為Redis後端模型以啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)，`ece-tools`會自動產生快取組態。 請參閱&#x200B;_Adobe Commerce組態指南_&#x200B;中的[組態檔](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)範例。 若要覆寫產生的快取組態，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -451,7 +452,7 @@ stage:
 
 >[!WARNING]
 >
->請&#x200B;_不_&#x200B;在[縮放的架構](../architecture/scaled-architecture.md)專案上啟用此變數。 這會導致Redis連線錯誤。 Redis從屬仍然有效，但不會用於Redis讀取。 作為替代方法，Adobe建議使用Adobe Commerce 2.3.5或更新版本，實作新的Redis後端設定，並實作Redis的L2快取。
+>請&#x200B;_不_&#x200B;在[縮放的架構](../architecture/scaled-architecture.md)專案上啟用此變數。 這會導致Redis連線錯誤。 Redis從屬仍然有效，但不會用於Redis讀取。 作為替代方法，Adobe建議使用Adobe Commerce 2.3.5或更新版本、實作新的Redis後端設定，以及實作Redis的L2快取。
 
 >[!TIP]
 >
@@ -468,6 +469,58 @@ stage:
 您必須在`.magento.app.yaml`檔案和`services.yaml`檔案中設定Redis服務。
 
 [ECE-Tools 2002.0.18](../release-notes/cloud-release-archive.md#v2002018)版和更新版本使用更多容錯設定。 如果Adobe Commerce無法從Redis _slave_&#x200B;執行個體讀取資料，則會從Redis _master_&#x200B;執行個體讀取資料。
+
+唯讀連線無法用於整合環境，或您使用[`CACHE_CONFIGURATION`變數](#cache_configuration)。
+
+## `VALKEY_BACKEND`
+
+- **預設**—`Cm_Cache_Backend_Redis`
+- **版本**—Adobe Commerce 2.8.0和更新版本
+
+`VALKEY_BACKEND`指定Valkey快取的後端模型組態。
+
+Adobe Commerce 2.8.0版和更新版本包含下列後端模型：
+
+- `Cm_Cache_Backend_Redis`
+- `\Magento\Framework\Cache\Backend\Redis`
+- `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`
+
+下列範例說明如何設定`VALKEY_BACKEND`：
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+```
+
+>[!NOTE]
+>
+>如果您指定`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`作為Valkey後端模型以啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)，`ece-tools`會自動產生快取組態。 請參閱&#x200B;_Adobe Commerce組態指南_&#x200B;中的[組態檔](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)範例。 若要覆寫產生的快取組態，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
+
+## `VALKEY_USE_SLAVE_CONNECTION`
+
+- **預設**—`false`
+- **版本**—Adobe Commerce 2.4.8和更新版本
+
+>[!WARNING]
+>
+>請&#x200B;_不_&#x200B;在[縮放的架構](../architecture/scaled-architecture.md)專案上啟用此變數。 這會導致Valkey連線錯誤。 Redis從屬仍然有效，但不會用於Redis讀取。 或者，Adobe建議使用Adobe Commerce 2.4.8或更新版本，實作新的Valkey後端設定，並實作Valkey的L2快取。
+
+>[!TIP]
+>
+>`VALKEY_USE_SLAVE_CONNECTION`變數僅在雲端基礎結構測試和生產Pro叢集環境的Adobe Commerce上受支援，且在入門專案上不受支援。
+
+Adobe Commerce可以非同步方式讀取多個Redis執行個體。 `VALKEY_USE_SLAVE_CONNECTION`設定為`true`可自動使用與Redis執行個體的&#x200B;_唯讀_&#x200B;連線，以接收非主節點上的唯讀流量。 此連線透過負載平衡來改善效能，因為只有一個節點處理讀寫流量。 將`VALKEY_USE_SLAVE_CONNECTION`設為`false`以從`env.php`檔案中移除任何現有的唯讀連線陣列。
+
+```yaml
+stage:
+  deploy:
+    VALKEY_USE_SLAVE_CONNECTION: true
+```
+
+您必須在`.magento.app.yaml`檔案和`services.yaml`檔案中設定Redis服務。
+
+[ECE-Tools 2002.0.18](../release-notes/cloud-release-archive.md#v2002018)版和更新版本使用更多容錯設定。 如果Adobe Commerce無法從Valkey _slave_&#x200B;執行個體讀取資料，則會從Redis _master_&#x200B;執行個體讀取資料。
 
 唯讀連線無法用於整合環境，或您使用[`CACHE_CONFIGURATION`變數](#cache_configuration)。
 
@@ -581,9 +634,9 @@ stage:
 - **預設**—`quick`
 - **版本**—Adobe Commerce 2.2.0和更新版本
 
-可讓您自訂靜態內容的[部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=zh-Hant)。 請參閱[部署靜態檢視檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=zh-Hant)。
+可讓您自訂靜態內容的[部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)。 請參閱[部署靜態檢視檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)。
 
-如果您有多個地區設定，請只使用這些選項&#x200B;_1&rbrace;：_
+如果您有多個地區設定，請只使用這些選項&#x200B;_1}：_
 
 - `standard` — 為所有封裝部署所有靜態檢視檔案。
 - `quick` — （_預設_）可縮短部署時間。
