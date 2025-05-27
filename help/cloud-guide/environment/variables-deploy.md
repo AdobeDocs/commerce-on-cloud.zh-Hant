@@ -636,7 +636,7 @@ stage:
 
 可讓您自訂靜態內容的[部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)。 請參閱[部署靜態檢視檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)。
 
-如果您有多個地區設定，請只使用這些選項&#x200B;_1}：_
+如果您有多個地區設定，請只使用這些選項&#x200B;_1&rbrace;：_
 
 - `standard` — 為所有封裝部署所有靜態檢視檔案。
 - `quick` — （_預設_）可縮短部署時間。
