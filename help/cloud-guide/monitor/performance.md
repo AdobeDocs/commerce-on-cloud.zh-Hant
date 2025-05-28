@@ -16,7 +16,7 @@ ht-degree: 0%
 您可以使用以下服務來監視雲端環境的效能：
 
 - [健康狀態通知](../integrations/health-notifications.md) — 可在入門和Pro整合環境中提供磁碟空間警示的整合。
-- [Adobe Commerce觀察指南](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) — 對所有Commerce網站進行全方位監控，結合來自多個來源的記錄資料，協助您更妥善地管理Adobe Commerce網站效能並診斷問題。
+- [Adobe Commerce觀察指南](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) — 對所有Commerce網站進行全方位監控，結合來自多個來源的記錄資料，協助您更妥善地管理Adobe Commerce網站效能並診斷問題。
 - [操作遙測服務](operational-telemetry.md) — 監視您店面使用者端流量的效能。
 
 ## New Relic服務
