@@ -3,11 +3,11 @@ title: Cloud Docker包
 description: 請參閱Cloud Docker套件最新改良的清單。
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-04-07T00:00:00Z
+last-substantial-update: 2025-06-03T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: 5e991f974f33b35497b09c10fde36850c6279586
+source-git-commit: e447e19d89edeaec84314c52b377f3712e0f0400
 workflow-type: tm+mt
-source-wordcount: '3710'
+source-wordcount: '3729'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.2 {#latest}
+## v1.4.3 {#latest}
+
+發行日期： 2025年6月3日
+
+- ![修正圖示](../../assets/fix.svg) **改善與2.4.8的相容性** — 更新協力廠商程式庫的相容性，以與2.4.8<!-- MCLOUD-13707	 - -->更相容
+
+## v1.4.2
 
 發行日期： 2025年4月7日
 
@@ -143,8 +149,8 @@ ht-degree: 0%
 
 發行日期： 2021年4月20日
 
-- ![新圖示](../../assets/new.svg) **已更新`host.docker.internal`為平台獨立** — 您現在可以為Ubuntu、Windows和macOS建立相同的Docker Compose指令碼。 在Ubuntu上使用Xdebug不再需要個別的環境變數。 由Igor Vitol[&#128279;](https://github.com/magento/magento-cloud-docker/pull/299)提交的修正。<!--Issue #298-->
-- ![新圖示](../../assets/new.svg) **已更新init-docker.sh** — 已將`mounts`物件新增至`MAGENTO_CLOUD_APPLICATION`環境變數。 由Chiranjevi[&#128279;](https://github.com/magento/magento-cloud-docker/pull/299)提交的修正。<!--Issue #299-->
+- ![新圖示](../../assets/new.svg) **已更新`host.docker.internal`為平台獨立** — 您現在可以為Ubuntu、Windows和macOS建立相同的Docker Compose指令碼。 在Ubuntu上使用Xdebug不再需要個別的環境變數。 由Igor Vitol](https://github.com/magento/magento-cloud-docker/pull/299)提交的[修正。<!--Issue #298-->
+- ![新圖示](../../assets/new.svg) **已更新init-docker.sh** — 已將`mounts`物件新增至`MAGENTO_CLOUD_APPLICATION`環境變數。 由Chiranjevi](https://github.com/magento/magento-cloud-docker/pull/299)提交的[修正。<!--Issue #299-->
 - ![新圖示](../../assets/new.svg) **已更新init-docker.sh** — 已使用PHP 7.4和Cloud Docker 1.2.1版本更新`init-docker.sh`指令碼。 [由Adarsh Manickam提交的修正](https://github.com/magento/magento-cloud-docker/pull/300)。<!--Issue #300-->
 - ![新圖示](../../assets/new.svg) **預設啟用** — 預設啟用PHP Docker影像中的`sodium` PHP延伸模組。<!--MCLOUD-7548-->
 - ![新圖示](../../assets/new.svg) **`custom-registry`選項** — 已將`--custom-registry`選項新增至`php ./vendor/bin/ece-docker build:compose`命令，以使用您自己的影像登入。<!--MCLOUD-7476-->
@@ -292,7 +298,7 @@ ht-degree: 0%
 
       - 新增容器健康狀態檢查。 [由Visanth Sampath從Zilker Technology提交的修正](https://github.com/magento/magento-cloud-docker/pull/188).<!--MCLOUD-5752-->
 
-   - ![修正圖示](../../assets/fix.svg) **Node.js** — 將預設Node.js版本從版本8更新至版本10以提高安全性。 Node.js版本8已過時，不再透過錯誤修正或安全性修補程式進行更新。 由Mohan Elamurugan從Zilker Technology[&#128279;](https://github.com/magento/magento-cloud-docker/pull/183)提交的修正。<!--MCLOUD-5586-->
+   - ![修正圖示](../../assets/fix.svg) **Node.js** — 將預設Node.js版本從版本8更新至版本10以提高安全性。 Node.js版本8已過時，不再透過錯誤修正或安全性修補程式進行更新。 由Mohan Elamurugan從Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/183)提交的[修正。<!--MCLOUD-5586-->
 
    - ![新圖示](../../assets/new.svg) **Elasticsearch**
 
@@ -333,11 +339,11 @@ ht-degree: 0%
 
 - ![修正圖示](../../assets/fix.svg)修正啟動PHP-FPM容器時，造成Docker撰寫記錄中語法錯誤的設定問題。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/129)<!--MCLOUD-3958-->
 
-- ![修正圖示](../../assets/fix.svg)修正使用多個Docker環境時有時發生的磁碟區衝突錯誤。 由G Arvind從Zilker Technology[&#128279;](https://github.com/magento/magento-cloud-docker/pull/168)提交的修正。
+- ![修正圖示](../../assets/fix.svg)修正使用多個Docker環境時有時發生的磁碟區衝突錯誤。 由G Arvind從Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/168)提交的[修正。
 
 - ![修正圖示](../../assets/fix.svg)修正組態包含Blackfire.io時，`ece-docker build:compose`命令失敗的問題。 [由G Arvind從Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/199)提交的修正。<!--MCLOUD-5797-->
 
-- ![修正圖示](../../assets/fix.svg)已更新PHP CLI影像設定，以防止使用Commerce適用的Cloud Docker安裝多個套件時發生記憶體不足錯誤。 由Mohan Elamurugan從Zilker Technology[&#128279;](https://github.com/magento/magento-cloud-docker/pull/197)提交的修正。*<!--MCLOUD-5818-->
+- ![修正圖示](../../assets/fix.svg)已更新PHP CLI影像設定，以防止使用Commerce適用的Cloud Docker安裝多個套件時發生記憶體不足錯誤。 由Mohan Elamurugan從Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/197)提交的[修正。*<!--MCLOUD-5818-->
 
 - ![修正圖示](../../assets/fix.svg)已在Cloud Docker環境中新增對多個MySQL使用者的支援。 在舊版中，如果`magento.app.yaml`檔案指定多個資料庫使用者，`build:compose`作業會失敗。 由G Arvind從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/181).<!--MCLOUD-5670-->
 

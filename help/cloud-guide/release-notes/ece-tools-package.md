@@ -2,11 +2,11 @@
 title: ECE-Tools發行說明
 description: 請參閱ECE-Tools套件的最新改良清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-05-27T00:00:00Z
+last-substantial-update: 2024-06-03T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 70664897a10a59668fad74565c04b4ad72474736
+source-git-commit: e447e19d89edeaec84314c52b377f3712e0f0400
 workflow-type: tm+mt
-source-wordcount: '3166'
+source-wordcount: '3185'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,17 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.5 {#latest}
+## v2002.2.6 {#latest}
+
+發行日期： 2025年6月3日
+
+- ![修正圖示](../../assets/fix.svg) **改善與2.4.8的相容性** — 更新協力廠商程式庫的相容性，以與2.4.8<!-- MCLOUD-13707	 - -->更相容
+
+## v2002.2.5
 
 發行日期： 2025年5月27日
 
-- ![修正圖示](../../assets/new.svg) **Extended Valkey相容性**-Adobe Commerce中的Extended Valkey相容性。<!-- MCLOUD-13595	 - -->
+- ![新圖示](../../assets/new.svg) **Extended Valkey相容性**-Adobe Commerce中的Extended Valkey相容性。<!-- MCLOUD-13595	 - -->
 - ![修正圖示](../../assets/fix.svg) **已更新RabbitMQ驗證器** — 已更新RabbitMQ的驗證器。<!-- MCLOUD-13589	 - -->
 - ![修正圖示](../../assets/fix.svg) **已更新MariaDB驗證器** — 已更新MariaDB 10.11的ece-tools驗證器。<!-- MCLOUD-13593	 - -->
 - ![修正圖示](../../assets/fix.svg) **延伸Opensearch2相容性** — 使Opensearch2與最新的2.4.4版本相容。<!-- MCLOUD-13710	 - -->
@@ -273,7 +279,7 @@ ht-degree: 0%
 
 **驗證和記錄改善**—
 
-- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考。<!--MCLOUD-5878-->
+- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!--MCLOUD-5878-->
 
 - ![新圖示](../../assets/new.svg)已將雲端錯誤記錄(`/var/log/cloud.error.log`)專案變更為JSON格式，以便以程式設計方式更輕鬆地剖析記錄。<!--MCLOUD-5879-->
 
@@ -293,7 +299,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **基礎結構更新**—
 
-   - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
+   - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
 
    - ![新圖示](../../assets/new.svg)改善資料庫傾印程式(`vendor/bin/ece-tools db-dump`)和更新的記錄訊息，以釐清資料庫傾印作業會將應用程式切換到維護模式、停止消費者佇列程式，以及在傾印開始之前停用cron工作。<!--MCLOUD-5324, MCLOUD-2062-->
 
