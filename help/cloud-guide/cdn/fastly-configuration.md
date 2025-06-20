@@ -40,7 +40,7 @@ Fastly與Varnish合作，提供快速快取功能以及用於靜態資產的內�
 
 在雲端基礎結構上使用Adobe Commerce，您無法直接存取Fastly管理員儀表板。
 
-您必須使用Adobe Commerce管理員檢閱和更新環境的Fastly設定。 如果您無法在管理員中使用Fastly功能解決問題，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
+您必須使用Adobe Commerce管理員檢閱和更新環境的Fastly設定。 如果您無法在管理員中使用Fastly功能解決問題，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)。
 
 ## 取得Fastly認證
 
@@ -56,7 +56,7 @@ Fastly與Varnish合作，提供快速快取功能以及用於靜態資產的內�
 >
 >如果您的API Token曾公開共用或附加至支援票證，則會視為已洩漏。 在這種情況下，需要Adobe為您產生新的代號。
 >
->相關：驗證Fastly認證時發生[錯誤](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)
+>相關：驗證Fastly認證時發生[錯誤](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)
 
 Pro和Starter專案的檢視認證方法不同。
 
@@ -148,7 +148,7 @@ Pro和Starter專案的檢視認證方法不同。
 
 ## 布建SSL/TLS憑證
 
-Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的安全HTTPS流量。 Adobe為每個Pro生產、測試和入門生產環境提供一個憑證，以保護該環境中的所有網域。 如需所提供憑證的詳細資訊，請參閱雲端基礎結構上Adobe Commerce的[Adobe SSL (TLS)憑證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html)。
+Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的安全HTTPS流量。 Adobe為每個Pro生產、測試和入門生產環境提供一個憑證，以保護該環境中的所有網域。 如需所提供憑證的詳細資訊，請參閱雲端基礎結構上Adobe Commerce的[Adobe SSL (TLS)憑證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html?lang=zh-Hant)。
 
 >[!NOTE]
 >
@@ -252,7 +252,7 @@ Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的�
 
    >[!NOTE]
    >
-   >除了使用Cloud CLI之外，您也可以從[管理員](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html)更新基底URL
+   >除了使用Cloud CLI之外，您也可以從[管理員](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=zh-Hant)更新基底URL
 
 1. 重新啟動網頁瀏覽器。
 
@@ -327,4 +327,4 @@ Fastly更新Magento 2模組的Fastly CDN以解決問題、提高效能並提供�
 
 >[!TIP]
 >
-> 如果您的Adobe Commerce環境中遇到Fastly服務問題，請參閱[Adobe Commerce Fastly疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html)。
+> 如果您的Adobe Commerce環境中遇到Fastly服務問題，請參閱[Adobe Commerce Fastly疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html?lang=zh-Hant)。
