@@ -3,9 +3,9 @@ title: 備份管理
 description: 瞭解如何在雲端基礎結構專案上手動建立和還原Adobe Commerce的備份。
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: 3efc5478428c4ede9e2106e1cbef8362c525ccd8
+source-git-commit: b9bbbb9b83ed995951feaa9391015f02a9661206
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,9 @@ ht-degree: 0%
 ## 建立手動備份
 
 您可以從[!DNL Cloud Console]建立任何使用中Starter環境和整合Pro環境的手動備份，或從Cloud CLI建立快照。 您必須擁有環境的[管理員角色](../project/user-access.md)。
+
+**若要建立Pro環境的資料庫備份**：
+若要建立任何Pro環境（包括測試和生產）的資料庫傾印，請參閱[建立資料庫傾印](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知識庫文章。
 
 **若要使用[!DNL Cloud Console]**&#x200B;建立任何Starter環境的備份：
 
@@ -83,8 +86,6 @@ ht-degree: 0%
    +---------------------------+----------------------+------------+
    ```
 
-若要建立任何環境的資料庫傾印，包括測試和生產，請參閱[建立資料庫傾印](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知識庫文章。
-
 ## 還原手動備份
 
 您必須擁有環境的[管理員存取權](../project/user-access.md)。 您最多有&#x200B;**7天**&#x200B;到&#x200B;_還原_&#x200B;手動備份。 還原備份不會變更目前Git分支的程式碼。 以這種方式還原備份不適用於Pro中繼和生產環境；請參閱[Pro備份與災難回覆](../architecture/pro-architecture.md#backup-and-disaster-recovery)。
@@ -139,7 +140,7 @@ ht-degree: 0%
 
 ## 還原災難回覆快照
 
-若要在Pro中繼和生產環境中還原災害復原快照，[直接從伺服器](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)匯入資料庫傾印。
+若要在Pro中繼和生產環境中還原災害復原快照，[直接從伺服器](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)匯入資料庫傾印。
 
 ## 回覆代碼
 
