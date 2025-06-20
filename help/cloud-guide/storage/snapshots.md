@@ -30,7 +30,7 @@ ht-degree: 0%
 >
 >您可以在終端機中執行以下命令，直接在Pro Production和Staging叢集上建立程式碼的備份 — 針對您要包含/排除的任何資料夾/路徑調整它：
 >
-```bash
+>```bash
 >mkdir -p var/support
 >/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
 >```
