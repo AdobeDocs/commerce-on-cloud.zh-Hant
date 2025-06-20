@@ -1,9 +1,10 @@
 ---
 title: 網站啟動
 description: 瞭解如何開始網站啟動的準備工作。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
+source-git-commit: 38ac38d4edd0f317155d0d4537021a29a21d5761
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -38,11 +39,11 @@ ht-degree: 0%
 
 - SSL/TLS憑證
 
-在雲端基礎結構訂閱方面，Adobe CommerceAdobe提供Let&#39;s Encrypt發出的網域已驗證SSL/TLS憑證。 每個Pro Production、Staging和Starter Production (`master`)環境都有唯一憑證，涵蓋該環境中的所有網域和子網域。 在您更新用於開發和生產的DNS設定後，這些憑證會自動布建並上傳到您的網站。 請參閱[布建SSL/TLS憑證](../cdn/fastly-configuration.md#provision-ssltls-certificates)。
+在雲端基礎結構訂閱中，Adobe CommerceAdobe提供Let&#39;s Encrypt所發行的網域驗證SSL/TLS憑證。 每個Pro Production、Staging和Starter Production (`master`)環境都有唯一憑證，涵蓋該環境中的所有網域和子網域。 在您更新用於開發和生產的DNS設定後，這些憑證會自動布建並上傳到您的網站。 請參閱[布建SSL/TLS憑證](../cdn/fastly-configuration.md#provision-ssltls-certificates)。
 
 >[!NOTE]
 >
->如果您要為貴公司部署自己的延伸驗證SSL憑證，而不使用Let&#39;s Encrypt憑證，請連絡您的CTA或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)。
+>如果您要為貴公司部署自己的延伸驗證SSL憑證，而不使用Let&#39;s Encrypt憑證，請連絡您的CTA或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
 
 ## 設定安全性掃描工具
 
@@ -58,13 +59,17 @@ ht-degree: 0%
 >
 >將這些IP位址新增至網路防火牆規則的允許清單，以允許工具掃描您的網站。 此工具只會向連線埠80和443張貼請求。
 
-安全性掃描工具可讓您定期監視商店網站，並接收已知安全性風險、惡意程式碼和過時軟體的更新。 此工具是免費服務，適用於雲端基礎結構上所有實施和版本的Adobe Commerce。 您透過您的[Commerce Marketplace帳戶](https://account.magento.com/customer/account/login)存取工具。
+安全性掃描工具可讓您定期監視商店網站，並接收已知安全性風險、惡意程式碼和過時軟體的更新。 此工具是免費服務，適用於雲端基礎結構上所有實施和版本的Adobe Commerce。 您透過您的[Commerce Marketplace帳戶](https://account.magento.com/customer/account/login)存取此工具。
 
 - 監視您的網站安全性狀態和套用的安全性更新
 
 - 接收安全性更新和網站特定通知
 
-請參閱[使用手冊](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/security/security-scan)，瞭解設定和使用安全性掃描工具的資訊。 通常，當您開始使用者驗收測試(UAT)時，就會開始使用此工具。
+>[!NOTE]
+>
+>Adobe建議使用安全性掃描工具，而不使用其他協力廠商工具，以便在調查結果期間確保最佳服務品質。
+
+請參閱[使用手冊](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)，瞭解設定和使用安全性掃描工具的資訊。 通常，當您開始使用者驗收測試(UAT)時，就會開始使用此工具。
 
 您掃描的每個站台都必須透過[安全性掃描]索引標籤登入。 在註冊過程中，您必須接受免責宣告，才能開始掃描。 您可以控制排程並授權使用者在每次掃描完成時接收通知。 您可以排程特定週期性日期與時間的掃描，或視需要執行掃描。
 
