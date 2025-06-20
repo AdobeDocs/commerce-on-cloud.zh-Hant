@@ -2,9 +2,10 @@
 title: 新增網站地圖和搜尋引擎自動機制
 description: 瞭解如何在雲端基礎結構上將網站地圖和搜尋引擎機器人新增到Adobe Commerce。
 feature: Cloud, Configuration, Search, Site Navigation
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
+source-git-commit: 8626364ec7bcaaa0e17a3380ec0b9b73110c4574
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->如果`<domain.your.project>/robots.txt`檔案產生`404 error`，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以移除從`/robots.txt`到`/media/robots.txt`的重新導向。
+>如果`<domain.your.project>/robots.txt`檔案產生`404 error`，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以移除從`/robots.txt`到`/media/robots.txt`的重新導向。
 
 ## 使用Fastly VCL程式碼片段重新寫入
 
@@ -116,12 +117,19 @@ VCL程式碼片段路由`http://domain.com/robots.txt`並顯示`pub/media/domain
 
 ### 依搜尋引擎設定索引
 
-若要在生產環境中啟用`robots.txt`自訂，您必須啟用專案設定中&#x200B;`<environment-name>`**的**&#x200B;索引由搜尋引擎開啟選項。
+若要在生產環境中啟用`robots.txt`自訂，您必須啟用Cloud Console上專案設定中的&#x200B;`<environment-name>`**的**&#x200B;按搜尋引擎索引為開啟選項：
 
 ![使用[!DNL Cloud Console]管理環境](../../assets/robots-indexing-by-search-engine.png)
+
+您也可以使用magento-cloud CLI來更新此設定：
+
+```bash
+magento-cloud environment:info -p <project_id> -e production restrict_robots false
+```
 
 >[!NOTE]
 >
 >- 搜尋引擎的索引只能在生產中啟用，但無法在任何較低層環境中啟用。
 >
->- 如果您使用PWA Studio且無法存取您設定的`robots.txt`檔案，請將`robots.txt`新增至[前方名稱允許清單](https://github.com/magento/magento2-upward-connector#front-name-allowlist)，位於&#x200B;**商店** >設定> **一般** > **網頁** >上層PWA設定。
+>- 如果您使用PWA Studio但無法存取已設定的`robots.txt`檔案，請將`robots.txt`新增至[前方名稱允許清單](https://github.com/magento/magento2-upward-connector#front-name-allowlist)，位於&#x200B;**商店** >設定> **一般** > **網頁** >上層PWA設定。
+
