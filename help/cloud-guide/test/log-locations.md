@@ -77,13 +77,13 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >[!TIP]
 >
 >對於Pro Staging和Pro Production環境，會針對具有固定檔案名稱的記錄檔啟用自動記錄旋轉、壓縮和移除。 每個記錄檔型別都有旋轉模式和存留期。
->>環境的記錄輪換和壓縮記錄存留期的完整詳細資訊，請參閱： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。
->>對於Pro測試和Pro生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以要求變更記錄輪換設定。
+>&#x200B;>環境的記錄輪換和壓縮記錄存留期的完整詳細資訊，請參閱： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。
+>&#x200B;>對於Pro測試和Pro生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以要求變更記錄輪換設定。
 
 >[!TIP]
 >
 >無法在Pro Integration環境中設定記錄旋轉。
->>若為Pro Integration，您必須實作自訂解決方案/指令碼，並[設定您的cron](../application/crons-property.md)以視需要執行指令碼。
+>&#x200B;>若為Pro Integration，您必須實作自訂解決方案/指令碼，並[設定您的cron](../application/crons-property.md)以視需要執行指令碼。
 
 >[!NOTE]
 >
@@ -189,7 +189,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-大多數錯誤訊息都包含說明和建議的動作。 使用ECE-Tools](../dev-tools/error-reference.md)的[錯誤訊息參考來查詢錯誤碼，以取得進一步的指引。 如需進一步的指引，請使用[Adobe Commerce部署疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
+大多數錯誤訊息都包含說明和建議的動作。 使用ECE-Tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考來查詢錯誤碼，以取得進一步的指引。 如需進一步的指引，請使用[Adobe Commerce部署疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
 
 ## 應用程式記錄
 
@@ -251,7 +251,7 @@ type: warning
 
 >[!TIP]
 >
->縮放架構中的記錄檔位置取決於節點型別。 請參閱縮放架構](../architecture/scaled-architecture.md#log-locations)主題中的[記錄檔位置。
+>縮放架構中的記錄檔位置取決於節點型別。 請參閱縮放架構[&#128279;](../architecture/scaled-architecture.md#log-locations)主題中的記錄檔位置。
 
 ## 記錄Pro生產和測試所需的資料
 
