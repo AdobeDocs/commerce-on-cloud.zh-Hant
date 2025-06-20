@@ -3,9 +3,9 @@ title: 備份管理
 description: 瞭解如何在雲端基礎結構專案上手動建立和還原Adobe Commerce的備份。
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: b9bbbb9b83ed995951feaa9391015f02a9661206
+source-git-commit: 13cb5e3231c2173d5687aec3e4e64ecc154ee962
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '819'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,18 @@ ht-degree: 0%
 
 您可以從[!DNL Cloud Console]建立任何使用中Starter環境和整合Pro環境的手動備份，或從Cloud CLI建立快照。 您必須擁有環境的[管理員角色](../project/user-access.md)。
 
+>[!NOTE]
+>
+>您可以在終端機中執行以下命令，直接在Pro Production和Staging叢集上建立程式碼的備份 — 針對您要包含/排除的任何資料夾/路徑調整它：
+>
+```bash
+>mkdir -p var/support
+>/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
+>```
+
 **若要建立Pro環境的資料庫備份**：
-若要建立任何Pro環境（包括測試和生產）的資料庫傾印，請參閱[建立資料庫傾印](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知識庫文章。
+
+若要建立任何Pro環境（包括測試和生產）的資料庫傾印，請參閱[建立資料庫傾印](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知識庫文章。
 
 **若要使用[!DNL Cloud Console]**&#x200B;建立任何Starter環境的備份：
 
@@ -140,10 +150,15 @@ ht-degree: 0%
 
 ## 還原災難回覆快照
 
-若要在Pro中繼和生產環境中還原災害復原快照，[直接從伺服器](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)匯入資料庫傾印。
+若要在Pro中繼和生產環境中還原災害復原快照，[直接從伺服器](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)匯入資料庫傾印。
 
 ## 回覆代碼
 
 備份和快照&#x200B;_不_&#x200B;包含您的程式碼復本。 您的程式碼已儲存在Git型存放庫中，因此您可以使用Git型命令來回覆（或還原）程式碼。 例如，使用`git log --oneline`捲動先前的認可；然後使用[`git revert`](https://git-scm.com/docs/git-revert)從特定認可還原程式碼。
 
 此外，您也可以選擇將程式碼儲存在&#x200B;_非使用中_&#x200B;分支中。 使用Git命令來建立分支，而不使用`magento-cloud`命令。 請參閱雲端CLI主題中的關於[Git命令](../dev-tools/cloud-cli-overview.md#git-commands)。
+
+## 相關資訊
+
+- [備份資料庫](database-dump.md)
+- 適用於Pro生產與中繼叢集的[備份與災難回覆](../architecture/pro-architecture.md#backup-and-disaster-recovery)
