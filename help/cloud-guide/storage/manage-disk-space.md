@@ -166,7 +166,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 1. 在您的本機開發環境中，開啟`.magento/services.yaml`設定檔。
 
-1. 在檔案中新增或尋找服務。 檢視關於設定服務](../services/services-yaml.md)的[詳細資訊。
+1. 在檔案中新增或尋找服務。 檢視關於設定服務[&#128279;](../services/services-yaml.md)的詳細資訊。
 
 1. 設定磁碟屬性的新值（以MB為單位）。
 
