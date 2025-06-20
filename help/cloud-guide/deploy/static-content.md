@@ -2,9 +2,10 @@
 title: 靜態內容部署
 description: 瞭解在Adobe Commerce上雲端基礎結構專案部署靜態內容（例如影像、指令碼和CSS）的策略。
 feature: Cloud, Build, Deploy, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
+source-git-commit: 325b7584daa38ad788905a6124e6d037cf679332
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 ## 最佳化JavaScript和HTML內容
 
-您可以使用套件和縮制在靜態內容部署期間建置最佳化的JavaScript和HTML內容。
+您可以在靜態內容部署期間，使用套件和縮制來建置最佳化的JavaScript和HTML內容。
 
 ### 將內容縮制
 
@@ -29,15 +30,20 @@ ht-degree: 0%
 
 ## 選擇部署策略
 
-部署策略會因您在&#x200B;_建置_&#x200B;階段、_部署_&#x200B;階段或&#x200B;_隨選_&#x200B;階段期間選擇產生靜態內容而有所不同。 如下圖所示，在部署階段期間產生靜態內容是最不理想的選擇。 即使使用最小化HTML，每個內容檔案都必須複製到掛接的`~/pub/static`目錄，這可能需要很長的時間。 隨選產生靜態內容似乎是最佳選擇。 不過，如果內容檔案不存在於其產生之快取中，則會在請求該檔案時增加使用者體驗的載入時間。 因此，在建置階段期間產生靜態內容是最理想的作法。
+部署策略會因您在&#x200B;_建置_&#x200B;階段、_部署_&#x200B;階段或&#x200B;_隨選_&#x200B;階段期間選擇產生靜態內容而有所不同。 如下圖所示，在部署階段期間產生靜態內容是最不理想的選擇。 即使使用精簡的HTML，每個內容檔案都必須複製到掛接的`~/pub/static`目錄，這可能需要很長的時間。 隨選產生靜態內容似乎是最佳選擇。 不過，如果內容檔案不存在於其產生之快取中，則會在請求該檔案時增加使用者體驗的載入時間。 因此，在建置階段期間產生靜態內容是最理想的作法。
 
 ![SCD載入比較](../../assets/scd-load-times.png)
 
 ### 在建置時設定SCD
 
-在建置階段期間使用最小化HTML產生靜態內容是&#x200B;[**零停機時間**&#x200B;部署](reduce-downtime.md)的最佳設定，也稱為&#x200B;**理想狀態**。 它不會將檔案複製到已掛載的磁碟機，而是從`./init/pub/static`目錄建立符號連結。
+使用縮制的HTML在建置階段期間產生靜態內容，是&#x200B;[**零停機時間**&#x200B;部署](reduce-downtime.md) （也稱為&#x200B;**理想狀態**）的最佳設定。 它不會將檔案複製到已掛載的磁碟機，而是從`./init/pub/static`目錄建立符號連結。
 
 產生靜態內容需要存取主題和區域設定。 Adobe Commerce會將主題儲存在檔案系統中（可在建置階段存取），但Adobe Commerce會將地區設定儲存在資料庫中。 資料庫在建置階段中&#x200B;_無法使用_。 為了在建置階段產生靜態內容，您必須使用`ece-tools`封裝中的`config:dump`命令，將地區設定移至檔案系統。 它會讀取地區設定並將它們儲存在`app/etc/config.php`檔案中。
+
+>[!NOTE]
+>在您執行`ece-tools`封裝中的`config:dump`命令後，傾印至`config.php`檔案[的設定會在管理儀表板](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin)中鎖定（呈現灰色）。 在Admin中更新這些設定的唯一方法是從本機檔案中刪除它們，然後重新部署專案。
+>>此外，每次將新的商店/商店群組/網站新增至執行個體時，您應該記得執行`config:dump`命令，以確保資料庫同步。 您也可以選擇應將哪些組態](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)傾印到`config.php`檔案中[。
+>>如果您從`config.php`檔案中刪除商店/商店群組/網站組態，因為欄位呈現灰色，但未執行此步驟，則在下次部署時，未傾印的新實體將會從資料庫中刪除。
 
 **若要將專案設定為在組建**&#x200B;上產生SCD：
 
