@@ -37,7 +37,7 @@ ht-degree: 0%
 
 **若要建立Pro環境的資料庫備份**：
 
-若要建立任何Pro環境（包括測試和生產）的資料庫傾印，請參閱[建立資料庫傾印](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知識庫文章。
+若要建立任何Pro環境（包括測試和生產）的資料庫傾印，請參閱[建立資料庫傾印](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知識庫文章。
 
 **若要使用[!DNL Cloud Console]**&#x200B;建立任何Starter環境的備份：
 
@@ -150,7 +150,7 @@ ht-degree: 0%
 
 ## 還原災難回覆快照
 
-若要在Pro中繼和生產環境中還原災害復原快照，[直接從伺服器](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)匯入資料庫傾印。
+若要在Pro中繼和生產環境中還原災害復原快照，[直接從伺服器](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)匯入資料庫傾印。
 
 ## 回覆代碼
 
