@@ -41,8 +41,8 @@ ht-degree: 0%
 產生靜態內容需要存取主題和區域設定。 Adobe Commerce會將主題儲存在檔案系統中（可在建置階段存取），但Adobe Commerce會將地區設定儲存在資料庫中。 資料庫在建置階段中&#x200B;_無法使用_。 為了在建置階段產生靜態內容，您必須使用`ece-tools`封裝中的`config:dump`命令，將地區設定移至檔案系統。 它會讀取地區設定並將它們儲存在`app/etc/config.php`檔案中。
 
 >[!NOTE]
->在您執行`ece-tools`封裝中的`config:dump`命令後，傾印至`config.php`檔案[的設定會在管理儀表板](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin)中鎖定（呈現灰色）。 在Admin中更新這些設定的唯一方法是從本機檔案中刪除它們，然後重新部署專案。
->&#x200B;>此外，每次將新的商店/商店群組/網站新增至執行個體時，您應該記得執行`config:dump`命令，以確保資料庫同步。 您也可以選擇應將哪些組態[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)傾印到`config.php`檔案中。
+>在您執行`ece-tools`封裝中的`config:dump`命令後，傾印至`config.php`檔案[的設定會在管理儀表板](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin)中鎖定（呈現灰色）。 在Admin中更新這些設定的唯一方法是從本機檔案中刪除它們，然後重新部署專案。
+>&#x200B;>此外，每次將新的商店/商店群組/網站新增至執行個體時，您應該記得執行`config:dump`命令，以確保資料庫同步。 您也可以選擇應將哪些組態[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)傾印到`config.php`檔案中。
 >&#x200B;>如果您從`config.php`檔案中刪除商店/商店群組/網站組態，因為欄位呈現灰色，但未執行此步驟，則在下次部署時，未傾印的新實體將會從資料庫中刪除。
 
 **若要將專案設定為在組建**&#x200B;上產生SCD：
