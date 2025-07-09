@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe布建雲端基礎結構專案時，授權擁有者會收到New Relic的電子郵件，其中包含存取New Relic帳戶的憑證和指示。 如果您沒有收到電子郵件，請使用授權擁有者電子郵件地址來重設New Relic密碼。
 
-如果授權擁有者已變更，而新授權擁有者目前無法存取New Relic，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
+如果授權擁有者已變更，而新授權擁有者目前無法存取New Relic，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)。
 
 ## 管理使用者存取權（管理員角色）
 
@@ -41,7 +41,7 @@ Adobe布建雲端基礎結構專案時，授權擁有者會收到New Relic的電
 
 >[!NOTE]
 >
->**Pro環境**&#x200B;已預先設定為使用New Relic服務，且可略過啟用和連線指示。 如果中繼和生產環境未安裝New Relic APM，或生產環境中無法使用New Relic基礎架構，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以請求安裝。
+>**Pro環境**&#x200B;已預先設定為使用New Relic服務，且可略過啟用和連線指示。 如果中繼和生產環境未安裝New Relic APM，或生產環境中無法使用New Relic基礎架構，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以請求安裝。
 
 對於入門環境，您必須檢查`.magento.app.yaml`檔案以確認`runtime`區段包含New Relic擴充功能。 如果尚未設定擴充功能，請新增下列專案：
 
@@ -61,7 +61,7 @@ runtime:
 
 - 針對&#x200B;**入門專案**，您擁有最多可支援&#x200B;_三個_&#x200B;環境的New Relic授權金鑰。 您必須手動將金鑰新增到您的環境設定。 入門環境未預先布建為使用New Relic服務。
 
-對於入門環境，請將New Relic授權金鑰新增至環境設定，以啟用New Relic整合。 將金鑰新增到測試和生產環境，以及您選擇的其他一個環境。 設定僅需要New Relic授權金鑰。 您可以在[New Relic使用手冊](https://experienceleague.adobe.com/docs/commerce-admin/config/general/new-relic-reporting.html)的&#x200B;_Adobe Commerce報表_&#x200B;主題中找到其他設定選項的相關資訊。
+對於入門環境，請將New Relic授權金鑰新增至環境設定，以啟用New Relic整合。 將金鑰新增到測試和生產環境，以及您選擇的其他一個環境。 設定僅需要New Relic授權金鑰。 您可以在[New Relic使用手冊](https://experienceleague.adobe.com/docs/commerce-admin/config/general/new-relic-reporting.html?lang=zh-Hant)的&#x200B;_Adobe Commerce報表_&#x200B;主題中找到其他設定選項的相關資訊。
 
 {{redeploy-warning}}
 
@@ -69,7 +69,7 @@ runtime:
 >
 >- Adobe Commerce帳戶頁面或與專案相關聯的New Relic授權的登入認證
 >- [要設定的入門環境之管理員層級存取權](../project/user-access.md)
->- 存取環境[Admin](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html)的認證
+>- 存取環境[Admin](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html?lang=zh-Hant)的認證
 
 **若要為入門環境設定New Relic**：
 
@@ -102,7 +102,7 @@ runtime:
      magento-cloud variable:update php:newrelic.license --value <newrelic-license-key>
      ```
 
-   您可以選擇從[Commerce管理員](https://experienceleague.adobe.com/docs/commerce-admin/start/reporting/new-relic-reporting.html#step-3%3A-configure-your-store)新增它。
+   您可以選擇從[Commerce管理員](https://experienceleague.adobe.com/docs/commerce-admin/start/reporting/new-relic-reporting.html?lang=zh-Hant#step-3%3A-configure-your-store)新增它。
 
 1. 登入您的[New Relic帳戶](https://login.newrelic.com/login)，以確認您可以從Adobe Commerce環境檢視資料。 請參閱[調查效能](investigate-performance.md)。
 
