@@ -14,7 +14,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)是選用的後端快取解決方案，可取代Adobe Commerce預設使用的`Zend Framework Zend_Cache_Backend_File`。
 
-請參閱[設定指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"}中的&#x200B;_設定Valkey_。
+請參閱[設定指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=zh-Hant){target="_blank"}中的&#x200B;_設定Valkey_。
 
 {{service-instruction}}
 
