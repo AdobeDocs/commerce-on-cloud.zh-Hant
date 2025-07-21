@@ -3,9 +3,9 @@ title: 設定OpenSearch服務
 description: 瞭解如何在雲端基礎結構上啟用Adobe Commerce的OpenSearch服務。
 feature: Cloud, Search, Services
 exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
-source-git-commit: 81b8ac7b611f9b8c6fe3011a554786bd2e48aabc
+source-git-commit: 1f965749e59e3c48be2d8e04ac58683234e7b685
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
        disk: 1024
    ```
 
-   對於Pro專案，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)才能在測試和生產環境中變更OpenSearch版本。
+   對於Pro專案，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)才能在測試和生產環境中變更OpenSearch版本。
 
-1. 設定或驗證`.magento.app.yaml`檔案中的`relationships`屬性。
+1. 設定或驗證`relationships`檔案中的`.magento.app.yaml`屬性。
 
    ```yaml
    relationships:
@@ -92,7 +92,7 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
 
 - **專案升級** — 確認新應用程式版本中的OpenSearch PHP使用者端與安裝在雲端基礎結構上的OpenSearch服務版本相容。
 
-服務版本和相容性支援取決於在雲端基礎結構上測試和部署的版本，有時與Adobe Commerce內部部署支援的版本不同。 如需支援的版本清單，請參閱&#x200B;_安裝指南_&#x200B;中的[系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)。
+服務版本和相容性支援取決於在雲端基礎結構上測試和部署的版本，有時與Adobe Commerce內部部署支援的版本不同。 如需支援的版本清單，請參閱[安裝指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)中的&#x200B;_系統需求_。
 
 **若要驗證OpenSearch軟體相容性**：
 
@@ -182,6 +182,11 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
 
 您可以選擇將`configuration:plugins`區段新增至`.magento/services.yaml`檔案中的OpenSearch服務，以新增OpenSearch的外掛程式。 例如，下列程式碼會啟用ICU分析和注音分析外掛程式。
 
+>[!NOTE]
+>
+>這僅適用於整合和入門環境。 若要在Pro測試或生產叢集中安裝外掛程式，[請提交支援要求](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)。
+
+
 ```yaml
 opensearch:
     type: opensearch:2
@@ -196,9 +201,14 @@ opensearch:
 
 ### 移除OpenSearch的外掛程式
 
-從`.magento/services.yaml`檔案的`opensearch:`區段移除外掛程式專案&#x200B;**不會**&#x200B;解除安裝或停用服務。 若要完全停用服務，您必須從`.magento/services.yaml`檔案移除外掛程式之後，重新索引OpenSearch資料。 此設計可防止依賴這些外掛程式的資料可能遺失或損毀。
+從`opensearch:`檔案的`.magento/services.yaml`區段移除外掛程式專案&#x200B;**不會**&#x200B;解除安裝或停用服務。 若要完全停用服務，您必須從`.magento/services.yaml`檔案移除外掛程式之後，重新索引OpenSearch資料。 此設計可防止依賴這些外掛程式的資料可能遺失或損毀。
+
 
 **若要移除OpenSearch外掛程式**：
+
+>[!NOTE]
+>
+>這項變更僅適用於整合和入門環境。 您必須[提交支援票證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)，才能移除Pro測試或生產叢集中的外掛程式。
 
 1. 從您的`.magento/services.yaml`檔案移除OpenSearch外掛程式專案。
 1. 新增、提交和推送您的程式碼變更。
@@ -216,7 +226,7 @@ opensearch:
    ```
 
 1. 將`.magento/services.yaml`變更提交至您的雲端存放庫。
-1. 重新索引目錄搜尋索引。
+1. 重新索引目錄搜尋索引（所有環境：整合、入門、Pro測試和生產叢集）。
 
    ```bash
    bin/magento indexer:reindex catalogsearch_fulltext
