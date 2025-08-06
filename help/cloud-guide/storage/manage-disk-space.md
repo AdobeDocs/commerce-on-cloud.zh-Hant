@@ -3,9 +3,9 @@ title: 管理磁碟空間
 description: 瞭解如何使用命令列介面管理磁碟空間。
 feature: Cloud, Storage
 exl-id: 1d13dc4e-56eb-4153-a8b1-48d2263ebc4c
-source-git-commit: b8cabaad4b7805858563cecbe5ffc2fdb9aeac58
+source-git-commit: 45d5a54bfd02fe9e61ca92789689dabf634d4bbe
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,8 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 >[!IMPORTANT]
 >
->對於Pro生產和中繼環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以變更磁碟空間配置。 Pro生產與測試環境的大小增加只能在特定的間隔進行，因此，根據您目前的磁碟空間使用量，支援服務可能會建議將磁碟空間配置增加至少10 GB。 配置完畢後，就無法還原Pro測試和生產的儲存空間增加。 無法重新配置儲存裝置或在資源之間重新分配儲存裝置。 若要增加更多檔案儲存空間，請減少配置給MySQL的磁碟空間。
+>- 對於Pro生產和中繼環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以變更磁碟空間配置。 Pro生產與測試環境的大小增加只能在特定的間隔進行，因此，根據您目前的磁碟空間使用量，支援服務可能會建議將磁碟空間配置增加至少10 GB。 配置完畢後，就無法還原Pro測試和生產的儲存空間增加。 無法重新配置儲存裝置或在資源之間重新分配儲存裝置。 若要增加更多檔案儲存空間，請減少配置給MySQL的磁碟空間。
+>- 在AWS上託管的Pro生產與預備環境有[強制性6小時降溫](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVolume.html)，適用於磁碟空間增加的情況。 掛載時磁碟空間增加之後，您必須等待6小時，才能在該掛載上再次增加磁碟空間。
 
 ### 應用程式磁碟空間
 
@@ -166,7 +167,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 1. 在您的本機開發環境中，開啟`.magento/services.yaml`設定檔。
 
-1. 在檔案中新增或尋找服務。 檢視關於設定服務[&#128279;](../services/services-yaml.md)的詳細資訊。
+1. 在檔案中新增或尋找服務。 檢視關於設定服務[的](../services/services-yaml.md)詳細資訊。
 
 1. 設定磁碟屬性的新值（以MB為單位）。
 
@@ -188,7 +189,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 ## 監視磁碟空間
 
-在Pro Production環境中，您可以使用New Relic的Adobe Commerce警示管理原則來監視磁碟空間和其他效能指標。 如需詳細資訊，請參閱[使用受管理警示監視效能](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)。 如需進一步的指引，請參閱[解決資料庫效能問題的最佳實務](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=zh-Hant)。
+在Pro Production環境中，您可以使用New Relic的Adobe Commerce警示管理原則來監視磁碟空間和其他效能指標。 如需詳細資訊，請參閱[使用受管理警示監視效能](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)。 如需進一步的指引，請參閱[解決資料庫效能問題的最佳實務](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html)。
 
 ## 無剩餘空間
 
