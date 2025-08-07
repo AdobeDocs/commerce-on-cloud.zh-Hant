@@ -2,10 +2,11 @@
 title: 適用於Commerce的雲端元件
 description: 請參閱雲端元件套件最新改良的清單。
 recommendations: noDisplay, catalog
+last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
-source-git-commit: dcf71ffbdafae46e6a02735c090c33a8fe248bc6
+source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.1.2 {#latest}
+## v1.1.3 {#latest}
+
+發行日期： 2025年8月7日
+
+- ![新圖示](../../assets/new.svg) **PHP 8.4** — 已新增PHP 8.4的功能測試與修正。<!-- MCLOUD-13313 -->
+
+## v1.1.2
 
 發行日期： 2025年6月3日
 
@@ -60,7 +67,7 @@ ht-degree: 0%
 
 發行日期： 2022年9月13日
 
-- ![修正圖示](../../assets/fix.svg) **熱身錯誤** — 修正當管理員中的頁面可見度設為&#x200B;[**個別不可見**](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)時，嘗試[熱身](../environment/variables-post-deploy.md#warm_up_pages)的問題，導致部署記錄中出現`ERROR: Warming up failed: <link to page>`個錯誤。<!-- MCLOUD-9134 -->
+- ![修正圖示](../../assets/fix.svg) **熱身錯誤** — 修正當管理員中的頁面可見度設為[個別不可見](../environment/variables-post-deploy.md#warm_up_pages)[**時，嘗試**&#x200B;熱身](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)的問題，導致部署記錄中出現`ERROR: Warming up failed: <link to page>`個錯誤。<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 
