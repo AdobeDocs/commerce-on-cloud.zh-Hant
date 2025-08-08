@@ -1,13 +1,13 @@
 ---
-source-git-commit: 7f2934af84c947046fed3a32c3b6e2937aed418a
+source-git-commit: 69b764a03e6c272498e57645dca40d29c4e79626
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '934'
 ht-degree: 3%
 
 ---
 # ece-tools
 
-**版本**： 2002.2.5
+**版本**： 2002.2.7
 
 此參考包含34個可透過`ece-tools`命令列工具使用的命令。
 在雲端基礎結構上的Adobe Commerce中使用`ece-tools list`命令會自動產生初始清單。
@@ -25,9 +25,16 @@ ht-degree: 3%
 - 預設： `false`
 - 不接受值
 
-#### `--quiet`，`-q`
+#### `--silent`
 
 不輸出任何訊息
+
+- 預設： `false`
+- 不接受值
+
+#### `--quiet`，`-q`
+
+只顯示錯誤。 會隱藏所有其他輸出
 
 - 預設： `false`
 - 不接受值
@@ -56,7 +63,6 @@ ht-degree: 3%
 
 否定「 — ansi」選項
 
-- 預設： `false`
 - 不接受值
 
 #### `--no-interaction`，`-n`
@@ -401,7 +407,7 @@ ece-tools backup:list
 ece-tools backup:restore [-f|--force] [--file [FILE]]
 ```
 
-還原重要的組態檔。 執行backup：list以顯示備份檔案的清單。
+還原重要的組態檔。 執行備份:list以顯示備份檔案清單。
 
 ### 選項
 
