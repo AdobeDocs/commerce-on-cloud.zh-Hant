@@ -6,9 +6,9 @@ feature: Cloud, Install
 topic: Development
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: 14fb0b41-1c3a-4abc-8726-cea16ab00ba8
-source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
+source-git-commit: 1cf1f9097f9897591fe59a390b0e73921f2300fa
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 雲端基礎結構遠端環境上的Adobe Commerce是&#x200B;**唯讀**，包括所有入門環境以及所有Pro整合、中繼和生產環境。 在本機開發環境中，您可以先撰寫及測試程式碼，再將程式碼推送至整合環境，進一步測試並部署到中繼和生產環境。
 
-在準備本機工作區之前，請確定您有[認證](../../get-started/prepare-workspace.md)。 本機開發需要安裝PHP和Composer，除非您選擇使用適用於Commerce[&#128279;](#docker-environment)的Cloud Docker。
+在準備本機工作區之前，請確定您有[認證](../../get-started/prepare-workspace.md)。 本機開發需要安裝PHP和Composer，除非您選擇使用適用於Commerce[的](#docker-environment)Cloud Docker。
 
 ## 必要的套件
 
@@ -37,7 +37,7 @@ Composer會將專案所需的程式庫和相依性安裝在`vendor`目錄中。 
 
 {style="table-layout:auto"}
 
-新增、認可及推播更新的程式碼後，部署程式會在[建置階段](../deploy/process.md#build-phase-build-phase)期間自動執行`composer install`命令。
+新增、認可及推播更新的程式碼後，部署程式會在`composer install`建置階段[期間自動執行](../deploy/process.md#build-phase-build-phase)命令。
 
 ### 雲端中繼
 
@@ -47,7 +47,7 @@ Composer會將專案所需的程式庫和相依性安裝在`vendor`目錄中。 
 >=current_version <next_version
 ```
 
-例如，若要使用最新的Adobe Commerce 2.4.9版，請在`composer.json`檔案中將`2.4.8`設定為「目前」版本，並將`2.4.9`設定為「下一個」版本：
+例如，若要使用最新的Adobe Commerce 2.4.9版，請在`2.4.8`檔案中將`2.4.9`設定為「目前」版本，並將`composer.json`設定為「下一個」版本：
 
 ```text
 "magento/magento-cloud-metapackage": ">=2.4.8 <2.4.9"
@@ -59,16 +59,17 @@ Composer會將專案所需的程式庫和相依性安裝在`vendor`目錄中。 
 - **vendor/magento/product-enterprise-edition** — 此中繼資料需要應用程式元件，包括模組、架構、主題等。
 - **vendor/fastly2/magento2** — 此模組管理Pro測試環境、生產環境和入門生產環境的Fastly CDN和服務。 檢視[Fastly服務](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2)。
 - **vendor/magento/module-paypal-on-boarding** — 此模組會連線至您的PayPal商家帳戶，以提供PayPal付款閘道結帳。 請參閱[PayPal上線工具](../store/paypal.md)。
+- **廠商/aem/rum** — 此模組管理[作業遙測](../monitor/operational-telemetry.md)資料收集工具。
 
 >[!TIP]
 >
->如需相依性和第三方授權清單，請參閱&#x200B;_Adobe Commerce發行說明_&#x200B;中的[Commerce雲端套件](/help/cloud-guide/release-notes/cloud-packages.md)。
+>如需相依性和第三方授權清單，請參閱[Adobe Commerce發行說明](/help/cloud-guide/release-notes/cloud-packages.md)中的&#x200B;_Commerce雲端套件_。
 
 ## Docker環境
 
 您可以使用適用於Commerce的Cloud Docker工具，在本地開發的雲端基礎結構生產和開發環境中模擬Adobe Commerce。 適用於Commerce的Cloud Docker不需要在本機安裝PHP和Composer。
 
-- 在Adobe Developer網站中使用Cloud Docker[&#128279;](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)進行本機開發
+- 在Adobe Developer網站中使用Cloud Docker[進行](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)本機開發
 - [Docker架構和常用命令](../dev-tools/cloud-docker.md)
 - [Cloud Docker發行說明](../release-notes/cloud-docker.md)
 
