@@ -3,7 +3,7 @@ title: PHP設定
 description: 瞭解在雲端基礎結構中用於Commerce應用程式配置的最佳PHP設定。
 feature: Cloud, Configuration, Extensions
 exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
-source-git-commit: 1725741cfab62a2791fe95cfae9ed9dffa352339
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # PHP設定
 
-您可以選擇要在您的`.magento.app.yaml`檔案中執行哪個[版本的PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)：
+您可以選擇要在您的[檔案中執行哪個](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)版本的PHP`.magento.app.yaml`：
 
 ```yaml
 name: mymagento
@@ -21,7 +21,7 @@ type: php:<version>
 
 >[!TIP]
 >
->如果升級至PHP 8.1和更新版本，請從`.magento.app.yaml`檔案中的[`runtime: extensions:`屬性](properties.md#runtime)移除JSON並重新部署。 JSON擴充功能自PHP 8.0起便安裝在雲端環境中。
+>如果升級至PHP 8.1和更新版本，請從[`runtime: extensions:`檔案中的](properties.md#runtime)屬性`.magento.app.yaml`移除JSON並重新部署。 JSON擴充功能自PHP 8.0起便安裝在雲端環境中。
 
 ## 設定PHP
 
@@ -63,7 +63,7 @@ realpath_cache_ttl = 7200
 
 >[!NOTE]
 >
->如需建議的PHP組態設定清單，請參閱&#x200B;_安裝指南_&#x200B;中的[必要的PHP設定](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=zh-Hant)。
+>如需建議的PHP組態設定清單，請參閱[安裝指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)中的&#x200B;_必要的PHP設定_。
 
 ### 檢查自訂PHP設定
 
@@ -118,7 +118,7 @@ php -m
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP模組需求與Adobe Commerce版本繫結。 請參閱[PHP需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=zh-Hant)。
+PHP模組需求與Adobe Commerce版本繫結。 請參閱[PHP需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)。
 
 ### 擴充功能支援
 
@@ -136,8 +136,10 @@ sourceguardian.restrict_unencoded = "1"
 
 請參閱SourceGuardian檔案的[第3.5節](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf)。 _這是PDF的連結_。
 
-[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，以取得在所有生產環境和Pro測試環境中安裝這些PHP擴充功能的協助。 包含更新的`.magento/services.yaml`檔案、`.magento.app.yaml`檔案（包含更新的PHP版本和任何其他PHP副檔名）。 若是即時生產環境的變更，您至少必須提供48小時的通知。 雲端基礎結構團隊更新您的專案最多可能需要48小時的時間。
+[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，以取得在所有生產環境和Pro測試環境中安裝這些PHP擴充功能的協助。 包含更新的`.magento/services.yaml`檔案、`.magento.app.yaml`檔案（包含更新的PHP版本和任何其他PHP副檔名）。 若是即時生產環境的變更，您至少必須提供48小時的通知。 雲端基礎結構團隊更新您的專案最多可能需要48小時的時間。
 
 >[!WARNING]
 >
 >不支援使用偵錯編譯的PHP，而且探查可能與[!DNL XDebug]或[!DNL XHProf]衝突。 啟用Probe時停用這些擴充功能。 探查與某些PHP延伸模組（例如[!DNL Pinba]或IonCube）衝突。
+
+<!-- Last updated from includes: 2025-04-14 09:39:27 -->

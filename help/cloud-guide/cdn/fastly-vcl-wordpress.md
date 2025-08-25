@@ -2,7 +2,8 @@
 title: 將請求重新路由到CMS後端
 description: 瞭解如何使用Fastly邊緣模組將來自Adobe Commerce商店的傳入請求重新路由到單獨的WordPress網站。
 feature: Cloud, Configuration, Routes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ef024c68-395b-4d47-9362-a8404a93dbbe
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -45,6 +46,8 @@ ht-degree: 0%
 
    - 設定&#x200B;_其他CMS/後端整合_ Edge模組，處理從Adobe Commerce到WordPress後端的URL重寫。
 
-     如需詳細指示，請參閱Magento2 _檔案的_ Fastly CDN模組中的[Fastly Edge模組 — 其他CMS/後端整合](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md)。
+     如需詳細指示，請參閱Magento 2[檔案的](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md)Fastly CDN模組中的&#x200B;_Fastly Edge模組 — 其他CMS/後端整合_。
 
 1. 更新Fastly服務設定後，請測試您的Adobe Commerce存放區，以確保WordPress的指定URL請求已正確重新路由。
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

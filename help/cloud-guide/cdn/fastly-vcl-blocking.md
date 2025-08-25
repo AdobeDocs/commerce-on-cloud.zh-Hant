@@ -2,7 +2,8 @@
 title: 封鎖要求的自訂VCL
 description: 使用具有自訂VCL片段的Edge存取控制清單(ACL)，依IP位址封鎖傳入要求。
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: eb21c166-21ae-4404-85d9-c3a26137f82c
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 0%
@@ -11,7 +12,7 @@ ht-degree: 0%
 
 # 封鎖要求的自訂VCL
 
-您可以使用適用於Magento2的Fastly CDN模組來建立Edge ACL，其中包含您要封鎖的IP位址清單。 然後，您可以將該清單與VCL程式碼片段搭配使用，以封鎖傳入的請求。 此程式碼會檢查傳入要求的IP位址。 如果它符合ACL清單中包含的IP位址，Fastly會封鎖存取您網站的請求，並傳回`403 Forbidden error`。 允許存取所有其他使用者端IP位址。
+您可以使用適用於Magento 2的Fastly CDN模組來建立Edge ACL，其中包含您要封鎖的IP位址清單。 然後，您可以將該清單與VCL程式碼片段搭配使用，以封鎖傳入的請求。 此程式碼會檢查傳入要求的IP位址。 如果它符合ACL清單中包含的IP位址，Fastly會封鎖存取您網站的請求，並傳回`403 Forbidden error`。 允許存取所有其他使用者端IP位址。
 
 **必要條件：**
 
@@ -38,7 +39,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此範例向進階使用者說明如何建立VCL程式碼片段，以設定自訂封鎖規則以上傳到Fastly服務。 您可以使用Fastly CDN中適用於Magento2模組的[封鎖](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md)功能，根據Adobe Commerce管理員提供的國家/地區來設定封鎖清單或允許清單。
+>此範例向進階使用者說明如何建立VCL程式碼片段，以設定自訂封鎖規則以上傳到Fastly服務。 您可以使用Magento 2模組的Fastly CDN提供的[封鎖](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md)功能，根據Adobe Commerce管理員提供的國家/地區來設定封鎖清單或允許清單。
 
 定義Edge ACL後，您可以使用它來建立VCL程式碼片段，以封鎖對ACL中所指定IP位址的存取。 您可以在測試環境和生產環境中使用相同的VCL程式碼片段，但必須分別將程式碼片段上傳至每個環境。
 
@@ -58,7 +59,7 @@ ht-degree: 0%
 
 - `name`： VCL程式碼片段的名稱。 在此範例中，我們使用名稱`blocklist`。
 
-- `priority`：決定VCL程式碼片段何時執行。 優先順序為`5`，可立即執行並檢查管理員要求是否來自允許的IP位址。 程式碼片段會在任何預設MagentoVCL程式碼片段(`magentomodule_*`)被指派優先順序為50之前執行。 視您希望程式碼片段執行的時間而定，將每個自訂程式碼片段的優先順序設定為高於或低於50。 優先順序較低的程式碼片段會先執行。
+- `priority`：決定VCL程式碼片段何時執行。 優先順序為`5`，可立即執行並檢查管理員要求是否來自允許的IP位址。 程式碼片段會在任何預設Magento VCL程式碼片段(`magentomodule_*`)被指派優先順序為50之前執行。 視您希望程式碼片段執行的時間而定，將每個自訂程式碼片段的優先順序設定為高於或低於50。 優先順序較低的程式碼片段會先執行。
 
 - `type`：指定VCL程式碼片段的型別，以決定所產生VCL程式碼中程式碼片段的位置。 在此範例中，我們使用`recv`，它將VCL程式碼插入`vcl_recv`副程式中，在樣板VCL的下方及任何物件上方。 如需程式碼片段型別的清單，請參閱[Fastly VCL程式碼片段參考](https://docs.fastly.com/api/config#api-section-snippet)。
 
@@ -68,7 +69,7 @@ ht-degree: 0%
 
 - [從Admin](#add-the-custom-vcl-snippet)新增自訂VCL程式碼片段。 如果您可以存取Admin，則建議使用此方法。 （需要[Fastly 1.2.58](fastly-configuration.md#upgrade-fastly-module)或更新版本。）
 
-- 將JSON程式碼範例儲存至檔案（例如，`blocklist.json`）並使用Fastly API[&#128279;](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)上傳。 如果您無法存取Admin，請使用此方法。
+- 將JSON程式碼範例儲存至檔案（例如，`blocklist.json`）並使用Fastly API[上傳](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)。 如果您無法存取Admin，請使用此方法。
 
 ## 新增自訂VCL片段
 
@@ -96,7 +97,7 @@ ht-degree: 0%
 
 1. 按一下&#x200B;**建立**&#x200B;以產生名稱模式為`type_priority_name.vcl`的VCL程式碼片段檔案，例如`recv_5_blocklist.vcl`
 
-1. 頁面重新載入後，按一下&#x200B;*Fastly組態*&#x200B;區段中的&#x200B;**上傳VCL到Fastly**，以將檔案新增到Fastly服務組態。
+1. 頁面重新載入後，按一下&#x200B;**Fastly組態**&#x200B;區段中的&#x200B;*上傳VCL到Fastly*，以將檔案新增到Fastly服務組態。
 
 1. 上傳後，請根據頁面頂端的通知重新整理快取。
 
@@ -108,7 +109,7 @@ Fastly會在上傳過程中驗證VCL程式碼的更新版本。 如果驗證失�
 
 >[!WARNING]
 >
->在這些範例中，VCL程式碼會格式化為JSON裝載，可儲存至檔案並以Fastly API請求提交。 您可以從Admin[&#128279;](#add-the-custom-vcl-snippet)提交VCL程式碼片段，或使用Fastly API以JSON字串形式提交。 若要避免在搭配JSON字串使用Fastly API時出現驗證錯誤，您必須使用反斜線來逸出特殊字元。
+>在這些範例中，VCL程式碼會格式化為JSON裝載，可儲存至檔案並以Fastly API請求提交。 您可以從Admin[提交](#add-the-custom-vcl-snippet)VCL程式碼片段，或使用Fastly API以JSON字串形式提交。 若要避免在搭配JSON字串使用Fastly API時出現驗證錯誤，您必須使用反斜線來逸出特殊字元。
 
 >[!NOTE]
 >如果您要從Admin提交VCL程式碼片段，請從範例VCL程式碼中擷取個別值，並將它們輸入到對應的欄位中。 例如：
@@ -155,3 +156,5 @@ Fastly會在上傳過程中驗證VCL程式碼的更新版本。 如果驗證失�
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

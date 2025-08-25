@@ -4,9 +4,9 @@ description: 檢視在Adobe Commerce期間雲端基礎結構建置、部署和�
 recommendations: noDisplay
 role: Developer
 exl-id: e240c268-b171-44e9-9fa4-f0e91b0d9899
-source-git-commit: 350cfea06f036f0787b330e6e40c5af46a30f5ad
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -33,3 +33,5 @@ ht-degree: 0%
 - **型別**：指出錯誤是嚴重錯誤還是警告
 
 {{$include /help/_includes/automated/ece-tools-error-codes.md}}
+
+<!-- Last updated from includes: 2025-05-28 21:01:41 -->
