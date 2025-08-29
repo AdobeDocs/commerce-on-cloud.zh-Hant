@@ -1,7 +1,7 @@
 ---
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+source-git-commit: 5236f2718e5091dfc2fc140e15d4ac87a073d1d0
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '781'
 ht-degree: 1%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 1%
 
 本網站包含雲端基礎結構上Commerce的最新開發人員檔案。
 
-- [雲端基礎結構上的Commerce指南](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/overview)
-- [開始使用雲端基礎結構上的Commerce](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/start/overview)
+- [雲端基礎結構上的Commerce指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- [開始使用雲端基礎結構上的Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source行為準則
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 關於您對Adobe內容的貢獻
 
-請參閱[Adobe檔案投稿人指南](https://experienceleague.adobe.com/zh-hant/docs/contributor/contributor-guide/introduction)。
+請參閱[Adobe檔案投稿人指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 貢獻方式取決於您的身分和您要貢獻的變更型別：
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 社群投稿人可以使用GitHub UI進行基本編輯或建立存放庫復本，以做出重大貢獻。
 
-如需詳細資訊，請參閱[Adobe檔案貢獻者指南](https://experienceleague.adobe.com/zh-hant/docs/contributor/contributor-guide/introduction)。
+如需詳細資訊，請參閱[Adobe檔案貢獻者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 ## 如何使用Markdown將主題格式化
 
@@ -70,7 +70,7 @@ ht-degree: 1%
 >**附註：**
 >
 >- 產生樣板化內容需要在終端機中的命令列上工作。
->- 您必須安裝Ruby才能執行轉譯指令碼。 如需所需版本，請參閱[_jekyll/.ruby-version] (_jekyll/.ruby-version)。
+>- 您必須安裝Ruby才能執行轉譯指令碼。 如需所需版本，請參閱[_jekyll/.ruby-version](_jekyll/.ruby-version)。
 
 如需範本化內容的檔案結構說明，請參閱下列內容：
 
@@ -131,3 +131,31 @@ ht-degree: 1%
    ```
 
 請參閱Jekyll檔案以取得有關[資料檔](https://jekyllrb.com/docs/datafiles)、[Liquid濾鏡](https://jekyllrb.com/docs/liquid/filters/)和其他功能的詳細資訊。
+
+## 影像最佳化的預先提交鉤點
+
+此存放庫包括自動預先提交掛接，可在提交前最佳化影像。 **所有貢獻者都應該啟用這些鉤點**，以確保一致的影像最佳化並降低存放庫大小。
+
+### 快速設定
+
+複製存放庫後，請執行：
+
+```bash
+.githooks/setup-hooks.sh
+```
+
+### 鉤子會做什麼
+
+- 自動偵測分階段影像檔案(PNG、JPG、JPEG、GIF、SVG)
+- 執行`image_optim`以壓縮和最佳化影像
+- 自動重新存放最佳化的影像
+- 確保所有認可的影像都已適當最佳化
+
+### 優點
+
+- 縮小存放庫大小
+- 加速說明檔案的頁面載入
+- 所有貢獻者的影像品質一致
+- 不需要手動最佳化
+
+如需詳細的設定指示、疑難排解和組態，請參閱[`.githooks/README.md`](.githooks/README.md)。
