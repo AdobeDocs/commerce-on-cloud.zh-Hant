@@ -2,7 +2,7 @@
 title: 雲端基礎結構上的Commerce
 description: 了解如何建置、部署和管理雲端基礎結構上的 Commerce。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 10818a862fbba14bdfb3de1e6107d745104e4791
+source-git-commit: b3b020dd4a0f76c60be3eae1c93f97e82adcacab
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 3%
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # 雲端基礎結構上的Commerce
 
-雲端基礎結構上的Adobe Commerce提供自動化託管平台，在雲端原生環境中建置、部署及管理您的[!DNL Commerce]應用程式時，可採用&#x200B;**自助服務**&#x200B;方法。 雲端基礎結構上的Adobe Commerce除了內部部署Adobe Commerce和Magento Open Source平台外，還隨附其他功能：
+雲端基礎結構上的Adobe Commerce提供自動化託管平台，在雲端原生環境中建置、部署及管理您的&#x200B;**應用程式時，可採用**&#x200B;自助服務[!DNL Commerce]方法。 雲端基礎結構上的Adobe Commerce除了內部部署Adobe Commerce和Magento Open Source平台外，還隨附其他功能：
 
 - 預先布建的基礎結構，包含PHP、MySQL (MariaDB)、Redis、[!DNL RabbitMQ]以及支援的搜尋引擎技術。
 - Git型工作流程，具有自動建置和部署功能，可在您每次推播Platform as a Service (PaaS)環境中的程式碼變更時，有效率地快速開發和持續部署。
@@ -23,9 +23,9 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->如需安全性詳細資訊，請參閱[安全性啟動檢查清單](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
+>如需安全性詳細資訊，請參閱[安全性啟動檢查清單](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
 
-詳細檢視[技術棧疊](architecture/tech-stack.md)，或進一步瞭解Commerce [&#128279;](architecture/cloud-architecture.md)的雲端架構中的特定功能和支援產品。
+詳細檢視[技術棧疊](architecture/tech-stack.md)，或進一步瞭解Commerce [的](architecture/cloud-architecture.md)雲端架構中的特定功能和支援產品。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -60,5 +60,6 @@ Commerce雲端基礎結構指南假設您具備一些關於Adobe Commerce應用�
 
 - [Adobe Commerce開發人員檔案](https://developer.adobe.com/commerce/docs/) (Adobe Developer網站) — 開發、自訂、整合、擴充及使用進階功能
 
-- [Adobe Commerce檔案](https://experienceleague.adobe.com/docs/commerce.html?lang=zh-Hant) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的[!DNL Commerce]專案
+- [Adobe Commerce檔案](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的[!DNL Commerce]專案
 
+{{$include /help/_includes/templated/whats-new.md}}
