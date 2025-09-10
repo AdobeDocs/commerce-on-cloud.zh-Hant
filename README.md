@@ -70,7 +70,7 @@ ht-degree: 1%
 >**附註：**
 >
 >- 產生樣板化內容需要在終端機中的命令列上工作。
->- 您必須安裝Ruby才能執行轉譯指令碼。 如需所需版本，請參閱[_jekyll/.ruby-version](_jekyll/.ruby-version)。
+>- 您必須安裝Ruby才能執行轉譯指令碼。 如需所需版本，請參閱[_jekyll/.ruby-version] (_jekyll/.ruby-version)。
 
 如需範本化內容的檔案結構說明，請參閱下列內容：
 
