@@ -1,27 +1,30 @@
 ---
 title: 雲端CLI
 description: 瞭解magento-cloud CLI，以及它如何協助您在雲端基礎結構專案上管理Adobe Commerce的本機開發環境。
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 71a705f2-8672-4125-b539-b7b1621f2f64
+source-git-commit: 82d89f442792baec995dd0be40f2a49cba168f76
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
 
-
 # 雲端CLI
 
-`magento-cloud` CLI工具可讓開發人員和系統管理員管理Cloud專案和環境、執行常式，以及在本機執行自動化工作。 `magento-cloud` CLI擴充[[!DNL Cloud Console]](../../get-started/cloud-console.md)的特性和功能。 在您在本機工作站上安裝`magento-cloud` CLI之後，就可以在雲端基礎結構Starter和Pro整合環境中用它來管理您的Adobe Commerce。
+`magento-cloud` CLI是命令列工具，可讓開發人員和系統管理員從本機工作站管理雲端基礎結構專案和環境上的Adobe Commerce。
+
+此工具提供額外的自動化功能，以及專案管理功能的直接存取，以擴充[[!DNL Cloud Console]](../../get-started/cloud-console.md)的功能。 在本機安裝工具後，您可以使用它來管理Starter和Pro整合環境。
 
 >[!NOTE]
 >
->這是本機工具，無法使用此方法安裝在雲端環境（唯讀）上。 您只能透過&#x200B;**部署工作流程**&#x200B;在雲端環境上安裝模組
->- [專業部署工作流程](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
->- [入門部署工作流程](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
+>這是本機工具，僅支援Unix作業系統。 不支援Windows。 無法使用此頁面所述的方法將其安裝在雲端環境（唯讀）上。 您只能透過下列&#x200B;**部署工作流程**&#x200B;之一在雲端環境中安裝模組。
+>
+>- [專業部署工作流程](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [入門部署工作流程](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
 
 **若要安裝`magento-cloud` CLI**：
 
-1. 在您的&#x200B;_本機工作站_&#x200B;上，變更至您要複製雲端專案的目錄，且[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hant)具有&#x200B;_寫入_&#x200B;存取權。
+1. 在您的&#x200B;_本機工作站_&#x200B;上，變更至您要複製雲端專案的目錄，且[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)具有&#x200B;_寫入_&#x200B;存取權。
 
 1. 安裝`magento-cloud` CLI。
 
@@ -134,7 +137,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
 
 1. 在本機工作站上，變更至專案目錄。
 
-1. 切換至[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hant)。
+1. 切換至[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)。
 
 1. 登入您的專案。
 
