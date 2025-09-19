@@ -1,7 +1,7 @@
 ---
-source-git-commit: 1c4ff862d63020546bb1647ee0b546eff0395e42
+source-git-commit: f985bfc32040919a992b82b56e2f1a58370b3834
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '145'
 ht-degree: 4%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>釐清<code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI工具<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">安裝</a>支援的作業系統。</p>
+      <td><p>釐清<code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI工具<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">安裝</a>支援的作業系統。</p>
 </td>
       <td>
         意見反應
@@ -45,7 +45,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>已針對Cloud Patches套件v1.1.11新增<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">發行說明</a>。</p>
+      <td><p>已針對Cloud Patches套件v1.1.11新增<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">發行說明</a>。</p>
 </td>
       <td>
         重大更新
@@ -67,7 +67,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新ECE-Tools發行後的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>和<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">錯誤訊息</a> v2002.2.7。</p>
+      <td><p>更新ECE-Tools發行後的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>和<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">錯誤訊息</a> v2002.2.7。</p>
 </td>
       <td>
         技術
@@ -89,7 +89,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>針對雲端元件、Docker、修補程式及ECE工具套件新增<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">發行說明</a>。</p>
+      <td><p>針對雲端元件、Docker、修補程式及ECE工具套件新增<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">發行說明</a>。</p>
 </td>
       <td>
         重大更新
@@ -111,7 +111,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>新增在AWS上託管的專案發生<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">磁碟空間增加</a>後強制性6小時冷卻期間的附註。</p>
+      <td><p>新增在AWS上託管的專案發生<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">磁碟空間增加</a>後強制性6小時冷卻期間的附註。</p>
 </td>
       <td>
         技術
@@ -133,56 +133,12 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>新增有關Fastly中<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration">基本驗證</a>的其他資訊。</p>
+      <td><p>新增有關Fastly中<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration">基本驗證</a>的其他資訊。</p>
 </td>
       <td>
         重大更新
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/6d949fbbab631e633ba27641a48829d74856fcaa">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2025年7月18日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>已新增Valkey服務的遺失<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/valkey">組態</a>詳細資料。</p>
-</td>
-      <td>
-        技術
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/add0d4f3bd91b66fd1bd8f5306ff206076121871">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2025年7月15日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>已移除已終止支援且造成混淆之Commerce版本的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">升級指示</a>。</p>
-</td>
-      <td>
-        重大更新，意見反應
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/7c0fcf520cd76f25d51f3a644a60132ac6028959">認可</a></td>
     </tr>
   </tbody>
 </table>
