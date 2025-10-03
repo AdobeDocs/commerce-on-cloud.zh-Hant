@@ -2,9 +2,10 @@
 title: 雲端基礎結構專案
 description: 閱讀雲端基礎結構上Adobe Commerce的概觀 [!DNL Cloud Console] ，並瞭解如何存取帳戶設定。
 last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 8eed04c7-6469-45a4-aa89-dc594c977264
+source-git-commit: 00b1b6578c226a304697963d17ba349ea17da260
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -13,15 +14,15 @@ ht-degree: 0%
 
 雲端基礎結構專案上的Adobe Commerce包含Git分支中的所有程式碼、關聯的環境，以及用於部署[!DNL Commerce]應用程式的指令碼。 環境包含支援[!DNL Commerce]應用程式的服務，包括資料庫、網頁伺服器和快取伺服器。
 
-Adobe提供[!DNL Cloud Console]和開發人員工具，可完整管理專案的所有層面。 您做為帳戶擁有者，擁有所有環境的完整存取權。
+Adobe提供[!DNL Cloud Console]和開發人員工具，讓您全方位管理專案。 您做為帳戶擁有者，擁有所有環境的完整存取權。
 
 ## [!DNL Cloud Console]
 
-[!DNL Cloud Console]提供互動式方法，以方便使用的格式建置、管理和部署Commerce程式碼。 [登入 [!DNL Cloud Console]](https://console.adobecommerce.com)以檢視您的專案清單。 您只能看見自己有權以管理員身分或針對特定環境型別存取的專案。 如果您是Adobe解決方案合作夥伴，可能會看到您支援之客戶的多個專案。
+[!DNL Cloud Console]提供互動式方法，以方便使用的格式建置、管理和部署Commerce程式碼。 [登入 [!DNL Cloud Console]](https://console.adobecommerce.com)以檢視您的專案清單。 您只能看見自己有權以管理員身分或針對特定環境型別存取的專案。 如果您是Adobe解決方案合作夥伴，可能會看到您支援之客戶有多個專案。
 
 >[!TIP]
 >
->如果您沒有看到任何專案，則必須連絡與專案關聯的[帳戶擁有者或專案管理員](../project/user-access.md)，並要求存取權。 第一次使用的使用者，請參閱&#x200B;_開始使用_&#x200B;指南中的[入門主題](../../get-started/onboarding.md#cloud-console)。
+>如果您沒有看到任何專案，則必須連絡與專案關聯的[帳戶擁有者或專案管理員](../project/user-access.md)，並要求存取權。 第一次使用的使用者，請參閱[開始使用](../../get-started/onboarding.md#cloud-console)指南中的&#x200B;_入門主題_。
 
 _所有專案_&#x200B;檢視會列出您有權存取的所有專案。 您可以按一下「**[!UICONTROL Show filters]**」並按型別、地區或計畫篩選專案清單。
 
@@ -42,7 +43,7 @@ _所有專案_&#x200B;檢視會列出您有權存取的所有專案。 您可以
 
 在主要專案概述中：
 
-- 環境檢視會顯示![作用中分支](../../assets/icon-active.png){width="32"} (active) and ![inactive branch](../../assets/icon-inactive.png){width="32"} （非作用中）環境的清單或樹狀檢視。
+- 環境檢視會顯示![作用中分支](../../assets/icon-active.png){width="32"} （作用中）和![非作用中分支](../../assets/icon-inactive.png){width="32"} （非作用中）環境的清單或樹狀檢視。
 - [活動資料流](activity-stream.md)顯示專案的執行中、擱置中以及最近的活動。
 <!-- - Apps & Services—Shows a topology of service containers -->
 
@@ -104,7 +105,7 @@ Pro生產和中繼環境包含三個節點，您可以使用以下連結加以�
 
 ## 設定
 
-按一下專案導覽右側的![設定專案圖示](../../assets/icon-configure.png){width="36"} （設定）圖示，開啟&#x200B;_設定_&#x200B;面板。
+按一下專案導覽右側的&#x200B;_設定專案圖示_ （設定）圖示，開啟![設定](../../assets/icon-configure.png){width="36"}面板。
 
 ### 專案設定
 
@@ -140,7 +141,7 @@ Pro生產和中繼環境包含三個節點，您可以使用以下連結加以�
 
 >[!WARNING]
 >
->**不要**&#x200B;使用HTTP存取控制方法來保護Pro測試環境和生產環境。 這會中斷Fastly快取。 請改用Adobe Commerce的Fastly CDN中可用的[封鎖](../cdn/fastly-vcl-blocking.md)功能。
+>**不要**&#x200B;使用HTTP存取控制方法來保護Pro測試環境和生產環境。 這會中斷Fastly快取。 請改用Adobe Commerce的Fastly CDN中可用的[封鎖](../cdn/fastly-vcl-blocking.md)功能來封鎖存取，或使用[Fastly Basic Auth](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md)實作存取控制。
 
 ## Fastly和New Relic認證
 
