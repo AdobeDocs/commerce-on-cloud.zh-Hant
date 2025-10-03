@@ -3,9 +3,9 @@ title: 自訂快取設定
 description: 瞭解如何在Fastly服務設定完成後檢閱及自訂快取配置設定。
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: 551a00932165dd1c0a876b8151ba14752ceac802
+source-git-commit: a2f5e2f67c7739302a87eaa27df25a62fca1acb7
 workflow-type: tm+mt
-source-wordcount: '1953'
+source-wordcount: '1995'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,11 @@ ht-degree: 0%
 
 在測試和生產環境中設定並測試Fastly服務後，請檢閱並自訂快取組態設定。 例如，您可以更新設定以啟用強制TLS將HTTP請求重新導向到Fastly、更新清除設定，以及啟用基本驗證以在開發期間以密碼保護您的網站。
 
-以下小節提供設定某些快取設定的概觀和指示。 在Magento 2[適用的](https://github.com/fastly/fastly-magento2/tree/master/Documentation)Fastly CDN模組檔案中尋找有關可用設定選項的其他資訊。
+以下小節提供設定某些快取設定的概觀和指示。
+
+>[!IMPORTANT]
+>
+>設定Fastly快取的可用管理選項取決於已安裝的Magento 2的Fastly CDN模組版本。 Adobe建議您[將測試環境和生產環境中的Fastly模組](fastly-configuration.md#upgrade) Fastly模組升級至最新版本。 如需最新資訊，請參閱[Magento2模組](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)的Fastly CDN發行說明。
 
 ## 強制TLS
 
@@ -187,7 +191,7 @@ Fastly支援自訂版本的Varnish Configuration Language (VCL)以自訂Fastly�
 
 - 對於入門專案，請移至[!UICONTROL Domains]中[!DNL Cloud Console]標籤下的專案URL以新增您的專案URL。
 
-- 若為Pro專案，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，以將網域新增至您的雲端專案設定。 支援團隊也會更新Adobe Commerce Fastly帳戶設定以新增網域。
+- 若為Pro專案，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，以將網域新增至您的雲端專案設定。 支援團隊也會更新Adobe Commerce Fastly帳戶設定以新增網域。
 
 **若要從管理員管理Fastly網域設定**：
 

@@ -2,7 +2,8 @@
 title: Fastly疑難排解
 description: 瞭解如何疑難排解和管理Adobe Commerce的Fastly CDN模組和服務。
 feature: Cloud, Configuration, Cache, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 69954ef9-9ece-411e-934e-814a56542290
+source-git-commit: f496a4a96936558e6808b3ce74eac32dfdb9db19
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -11,7 +12,7 @@ ht-degree: 0%
 
 # Fastly疑難排解
 
-使用以下資訊來疑難排解和管理雲端基礎結構專案環境中Adobe Commerce中用於Magento2的Fastly CDN模組。 例如，您可以調查回應標頭值和快取行為來解決Fastly服務和效能問題。
+使用下列資訊在雲端基礎結構專案環境中，對Adobe Commerce中Magento 2的Fastly CDN模組進行疑難排解和管理。 例如，您可以調查回應標頭值和快取行為來解決Fastly服務和效能問題。
 
 在Pro生產和中繼環境中，您可以使用[New Relic記錄](../monitor/log-management.md)來檢視和分析Fastly CDN和WAF記錄資料，以疑難排解錯誤和效能問題。
 
@@ -31,19 +32,19 @@ ht-degree: 0%
 log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 ```
 
-您可以在生產和測試環境中使用相同的VCL。 請參閱&#x200B;_Fastly檔案_&#x200B;中的[`vcl_log`](https://www.fastly.com/documentation/reference/vcl/subroutines/log/)。
+您可以在生產和測試環境中使用相同的VCL。 請參閱[`vcl_log`Fastly檔案](https://www.fastly.com/documentation/reference/vcl/subroutines/log/)中的&#x200B;__。
 
 ## 網站效能、清除和快取問題
 
 使用以下清單來識別和疑難排解與雲端基礎結構環境中Adobe Commerce的Fastly服務設定相關的問題。
 
-- **存放區功能表未顯示或未運作** — 您可能是使用直接連至原始伺服器的連結或暫時連結，而非使用即時網站URL，或您在[cURL命令](#check-live-site-through-fastly)中使用`-H "host:URL"`。 如果您略過Fastly前往原始伺服器，主功能表將無法運作，且顯示的標頭不正確，導致瀏覽器端無法快取。
+- **存放區功能表未顯示或未運作** — 您可能是使用直接連至原始伺服器的連結或暫時連結，而非使用即時網站URL，或您在`-H "host:URL"`cURL命令[中使用](#check-live-site-through-fastly)。 如果您略過Fastly前往原始伺服器，主功能表將無法運作，且顯示的標頭不正確，導致瀏覽器端無法快取。
 
-- **上層導覽無法運作** — 上層導覽仰賴Edge Side Include (ESI)處理，此處理會在您上傳預設MagentoFastly VCL程式碼片段時啟用。 如果導覽無法運作，請[上傳Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)並重新檢查網站。
+- **上層導覽無法運作** — 上層導覽仰賴Edge Side Include (ESI)處理，此處理會在您上傳預設的Magento Fastly VCL程式碼片段時啟用。 如果導覽無法運作，請[上傳Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)並重新檢查網站。
 
-- **地理位置/GeoIP無法運作** — 預設MagentoFastly VCL片段會將國家/地區代碼附加至URL。 如果國家/地區代碼無法運作，請[上傳Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)並重新檢查網站。
+- **地理位置/GeoIP無法運作** — 預設的Magento Fastly VCL程式碼片段會將國家/地區代碼附加至URL。 如果國家/地區代碼無法運作，請[上傳Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)並重新檢查網站。
 
-- **頁面未快取** — 依預設，Fastly不會快取具有`Set-Cookies`標頭的頁面。 Adobe Commerce甚至會在可快取的頁面上設定Cookie (TTL > 0)。 預設MagentoFastly VCL會移除可快取頁面上的這些Cookie。 如果頁面未快取，[請上傳Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)並重新檢查網站。
+- **頁面未快取** — 依預設，Fastly不會快取具有`Set-Cookies`標頭的頁面。 Adobe Commerce甚至會在可快取的頁面上設定Cookie (TTL > 0)。 預設的Magento Fastly VCL會移除可快取頁面上的這些Cookie。 如果頁面未快取，[請上傳Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)並重新檢查網站。
 
   如果範本中的頁面區塊標示為無法快取，也會發生此問題。 在這種情況下，問題很可能是因為協力廠商模組或擴充功能封鎖或移除Adobe Commerce標頭所造成。 若要解決此問題，請參閱[X-Cache只包含MISS，沒有HIT](#x-cache-contains-only-miss-no-hit)。
 
@@ -153,7 +154,7 @@ Fastly API請求會透過Fastly擴充功能傳遞，以從原始伺服器取得�
 1. 在回應中，驗證[標頭](#check-cache-hit-and-miss-response-headers)以確保Fastly正常運作。 您應該會在回應中看到下列不重複標題：
 
    ```http
-   < Fastly-Magento-VCL-Uploaded: yes
+   < Fastly-Magento-VCL-Uploaded: 1.2.222
    < X-Cache: HIT, MISS
    ```
 
@@ -175,7 +176,7 @@ Fastly API請求會透過Fastly擴充功能傳遞，以從原始伺服器取得�
 
 - 包含`X-Magento-Tags`標頭
 
-- `Fastly-Module-Enabled`標頭的值為`Yes`或專案環境中安裝的CDNMagento2模組的Fastly版本號碼
+- `Fastly-Module-Enabled`標頭的值為`Yes`或專案環境中安裝的CDN Magento 2模組的Fastly版本號碼
 
 - [Cache-Control： max-age](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)大於0
 
@@ -236,13 +237,13 @@ php bin/magento module:status Fastly_Cdn
 
 根據傳回的狀態，使用以下指示來更新Fastly設定。
 
-- `Module does not exist` — 如果模組不存在，[請安裝和設定](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md)整合分支中Magento2的Fastly CDN模組。 安裝完成後，請啟用並設定模組。 檢視[設定Fastly](fastly-configuration.md)。
+- `Module does not exist` — 如果模組不存在，[請在整合分支中安裝和設定](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md)適用於Magento 2的Fastly CDN模組。 安裝完成後，請啟用並設定模組。 檢視[設定Fastly](fastly-configuration.md)。
 
 - `Module is disabled` — 如果Fastly模組已停用，請更新您本機環境中`integration`分支上的環境設定以啟用它。 然後，將變更推送到「測試」和「生產」。 請參閱[管理擴充功能](../store/extensions.md#install-an-extension)。
 
   如果您使用[組態管理](../store/store-settings.md#configure-store)，請先檢查`app/etc/config.php`組態檔中的Fastly CDN模組狀態，然後再將變更推送至生產或中繼環境。
 
-  如果未在`config.php`檔案中啟用模組(`Fastly_CDN => 0`)，請刪除檔案並執行以下命令，以最新的組態設定來更新`config.php`。
+  如果未在`Fastly_CDN => 0`檔案中啟用模組(`config.php`)，請刪除檔案並執行以下命令，以最新的組態設定來更新`config.php`。
 
   ```bash
   bin/magento magento-cloud:scd-dump
