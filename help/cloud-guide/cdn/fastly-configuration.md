@@ -40,7 +40,7 @@ Fastly與Varnish合作，提供快速快取功能以及用於靜態資產的內�
 
 在雲端基礎結構上使用Adobe Commerce，您無法直接存取Fastly管理員儀表板。
 
-使用Adobe Commerce管理員檢閱和更新環境的Fastly設定。 如果您無法在管理員中使用Fastly功能解決問題，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html)。
+使用Adobe Commerce管理員檢閱和更新環境的Fastly設定。 如果您無法在管理員中使用Fastly功能解決問題，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant)。
 
 ## 取得Fastly認證
 
@@ -76,7 +76,7 @@ Fastly與Varnish合作，提供快速快取功能以及用於靜態資產的內�
 
 - 如果您找不到測試或生產環境的Fastly憑證，請聯絡您的Adobe客戶技術顧問(CTA)。
 
-- [驗證Fastly認證時發生錯誤](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
+- [驗證Fastly認證時發生錯誤](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
 
 ## 保護您的認證
 
@@ -156,7 +156,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
 ## 布建SSL/TLS憑證
 
-Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的安全HTTPS流量。 Adobe為每個Pro生產、測試和入門生產環境提供一個憑證，以保護該環境中的所有網域。 如需所提供憑證的詳細資訊，請參閱雲端基礎結構上Adobe Commerce的[Adobe SSL (TLS)憑證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)。
+Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的安全HTTPS流量。 Adobe為每個Pro生產、測試和入門生產環境提供一個憑證，以保護該環境中的所有網域。 如需所提供憑證的詳細資訊，請參閱雲端基礎結構上Adobe Commerce的[Adobe SSL (TLS)憑證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)。
 
 >[!NOTE]
 >
@@ -260,7 +260,7 @@ Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的�
 
    >[!NOTE]
    >
-   >除了使用Cloud CLI之外，您也可以從[管理員](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)更新基底URL
+   >除了使用Cloud CLI之外，您也可以從[管理員](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/stores-sales/site-store/store-urls)更新基底URL
 
 1. 重新啟動網頁瀏覽器。
 
@@ -337,4 +337,4 @@ Adobe建議您更新測試和生產環境中的Fastly模組至[最新版本](htt
 
 >[!TIP]
 >
-> 如果您的Adobe Commerce環境中遇到Fastly服務問題，請參閱[Adobe Commerce Fastly疑難排解員](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter)。
+> 如果您的Adobe Commerce環境中遇到Fastly服務問題，請參閱[Adobe Commerce Fastly疑難排解員](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter)。
