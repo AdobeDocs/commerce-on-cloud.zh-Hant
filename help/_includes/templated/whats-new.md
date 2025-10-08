@@ -1,7 +1,7 @@
 ---
-source-git-commit: 988b07b827c32c94a8cb2d30abb7e73fec71c4a0
+source-git-commit: b29ca0d786bf8cd15e5a3ba1ee8218f3bed2ae2f
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '61'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>釐清<code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI工具<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">安裝</a>支援的作業系統。</p>
+      <td><p>釐清<code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI工具<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">安裝</a>支援的作業系統。</p>
 </td>
       <td>
         意見反應
@@ -45,78 +45,12 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>已針對Cloud Patches套件v1.1.11新增<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">發行說明</a>。</p>
+      <td><p>已針對Cloud Patches套件v1.1.11新增<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">發行說明</a>。</p>
 </td>
       <td>
         重大更新
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/2b6f0790dbfb47472fd06db4a46e36c847873eb7">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2025年8月8日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>更新ECE-Tools發行後的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>和<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">錯誤訊息</a> v2002.2.7。</p>
-</td>
-      <td>
-        技術
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/8cf7b01cbd9fe32a89d83db5b4eac7638b834c49">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2025年8月7日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>針對雲端元件、Docker、修補程式及ECE工具套件新增<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">發行說明</a>。</p>
-</td>
-      <td>
-        重大更新
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/7aecdc89a2f4e0103cfe46ed1c2dc7b93566baf5">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2025年8月6日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>新增在AWS上託管的專案發生<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">磁碟空間增加</a>後強制性6小時冷卻期間的附註。</p>
-</td>
-      <td>
-        技術
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/a04d056377da4fec9a54503d959f90ebf605de41">認可</a></td>
     </tr>
   </tbody>
 </table>

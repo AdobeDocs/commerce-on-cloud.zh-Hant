@@ -2,7 +2,7 @@
 title: 雲端基礎結構上的Commerce
 description: 了解如何建置、部署和管理雲端基礎結構上的 Commerce。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 988b07b827c32c94a8cb2d30abb7e73fec71c4a0
+source-git-commit: b29ca0d786bf8cd15e5a3ba1ee8218f3bed2ae2f
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->如需安全性詳細資訊，請參閱[安全性啟動檢查清單](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
+>如需安全性詳細資訊，請參閱[安全性啟動檢查清單](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
 
 詳細檢視[技術棧疊](architecture/tech-stack.md)，或進一步瞭解Commerce [的](architecture/cloud-architecture.md)雲端架構中的特定功能和支援產品。
 
@@ -60,8 +60,8 @@ Commerce雲端基礎結構指南假設您具備一些關於Adobe Commerce應用�
 
 - [Adobe Commerce開發人員檔案](https://developer.adobe.com/commerce/docs/) (Adobe Developer網站) — 開發、自訂、整合、擴充及使用進階功能
 
-- [Adobe Commerce檔案](https://experienceleague.adobe.com/docs/commerce.html?lang=zh-Hant) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的[!DNL Commerce]專案
+- [Adobe Commerce檔案](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的[!DNL Commerce]專案
 
 {{$include /help/_includes/templated/whats-new.md}}
 
-<!-- Last updated from includes: 2025-09-19 20:32:03 -->
+<!-- Last updated from includes: 2025-09-30 14:59:39 -->

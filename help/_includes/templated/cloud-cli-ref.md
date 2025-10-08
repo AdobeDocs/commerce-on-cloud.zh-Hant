@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9166b44ae53e8cfc6b8022730a6b91406ba696c0
+source-git-commit: b29ca0d786bf8cd15e5a3ba1ee8218f3bed2ae2f
 workflow-type: tm+mt
-source-wordcount: '13341'
+source-wordcount: '13671'
 ht-degree: 0%
 
 ---
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 <!-- The template to render with above values -->
 
-**版本**： 1.46.1
+**版本**： 1.47.0
 
-此參考包含119個可透過`magento-cloud`命令列工具使用的命令。
+此參考包含123個可透過`magento-cloud`命令列工具使用的命令。
 在雲端基礎結構上的Adobe Commerce中使用`magento-cloud list`命令會自動產生初始清單。
 
 ## 一般
@@ -27,6 +27,13 @@ ht-degree: 0%
 - 預設： `false`
 - 不接受值
 
+#### `--version`，`-V`
+
+顯示此應用程式版本
+
+- 預設： `false`
+- 不接受值
+
 #### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
@@ -34,9 +41,9 @@ ht-degree: 0%
 - 預設： `false`
 - 不接受值
 
-#### `--version`，`-V`
+#### `--quiet`，`-q`
 
-顯示此應用程式版本
+僅列印必要的輸出；隱藏其他訊息和錯誤。 這表示 — 無互動。 在詳細模式中會忽略它。
 
 - 預設： `false`
 - 不接受值
@@ -67,6 +74,44 @@ magento-cloud cc
 ### 選項
 
 如需全域選項，請參閱[全域選項](#global-options)。
+
+
+## `console`
+
+```bash
+magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+在主控台中開啟專案
+
+### 選項
+
+如需全域選項，請參閱[全域選項](#global-options)。
+
+#### `--browser`
+
+用來開啟URL的瀏覽器。 將0設為無。
+
+- 需要值
+
+#### `--pipe`
+
+將URL輸出到stdout。
+
+- 預設： `false`
+- 不接受值
+
+#### `--project`，`-p`
+
+專案ID或URL
+
+- 需要值
+
+#### `--environment`，`-e`
+
+環境識別碼。 使用「。」 以選取專案的預設環境。
+
+- 需要值
 
 
 ## `decode`
@@ -292,44 +337,6 @@ magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--rever
 
 - 預設： `false`
 - 不接受值
-
-
-## `web`
-
-```bash
-magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
-```
-
-在Web UI中開啟專案
-
-### 選項
-
-如需全域選項，請參閱[全域選項](#global-options)。
-
-#### `--browser`
-
-用來開啟URL的瀏覽器。 將0設為無。
-
-- 需要值
-
-#### `--pipe`
-
-將URL輸出到stdout。
-
-- 預設： `false`
-- 不接受值
-
-#### `--project`，`-p`
-
-專案ID或URL
-
-- 需要值
-
-#### `--environment`，`-e`
-
-環境識別碼。 使用「。」 以選取專案的預設環境。
-
-- 需要值
 
 
 ## `activity:cancel`
@@ -565,7 +572,7 @@ magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--li
 
 #### `--columns`，`-c`
 
-要顯示的欄。 可用欄： id*、created*、description*、progress*、state*、result*、completed、environments、type （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
+要顯示的欄。 可用欄：id*、created*、description*、progress*、state*、result*、completed、environments、time_build、time_deploy、time_execute、time_wait、type （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
 - 預設： `[]`
 - 需要值
@@ -829,7 +836,7 @@ Alternatively, to log in to the CLI with a browser, run:
 ## `auth:browser-login`
 
 ```bash
-magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
+magento-cloud login [-f|--force] [--method METHOD] [--max-age MAX-AGE] [--browser BROWSER] [--pipe]
 ```
 
 透過瀏覽器登入Magento Cloud
@@ -860,6 +867,19 @@ MAGENTO_CLOUD_CLI_TOKEN environment variable.
 
 - 預設： `false`
 - 不接受值
+
+#### `--method`
+
+需要特定的驗證方法
+
+- 預設： `[]`
+- 需要值
+
+#### `--max-age`
+
+Web驗證工作階段的最長存留期（以秒為單位）
+
+- 需要值
 
 #### `--browser`
 
@@ -960,6 +980,156 @@ magento-cloud logout [-a|--all] [--other]
 
 - 預設： `false`
 - 不接受值
+
+
+## `autoscaling:get`
+
+```bash
+magento-cloud autoscaling [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+```
+
+檢視環境中應用程式和工作程式的自動縮放設定
+
+### 選項
+
+如需全域選項，請參閱[全域選項](#global-options)。
+
+#### `--project`，`-p`
+
+專案ID或URL
+
+- 需要值
+
+#### `--environment`，`-e`
+
+環境識別碼。 使用「。」 以選取專案的預設環境。
+
+- 需要值
+
+#### `--format`
+
+輸出格式：table、csv、tsv或plain
+
+- 預設： `table`
+- 需要值
+
+#### `--columns`，`-c`
+
+要顯示的欄。 可用的欄： service*、metric*、direction*、threshold*、duration*、enabled*、instance_count*、cololdown、max_instances、min_instances （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
+
+- 預設： `[]`
+- 需要值
+
+#### `--no-header`
+
+不要輸出表格標頭
+
+- 預設： `false`
+- 不接受值
+
+
+## `autoscaling:set`
+
+```bash
+magento-cloud autoscaling:set [-s|--service SERVICE] [-m|--metric METRIC] [--enabled ENABLED] [--threshold-up THRESHOLD-UP] [--duration-up DURATION-UP] [--cooldown-up COOLDOWN-UP] [--threshold-down THRESHOLD-DOWN] [--duration-down DURATION-DOWN] [--cooldown-down COOLDOWN-DOWN] [--instances-min INSTANCES-MIN] [--instances-max INSTANCES-MAX] [--dry-run] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+設定環境中應用程式或工作程式的自動縮放設定
+
+```
+Configure automatic scaling for apps or workers in an environment.
+
+You can also configure resources statically by running: magento-cloud resources:set
+```
+
+### 選項
+
+如需全域選項，請參閱[全域選項](#global-options)。
+
+#### `--service`，`-s`
+
+要設定自動縮放的應用程式或工作者名稱
+
+- 需要值
+
+#### `--metric`，`-m`
+
+用於觸發自動縮放的量度名稱
+
+- 需要值
+
+#### `--enabled`
+
+根據指定的量度啟用自動縮放
+
+- 需要值
+
+#### `--threshold-up`
+
+將擴充至哪個服務的臨界值
+
+- 需要值
+
+#### `--duration-up`
+
+針對臨界值評估以擴充的期間
+
+- 需要值
+
+#### `--cooldown-up`
+
+縮放事件後嘗試進一步放大之前的等待期間
+
+- 需要值
+
+#### `--threshold-down`
+
+服務將縮小的臨界值
+
+- 需要值
+
+#### `--duration-down`
+
+針對臨界值評估量度以縮小顯示的持續時間
+
+- 需要值
+
+#### `--cooldown-down`
+
+縮放事件後嘗試進一步縮小之前的等待期間
+
+- 需要值
+
+#### `--instances-min`
+
+將縮小至的最小執行個體數目
+
+- 需要值
+
+#### `--instances-max`
+
+將擴充至的最大執行個體數
+
+- 需要值
+
+#### `--dry-run`
+
+顯示將要進行的變更，而不變更任何專案
+
+- 預設： `false`
+- 不接受值
+
+#### `--project`，`-p`
+
+專案ID或URL
+
+- 需要值
+
+#### `--environment`，`-e`
+
+環境識別碼。 使用「。」 以選取專案的預設環境。
+
+- 需要值
 
 
 ## `blackfire:setup`
@@ -1362,7 +1532,7 @@ magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment E
 ## `db:dump`
 
 ```bash
-magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP]
 ```
 
 建立遠端資料庫的本機傾印
@@ -1461,101 +1631,11 @@ magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTO
 
 - 需要值
 
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
-
-## `db:size`
-
-```bash
-magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE]
-```
-
-預估資料庫的磁碟使用量
-
-```
-This is an estimate of the database disk usage. The real size on disk is usually higher because of overhead.
-
-To see more accurate disk usage, run: magento-cloud disk
-```
-
-### 選項
-
-如需全域選項，請參閱[全域選項](#global-options)。
-
-#### `--bytes`，`-B`
-
-以位元組為單位顯示大小。
-
-- 預設： `false`
-- 不接受值
-
-#### `--cleanup`，`-C`
-
-檢查是否可以清除資料表並顯示建議（僅限InnoDb）。
-
-- 預設： `false`
-- 不接受值
-
-#### `--project`，`-p`
-
-專案ID或URL
-
-- 需要值
-
-#### `--environment`，`-e`
-
-環境識別碼。 使用「。」 以選取專案的預設環境。
-
-- 需要值
-
-#### `--app`，`-A`
-
-遠端應用程式名稱
-
-- 需要值
-
-#### `--relationship`，`-r`
-
-要使用的服務關係
-
-- 需要值
-
-#### `--format`
-
-輸出格式：table、csv、tsv或plain
-
-- 預設： `table`
-- 需要值
-
-#### `--columns`，`-c`
-
-要顯示的欄。 可用欄：max、percent_used、used。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
-
-- 預設： `[]`
-- 需要值
-
-#### `--no-header`
-
-不要輸出表格標頭
-
-- 預設： `false`
-- 不接受值
-
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
 
 ## `db:sql`
 
 ```bash
-magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
+magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--] [<query>]
 ```
 
 在遠端資料庫上執行SQL
@@ -1607,12 +1687,6 @@ magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environ
 
 - 需要值
 
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
 
 ## `domain:add`
 
@@ -1636,19 +1710,19 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATT
 
 #### `--cert`
 
-此網域的憑證檔案路徑
+自訂憑證檔案的路徑
 
 - 需要值
 
 #### `--key`
 
-所提供憑證之私密金鑰檔案的路徑。
+自訂憑證的私密金鑰路徑
 
 - 需要值
 
 #### `--chain`
 
-提供的憑證的憑證鏈結檔案的路徑
+自訂憑證鏈結檔案的路徑
 
 - 預設： `[]`
 - 需要值
@@ -1866,19 +1940,19 @@ magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--proj
 
 #### `--cert`
 
-此網域的憑證檔案路徑
+自訂憑證檔案的路徑
 
 - 需要值
 
 #### `--key`
 
-所提供憑證之私密金鑰檔案的路徑。
+自訂憑證的私密金鑰路徑
 
 - 需要值
 
 #### `--chain`
 
-提供的憑證的憑證鏈結檔案的路徑
+自訂憑證鏈結檔案的路徑
 
 - 預設： `[]`
 - 需要值
@@ -1967,7 +2041,7 @@ magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|
 ## `environment:branch`
 
 ```bash
-magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
+magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [--no-checkout] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
 ```
 
 分支環境
@@ -2006,6 +2080,13 @@ magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--pro
 - 預設： `false`
 - 不接受值
 
+#### `--no-checkout`
+
+請勿在本機簽出分支
+
+- 預設： `false`
+- 不接受值
+
 #### `--project`，`-p`
 
 專案ID或URL
@@ -2036,7 +2117,7 @@ magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--pro
 ## `environment:checkout`
 
 ```bash
-magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
+magento-cloud checkout [<id>]
 ```
 
 檢視環境
@@ -2051,17 +2132,11 @@ magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
 
 如需全域選項，請參閱[全域選項](#global-options)。
 
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
 
 ## `environment:delete`
 
 ```bash
-magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
+magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--status STATUS] [--only-status ONLY-STATUS] [--exclude-status EXCLUDE-STATUS] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
 ```
 
 刪除一或多個環境
@@ -2136,6 +2211,27 @@ This command allows you to delete environments as well as their Git branches.
 - 預設： `false`
 - 不接受值
 
+#### `--status`
+
+刪除某個狀態的所有環境（新增至其他任何選取的專案）值可能會以逗號（例如&quot;a，b，c&quot;）和/或空白字元分割。
+
+- 預設： `[]`
+- 需要值
+
+#### `--only-status`
+
+只有特定狀態的刪除環境值才可以分割為逗號（例如&quot;a，b，c&quot;）和/或空格。
+
+- 預設： `[]`
+- 需要值
+
+#### `--exclude-status`
+
+不得刪除的環境狀態值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
+
+- 預設： `[]`
+- 需要值
+
 #### `--merged`
 
 刪除所有合併的環境（新增至其他所選環境）
@@ -2146,6 +2242,108 @@ This command allows you to delete environments as well as their Git branches.
 #### `--allow-delete-parent`
 
 允許刪除具有子項的環境
+
+- 預設： `false`
+- 不接受值
+
+#### `--project`，`-p`
+
+專案ID或URL
+
+- 需要值
+
+#### `--environment`，`-e`
+
+環境識別碼。 使用「。」 以選取專案的預設環境。
+
+- 需要值
+
+#### `--no-wait`，`-W`
+
+請勿等待作業完成
+
+- 預設： `false`
+- 不接受值
+
+#### `--wait`
+
+等候作業完成（預設）
+
+- 預設： `false`
+- 不接受值
+
+
+## `environment:deploy`
+
+```bash
+magento-cloud deploy [-s|--strategy STRATEGY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+```
+
+部署環境的階段性變更
+
+### 選項
+
+如需全域選項，請參閱[全域選項](#global-options)。
+
+#### `--strategy`，`-s`
+
+部署策略、停止啟動（預設、關機後重新啟動）或滾動（零停機時間）
+
+- 需要值
+
+#### `--project`，`-p`
+
+專案ID或URL
+
+- 需要值
+
+#### `--environment`，`-e`
+
+環境識別碼。 使用「。」 以選取專案的預設環境。
+
+- 需要值
+
+#### `--no-wait`，`-W`
+
+請勿等待作業完成
+
+- 預設： `false`
+- 不接受值
+
+#### `--wait`
+
+等候作業完成（預設）
+
+- 預設： `false`
+- 不接受值
+
+
+## `environment:deploy:type`
+
+```bash
+magento-cloud environment:deploy:type [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<type>]
+```
+
+顯示或設定環境部署型別
+
+```
+Choose automatic (the default) if you want your changes to be deployed immediately as they are made.
+Choose manual to have changes staged until you trigger a deployment (including changes to code, variables, domains and settings).
+```
+
+### 引數
+
+#### `type`
+
+環境部署型別：自動或手動。
+
+### 選項
+
+如需全域選項，請參閱[全域選項](#global-options)。
+
+#### `--pipe`
+
+將部署型別輸出到stdout
 
 - 預設： `false`
 - 不接受值
@@ -2191,14 +2389,14 @@ magento-cloud httpaccess [--access ACCESS] [--auth AUTH] [--enabled ENABLED] [-p
 
 #### `--access`
 
-存取限制，格式為「permission：address」。 使用0以清除所有地址。
+存取限制，格式為「許可權:address」。 使用0以清除所有地址。
 
 - 預設： `[]`
 - 需要值
 
 #### `--auth`
 
-HTTP基本驗證認證，格式為「使用者名稱：密碼」。 使用0可清除所有認證。
+HTTP基本驗證認證，格式為「使用者名稱:password」。 使用0可清除所有認證。
 
 - 預設： `[]`
 - 需要值
@@ -2377,7 +2575,7 @@ Git存放庫的URL
 ## `environment:list`
 
 ```bash
-magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud environments [-I|--no-inactive] [--status STATUS] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 取得環境清單
@@ -2392,6 +2590,13 @@ magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--so
 
 - 預設： `false`
 - 不接受值
+
+#### `--status`
+
+依狀態（作用中、非作用中、已變更、已暫停、正在刪除）篩選環境。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
+
+- 預設： `[]`
+- 需要值
 
 #### `--pipe`
 
@@ -2616,7 +2821,7 @@ The environment will be unavailable until it is resumed. No data will be lost.
 ## `environment:push`
 
 ```bash
-magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
+magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<source>]
 ```
 
 將程式碼推送至環境
@@ -2625,7 +2830,7 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 
 #### `source`
 
-來源參考：分支名稱或認可雜湊
+Git來源參考，例如分支名稱或認可雜湊。
 
 - 預設： `HEAD`
 
@@ -2662,14 +2867,14 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 
 #### `--activate`
 
-在推播之前啟動環境
+啟動環境。 暫停的環境將會繼續。 這將確保即使未推送任何變更，環境仍會處於活動狀態。
 
 - 預設： `false`
 - 不接受值
 
 #### `--parent`
 
-設定新環境父項（僅用於 — activate）
+設定環境父項（僅用於 — activate）
 
 - 需要值
 
@@ -2709,12 +2914,6 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 #### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
-
-- 需要值
-
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
@@ -2761,7 +2960,7 @@ magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W
 ## `environment:relationships`
 
 ```bash
-magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
+magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<environment>]
 ```
 
 顯示環境的關係
@@ -2804,12 +3003,6 @@ magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project P
 #### `--app`，`-A`
 
 遠端應用程式名稱
-
-- 需要值
-
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
@@ -2856,7 +3049,7 @@ magento-cloud environment:resume [-p|--project PROJECT] [-e|--environment ENVIRO
 ## `environment:scp`
 
 ```bash
-magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
+magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<files>]...
 ```
 
 使用scp將檔案複製到環境或從環境複製檔案
@@ -2911,17 +3104,11 @@ magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVI
 
 - 需要值
 
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
 
 ## `environment:ssh`
 
 ```bash
-magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
+magento-cloud ssh [--pipe] [--all] [-o|--option OPTION] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<cmd>]...
 ```
 
 SSH連線至目前的環境
@@ -2953,6 +3140,13 @@ SSH連線至目前的環境
 - 預設： `false`
 - 不接受值
 
+#### `--option`，`-o`
+
+將額外的選項傳遞至SSH
+
+- 預設： `[]`
+- 需要值
+
 #### `--project`，`-p`
 
 專案ID或URL
@@ -2983,12 +3177,6 @@ SSH連線至目前的環境
 
 - 需要值
 
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
 
 ## `environment:synchronize`
 
@@ -3002,7 +3190,9 @@ magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONME
 This command synchronizes to a child environment from its parent environment.
 
 Synchronizing "code" means there will be a Git merge from the parent to the
-child. Synchronizing "data" means that all files in all services (including
+child.
+
+Synchronizing "data" means that all files in all services (including
 static files, databases, logs, search indices, etc.) will be copied from the
 parent to the child.
 ```
@@ -3102,7 +3292,7 @@ magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJ
 ## `environment:xdebug`
 
 ```bash
-magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 開啟環境上的Xdebug通道
@@ -3145,12 +3335,6 @@ magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVI
 #### `--instance`，`-I`
 
 例項ID
-
-- 需要值
-
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
@@ -3228,7 +3412,7 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 ## `integration:activity:list`
 
 ```bash
-magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud integration:activities [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 取得整合的活動清單
@@ -3299,7 +3483,7 @@ magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LI
 
 #### `--columns`，`-c`
 
-要顯示的欄。 可用的欄： id*、created*、description*、type*、state*、result*、completed （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
+要顯示的欄。 可用的資料欄：id*、created*、description*、type*、state*、result*、completed、progress、time_build、time_deploy、time_execute、time_wait （* =預設資料欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
 - 預設： `[]`
 - 需要值
@@ -3395,7 +3579,7 @@ magento-cloud integration:add [--type TYPE] [--base-url BASE-URL] [--bitbucket-u
 
 #### `--type`
 
-整合型別(「bitbucket」、「bitbucket_server」、「github」、「gitlab」、「webhook」、「health.email」、「health.pagerduty」、「health.slack」、「health.webhook」、「httplog」、「script」、「newrelic」、「splunk」、「sumologic」、「syslog」)
+整合型別(「bitbucket」、「bitbucket_server」、「github」、「gitlab」、「webhook」、「health.email」、「health.pagerduty」、「health.slack」、「health.webhook」、「httplog」、「script」、「newrelic」、「splunk」、「sumologic」、「syslog」、「otlplog」)
 
 - 需要值
 
@@ -3793,7 +3977,7 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|-
 ## `integration:list`
 
 ```bash
-magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud integrations [-t|--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 檢視專案整合的清單
@@ -3801,6 +3985,12 @@ magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header
 ### 選項
 
 如需全域選項，請參閱[全域選項](#global-options)。
+
+#### `--type`，`-t`
+
+依型別篩選
+
+- 需要值
 
 #### `--format`
 
@@ -3850,7 +4040,7 @@ magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--bitbucke
 
 #### `--type`
 
-整合型別(「bitbucket」、「bitbucket_server」、「github」、「gitlab」、「webhook」、「health.email」、「health.pagerduty」、「health.slack」、「health.webhook」、「httplog」、「script」、「newrelic」、「splunk」、「sumologic」、「syslog」)
+整合型別(「bitbucket」、「bitbucket_server」、「github」、「gitlab」、「webhook」、「health.email」、「health.pagerduty」、「health.slack」、「health.webhook」、「httplog」、「script」、「newrelic」、「splunk」、「sumologic」、「syslog」、「otlplog」)
 
 - 需要值
 
@@ -4341,7 +4531,7 @@ magento-cloud dir [<subdir>]
 magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-Beta顯示環境的CPU、磁碟和記憶體量度
+顯示環境的CPU、磁碟和記憶體測量結果
 
 ### 選項
 
@@ -4440,7 +4630,7 @@ Beta顯示環境的CPU、磁碟和記憶體量度
 magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-Beta顯示環境的CPU使用情形
+顯示環境的CPU使用情形
 
 ### 選項
 
@@ -4638,7 +4828,7 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-Beta顯示環境的記憶體使用情況
+顯示環境的記憶體使用率
 
 ### 選項
 
@@ -4734,7 +4924,7 @@ Beta顯示環境的記憶體使用情況
 ## `mount:download`
 
 ```bash
-magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 使用rsync從掛載下載檔案
@@ -4827,12 +5017,6 @@ magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--
 
 - 需要值
 
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
 
 ## `mount:list`
 
@@ -4912,103 +5096,10 @@ magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUM
 - 需要值
 
 
-## `mount:size`
-
-```bash
-magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
-```
-
-檢查掛載的磁碟使用量
-
-```
-Use this command to check the disk size and usage for an application's mounts.
-
-Mounts are directories mounted into the application from a persistent, writable
-filesystem. They are configured in the mounts key in the application configuration.
-
-The filesystem's total size is determined by the disk key in the same file.
-```
-
-### 選項
-
-如需全域選項，請參閱[全域選項](#global-options)。
-
-#### `--bytes`，`-B`
-
-以位元組為單位顯示大小
-
-- 預設： `false`
-- 不接受值
-
-#### `--refresh`
-
-重新整理快取
-
-- 預設： `false`
-- 不接受值
-
-#### `--format`
-
-輸出格式：table、csv、tsv或plain
-
-- 預設： `table`
-- 需要值
-
-#### `--columns`，`-c`
-
-要顯示的欄。 可用欄： available、max、mounts、percent_used、sizes、used。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
-
-- 預設： `[]`
-- 需要值
-
-#### `--no-header`
-
-不要輸出表格標頭
-
-- 預設： `false`
-- 不接受值
-
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
-#### `--project`，`-p`
-
-專案ID或URL
-
-- 需要值
-
-#### `--environment`，`-e`
-
-環境識別碼。 使用「。」 以選取專案的預設環境。
-
-- 需要值
-
-#### `--app`，`-A`
-
-遠端應用程式名稱
-
-- 需要值
-
-#### `--worker`
-
-背景工作名稱
-
-- 需要值
-
-#### `--instance`，`-I`
-
-例項ID
-
-- 需要值
-
-
 ## `mount:upload`
 
 ```bash
-magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 使用rsync將檔案上傳到掛載
@@ -5087,12 +5178,6 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 - 需要值
 
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
 
 ## `operation:list`
 
@@ -5100,7 +5185,7 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
-Beta列出環境上的執行階段作業
+列出環境上的執行階段作業
 
 ### 選項
 
@@ -5165,7 +5250,7 @@ Beta列出環境上的執行階段作業
 magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]
 ```
 
-Beta在環境中執行操作
+在環境中執行操作
 
 ### 引數
 
@@ -5238,7 +5323,7 @@ magento-cloud project:clear-build-cache [-p|--project PROJECT]
 ## `project:get`
 
 ```bash
-magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
+magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [--] [<project>] [<directory>]
 ```
 
 在本機複製專案
@@ -5280,12 +5365,6 @@ magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|-
 #### `--project`，`-p`
 
 專案ID或URL
-
-- 需要值
-
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
@@ -5449,7 +5528,7 @@ magento-cloud projects [--pipe] [--region REGION] [--title TITLE] [--my] [--refr
 
 #### `--columns`
 
-要顯示的欄。 可用的資料欄：id*、title*、region*、created_at、organization_id、organization_label、organization_name、status （* =預設資料欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
+要顯示的欄。 可用的欄位：id*、title*、region*、created_at、organization_id、organization_label、organization_name、organization_type、status （* =預設欄位）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
 - 預設： `[]`
 - 需要值
@@ -5620,6 +5699,46 @@ magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
+
+
+## `resources:build:get`
+
+```bash
+magento-cloud build-resources:get [-p|--project PROJECT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+```
+
+檢視專案的建置資源
+
+### 選項
+
+如需全域選項，請參閱[全域選項](#global-options)。
+
+#### `--project`，`-p`
+
+專案ID或URL
+
+- 需要值
+
+#### `--format`
+
+輸出格式：table、csv、tsv或plain
+
+- 預設： `table`
+- 需要值
+
+#### `--columns`，`-c`
+
+要顯示的欄。 可用的資料行： cpu、記憶體。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
+
+- 預設： `[]`
+- 需要值
+
+#### `--no-header`
+
+不要輸出表格標頭
+
+- 預設： `false`
+- 不接受值
 
 
 ## `route:get`
@@ -5890,7 +6009,7 @@ magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environ
 ## `service:mongo:dump`
 
 ```bash
-magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 從MongoDB建立資料的二進位封存傾印
@@ -5925,12 +6044,6 @@ magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [
 
 - 需要值
 
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
 #### `--project`，`-p`
 
 專案ID或URL
@@ -5953,7 +6066,7 @@ magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [
 ## `service:mongo:export`
 
 ```bash
-magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 從MongoDB匯出資料
@@ -5994,12 +6107,6 @@ magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYP
 
 - 需要值
 
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
 #### `--project`，`-p`
 
 專案ID或URL
@@ -6022,7 +6129,7 @@ magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYP
 ## `service:mongo:restore`
 
 ```bash
-magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 將資料的二進位封存傾印還原到MongoDB
@@ -6040,12 +6147,6 @@ magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELAT
 #### `--relationship`，`-r`
 
 要使用的服務關係
-
-- 需要值
-
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
@@ -6071,7 +6172,7 @@ magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELAT
 ## `service:mongo:shell`
 
 ```bash
-magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 使用MongoDB殼層
@@ -6089,12 +6190,6 @@ magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identit
 #### `--relationship`，`-r`
 
 要使用的服務關係
-
-- 需要值
-
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
@@ -6120,7 +6215,7 @@ magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identit
 ## `service:redis-cli`
 
 ```bash
-magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
+magento-cloud redis [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]...
 ```
 
 存取Redis CLI
@@ -6129,7 +6224,10 @@ magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTIT
 
 #### `args`
 
-要新增到Redis命令的引數
+要新增到redis-cli命令的引數
+
+- 預設： `[]`
+- 陣列
 
 ### 選項
 
@@ -6141,9 +6239,49 @@ magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTIT
 
 - 需要值
 
-#### `--identity-file`，`-i`
+#### `--project`，`-p`
 
-要使用的SSH身分識別（私密金鑰）
+專案ID或URL
+
+- 需要值
+
+#### `--environment`，`-e`
+
+環境識別碼。 使用「。」 以選取專案的預設環境。
+
+- 需要值
+
+#### `--app`，`-A`
+
+遠端應用程式名稱
+
+- 需要值
+
+
+## `service:valkey-cli`
+
+```bash
+magento-cloud valkey [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]...
+```
+
+存取Valkey CLI
+
+### 引數
+
+#### `args`
+
+要新增至valkey-cli命令的引數
+
+- 預設： `[]`
+- 陣列
+
+### 選項
+
+如需全域選項，請參閱[全域選項](#global-options)。
+
+#### `--relationship`，`-r`
+
+要使用的服務關係
 
 - 需要值
 
@@ -6186,7 +6324,7 @@ magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONME
 
 #### `--live`
 
-即時備份：請勿停止環境。 如果設定，這將讓環境在執行中，並在備份期間開啟連線。 這樣可以減少停機時間，同時冒著備份狀態不一致的資料的風險。
+即時快照：請勿停止環境。 如果設定，這會讓環境繼續執行，並在快照期間開啟連線。 這樣可以減少停機時間，同時冒著備份狀態不一致的資料的風險。
 
 - 預設： `false`
 - 不接受值
@@ -6363,7 +6501,7 @@ magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [
 ## `snapshot:restore`
 
 ```bash
-magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
+magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [--no-code] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
 ```
 
 還原環境快照
@@ -6372,7 +6510,7 @@ magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p
 
 #### `snapshot`
 
-快照的名稱。 預設為最近一個
+快照識別碼。 預設為最近一個
 
 ### 選項
 
@@ -6389,6 +6527,13 @@ magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p
 如果 — target尚不存在，這會指定新環境的父系
 
 - 需要值
+
+#### `--no-code`
+
+請勿還原程式碼，僅還原資料。
+
+- 預設： `false`
+- 不接受值
 
 #### `--project`，`-p`
 
@@ -6490,7 +6635,7 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 
 #### `--variable`
 
-作業期間要設定的變數，格式為type：name=value
+作業期間要設定的變數，格式為型別:name=值
 
 - 預設： `[]`
 - 需要值
@@ -6568,7 +6713,7 @@ explicitly. For unattended scripts, remember to turn off interaction via
 
 #### `--new-key`
 
-[已棄用]請改用 — new
+強制產生新的金鑰組
 
 - 預設： `false`
 - 不接受值
@@ -6890,7 +7035,7 @@ magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRO
 ## `tunnel:open`
 
 ```bash
-magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 開啟應用程式關係的SSH通道
@@ -6937,17 +7082,11 @@ extensions.
 
 - 需要值
 
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
 
 ## `tunnel:single`
 
 ```bash
-magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP]
 ```
 
 開啟與應用程式關聯的單一SSH通道
@@ -6993,12 +7132,6 @@ magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PRO
 
 - 需要值
 
-#### `--identity-file`，`-i`
-
-要使用的SSH身分識別（私密金鑰）
-
-- 需要值
-
 
 ## `user:add`
 
@@ -7020,7 +7153,7 @@ magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] 
 
 #### `--role`，`-r`
 
-使用者的專案角色（「管理員」或「檢視者」）或環境型別角色（例如「staging：contributor」或「production：viewer」）。 若要從環境型別中移除使用者，請將角色設定為「無」。 %或*字元可作為環境型別的萬用字元，例如&#39;%：viewer&#39;，為所有型別賦予使用者「檢視者」角色。 角色可縮寫，例如「production：v」。
+使用者的專案角色（「管理員」或「檢視者」）或環境型別角色（例如「staging:contributor」或「production:viewer」）。 若要從環境型別中移除使用者，請將角色設定為「無」。 %或*字元可以作為環境型別的萬用字元，例如&#39;%:viewer&#39;，為所有型別賦予使用者「檢視者」角色。 角色可以縮寫，例如「production:v」。
 
 - 預設： `[]`
 - 需要值
@@ -7153,7 +7286,7 @@ magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--
 
 #### `--role`，`-r`
 
-[已棄用：使用user：update變更使用者的角色]
+[已棄用：使用user:update變更使用者的角色]
 
 - 需要值
 
@@ -7218,7 +7351,7 @@ magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait]
 
 #### `--role`，`-r`
 
-使用者的專案角色（「管理員」或「檢視者」）或環境型別角色（例如「staging：contributor」或「production：viewer」）。 若要從環境型別中移除使用者，請將角色設定為「無」。 %或*字元可作為環境型別的萬用字元，例如&#39;%：viewer&#39;，為所有型別賦予使用者「檢視者」角色。 角色可縮寫，例如「production：v」。
+使用者的專案角色（「管理員」或「檢視者」）或環境型別角色（例如「staging:contributor」或「production:viewer」）。 若要從環境型別中移除使用者，請將角色設定為「無」。 %或*字元可以作為環境型別的萬用字元，例如&#39;%:viewer&#39;，為所有型別賦予使用者「檢視者」角色。 角色可以縮寫，例如「production:v」。
 
 - 預設： `[]`
 - 需要值
