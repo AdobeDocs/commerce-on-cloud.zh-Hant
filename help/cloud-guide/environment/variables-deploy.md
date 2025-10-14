@@ -650,7 +650,7 @@ stage:
 
 可讓您自訂靜態內容的[部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)。 請參閱[部署靜態檢視檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)。
 
-如果您有多個地區設定，請只使用這些選項&#x200B;_1}：_
+如果您有多個地區設定，請只使用這些選項&#x200B;_1&rbrace;：_
 
 - `standard` — 為所有封裝部署所有靜態檢視檔案。
 - `quick` — （_預設_）可縮短部署時間。
@@ -795,7 +795,7 @@ stage:
 - **預設**—_未設定_
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-啟用或停用部署階段所執行[ CLI命令的](https://symfony.com/doc/current/console/verbosity.html)Symfony`bin/magento`偵錯詳細程度。
+啟用或停用部署階段所執行[&#x200B; CLI命令的](https://symfony.com/doc/current/console/verbosity.html)Symfony`bin/magento`偵錯詳細程度。
 
 >[!NOTE]
 >
