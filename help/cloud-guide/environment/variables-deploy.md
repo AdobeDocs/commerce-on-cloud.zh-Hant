@@ -782,7 +782,7 @@ stage:
 - **預設**—_未設定_
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-啟用或停用部署階段所執行[ CLI命令的](https://symfony.com/doc/current/console/verbosity.html)Symfony`bin/magento`偵錯詳細程度。
+啟用或停用部署階段所執行[&#x200B; CLI命令的](https://symfony.com/doc/current/console/verbosity.html)Symfony`bin/magento`偵錯詳細程度。
 
 >[!NOTE]
 >

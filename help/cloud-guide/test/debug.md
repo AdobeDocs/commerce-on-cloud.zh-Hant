@@ -29,7 +29,7 @@ ht-degree: 0%
 若要設定[!DNL Xdebug]，請遵循下列步驟：
 
 - [在分支中工作以推送檔案更新](#get-started-with-a-branch)
-- [為環境啟用 [!DNL Xdebug] ](#enable-xdebug-in-your-environment)
+- [為環境啟用 [!DNL Xdebug] &#x200B;](#enable-xdebug-in-your-environment)
 - [設定PHPStorm伺服器](#configure-phpstorm-server)
 - [設定連線埠轉送](#set-up-port-forwarding)
 

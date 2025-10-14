@@ -52,7 +52,7 @@ ht-degree: 0%
 
 ## 檢視環境變數
 
-您可以使用來自[ `ece-tools`套件](../dev-tools/package-overview.md)的`env:config:show`命令，顯示目前環境的變數清單。
+您可以使用來自[&#x200B; `ece-tools`套件](../dev-tools/package-overview.md)的`env:config:show`命令，顯示目前環境的變數清單。
 
 ```bash
 php ./vendor/bin/ece-tools env:config:show variables
