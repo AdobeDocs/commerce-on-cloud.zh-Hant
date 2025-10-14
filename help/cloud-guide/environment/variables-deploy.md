@@ -5,9 +5,9 @@ feature: Cloud, Configuration, Cache, Deploy, SCD, Storage, Search
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 980ec809-8c68-450a-9db5-29c5674daa16
-source-git-commit: 3f2a4f7dc9c23afb3af80304023d9e742c974ccd
+source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2502'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ stage:
             database: 11
 ```
 
-下列範例使用[設定指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html?lang=zh-Hant#redis-preload-feature)中定義的&#x200B;_Redis預先載入功能_：
+下列範例使用[設定指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html#redis-preload-feature)中定義的&#x200B;_Redis預先載入功能_：
 
 ```yaml
 stage:
@@ -98,7 +98,7 @@ stage:
 - **預設**—`true`
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-啟用或停用清除在建置或部署階段產生的[靜態內容檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=zh-Hant)。 在開發中使用預設值&#x200B;_true_&#x200B;作為最佳實務。
+啟用或停用清除在建置或部署階段產生的[靜態內容檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)。 在開發中使用預設值&#x200B;_true_&#x200B;作為最佳實務。
 
 - **`true`** — 在部署更新的靜態內容之前，移除所有現有的靜態內容。
 - **`false`** — 如果產生的內容包含較新的版本，部署只會覆寫現有的靜態內容檔案。
@@ -157,7 +157,7 @@ stage:
       consumers: []
 ```
 
-依預設，部署程式會覆寫`env.php`檔案中的所有設定。 請參閱內部部署Adobe Commerce的[Commerce設定指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html?lang=zh-Hant)中的&#x200B;_管理訊息佇列_。
+依預設，部署程式會覆寫`env.php`檔案中的所有設定。 請參閱內部部署Adobe Commerce的[Commerce設定指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html)中的&#x200B;_管理訊息佇列_。
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -187,7 +187,7 @@ stage:
 
 >[!WARNING]
 >
->透過`CRYPT_KEY`而非[!DNL Cloud Console]檔案設定`.magento.env.yaml`值，以避免公開您環境的原始程式碼存放庫中的金鑰。 請參閱[設定環境和專案變數](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html?lang=zh-Hant#configure-environment)。
+>透過`CRYPT_KEY`而非[!DNL Cloud Console]檔案設定`.magento.env.yaml`值，以避免公開您環境的原始程式碼存放庫中的金鑰。 請參閱[設定環境和專案變數](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html#configure-environment)。
 
 將資料庫從一個環境移動到另一個環境時，若沒有安裝程式，則需要相應的密碼編譯資訊。 Adobe Commerce使用[!DNL Cloud Console]中設定的加密金鑰值做為`crypt/key`檔案中的`env.php`值。
 
@@ -278,7 +278,7 @@ stage:
 
 >[!NOTE]
 >
->在[縮放架構](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)上具有三個節點（或三個服務節點）的Pro測試/生產叢集上，`indices_settings`應設定如下：
+>在[縮放架構](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)上具有三個節點（或三個服務節點）的Pro測試/生產叢集上，`indices_settings`應設定如下：
 >
 >```yaml
 >           indices_settings:
@@ -357,7 +357,7 @@ stage:
     LOCK_PROVIDER: "db"
 ```
 
-請參閱[安裝指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html?lang=zh-Hant)中的&#x200B;_設定鎖定_。
+請參閱[安裝指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html)中的&#x200B;_設定鎖定_。
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
@@ -383,7 +383,7 @@ stage:
 - **預設**—_未設定_
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-使用此環境變數可保留部署間的自訂AMQP服務設定。 例如，如果您偏好使用現有的訊息佇列服務，而不仰賴雲端基礎結構為您建立它，請使用`QUEUE_CONFIGURATION`環境變數將其連線到您的網站：
+使用此環境變數，可保留部署間的自訂佇列服務設定。 此變數同時支援AMQP （適用於RabbitMQ）和STOMP （適用於ActiveMQ Artemis）通訊協定。 例如，如果您偏好使用現有的訊息佇列服務，而不仰賴雲端基礎結構為您建立它，請使用`QUEUE_CONFIGURATION`環境變數將其連線到您的網站：
 
 ```yaml
 stage:
@@ -398,6 +398,19 @@ stage:
       mq:
         host: mq.host
         port: 1234
+```
+
+對於使用STOMP通訊協定的ActiveMQ Artemis：
+
+```yaml
+stage:
+  deploy:
+    QUEUE_CONFIGURATION:
+      stomp:
+        host: activemq.host
+        port: 61616
+        user: username
+        password: password
 ```
 
 {{merge-options}}
@@ -443,7 +456,7 @@ stage:
 
 >[!NOTE]
 >
->如果您指定`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`作為Redis後端模型以啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant)，`ece-tools`會自動產生快取組態。 請參閱[Adobe Commerce組態指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant#configuration-example)中的&#x200B;_組態檔_&#x200B;範例。 若要覆寫產生的快取組態，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
+>如果您指定`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`作為Redis後端模型以啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)，`ece-tools`會自動產生快取組態。 請參閱[Adobe Commerce組態指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)中的&#x200B;_組態檔_&#x200B;範例。 若要覆寫產生的快取組態，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -496,7 +509,7 @@ stage:
 
 >[!NOTE]
 >
->如果您指定`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`作為Valkey後端模型以啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant)，`ece-tools`會自動產生快取組態。 請參閱[Adobe Commerce組態指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant#configuration-example)中的&#x200B;_組態檔_&#x200B;範例。 若要覆寫產生的快取組態，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
+>如果您指定`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`作為Valkey後端模型以啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)，`ece-tools`會自動產生快取組態。 請參閱[Adobe Commerce組態指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)中的&#x200B;_組態檔_&#x200B;範例。 若要覆寫產生的快取組態，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
@@ -635,9 +648,9 @@ stage:
 - **預設**—`quick`
 - **版本**—Adobe Commerce 2.2.0和更新版本
 
-可讓您自訂靜態內容的[部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=zh-Hant)。 請參閱[部署靜態檢視檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=zh-Hant)。
+可讓您自訂靜態內容的[部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)。 請參閱[部署靜態檢視檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)。
 
-如果您有多個地區設定，請只使用這些選項&#x200B;_1&rbrace;：_
+如果您有多個地區設定，請只使用這些選項&#x200B;_1}：_
 
 - `standard` — 為所有封裝部署所有靜態檢視檔案。
 - `quick` — （_預設_）可縮短部署時間。
@@ -782,7 +795,7 @@ stage:
 - **預設**—_未設定_
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-啟用或停用部署階段所執行[&#x200B; CLI命令的](https://symfony.com/doc/current/console/verbosity.html)Symfony`bin/magento`偵錯詳細程度。
+啟用或停用部署階段所執行[ CLI命令的](https://symfony.com/doc/current/console/verbosity.html)Symfony`bin/magento`偵錯詳細程度。
 
 >[!NOTE]
 >

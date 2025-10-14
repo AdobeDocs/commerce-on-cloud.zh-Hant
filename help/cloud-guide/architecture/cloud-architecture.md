@@ -4,9 +4,10 @@ description: 瞭解雲端基礎結構上Commerce的Starter和Pro專案架構對�
 feature: Cloud, Iaas, Paas
 topic: Architecture
 recommendations: noDisplay
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 7c1e895d-0f88-4f11-919a-b3b5748ca5f0
+source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 |          | 入門者 | Pro |
 | -------- | --------------------| ------------------ |
-| 核心功能 | <ul><li>[所有Adobe Commerce功能](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=zh-Hant)</li><li>PayPal入門工具</li><li>[Commerce報告](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[所有Adobe Commerce功能](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=zh-Hant)</li><li>PayPal入門工具</li><li>[Commerce報告](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[B2B模組](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
+| 核心功能 | <ul><li>[所有Adobe Commerce功能](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>PayPal入門工具</li><li>[Commerce報告](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[所有Adobe Commerce功能](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>PayPal入門工具</li><li>[Commerce報告](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[B2B模組](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
 | 基礎結構和部署 | <ul><li>持續雲端整合工具，使用者不限</li><li>Fastly Content Delivery Network (CDN)、影像最佳化(IO)，以及寬頻寬裕量的額外安全性。 Web應用程式防火牆(WAF)服務僅適用於生產環境。</li><li>3個分支上的[New Relic](../monitor/new-relic-service.md) APM （效能監視）：您選擇的`master`和2<br>Platform as a Service (PaaS)生產、測試和開發環境（共4個使用中環境），已針對Adobe Commerce最佳化</li><li>輸出篩選（輸出防火牆）</li></ul> | <ul><li>持續雲端整合工具，使用者不限</li><li>Fastly Content Delivery Network (CDN)、影像最佳化(IO)，以及寬頻寬裕量的額外安全性。 Web應用程式防火牆(WAF)服務僅適用於生產環境。</li><li>生產環境上的[New Relic](../monitor/new-relic-service.md)基礎結構+中繼和生產環境上的APM （效能監視）。 Adobe Commerce原則的[受管理警示原則](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)實作監視最佳實務，以主動通知您影響網站效能的應用程式和基礎結構問題。</li><li>以Platform as a Service (PaaS)為基礎，針對Adobe Commerce最佳化的[整合開發](pro-architecture.md#integration-environment)環境（共2個使用中環境）</li><li>基礎架構即服務(IaaS)：專為中繼和生產環境提供的虛擬基礎架構</li></ul> |
 | 高可用性基礎建設 | | [高可用性架構](pro-architecture.md#redundant-hardware)在基礎基礎基礎建設即服務(IaaS)中設定三部伺服器，以提供企業級可靠性和可用性 |
 | 專屬硬體 | | 基礎基礎基礎建設服務(IaaS)中的獨立專用硬體，可提供更高等級的可靠性和可用性 |
@@ -68,6 +69,7 @@ ht-degree: 0%
 - [MySQL](../services/mysql.md)
 - [Redis](../services/redis.md)
 - [RabbitMQ](../services/rabbitmq.md)
+- [ActiveMQ](../services/activemq.md)
 - [Elasticsearch](../services/elasticsearch.md)
 - [OpenSearch](../services/opensearch.md)
 
@@ -75,7 +77,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需建議的版本，請參閱&#x200B;_安裝指南_&#x200B;中的[系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)。
+>如需建議的版本，請參閱[安裝指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)中的&#x200B;_系統需求_。
 
 Fastly CDN模組用於中繼和生產環境上的CDN和快取服務。 請參閱[設定Fastly服務](../cdn/fastly.md)。
 

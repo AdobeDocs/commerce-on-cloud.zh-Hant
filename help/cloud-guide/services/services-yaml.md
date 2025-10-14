@@ -2,23 +2,24 @@
 title: 設定服務
 description: 瞭解如何在雲端基礎結構上設定Adobe Commerce使用的服務。
 feature: Cloud, Configuration, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
+source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
 
 # 設定服務
 
-`services.yaml`檔案定義Adobe Commerce在雲端基礎結構上支援及使用的服務，例如MySQL、Redis以及Elasticsearch或OpenSearch。 您不需要訂閱外部服務提供者。
+`services.yaml`檔案定義Adobe Commerce在雲端基礎結構上支援及使用的服務，例如MySQL、Redis和Elasticsearch或OpenSearch。 您不需要訂閱外部服務提供者。
 
 >[!NOTE]
 >
 >`.magento/services.yaml`檔案是在您專案的`.magento`目錄中本機管理的。 在建置過程中可存取設定，以便僅在整合環境中定義所需的服務版本，部署完成後便會移除設定，導致您在伺服器上找不到這些設定。
 
 
-部署指令碼使用`.magento`目錄中的組態檔，以設定的服務布建環境。 如果服務包含在`.magento.app.yaml`檔案的[`relationships`](../application/properties.md#relationships)屬性中，您的應用程式便可使用它。 `services.yaml`檔案包含&#x200B;_型別_&#x200B;和&#x200B;_磁碟_&#x200B;值。 服務型別定義服務&#x200B;_名稱_&#x200B;和&#x200B;_版本_。
+部署指令碼使用`.magento`目錄中的組態檔，以設定的服務布建環境。 如果服務包含在[`relationships`](../application/properties.md#relationships)檔案的`.magento.app.yaml`屬性中，您的應用程式便可使用它。 `services.yaml`檔案包含&#x200B;_型別_&#x200B;和&#x200B;_磁碟_&#x200B;值。 服務型別定義服務&#x200B;_名稱_&#x200B;和&#x200B;_版本_。
 
 變更服務設定會讓部署在環境中布建更新的服務，進而影響下列環境：
 
@@ -31,13 +32,14 @@ ht-degree: 0%
 
 雲端基礎結構支援和部署以下服務：
 
+- [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
 - [Redis](redis.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
-您可以在目前的[預設`services.yaml`檔案](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中檢視預設版本和磁碟值。 下列範例顯示`services.yaml`組態檔中定義的`mysql`、`redis`、`opensearch`或`elasticsearch`以及`rabbitmq`服務：
+您可以在目前的[預設`services.yaml`檔案](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中檢視預設版本和磁碟值。 下列範例顯示`mysql`組態檔中定義的`redis`、`opensearch`、`elasticsearch`或`rabbitmq`、`activemq-artemis`及`services.yaml`服務：
 
 ```yaml
 mysql:
@@ -53,6 +55,10 @@ opensearch:
 
 rabbitmq:
     type: rabbitmq:3.9
+    disk: 1024
+
+activemq-artemis:
+    type: activemq-artemis:2.42
     disk: 1024
 ```
 
@@ -72,7 +78,7 @@ rabbitmq:
 
 `service-id`值會識別專案中的服務。 您只能使用小寫字母數字字元： `a`到`z`和`0`到`9`，例如`redis`。
 
-此&#x200B;_service-id_&#x200B;值用於`.magento.app.yaml`組態檔的[`relationships`](../application/properties.md#relationships)屬性：
+此&#x200B;_service-id_&#x200B;值用於[`relationships`](../application/properties.md#relationships)組態檔的`.magento.app.yaml`屬性：
 
 ```yaml
 relationships:
@@ -117,7 +123,7 @@ mysql:
 
 ## 服務關係
 
-在雲端基礎結構專案的Adobe Commerce中，在`.magento.app.yaml`檔案中設定的服務[關係](../application/properties.md#relationships)會決定哪些服務可供您的應用程式使用。
+在雲端基礎結構專案的Adobe Commerce中，在[檔案中設定的服務](../application/properties.md#relationships)關係`.magento.app.yaml`會決定哪些服務可供您的應用程式使用。
 
 您可以從[`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md)環境變數擷取所有服務關係的設定資料。 設定資料包括服務名稱、型別和版本，以及任何必要的連線詳細資訊，例如連線埠號碼和登入認證。
 
@@ -171,7 +177,7 @@ mysql:
 
 ## 服務版本
 
-雲端基礎結構上Adobe Commerce的服務版本和相容性支援取決於雲端基礎結構上部署和測試的版本，有時與Adobe Commerce內部部署支援的版本不同。 請參閱&#x200B;_安裝_&#x200B;指南中的[系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)，以取得Adobe已使用特定Adobe Commerce和Magento Open Source版本測試的第三方軟體相依性清單。
+雲端基礎結構上Adobe Commerce的服務版本和相容性支援取決於雲端基礎結構上部署和測試的版本，有時與Adobe Commerce內部部署支援的版本不同。 請參閱[安裝](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)指南中的&#x200B;_系統需求_，以取得Adobe已針對特定Adobe Commerce和Magento Open Source版本測試的協力廠商軟體相依性清單。
 
 ### 軟體EOL檢查
 
@@ -198,7 +204,7 @@ mysql:
 
 您可以更新`services.yaml`檔案中的服務組態來升級已安裝的服務版本。
 
-1. 變更`.magento/services.yaml`檔案中服務的[`type`](#type)值：
+1. 變更[`type`](#type)檔案中服務的`.magento/services.yaml`值：
 
    > 原始服務定義
 
