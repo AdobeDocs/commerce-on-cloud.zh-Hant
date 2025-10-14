@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 設定[!DNL ActiveMQ]服務
 
-[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)是Adobe Commerce中的系統，可讓[模組](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)將訊息發佈至佇列。 它也會定義非同步接收訊息的消費者。
+[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=zh-Hant)是Adobe Commerce中的系統，可讓[模組](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/glossary#module)將訊息發佈至佇列。 它也會定義非同步接收訊息的消費者。
 
 MQF可以使用[ActiveMQ Artemis](https://activemq.apache.org/components/artemis/)做為傳訊代理人，提供可擴充的平台來傳送及接收訊息。 它也包括儲存未傳遞訊息的機制。 [!DNL ActiveMQ Artemis]支援訊息的STOMP （串流文字導向訊息通訊協定）通訊協定。
 
