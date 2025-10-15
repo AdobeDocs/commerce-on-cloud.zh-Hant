@@ -26,7 +26,7 @@ WAF服務提供下列優點：
 
 >[!TIP]
 >
->如需在雲端基礎結構存放區維護Adobe Commerce PCI法規遵循的其他資訊，請參閱[PCI法規遵循](https://business.adobe.com/products/magento/pci-compliance.html)。
+>如需在雲端基礎結構存放區維護Adobe Commerce PCI法規遵循的其他資訊，請參閱[PCI法規遵循](https://business.adobe.com/tw/products/magento/pci-compliance.html)。
 
 ## 啟用WAF
 
