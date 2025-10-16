@@ -44,7 +44,7 @@ Fastly提供下列服務，以最佳化並確保Adobe Commerce在雲端基礎結
 
 - **原始遮罩** — 防止流量略過Fastly WAF，並隱藏原始伺服器的IP位址，以保護它們免受直接存取和DDoS攻擊。
 
-  雲端基礎結構Pro Production專案的Adobe Commerce預設會啟用來源遮蓋。 若要在雲端基礎結構入門生產專案上啟用Adobe Commerce上的來源遮蔽，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 如果您的流量不需要快取，您可以自訂Fastly服務設定，以允許請求[略過Fastly快取](fastly-vcl-bypass-to-origin.md)。
+  雲端基礎結構Pro Production專案的Adobe Commerce預設會啟用來源遮蓋。 若要在雲端基礎結構入門生產專案上啟用Adobe Commerce上的來源遮蔽，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)。 如果您的流量不需要快取，您可以自訂Fastly服務設定，以允許請求[略過Fastly快取](fastly-vcl-bypass-to-origin.md)。
 
 - **[影像最佳化](fastly-image-optimization.md)** — 將影像處理和調整負載解除安裝到Fastly服務，讓伺服器可以更有效率地處理訂單和轉換。
 
@@ -66,13 +66,13 @@ Fastly提供下列服務，以最佳化並確保Adobe Commerce在雲端基礎結
 
 ### 變更Fastly API權杖
 
-提交Adobe Commerce支援票證，以便在新的Fastly API Token認證[驗證失敗/已過期](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials)時，或如果您認為它已遭破壞，則發出此認證。
+提交Adobe Commerce支援票證，以便在新的Fastly API Token認證[驗證失敗/已過期](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials)時，或如果您認為它已遭破壞，則發出此認證。
 
 當您收到新Token時，請更新您的預備或生產環境以使用新Token。
 
 **若要變更Fastly API權杖認證**：
 
-1. [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，要求新的Fastly API認證。
+1. [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，要求新的Fastly API認證。
 
    在雲端基礎結構專案ID和需要新認證的環境上包含您的Adobe Commerce。
 
@@ -120,18 +120,18 @@ Fastly CDN服務內建了DDOS保護。 一旦您為Adobe Commerce網站啟用了
 
 >[!NOTE]
 >
->與Adobe Commerce整合的Fastly CDN服務不包含針對第7層攻擊的保護。 如需防止第7層攻擊的秘訣，請參閱[Adobe Commerce知識庫](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli)中的[檢查DDoS攻擊](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)和&#x200B;*如何封鎖惡意攻擊*。
+>與Adobe Commerce整合的Fastly CDN服務不包含針對第7層攻擊的保護。 如需防止第7層攻擊的秘訣，請參閱[Adobe Commerce知識庫](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli)中的[檢查DDoS攻擊](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)和&#x200B;*如何封鎖惡意攻擊*。
 
 <!--Link definitions-->
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
+[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=zh-Hant
 
 [Magento 2的Fastly CDN模組]: https://github.com/fastly/fastly-magento2
 
 [Fastly支援票證]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html
+[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=zh-Hant
 
 [使用網域]: https://docs.fastly.com/en/guides/working-with-domains
