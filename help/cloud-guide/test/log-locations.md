@@ -3,7 +3,7 @@ title: 檢視和管理記錄檔
 description: 瞭解雲端基礎結構中可用的記錄檔型別以及在何處可以找到它們。
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
-source-git-commit: 731cc36816afdb5374269e871d337e056a71c050
+source-git-commit: afdc6f2b72d53199634faff7f30fd87ff3b31f3f
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 0%
@@ -77,13 +77,13 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >[!TIP]
 >
 >對於Pro Staging和Pro Production環境，會針對具有固定檔案名稱的記錄檔啟用自動記錄旋轉、壓縮和移除。 每個記錄檔型別都有旋轉模式和存留期。
->&#x200B;>環境的記錄輪換和壓縮記錄存留期的完整詳細資訊，請參閱： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。
->&#x200B;>對於Pro測試和Pro生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以要求變更記錄輪換設定。
+>環境的記錄輪換和壓縮記錄存留期的完整詳細資訊，請參閱： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。
+>對於Pro測試和Pro生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以要求變更記錄輪換設定。
 
 >[!TIP]
 >
 >無法在Pro Integration環境中設定記錄旋轉。
->&#x200B;>若為Pro Integration，您必須實作自訂解決方案/指令碼，並[設定您的cron](../application/crons-property.md)以視需要執行指令碼。
+>若為Pro Integration，您必須實作自訂解決方案/指令碼，並[設定您的cron](../application/crons-property.md)以視需要執行指令碼。
 
 >[!NOTE]
 >
@@ -189,7 +189,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-大多數錯誤訊息都包含說明和建議的動作。 使用ECE-Tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考來查詢錯誤碼，以取得進一步的指引。 如需進一步的指引，請使用[Adobe Commerce部署疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=zh-Hant)。
+大多數錯誤訊息都包含說明和建議的動作。 使用ECE-Tools[的](../dev-tools/error-reference.md)錯誤訊息參考來查詢錯誤碼，以取得進一步的指引。 如需進一步的指引，請使用[Adobe Commerce部署疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
 
 ## 應用程式記錄
 
@@ -219,7 +219,7 @@ type: warning
 
 ### 存檔的記錄檔
 
-應用程式記錄檔每天壓縮並封存一次，依預設，會保留&#x200B;**365天** （適用於Pro中繼和生產叢集） — 而且記錄檔輪換並非在所有整合/入門環境中都可用。 壓縮的記錄檔使用對應至`Number of Days Ago + 1`的唯一識別碼來命名。 例如，在Pro生產環境中，過去21天的PHP存取記錄會儲存起來，並命名如下：
+應用程式記錄檔每天壓縮並封存一次，依預設會保留&#x200B;**30天** （適用於Pro中繼和生產叢集） — 而且記錄檔輪換並非在所有整合/入門環境中都可用。 壓縮的記錄檔使用對應至`Number of Days Ago + 1`的唯一識別碼來命名。 例如，在Pro生產環境中，過去21天的PHP存取記錄會儲存起來，並命名如下：
 
 ```
 /var/log/platform/<project-ID>/php.access.log.22.gz
@@ -227,7 +227,7 @@ type: warning
 
 存檔日誌檔一律儲存在壓縮前原始檔案所在的目錄中。
 
-您可以[提交支援票證](https://experienceleague.adobe.com/home?lang=zh-Hant&support-tab=home#support)，以要求變更記錄保留期間或logrotate組態。 您可以將保留期間增加到最多365天，減少保留期間以節省儲存配額，或新增其他記錄路徑至logrotate設定。 這些變更適用於Pro Staging和Production叢集。
+您可以[提交支援票證](https://experienceleague.adobe.com/home?support-tab=home#support)，以要求變更記錄保留期間或logrotate組態。 您可以將保留期間增加到最多365天，減少保留期間以節省儲存配額，或新增其他記錄路徑至logrotate設定。 這些變更適用於Pro Staging和Production叢集。
 
 例如，如果您建立自訂路徑以將記錄檔儲存在`var/log/mymodule`目錄中，則可要求此路徑的記錄檔輪換。 但是，目前的基礎架構需要一致的檔案名稱，Adobe才能正確設定記錄輪換。 Adobe建議讓記錄名稱保持一致，以避免設定問題。
 
@@ -251,7 +251,7 @@ type: warning
 
 >[!TIP]
 >
->縮放架構中的記錄檔位置取決於節點型別。 請參閱縮放架構[&#128279;](../architecture/scaled-architecture.md#log-locations)主題中的記錄檔位置。
+>縮放架構中的記錄檔位置取決於節點型別。 請參閱縮放架構[主題中的](../architecture/scaled-architecture.md#log-locations)記錄檔位置。
 
 ## 記錄Pro生產和測試所需的資料
 
