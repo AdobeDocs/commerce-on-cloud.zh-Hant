@@ -3,9 +3,9 @@ title: 設定服務
 description: 瞭解如何在雲端基礎結構上設定Adobe Commerce使用的服務。
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 322f7af2c79dd4eeeabafa2ba7e5a32cbd8b1925
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >`.magento/services.yaml`檔案是在您專案的`.magento`目錄中本機管理的。 在建置過程中可存取設定，以便僅在整合環境中定義所需的服務版本，部署完成後便會移除設定，導致您在伺服器上找不到這些設定。
-
 
 部署指令碼使用`.magento`目錄中的組態檔，以設定的服務布建環境。 如果服務包含在[`relationships`](../application/properties.md#relationships)檔案的`.magento.app.yaml`屬性中，您的應用程式便可使用它。 `services.yaml`檔案包含&#x200B;_型別_&#x200B;和&#x200B;_磁碟_&#x200B;值。 服務型別定義服務&#x200B;_名稱_&#x200B;和&#x200B;_版本_。
 
@@ -38,6 +37,10 @@ ht-degree: 0%
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
+
+>[!NOTE]
+>
+>升級至新版RabbitMQ後，請觸發完整部署，以確保在RabbitMQ中重新建立自訂訊息佇列。
 
 您可以在目前的[預設`services.yaml`檔案](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中檢視預設版本和磁碟值。 下列範例顯示`mysql`組態檔中定義的`redis`、`opensearch`、`elasticsearch`或`rabbitmq`、`activemq-artemis`及`services.yaml`服務：
 
@@ -177,7 +180,7 @@ mysql:
 
 ## 服務版本
 
-雲端基礎結構上Adobe Commerce的服務版本和相容性支援取決於雲端基礎結構上部署和測試的版本，有時與Adobe Commerce內部部署支援的版本不同。 請參閱[安裝](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)指南中的&#x200B;_系統需求_，以取得Adobe已針對特定Adobe Commerce和Magento Open Source版本測試的協力廠商軟體相依性清單。
+雲端基礎結構上Adobe Commerce的服務版本和相容性支援取決於雲端基礎結構上部署和測試的版本，有時與Adobe Commerce內部部署支援的版本不同。 請參閱[安裝](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)指南中的&#x200B;_系統需求_，以取得Adobe已針對特定Adobe Commerce和Magento Open Source版本測試的協力廠商軟體相依性清單。
 
 ### 軟體EOL檢查
 
