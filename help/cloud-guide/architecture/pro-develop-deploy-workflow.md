@@ -3,9 +3,9 @@ title: Pro專案工作流程
 description: 瞭解如何使用Pro開發和部署工作流程。
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: 8aacac9ae721bc98cbe29e67ddf23d784e478e55
+source-git-commit: edff4efe0af54542321e887defc27dc96e6ae7f6
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,9 @@ file_put_contents(...): Failed to open stream: Read-only file system
 The disk hosting /app/<cluster_ID> is full
 ```
 
-如需詳細資訊，請參閱[Pro架構](pro-architecture.md)以瞭解Pro環境的概觀，並請參閱[[!DNL Cloud Console]](../project/overview.md#cloud-console)以取得專案檢視中的Pro環境清單概觀。
+>[!NOTE]
+>
+>此限制可保護應用程式的完整性和安全性。 無法變更這些唯讀檔案系統上的檔案夾許可權 — 即使「支援」無法修改這些許可權。 任何變更都必須從您本機開發環境的分支進行，並推送至應用程式環境。 如需詳細資訊，請參閱[Pro架構](pro-architecture.md)以瞭解Pro環境的概觀，並請參閱[[!DNL Cloud Console]](../project/overview.md#cloud-console)以取得專案檢視中的Pro環境清單概觀。
 
 ## 開發工作流程
 
