@@ -23,7 +23,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>雲端專案中Commerce的封存記錄檔保留期現在是30天。 請參閱雲端上的Commerce指南中的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/log-locations">檢視及管理記錄檔</a>。</p>
+      <td><p>雲端專案中Commerce的封存記錄檔保留期現在是30天。 請參閱雲端上的Commerce指南中的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/test/log-locations">檢視及管理記錄檔</a>。</p>
 </td>
       <td>
         技術，意見回饋
@@ -45,7 +45,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>在ECE-Tools v2002.2.8發行後更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。</p>
+      <td><p>在ECE-Tools v2002.2.8發行後更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。</p>
 </td>
       <td>
         技術
@@ -67,7 +67,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>已更新Cloud CLI發行後的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference">CLI參考</a> v1.47.0。</p>
+      <td><p>已更新Cloud CLI發行後的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference">CLI參考</a> v1.47.0。</p>
 </td>
       <td>
         技術
@@ -89,7 +89,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>釐清<code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI工具<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">安裝</a>支援的作業系統。</p>
+      <td><p>釐清<code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI工具<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">安裝</a>支援的作業系統。</p>
 </td>
       <td>
         意見反應
@@ -111,7 +111,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>已針對Cloud Patches套件v1.1.11新增<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">發行說明</a>。</p>
+      <td><p>已針對Cloud Patches套件v1.1.11新增<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">發行說明</a>。</p>
 </td>
       <td>
         重大更新
