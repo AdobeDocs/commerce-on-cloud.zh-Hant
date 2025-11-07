@@ -4,9 +4,9 @@ description: 請參閱ECE-Tools套件的最新改良清單。
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 562fd6e1dcd09600e00d034a94509b2dfd69d1ef
+source-git-commit: 4f96ed89edbbc148c5558050368d8366bd89053a
 workflow-type: tm+mt
-source-wordcount: '3314'
+source-wordcount: '3286'
 ht-degree: 0%
 
 ---
@@ -28,14 +28,7 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.9 {#latest}
-
-發行日期： 2025年11月6日
-
-- ![修正圖示](../../assets/fix.svg) **Symfony套件** — 已新增對最新Symfony YAML套件的支援。<!-- MCLOUD-14020 -->
-- ![修正圖示](../../assets/fix.svg) **修正使用中服務的快取清除** — 已新增使用中服務驗證。<!-- MCLOUD-14166 -->
-
-## v2002.2.8
+## v2002.2.8 {#latest}
 
 發行日期： 2025年10月8日
 
@@ -403,7 +396,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **基礎結構更新**—
 
-   - ![新圖示](../../assets/new.svg) **新增適用於Commerce的Cloud Docker的個別套件** — 將Docker套件與`ece-tools`套件脫鉤，以維持程式碼品質並提供獨立的發行版本。 從`ece-tools`magento-cloud-docker[&#x200B; GitHub存放庫管理與](https://github.com/magento/magento-cloud-docker)相關的更新與修正。<!--MAGECLOUD-2927-->
+   - ![新圖示](../../assets/new.svg) **新增適用於Commerce的Cloud Docker的個別套件** — 將Docker套件與`ece-tools`套件脫鉤，以維持程式碼品質並提供獨立的發行版本。 從`ece-tools`magento-cloud-docker[ GitHub存放庫管理與](https://github.com/magento/magento-cloud-docker)相關的更新與修正。<!--MAGECLOUD-2927-->
 
    - ![新圖示](../../assets/new.svg) **更新的修補功能** — 將修補功能從ECE-Tools套件移至單獨的[magento-cloud-patches](https://github.com/magento/magento-cloud-patches)套件。 部署期間，`ece-tools`會使用新套件套用修補程式。 請參閱[雲端修補程式發行說明](cloud-patches.md).<!--MAGECLOUD-4567-->
 
@@ -417,7 +410,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在更新至ECE-Tools 2002.1.0版之前，請先向後檢閱[&#x200B;   不相容的變更](backward-incompatible-changes.md)，瞭解可能需要您執行的變更   在雲端基礎結構專案設定或流程上更新Adobe Commerce。
+>在更新至ECE-Tools 2002.1.0版之前，請先向後檢閱[   不相容的變更](backward-incompatible-changes.md)，瞭解可能需要您執行的變更   在雲端基礎結構專案設定或流程上更新Adobe Commerce。
 
 - ![新圖示](../../assets/new.svg) **服務更新**—
 

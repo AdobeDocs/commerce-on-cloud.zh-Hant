@@ -5,9 +5,9 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: 562fd6e1dcd09600e00d034a94509b2dfd69d1ef
+source-git-commit: 4f96ed89edbbc148c5558050368d8366bd89053a
 workflow-type: tm+mt
-source-wordcount: '3806'
+source-wordcount: '3790'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,7 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.6 {#latest}
-
-發行日期： 2025年11月6日
-
-- ![修正圖示](../../assets/fix.svg) **Symfony套件** — 已新增對最新Symfony YAML套件的支援。<!-- MCLOUD-14020 -->
-
-## v1.4.5
+## v1.4.5 {#latest}
 
 發行日期： 2025年10月8日
 
