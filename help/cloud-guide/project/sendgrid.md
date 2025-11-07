@@ -63,7 +63,7 @@ DKIM是一種電子郵件驗證技術，可讓網際網路服務提供者(ISP)�
 
 >[!TIP]
 >
->請確定您使用&#x200B;**[!UICONTROLS中的適當網域來設定]**&#x200B;儲存電子郵件地址&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**。 對寄件者的電子郵件地址執行網域驗證。 如果設定了預設設定(`example.com`)，Sendgrid將會封鎖來自`example.com`的電子郵件。
+>請確定您使用&#x200B;**[!UICONTROL S中的適當網域來設定]**&#x200B;儲存電子郵件地址&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**。 對寄件者的電子郵件地址執行網域驗證。 如果設定了預設設定(`example.com`)，Sendgrid將會封鎖來自`example.com`的電子郵件。
 
 **若要啟用網域驗證**：
 
