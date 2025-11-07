@@ -3,9 +3,9 @@ title: 檢視和管理記錄檔
 description: 瞭解雲端基礎結構中可用的記錄檔型別以及在何處可以找到它們。
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
-source-git-commit: afdc6f2b72d53199634faff7f30fd87ff3b31f3f
+source-git-commit: 445c5162f9d3436d9e5fe3df41af47189e344cfd
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1313'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,37 @@ ht-degree: 0%
 `<project-ID>`的值取決於專案以及環境是中繼還是生產。 例如，專案識別碼為`yw1unoukjcawe`時，中繼環境使用者為`yw1unoukjcawe_stg`，而生產環境使用者為`yw1unoukjcawe`。
 
 使用該範例，部署記錄檔為： `/var/log/platform/yw1unoukjcawe_stg/deploy.log`
+
+### 尋找特定錯誤記錄檔
+
+當您遇到特定記錄檔記錄編號（例如`475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9`）的錯誤時，可以使用下列方法查詢Commerce應用程式伺服器遠端環境記錄檔，以找出記錄：
+
+>[!NOTE]
+>
+>如需使用Secure Shell (SSH)存取Commerce應用程式遠端環境記錄檔的說明，請參閱[遠端環境的安全連線](../development/secure-connections.md)。
+
+#### 方法1：使用grep搜尋
+
+```bash
+# Search for the specific error record in all log files
+magento-cloud ssh -e <environment-ID> "grep -r '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/"
+
+# Search in specific log files
+magento-cloud ssh -e <environment-ID> "grep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/exception.log"
+```
+
+#### 方法2：在封存的記錄中搜尋
+
+如果錯誤發生於過去，請檢查存檔的記錄檔：
+
+```bash
+# Search in compressed log files
+magento-cloud ssh -e <environment-ID> "find /var/log -name '*.gz' -exec zgrep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' {} \;"
+```
+
+#### 方法3：使用New Relic （Pro環境）
+
+對於Pro生產和中繼環境，請使用New Relic記錄檔來搜尋特定錯誤記錄。 如需詳細資訊，請參閱[New Relic記錄檔管理](../monitor/log-management.md)。
 
 ### 檢視遠端環境記錄
 
@@ -78,7 +109,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >對於Pro Staging和Pro Production環境，會針對具有固定檔案名稱的記錄檔啟用自動記錄旋轉、壓縮和移除。 每個記錄檔型別都有旋轉模式和存留期。
 >環境的記錄輪換和壓縮記錄存留期的完整詳細資訊，請參閱： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。
->對於Pro測試和Pro生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以要求變更記錄輪換設定。
+>對於Pro測試和Pro生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以要求變更記錄輪換設定。
 
 >[!TIP]
 >
@@ -143,7 +174,7 @@ magento-cloud log -e <environment-ID> deploy
 ```
 Reading log file projectID-branchname-ID--mymagento@ssh.zone.magento.cloud:/var/log/'deploy.log'
 
-[2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\n''.
+[2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\\n''.
 
 [2023-04-24T18:58:04.129888+00:00] INFO: Starting scenario(s): scenario/deploy.xml (magento/ece-tools version: 2002.1.14, magento/magento2-base version: 2.4.6)
 [2023-04-24T18:58:04.364714+00:00] NOTICE: Starting pre-deploy.
@@ -189,7 +220,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-大多數錯誤訊息都包含說明和建議的動作。 使用ECE-Tools[的](../dev-tools/error-reference.md)錯誤訊息參考來查詢錯誤碼，以取得進一步的指引。 如需進一步的指引，請使用[Adobe Commerce部署疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=zh-Hant)。
+大多數錯誤訊息都包含說明和建議的動作。 使用ECE-Tools[的](../dev-tools/error-reference.md)錯誤訊息參考來查詢錯誤碼，以取得進一步的指引。 如需進一步的指引，請使用[Adobe Commerce部署疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
 
 ## 應用程式記錄
 
@@ -227,7 +258,7 @@ type: warning
 
 存檔日誌檔一律儲存在壓縮前原始檔案所在的目錄中。
 
-您可以[提交支援票證](https://experienceleague.adobe.com/home?lang=zh-Hant&support-tab=home#support)，以要求變更記錄保留期間或logrotate組態。 您可以將保留期間增加到最多365天，減少保留期間以節省儲存配額，或新增其他記錄路徑至logrotate設定。 這些變更適用於Pro Staging和Production叢集。
+您可以[提交支援票證](https://experienceleague.adobe.com/home?support-tab=home#support)，以要求變更記錄保留期間或logrotate組態。 您可以將保留期間增加到最多365天，減少保留期間以節省儲存配額，或新增其他記錄路徑至logrotate設定。 這些變更適用於Pro Staging和Production叢集。
 
 例如，如果您建立自訂路徑以將記錄檔儲存在`var/log/mymodule`目錄中，則可要求此路徑的記錄檔輪換。 但是，目前的基礎架構需要一致的檔案名稱，Adobe才能正確設定記錄輪換。 Adobe建議讓記錄名稱保持一致，以避免設定問題。
 
