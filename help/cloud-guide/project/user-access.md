@@ -5,9 +5,10 @@ role: Admin
 feature: Cloud, Roles/Permissions
 last-substantial-update: 2023-06-27T00:00:00Z
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 953593de-f675-49fd-988f-f11306f67fbd
+source-git-commit: c972d9f2029499cf53edc334c1d9a40b155a991d
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1463'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ ht-degree: 0%
 
 **必要條件：**
 
-- 已註冊Adobe ID的使用者。 使用者必須[註冊Adobe帳戶](https://account.adobe.com)，然後[初始化其雲端帳戶](https://console.adobecommerce.com)，您才能將其新增至雲端專案。
+- 已註冊Adobe ID的使用者。 使用者必須[註冊Adobe帳戶](https://account.adobe.com)，然後造訪[https://console.adobecommerce.com](https://console.adobecommerce.com)初始化其[雲端帳戶](https://console.adobecommerce.com)，才能將其新增至雲端專案。
 - 已指派&#x200B;**管理員**&#x200B;角色的使用者無法管理具有`magento-cloud` CLI的使用者。 只有被授與&#x200B;**帳戶擁有者**&#x200B;角色的使用者才能管理使用者。
 
 >[!ENDSHADEBOX]
@@ -112,7 +113,7 @@ Current role(s) of User (alice@example.com) on Production (project_id):
 
 ### 新增使用者至多個環境
 
-若要在`Production`環境中將使用者新增為`viewer`，並在`Integration`環境中將使用者新增為`contributor`：
+若要在`viewer`環境中將使用者新增為`Production`，並在`contributor`環境中將使用者新增為`Integration`：
 
 ```bash
 magento-cloud user:add alice@example.com -r production:v -r integration:c
@@ -120,7 +121,7 @@ magento-cloud user:add alice@example.com -r production:v -r integration:c
 
 ### 更新使用者環境許可權
 
-若要在`Production`環境上將使用者環境許可權更新為`admin`：
+若要在`admin`環境上將使用者環境許可權更新為`Production`：
 
 ```bash
 magento-cloud user:update alice@example.com -r production:a
@@ -146,7 +147,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. 在&#x200B;_存取_&#x200B;檢視中，按一下&#x200B;**[!UICONTROL Add]**。
 
-1. 完成&#x200B;_[!UICONTROL Add User]_&#x200B;表單：
+1. 完成&#x200B;_[!UICONTROL Add User]_表單：
 
    - 輸入使用者電子郵件地址。
 
@@ -193,7 +194,7 @@ magento-cloud user:update alice@example.com -r production:a
 - [FreeOTP (Android)](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp)
 - [GAuth Authenticator （Firefox OS、桌上型電腦、其他）](https://github.com/gbraad-apps/gauth)
 
-在[!DNL Cloud Console]的&#x200B;_帳戶設定_&#x200B;頁面上提供安裝驗證器應用程式及啟用TFA的說明。
+在&#x200B;_的_&#x200B;帳戶設定[!DNL Cloud Console]頁面上提供安裝驗證器應用程式及啟用TFA的說明。
 
 **若要在您的使用者帳戶上啟用TFA**：
 
@@ -227,11 +228,11 @@ magento-cloud user:update alice@example.com -r production:a
 
    - 將復原始碼複製到其他位置，或寫下代碼，以防您失去對裝置或驗證應用程式的存取權。
 
-   - 按一下[儲存]&#x200B;**&#x200B;**&#x200B;將程式碼儲存至您的帳戶，以便您可從帳戶安全性設定檢視和管理程式碼。
+   - 按一下[儲存]****&#x200B;將程式碼儲存至您的帳戶，以便您可從帳戶安全性設定檢視和管理程式碼。
 
      >[!WARNING]
      >
-     >如果您無法存取具有TFA的帳戶，且沒有復原始碼清單，則必須連絡專案管理員，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以重設TFA應用程式。
+     >如果您無法存取具有TFA的帳戶，且沒有復原始碼清單，則必須連絡專案管理員，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以重設TFA應用程式。
 
 1. 完成TFA設定後，按一下[儲存] **以更新您的帳戶。**
 
@@ -266,7 +267,7 @@ API權杖可以交換為OAuth 2存取權杖，然後使用它來驗證請求。
 
 >[!IMPORTANT]
 >
->您帳戶的Protect API Token值。 請勿在程式碼範例、熒幕擷取或不安全的使用者端 — 伺服器通訊中公開值。 此外，請勿公開儲存在公共存放庫的原始程式碼中的值。
+>保護您帳戶的API Token值。 請勿在程式碼範例、熒幕擷取或不安全的使用者端 — 伺服器通訊中公開值。 此外，請勿公開儲存在公共存放庫的原始程式碼中的值。
 
 **若要建立API權杖**：
 
