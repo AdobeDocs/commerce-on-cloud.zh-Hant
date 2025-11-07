@@ -232,7 +232,7 @@ magento-cloud user:update alice@example.com -r production:a
 
      >[!WARNING]
      >
-     >如果您無法存取具有TFA的帳戶，且沒有復原始碼清單，則必須連絡專案管理員，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以重設TFA應用程式。
+     >如果您無法存取具有TFA的帳戶，且沒有復原始碼清單，則必須連絡專案管理員，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以重設TFA應用程式。
 
 1. 完成TFA設定後，按一下[儲存] **以更新您的帳戶。**
 
