@@ -66,13 +66,13 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 發行日期： 2025年5月5日
 
-- ![新圖示](../../assets/new.svg) **已將Commerce 2.4.4的修補程式更新至2.4.8** — 這是[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch)的更新修補程式，已在1.1.7<!-- MCLOUD-13619 -->中發行
+- ![新圖示](../../assets/new.svg) **已將Commerce 2.4.4的修補程式更新至2.4.8** — 這是[CVE-2025-24434](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch)的更新修補程式，已在1.1.7<!-- MCLOUD-13619 -->中發行
 
 ## v1.1.6
 
 發行日期： 2025年4月24日
 
-- ![新圖示](../../assets/new.svg) **已將Commerce 2.4.4的修補程式更新至2.4.7** — 這是[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)的更新修補程式，已在1.1.4<!-- MCLOUD-13240 -->中發行
+- ![新圖示](../../assets/new.svg) **已將Commerce 2.4.4的修補程式更新至2.4.7** — 這是[CVE-2025-24434](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)的更新修補程式，已在1.1.4<!-- MCLOUD-13240 -->中發行
 
 ## v1.1.5
 
@@ -84,7 +84,7 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 發行日期： 2025年2月13日
 
-- ![新圖示](../../assets/new.svg) **已新增Commerce 2.4.4至2.4.7**&#x200B;的修補程式 — 此更新修補程式[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)。<!-- MCLOUD-13240	 - -->
+- ![新圖示](../../assets/new.svg) **已新增Commerce 2.4.4至2.4.7**&#x200B;的修補程式 — 此更新修補程式[CVE-2025-24434](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)。<!-- MCLOUD-13240	 - -->
 
 ## v1.1.3
 
@@ -96,13 +96,13 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 發行日期： 2024年11月5日
 
-- ![修正圖示](../../assets/fix.svg) **已新增Commerce 2.4.4至2.4.7**&#x200B;的修補程式 — 此更新修正使用B2B模組時Adobe Commerce的嚴重[CVE-2024-45115](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73)漏洞。<!-- MCLOUD-12980 - -->
+- ![修正圖示](../../assets/fix.svg) **已新增Commerce 2.4.4至2.4.7**&#x200B;的修補程式 — 此更新修正使用B2B模組時Adobe Commerce的嚴重[CVE-2024-45115](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73)漏洞。<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
 發行日期： 2024年11月5日
 
-- ![修正圖示](../../assets/fix.svg) **已新增Commerce 2.4.4至2.4.7**&#x200B;的修補程式 — 此更新可修補嚴重的[CVE-2024-34102](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting漏洞。<!-- MCLOUD-12980 - -->
+- ![修正圖示](../../assets/fix.svg) **已新增Commerce 2.4.4至2.4.7**&#x200B;的修補程式 — 此更新可修補嚴重的[CVE-2024-34102](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting漏洞。<!-- MCLOUD-12980 - -->
 
 ## v1.1.0
 
@@ -180,7 +180,7 @@ Adobe Commerce 2.4.5的重要修補程式：
 
 - **使用Braintree付款的訂單問題** — 此修補程式解決管理員無法下新訂單或重新訂購的重大問題。<!-- MCLOUD-9137 -->
 
-請參閱[啟用Braintree付款時，管理員無法建立訂單/重新排序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html)。
+請參閱[啟用Braintree付款時，管理員無法建立訂單/重新排序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html?lang=zh-Hant)。
 
 ## v1.0.17
 
@@ -196,7 +196,7 @@ Adobe Commerce 2.3.3-p1及更高版本的重要修補程式：
 
 已更新修補程式，以解決導致未驗證遠端程式碼執行的&#x200B;**嚴重**&#x200B;漏洞。<!-- MCLOUD-8479 -->
 
-請參閱[Adobe安全性公告APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)。
+請參閱[Adobe安全性公告APSB22-12](https://helpx.adobe.com/tw/security/products/magento/apsb22-12.html)。
 
 ## v1.0.15
 
@@ -213,7 +213,7 @@ Adobe Commerce 2.3.3-p1及更高版本的重要修補程式：
 
 已新增修補程式，以解決導致未驗證遠端程式碼執行的&#x200B;**嚴重**&#x200B;漏洞。<!-- MCLOUD-8461 -->
 
-請參閱[Adobe安全性公告APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)。
+請參閱[Adobe安全性公告APSB22-12](https://helpx.adobe.com/tw/security/products/magento/apsb22-12.html)。
 
 ## v1.0.13
 
@@ -229,7 +229,7 @@ Adobe Commerce 2.3.3-p1及更高版本的重要修補程式：
 
 Adobe Commerce 2.4.3和2.3.7-p1的關鍵修補程式：
 
-- **API速率限制問題** — 此修補程式更正了預設速率限制，該限制導致Web API無法處理陣列中超過20個專案的請求。 此修補程式會提高速率限制的預設值。 請參閱Adobe Commerce [2.4.3發行說明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
+- **API速率限制問題** — 此修補程式更正了預設速率限制，該限制導致Web API無法處理陣列中超過20個專案的請求。 此修補程式會提高速率限制的預設值。 請參閱Adobe Commerce [2.4.3發行說明](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## v1.0.11
 
