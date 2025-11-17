@@ -2,9 +2,10 @@
 title: 入門架構
 description: 瞭解入門架構支援的環境。
 feature: Cloud, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
+source-git-commit: 2236d0b853e2f2b8d1bafcbefaa7c23ebd5d26b3
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,9 @@ ht-degree: 0%
 
 所有環境都在PaaS (Platform as a service)容器中。 這些容器部署在伺服器格線上的高度受限容器內。 這些環境是唯讀的，會接受從您本機工作區推送的分支所部署的程式碼變更。 每個環境都提供資料庫和Web伺服器。
 
-您可以使用任何您喜歡的開發和分支方法。 當您取得專案的初始存取權時，請從`master`環境建立`staging`環境。 然後，從`staging`分支以建立`integration`環境。
+>[!NOTE]
+>
+>無法變更任何入門環境中唯讀資料夾的許可權。 此限制可保護應用程式的完整性和安全性。 無法變更這些唯讀檔案系統上的檔案夾許可權 — 即使「支援」無法修改這些許可權。 任何變更都必須從您本機開發環境的分支進行，並推送至應用程式環境。 您可以使用任何您喜歡的開發和分支方法。 當您取得專案的初始存取權時，請從`staging`環境建立`master`環境。 然後，從`integration`分支以建立`staging`環境。
 
 ## 入門環境架構
 
@@ -29,11 +32,11 @@ ht-degree: 0%
 
 因為`production`環境是唯讀的，請使用`integration`環境進行程式碼變更，跨架構從`integration`部署到`staging`，最後部署到`production`環境。 請參閱[部署您的存放區](../deploy/staging-production.md)和[網站啟動](../launch/overview.md)。
 
-Adobe建議在推送至`master`分支（部署至`production`環境）之前，先在您的`staging`分支中進行完整測試。
+Adobe建議在推送至`staging`分支（部署至`master`環境）之前，先在您的`production`分支中進行完整測試。
 
 ## 中繼環境
 
-Adobe建議從`master`建立名為`staging`的分支。 `staging`分支將程式碼部署到中繼環境，以提供預先生產環境來測試程式碼、模組和擴充功能、付款閘道、運送、產品資料等。 此環境提供所有服務的設定以符合生產環境，包括Fastly、New Relic APM和搜尋。
+Adobe建議從`staging`建立名為`master`的分支。 `staging`分支將程式碼部署到中繼環境，以提供預先生產環境來測試程式碼、模組和擴充功能、付款閘道、運送、產品資料等。 此環境提供所有服務的設定以符合生產環境，包括Fastly、New Relic APM和搜尋。
 
 本指南的其他章節提供在安全的預備環境中進行最終程式碼部署和測試生產層級互動的說明。 為進行最佳效能和功能測試，請將資料庫復寫至測試環境。
 
@@ -89,7 +92,7 @@ Adobe建議從`master`建立名為`staging`的分支。 `staging`分支將程式
 - Fastly用於HTTP快取和CDN
 - 與PHP-FPM對話的Nginx網頁伺服器，一個執行個體具有多個背景工作
 - Redis伺服器
-- Adobe Commerce 2.2至2.4.3-p2的目錄搜尋Elasticsearch
+- 適用於Adobe Commerce 2.2至2.4.3-p2目錄搜尋的Elasticsearch
 - Adobe Commerce 2.3.7-p3、2.4.3-p2及2.4.4和更新版本的目錄搜尋OpenSearch
 - 輸出篩選（輸出防火牆）
 
@@ -123,7 +126,7 @@ Adobe建議從`master`建立名為`staging`的分支。 `staging`分支將程式
 
 - [OpenSearch](../services/opensearch.md)
 
-在測試和生產環境中，您會將Fastly用於CDN和快取。 最新版本的Fastly CDN擴充功能會在專案的初始布建期間安裝。 您可以升級擴充功能以取得最新的錯誤修正和改善專案。 檢視Magento2[&#128279;](https://github.com/fastly/fastly-magento2)的Fastly CDN模組。 此外，您還有權存取[New Relic](../monitor/account-management.md)以進行效能監視。
+在測試和生產環境中，您會將Fastly用於CDN和快取。 最新版本的Fastly CDN擴充功能會在專案的初始布建期間安裝。 您可以升級擴充功能以取得最新的錯誤修正和改善專案。 檢視Magento 2[的](https://github.com/fastly/fastly-magento2)Fastly CDN模組。 此外，您還有權存取[New Relic](../monitor/account-management.md)以進行效能監視。
 
 使用下列檔案來設定您要在實施中使用的軟體版本。
 
@@ -145,7 +148,7 @@ Adobe建議從`master`建立名為`staging`的分支。 `staging`分支將程式
 
 1. 將`master`分支複製至您的本機環境
 
-1. 從`master`建立`staging`分支
+1. 從`staging`建立`master`分支
 
 1. 從`staging`建立開發分支
 
