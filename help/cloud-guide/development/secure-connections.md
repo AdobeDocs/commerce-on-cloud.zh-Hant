@@ -29,7 +29,7 @@ Secure Shell (SSH)是用來安全登入遠端伺服器和系統的常見通訊�
 
 ## 新增SSH公開金鑰至您的帳戶
 
-在您新增或更新雲端基礎結構帳戶上的SSH公開金鑰至您的Adobe Commerce後，請在您的帳戶上[重新部署所有使用中的環境](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)以安裝金鑰。
+在您新增或更新雲端基礎結構帳戶上的SSH公開金鑰至您的Adobe Commerce後，請在您的帳戶上[重新部署所有使用中的環境](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)以安裝金鑰。
 
 您可以使用下列其中一種方法將SSH金鑰新增至您的帳戶： Cloud CLI或[!DNL Cloud Console]。
 
@@ -155,10 +155,10 @@ Secure Shell (SSH)是用來安全登入遠端伺服器和系統的常見通訊�
 
 針對&#x200B;**入門環境和Pro整合環境**，您可能也會考慮[新增`mount`](../application/properties.md#mounts)以存取特定目錄。 您會將掛載新增至`.magento.app.yaml`檔案。 如需可寫入目錄的清單，請參閱[專案結構](../project/file-structure.md)。 此掛接點僅適用於這些環境。
 
-針對&#x200B;**Pro測試和生產環境**，如果您沒有環境的SSH存取權，則必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，以要求sFTP存取權和特定資料夾（例如`pub/media`）的存取權掛載點。
+針對&#x200B;**Pro測試和生產環境**，如果您沒有環境的SSH存取權，則必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，以要求sFTP存取權和特定資料夾（例如`pub/media`）的存取權掛載點。
 
 >[!NOTE]
->對於Pro測試和生產，如果sFTP連線是針對執行&#x200B;_不_&#x200B;的&#x200B;**一般**&#x200B;使用者，則需要[將其新增至雲端專案](../project/user-access.md)，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，並附加其&#x200B;**公開**&#x200B;金鑰。 **絕不提供您的私人SSH金鑰。**
+>對於Pro測試和生產，如果sFTP連線是針對執行&#x200B;_不_&#x200B;的&#x200B;**一般**&#x200B;使用者，則需要[將其新增至雲端專案](../project/user-access.md)，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，並附加其&#x200B;**公開**&#x200B;金鑰。 **絕不提供您的私人SSH金鑰。**
 
 ## SSH通道
 
