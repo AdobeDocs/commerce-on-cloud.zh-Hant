@@ -3,9 +3,9 @@ title: 新增網站地圖和搜尋引擎自動機制
 description: 瞭解如何在雲端基礎結構上將網站地圖和搜尋引擎機器人新增到Adobe Commerce。
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
-source-git-commit: 8626364ec7bcaaa0e17a3380ec0b9b73110c4574
+source-git-commit: 1ecb820d55faa78e369d63996f11cd4d1d554e26
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Please make sure that "/" is writable by the web-server.
 **若要產生2.2版和更新版本的`sitemap.xml`檔案**：
 
 1. 存取「管理員」。
-1. 在&#x200B;_行銷_&#x200B;功能表上，按一下&#x200B;_SEO和搜尋_&#x200B;區段中的&#x200B;**網站地圖**。
+1. 在&#x200B;_行銷_&#x200B;功能表上，按一下&#x200B;**SEO和搜尋**&#x200B;區段中的&#x200B;_網站地圖_。
 1. 在&#x200B;_網站地圖_&#x200B;檢視中，按一下&#x200B;**新增網站地圖**。
 1. 在&#x200B;_新網站地圖_&#x200B;檢視中，輸入下列值：
 
@@ -40,8 +40,8 @@ Please make sure that "/" is writable by the web-server.
 **若要將內容新增至`robots.txt`檔案**：
 
 1. 存取「管理員」。
-1. 在&#x200B;_Content_&#x200B;功能表上，按一下&#x200B;_設計_&#x200B;區段中的&#x200B;**組態**。
-1. 在&#x200B;_設計組態_&#x200B;檢視中，按一下&#x200B;_動作_&#x200B;欄位中的網站&#x200B;**編輯**。
+1. 在&#x200B;_Content_&#x200B;功能表上，按一下&#x200B;**設計**&#x200B;區段中的&#x200B;_組態_。
+1. 在&#x200B;_設計組態_&#x200B;檢視中，按一下&#x200B;**動作**&#x200B;欄位中的網站&#x200B;_編輯_。
 1. 在&#x200B;_主要網站_&#x200B;檢視中，按一下&#x200B;**搜尋引擎機器人**。
 1. 更新robots.txt **欄位的**&#x200B;編輯自訂指令。
 1. 按一下&#x200B;**儲存組態**。
@@ -49,7 +49,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->如果`<domain.your.project>/robots.txt`檔案產生`404 error`，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以移除從`/robots.txt`到`/media/robots.txt`的重新導向。
+>如果`<domain.your.project>/robots.txt`檔案產生`404 error`，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以移除從`/robots.txt`到`/media/robots.txt`的重新導向。
 
 ## 使用Fastly VCL程式碼片段重新寫入
 
@@ -61,7 +61,7 @@ Please make sure that "/" is writable by the web-server.
 
 ### 使用Fastly VCL程式碼片段重新導向
 
-建立自訂VCL程式碼片段，以使用`type`和`content`機碼值組將`sitemap.xml`的路徑重寫為`/media/sitemap.xml`。
+建立自訂VCL程式碼片段，以使用`sitemap.xml`和`/media/sitemap.xml`機碼值組將`type`的路徑重寫為`content`。
 
 ```json
 {
@@ -117,9 +117,16 @@ VCL程式碼片段路由`http://domain.com/robots.txt`並顯示`pub/media/domain
 
 ### 依搜尋引擎設定索引
 
-若要在生產環境中啟用`robots.txt`自訂，您必須啟用Cloud Console上專案設定中的&#x200B;`<environment-name>`**的**&#x200B;按搜尋引擎索引為開啟選項：
+若要在生產環境中啟用`robots.txt`自訂，請對Cloud Console上專案設定中的**1}選項啟用搜尋引擎的索引：`<environment-name>`
 
-![使用[!DNL Cloud Console]管理環境](../../assets/robots-indexing-by-search-engine.png)
+- 舊版Cloud Console—URL遵循模式`https://<region-id>.magento.cloud/projects/<project_id>`
+- Adobe Cloud Console—URL遵循模式``https://console.adobecommerce.com/<username>/<project_id>``
+
+1. 將設定[!UICONTROL Indexing by search engines]切換為&#x200B;**On**。
+
+   ![使用[!DNL Cloud Console]管理環境](../../assets/robots-indexing-by-search-engine.png)
+
+1. 取消核取設定[!UICONTROL Hide from search engines]。
 
 您也可以使用magento-cloud CLI來更新此設定：
 
