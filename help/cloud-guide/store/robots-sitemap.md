@@ -117,7 +117,7 @@ VCL程式碼片段路由`http://domain.com/robots.txt`並顯示`pub/media/domain
 
 ### 依搜尋引擎設定索引
 
-若要在生產環境中啟用`robots.txt`自訂，請對Cloud Console上專案設定中的**1}選項啟用搜尋引擎的索引：`<environment-name>`
+若要在生產環境中啟用`robots.txt`自訂，請對Cloud Console上專案設定中的**1&rbrace;選項啟用搜尋引擎的索引：`<environment-name>`
 
 - 舊版Cloud Console—URL遵循模式`https://<region-id>.magento.cloud/projects/<project_id>`
 - Adobe Cloud Console—URL遵循模式``https://console.adobecommerce.com/<username>/<project_id>``
