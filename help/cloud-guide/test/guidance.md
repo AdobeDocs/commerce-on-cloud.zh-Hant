@@ -1,7 +1,8 @@
 ---
 title: 測試指南
 description: 閱讀在雲端基礎結構上啟動Adobe Commerce的測試型別和最佳實務。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 70fdfbbd-1763-4b1b-9ffd-9ffdc92f4f91
+source-git-commit: d48b1844305e72b7b4a37568f2358f3aa4cf2e24
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 0%
@@ -16,9 +17,9 @@ ht-degree: 0%
 
 在開發期間，請務必對雲端基礎結構專案上的Adobe Commerce執行端對端功能測試。 有關在Docker環境中執行功能測試，請參閱以下指南：
 
-- **應用程式測試** — 使用[Magento功能測試架構(MFTF)](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/)在Cloud Docker環境中測試應用程式。
+- **應用程式測試** — 使用[Magento功能測試架構(MFTF)](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing)在Cloud Docker環境中測試應用程式。
 
-- **程式碼測試** — 使用PHP[&#128279;](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/)的Codeception測試架構來驗證要貢獻到Cloud封裝存放庫的程式碼。
+- **程式碼測試** — 使用PHP[的](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing)Codeception測試架構來驗證要貢獻到Cloud封裝存放庫的程式碼。
 
 ## 啟動前最佳實務
 

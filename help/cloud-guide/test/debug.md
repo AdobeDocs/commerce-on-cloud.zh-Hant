@@ -1,7 +1,8 @@
 ---
 title: 設定 [!DNL Xdebug]
 description: 瞭解如何設定Xdebug擴充功能，以便在雲端基礎結構專案開發上偵錯Adobe Commerce。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 32857c9c-4a49-4337-9c15-a6e46c328df7
+source-git-commit: d48b1844305e72b7b4a37568f2358f3aa4cf2e24
 workflow-type: tm+mt
 source-wordcount: '1920'
 ht-degree: 0%
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您可以設定[!DNL Xdebug]在Cloud Docker環境中執行以進行本機偵錯，而不變更雲端基礎結構專案設定上的Adobe Commerce。 請參閱[為Docker](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug/)設定Xdebug。
+>您可以設定[!DNL Xdebug]在Cloud Docker環境中執行以進行本機偵錯，而不變更雲端基礎結構專案設定上的Adobe Commerce。 請參閱[為Docker](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug)設定Xdebug。
 
 若要啟用[!DNL Xdebug]，您必須在Git存放庫中設定檔案、設定IDE，並設定連線埠轉送。 您可以在`magento.app.yaml`檔案中設定一些設定。 編輯之後，跨所有入門環境和Pro整合環境推送Git變更以啟用[!DNL Xdebug]。 [!DNL Xdebug]已在Pro測試和生產環境中可用。
 
-設定之後，您就可以偵錯CLI命令、Web請求和程式碼。 請記住，所有雲端基礎結構環境都是唯讀的。 將程式碼複製到本機開發環境以執行偵錯。 若為Pro測試和生產環境，請參閱[!DNL Xdebug]的[其他指示](#debug-for-pro-staging-and-production)。
+設定之後，您就可以偵錯CLI命令、Web請求和程式碼。 請記住，所有雲端基礎結構環境都是唯讀的。 將程式碼複製到本機開發環境以執行偵錯。 若為Pro測試和生產環境，請參閱[的](#debug-for-pro-staging-and-production)其他指示[!DNL Xdebug]。
 
 ## 需求
 
@@ -29,7 +30,7 @@ ht-degree: 0%
 若要設定[!DNL Xdebug]，請遵循下列步驟：
 
 - [在分支中工作以推送檔案更新](#get-started-with-a-branch)
-- [為環境啟用 [!DNL Xdebug] &#x200B;](#enable-xdebug-in-your-environment)
+- [為環境啟用 [!DNL Xdebug] ](#enable-xdebug-in-your-environment)
 - [設定PHPStorm伺服器](#configure-phpstorm-server)
 - [設定連線埠轉送](#set-up-port-forwarding)
 
@@ -43,7 +44,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3437407?learn=on)
 
-若要啟用專案的[!DNL Xdebug]，請新增`xdebug`至`.magento.app.yaml`檔案的`runtime:extensions`區段。
+若要啟用專案的[!DNL Xdebug]，請新增`xdebug`至`runtime:extensions`檔案的`.magento.app.yaml`區段。
 
 **若要啟用Xdebug**：
 
@@ -96,9 +97,9 @@ ht-degree: 0%
 
 1. 按一下&#x200B;**+**&#x200B;以新增伺服器組態。 專案名稱在頂端為灰色。
 
-1. [選擇性]為新伺服器組態設定下列設定。 請參閱&#x200B;_PHPStorm_&#x200B;檔案中的[未設定偵錯伺服器](https://www.jetbrains.com/help/phpstorm/troubleshooting-php-debugging.html#no-debug-server-is-configured)。
+1. [選擇性]為新伺服器組態設定下列設定。 請參閱[PHPStorm](https://www.jetbrains.com/help/phpstorm/troubleshooting-php-debugging.html#no-debug-server-is-configured)檔案中的&#x200B;_未設定偵錯伺服器_。
 
-   - **名稱** — 輸入與主機名稱相同的名稱。 此值必須符合[偵錯CLI命令](#debug-cli-commands)中`PHP_IDE_CONFIG`變數的值，才能使用CLI進行偵錯。
+   - **名稱** — 輸入與主機名稱相同的名稱。 此值必須符合`PHP_IDE_CONFIG`偵錯CLI命令[中](#debug-cli-commands)變數的值，才能使用CLI進行偵錯。
    - **主機** — 輸入主機名稱。
    - **連線埠** — 輸入`443`。
    - **偵錯工具** — 選取`Xdebug`。
@@ -113,7 +114,7 @@ ht-degree: 0%
       - 生產： `/app/<project_code>/`
       - 正在暫存： `/app/<project_code>_stg/`
 
-1. 將[!DNL Xdebug]連線埠變更為`9000,9003`，或者您可以在&#x200B;**PHP** > **偵錯** > **Xdebug** > **偵錯連線埠**&#x200B;面板中將其限製為只有`9000`。
+1. 將[!DNL Xdebug]連線埠變更為`9000,9003`，或者您可以在`9000`PHP **>**&#x200B;偵錯&#x200B;**>** Xdebug **>**&#x200B;偵錯連線埠&#x200B;**面板中將其限製為只有**。
 
 1. 按一下&#x200B;**套用**。
 
@@ -233,7 +234,7 @@ ht-degree: 0%
 
    ![儲存您的SSH通道](../../assets/xdebug/putty-session-save.png)
 
-1. 若要測試SSH通道，請按一下[載入]。**&#x200B;**，然後按一下[開啟]。**&#x200B;**
+1. 若要測試SSH通道，請按一下[載入]。****，然後按一下[開啟]。****
 
    如果顯示「無法連線」錯誤，請確認下列事項：
 
@@ -305,7 +306,7 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 
 **若要使用環境URL**&#x200B;開始偵錯：
 
-這是用來啟動遠端偵錯工作階段之設定的示範，以及啟動遠端偵錯工作階段的GET引數的示範。
+這是用來啟動遠端偵錯工作階段之設定的示範，同時也是GET引數的示範。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3437417?learn=on)
 
@@ -327,7 +328,7 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 
    >[!NOTE]
    >
-   >不支援`POST`要求所傳遞的`XDEBUG_SESSION_START`。
+   >不支援`XDEBUG_SESSION_START`要求所傳遞的`POST`。
 
 ## 偵錯CLI命令
 
