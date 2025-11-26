@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # PHP設定
 
-您可以選擇要在您的[檔案中執行哪個](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)版本的PHP`.magento.app.yaml`：
+您可以選擇要在您的[檔案中執行哪個](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)版本的PHP`.magento.app.yaml`：
 
 ```yaml
 name: mymagento
@@ -63,7 +63,7 @@ realpath_cache_ttl = 7200
 
 >[!NOTE]
 >
->如需建議的PHP組態設定清單，請參閱[安裝指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)中的&#x200B;_必要的PHP設定_。
+>如需建議的PHP組態設定清單，請參閱[安裝指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=zh-Hant)中的&#x200B;_必要的PHP設定_。
 
 ### 檢查自訂PHP設定
 
@@ -118,7 +118,7 @@ php -m
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP模組需求與Adobe Commerce版本繫結。 請參閱[PHP需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)。
+PHP模組需求與Adobe Commerce版本繫結。 請參閱[PHP需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=zh-Hant)。
 
 ### 擴充功能支援
 
@@ -136,7 +136,7 @@ sourceguardian.restrict_unencoded = "1"
 
 請參閱SourceGuardian檔案的[第3.5節](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf)。 _這是PDF的連結_。
 
-[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，以取得在所有生產環境和Pro測試環境中安裝這些PHP擴充功能的協助。 包含更新的`.magento/services.yaml`檔案、`.magento.app.yaml`檔案（包含更新的PHP版本和任何其他PHP副檔名）。 若是即時生產環境的變更，您至少必須提供48小時的通知。 雲端基礎結構團隊更新您的專案最多可能需要48小時的時間。
+[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，以取得在所有生產環境和Pro測試環境中安裝這些PHP擴充功能的協助。 包含更新的`.magento/services.yaml`檔案、`.magento.app.yaml`檔案（包含更新的PHP版本和任何其他PHP副檔名）。 若是即時生產環境的變更，您至少必須提供48小時的通知。 雲端基礎結構團隊更新您的專案最多可能需要48小時的時間。
 
 >[!WARNING]
 >
