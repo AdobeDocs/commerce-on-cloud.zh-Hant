@@ -36,7 +36,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->若要將商店檢視新增至網站基底URL，您不必建立多個目錄。 請參閱[組態指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html)中的&#x200B;_將存放區程式碼新增至基底URL_。
+>若要將商店檢視新增至網站基底URL，您不必建立多個目錄。 請參閱[組態指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=zh-Hant)中的&#x200B;_將存放區程式碼新增至基底URL_。
 
 ## 新增網域
 
@@ -46,11 +46,11 @@ https://store.com/second/
 
 - 適用於Pro測試與生產
 
-  將新網域新增到Fastly，請參閱[管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或開啟支援票證以請求協助。 此外，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，才能要求將新網域新增至叢集。
+  將新網域新增到Fastly，請參閱[管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或開啟支援票證以請求協助。 此外，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，才能要求將新網域新增至叢集。
 
 - 僅供入門級生產使用
 
-  新增網域至Fastly，請參閱[管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以要求協助。 此外，您必須新增網域至&#x200B;**中的**&#x200B;網域[!DNL Cloud Console]索引標籤： `https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  新增網域至Fastly，請參閱[管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以要求協助。 此外，您必須新增網域至&#x200B;**中的**&#x200B;網域[!DNL Cloud Console]索引標籤： `https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## 設定本機安裝
 
@@ -213,7 +213,7 @@ https://store.com/second/
 
 ### 設定網站、商店和商店檢視
 
-在&#x200B;_管理UI_&#x200B;中，設定您的Adobe Commerce **網站**、**商店**&#x200B;和&#x200B;**商店檢視**。 請參閱[設定指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html)的Admin _中的_&#x200B;設定多個網站、商店和商店檢視。
+在&#x200B;_管理UI_&#x200B;中，設定您的Adobe Commerce **網站**、**商店**&#x200B;和&#x200B;**商店檢視**。 請參閱[設定指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=zh-Hant)的Admin _中的_&#x200B;設定多個網站、商店和商店檢視。
 
 當您設定本機安裝時，請務必使用管理員提供的相同名稱和程式碼，代表您的網站、商店和商店檢視。 更新`magento-vars.php`檔案時需要這些值。
 
@@ -353,4 +353,4 @@ Adobe建議先在中繼環境中進行全面測試，然後再推送至生產環
 
 <!-- link definitions -->
 
-[config-multiweb]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html
+[config-multiweb]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=zh-Hant
