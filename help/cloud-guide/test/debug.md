@@ -30,7 +30,7 @@ ht-degree: 0%
 若要設定[!DNL Xdebug]，請遵循下列步驟：
 
 - [在分支中工作以推送檔案更新](#get-started-with-a-branch)
-- [為環境啟用 [!DNL Xdebug] ](#enable-xdebug-in-your-environment)
+- [為環境啟用 [!DNL Xdebug] &#x200B;](#enable-xdebug-in-your-environment)
 - [設定PHPStorm伺服器](#configure-phpstorm-server)
 - [設定連線埠轉送](#set-up-port-forwarding)
 
@@ -234,7 +234,7 @@ ht-degree: 0%
 
    ![儲存您的SSH通道](../../assets/xdebug/putty-session-save.png)
 
-1. 若要測試SSH通道，請按一下[載入]。****，然後按一下[開啟]。****
+1. 若要測試SSH通道，請按一下[載入]。**&#x200B;**，然後按一下[開啟]。**&#x200B;**
 
    如果顯示「無法連線」錯誤，請確認下列事項：
 
