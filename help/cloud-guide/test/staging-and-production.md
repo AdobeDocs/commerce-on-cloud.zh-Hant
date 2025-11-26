@@ -1,7 +1,8 @@
 ---
 title: 測試和生產測試
 description: 瞭解如何在測試環境和生產環境中測試。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 39625c97-5eb0-4039-ac5f-ddaeb43156de
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 0%
@@ -211,7 +212,7 @@ ht-degree: 0%
 
 ## 功能測試
 
-您可以使用Magento功能測試架構(MFTF)從Cloud Docker環境完成Adobe Commerce的功能測試。 請參閱&#x200B;_Commerce適用的Cloud Docker指南_&#x200B;中的[應用程式測試](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/)。
+您可以使用Magento功能測試架構(MFTF)從Cloud Docker環境完成Adobe Commerce的功能測試。 請參閱[Commerce適用的Cloud Docker指南](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing)中的&#x200B;_應用程式測試_。
 
 ## 設定安全性掃描工具
 
