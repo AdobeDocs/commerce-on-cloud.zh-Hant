@@ -23,7 +23,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patches 1.1.12發行說明</a>以包含「啟用JS縮制和套件組合時，簽出失敗：問題」的修正。</p>
+      <td><p>更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patches 1.1.12發行說明</a>以包含「啟用JS縮制和套件組合時，簽出失敗：問題」的修正。</p>
 </td>
       <td>
         技術
@@ -31,7 +31,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d07be1a20fa95e2a79534e364e7620a2f856fc0d">認可</a></td>
     </tr>
     <tr>
-      <td><p>在ECE-Tools v2002.2.9發行後更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。</p>
+      <td><p>在ECE-Tools v2002.2.9發行後更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。</p>
 </td>
       <td>
         技術
@@ -53,7 +53,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>雲端專案中Commerce的封存記錄檔保留期現在是30天。 請參閱雲端上的Commerce指南中的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/log-locations">檢視及管理記錄檔</a>。</p>
+      <td><p>雲端專案中Commerce的封存記錄檔保留期現在是30天。 請參閱雲端上的Commerce指南中的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/test/log-locations">檢視及管理記錄檔</a>。</p>
 </td>
       <td>
         技術，意見回饋
