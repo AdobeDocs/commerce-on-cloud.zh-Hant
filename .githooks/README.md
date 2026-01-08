@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5236f2718e5091dfc2fc140e15d4ac87a073d1d0
+source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ bundle exec rake images:optimize path=../path/to/images
 
 ## 設定
 
-掛接使用組態檔`_jekyll/.image_optim`來自訂最佳化設定：
+掛接使用組態檔`_jekyll/.image_optim.yml`來自訂最佳化設定：
 
 - **PNG**：使用`advpng`、`optipng`和`pngquant`
 - **JPEG**：使用`jhead`、`jpegoptim`和`jpegtran`
@@ -120,12 +120,12 @@ bundle exec rake images:optimize path=../path/to/images
 ### 最佳化失敗
 
 - 驗證`bundle install`已在`_jekyll`目錄中執行
-- 檢查是否已安裝`image_optim`和`image_optim_pack` gem
-- 檢閱`.image_optim`設定檔
+- 檢查是否已安裝`adobe-comdox-exl-rake-tasks` gem （提供`image_optim`）
+- 檢閱`.image_optim.yml`設定檔
 
 ### 效能問題
 
-- 在`_jekyll/.image_optim`中調整執行緒計數
+- 在`_jekyll/.image_optim.yml`中調整執行緒計數
 - 設定`DEBUG=1`環境變數以取得詳細的錯誤資訊
 
 ## 運作方式

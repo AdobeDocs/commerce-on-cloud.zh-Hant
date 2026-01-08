@@ -1,7 +1,7 @@
 ---
-source-git-commit: b151aac666510594751937e80dc3d9db4ede41b7
+source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 1%
 
 本網站包含雲端基礎結構上Commerce的最新開發人員檔案。
 
-- [雲端基礎結構上的Commerce指南](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/overview)
-- [開始使用雲端基礎結構上的Commerce](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/start/overview)
+- [雲端基礎結構上的Commerce指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- [開始使用雲端基礎結構上的Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source行為準則
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 關於您對Adobe內容的貢獻
 
-請參閱[Adobe檔案投稿人指南](https://experienceleague.adobe.com/zh-hant/docs/contributor/contributor-guide/introduction)。
+請參閱[Adobe檔案投稿人指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 貢獻方式取決於您的身分和您要貢獻的變更型別：
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 社群投稿人可以使用GitHub UI進行基本編輯或建立存放庫復本，以做出重大貢獻。
 
-如需詳細資訊，請參閱[Adobe檔案貢獻者指南](https://experienceleague.adobe.com/zh-hant/docs/contributor/contributor-guide/introduction)。
+如需詳細資訊，請參閱[Adobe檔案貢獻者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 ## 如何使用Markdown將主題格式化
 
@@ -70,7 +70,7 @@ ht-degree: 1%
 >**附註：**
 >
 >- 產生樣板化內容需要在終端機中的命令列上工作。
->- 您必須安裝Ruby才能執行轉譯指令碼。 如需所需版本，請參閱[_jekyll/.ruby-version] (_jekyll/.ruby-version)。
+>- 您必須安裝Ruby才能執行轉譯指令碼。 如需所需版本，請參閱[_jekyll/.ruby-version](_jekyll/.ruby-version)。
 
 如需範本化內容的檔案結構說明，請參閱下列內容：
 
@@ -101,7 +101,7 @@ ht-degree: 1%
    bundle exec rake render
    ```
 
-   >**注意：**&#x200B;您必須從`_jekyll`目錄執行指令碼。 如果這是您第一次執行指令碼，您必須先使用`bundle install`命令安裝Ruby相依性。 Rake工作由`adobe-comdox-exl-rake-tasks` gem提供，以便在整個Adobe Commerce檔案存放庫中提供更好的可維護性。
+   >**注意：**&#x200B;您必須從`_jekyll`目錄執行指令碼。 如果這是您第一次執行指令碼，您必須先使用`bundle install`命令安裝Ruby相依性。 `adobe-comdox-exl-rake-tasks` gem提供核心Rake任務和相依性（Jekyll、Rake、影像最佳化），以便在所有Adobe Commerce檔案存放庫中提供更佳的可維護性。 此存放庫的特定自訂工作已在`Rakefile`中實作。
 
 5. 導覽回`root`目錄。
 
