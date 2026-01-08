@@ -9,8 +9,8 @@ ht-degree: 1%
 
 本網站包含雲端基礎結構上Commerce的最新開發人員檔案。
 
-- [雲端基礎結構上的Commerce指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
-- [開始使用雲端基礎結構上的Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
+- [雲端基礎結構上的Commerce指南](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/overview)
+- [開始使用雲端基礎結構上的Commerce](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source行為準則
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 關於您對Adobe內容的貢獻
 
-請參閱[Adobe檔案投稿人指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
+請參閱[Adobe檔案投稿人指南](https://experienceleague.adobe.com/zh-hant/docs/contributor/contributor-guide/introduction)。
 
 貢獻方式取決於您的身分和您要貢獻的變更型別：
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 社群投稿人可以使用GitHub UI進行基本編輯或建立存放庫復本，以做出重大貢獻。
 
-如需詳細資訊，請參閱[Adobe檔案貢獻者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
+如需詳細資訊，請參閱[Adobe檔案貢獻者指南](https://experienceleague.adobe.com/zh-hant/docs/contributor/contributor-guide/introduction)。
 
 ## 如何使用Markdown將主題格式化
 
