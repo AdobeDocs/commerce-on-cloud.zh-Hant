@@ -1,8 +1,8 @@
 ---
-source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
+source-git-commit: c5e52c70c121aa3650acfba8a98b743834a95428
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 4%
+source-wordcount: '47'
+ht-degree: 6%
 
 ---
 # 新功能範本
@@ -11,7 +11,7 @@ ht-degree: 4%
 
 此頁面包含過去60天所做的變更。 我們將從此清單中排除所有微幅更新，例如複製編輯。
 
-### 2025年11月17
+### 2026年1月13日
 
 <table style="table-layout:auto;">
   <thead>
@@ -23,20 +23,12 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patches 1.1.12發行說明</a>以包含「啟用JS縮制和套件組合時，簽出失敗：問題」的修正。</p>
+      <td><p>更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">設定OpenSearch服務</a>中的範例版本。</p>
 </td>
       <td>
-        技術
+        意見反應
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d07be1a20fa95e2a79534e364e7620a2f856fc0d">認可</a></td>
-    </tr>
-    <tr>
-      <td><p>在ECE-Tools v2002.2.9發行後更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。</p>
-</td>
-      <td>
-        技術
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/5f088df3e7bc35cc1d7fa93d06b5fa9968802572">認可</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/f5d325dbb14e5e524c89b41c4d5b82383b5b1ac7">認可</a></td>
     </tr>
   </tbody>
 </table>
