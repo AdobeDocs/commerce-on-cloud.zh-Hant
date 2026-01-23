@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 設定[!DNL RabbitMQ]服務
 
-[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)是Adobe Commerce中的系統，可讓[模組](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)將訊息發佈至佇列。 它也會定義非同步接收訊息的消費者。
+[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=zh-Hant)是Adobe Commerce中的系統，可讓[模組](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/glossary#module)將訊息發佈至佇列。 它也會定義非同步接收訊息的消費者。
 
 MQF使用[RabbitMQ](https://www.rabbitmq.com/)作為傳訊代理人，提供可擴充的平台來傳送及接收訊息。 它也包括儲存未傳遞訊息的機制。 [!DNL RabbitMQ]是以進階訊息佇列通訊協定(AMQP) 0.9.1規格為基礎。
 
@@ -152,7 +152,7 @@ dependencies:
 
 ## 疑難排解[!DNL RabbitMQ]服務
 
-請參閱[無法連線到Adobe Commerce Cloud中的RabbitMQ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688)。
+請參閱[無法連線到Adobe Commerce Cloud中的RabbitMQ](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-27688)。
 
 ## 正在升級[!DNL RabbitMQ]服務
 
@@ -160,4 +160,4 @@ dependencies:
 >
 >在整合環境中升級[!DNL RabbitMQ]時，請勿略過版本。 僅支援[循序升級](https://www.rabbitmq.com/docs/upgrade#rabbitmq-version-upgradability) (例如3.8 → 3.9 → 3.10 → 3.11 → 3.12 → 3.13 → 4.0 → 4.1)，而且每個增加的版本都必須對應到雲端環境的實際成功部署。
 >
->如需一般服務升級指示，請參閱[變更服務版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)。
+>如需一般服務升級指示，請參閱[變更服務版本](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)。
