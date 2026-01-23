@@ -140,7 +140,7 @@ Pro隨附大型整合環境，其中包含兩個作用中的分支：全域`mast
 
 ## 移轉靜態檔案
 
-[靜態檔案](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)儲存在`mounts`中。 將檔案從來源掛載位置（例如您的本機環境）移轉至目的地掛載位置的方法有兩種。 這兩種方法都使用`rsync`公用程式，但Adobe建議使用`magento-cloud` CLI在本機和遠端環境之間移動檔案。 而且Adobe建議在將檔案從遠端來源移動到其他遠端位置時使用`rsync`方法。
+[靜態檔案](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/glossary)儲存在`mounts`中。 將檔案從來源掛載位置（例如您的本機環境）移轉至目的地掛載位置的方法有兩種。 這兩種方法都使用`rsync`公用程式，但Adobe建議使用`magento-cloud` CLI在本機和遠端環境之間移動檔案。 而且Adobe建議在將檔案從遠端來源移動到其他遠端位置時使用`rsync`方法。
 
 ### 使用CLI移轉檔案
 
