@@ -2,9 +2,10 @@
 title: 部署至測試與生產
 description: 瞭解如何將雲端基礎結構上的Adobe Commerce程式碼部署到中繼和生產環境，以供進一步測試。
 feature: Cloud, Console, Deploy, SCD, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1cfeb472-c6ec-44ff-9b32-516ffa1b30d2
+source-git-commit: fe634412c6de8325faa36c07e9769cde0eb76c48
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1311'
 ht-degree: 0%
 
 ---
@@ -19,11 +20,11 @@ ht-degree: 0%
 >
 >Adobe建議在部署之前建立環境的[備份](../storage/snapshots.md)。
 
-此外，您可以使用New Relic[&#128279;](../monitor/track-deployments.md)啟用追蹤部署，以監視部署事件，並協助您分析部署之間的效能。
+此外，您可以使用New Relic[啟用](../monitor/track-deployments.md)追蹤部署，以監視部署事件，並協助您分析部署之間的效能。
 
 ## 入門部署流程
 
-Adobe建議從`master`分支建立`staging`分支，以最支援您的入門計劃開發與部署。 然後，您有四個使用中環境中的兩個已準備就緒： `master`用於生產，以及`staging`用於暫存。
+Adobe建議從`staging`分支建立`master`分支，以最支援您的入門計劃開發與部署。 然後，您有四個使用中環境中的兩個已準備就緒： `master`用於生產，以及`staging`用於暫存。
 
 如需程式的詳細資訊，請參閱[入門開發與部署工作流程](../architecture/starter-develop-deploy-workflow.md)。
 
@@ -139,7 +140,7 @@ Pro隨附大型整合環境，其中包含兩個作用中的分支：全域`mast
 
 ## 移轉靜態檔案
 
-[靜態檔案](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/glossary)儲存在`mounts`中。 將檔案從來源掛載位置（例如您的本機環境）移轉至目的地掛載位置的方法有兩種。 這兩種方法都使用`rsync`公用程式，但Adobe建議使用`magento-cloud` CLI在本機和遠端環境之間移動檔案。 而且Adobe建議在將檔案從遠端來源移動到其他遠端位置時使用`rsync`方法。
+[靜態檔案](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)儲存在`mounts`中。 將檔案從來源掛載位置（例如您的本機環境）移轉至目的地掛載位置的方法有兩種。 這兩種方法都使用`rsync`公用程式，但Adobe建議使用`magento-cloud` CLI在本機和遠端環境之間移動檔案。 而且Adobe建議在將檔案從遠端來源移動到其他遠端位置時使用`rsync`方法。
 
 ### 使用CLI移轉檔案
 
@@ -188,7 +189,7 @@ Are you sure you want to continue? [Y/n] Y
   total size is 154.57K  speedup is 18.23
 ```
 
-使用`mount:upload`和`mount:download`命令的`--help`選項檢視更多選項。 例如，在移轉期間有`--delete`選項可移除無關的檔案。
+使用`--help`和`mount:upload`命令的`mount:download`選項檢視更多選項。 例如，在移轉期間有`--delete`選項可移除無關的檔案。
 
 ### 使用rsync移轉檔案
 
@@ -217,7 +218,7 @@ rsync -azvP <source> <destination>
 
    >[!TIP]
    >
-   >若要在您的[!DNL Cloud Console]中尋找&#x200B;**SSH存取**&#x200B;連結，請選取環境，然後按一下&#x200B;**存取網站**。
+   >若要在您的&#x200B;**中尋找** SSH存取[!DNL Cloud Console]連結，請選取環境，然後按一下&#x200B;**存取網站**。
 
    ```bash
    ssh -A <environment_ssh_link@ssh.region.magento.cloud>
@@ -249,7 +250,7 @@ rsync -azvP <source> <destination>
 
 >[!ENDSHADEBOX]
 
-Adobe **建議**&#x200B;將資料從生產環境移轉至測試環境，以完整測試您的網站並儲存在具有所有服務和設定的近乎生產環境中。
+Adobe **建議**&#x200B;將資料從生產環境移轉至測試環境，以完整測試您的網站，並儲存在具有所有服務和設定的近乎生產環境中。
 
 >[!NOTE]
 >
@@ -319,16 +320,10 @@ Adobe **建議**&#x200B;將資料從生產環境移轉至測試環境，以完�
    drop database main;
    ```
 
-   對於生產：
+   對於生產和中繼環境：
 
    ```shell
-   drop database <cluster-id>;
-   ```
-
-   對於分段：
-
-   ```shell
-   drop database <cluster-ID_stg>;
+   drop database <database_name>;
    ```
 
 1. 重新建立資料庫。
