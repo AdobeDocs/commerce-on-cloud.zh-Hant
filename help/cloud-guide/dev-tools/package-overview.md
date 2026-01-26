@@ -1,16 +1,17 @@
 ---
 title: '[!DNL ECE-Tools]封裝'
 description: 瞭解 [!DNL ECE-Tools] 套件，以及它如何協助管理和部署Adobe Commerce。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 15d762ef-bca7-480b-b719-caf131dc9180
+source-git-commit: db34528be490f92cc61c609ca143c01ef3284157
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
 
 # ECE-Tools套件
 
-[!DNL ECE-Tools]套件是一組指令碼和工具，設計用來管理和部署[!DNL Commerce]應用程式。 `ece-tools`封裝簡化了許多程式，例如管理cron工作、驗證專案組態以及套用Adobe修補程式和修補程式。 您可以在GitHub&rbrack;[ece-repo]上檢視並貢獻&lbrack;開放原始碼 [!DNL ECE-Tools] 程式碼存放庫。
+[!DNL ECE-Tools]套件是一組指令碼和工具，設計用來管理和部署[!DNL Commerce]應用程式。 `ece-tools`套件簡化了許多程式，例如管理cron工作、驗證專案設定，以及套用Adobe修補程式和修補程式。 您可以在GitHub[上檢視並貢獻 [!DNL ECE-Tools] 開放原始碼](https://github.com/magento/ece-tools)程式碼存放庫。
 
 {{ece-tools-package}}
 
@@ -26,11 +27,11 @@ php ./vendor/bin/ece-tools list
 
 `ece-tools`套件包含命令，可執行雲端基礎結構應用程式上啟動Adobe Commerce的組建、部署和部署後階段的作業。 例如，`php ./vendor/bin/ece-tools build`命令會開始應用程式建置程式。
 
-依預設，這些`ece-tools`命令位於`.magento.app.yaml`組態檔的[鉤點屬性](../application/hooks-property.md)中。
+依預設，這些`ece-tools`命令位於[組態檔的](../application/hooks-property.md)鉤點屬性`.magento.app.yaml`中。
 
 ## Docker配置生成器
 
-`ece-tools`套件包含[magento/magento-cloud-docker]套件的相依性，其為Docker影像提供功能和設定檔案，以啟動雲端基礎結構上Adobe Commerce的Docker開發環境。 您也可以以獨立套件的形式執行Commerce適用的Cloud Docker 。 請參閱[Docker開發](../dev-tools/cloud-docker.md)。
+`ece-tools`套件包含[magento/magento-cloud-docker](https://github.com/magento/magento-cloud-docker)套件的相依性，其為Docker影像提供功能和設定檔案，以啟動雲端基礎結構上Adobe Commerce的Docker開發環境。 您也可以以獨立套件的形式執行Commerce適用的Cloud Docker 。 請參閱[Docker開發](../dev-tools/cloud-docker.md)。
 
 ## 服務、路由和變數
 
@@ -72,7 +73,7 @@ Magento Cloud Services:
 
 ## 驗證環境設定
 
-有一組驗證指令可用來協助評估專案的組態。 如需每個精靈命令的詳細描述，請參閱&#x200B;_最佳化部署_&#x200B;區段中的[智慧型精靈](../deploy/smart-wizards.md)。 `wizard:ideal-state`命令會在建置階段自動執行。 若要確認專案的理想狀態：
+有一組驗證指令可用來協助評估專案的組態。 如需每個精靈命令的詳細描述，請參閱[最佳化部署](../deploy/smart-wizards.md)區段中的&#x200B;_智慧型精靈_。 `wizard:ideal-state`命令會在建置階段自動執行。 若要確認專案的理想狀態：
 
 ```bash
 php ./vendor/bin/ece-tools wizard:ideal-state
@@ -88,14 +89,9 @@ php ./vendor/bin/ece-tools wizard:ideal-state
 Ideal state is configured
 ```
 
-請參閱ece-tools[&#128279;](../release-notes/cloud-tools-suite.md)的發行說明。
+請參閱ece-tools[的](../release-notes/cloud-tools-suite.md)發行說明。
 
 ## Adobe修補程式和自訂修補程式
 
-`ece-tools`套件包含對[magento/magento-cloud-patches]套件的相依性，此套件提供Adobe修補程式和修補程式，可改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送關鍵修正程式。 「 」也會提供您新增至雲端基礎結構專案Adobe Commerce的自訂修補程式。 請參閱[套用修補程式](../development/apply-patches.md)。
+`ece-tools`套件包含對[magento/magento-cloud-patches](https://github.com/magento/magento-cloud-patches)套件的相依性，此套件提供Adobe修補程式和Hot Fix，可改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送關鍵修正。 「 」也會提供您新增至雲端基礎結構專案Adobe Commerce的自訂修補程式。 請參閱[套用修補程式](../development/apply-patches.md)。
 
-<!-- link definitions -->
-
-[ece-repo]: https://github.com/magento/ece-tools
-[magento/magento-cloud-docker]: https://github.com/magento/magento-cloud-docker
-[magento/magento-cloud-patches]: https://github.com/magento/magento-cloud-patches
