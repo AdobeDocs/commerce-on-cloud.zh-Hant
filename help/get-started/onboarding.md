@@ -21,7 +21,7 @@ Adobe在雲端基礎結構訂閱上啟用Commerce後，初始專案和程式碼�
 
 ## 註冊雲端帳戶
 
-如果您在雲端基礎結構帳戶上沒有Adobe Commerce，請連絡[銷售人員](https://business.adobe.com/products/magento/get-demo.html)。 當您註冊時，Adobe會建立您的帳戶並傳送一封歡迎電子郵件給您，為您提供如何存取專案介面的指示。 電子郵件包含連結，讓您可登入帳戶並完成初始專案設定。
+如果您在雲端基礎結構帳戶上沒有Adobe Commerce，請連絡[銷售人員](https://business.adobe.com/tw/products/magento/get-demo.html)。 當您註冊時，Adobe會建立您的帳戶並傳送一封歡迎電子郵件給您，為您提供如何存取專案介面的指示。 電子郵件包含連結，讓您可登入帳戶並完成初始專案設定。
 
 ## 存取專案並新增使用者
 
@@ -33,7 +33,7 @@ Adobe在雲端基礎結構訂閱上啟用Commerce後，初始專案和程式碼�
 
 ### 共用帳戶存取權
 
-授權擁有者可以設定帳戶的共用存取權。 共用存取可讓信任的員工和服務供應商使用說明中心，提交和追蹤與雲端基礎結構專案中Adobe Commerce相關的支援票證。 如需設定指示，請參閱說明中心的[共用存取](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access)文章。
+授權擁有者可以設定帳戶的共用存取權。 共用存取可讓信任的員工和服務供應商使用說明中心，提交和追蹤與雲端基礎結構專案中Adobe Commerce相關的支援票證。 如需設定指示，請參閱說明中心的[共用存取](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#shared-access)文章。
 
 ### [!DNL Cloud Console]
 
