@@ -23,7 +23,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>在<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly服務總覽</a>中新增下列有關來源遮罩的資訊。<br /> — 定義和流量流程<br /> — 啟用狀態（自2021年以來在所有雲端專案上啟用）已封鎖的來源URL範例<br />- REST API使用範例</p>
+      <td><p>在<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly服務總覽</a>中新增下列有關來源遮罩的資訊。<br /> — 定義和流量流程<br /> — 啟用狀態（自2021年以來在所有雲端專案上啟用）已封鎖的來源URL範例<br />- REST API使用範例</p>
 </td>
       <td>
         技術
@@ -45,7 +45,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">設定OpenSearch服務</a>中的範例版本。</p>
+      <td><p>更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/opensearch">設定OpenSearch服務</a>中的範例版本。</p>
 </td>
       <td>
         意見反應
