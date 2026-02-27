@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>已更新雲端專案上Commerce的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist">啟動檢查清單</a>，將Fastly AAAA記錄新增至DNS設定指示。</p>
+      <td><p>已更新雲端專案上Commerce的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/launch/checklist">啟動檢查清單</a>，將Fastly AAAA記錄新增至DNS設定指示。</p>
 </td>
       <td>
         意見反應
@@ -45,7 +45,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>已新增<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">將New Relic帳戶擁有者</a>變更為<em>雲端基礎結構指南上的Commerce</em>的指示。</p>
+      <td><p>已新增<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">將New Relic帳戶擁有者</a>變更為<em>雲端基礎結構指南上的Commerce</em>的指示。</p>
 </td>
       <td>
         技術
@@ -67,7 +67,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>在<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly服務總覽</a>.<br /> — 定義與流量流<br /> — 啟用狀態（自2021年以來在所有雲端專案上啟用）已封鎖的來源URL範例<br />- REST API使用範例</p>
+      <td><p>在<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly服務總覽</a>.<br /> — 定義與流量流<br /> — 啟用狀態（自2021年以來在所有雲端專案上啟用）已封鎖的來源URL範例<br />- REST API使用範例</p>
 </td>
       <td>
         技術
@@ -89,7 +89,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">設定OpenSearch服務</a>中的範例版本。</p>
+      <td><p>更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/opensearch">設定OpenSearch服務</a>中的範例版本。</p>
 </td>
       <td>
         意見反應
