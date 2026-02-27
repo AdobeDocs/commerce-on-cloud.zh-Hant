@@ -1,9 +1,10 @@
 ---
 title: 啟動檢查清單
 description: 檢閱網站啟動時的檢查清單專案。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
+source-git-commit: ca2d94364787695398b2b8af559733fe52ec2949
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 Adobe為每個環境提供Let&#39;s Encrypt SSL/TLS憑證。 Fastly需要此憑證才能透過HTTPS提供安全流量。
 
-若要使用此憑證，您必須更新您的DNS設定，以便Adobe可以完成網域驗證並將憑證套用至您的環境。 每個環境都有獨特的憑證，涵蓋Adobe Commerce在該環境中部署的雲端基礎結構網站上的網域。 我們建議在[Fastly設定程式](../cdn/fastly-configuration.md)期間完成並更新設定。
+若要使用此憑證，您必須更新DNS設定，讓Adobe可以完成網域驗證，並將憑證套用至您的環境。 每個環境都有獨特的憑證，涵蓋Adobe Commerce在該環境中部署的雲端基礎結構網站上的網域。 我們建議在[Fastly設定程式](../cdn/fastly-configuration.md)期間完成並更新設定。
 
 ## 使用生產設定更新DNS設定
 
@@ -38,7 +39,7 @@ Adobe為每個環境提供Let&#39;s Encrypt SSL/TLS憑證。 Fastly需要此憑�
 
 - 為您的生產環境布建的SSL/TLS憑證。
 
-  如果您在Fastly設定過程中新增了生產網域的ACME挑戰記錄，當您更新DNS設定以將流量路由到Fastly服務時，Adobe會自動將SSL/TLS憑證上傳到您的生產環境。 如果您未預先布建憑證，或您已更新網域，則Adobe必須完成網域驗證並布建憑證，這可能需要12小時的時間。
+  如果您在Fastly設定程式期間新增生產網域的ACME挑戰記錄，Adobe會在您更新DNS設定將流量路由到Fastly服務時，自動將SSL/TLS憑證上傳到您的生產環境。 如果您未預先布建憑證，或您已更新網域，則Adobe必須完成網域驗證並布建憑證，這可能需要12小時的時間。
 
 ### 若要更新網站啟動的DNS設定：
 
@@ -60,14 +61,14 @@ Adobe為每個環境提供Let&#39;s Encrypt SSL/TLS憑證。 Fastly需要此憑�
    | `www.<domain-name>.com` | prod.magentocloud.map.fastly.net |
    | `mystore.<domain-name>.com` | prod.magentocloud.map.fastly.net |
 
-1. 如果需要，請新增A記錄以將頂點網域(`<domain-name>.com`)對應到以下Fastly IP位址：
+1. 如果需要，請新增A和AAAA記錄以將頂點網域(`<domain-name>.com`)對應到以下Fastly IP位址：
 
-   | Apex網域 | 名稱 |
-   | --------------- | ----------------- |
-   | `<domain-name>.com` | `151.101.1.124` |
-   | `<domain-name>.com` | `151.101.65.124` |
-   | `<domain-name>.com` | `151.101.129.124` |
-   | `<domain-name>.com` | `151.101.193.124` |
+   | Apex網域 | 名稱 | AAANAME |
+   | --------------- | ----------------- | -------- |
+   | `<domain-name>.com` | `151.101.1.124` | 2a04:4e42:200::380 |
+   | `<domain-name>.com` | `151.101.65.124` | 2a04:4e42:400::380 |
+   | `<domain-name>.com` | `151.101.129.124` | 2a04:4e42:600::380 |
+   | `<domain-name>.com` | `151.101.193.124` | 2a04:4e42::380 |
 
 >[!IMPORTANT]
 >
@@ -90,7 +91,7 @@ Adobe為每個環境提供Let&#39;s Encrypt SSL/TLS憑證。 Fastly需要此憑�
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **注意**：您也可以從Admin更新基底URL。 請參閱&#x200B;_Adobe Commerce商店與購買體驗指南_&#x200B;中的[商店URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=zh-Hant)。
+   **注意**：您也可以從Admin更新基底URL。 請參閱&#x200B;_Adobe Commerce商店與購買體驗指南_&#x200B;中的[商店URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html)。
 
 1. 請稍候幾分鐘讓網站更新。
 
@@ -104,7 +105,7 @@ Adobe為每個環境提供Let&#39;s Encrypt SSL/TLS憑證。 Fastly需要此憑�
 
 - [已完成傳出電子郵件的測試](../project/outgoing-emails.md)
 
-- [管理員認證和基本管理員URL的安全設定](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/security/security-admin)
+- [管理員憑證和基本管理員URL的安全設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
 - [最佳化網頁的所有影像](../cdn/fastly-image-optimization.md)
 
@@ -136,9 +137,9 @@ Adobe為每個環境提供Let&#39;s Encrypt SSL/TLS憑證。 Fastly需要此憑�
 
 - [設定您的安全性掃描](overview.md#set-up-the-security-scan-tool)
 
-- [管理員使用者的安全設定](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/security/security-admin)
+- [管理員使用者的安全設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
-- 管理員URL的[安全設定](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- [管理員URL的安全設定](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [移除雲端基礎結構專案上任何不再使用Adobe Commerce的使用者](../project/user-access.md)
 
