@@ -3,9 +3,9 @@ user-guide-title: 雲端型 Commerce 的指南
 user-guide-description: 了解如何在雲端基礎結構上管理 Adobe Commerce 應用程式。
 product: magento
 feature: Cloud
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 2311b8e5c0216c01d0189c8f8e669dcddfcd1dcc
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '387'
 ht-degree: 8%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 8%
    + [專業工作流程](architecture/pro-develop-deploy-workflow.md)
    + [擴充架構](architecture/scaled-architecture.md)
    + [自動縮放](architecture/autoscaling.md)
-+ [開始使用](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=zh-Hant)
++ [開始使用](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + 發行說明 {#release-notes}
    + [雲端工具套裝](release-notes/cloud-tools-suite.md)
    + [ECE-Tools套件](release-notes/ece-tools-package.md)
@@ -89,6 +89,7 @@ ht-degree: 8%
    + [還原環境](development/restore-environment.md)
    + 儲存 {#storage}
       + [管理磁碟空間](storage/manage-disk-space.md)
+      + [檢查雲端基礎結構上Adobe Commerce的磁碟空間限制](storage/check-disk-space-limit-on-cloud.md)
       + [設定檔資料庫查詢](storage/profile-database-queries.md)
       + [備份資料庫](storage/database-dump.md)
       + [備份管理](storage/snapshots.md)
