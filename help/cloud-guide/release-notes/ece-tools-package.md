@@ -4,9 +4,9 @@ description: 請參閱ECE-Tools套件的最新改良清單。
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 16d5577da8841c2f65f9b5298beaa7fb84a1ab47
+source-git-commit: d31037e9afa4223165b208d5eb7714103a1d3e87
 workflow-type: tm+mt
-source-wordcount: '3314'
+source-wordcount: '3491'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,16 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.9 {#latest}
+## v2002.2.10 {#latest}
+
+發行日期： 2026年3月5日
+
+- ![新圖示](../../assets/new.svg) **PHP 8.5** — 已新增對PHP 8.5的支援。<!-- MCLOUD-14179 -->
+- ![修正圖示](../../assets/fix.svg) **已更新的功能測試** — 已更新的Valkey 8.1、8、2和Redis 8.4測試<!-- MCLOUD-13983 -->
+- ![修正圖示](../../assets/fix.svg) **已更新MariaDB、PHP及Opensearch驗證器** — 已更新驗證器指令碼。<!-- MCLOUD-14574/MCLOUD-14466 -->
+- ![修正圖示](../../assets/fix.svg) **EOL驗證器** — 已更新生命週期結束(EOL)服務日期。<!-- MCLOUD-14272 -->
+
+## v2002.2.9
 
 發行日期： 2025年11月13日
 
@@ -76,7 +85,7 @@ ht-degree: 0%
 
 發行日期： 2025年4月24日
 
-- ![修正圖示](../../assets/fix.svg) **適用於2.4.4/2.4.5**&#x200B;的Opensearch2 — 修正Adobe Commerce版本2.4.4/2.4.5.`opensearch2`中支援<!-- MCLOUD-13607 -->的相關問題
+- ![修正圖示](../../assets/fix.svg) **適用於2.4.4/2.4.5**&#x200B;的Opensearch2 — 修正Adobe Commerce版本2.4.4/2.4.5.<!-- MCLOUD-13607 -->中支援`opensearch2`的相關問題
 
 ## v2002.2.3
 
@@ -94,7 +103,7 @@ ht-degree: 0%
 發行日期： 2025年4月7日
 
 - ![新圖示](../../assets/new.svg) **Valkey** — 已新增對新服務(Valkey)的支援，此服務是取代Redis的替代服務。<!-- MCLOUD-13455 -->
-- ![修正圖示](../../assets/fix.svg) **Opensearch2 for 2.4.4/2.4.5** — 已在Adobe Commerce版本2.4.4/2.4.5.`opensearch2`中新增對<!-- MCLOUD-13493 -->的支援
+- ![修正圖示](../../assets/fix.svg) **Opensearch2 for 2.4.4/2.4.5** — 已在Adobe Commerce版本2.4.4/2.4.5.<!-- MCLOUD-13493 -->中新增對`opensearch2`的支援
 
 ## v2002.2.1
 
@@ -144,7 +153,7 @@ ht-degree: 0%
 發行日期： 2023年7月31日
 
 - ![修正圖示](../../assets/fix.svg) **錯誤碼** — 已更新錯誤碼結構描述和錯誤碼檔案產生器。
-- ![修正圖示](../../assets/fix.svg) **自訂Redis模型的驗證器** — 已更新自訂Redis後端模型的驗證器。 [檢視快取組態的範例](../environment/variables-deploy.md#cache_configuration)。
+- ![修正圖示](../../assets/fix.svg) **自訂Redis模型的驗證器** — 已更新自訂Redis後端模型的驗證器。[檢視快取組態](../environment/variables-deploy.md#cache_configuration)的範例。
 - ![修正圖示](../../assets/fix.svg) **RabbitMQ的驗證器** — 已新增RabbitMQ 3.11的支援
 - ![修正圖示](../../assets/fix.svg) **修正錯誤的連結** — 修正歡迎電子郵件範本中上線檔案的錯誤連結。
 
@@ -162,14 +171,14 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **已新增Adobe Commerce的Adobe I/O Events支援**。 擴充功能開發人員現在可以使用[Adobe I/O Events](https://developer.adobe.com/events/docs/)架構，將Commerce事件資訊從雲端執行個體傳送至其為[Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)撰寫的應用程式。 適用於Adobe Commerce的Adobe I/O Events在合作夥伴預覽中。<!-- CEXT-932 -->
 - ![新圖示](../../assets/new.svg) **OPcache組態的驗證器** — 新增驗證器以檢查排除路徑的OPcache組態。<!-- MCLOUD-9485 -->
-- ![修正圖示](../../assets/fix.svg) **修正GraphQL快取組態的問題** — 現在ECE-Tools會將GraphQL `id_salt`值保留在`cache`檔案的`app/etc/env.php`組態中。<!-- MCLOUD-9486 -->
+- ![修正圖示](../../assets/fix.svg) **修正GraphQL快取組態的問題** — 現在ECE-Tools會將GraphQL `id_salt`值保留在`app/etc/env.php`檔案的`cache`組態中。<!-- MCLOUD-9486 -->
 
 ## v2002.1.12
 
 發行日期： 2022年9月13日
 
-- ![新圖示](../../assets/new.svg) **啟用`synchronous_replication`** — 啟用`synchronous_replication=>true`時，ECE-Tools會在`app/etc/env.php`檔案中設定`MYSQL_USE_SLAVE_CONNECTION`。 此設定僅影響Commerce 2.4.6+。 檢視`MYSQL_USE_SLAVE_CONNECTION`部署變數[.](../environment/variables-deploy.md#mysql_use_slave_connection)中的<!-- MCLOUD-9142 -->變數說明
-- ![新圖示](../../assets/new.svg) **OpenSearch** — 新增功能以設定和設定下一個Adobe Commerce版本2.4.6的`opensearch`引擎。請參閱[設定OpenSearch服務](../services/opensearch.md)。<!-- MCLOUD-9236 -->
+- ![新圖示](../../assets/new.svg) **啟用`synchronous_replication`** — 啟用`MYSQL_USE_SLAVE_CONNECTION`時，ECE-Tools會在`app/etc/env.php`檔案中設定`synchronous_replication=>true`。 此設定僅影響Commerce 2.4.6+。 檢視[部署變數](../environment/variables-deploy.md#mysql_use_slave_connection).<!-- MCLOUD-9142 -->中的`MYSQL_USE_SLAVE_CONNECTION`變數說明
+- ![新圖示](../../assets/new.svg) **OpenSearch** — 新增功能以設定和設定下一個Adobe Commerce版本2.4.6的`opensearch`引擎。 請參閱[設定OpenSearch服務](../services/opensearch.md)。<!-- MCLOUD-9236 -->
 
 ## v2002.1.11
 
@@ -177,7 +186,7 @@ ht-degree: 0%
 
 - ![修正圖示](../../assets/fix.svg) **ElasticSuite Validator與OpenSearch** — 修正安裝OpenSearch時的ElasticSuite完整性檢查驗證器問題。<!-- MCLOUD-8767 -->
 - ![修正圖示](../../assets/fix.svg) **部署命令的傳回型別** — 修正部署命令的傳回型別。<!-- AC-3208 -->
-- ![修正圖示](../../assets/fix.svg) **[!DNL RabbitMQ]新Commerce 2.4.5安裝的問題** — 修正新Commerce 2.4.5安裝上的[!DNL RabbitMQ]當機問題。<!-- MCLOUD-9059 -->
+- ![修正圖示](../../assets/fix.svg) **[!DNL RabbitMQ]新Commerce 2.4.5安裝的問題** — 修正新Commerce 2.4.5的[!DNL RabbitMQ]當機問題。 安裝。<!-- MCLOUD-9059 -->
 
 ## v2002.1.10
 
@@ -193,10 +202,10 @@ ht-degree: 0%
 - ![新圖示](../../assets/new.svg) **PHP** — 已新增對PHP 8.1的支援。
 - ![修正圖示](../../assets/fix.svg) **symfony/process** — 已新增與symfony/process ^5.3的相容性。<!-- MCLOUD-8283 -->
 
-- ![新圖示](../../assets/new.svg) **取用者多個處理序** — 已新增`multiple_processes`選項，以便您可以指定每個取用者要衍生的處理序數目。 檢視`CRON_CONSUMERS_RUNNER`部署變數[.](../environment/variables-deploy.md#cron_consumers_runner)中的<!-- MCLOUD-8295 -->變數說明
+- ![新圖示](../../assets/new.svg) **取用者多個處理序** — 已新增`multiple_processes`選項，以便您可以指定每個取用者要衍生的處理序數目。 檢視[部署變數](../environment/variables-deploy.md#cron_consumers_runner).<!-- MCLOUD-8295 -->中的`CRON_CONSUMERS_RUNNER`變數說明
 - ![新圖示](../../assets/new.svg) **OpenSearch配置與完整主機路徑** — 已新增設定Elasticsearch配置與完整主機路徑的功能。
 - ![修正圖示](../../assets/fix.svg) **AWS S3** — 變更AWS S3啟用方法。
-- ![修正圖示](../../assets/fix.svg) **修正driver_options讀取器** — 已新增由`env.php`從`ece-tools`檔案讀取驗證器之DB連線的driver_options組態。<!-- MCLOUD-8420 -->
+- ![修正圖示](../../assets/fix.svg) **修正driver_options讀取器** — 已新增由`ece-tools`從`env.php`檔案讀取驗證器之DB連線的driver_options組態。<!-- MCLOUD-8420 -->
 
 ## v2002.1.8
 
@@ -215,7 +224,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg)已新增對Composer 2.0的支援。<!--MCLOUD-8003-->
 
-- ![修正圖示](../../assets/fix.svg) **已更新`symphony/console`**&#x200B;的撰寫器需求 — 已更新`composer.json`套件的ECE-Tools `symphony/console`版本需求，以修正導致`di:compile`命令失敗並出現下列錯誤的問題： `Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
+- ![修正圖示](../../assets/fix.svg) **已更新`symphony/console`**&#x200B;的撰寫器需求 — 已更新`symphony/console`套件的ECE-Tools `composer.json`版本需求，以修正導致`di:compile`命令失敗並出現下列錯誤的問題： `Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
 
 - ![修正圖示](../../assets/fix.svg)已更新終止軟體檢查(`eol.yaml`)以包含Elasticsearch 7.9.x。<!--MCLOUD-7938-->
 
@@ -251,9 +260,9 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **新SCD_NO_PARENT環境變數** — 已新增`SCD_NO_PARENT`環境變數(適用於Adobe Commerce >=2.4.2)以管理父系主題的靜態內容產生。<!--MCLOUD-7284-->
 
-- ![修正圖示](../../assets/fix.svg) **記憶體限制和命令** — 修正`php vendor/bin/ece-tools`檔案大小超過PHP memory_limit時，`cloud.log`命令無法運作的問題。 現在我們只從記錄檔讀取較小的資料子集，而不將整個`cloud.log`檔案讀取到記憶體中。<!--MCLOUD-7275--><!--MCLOUD-7400-->
+- ![修正圖示](../../assets/fix.svg) **記憶體限制和命令** — 修正`cloud.log`檔案大小超過PHP memory_limit時，`php vendor/bin/ece-tools`命令無法運作的問題。 現在我們只從記錄檔讀取較小的資料子集，而不將整個`cloud.log`檔案讀取到記憶體中。<!--MCLOUD-7275--><!--MCLOUD-7400-->
 
-- ![修正圖示](../../assets/fix.svg) **自訂資料庫連線** — 修正未使用為`.magento.env.yaml`定義的自訂資料庫連線的`DATABASE_CONFIGURATION`組態問題。 未將連線設定新增到`app/etc/env.php`.<!--MCLOUD-7426-->
+- ![修正圖示](../../assets/fix.svg) **自訂資料庫連線** — 修正未使用為`DATABASE_CONFIGURATION`定義的自訂資料庫連線的`.magento.env.yaml`組態問題。 未將連線設定新增到`app/etc/env.php`.<!--MCLOUD-7426-->
 
 - ![修正圖示](../../assets/fix.svg) **空的錯誤記錄檔** — 修正在`cloud.error.log`為空時導致部署失敗的問題。<!--MCLOUD-7296-->
 
@@ -287,7 +296,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg)已更新Elasticsearch相容性錯誤訊息，以顯示與Adobe Commerce Elasticsearch模組相容的Elasticsearch版本。 錯誤訊息現在會提供要在您的雲端基礎結構中安裝的特定Elasticsearch版本，以便與您的Adobe Commerce版本使用的Elasticsearch模組相容。 檢視[警告錯誤，部署階段](../dev-tools/error-reference.md#deploy-stage-1).<!--MCLOUD-6698-->
 
-- ![新圖示](../../assets/new.svg)已針對無效的`2026`環境變數設定新增警告錯誤`2027`和`MAGE_MODE`。 唯一有效值為`production`。 在此修正之前，`MAGE_MODE`可以設定為`developer`且沒有部署錯誤，只會在稍後嘗試寫入唯讀檔案時造成錯誤。 檢視[警告錯誤](../dev-tools/error-reference.md#warning-errors).<!--MCLOUD-6708-->
+- ![新圖示](../../assets/new.svg)已針對無效的`MAGE_MODE`環境變數設定新增警告錯誤`2026`和`2027`。 唯一有效值為`production`。 在此修正之前，`MAGE_MODE`可以設定為`developer`且沒有部署錯誤，只會在稍後嘗試寫入唯讀檔案時造成錯誤。 檢視[警告錯誤](../dev-tools/error-reference.md#warning-errors).<!--MCLOUD-6708-->
 
 - ![修正圖示](../../assets/fix.svg)修正Redis、RabbitMQ和MySQL服務的驗證，以確保這些版本與Adobe Commerce版本相容。 這些服務的有效版本現在已寫入`cloud.log`.<!--MCLOUD-7098-->
 
@@ -307,7 +316,7 @@ ht-degree: 0%
 
 **驗證和記錄改善**—
 
-- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools[的](../dev-tools/error-reference.md)錯誤訊息參考。<!--MCLOUD-5878-->
+- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!--MCLOUD-5878-->
 
 - ![新圖示](../../assets/new.svg)已將雲端錯誤記錄(`/var/log/cloud.error.log`)專案變更為JSON格式，以便以程式設計方式更輕鬆地剖析記錄。<!--MCLOUD-5879-->
 
@@ -327,7 +336,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **基礎結構更新**—
 
-   - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools[的](../dev-tools/error-reference.md)錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
+   - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
 
    - ![新圖示](../../assets/new.svg)改善資料庫傾印程式(`vendor/bin/ece-tools db-dump`)和更新的記錄訊息，以釐清資料庫傾印作業會將應用程式切換到維護模式、停止消費者佇列程式，以及在傾印開始之前停用cron工作。<!--MCLOUD-5324, MCLOUD-2062-->
 
@@ -355,15 +364,15 @@ ht-degree: 0%
       - `app:config:import`
       - `module:enable`
 
-     每個呼叫的記錄層級由[`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands)檔案中`.magento.env.yaml`變數的組態決定。<!--MCLOUD-3503-->
+     每個呼叫的記錄層級由`.magento.env.yaml`檔案中[`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands)變數的組態決定。<!--MCLOUD-3503-->
 
 - ![新圖示](../../assets/new.svg) **驗證改善**—
 
    - ![新圖示](../../assets/new.svg) **Elasticsearch 7.x相容性檢查** — 已針對Elasticsearch 7.x軟體相容性檢查更新Elasticsearch驗證。<!--MCLOUD-5542-->
 
-   - ![新圖示](../../assets/new.svg) **已更新服務版本和EOL驗證檢查** — 已更新驗證以根據Adobe Commerce 2.4檢查已安裝的服務版本。<!--MCLOUD-6144-->
+   - ![新圖示](../../assets/new.svg) **已更新服務版本和EOL驗證檢查** — 已更新驗證，以根據Adobe Commerce 2.4檢查已安裝的服務版本。 需求。<!--MCLOUD-6144-->
 
-   - ![修正圖示](../../assets/fix.svg)修正驗證問題，因此只有在`post-deploy`檔案中缺少`.magento.app.yaml`連結設定時，才會顯示下列部署後警告訊息：
+   - ![修正圖示](../../assets/fix.svg)修正驗證問題，因此只有在`.magento.app.yaml`檔案中缺少`post-deploy`連結設定時，才會顯示下列部署後警告訊息：
 
      ```text
      Your application does not have the "post_deploy" hook enabled.
@@ -384,7 +393,7 @@ ht-degree: 0%
 
    - ![新圖示](../../assets/new.svg) **已新增`env.php`檔案和資料的驗證** — 在安裝和升級過程中已新增`env.php`檔案和資料的檢查。<!--MCLOUD-5991-->
 
-      - 如果安裝遺失`env.php`檔案，且`crypt/key`檔案中未指定`.magento.app.yaml`值，則部署會失敗，並出現下列通知：
+      - 如果安裝遺失`env.php`檔案，且`.magento.app.yaml`檔案中未指定`crypt/key`值，則部署會失敗，並出現下列通知：
 
         ```text
         The crypt/key key value does not exist in the ./app/etc/env.php file or the CRYPT_KEY cloud environment variable``Missing crypt key for upgrading Magento`.
@@ -403,7 +412,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **基礎結構更新**—
 
-   - ![新圖示](../../assets/new.svg) **新增適用於Commerce的Cloud Docker的個別套件** — 將Docker套件與`ece-tools`套件脫鉤，以維持程式碼品質並提供獨立的發行版本。 從`ece-tools`magento-cloud-docker[&#x200B; GitHub存放庫管理與](https://github.com/magento/magento-cloud-docker)相關的更新與修正。<!--MAGECLOUD-2927-->
+   - ![新圖示](../../assets/new.svg) **新增適用於Commerce的Cloud Docker的個別套件** — 將Docker套件與`ece-tools`套件脫鉤，以維持程式碼品質並提供獨立的發行版本。 從[magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub存放庫管理與`ece-tools`相關的更新與修正。<!--MAGECLOUD-2927-->
 
    - ![新圖示](../../assets/new.svg) **更新的修補功能** — 將修補功能從ECE-Tools套件移至單獨的[magento-cloud-patches](https://github.com/magento/magento-cloud-patches)套件。 部署期間，`ece-tools`會使用新套件套用修補程式。 請參閱[雲端修補程式發行說明](cloud-patches.md).<!--MAGECLOUD-4567-->
 
@@ -413,11 +422,11 @@ ht-degree: 0%
 
    - ![新圖示](../../assets/new.svg)現在您可以使用XML組態檔自訂建置、部署和部署後程式，以覆寫或自訂預設組態。
 
-   - ![新圖示](../../assets/new.svg) **已在`hooks`中變更`.magento.app.yaml`**&#x200B;設定 — 我們已更新`hooks`設定格式以支援案例部署。 舊版ECE-Tools 2002.0.x仍受支援。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。 請參閱[案例部署](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks)。
+   - ![新圖示](../../assets/new.svg) **已在`.magento.app.yaml`**&#x200B;中變更`hooks`設定 — 我們已更新`hooks`設定格式以支援案例部署。 舊版ECE-Tools 2002.0.x仍受支援。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。 請參閱[案例部署](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks)。
 
 >[!NOTE]
 >
->在更新至ECE-Tools 2002.1.0版之前，請先向後檢閱[&#x200B;   不相容的變更](backward-incompatible-changes.md)，瞭解可能需要您執行的變更   在雲端基礎結構專案設定或流程上更新Adobe Commerce。
+>在更新至ECE-Tools 2002.1.0版之前，請先向後檢閱[   不相容的變更](backward-incompatible-changes.md)，瞭解可能需要您執行的變更   在雲端基礎結構專案設定或流程上更新Adobe Commerce。
 
 - ![新圖示](../../assets/new.svg) **服務更新**—
 
@@ -441,7 +450,7 @@ ht-degree: 0%
 
    - ![修正圖示](../../assets/fix.svg)已移除`SCD_EXCLUDE_THEMES`、`STATIC_CONTENT_THREADS`、`DO_DEPLOY_STATIC_CONTENT`和`STATIC_CONTENT_SYMLINK`環境變數。 請參閱[回溯不相容的變更](backward-incompatible-changes.md#environment-configuration-changes).<!--MAGECLOUD-4407, MAGECLOUD-3873-->
 
-   - ![修正圖示](../../assets/fix.svg)修正Elastic Suite組態程式中的問題，以便在您設定不含`ELASTICSUITE_CONFIGURATION`選項的`_merge`部署變數時，依照預期覆寫預設組態。<!--MAGECLOUD-4388-->
+   - ![修正圖示](../../assets/fix.svg)修正Elastic Suite組態程式中的問題，以便在您設定不含`_merge`選項的`ELASTICSUITE_CONFIGURATION`部署變數時，依照預期覆寫預設組態。<!--MAGECLOUD-4388-->
 
 - ![新圖示](../../assets/new.svg) **CLI命令更新**—
 
