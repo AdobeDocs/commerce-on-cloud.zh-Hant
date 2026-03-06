@@ -1,13 +1,13 @@
 ---
-source-git-commit: 1521b83be787fd7d8e0db302bfaea48f912af572
+source-git-commit: 603e8365fb20c90e9d54cb8c809cc51b5cd0ce9a
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '947'
 ht-degree: 3%
 
 ---
 # ece-tools
 
-**版本**： 2002.2.9
+**版本**： 2002.2.10
 
 此參考包含34個可透過`ece-tools`命令列工具使用的命令。
 在雲端基礎結構上的Adobe Commerce中使用`ece-tools list`命令會自動產生初始清單。
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 ### 全域選項
 
-#### `--help`，`-h`
+#### `--help`, `-h`
 
 顯示指定指令的說明。 當沒有指定命令時，顯示清單命令的說明
 
@@ -32,21 +32,21 @@ ht-degree: 3%
 - 預設： `false`
 - 不接受值
 
-#### `--quiet`，`-q`
+#### `--quiet`, `-q`
 
 只顯示錯誤。 會隱藏所有其他輸出
 
 - 預設： `false`
 - 不接受值
 
-#### `--verbose`，`-v|-vv|-vvv`
+#### `--verbose`, `-v|-vv|-vvv`
 
 增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
 
 - 預設： `false`
 - 不接受值
 
-#### `--version`，`-V`
+#### `--version`, `-V`
 
 顯示此應用程式版本
 
@@ -65,7 +65,7 @@ ht-degree: 3%
 
 - 不接受值
 
-#### `--no-interaction`，`-n`
+#### `--no-interaction`, `-n`
 
 請勿詢問任何互動式問題
 
@@ -85,32 +85,32 @@ ece-tools _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT]
 
 如需全域選項，請參閱[全域選項](#global-options)。
 
-#### `--shell`，`-s`
+#### `--shell`, `-s`
 
 殼層型別(「bash」、「fish」、「zsh」)
 
 - 需要值
 
-#### `--input`，`-i`
+#### `--input`, `-i`
 
 輸入權杖的陣列（例如COMP_WORDS或argv）
 
 - 預設： `[]`
 - 需要值
 
-#### `--current`，`-c`
+#### `--current`, `-c`
 
 游標所在的「輸入」陣列索引（例如COMP_CWORD）
 
 - 需要值
 
-#### `--api-version`，`-a`
+#### `--api-version`, `-a`
 
 完成指令碼的API版本
 
 - 需要值
 
-#### `--symfony`，`-S`
+#### `--symfony`, `-S`
 
 已棄用
 
@@ -206,14 +206,14 @@ ece-tools db-dump [-d|--remove-definers] [-a|--dump-directory DUMP-DIRECTORY] [-
 
 如需全域選項，請參閱[全域選項](#global-options)。
 
-#### `--remove-definers`，`-d`
+#### `--remove-definers`, `-d`
 
 從資料庫傾印中移除定義項
 
 - 預設： `false`
 - 不接受值
 
-#### `--dump-directory`，`-a`
+#### `--dump-directory`, `-a`
 
 使用替代目錄來儲存傾印
 
@@ -413,7 +413,7 @@ ece-tools backup:restore [-f|--force] [--file [FILE]]
 
 如需全域選項，請參閱[全域選項](#global-options)。
 
-#### `--force`，`-f`
+#### `--force`, `-f`
 
 還原備份期間覆寫現有檔案
 
@@ -646,7 +646,7 @@ ece-tools error:show [-j|--json] [--] [<error-code>]
 
 如需全域選項，請參閱[全域選項](#global-options)。
 
-#### `--json`，`-j`
+#### `--json`, `-j`
 
 用於取得JSON格式的結果
 
