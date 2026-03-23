@@ -1,7 +1,7 @@
 ---
-source-git-commit: d7d8be211f07363c31ec558382f7adc38f6a46c6
+source-git-commit: 8ee3ad7754340d3bc095abd2f744549a0d39b379
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '325'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a>版本，v2002.2.10。</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a>版本，v2002.2.10。</p>
 </td>
       <td>
         技術
@@ -45,7 +45,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>新增說明如何在雲端上的Adobe Commerce中<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">變更管理員URL</a>，而非內部部署。</p>
+      <td><p>新增說明如何在雲端上的Adobe Commerce中<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">變更管理員URL</a>，而非內部部署。</p>
 </td>
       <td>
         重大更新，意見反應
@@ -67,7 +67,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>新增檔案，說明如何從Cloud Console檢查Adobe Commerce在雲端專案</a>上的磁碟空間限制<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud">。</p>
+      <td><p>新增檔案，說明如何從Cloud Console檢查Adobe Commerce在雲端專案</a>上的磁碟空間限制<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud">。</p>
 </td>
       <td>
         新主題，技術
@@ -89,7 +89,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>已更新雲端專案上Commerce的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/launch/checklist">啟動檢查清單</a>，將Fastly AAAA記錄新增至DNS設定指示。</p>
+      <td><p>已更新雲端專案上Commerce的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist">啟動檢查清單</a>，將Fastly AAAA記錄新增至DNS設定指示。</p>
 </td>
       <td>
         意見反應
@@ -111,7 +111,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>已新增<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">將New Relic帳戶擁有者</a>變更為<em>雲端基礎結構指南上的Commerce</em>的指示。</p>
+      <td><p>已新增<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">將New Relic帳戶擁有者</a>變更為<em>雲端基礎結構指南上的Commerce</em>的指示。</p>
 </td>
       <td>
         技術
@@ -133,34 +133,12 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>在<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly服務總覽</a>.<br /> — 定義與流量流<br /> — 啟用狀態（自2021年以來在所有雲端專案上啟用）已封鎖的來源URL範例<br />- REST API使用範例</p>
+      <td><p>在<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly服務總覽</a>.<br /> — 定義與流量流<br /> — 啟用狀態（自2021年以來在所有雲端專案上啟用）已封鎖的來源URL範例<br />- REST API使用範例</p>
 </td>
       <td>
         技術
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/e367fd9c565d4d6d2bbc15b0289768dc38dcf7a9">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年1月13日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/opensearch">設定OpenSearch服務</a>中的範例版本。</p>
-</td>
-      <td>
-        意見反應
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/f5d325dbb14e5e524c89b41c4d5b82383b5b1ac7">認可</a></td>
     </tr>
   </tbody>
 </table>
