@@ -39,7 +39,7 @@ ht-degree: 0%
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->您必須在可用版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之間依序[升級RabbitMQ，例如，您無法直接從3.9升級至4.1
+>您必須在可用版本[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之間依序升級RabbitMQ，例如，您無法直接從3.9升級至4.1
 >
 >升級至新版RabbitMQ後，請觸發完整部署，以確保在RabbitMQ中重新建立自訂訊息佇列。
 
