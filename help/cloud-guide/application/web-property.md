@@ -2,9 +2,10 @@
 title: Web屬性
 description: 請參閱如何在 [!DNL Commerce] 應用程式組態檔中設定Web屬性的範例。
 feature: Cloud, Configuration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 6ecf6fb5-57a8-435c-8de3-f66dc56837fe
+source-git-commit: 94a7748348ba590bb4fed740df658c5bac4c31e9
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -31,12 +32,16 @@ web:
 | `rules` | 指定位置的覆寫。 使用規則運算式來比對請求。 如果傳入的請求符合規則，則規則的索引鍵會覆寫對請求的一般處理。 |
 | `passthru` | 設定在找不到靜態檔案或PHP檔案時使用的URL。 一般而言，此URL是您應用程式（例如`/index.php`或`/app.php`）的前端控制器。 |
 | `root` | 設定相對於在網頁上公開之應用程式根目錄的路徑。 雲端專案的公用目錄（位置&quot;/&quot;）預設為「pub」。 |
-| `scripts` | 允許在此位置載入指令碼。 將值設定為`true`以允許指令碼。 |
+| `scripts` | 允許在此位置載入指令碼。 將值設定為`true`以允許指令碼。 對於`pub/media`和`pub/static`目錄，預設組態設定為`scripts: false`以防止執行上載的檔案。 |
+
+>[!IMPORTANT]
+>
+>**安全性注意事項：**&#x200B;雲端上Adobe Commerce的預設`web`屬性設定會針對媒體位置設定`scripts: false`，以防止執行已上傳的檔案。 請勿覆寫此設定，除非您完全瞭解對實作的安全性影響。
 
 預設設定允許以下專案：
 
 - 從根(`/`)路徑，只能存取網頁和媒體
-- 從`~/pub/static`和`~/pub/media`路徑中，可存取任何檔案
+- 從`~/pub/media`和`~/pub/static`路徑中，可存取任何檔案
 
 下列範例顯示`.magento.app.yaml`檔案中，與[`mounts`屬性](properties.md#mounts)中的專案相關的一組網頁可存取位置的預設設定：
 
