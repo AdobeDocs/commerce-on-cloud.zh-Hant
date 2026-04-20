@@ -2,7 +2,7 @@
 title: 雲端基礎結構上的Commerce
 description: 了解如何建置、部署和管理雲端基礎結構上的 Commerce。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 603e8365fb20c90e9d54cb8c809cc51b5cd0ce9a
+source-git-commit: 7bbda734fbaccca9366c11b03e38b30513908cfe
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 3%
@@ -23,9 +23,9 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->如需安全性詳細資訊，請參閱[安全性啟動檢查清單](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
+>如需安全性詳細資訊，請參閱[安全性啟動檢查清單](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
 
-詳細檢視[技術棧疊](architecture/tech-stack.md)，或進一步瞭解Commerce [&#128279;](architecture/cloud-architecture.md)的雲端架構中的特定功能和支援產品。
+詳細檢視[技術棧疊](architecture/tech-stack.md)，或進一步瞭解Commerce ](architecture/cloud-architecture.md)的[雲端架構中的特定功能和支援產品。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 ## 雲端區域
 
-以下章節提供雲端基礎結構上Adobe Commerce可用的不同AWS和Azure區域的詳細資訊。
+以下章節提供雲端基礎結構上AWS可用的不同Azure和Adobe Commerce區域的詳細資訊。
 
 ## AWS地區
 
@@ -48,7 +48,7 @@ ht-degree: 3%
 
 ## Azure地區
 
-顯示Azure區域的![圖表](../assets/azure-regions.svg){zoomable="yes"}
+![顯示Azure地區的圖表](../assets/azure-regions.svg){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -58,11 +58,11 @@ ht-degree: 3%
 
 Commerce雲端基礎結構指南假設您具備一些關於Adobe Commerce應用程式的工作知識和瞭解。 您可以參閱下列[!DNL Commerce]開發人員與使用手冊：
 
-- [Adobe Commerce開發人員檔案](https://developer.adobe.com/commerce/docs/) (Adobe Developer網站) — 開發、自訂、整合、擴充及使用進階功能
+- [Adobe Commerce開發人員檔案](https://developer.adobe.com/commerce/docs/) （Adobe Developer網站） — 開發、自訂、整合、擴充及使用進階功能
 
-- [Adobe Commerce檔案](https://experienceleague.adobe.com/docs/commerce.html?lang=zh-Hant) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的[!DNL Commerce]專案
+- [Adobe Commerce檔案](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的[!DNL Commerce]專案
 
 {{$include /help/_includes/templated/whats-new.md}}
 
 
-<!-- Last updated from includes: 2026-02-27 23:49:32 -->
+<!-- Last updated from includes: 2026-04-19 20:38:08 -->
