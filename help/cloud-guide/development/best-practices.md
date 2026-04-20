@@ -50,10 +50,10 @@ ht-degree: 0%
 
    - 使用SSH登入遠端伺服器並驗證下列專案：
 
-      - 視需要檢查索引器狀態並重新索引。 請參閱&#x200B;_設定指南_&#x200B;中的[管理索引子](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)。
+      - 視需要檢查索引器狀態並重新索引。 請參閱&#x200B;_設定指南_&#x200B;中的[管理索引子](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=zh-Hant)。
 
       - 檢查Adobe Commerce資料庫中的`cron`記錄檔和`cron_schedule`資料表以驗證cron狀態，並視需要重新執行cron工作。
-請參閱_設定指南_&#x200B;中的[記錄](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging)。
+請參閱_設定指南_&#x200B;中的[記錄](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=zh-Hant#logging)。
 
    - 在中繼和生產環境中完成升級後使用者驗收測試UAT，並修正與協力廠商和自訂擴充功能升級相關的任何問題。
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 如需設定和使用情況的詳細資訊，請參閱：
 
-- [升級相容性工具概覽](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
-- [執行升級相容性工具](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
+- [升級相容性工具概覽](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
+- [執行升級相容性工具](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
 
-對於使用全網站分析工具的雲端商家，您也可以從控制面板觸發UCT，並直接從Widget下載HTML報表。 請參閱整合[全網站分析工具](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)。
+對於使用全網站分析工具的雲端商家，您也可以從控制面板觸發UCT，並直接從Widget下載HTML報表。 請參閱整合[全網站分析工具](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)。
