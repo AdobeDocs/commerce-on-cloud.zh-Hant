@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>已將安全性備註新增至雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web屬性組態</a>參考，以澄清Web屬性的預設組態會將<code class="language-plaintext highlighter-rouge">scripts:false</code>用於媒體位置，以防止執行已上傳的檔案。</p>
+      <td><p>已將安全性備註新增至雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web屬性組態</a>參考，以澄清Web屬性的預設組態會將<code class="language-plaintext highlighter-rouge">scripts:false</code>用於媒體位置，以防止執行已上傳的檔案。</p>
 </td>
       <td>
         技術，意見回饋
@@ -45,7 +45,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a>版本，v2002.2.10。</p>
+      <td><p><a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a>版本，v2002.2.10。</p>
 </td>
       <td>
         技術
@@ -67,7 +67,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>新增說明如何在雲端上的Adobe Commerce中<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">變更管理員URL</a>，而非內部部署。</p>
+      <td><p>新增說明如何在雲端上的Adobe Commerce中<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">變更管理員URL</a>，而非內部部署。</p>
 </td>
       <td>
         重大更新，意見反應
@@ -89,7 +89,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>新增檔案，說明如何從Cloud Console檢查Adobe Commerce在雲端專案</a>上的磁碟空間限制<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud">。</p>
+      <td><p>新增檔案，說明如何從Cloud Console檢查Adobe Commerce在雲端專案</a>上的磁碟空間限制<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud">。</p>
 </td>
       <td>
         新主題，技術
@@ -111,7 +111,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>已更新雲端專案上Commerce的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist">啟動檢查清單</a>，將Fastly AAAA記錄新增至DNS設定指示。</p>
+      <td><p>已更新雲端專案上Commerce的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/launch/checklist">啟動檢查清單</a>，將Fastly AAAA記錄新增至DNS設定指示。</p>
 </td>
       <td>
         意見反應
