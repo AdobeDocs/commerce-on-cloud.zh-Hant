@@ -1,23 +1,27 @@
 ---
-source-git-commit: 50e1a864dcde1148f5ed036b55815442c5986eaf
+source-git-commit: bd353c3d100dee7fd0a1846b582a8af44448ff1b
 workflow-type: tm+mt
-source-wordcount: '2313'
+source-wordcount: '3168'
 ht-degree: 0%
 
 ---
 # 適用於Adobe Commerce的雲端套件
 
-<!-- The 'packages' variable contains the 'packages' node of the '_data/codebase/cloud/composer_lock.json' file
- -->
+<!--
+The 'packages' variable contains the 'packages' node of the '_data/codebase/cloud/composer_lock.json' file
+-->
 
-<!-- The 'packages-dev' variable contains the 'packages-dev' node of the '_data/codebase/cloud/composer_lock.json' file
- -->
+<!--
+The 'packages-dev' variable contains the 'packages-dev' node of the '_data/codebase/cloud/composer_lock.json' file
+-->
 
-<!-- The 'product' variable contains data of the 'magento/magento-cloud-metapackage' package
- -->
+<!--
+The 'product' variable contains data of the 'magento/magento-cloud-metapackage' package
+-->
 
-<!-- The edition variable contains `cloud` value from the _data/names.yml file
- -->
+<!--
+The edition variable contains `cloud` value from the _data/names.yml file
+-->
 
 雲端基礎結構上的Adobe Commerce使用Composer來管理PHP套件。
 

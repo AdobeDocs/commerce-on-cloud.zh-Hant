@@ -3,13 +3,13 @@ title: 登入 [!DNL Cloud Console]
 description: 瞭解雲端基礎結構上適用於Adobe Commerce的 [!DNL Cloud Console] 。
 recommendations: noDisplay, catalog
 last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4c68508a-f25a-457b-be6d-36dc8ac428f1
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '393'
 ht-degree: 0%
 
 ---
-
 
 # 登入[!DNL Cloud Console]
 
@@ -39,12 +39,14 @@ ht-degree: 0%
 | -------------- | ----------------------------------- |
 | [活動資料流](../cloud-guide/project/activity-stream.md) | 與執行、擱置或歷史動作的可排序清單互動。 選取活動並檢視記錄，或取消執行中的組建。 |
 | [專案和環境總覽](../cloud-guide/project/overview.md#project-overview) | 開啟您的專案，並檢視專案詳細資訊和環境清單的概觀。 環境概觀提供有關環境狀態、應用程式存取和最近活動的更多詳細資訊。 |
-| [整合表單](../cloud-guide/integrations/overview.md) | 使用簡單的表單和指引來新增整合，例如位元貯體或Slack通知。 |
+| [整合表單](../cloud-guide/integrations/overview.md) | 使用簡單的表單和指引來新增整合，例如Bitbucket或Slack通知。 |
 | [專案清單](../cloud-guide/project/overview.md#cloud-console) | _所有專案_&#x200B;檢視會列出您有權存取的所有專案。 您可以按一下「**[!UICONTROL Show filters]**」並按型別、地區或計畫篩選專案清單。 |
 | [變數可見性選項](../cloud-guide/environment/variable-levels.md) | 在建置或執行階段限制專案層級或環境層級變數的可見度。 |
 
-<!-- The following are features yet to be activated:
-| **Apps and services topology** | The Apps & Services topology is visible on Project and Environment views. This interactive diagram allows you to select a service and view the relationship details, such as name, type, version, port, and more. Click **[!UICONTROL View details]** to access the overview and configuration panel for each service. | -->
+<!--
+The following are features yet to be activated:
+| **Apps and services topology** | The Apps & Services topology is visible on Project and Environment views. This interactive diagram allows you to select a service and view the relationship details, such as name, type, version, port, and more. Click **[!UICONTROL View details]** to access the overview and configuration panel for each service. | 
+-->
 
 ## 主控台問題
 

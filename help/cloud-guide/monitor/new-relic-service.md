@@ -4,7 +4,7 @@ description: 瞭解您的Adobe Commerce在雲端基礎結構專案中可用的Ne
 feature: Cloud, Observability
 last-substantial-update: 2023-09-06T00:00:00Z
 exl-id: 10966241-311d-4b68-804d-4c9569bf933d
-source-git-commit: 3784e7b2ddc8f6ae20fd2c6fd557f2408d870cf2
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -35,7 +35,7 @@ ht-degree: 0%
 - **資料庫查詢監視** — 尋找並監視影響效能的資料庫查詢。
 - **應用程式對應** — 檢視您網站、擴充功能及外部服務中的所有應用程式相依性。
 - **[!DNL Apdex]分數** — 評估績效並建立警示，識別問題並在發生時通知您，例如受快速銷售或網路事件影響的網站績效。 檢視[Apdex分數](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measure-user-satisfaction/)。
-- **Adobe Commerce的管理警示** — 使用此New Relic警示原則，根據業界最佳實務來監控應用程式和基礎建設效能。 檢視[使用Adobe Commerce警示原則的Managed警示監視效能](investigate-performance.md/#monitor-performance-with-managed-alerts)。
+- **Adobe Commerce的管理警示** — 使用此New Relic警示原則，根據業界最佳實務來監控應用程式和基礎建設效能。 檢視[使用Adobe Commerce警示原則的Managed警示監視效能](investigate-performance.md#monitor-performance-with-managed-alerts)。
 - **追蹤部署** — 監視部署事件並分析部署對整體效能的影響。 請參閱[追蹤部署](track-deployments.md)。
 
 您的雲端基礎結構專案上的Adobe Commerce包含New Relic APM服務的軟體以及授權金鑰。 您不需要購買或安裝任何其他軟體。

@@ -4,7 +4,7 @@ description: 請參閱ECE-Tools套件的最新改良清單。
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: b3d634838e562ceba4221a69e87eda377d8f9363
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
 source-wordcount: '3485'
 ht-degree: 0%
@@ -256,7 +256,9 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **新SCD_NO_PARENT環境變數** — 已新增`SCD_NO_PARENT`環境變數（適用於Adobe Commerce >=2.4.2）以管理父系主題的靜態內容產生。<!--MCLOUD-7284-->
 
-- ![修正圖示](../../assets/fix.svg) **記憶體限制和命令** — 修正`cloud.log`檔案大小超過PHP memory_limit時，`php vendor/bin/ece-tools`命令無法運作的問題。 現在我們只從記錄檔讀取較小的資料子集，而不將整個`cloud.log`檔案讀取到記憶體中。<!--MCLOUD-7275--><!--MCLOUD-7400-->
+- ![修正圖示](../../assets/fix.svg) **記憶體限制和命令** — 修正`cloud.log`檔案大小超過PHP memory_limit時，`php vendor/bin/ece-tools`命令無法運作的問題。 我們現在只從記錄檔讀取較小的資料子集，而不將整個`cloud.log`檔案讀取到記憶體中。
+  <!--MCLOUD-7275-->
+  <!--MCLOUD-7400-->
 
 - ![修正圖示](../../assets/fix.svg) **自訂資料庫連線** — 修正未使用為`DATABASE_CONFIGURATION`定義的自訂資料庫連線的`.magento.env.yaml`組態問題。 未將連線設定新增到`app/etc/env.php`.<!--MCLOUD-7426-->
 
@@ -312,7 +314,7 @@ ht-degree: 0%
 
 **驗證和記錄改善**—
 
-- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考。<!--MCLOUD-5878-->
+- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!--MCLOUD-5878-->
 
 - ![新圖示](../../assets/new.svg)已將雲端錯誤記錄(`/var/log/cloud.error.log`)專案變更為JSON格式，以便以程式設計方式更輕鬆地剖析記錄。<!--MCLOUD-5879-->
 
@@ -332,7 +334,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **基礎結構更新**—
 
-   - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
+   - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
 
    - ![新圖示](../../assets/new.svg)改善資料庫傾印程式(`vendor/bin/ece-tools db-dump`)和更新的記錄訊息，以釐清資料庫傾印作業會將應用程式切換到維護模式、停止消費者佇列程式，以及在傾印開始之前停用cron工作。<!--MCLOUD-5324, MCLOUD-2062-->
 
@@ -422,7 +424,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在更新至ECE-Tools 2002.1.0版之前，請先向後檢閱[&#x200B;   不相容的變更](backward-incompatible-changes.md)，瞭解可能需要您執行的變更   在雲端基礎結構專案設定或流程上更新Adobe Commerce。
+>在更新至ECE-Tools 2002.1.0版之前，請檢閱[回溯不相容的變更](backward-incompatible-changes.md)，以瞭解可能需要您在雲端基礎結構專案設定或程式上更新Adobe Commerce的變更。
 
 - ![新圖示](../../assets/new.svg) **服務更新**—
 
