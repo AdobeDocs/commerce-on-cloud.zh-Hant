@@ -2,11 +2,11 @@
 title: ECE-Tools發行說明
 description: 請參閱ECE-Tools套件的最新改良清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-08-07T00:00:00Z
+last-substantial-update: 2026-05-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
+source-git-commit: 0781fdfe8b0dbc6312848572ff4b996e51270a3f
 workflow-type: tm+mt
-source-wordcount: '3485'
+source-wordcount: '3563'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,18 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.10 {#latest}
+## v2002.2.11 {#latest}
+
+發行日期： 2026年5月06日
+
+- ![新圖示](../../assets/new.svg) **RabbitMQ** — 已新增RabbitMQ 4.2支援。<!-- MCLOUD-14374 -->
+- ![新圖示](../../assets/new.svg) **Opensearch** — 已針對多個Magento版本新增Opensearch 2.19和3.5支援。<!-- MCLOUD-14682 -->
+- ![新圖示](../../assets/new.svg) **Valkey** — 新增Valkey 8.1和9支援。<!-- MCLOUD-14784/MCLOUD-14625 -->
+- ![新圖示](../../assets/new.svg) **ActiveMQ** — 已新增ActiveMQ 2.5.1支援。<!-- MCLOUD-14683 -->
+- ![新圖示](../../assets/new.svg) **MariaDB** — 已新增MariaDB 11.8和12.2支援。<!-- MCLOUD-14628 -->
+- ![修正圖示](../../assets/fix.svg) **設定和部署** — 修正雲端部署警告、更新撰寫器測試棄用，以及更正部署時的ECE工具版本可見性。<!-- MCLOUD-14822 -->
+
+## v2002.2.10
 
 發行日期： 2026年3月5日
 
@@ -85,7 +96,7 @@ ht-degree: 0%
 
 發行日期： 2025年4月24日
 
-- ![修正圖示](../../assets/fix.svg) **適用於2.4.4/2.4.5**&#x200B;的Opensearch2 — 修正Adobe Commerce版本2.4.4/2.4.5中支援`opensearch2`的相關問題。<!-- MCLOUD-13607 -->
+- ![修正圖示](../../assets/fix.svg) **適用於2.4.4/2.4.5**&#x200B;的Opensearch2 — 修正Adobe Commerce版本2.4.4/2.4.5.<!-- MCLOUD-13607 -->中支援`opensearch2`的相關問題
 
 ## v2002.2.3
 
@@ -93,6 +104,10 @@ ht-degree: 0%
 
 - ![修正圖示](../../assets/fix.svg) **修正Valkey**&#x200B;修正Valkey自訂組態的問題。<!-- MCLOUD-13569 -->
 - ![修正圖示](../../assets/fix.svg) **修正驗證器** — 修正RabbitMQ 4.0的驗證器。<!-- MCLOUD-13560 -->
+
+## v2002.2.2
+
+發行日期： 2025年4月7日
 
 ## v2002.2.2
 
@@ -256,9 +271,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **新SCD_NO_PARENT環境變數** — 已新增`SCD_NO_PARENT`環境變數（適用於Adobe Commerce >=2.4.2）以管理父系主題的靜態內容產生。<!--MCLOUD-7284-->
 
-- ![修正圖示](../../assets/fix.svg) **記憶體限制和命令** — 修正`cloud.log`檔案大小超過PHP memory_limit時，`php vendor/bin/ece-tools`命令無法運作的問題。 我們現在只從記錄檔讀取較小的資料子集，而不將整個`cloud.log`檔案讀取到記憶體中。
-  <!--MCLOUD-7275-->
-  <!--MCLOUD-7400-->
+- ![修正圖示](../../assets/fix.svg) **記憶體限制和命令** — 修正`cloud.log`檔案大小超過PHP memory_limit時，`php vendor/bin/ece-tools`命令無法運作的問題。 現在我們只從記錄檔讀取較小的資料子集，而不將整個`cloud.log`檔案讀取到記憶體中。<!--MCLOUD-7275--><!--MCLOUD-7400-->
 
 - ![修正圖示](../../assets/fix.svg) **自訂資料庫連線** — 修正未使用為`DATABASE_CONFIGURATION`定義的自訂資料庫連線的`.magento.env.yaml`組態問題。 未將連線設定新增到`app/etc/env.php`.<!--MCLOUD-7426-->
 
@@ -314,7 +327,7 @@ ht-degree: 0%
 
 **驗證和記錄改善**—
 
-- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考。<!--MCLOUD-5878-->
+- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!--MCLOUD-5878-->
 
 - ![新圖示](../../assets/new.svg)已將雲端錯誤記錄(`/var/log/cloud.error.log`)專案變更為JSON格式，以便以程式設計方式更輕鬆地剖析記錄。<!--MCLOUD-5879-->
 
@@ -334,7 +347,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **基礎結構更新**—
 
-   - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
+   - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
 
    - ![新圖示](../../assets/new.svg)改善資料庫傾印程式(`vendor/bin/ece-tools db-dump`)和更新的記錄訊息，以釐清資料庫傾印作業會將應用程式切換到維護模式、停止消費者佇列程式，以及在傾印開始之前停用cron工作。<!--MCLOUD-5324, MCLOUD-2062-->
 
