@@ -1,8 +1,8 @@
 ---
-source-git-commit: 42e1804476db77e5e644081cee64f5e6cf2b1e97
+source-git-commit: eff03e0955ae067eb509c7d49eb59f64b3bb1c6a
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 2%
+source-wordcount: '94'
+ht-degree: 3%
 
 ---
 # 新功能範本
@@ -23,56 +23,12 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>已將安全性備註新增至雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web屬性組態</a>參考，以澄清Web屬性的預設組態會將<code class="language-plaintext highlighter-rouge">scripts:false</code>用於媒體位置，以防止執行已上傳的檔案。</p>
+      <td><p>已將安全性備註新增至雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web屬性組態</a>參考，以澄清Web屬性的預設組態會將<code class="language-plaintext highlighter-rouge">scripts:false</code>用於媒體位置，以防止執行已上傳的檔案。</p>
 </td>
       <td>
         技術，意見回饋
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/f3fa8339961505f9c8ac2612d7a89e83553eee37">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年3月6日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p><a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a>版本，v2002.2.10。</p>
-</td>
-      <td>
-        技術
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/78c1e1ae549243e41721592195bf9426f6e3510f">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年3月4日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>新增說明如何在雲端上的Adobe Commerce中<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">變更管理員URL</a>，而非內部部署。</p>
-</td>
-      <td>
-        重大更新，意見反應
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/e16ca6d2bdd93f2cf6c43527b5831779a1c7b3d9">認可</a></td>
     </tr>
   </tbody>
 </table>
