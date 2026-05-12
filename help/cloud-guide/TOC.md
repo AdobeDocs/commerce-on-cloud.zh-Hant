@@ -5,9 +5,9 @@ user-guide-title: 雲端型 Commerce 的指南
 user-guide-description: 了解如何在雲端基礎結構上管理 Adobe Commerce 應用程式。
 product: magento
 feature: Cloud
-source-git-commit: 14964492bc82a50b1eea0636d01b8f7f2583755b
+source-git-commit: 5475b65cb9606b200ff6ac3096ed0d0cf3168cf9
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '389'
 ht-degree: 8%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 8%
    + [專業工作流程](architecture/pro-develop-deploy-workflow.md)
    + [擴充架構](architecture/scaled-architecture.md)
    + [自動縮放](architecture/autoscaling.md)
-+ [開始使用](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=zh-Hant)
++ [開始使用](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + 發行說明 {#release-notes}
    + [雲端工具套裝](release-notes/cloud-tools-suite.md)
    + [ECE-Tools套件](release-notes/ece-tools-package.md)
@@ -148,6 +148,7 @@ ht-degree: 8%
       + [自訂快取設定](cdn/fastly-custom-cache-configuration.md)
       + [自訂錯誤和維護頁面](cdn/fastly-custom-response.md)
    + [Web應用程式防火牆](cdn/fastly-waf-service.md)
+   + [進階安全性](cdn/advanced-security.md)
    + [影像最佳化](cdn/fastly-image-optimization.md)
    + 使用VCL自訂 {#custom-vcl-snippets}
       + [開始使用](cdn/fastly-vcl-custom-snippets.md)
