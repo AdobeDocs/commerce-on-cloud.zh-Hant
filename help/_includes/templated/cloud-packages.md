@@ -1,7 +1,7 @@
 ---
-source-git-commit: bd353c3d100dee7fd0a1846b582a8af44448ff1b
+source-git-commit: 30d2462df80a252519fcaa90e225c219d4ead2f1
 workflow-type: tm+mt
-source-wordcount: '3168'
+source-wordcount: '3177'
 ht-degree: 0%
 
 ---
@@ -27,17 +27,18 @@ The edition variable contains `cloud` value from the _data/names.yml file
 
 `composer.json`檔案會宣告套件清單，而`composer.lock`檔案會儲存用來建置Adobe Commerce安裝的套件完整清單（每個套件的完整版本及其相依性）。
 
-下列參考檔案是從`composer.lock`檔案產生，其中涵蓋雲端基礎結構2.4.8-p1上Adobe Commerce中所包含的必要套件。
+下列參考檔案是從`composer.lock`檔案產生，其中涵蓋雲端基礎結構2.4.9-p2上Adobe Commerce中所包含的必要套件。
 
 ## 相依性
 
-`magento/magento-cloud-metapackage 2.4.8-p1`有下列相依性：
+`magento/magento-cloud-metapackage 2.4.9-p2`有下列相依性：
 
 ```config
+aem/rum: ^1.0.4
 fastly/magento2: ^1.2.34
 magento/ece-tools: ^2002.2.0
 magento/module-paypal-on-boarding: ~100.5.0
-magento/product-enterprise-edition: >=2.4.8 <2.4.9
+magento/product-enterprise-edition: >=2.4.9 <2.4.10
 ```
 
 ## 協力廠商授權
@@ -94,6 +95,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>資料庫</td>
     <td>適用於PHP的AWS SDK — 在PHP專案中使用Amazon Web Services</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/giggsey/libphonenumber-for-php.git">gigsey/libphonenumber-for-php</a>
+    </td>
+    <td>資料庫</td>
+    <td>用於解析、格式化、儲存及驗證國際電話號碼的程式庫，Google的libphonenumber的PHP連線埠。</td>
   </tr>
   <tr>
     <td>
@@ -209,17 +217,10 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/firebase/php-jwt.git">firebase/php-jwt</a>
+      <a href="https://github.com/googleapis/php-jwt.git">firebase/php-jwt</a>
     </td>
     <td>資料庫</td>
     <td>在PHP中編碼和解碼JSON Web權杖(JWT)的簡單程式庫。 應符合目前的規格。</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-captcha.git">laminas/laminas-captcha</a>
-    </td>
-    <td>資料庫</td>
-    <td>使用Figlet、影像、ReCaptcha等專案產生及驗證驗證碼</td>
   </tr>
   <tr>
     <td>
@@ -234,13 +235,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>資料庫</td>
     <td>提供巢狀物件屬性型使用者介面，用於存取應用程式程式碼內的此設定資料</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-di.git">laminas/laminas-di</a>
-    </td>
-    <td>資料庫</td>
-    <td>PSR-11容器的自動化相依性插入</td>
   </tr>
   <tr>
     <td>
@@ -307,13 +301,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mvc.git">laminas/laminas-mvc</a>
-    </td>
-    <td>資料庫</td>
-    <td>Laminas的事件導向MVC層，包括MVC應用程式、控制器和外掛程式</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/laminas/laminas-permissions-acl.git">laminas/laminas-permissions-acl</a>
     </td>
     <td>資料庫</td>
@@ -328,20 +315,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-router.git">層疊/層疊 — 路由器</a>
-    </td>
-    <td>資料庫</td>
-    <td>適用於HTTP和主控台應用程式的彈性路由系統</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-server.git">laminas/laminas-server</a>
-    </td>
-    <td>資料庫</td>
-    <td>建立反射式RPC伺服器</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/laminas/laminas-servicemanager.git">laminas/laminas-servicemanager</a>
     </td>
     <td>資料庫</td>
@@ -353,13 +326,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>資料庫</td>
     <td>PHP工作階段和儲存的物件導向介面</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-soap.git">laminas/laminas-soap</a>
-    </td>
-    <td>資料庫</td>
-    <td></td>
   </tr>
   <tr>
     <td>
@@ -419,6 +385,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/php-db/phpdb.git">php-db/phpdb</a>
+    </td>
+    <td>資料庫</td>
+    <td>資料庫抽象層、SQL抽象層、結果集抽象層，以及RowDataGateway和TableDataGateway實作</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/phpfui/recaptcha.git">phpfui/recaptcha</a>
     </td>
     <td>資料庫</td>
@@ -458,27 +431,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>magento-module</td>
     <td>使用Redis的Zend_Cache後端，完全支援標籤。</td>
-  </tr>
-  </tbody>
-</table>
-
-### ISC
-
-<table>
-  <thead>
-    <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>
-      <a href="https://github.com/paragonie/sodium_compat.git">paragonie/na_compat</a>
-    </td>
-    <td>資料庫</td>
-    <td>libna的純PHP實作；使用PHP擴充功能（如果存在）</td>
   </tr>
   </tbody>
 </table>
@@ -535,6 +487,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>資料庫</td>
     <td>任意精確度算術程式庫</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/brick/phonenumber.git">磚/電話號碼</a>
+    </td>
+    <td>資料庫</td>
+    <td>電話號碼庫</td>
   </tr>
   <tr>
     <td>
@@ -675,6 +634,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>資料庫</td>
     <td>新增對更廣泛的PHP版本的支援到ocramius/proxy-manager</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/giggsey/Locale.git">giggsey/locale</a>
+    </td>
+    <td>資料庫</td>
+    <td>libphonenumber-for-php所需的語言環境函式</td>
   </tr>
   <tr>
     <td>
@@ -839,7 +805,7 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/PhpGt/CssXPath.git">phpgt/cssxpath</a>
+      <a href="https://github.com/phpgt/CssXPath.git">phpgt/cssxpath</a>
     </td>
     <td>資料庫</td>
     <td>將CSS選取器轉換為XPath查詢。</td>
@@ -871,6 +837,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>資料庫</td>
     <td>PHP Secure Communications Library - RSA、AES、SSH2、SFTP、X.509等的純PHP實作。</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/predis/predis.git">predis/predis</a>
+    </td>
+    <td>資料庫</td>
+    <td>適用於PHP的彈性且功能完整的Redis/Valkey使用者端。</td>
   </tr>
   <tr>
     <td>
@@ -1014,6 +987,20 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/cache.git">symfony/快取</a>
+    </td>
+    <td>資料庫</td>
+    <td>提供延伸的PSR-6、PSR-16 （和標籤）實作</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/cache-contracts.git">symfony/快取合約</a>
+    </td>
+    <td>資料庫</td>
+    <td>與快取相關的一般抽象概念</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/clock.git">symfony/clock</a>
     </td>
     <td>資料庫</td>
@@ -1088,13 +1075,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>資料庫</td>
     <td>透過直覺式的流暢介面尋找檔案和目錄</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/symfony/http-client.git">symfony/http-client</a>
-    </td>
-    <td>資料庫</td>
-    <td>提供強大的方法來同步或非同步擷取HTTP資源</td>
   </tr>
   <tr>
     <td>
@@ -1294,6 +1274,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/thecodingmachine/safe.git">thecodingmachine/safe</a>
+    </td>
+    <td>資料庫</td>
+    <td>擲回例外狀況而非錯誤時傳回FALSE的PHP核心函式</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/web-token/jwt-framework.git">web-token/jwt-framework</a>
     </td>
     <td>symfony-bundle</td>
@@ -1432,6 +1419,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </tr>
   </thead>
   <tbody>
+  <tr>
+    <td>
+      aem/rum
+    </td>
+    <td>magento2-module</td>
+    <td>不適用</td>
+  </tr>
   <tr>
     <td>
       paypal/module-braintree-core
