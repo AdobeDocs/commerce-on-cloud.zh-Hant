@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!DNL Adobe Commerce Advanced Security]是與[!DNL Adobe Commerce on Cloud Infrastructure]搭配使用的產品，可讓您的線上商店保持快速、可用和安全。 這有助於保護營收、減少停機時間，並在流量尖峰事件和自動攻擊期間維持客戶信任。
 
-[!DNL Adobe Commerce on Cloud Infrastructure]包含內建[第3層和第4層DDoS保護](./fastly.md#ddos-protection)以及[Web應用程式防火牆(WAF)](./fastly-waf-service.md)。 在[共用職責模型](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)下，第7層DDoS偵測、機器人保護和主動IP封鎖是商家職責，[!DNL Adobe Commerce Advanced Security]旨在解決這些職責。
+[!DNL Adobe Commerce on Cloud Infrastructure]包含內建[第3層和第4層DDoS保護](./fastly.md#ddos-protection)以及[Web應用程式防火牆(WAF)](./fastly-waf-service.md)。 在[共用職責模型](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/security-and-compliance/shared-responsibility)下，第7層DDoS偵測、機器人保護和主動IP封鎖是商家職責，[!DNL Adobe Commerce Advanced Security]旨在解決這些職責。
 
 [!DNL Advanced Security]透過Fastly支援的邊緣安全功能延伸店面保護，提供機器人管理、進階速率限制，以及第7層DDoS保護，作為整合邊緣平台的一部分，結合網路邊緣的規模、效能及安全性。
 
@@ -141,7 +141,7 @@ ht-degree: 0%
 - **法規工具**—PCI掃描、SOC法規報告及法規稽核工具。
 - **應用程式層級強化** — 權杖式API驗證、查詢引數標準化，以及快取策略設計。
 
-如需Adobe和客戶安全性責任的完整概觀，請參閱[共用責任模式](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)。
+如需Adobe和客戶安全性責任的完整概觀，請參閱[共用責任模式](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/security-and-compliance/shared-responsibility)。
 
 ## 常見的攻擊模式與保護
 
@@ -179,7 +179,7 @@ ht-degree: 0%
 
 1. 請聯絡您的Adobe客戶團隊或Adobe銷售代表，討論您專案的[!DNL Advanced Security]。
 
-1. 購買[!DNL Advanced Security]後，[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，要求[!DNL Advanced Security]啟用。 包含您的[!DNL Adobe Commerce on Cloud Infrastructure]專案ID和需要啟用的環境（例如，生產和測試）。
+1. 購買[!DNL Advanced Security]後，[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，要求[!DNL Advanced Security]啟用。 包含您的[!DNL Adobe Commerce on Cloud Infrastructure]專案ID和需要啟用的環境（例如，生產和測試）。
 
 1. Adobe會在您的Fastly服務上啟用[!DNL Advanced Security]並設定初始保護原則。 啟用通常會在票證提交後的幾個工作日內完成。
 
@@ -187,7 +187,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->對[!DNL Advanced Security]的組態變更目前需要[提交支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 計畫在未來版本中透過管理員UI進行自助設定。
+>對[!DNL Advanced Security]的組態變更目前需要[提交支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)。 計畫在未來版本中透過管理員UI進行自助設定。
 
 ## 限制
 
