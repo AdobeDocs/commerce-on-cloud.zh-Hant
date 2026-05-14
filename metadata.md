@@ -11,10 +11,10 @@ feature-set: Commerce
 role: Admin, Developer
 topic: Commerce, Development
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/commerce-on-cloud.en
+git-repo: https://github.com/AdobeDocs/commerce-on-cloud.zh-Hant
 description: 雲端基礎結構上的Adobe Commerce指南
 index: true
-badgePaas: label="僅限PaaS" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="僅適用於雲端專案（Adobe管理的PaaS基礎結構）和內部部署專案的Adobe Commerce 。"
+badgePaas: label="僅限PaaS" type="Informative" url="https://experienceleague.adobe.com/zh-hant/docs/commerce/user-guides/product-solutions" tooltip="僅適用於雲端專案（Adobe管理的PaaS基礎結構）和內部部署專案的Adobe Commerce 。"
 source-git-commit: 6f70f167bbd29c6a83f4feaf14e5b642cd39e87f
 workflow-type: tm+mt
 source-wordcount: 74
