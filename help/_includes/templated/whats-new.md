@@ -45,7 +45,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新雲端工具檔案的發行說明，以反映最新的版本新增、相容性更新和修正。 請參閱Commerce Cloud Tools Suite</a>的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">發行說明。</p>
+      <td><p>更新雲端工具檔案的發行說明，以反映最新的版本新增、相容性更新和修正。 請參閱Commerce Cloud Tools Suite</a>的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">發行說明。</p>
 </td>
       <td>
         技術
@@ -53,7 +53,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/812482f88f6ab6400c77b6ec36db73956dd3f202">認可</a></td>
     </tr>
     <tr>
-      <td><p>更新ECE-Tools發行後的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>和<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">錯誤訊息</a> v2002.2.11。</p>
+      <td><p>更新ECE-Tools發行後的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>和<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">錯誤訊息</a> v2002.2.11。</p>
 </td>
       <td>
         技術
@@ -75,7 +75,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">PHP設定</a>以列出可選PHP擴充功能中的LDAP，並注意LDAP和類似的擴充功能是環境特定的（例如，不是Pro Staging/Production上的自助服務）。</p>
+      <td><p>更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">PHP設定</a>以列出可選PHP擴充功能中的LDAP，並注意LDAP和類似的擴充功能是環境特定的（例如，不是Pro Staging/Production上的自助服務）。</p>
 </td>
       <td>
         技術
@@ -97,7 +97,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>已將安全性備註新增至雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web屬性組態</a>參考，以澄清Web屬性的預設組態會將<code class="language-plaintext highlighter-rouge">scripts:false</code>用於媒體位置，以防止執行已上傳的檔案。</p>
+      <td><p>已將安全性備註新增至雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web屬性組態</a>參考，以澄清Web屬性的預設組態會將<code class="language-plaintext highlighter-rouge">scripts:false</code>用於媒體位置，以防止執行已上傳的檔案。</p>
 </td>
       <td>
         技術，意見回饋
