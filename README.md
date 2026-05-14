@@ -7,4 +7,4 @@ ht-degree: 0%
 ---
 # 已封存
 
-此存放庫已移轉至<https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en>。
+此存放庫已移轉至<https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.zh-Hant>。
