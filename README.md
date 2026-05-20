@@ -1,5 +1,5 @@
 ---
-source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
+source-git-commit: 55206749cd121ef6d6139a71af6ff905d4109859
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%
@@ -9,8 +9,8 @@ ht-degree: 0%
 
 本網站包含雲端基礎結構上Commerce的最新開發人員檔案。
 
-- [雲端基礎結構上的Commerce指南](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/overview)
-- [開始使用雲端基礎結構上的Commerce](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/start/overview)
+- [雲端基礎結構上的Commerce指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- [開始使用雲端基礎結構上的Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source行為準則
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 關於您對Adobe內容的貢獻
 
-請參閱[Adobe檔案投稿人指南](https://experienceleague.adobe.com/zh-hant/docs/contributor/contributor-guide/introduction)。
+請參閱[Adobe檔案投稿人指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 貢獻方式取決於您的身分和您要貢獻的變更型別：
 
@@ -34,13 +34,13 @@ ht-degree: 0%
 
 ### 來自Adobe員工的重大變更
 
-若您是Adobe Experience Cloud解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用`https://git.corp.adobe.com/AdobeDocs`的私人存放庫。
+若您是Adobe Experience Cloud解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en`的私人存放庫。
 
 ## 工具與設定
 
 社群投稿人可以使用GitHub UI進行基本編輯或建立存放庫復本，以做出重大貢獻。
 
-如需詳細資訊，請參閱[Adobe檔案貢獻者指南](https://experienceleague.adobe.com/zh-hant/docs/contributor/contributor-guide/introduction)。
+如需詳細資訊，請參閱[Adobe檔案貢獻者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 ## 如何使用Markdown將主題格式化
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 >**附註：**
 >
 >- 產生樣板化內容需要在終端機中的命令列上工作。
->- 您必須安裝Ruby才能執行轉譯指令碼。 如需所需版本，請參閱[_jekyll/.ruby-version] (_jekyll/.ruby-version)。
+>- 您必須安裝Ruby才能執行轉譯指令碼。 如需所需版本，請參閱[_jekyll/.ruby-version](_jekyll/.ruby-version)。
 
 如需範本化內容的檔案結構說明，請參閱下列內容：
 
