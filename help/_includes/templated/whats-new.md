@@ -1,5 +1,5 @@
 ---
-source-git-commit: e22b5b3508105aa17d397ac299df12f07004383f
+source-git-commit: 8abce85f5a2ed22e344e1489c592ac12415568d8
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 1%
@@ -97,7 +97,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>已將安全性備註新增至雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web屬性組態</a>參考，以澄清Web屬性的預設組態會將<code class="language-plaintext highlighter-rouge">scripts:false</code>用於媒體位置，以防止執行已上傳的檔案。</p>
+      <td><p>已將安全性備註新增至雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web屬性組態</a>參考，以澄清Web屬性的預設組態會將<code>scripts:false</code>用於媒體位置，以防止執行已上傳的檔案。</p>
 </td>
       <td>
         技術，意見回饋
