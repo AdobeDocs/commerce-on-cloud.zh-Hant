@@ -3,9 +3,9 @@ title: 技術棧疊
 description: 請參閱在雲端基礎結構上形成Commerce的技術棧疊。
 feature: Cloud, Iaas, Paas
 exl-id: 3fac1ab7-6440-4bf9-8169-9fadf51d70dd
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 將雲端基礎結構上的Adobe Commerce想成五個功能層，如下所示：
 
-![雲端棧疊](../../assets/CloudStack.svg)
+![雲端棧疊](../../assets/CloudStack.png)
 
 1. [**雲端基礎結構**](pro-architecture.md)：在雲端基礎結構Pro專案上，選擇Amazon Web Services (AWS)或Microsoft Azure作為您Adobe Commerce的基礎結構(IaaS)基礎。
 

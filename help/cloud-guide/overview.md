@@ -2,7 +2,7 @@
 title: 雲端基礎結構上的Commerce
 description: 了解如何建置、部署和管理雲端基礎結構上的 Commerce。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 8abce85f5a2ed22e344e1489c592ac12415568d8
+source-git-commit: 37505db0488204c40ca37356c4d496bba73c537f
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 3%
@@ -40,7 +40,7 @@ ht-degree: 3%
 
 ## AWS地區
 
-![顯示AWS地區的圖表](../assets/aws-regions.svg){zoomable="yes"}
+![顯示AWS地區的圖表](../assets/aws-regions.png){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ ht-degree: 3%
 
 ## Azure地區
 
-![顯示Azure地區的圖表](../assets/azure-regions.svg){zoomable="yes"}
+![顯示Azure地區的圖表](../assets/azure-regions.png){zoomable="yes"}
 
 >[!NOTE]
 >

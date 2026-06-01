@@ -1,12 +1,13 @@
 ---
 user-guide-title: 開始使用Commerce
+breadcrumb-title: 開始使用
 user-guide-description: 在雲端基礎結構中開始您對 [!DNL Commerce] 應用程式的初始設定。
 feature: Cloud
 product: magento
 recommendations: noDisplay, noCatalog
-source-git-commit: 6860d79d243e3a96a9d544f5811854b7c7f55c48
+source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
 workflow-type: tm+mt
-source-wordcount: '43'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
