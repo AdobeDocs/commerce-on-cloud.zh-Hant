@@ -1,8 +1,8 @@
 ---
-source-git-commit: 8abce85f5a2ed22e344e1489c592ac12415568d8
+source-git-commit: 3a36ada0dd3bdb4952b71f9ff851af20766c91ed
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 1%
+source-wordcount: '341'
+ht-degree: 2%
 
 ---
 # 新功能範本
@@ -10,6 +10,28 @@ ht-degree: 1%
 ## 新增功能
 
 此頁面包含過去60天所做的變更。 我們將從此清單中排除所有微幅更新，例如複製編輯。
+
+### 2026年6月1日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>說明</th>
+      <th>型別</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>已移除<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Elasticsearch支援警告</a>中內部部署的Elasticsearch支援陳述式。</p>
+</td>
+      <td>
+        技術
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/65898d2007d69d5bd3b8a9eabb9872ced98b8ffc">認可</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年5月12日
 
@@ -23,7 +45,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>已新增雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/cdn/advanced-security">進階安全性</a>產品。</p>
+      <td><p>已新增雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">進階安全性</a>產品。</p>
 </td>
       <td>
         新主題
@@ -45,7 +67,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新雲端工具檔案的發行說明，以反映最新的版本新增、相容性更新和修正。 請參閱Commerce Cloud Tools Suite</a>的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">發行說明。</p>
+      <td><p>更新雲端工具檔案的發行說明，以反映最新的版本新增、相容性更新和修正。 請參閱Commerce Cloud Tools Suite</a>的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">發行說明。</p>
 </td>
       <td>
         技術
@@ -53,7 +75,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/812482f88f6ab6400c77b6ec36db73956dd3f202">認可</a></td>
     </tr>
     <tr>
-      <td><p>更新ECE-Tools發行後的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>和<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">錯誤訊息</a> v2002.2.11。</p>
+      <td><p>更新ECE-Tools發行後的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>和<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">錯誤訊息</a> v2002.2.11。</p>
 </td>
       <td>
         技術
@@ -75,7 +97,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">PHP設定</a>以列出可選PHP擴充功能中的LDAP，並注意LDAP和類似的擴充功能是環境特定的（例如，不是Pro Staging/Production上的自助服務）。</p>
+      <td><p>更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">PHP設定</a>以列出可選PHP擴充功能中的LDAP，並注意LDAP和類似的擴充功能是環境特定的（例如，不是Pro Staging/Production上的自助服務）。</p>
 </td>
       <td>
         技術
@@ -97,7 +119,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>已將安全性備註新增至雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web屬性組態</a>參考，以澄清Web屬性的預設組態會將<code>scripts:false</code>用於媒體位置，以防止執行已上傳的檔案。</p>
+      <td><p>已將安全性備註新增至雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web屬性組態</a>參考，以澄清Web屬性的預設組態會將<code>scripts:false</code>用於媒體位置，以防止執行已上傳的檔案。</p>
 </td>
       <td>
         技術，意見回饋
