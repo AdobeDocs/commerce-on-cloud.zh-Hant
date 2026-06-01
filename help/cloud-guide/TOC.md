@@ -2,12 +2,13 @@
 cloud: Experience Cloud
 solution-title: Commerce
 user-guide-title: 雲端型 Commerce 的指南
+breadcrumb-title: 雲端上的Commerce
 user-guide-description: 了解如何在雲端基礎結構上管理 Adobe Commerce 應用程式。
 product: magento
 feature: Cloud
-source-git-commit: 6f70f167bbd29c6a83f4feaf14e5b642cd39e87f
+source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '392'
 ht-degree: 8%
 
 ---
@@ -26,7 +27,7 @@ ht-degree: 8%
    + [專業工作流程](architecture/pro-develop-deploy-workflow.md)
    + [擴充架構](architecture/scaled-architecture.md)
    + [自動縮放](architecture/autoscaling.md)
-+ [開始使用](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=zh-Hant)
++ [開始使用](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + 發行說明 {#release-notes}
    + [雲端工具套裝](release-notes/cloud-tools-suite.md)
    + [ECE-Tools套件](release-notes/ece-tools-package.md)
