@@ -3,17 +3,22 @@ title: 整合總覽
 description: 瞭解雲端基礎結構專案上您Adobe Commerce的第三方整合選項。
 role: Developer
 feature: Cloud, Integration
-last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2024-02-06T00:00:00.000Z
+exl-id: 97c5f70d-1465-46c9-bb33-98897262c5ef
+TQID: https://experienceleague.adobe.com/07ozUcb8SWNcyRzgxClhaG5S-cOHqywkYWfke1rJB1g
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c32adafa-ed01-4b31-997e-2413013911b0id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: 574
 ht-degree: 0%
 
 ---
 
 # 整合總覽
 
-整合對於使用外部服務(例如Git託管或Slack機器人)和維護您目前的開發流程（例如使用GitHub中的程式碼檢閱提取請求函式）非常有用。 您可以在雲端基礎結構專案上新增下列整合至Adobe Commerce：
+整合對於使用外部服務（例如Git託管或Slack機器人）和維護您目前的開發流程（例如使用GitHub中的程式碼檢閱提取請求函式）非常有用。 您可以在雲端基礎結構專案上新增下列整合至Adobe Commerce：
 
 ![整合](/help/assets/integrations.png)
 

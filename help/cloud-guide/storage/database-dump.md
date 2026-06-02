@@ -3,9 +3,13 @@ title: 備份資料庫
 description: 瞭解如何使用ECE-tools為雲端基礎結構專案上的Adobe Commerce建立資料庫備份。
 feature: Cloud, Iaas, Storage
 exl-id: 351f7691-3153-4b8a-83af-8b8895b93d98
-source-git-commit: 3a3b0cd6e28f3e6ed3521a86f7c7c8868be0cf83
+TQID: https://experienceleague.adobe.com/bT80HnUguAzsYdVx-kNcxJUyggLzzyfomXHdZvUAcrY
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: 364
 ht-degree: 0%
 
 ---

@@ -2,9 +2,15 @@
 title: 自訂錯誤和維護頁面
 description: 瞭解如何自訂在對Fastly原始伺服器的請求失敗時顯示的預設錯誤頁面。
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 960195c7-5ee9-4134-8b0a-a251c5e6adf9
+TQID: https://experienceleague.adobe.com/EhK04rgGdkT3Tvd6wbefYjY9Yqozkzra4-ELdkH8sMo
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: 803
 ht-degree: 0%
 
 ---
@@ -15,7 +21,7 @@ ht-degree: 0%
 
 ![Fastly預設錯誤頁面](../../assets/cdn/fastly-503-example.png)
 
-您可以更新Adobe Commerce存放區設定，以擁有更友善訊息和改善HTML樣式的頁面取代某些預設回應頁面，如下列範例所示。
+您可以更新Adobe Commerce存放區設定，以擁有更友善訊息和改良HTML樣式的頁面取代某些預設回應頁面，如下列範例所示。
 
 ![Fastly自訂錯誤頁面](../../assets/cdn/fastly-new-error-page.png)
 
@@ -30,7 +36,7 @@ ht-degree: 0%
 
 - 內容最多可包含65,535個字元。
 - 指定HTML來源中的所有CSS內嵌。
-- 使用base64在HTML頁面中捆綁影像，以便即使Fastly離線也能顯示。 檢視css-tricks網站[&#128279;](https://css-tricks.com/data-uris/)上的資料URI。
+- 使用base64在HTML頁面中捆綁影像，以便即使Fastly離線也能顯示。 檢視css-tricks網站](https://css-tricks.com/data-uris/)上的[資料URI。
 
 ## 自訂503錯誤頁面
 
@@ -39,7 +45,7 @@ ht-degree: 0%
 - 當對Fastly來源的請求傳回大於500的回應狀態時
 - 當Fastly來源關閉時，例如逾時、維護活動或健康問題
 
-您可以調整下列HTML代碼以包含符合Adobe Commerce商店主題的樣式，並視需要修改標題和訊息，藉此自訂預設頁面。
+您可以調整下列HTML程式碼以包含符合Adobe Commerce商店主題的樣式，並視需要修改標題和訊息，藉此自訂預設頁面。
 
 ```html
 <!DOCTYPE html>
@@ -53,7 +59,7 @@ ht-degree: 0%
    </body></html>
 ```
 
-驗證已修改的來源在瀏覽器中是否正確顯示。 然後，將自訂HTML程式碼新增到Fastly設定。
+驗證已修改的來源在瀏覽器中是否正確顯示。 然後，將自訂的HTML程式碼新增到Fastly設定。
 
 將自訂回應頁面新增到Fastly設定：
 
@@ -71,7 +77,7 @@ ht-degree: 0%
 
    ![更新503錯誤頁面](../../assets/cdn/fastly-customize-503-response.png)
 
-1. 選取頁面頂端的&#x200B;**上傳**，將自訂HTML來源上傳至Fastly伺服器。
+1. 選取頁面頂端的&#x200B;**上傳**，將自訂的HTML來源上傳至Fastly伺服器。
 
 1. 選取頁面頂端的&#x200B;**儲存組態**&#x200B;以儲存更新的組態檔。
 
@@ -131,9 +137,9 @@ ht-degree: 0%
 
    - **狀態** — 選取`403 Forbidden`狀態。
    - **MIME型別** — 型別`text/html`。
-   - **內容** — 編輯預設HTML回應以新增自訂CSS，並視需要更新標題和訊息。
+   - **內容** — 編輯預設的HTML回應，以新增自訂CSS，並視需要更新標題和訊息。
 
-1. 選取頁面頂端的&#x200B;**上傳**，將自訂HTML來源上傳至Fastly伺服器。
+1. 選取頁面頂端的&#x200B;**上傳**，將自訂的HTML來源上傳至Fastly伺服器。
 
 1. 選取頁面頂端的&#x200B;**儲存組態**&#x200B;以儲存更新的組態檔。
 

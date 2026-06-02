@@ -3,9 +3,16 @@ title: 使用 [!DNL Cloud Console]管理分支
 description: 瞭解如何使用 [!DNL Cloud Console]在雲端基礎結構上管理Adobe Commerce的環境分支。
 role: Developer
 feature: Cloud, Install
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 2c254586-b670-4dd7-8f82-edcc139e9800
+TQID: https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1589'
+source-wordcount: 1638
 ht-degree: 0%
 
 ---
@@ -31,9 +38,9 @@ ht-degree: 0%
 - 首先，從`master`分支建立`staging`分支，然後從`staging`分支進行開發。
 - 對於Pro，請從`Integration`環境建立開發分支。
 
-您的帳戶支援有限數量的![個使用中分支](../../assets/icon-active.png){width="32"} (active) and an unlimited number of ![inactive branch](../../assets/icon-inactive.png){width="32"} （非使用中）開發分支。 僅使用[!DNL Cloud Console]或雲端CLI新增或刪除分支，以管理作用中或非作用中分支。 刪除分支之前，請先停用該分支，它仍保留在&#x200B;_環境_&#x200B;清單中，做為&#x200B;_非使用中_。 您可以稍後重新啟用分支，或是在環境設定或使用Cloud CLI中[刪除分支](../dev-tools/cloud-cli-overview.md#)。
+您的帳戶支援有限數量的![使用中分支](../../assets/icon-active.png){width="32"} （使用中）以及無限數量的![非使用中分支](../../assets/icon-inactive.png){width="32"} （非使用中）開發分支。 僅使用[!DNL Cloud Console]或雲端CLI新增或刪除分支，以管理作用中或非作用中分支。 刪除分支之前，請先停用該分支，它仍保留在&#x200B;_環境_&#x200B;清單中，做為&#x200B;_非使用中_。 您可以稍後重新啟用分支，或是在環境設定或使用Cloud CLI中[刪除分支](../dev-tools/cloud-cli-overview.md#)。
 
-如果您需要其他使用中的環境進行開發，請提交[支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)。
+如果您需要其他使用中的環境進行開發，請提交[支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
 
 **若要新增分支**：
 
@@ -67,7 +74,7 @@ ht-degree: 0%
 
 ## 建立非使用中分支
 
-您無法從Adobe Commerce Cloud主控台或CLI建立非使用中分支。 如果您想建立非作用中分支，請在Git存放庫上建立它，並在命令上使用`environment.Parent`選項進行推送。
+您無法從Adobe Commerce雲端主控台或CLI建立非使用中分支。 如果您想建立非作用中分支，請在Git存放庫上建立它，並在命令上使用`environment.Parent`選項進行推送。
 
 ```bash
 git push -o "environment.Parent=<parent branch>" <origin> <branch>
@@ -87,7 +94,7 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
 
 1. 按一下頂端導覽列右側的設定圖示，開啟環境設定。
 
-1. 在&#x200B;_[!UICONTROL General]_&#x200B;標籤上，向下捲動至&#x200B;_[!UICONTROL Deactivate environment]_&#x200B;區段，然後按一下&#x200B;**[!UICONTROL Deactivate environment and delete data]**&#x200B;並遵循指示。
+1. 在&#x200B;_[!UICONTROL General]_標籤上，向下捲動至_[!UICONTROL Deactivate environment]_&#x200B;區段，然後按一下&#x200B;**[!UICONTROL Deactivate environment and delete data]**&#x200B;並遵循指示。
 
 ## 同步環境
 
@@ -172,7 +179,7 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
 
 >[!INFO]
 >
->Adobe建議將此程式碼新增並合併至專案Git存放庫。 如果您未設定連線，則可能會遇到建置問題。
+>Adobe建議將此程式碼新增並合併至您的專案Git存放庫。 如果您未設定連線，則可能會遇到建置問題。
 
 **若要尋找您的SSH公開金鑰**：
 
@@ -271,4 +278,4 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
    0.0.0.0/0 deny
    ```
 
-1. 按一下&#x200B;**[!UICONTROL Save]**。 這會重新部署環境以更新安全性和設定。 Adobe建議在完成安全性設定後測試環境。
+1. 按一下&#x200B;**[!UICONTROL Save]**。 這會重新部署環境以更新安全性和設定。 Adobe建議您在完成安全性設定後測試環境。

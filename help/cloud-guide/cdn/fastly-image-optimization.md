@@ -2,9 +2,15 @@
 title: Fastly影像最佳化
 description: 瞭解如何透過啟用和設定Fastly影像最佳化，來最佳化影像傳送並簡化Adobe Commerce網站的影像管理。
 feature: Cloud, Configuration, Media
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 3457ebb0-dbb4-4cb0-b6ab-837b15dce03e
+TQID: https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: 1211
 ht-degree: 0%
 
 ---
@@ -66,7 +72,7 @@ Fastly影像最佳化(Fastly IO)提供即時影像操控和最佳化，以加速
 
    ![檢閱Fastly IO設定](../../assets/cdn/fastly-io-config-options.png)
 
-   - **自動WebP？** — 保留預設設定(`Yes`)，以便在支援影像的瀏覽器中將其轉換為WebP格式。 如果您將設定變更為&#x200B;**否**，Fastly會使用影像檔案型別，而非將影像轉換為WebP格式。
+   - **Auto WebP？** — 保留預設設定(`Yes`)，將影像轉換為支援瀏覽器中的WebP格式。 如果您將設定變更為&#x200B;**否**，Fastly會使用影像檔案型別，而非將影像轉換為WebP格式。
 
    - **預設WebP （失真）品質** — 保留預設設定(`85`)或輸入有損檔案格式影像的壓縮等級。 您可以指定從1到100的任何整數。
 
@@ -78,8 +84,8 @@ Fastly影像最佳化(Fastly IO)提供即時影像操控和最佳化，以加速
 
    - **調整篩選器大小** — 保留預設設定(`Lancsoz3`)，或選取替代專案。 此設定會指定用來傳送調整大小影像的濾鏡。 根據選取的濾鏡，調整大小的影像可以有較高或較低的畫素數量。
 
-      - `Lanczos3` （預設） — 提供最佳品質的影像。 它會增加偵測影像中邊緣和線性特徵的能力，並使用&#x200B;_[!DNL sinc]_&#x200B;重新取樣以提供最佳可能的重新建構。
-      - `Lanczos2` — 使用與`Lancsoz3`相同的篩選器，但使用&#x200B;_[!DNL sinc]_&#x200B;重新取樣函式的近似值較不準確。
+      - `Lanczos3` （預設） — 提供最佳品質的影像。 它會增加偵測影像中邊緣和線性特徵的能力，並使用&#x200B;_[!DNL sinc]_重新取樣以提供最佳可能的重新建構。
+      - `Lanczos2` — 使用與`Lancsoz3`相同的篩選器，但使用&#x200B;_[!DNL sinc]_重新取樣函式的近似值較不準確。
       - `Bicubic` — 將影像縮小時具有自然銳利化效果。
       - `Bilinear` — 在放大影像時具有自然的平滑效果。
       - `Nearest` — 在調整畫素圖稿大小時，具有自然的畫素化效果。
@@ -108,14 +114,14 @@ Fastly影像最佳化(Fastly IO)提供即時影像操控和最佳化，以加速
 強制有損轉換的優點在於提供的影像較小。
 例如，使用JPEG或WEBp格式而不是PNG，大小可能會減少60到70%，具體取決於Fastly IO設定中指定的品質等級。
 
-根據為影像最佳化選取的品質等級，您可能會察覺影像中的視覺差異。 例如，Alpha色版/透明度會被去除並取代為白色背景，除非您使用使用使用佈景主題背景色彩的「深度影像最佳化」。
+根據為影像最佳化選取的品質等級，您可能會察覺影像中的視覺差異。 例如，Alpha色版/透明度會被去除並取代為白色背景，除非您使用使用使用佈景主題背景顏色的「深度影像最佳化」。
 
 如果您關閉有損轉換(`WebP Auto? = No`)，Fastly IO只會將JPEG影像變更為相容瀏覽器的WEBP格式。 不會變更其他影像型別。 例如，如果原始影像是PNG，則Fastly IO服務的輸出是PNG。
 
 ### 深度影像最佳化
 
-預設會關閉深層影像最佳化。 啟用此選項會關閉內建的Adobe Commerce調整大小並將其完全解除安裝到Fastly IO服務。
-此功能只會調整_產品_&#x200B;影像的大小。 CMS影像不會調整大小。
+預設會關閉深層影像最佳化。啟用此選項會關閉內建的Adobe Commerce調整大小並將其完全解除安裝到Fastly IO服務。
+此功能只會調整_產品_&#x200B;影像的大小。CMS影像不會調整大小。
 
 啟用深層影像最佳化會將背景色彩定義新增至主題中定義的每個影像。 因此，WebP影像會從WebP lossless切換為WebP lossy。 無損與有損之間的主要差異之一是，有損會捨棄PNG影像的Alpha色版，因而產生小得多的影像。 不過，在使用不同背景的產品和行銷活動頁面上，具有透明度的影像可能會看起來有些奇怪。
 

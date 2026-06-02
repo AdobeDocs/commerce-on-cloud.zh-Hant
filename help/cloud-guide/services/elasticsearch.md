@@ -3,9 +3,14 @@ title: 設定Elasticsearch服務
 description: 瞭解如何在雲端基礎結構上啟用適用於Adobe Commerce的Elasticsearch服務。
 feature: Cloud, Search, Services
 exl-id: 238b9ed5-ce73-428f-9459-35de8573d5d8
-source-git-commit: ef22e7b305c20148f4ee4b2c0e64e2114bf229b5
+TQID: https://experienceleague.adobe.com/RYv3SjF62YHhPtM9vFrlPD0MVwfPS7EIhHxQXaMEeuI
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: 739
 ht-degree: 0%
 
 ---
@@ -41,7 +46,7 @@ ht-degree: 0%
 
    對於Pro專案，您必須提交Adobe Commerce支援票證以在預備和生產環境中變更Elasticsearch版本。
 
-1. 設定`relationships`檔案中的`.magento.app.yaml`屬性。
+1. 設定`.magento.app.yaml`檔案中的`relationships`屬性。
 
    ```yaml
    relationships:
@@ -221,11 +226,11 @@ elasticsearch:
 ```
 
 如果您使用Elastic Suite協力廠商外掛程式，您必須[將`ece-tools`套件](../dev-tools/update-package.md)更新至2002.0.19或更新版本。
-設定Elastic Suite時，請將組態設定新增至`ELASTICSUITE_CONFIGURATION`部署變數。 此設定可跨部署儲存設定。
+設定Elastic Suite時，請將組態設定新增至`ELASTICSUITE_CONFIGURATION`部署變數。此設定可跨部署儲存設定。
 
 ### 移除Elasticsearch的外掛程式
 
-從`elasticsearch:`中的`.magento/services.yaml`移除外掛程式專案，並不會如您預期解除安裝或停用它們。 您必須重新索引Elasticsearch資料。 此行為旨在防止依賴這些外掛程式的資料可能遺失或損毀。
+從`.magento/services.yaml`中的`elasticsearch:`移除外掛程式專案，並不會如您預期解除安裝或停用它們。 您必須重新索引Elasticsearch資料。 此行為旨在防止依賴這些外掛程式的資料可能遺失或損毀。
 
 **若要移除Elasticsearch外掛程式**：
 

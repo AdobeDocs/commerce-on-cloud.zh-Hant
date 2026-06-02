@@ -3,9 +3,14 @@ title: 允許要求的自訂VCL
 description: 使用Fastly Edge ACL清單和自訂VCL程式碼片段，篩選傳入的請求並允許透過IP位址存取Adobe Commerce網站。
 feature: Cloud, Configuration, Security
 exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+TQID: https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: 873
 ht-degree: 0%
 
 ---
@@ -75,7 +80,7 @@ Edge ACL會建立IP位址清單，用於管理對您網站的存取。 在此範
 }
 ```
 
-在此範例中[建立自訂程式碼片段](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=zh-Hant#add-the-custom-vcl-snippet)之前，請檢閱值以判斷是否需要進行任何變更。 然後在個別欄位中輸入每個值，例如，在[型別]欄位中輸入`type`，在[內容]欄位中輸入`content`。
+在此範例中[建立自訂程式碼片段](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html#add-the-custom-vcl-snippet)之前，請檢閱值以判斷是否需要進行任何變更。 然後在個別欄位中輸入每個值，例如，在[型別]欄位中輸入`type`，在[內容]欄位中輸入`content`。
 
 - `name` — VCL程式碼片段名稱。 在此範例中，`allowlist`。
 
@@ -87,13 +92,13 @@ Edge ACL會建立IP位址清單，用於管理對您網站的存取。 在此範
 
   如果管理員的URL已變更，請將範例值`/admin`取代為您的環境URL。 例如，`/company-admin`。
 
-在程式碼範例中，使用`!req.http.Fastly-FF`原始遮蔽[時，條件](fastly-custom-cache-configuration.md#configure-back-ends-and-origin-shielding)很重要。 請勿移除或編輯此程式碼。
+在程式碼範例中，使用[原始遮蔽](fastly-custom-cache-configuration.md#configure-back-ends-and-origin-shielding)時，條件`!req.http.Fastly-FF`很重要。 請勿移除或編輯此程式碼。
 
 檢閱並更新您環境的程式碼後，請使用下列其中一種方法，將自訂VCL程式碼片段新增至您的Fastly服務設定：
 
-- [從Admin](#add-the-custom-vcl-snippet)新增自訂VCL程式碼片段。 如果您可以存取Admin，則建議使用此方法。 (需要Magento 2 1.2.58[或更新版本的](fastly-configuration.md#upgrade)Fastly CDN模組。)
+- [從Admin](#add-the-custom-vcl-snippet)新增自訂VCL程式碼片段。 如果您可以存取Admin，則建議使用此方法。 （需要Magento 2 1.2.58](fastly-configuration.md#upgrade)或更新版本的[Fastly CDN模組。）
 
-- 將JSON程式碼範例儲存至檔案（例如，`allowlist.json`）並使用Fastly API[上傳](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)。 如果您無法存取Admin，請使用此方法。
+- 將JSON程式碼範例儲存至檔案（例如，`allowlist.json`）並使用Fastly API](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)上傳[。 如果您無法存取Admin，請使用此方法。
 
 ## 新增自訂VCL片段
 
@@ -121,7 +126,7 @@ Edge ACL會建立IP位址清單，用於管理對您網站的存取。 在此範
 
 1. 按一下&#x200B;**建立**&#x200B;以產生名稱模式為`type_priority_name.vcl`的VCL程式碼片段檔案，例如`recv_5_allowlist.vcl`
 
-1. 頁面重新載入後，按一下&#x200B;**Fastly組態**&#x200B;區段中的&#x200B;*上傳VCL到Fastly*，以將檔案新增到Fastly服務組態。
+1. 頁面重新載入後，按一下&#x200B;*Fastly組態*&#x200B;區段中的&#x200B;**上傳VCL到Fastly**，以將檔案新增到Fastly服務組態。
 
 1. 上傳完成後，請根據頁面頂端的通知重新整理快取。
 

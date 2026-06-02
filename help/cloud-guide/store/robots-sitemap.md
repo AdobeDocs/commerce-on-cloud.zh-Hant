@@ -3,9 +3,13 @@ title: 新增網站地圖和搜尋引擎自動機制
 description: 瞭解如何在雲端基礎結構上將網站地圖和搜尋引擎機器人新增到Adobe Commerce。
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
-source-git-commit: 1d52481fb6874f3a9ba14b0ff4fe39dc7d564938
+TQID: https://experienceleague.adobe.com/Nve-76Ow3rv0PrGEUVTSfr3eyJcw8IFj9bbpS10HnNY
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: 612
 ht-degree: 0%
 
 ---
@@ -27,7 +31,7 @@ Please make sure that "/" is writable by the web-server.
 **若要產生2.2版和更新版本的`sitemap.xml`檔案**：
 
 1. 存取「管理員」。
-1. 在&#x200B;_行銷_&#x200B;功能表上，按一下&#x200B;**SEO和搜尋**&#x200B;區段中的&#x200B;_網站地圖_。
+1. 在&#x200B;_行銷_&#x200B;功能表上，按一下&#x200B;_SEO和搜尋_&#x200B;區段中的&#x200B;**網站地圖**。
 1. 在&#x200B;_網站地圖_&#x200B;檢視中，按一下&#x200B;**新增網站地圖**。
 1. 在&#x200B;_新網站地圖_&#x200B;檢視中，輸入下列值：
 
@@ -40,8 +44,8 @@ Please make sure that "/" is writable by the web-server.
 **若要將內容新增至`robots.txt`檔案**：
 
 1. 存取「管理員」。
-1. 在&#x200B;_Content_&#x200B;功能表上，按一下&#x200B;**設計**&#x200B;區段中的&#x200B;_組態_。
-1. 在&#x200B;_設計組態_&#x200B;檢視中，按一下&#x200B;**動作**&#x200B;欄位中的網站&#x200B;_編輯_。
+1. 在&#x200B;_Content_&#x200B;功能表上，按一下&#x200B;_設計_&#x200B;區段中的&#x200B;**組態**。
+1. 在&#x200B;_設計組態_&#x200B;檢視中，按一下&#x200B;_動作_&#x200B;欄位中的網站&#x200B;**編輯**。
 1. 在&#x200B;_主要網站_&#x200B;檢視中，按一下&#x200B;**搜尋引擎機器人**。
 1. 更新robots.txt **欄位的**&#x200B;編輯自訂指令。
 1. 按一下&#x200B;**儲存組態**。
@@ -49,7 +53,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->如果`<domain.your.project>/robots.txt`檔案產生`404 error`，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以移除從`/robots.txt`到`/media/robots.txt`的重新導向。
+>如果`<domain.your.project>/robots.txt`檔案產生`404 error`，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以移除從`/robots.txt`到`/media/robots.txt`的重新導向。
 
 ## 使用Fastly VCL程式碼片段重新寫入
 
@@ -61,7 +65,7 @@ Please make sure that "/" is writable by the web-server.
 
 ### 使用Fastly VCL程式碼片段重新導向
 
-建立自訂VCL程式碼片段，以使用`sitemap.xml`和`/media/sitemap.xml`機碼值組將`type`的路徑重寫為`content`。
+建立自訂VCL程式碼片段，以使用`type`和`content`機碼值組將`sitemap.xml`的路徑重寫為`/media/sitemap.xml`。
 
 ```json
 {
@@ -121,7 +125,7 @@ VCL程式碼片段路由`http://domain.com/robots.txt`並顯示`pub/media/domain
 
 - 舊版Cloud Console—URL遵循模式`https://<region-id>.magento.cloud/projects/<project_id>`
 
-  將設定[!UICONTROL Indexing by search engines] （舊版主控台） [!UICONTROL Hide from search engines] (Adobe主控台)切換為&#x200B;**On**。
+  將設定[!UICONTROL Indexing by search engines] （舊版主控台） [!UICONTROL Hide from search engines] （Adobe主控台）切換為&#x200B;**On**。
 
   ![使用[!DNL Cloud Console]管理環境](../../assets/robots-indexing-by-search-engine.png)
 

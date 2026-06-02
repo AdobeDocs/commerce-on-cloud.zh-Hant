@@ -3,9 +3,13 @@ title: 快取
 description: 瞭解如何在雲端基礎結構環境中啟用Adobe Commerce的快取。
 feature: Cloud, Cache, Routes
 exl-id: e73c36d6-9a58-45c0-9220-86074c1f46f0
-source-git-commit: a1ed2818cbaf5adf8b673df0ee9b9218e6f700a2
+TQID: https://experienceleague.adobe.com/dCr0px-0XWXIznsg1w8tUnBaAeXvanY1h-mwiu6GfzU
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: 430
 ht-degree: 0%
 
 ---
@@ -131,7 +135,7 @@ cache:
 
 Cookie有下列限制：
 
-- 系統中設定了最多&#x200B;**50 Cookie**&#x200B;個。 否則，應用程式會擲回`Unable to send the cookie. Maximum number of cookies would be exceeded`例外狀況。 若要將Cookie數目增加到200，請使用[品質修補程式工具](https://experienceleague.adobe.com/zh-hant/docs/commerce-learn/tutorials/tools/quality-patch-tool)套用[MDVA-12304修補程式](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=zh-Hant)。
+- 系統中設定了最多&#x200B;**50 Cookie**&#x200B;個。 否則，應用程式會擲回`Unable to send the cookie. Maximum number of cookies would be exceeded`例外狀況。 若要將Cookie數目增加到200，請使用[品質修補程式工具](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/tools/quality-patch-tool)套用[MDVA-12304修補程式](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html)。
 - Cookie大小上限為&#x200B;**4096位元組**。 否則，應用程式會擲回`Unable to send the cookie. Size of '%name' is %size bytes`例外狀況。
 
 ### `default_ttl`

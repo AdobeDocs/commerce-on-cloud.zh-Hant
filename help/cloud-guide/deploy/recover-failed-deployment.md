@@ -2,9 +2,14 @@
 title: 從元件失敗復原
 description: 瞭解如果元件無法在雲端基礎結構上的Adobe Commerce中正確部署，如何復原。
 feature: Cloud, Deploy
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f5e79366-5548-40dd-ac2a-56dc84c5d4e2
+TQID: https://experienceleague.adobe.com/1krotAWilGcnp3OUMk-fl5iHFObGpWFUC8EpYSPjQfU
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: 220
 ht-degree: 0%
 
 ---

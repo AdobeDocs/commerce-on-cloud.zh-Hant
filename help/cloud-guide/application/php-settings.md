@@ -3,16 +3,20 @@ title: PHP設定
 description: 瞭解在雲端基礎結構中用於Commerce應用程式配置的最佳PHP設定。
 feature: Cloud, Configuration, Extensions
 exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
-source-git-commit: eff03e0955ae067eb509c7d49eb59f64b3bb1c6a
+TQID: https://experienceleague.adobe.com/2UjlXGZV6AJQuNf0XOdzZ09aF-23TSk7Q0NqvLyhGRs
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: 605
 ht-degree: 0%
 
 ---
 
 # PHP設定
 
-您可以選擇要在您的`.magento.app.yaml`檔案中執行哪個[版本的PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)：
+您可以選擇要在您的`.magento.app.yaml`檔案中執行哪個[版本的PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)：
 
 ```yaml
 name: mymagento
@@ -63,7 +67,7 @@ realpath_cache_ttl = 7200
 
 >[!NOTE]
 >
->如需建議的PHP組態設定清單，請參閱&#x200B;_安裝指南_&#x200B;中的[必要的PHP設定](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=zh-Hant)。
+>如需建議的PHP組態設定清單，請參閱&#x200B;_安裝指南_&#x200B;中的[必要的PHP設定](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)。
 
 ### 檢查自訂PHP設定
 
@@ -118,7 +122,7 @@ php -m
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP模組需求與Adobe Commerce版本繫結。 請參閱[PHP需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=zh-Hant)。
+PHP模組需求與Adobe Commerce版本繫結。 請參閱[PHP需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)。
 
 ### 擴充功能支援
 
@@ -136,7 +140,7 @@ sourceguardian.restrict_unencoded = "1"
 
 請參閱SourceGuardian檔案的[第3.5節](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf)。 _這是PDF的連結_。
 
-[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，以取得在所有生產環境和Pro測試環境中安裝這些PHP擴充功能的協助。 包含更新的`.magento/services.yaml`檔案、`.magento.app.yaml`檔案（包含更新的PHP版本和任何其他PHP副檔名）。 若是即時生產環境的變更，您至少必須提供48小時的通知。 雲端基礎結構團隊更新您的專案最多可能需要48小時的時間。
+[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，以取得在所有生產環境和Pro測試環境中安裝這些PHP擴充功能的協助。 包含更新的`.magento/services.yaml`檔案、`.magento.app.yaml`檔案（包含更新的PHP版本和任何其他PHP副檔名）。 若是即時生產環境的變更，您至少必須提供48小時的通知。 雲端基礎結構團隊更新您的專案最多可能需要48小時的時間。
 
 >[!WARNING]
 >

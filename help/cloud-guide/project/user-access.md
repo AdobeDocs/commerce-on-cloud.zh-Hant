@@ -3,12 +3,17 @@ title: 管理使用者存取權
 description: 瞭解如何在雲端基礎結構專案和環境上管理使用者對Adobe Commerce的存取權。
 role: Admin
 feature: Cloud, Roles/Permissions
-last-substantial-update: 2023-06-27T00:00:00Z
+last-substantial-update: 2023-06-27T00:00:00.000Z
 topic: Security
 exl-id: 953593de-f675-49fd-988f-f11306f67fbd
-source-git-commit: c972d9f2029499cf53edc334c1d9a40b155a991d
+TQID: https://experienceleague.adobe.com/hoRda1DXcWU5ZfsEnOf0JSe-JbCQy0GkXQ4Tw3HIU0g
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: 1518
 ht-degree: 0%
 
 ---
@@ -113,7 +118,7 @@ Current role(s) of User (alice@example.com) on Production (project_id):
 
 ### 新增使用者至多個環境
 
-若要在`viewer`環境中將使用者新增為`Production`，並在`contributor`環境中將使用者新增為`Integration`：
+若要在`Production`環境中將使用者新增為`viewer`，並在`Integration`環境中將使用者新增為`contributor`：
 
 ```bash
 magento-cloud user:add alice@example.com -r production:v -r integration:c
@@ -121,7 +126,7 @@ magento-cloud user:add alice@example.com -r production:v -r integration:c
 
 ### 更新使用者環境許可權
 
-若要在`admin`環境上將使用者環境許可權更新為`Production`：
+若要在`Production`環境上將使用者環境許可權更新為`admin`：
 
 ```bash
 magento-cloud user:update alice@example.com -r production:a
@@ -147,7 +152,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. 在&#x200B;_存取_&#x200B;檢視中，按一下&#x200B;**[!UICONTROL Add]**。
 
-1. 完成&#x200B;_[!UICONTROL Add User]_&#x200B;表單：
+1. 完成&#x200B;_[!UICONTROL Add User]_表單：
 
    - 輸入使用者電子郵件地址。
 
@@ -190,11 +195,11 @@ magento-cloud user:update alice@example.com -r production:a
 雲端基礎結構上的Adobe Commerce支援使用下列任何應用程式的TFA：
 
 - [Google Authenticator (Android/iPhone)](https://support.google.com/accounts/answer/1066447?hl=en)
-- [授權(Android/iPhone)](https://authy.com/features/)
+- [Authy (Android/iPhone)](https://authy.com/features/)
 - [FreeOTP (Android)](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp)
-- [GAuth Authenticator （Firefox OS、桌上型電腦、其他）](https://github.com/gbraad-apps/gauth)
+- [GAuth Authenticator （Firefox作業系統、桌上型電腦、其他）](https://github.com/gbraad-apps/gauth)
 
-在&#x200B;_的_&#x200B;帳戶設定[!DNL Cloud Console]頁面上提供安裝驗證器應用程式及啟用TFA的說明。
+在[!DNL Cloud Console]的&#x200B;_帳戶設定_&#x200B;頁面上提供安裝驗證器應用程式及啟用TFA的說明。
 
 **若要在您的使用者帳戶上啟用TFA**：
 
@@ -228,11 +233,11 @@ magento-cloud user:update alice@example.com -r production:a
 
    - 將復原始碼複製到其他位置，或寫下代碼，以防您失去對裝置或驗證應用程式的存取權。
 
-   - 按一下[儲存]&#x200B;**&#x200B;**&#x200B;將程式碼儲存至您的帳戶，以便您可從帳戶安全性設定檢視和管理程式碼。
+   - 按一下[儲存]****&#x200B;將程式碼儲存至您的帳戶，以便您可從帳戶安全性設定檢視和管理程式碼。
 
      >[!WARNING]
      >
-     >如果您無法存取具有TFA的帳戶，且沒有復原始碼清單，則必須連絡專案管理員，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以重設TFA應用程式。
+     >如果您無法存取具有TFA的帳戶，且沒有復原始碼清單，則必須連絡專案管理員，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以重設TFA應用程式。
 
 1. 完成TFA設定後，按一下[儲存] **以更新您的帳戶。**
 

@@ -2,9 +2,15 @@
 title: 入門專案工作流程
 description: 瞭解如何使用入門程式開發和部署工作流程。
 feature: Cloud, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 75d170b6-1ec2-4099-82c8-5c4df3442843
+TQID: https://experienceleague.adobe.com/ohBEYApu-9AJmxBvtoxGxpQcmK67ppeACPl7xNvycsQ
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '2103'
+source-wordcount: 2168
 ht-degree: 0%
 
 ---
@@ -104,9 +110,9 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 如需設定的最佳資訊，請檢閱Adobe Commerce的檔案和已安裝的擴充功能。 以下是可協助您開始使用的一些連結和想法：
 
 - [儲存區組態的最佳實務](../store/best-practices.md)，以取得雲端中的特定最佳實務
-- [商店管理員存取、名稱、語言、貨幣、品牌、網站、商店檢視等的基本設定](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/start/setup/store-details)
-- [佈景主題](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/content-design/content-menu#design-features)，讓您瞭解網站和存放區的外觀與風格，包括CSS和版面配置
-- 角色、工具、通知及資料庫加密金鑰的[系統組態](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/guide-overview)
+- [商店管理員存取、名稱、語言、貨幣、品牌、網站、商店檢視等的基本設定](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details)
+- [佈景主題](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features)，讓您瞭解網站和存放區的外觀與風格，包括CSS和版面配置
+- 角色、工具、通知及資料庫加密金鑰的[系統組態](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview)
 - 使用其檔案的擴充功能設定
 
 除了商店設定外，您還可以進一步設定多個網站和商店、設定的服務等。 請參閱[設定您的商店](../store/overview.md)。
@@ -162,9 +168,9 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 
 若要協助將生產資料匯出為測試資料，以用於中繼和整合環境：
 
-- [使用您的Adobe Commerce加密金鑰匯出客戶和存放區資料的受保護備份時，執行支援公用程式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=zh-Hant) CLI命令（建議）
+- [使用您的Adobe Commerce加密金鑰匯出客戶和存放區資料的受保護備份時，執行支援公用程式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) CLI命令（建議）
 
-- 用於產生及匯出資料的[資料彙集](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/tools/support#data-collector)工具
+- 用於產生及匯出資料的[資料彙集](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector)工具
 
 若要移轉此資料，請參閱[移轉及部署靜態檔案和資料](../deploy/staging-production.md#migrate-static-files)。
 
@@ -172,7 +178,7 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 
 >[!NOTE]
 >
->將資料推送至另一個環境之前，您應該考慮清除資料。 您有幾個選項，包括[使用支援公用程式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=zh-Hant)或開發指令碼以清除客戶資料。
+>將資料推送至另一個環境之前，您應該考慮清除資料。 您有幾個選項，包括[使用支援公用程式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html)或開發指令碼以清除客戶資料。
 
 >[!WARNING]
 >

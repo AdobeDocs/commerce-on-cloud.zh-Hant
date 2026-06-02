@@ -2,10 +2,15 @@
 title: GitHub整合
 description: 瞭解如何在雲端基礎結構專案上將Adobe Commerce與GitHub整合。
 feature: Cloud, Integration
-last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2023-05-25T00:00:00.000Z
+exl-id: 08e569fa-5ab4-45c0-82e6-476f25c17fe0
+TQID: https://experienceleague.adobe.com/7Lt2uWkU1kD8VoZAX--lGcJawdg3VEy9U39IS45dBvY
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: 972
 ht-degree: 0%
 
 ---
@@ -167,7 +172,7 @@ magento-cloud integration:add --help
    - **裝載URL**：輸入啟用GitHub整合時傳回的URL。
    - **內容型別**：從清單中選擇&#x200B;**application/json**。
    - **密碼**：輸入驗證密碼。
-   - **您想要觸發此webhook的哪些事件？**：選取&#x200B;**傳送所有資料給我**。
+   - **您想要觸發此webhook的哪些事件？**：選取「**傳送所有內容**」。
    - 選取&#x200B;**作用中**&#x200B;核取方塊。
 
 1. 按一下&#x200B;**新增webhook**。

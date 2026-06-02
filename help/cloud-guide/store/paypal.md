@@ -2,9 +2,14 @@
 title: 設定PayPal付款方法
 description: 在雲端基礎結構上為Adobe Commerce設定PayPal付款方法。
 feature: Cloud, Checkout, Payments
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 577639f8-74a1-4bb2-96fc-72135252cbd1
+TQID: https://experienceleague.adobe.com/wGyqg7fnVgAglBAqnaA0ak-JaBLHGn5-Bkj-jx8qwoo
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: 697
 ht-degree: 0%
 
 ---
@@ -58,7 +63,7 @@ PayPal支援全球各地的PayPal Express Checkout連線，但下列限制除外
    * **沙箱模式**&#x200B;選取「是」或「否」以指出您輸入的認證是否適用於沙箱。 如果您已輸入生產認證，請選取「否」。
    * **API使用Proxy**&#x200B;如果系統使用Proxy伺服器建立Adobe Commerce與PayPal付款系統之間的連線，請選取「是」或「否」以設定。 如果是，請輸入Proxy主機和連線埠。
 
-1. 如需設定帳戶的詳細資訊和步驟，請參閱[PayPal Express結帳](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) （從步驟2開始）。完成必要的設定。
+1. 如需設定帳戶的詳細資訊和步驟，請參閱[PayPal Express結帳](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) （從步驟2開始）。完成必要的設定。
 
 設定並驗證帳戶後，您可以在「必要的PayPal設定」下啟用和停用PayPal付款選項：
 

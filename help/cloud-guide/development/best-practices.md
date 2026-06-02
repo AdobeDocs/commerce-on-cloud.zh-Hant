@@ -3,9 +3,13 @@ title: 升級專案的最佳實務
 description: 檢視升級專案檔案的最佳實務清單。
 feature: Cloud, Best Practices, Upgrade
 exl-id: 64f92739-9170-4cbf-90ef-aab6593a37ca
-source-git-commit: 31494a956babaf15320d0ffa86fcba9e845d53a1
+TQID: https://experienceleague.adobe.com/Nnr9fNMT210WTnaLTWyRM-YCWRXrZuOv0m-EZYpzKVw
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: 696
 ht-degree: 0%
 
 ---
@@ -50,10 +54,10 @@ ht-degree: 0%
 
    - 使用SSH登入遠端伺服器並驗證下列專案：
 
-      - 視需要檢查索引器狀態並重新索引。 請參閱&#x200B;_設定指南_&#x200B;中的[管理索引子](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=zh-Hant)。
+      - 視需要檢查索引器狀態並重新索引。 請參閱&#x200B;_設定指南_&#x200B;中的[管理索引子](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)。
 
       - 檢查Adobe Commerce資料庫中的`cron`記錄檔和`cron_schedule`資料表以驗證cron狀態，並視需要重新執行cron工作。
-請參閱_設定指南_&#x200B;中的[記錄](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=zh-Hant#logging)。
+請參閱_設定指南_&#x200B;中的[記錄](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging)。
 
    - 在中繼和生產環境中完成升級後使用者驗收測試UAT，並修正與協力廠商和自訂擴充功能升級相關的任何問題。
 
@@ -67,7 +71,7 @@ ht-degree: 0%
 
 如需設定和使用情況的詳細資訊，請參閱：
 
-- [升級相容性工具概覽](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
-- [執行升級相容性工具](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
+- [升級相容性工具概覽](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
+- [執行升級相容性工具](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
 
-對於使用全網站分析工具的雲端商家，您也可以從控制面板觸發UCT，並直接從Widget下載HTML報表。 請參閱整合[全網站分析工具](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)。
+對於使用全網站分析工具的雲端商家，您也可以從控制面板觸發UCT，並直接從Widget下載HTML報表。 請參閱整合[全網站分析工具](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)。

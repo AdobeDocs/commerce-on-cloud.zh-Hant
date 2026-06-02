@@ -2,9 +2,15 @@
 title: 準備開發
 description: 收集認證，並瞭解可用於設定開發工作區的工具，以便與雲端基礎結構專案上的Commerce搭配使用。
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: adb7f74f-8007-4f23-bc07-46b0f7d0ebd9
+TQID: https://experienceleague.adobe.com/al-kKS6wmNpCQt5tDRMIO2L10UEShSC2kOf66eThcfw
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: cc250cf1-34eb-4863-80d0-d170d45ea067id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: 498
 ht-degree: 0%
 
 ---
@@ -27,7 +33,7 @@ ht-degree: 0%
 
 - **Adobe Commerce加密金鑰**
 
-  僅匯入現有系統時，請擷取用來保護您存取和資料庫資料的加密金鑰。 如需此金鑰的詳細資訊，請參閱[解決加密金鑰的問題](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html?lang=zh-Hant)
+  僅匯入現有系統時，請擷取用來保護您存取和資料庫資料的加密金鑰。 如需此金鑰的詳細資訊，請參閱[解決加密金鑰的問題](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html)
 
 ## 開發人員工具
 
@@ -40,7 +46,7 @@ ht-degree: 0%
   可選擇使用Docker環境來模擬雲端基礎結構`integration`環境上的Commerce以進行本機開發。 有三個基本元件：Adobe Commerce v2範本、Docker Compose和`ece-tools`套件。
 
    - [Docker架構和常用命令](../cloud-guide/dev-tools/cloud-docker.md)
-   - [啟動Docker開發環境](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)
+   - [Launch Docker開發環境](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)
    - [ECE-Tools套件](../cloud-guide/dev-tools/package-overview.md)
 
 - **整合Git型服務**
@@ -65,4 +71,4 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Adobe使用範本存放庫布建初始專案環境，其中包含特定版本Adobe Commerce的套件指示。 檢閱[專案檔案結構](../cloud-guide/project/file-structure.md)主題，並深入瞭解重要的專案檔案和雲端範本。
+>Adobe使用範本存放庫布建您的初始專案環境，其中包括特定版本Adobe Commerce的套件指示。 檢閱[專案檔案結構](../cloud-guide/project/file-structure.md)主題，並深入瞭解重要的專案檔案和雲端範本。

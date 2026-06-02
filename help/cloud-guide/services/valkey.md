@@ -3,9 +3,13 @@ title: 設定Valkey服務
 description: 瞭解如何在Cloud Infrastructure上為Adobe Commerce設定及最佳化Valkey作為後端快取解決方案。
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
-source-git-commit: cf2e659267445603b3f5eaf877f4eb7ac0c1b54c
+TQID: https://experienceleague.adobe.com/-aBnwClJGQlRkEfugtChxbjLObLzTu0xl1IvkYUVRsk
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: 212
 ht-degree: 0%
 
 ---
@@ -14,7 +18,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)是選用的後端快取解決方案，可取代Adobe Commerce預設使用的`Zend Framework Zend_Cache_Backend_File`。
 
-請參閱[設定指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=zh-Hant){target="_blank"}中的&#x200B;_設定Valkey_。
+請參閱&#x200B;_設定指南_&#x200B;中的[設定Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"}。
 
 {{service-instruction}}
 
@@ -27,7 +31,7 @@ ht-degree: 0%
        type: valkey:<version>
    ```
 
-   若要提供您自己的Valkey設定，請在`core_config`檔案中新增`.magento/services.yaml`金鑰：
+   若要提供您自己的Valkey設定，請在`.magento/services.yaml`檔案中新增`core_config`金鑰：
 
    ```yaml
    cache:

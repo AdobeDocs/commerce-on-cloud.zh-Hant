@@ -3,9 +3,15 @@ title: 設定環境
 description: 瞭解如何使用環境變數，在雲端基礎結構環境中設定涵蓋所有Commerce的建置和部署動作，包括Pro測試和生產。
 feature: Cloud, Build, Configuration, Deploy, SCD
 role: Developer
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f39c73fc-351a-41ed-9e74-2c3f14871246
+TQID: https://experienceleague.adobe.com/Ub0FWkUN9uOVzLhVbNbPhUV5kj808ODlbjVrRDDA-4E
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: 706
 ht-degree: 0%
 
 ---
@@ -28,13 +34,13 @@ ht-degree: 0%
    - `deploy` — 僅控制部署階段中的動作。 如果您未在此段落中指定設定，部署階段會使用全域段落中的設定。
    - `post-deploy` — 控制部署應用程式後&#x200B;_的動作_&#x200B;以及容器開始接受連線&#x200B;_後的_。
 - `log` — 使用記錄區段來設定[通知](set-up-notifications.md)，包括通知型別和詳細資訊層級。
-   - `slack` — 設定要傳送給Slack機器人的訊息。
+   - `slack` — 設定要傳送至Slack機器人的訊息。
    - `email` — 設定要傳送給一或多個電子郵件收件者的電子郵件。
    - [記錄處理常式](log-handlers.md) — 設定傳送至遠端記錄伺服器的軟硬體應用程式訊息。
 
 ### 環境變數
 
-`ece-tools`套件根據[雲端變數](variables-cloud.md)、[!DNL Cloud Console]中設定的變數及`.magento.env.yaml`組態檔的值，在`env.php`檔案中設定值。 `.magento.env.yaml`檔案中的環境變數會覆寫您現有的Commerce設定來自訂雲端環境。 如果預設值為`Not Set`，則`ece-tools`封裝會採取&#x200B;**NO**&#x200B;動作，並使用[!DNL Commerce]預設值或來自MAGENTO_CLOUD_RELATIONSHIPS設定的值。 如果設定了預設值，則`ece-tools`套件會動作來設定該預設值。
+`ece-tools`套件根據[雲端變數](variables-cloud.md)、[!DNL Cloud Console]中設定的變數及`.magento.env.yaml`組態檔的值，在`env.php`檔案中設定值。 `.magento.env.yaml`檔案中的環境變數會覆寫您現有的Commerce設定來自訂雲端環境。 如果預設值為`Not Set`，則`ece-tools`封裝會採取&#x200B;**NO**&#x200B;動作，並使用[!DNL Commerce]預設值或MAGENTO_CLOUD_RELATIONSHIPS設定的值。 如果設定了預設值，則`ece-tools`套件會動作來設定該預設值。
 
 下列主題包含您可以在`.magento.env.yaml`檔案中使用的所有變數的詳細定義，例如預設值是否已設定：
 

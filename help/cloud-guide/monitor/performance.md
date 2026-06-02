@@ -4,9 +4,12 @@ description: 瞭解在雲端基礎結構上監視Adobe Commerce的效能。
 feature: Cloud, Observability
 topic: Performance
 exl-id: 51e371cf-8374-4dae-8e5a-f31477dc59c1
-source-git-commit: 3347ad0a5fe202cbd80d08b7289c20a1c98ed1e3
+TQID: https://experienceleague.adobe.com/m90Dn1QULOga6Q-Rlq6bvfYkN2FXd3k1GRkpAvayuig
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: 154
 ht-degree: 0%
 
 ---
@@ -16,7 +19,7 @@ ht-degree: 0%
 您可以使用以下服務來監視雲端環境的效能：
 
 - [健康狀態通知](../integrations/health-notifications.md) — 可在入門和Pro整合環境中提供磁碟空間警示的整合。
-- [Adobe Commerce觀察指南](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) — 對所有Commerce網站進行全方位監控，結合來自多個來源的記錄資料，協助您更妥善地管理Adobe Commerce網站效能並診斷問題。
+- [Adobe Commerce觀察指南](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) — 對所有Commerce網站進行全方位監控，結合來自多個來源的記錄資料，協助您更妥善地管理Adobe Commerce網站效能並診斷問題。
 - [操作遙測服務](operational-telemetry.md) — 監視您店面使用者端流量的效能。
 
 ## New Relic服務

@@ -3,9 +3,14 @@ title: 開始使用自訂VCL程式碼片段
 description: 瞭解如何使用Varnish控制語言程式碼片段來自訂Adobe Commerce的Fastly服務設定。
 feature: Cloud, Configuration, Services
 exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+TQID: https://experienceleague.adobe.com/1grH8E6w-CgPS2ANraTxdM1NZ6Jjb8G4i7tgSswcuJE
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '2037'
+source-wordcount: 2179
 ht-degree: 0%
 
 ---
@@ -86,7 +91,7 @@ Fastly支援兩種型別的自訂VCL程式碼片段：
 | `API_KEY` | 用於存取您的Fastly帳戶的API金鑰。 請參閱[取得認證](fastly-configuration.md)。 |
 | `active` | 程式碼片段或版本的作用中狀態。 傳回`true`或`false`。 如果為true，則表示正在使用程式碼片段或版本。 使用其版本號碼來復製作用中的程式碼片段。 |
 | `content` | 要執行的VCL程式碼片段。 Fastly並不支援所有VCL語言功能。 此外，Fastly還提供具有自訂功能的擴充功能。 如需支援功能的詳細資訊，請參閱[Fastly VCL程式設計參考](https://docs.fastly.com/vcl/reference/)。 |
-| `dynamic` | 程式碼片段的動態狀態。 傳回Fastly服務組態之版本化VCL中所包含的`false`一般程式碼片段[的](https://docs.fastly.com/en/guides/about-vcl-snippets)。 傳回`true`動態程式碼片段[的](https://docs.fastly.com/vcl/vcl-snippets/using-dynamic-vcl-snippets/)，不需要新的VCL版本即可修改和部署。 |
+| `dynamic` | 程式碼片段的動態狀態。 傳回Fastly服務組態之版本化VCL中所包含的[一般程式碼片段](https://docs.fastly.com/en/guides/about-vcl-snippets)的`false`。 傳回[動態程式碼片段](https://docs.fastly.com/vcl/vcl-snippets/using-dynamic-vcl-snippets/)的`true`，不需要新的VCL版本即可修改和部署。 |
 | `number` | 包含程式碼片段的VCL版本號碼。 Fastly在其範例值中使用&#x200B;*可編輯版本#*。 如果您從API新增自訂程式碼片段，請在API請求中包含版本號碼。 如果您從「管理員」新增自訂VCL，則會為您提供版本。 |
 | `priority` | 從`1`到`100`的數值，指定自訂VCL程式碼片段執行的時機。 優先順序值較低的程式碼片段會先執行。 如果未指定，`priority`值會預設為`100`。<p>任何優先順序值為`5`的自訂VCL程式碼片段都會立即執行，最適合實作要求路由（封鎖和允許清單及重新導向）的VCL程式碼。 優先順序`100`最適合覆寫預設VCL程式碼片段。<p>Magento-Fastly模組中所包含的[預設VCL程式碼片段](fastly-configuration.md#upload-vcl-snippets)皆有`priority=50`。<ul><li>指派高優先順序（例如`100`）在所有其他VCL函式之後執行自訂VCL程式碼，並覆寫預設VCL程式碼。</li></ul> |
 | `service_id` | 適用於特定測試或生產環境的Fastly服務ID。 將您的專案新增至雲端基礎結構[Fastly服務帳戶](fastly.md#fastly-service-account-and-credentials)上的Adobe Commerce時，就會指派此ID。 |
@@ -94,7 +99,7 @@ Fastly支援兩種型別的自訂VCL程式碼片段：
 
 ## 從管理員管理自訂VCL
 
-您可以從Admin的[Fastly組態](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/CUSTOM-VCL-SNIPPETS.md) > *自訂VCL片段*&#x200B;區段中&#x200B;*新增自訂VCL片段*。
+您可以從Admin的&#x200B;*Fastly組態* > *自訂VCL片段*&#x200B;區段中[新增自訂VCL片段](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/CUSTOM-VCL-SNIPPETS.md)。
 
 ![管理自訂VCL程式碼片段](../../assets/cdn/fastly-edit-snippets.png)
 
@@ -118,7 +123,7 @@ Fastly支援兩種型別的自訂VCL程式碼片段：
 
 1. 移至&#x200B;**工具**&#x200B;區段。
 
-1. 按一下&#x200B;**版本記錄**&#x200B;旁的&#x200B;_列出所有版本_。
+1. 按一下&#x200B;_版本記錄_&#x200B;旁的&#x200B;**列出所有版本**。
 
 1. 按一下適用的VCL版本旁的眼睛圖示，即可檢視現有的代碼片段。
 
@@ -250,7 +255,7 @@ export FASTLY_EDIT_VERSION=<Version>
 
 - `priority` — 一個從`1`到`100`的值，可決定自訂VCL程式碼片段執行的時機。 具有較低值的自訂VCL程式碼片段會先執行。
 
-  來自Fastly VCL模組的所有預設VCL程式碼都有`priority`的`50`。 如果您希望動作最後發生或覆寫預設VCL程式碼，請使用較高的數字，例如`100`。 若要立即執行自訂VCL程式碼片段，請將優先順序設定為較低的值，例如`5`。
+  來自Fastly VCL模組的所有預設VCL程式碼都有`50`的`priority`。 如果您希望動作最後發生或覆寫預設VCL程式碼，請使用較高的數字，例如`100`。 若要立即執行自訂VCL程式碼片段，請將優先順序設定為較低的值，例如`5`。
 
 - `content` — 要在一行中執行的VCL程式碼片段，沒有分行符號。 請參閱[自訂VCL程式碼片段範例](#example-vcl-snippet-code)。
 

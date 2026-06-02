@@ -3,9 +3,14 @@ title: 設定服務
 description: 瞭解如何在雲端基礎結構上設定Adobe Commerce使用的服務。
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
-source-git-commit: 4ea85b008e2ea9d1c9ab623c413ff9c3c3aaffd2
+TQID: https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: 1136
 ht-degree: 0%
 
 ---
@@ -39,7 +44,7 @@ ht-degree: 0%
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->您必須在可用版本[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之間依序升級RabbitMQ，例如，您無法直接從3.9升級至4.1
+>您必須在可用版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之間依序[升級RabbitMQ，例如，您無法直接從3.9升級至4.1
 >
 >升級至新版RabbitMQ後，請觸發完整部署，以確保在RabbitMQ中重新建立自訂訊息佇列。
 
@@ -181,7 +186,7 @@ mysql:
 
 ## 服務版本
 
-雲端基礎結構上Adobe Commerce的服務版本和相容性支援取決於雲端基礎結構上部署和測試的版本，有時與Adobe Commerce內部部署支援的版本不同。 請參閱&#x200B;_安裝_&#x200B;指南中的[系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)，以取得Adobe已針對特定Adobe Commerce和Magento Open Source版本測試的協力廠商軟體相依性清單。
+雲端基礎結構上Adobe Commerce的服務版本和相容性支援取決於雲端基礎結構上部署和測試的版本，有時與Adobe Commerce內部部署支援的版本不同。 請參閱&#x200B;_安裝_&#x200B;指南中的[系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)，以取得Adobe已針對特定Adobe Commerce和Magento Open Source版本測試的協力廠商軟體相依性清單。
 
 ### 軟體EOL檢查
 

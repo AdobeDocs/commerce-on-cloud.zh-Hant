@@ -2,9 +2,15 @@
 title: 存放區設定管理
 description: 瞭解如何在雲端基礎結構環境中跨所有Adobe Commerce管理和同步處理存放區組態設定。
 feature: Cloud, Configuration, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 01850a7b-2c03-45e8-8051-b24ae95c5f87
+TQID: https://experienceleague.adobe.com/TF-K8g48q2fnuldOLdnwxjAJrxGzsRJlongd7cRqV9U
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: 1507
 ht-degree: 0%
 
 ---
@@ -15,14 +21,14 @@ ht-degree: 0%
 
 存放區設定參照管理員&#x200B;**存放區** > **設定** > **設定**&#x200B;區段中的設定，根據組態型別儲存在部署組態檔中：
 
-- `app/etc/config.php` — 與靜態內容部署相關的存放區、網站、模組或副檔名、靜態檔案最佳化及系統值的組態設定。 請參閱&#x200B;_組態指南_&#x200B;中的[config.php參考](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html?lang=zh-Hant)。
-- `app/etc/env.php` — 系統特定覆寫的值以及應該將&#x200B;_NOT_&#x200B;儲存在原始檔控制中的敏感設定。 請參閱&#x200B;_組態指南_&#x200B;中的[env.php參考](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html?lang=zh-Hant)。
+- `app/etc/config.php` — 與靜態內容部署相關的存放區、網站、模組或副檔名、靜態檔案最佳化及系統值的組態設定。 請參閱&#x200B;_組態指南_&#x200B;中的[config.php參考](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html)。
+- `app/etc/env.php` — 系統特定覆寫的值以及應該將&#x200B;_NOT_&#x200B;儲存在原始檔控制中的敏感設定。 請參閱&#x200B;_組態指南_&#x200B;中的[env.php參考](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html)。
 
 >[!NOTE]
 >
 >由於雲端基礎結構上的Adobe Commerce僅支援生產和維護模式，因此&#x200B;**進階** > **開發人員**&#x200B;區段無法在Admin中存取。 您必須有[環境管理員許可權](../project/user-access.md)才能完成組態管理工作。 您可以使用[環境變數](../environment/configure-env-yaml.md)來設定其他設定。
 
-配置管理提供了一種使用Pipeline部署以最小的停機時間跨環境部署一致商店設定的方法。 雲端基礎結構專案上的Adobe Commerce包括以[管線部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=zh-Hant)設計的組建伺服器、建置和部署指令碼以及部署環境。
+配置管理提供了一種使用Pipeline部署以最小的停機時間跨環境部署一致商店設定的方法。 雲端基礎結構專案上的Adobe Commerce包括以[管線部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html)設計的組建伺服器、建置和部署指令碼以及部署環境。
 
 ## 設定覆寫配置
 
@@ -36,14 +42,14 @@ ht-degree: 0%
 
 >[!TIP]
 >
->請參閱&#x200B;_設定指南_&#x200B;中的[設定管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=zh-Hant)，以取得有關管道部署的覆寫配置的詳細資訊。
+>請參閱&#x200B;_設定指南_&#x200B;中的[設定管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html)，以取得有關管道部署的覆寫配置的詳細資訊。
 
 如果在多個位置中設定了相同的設定，則應用程式會仰賴下列設定階層來決定要套用至環境的值：
 
 | 優先順序 | 組態<br>方法 | 說明 |
 | -------- | ------------------------ | ----------- |
 | 1 | [!DNL Cloud Console]<br>環境變數 | 從[!DNL Cloud Console]中環境設定的&#x200B;_變數_&#x200B;索引標籤新增的值。 在此處指定敏感或環境特定設定的值。 無法從管理員編輯此處指定的設定。 請參閱[環境設定變數](../project/overview.md#configure-environment)。 |
-| 2 | `.magento.app.yaml` | 已在`.magento.app.yaml`檔案的`variables`區段中新增值。 在此處指定值以確保在所有環境中設定一致。 **請勿在`.magento.app.yaml`檔案中指定敏感值。**&#x200B;檢視[應用程式設定](../application/configure-app-yaml.md)。 |
+| 2 | `.magento.app.yaml` | 已在`.magento.app.yaml`檔案的`variables`區段中新增值。 在此處指定值以確保在所有環境中設定一致。 **請勿在`.magento.app.yaml`檔案中指定敏感值。** 請參閱[應用程式設定](../application/configure-app-yaml.md)。 |
 | 3 | `app/etc/env.php` | 使用`app:config:dump`命令新增儲存於此的環境特定設定值。 使用環境變數或CLI設定系統專屬的敏感值。 檢視[敏感資料](#sensitive-data)。 `env.php`檔案是&#x200B;**不包括在原始檔控制中**。 |
 | 4 | `app/etc/config.php` | 使用`app:config:dump`命令新增儲存在此處的值。 共用組態值已新增至`config.php`。 從Admin或使用CLI設定共用設定。 `config.php`檔案包含在原始檔控制中。 |
 | 5 | 資料庫 | 透過在Admin中設定設定，可新增此處儲存的值。 使用任何上述方法設定的設定會遭到鎖定（呈現灰色），且無法從Admin進行編輯。 |
@@ -69,7 +75,7 @@ ht-degree: 0%
 
 使用`bin/magento app:config:dump`命令時，任何敏感設定都會匯出至`app/etc/env.php`檔案。 您可以使用CLI命令設定敏感值： `bin/magento config:sensitive:set`。 請參閱&#x200B;_Commerce PHP擴充功能_&#x200B;指南中的[敏感設定和環境特定設定](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/)，瞭解如何將組態設定指定為敏感設定或系統特定設定。
 
-請參閱&#x200B;_設定指南_&#x200B;中的[敏感或系統特定設定](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html?lang=zh-Hant)清單。
+請參閱&#x200B;_設定指南_&#x200B;中的[敏感或系統特定設定](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html)清單。
 
 ### SCD效能
 
@@ -77,7 +83,7 @@ ht-degree: 0%
 
 如果您在傾印設定後啟用了「設定管理」，您應該將SCD_*變數從部署階段移至建置階段，以在建置階段正確啟用靜態內容產生。 請參閱[環境變數](../environment/configure-env-yaml.md#environment-variables)。
 
-組態管理前&#x200B;**&#x200B;**：
+組態管理前&#x200B;****：
 
 ```yaml
   deploy:

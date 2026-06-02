@@ -2,11 +2,16 @@
 title: ECE-Tools發行說明
 description: 請參閱ECE-Tools套件的最新改良清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2026-05-07T00:00:00Z
+last-substantial-update: 2026-05-07T00:00:00.000Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 84f9a4ba4d3942fc0461b18aeda2405ab2fbf67e
+TQID: https://experienceleague.adobe.com/pa4D-RsauRtCBS7puKWVBQtA37-Mcv9IZG4lah41l1U
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '3563'
+source-wordcount: 3542
 ht-degree: 0%
 
 ---
@@ -271,7 +276,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **新SCD_NO_PARENT環境變數** — 已新增`SCD_NO_PARENT`環境變數（適用於Adobe Commerce >=2.4.2）以管理父系主題的靜態內容產生。<!--MCLOUD-7284-->
 
-- ![修正圖示](../../assets/fix.svg) **記憶體限制和命令** — 修正`cloud.log`檔案大小超過PHP memory_limit時，`php vendor/bin/ece-tools`命令無法運作的問題。 我們現在只從記錄檔讀取較小的資料子集，而不將整個`cloud.log`檔案讀取到記憶體中。
+- ![修正圖示](../../assets/fix.svg) **記憶體限制和命令** — 修正`cloud.log`檔案大小超過PHP memory_limit時，`php vendor/bin/ece-tools`命令無法運作的問題。我們現在只從記錄檔讀取較小的資料子集，而不將整個`cloud.log`檔案讀取到記憶體中。
   <!--MCLOUD-7275-->
   <!--MCLOUD-7400-->
 
@@ -329,7 +334,7 @@ ht-degree: 0%
 
 **驗證和記錄改善**—
 
-- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考。<!--MCLOUD-5878-->
+- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!--MCLOUD-5878-->
 
 - ![新圖示](../../assets/new.svg)已將雲端錯誤記錄(`/var/log/cloud.error.log`)專案變更為JSON格式，以便以程式設計方式更輕鬆地剖析記錄。<!--MCLOUD-5879-->
 
@@ -349,7 +354,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **基礎結構更新**—
 
-   - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
+   - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
 
    - ![新圖示](../../assets/new.svg)改善資料庫傾印程式(`vendor/bin/ece-tools db-dump`)和更新的記錄訊息，以釐清資料庫傾印作業會將應用程式切換到維護模式、停止消費者佇列程式，以及在傾印開始之前停用cron工作。<!--MCLOUD-5324, MCLOUD-2062-->
 

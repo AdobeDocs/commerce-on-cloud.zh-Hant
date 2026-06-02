@@ -1,10 +1,14 @@
 ---
 title: 活動資料流
 description: 瞭解如何在雲端基礎結構上的Adobe Commerce的 [!DNL Cloud Console] 或Cloud CLI中讀取活動資料流。
-last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2024-02-06T00:00:00.000Z
+exl-id: 1acac76e-b088-44ad-9c93-ea27b686b6b4
+TQID: https://experienceleague.adobe.com/piZcU6SjL054YJU9yISQJss7LVEHEHZc7zSYa2QGe60
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: 448
 ht-degree: 0%
 
 ---

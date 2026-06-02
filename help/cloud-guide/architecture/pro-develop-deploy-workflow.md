@@ -3,9 +3,15 @@ title: Pro專案工作流程
 description: 瞭解如何使用Pro開發和部署工作流程。
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: 7758ca69fc8232a8e1798c536410dc028c87fee6
+TQID: https://experienceleague.adobe.com/bRmbWxABneX08LwTxhlUMFX2H7WbCqVg8DDS9RRxQNI
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: 904
 ht-degree: 0%
 
 ---
@@ -22,7 +28,7 @@ Pro專案包含單一Git存放庫，其中包含全域`master`分支和三個主
 
 這些環境是`read-only`，僅接受從您本機工作區推送的分支所部署的程式碼變更。
 
-下圖示範Pro開發和部署工作流程，此工作流程使用簡單的Git分支方法。 您[使用根據](#development-workflow)環境、`integration`推送&#x200B;_和_&#x200B;提取&#x200B;_程式碼變更的實際分支，來開發_&#x200B;程式碼，以及從您的遠端實際分支提取變更。 您透過&#x200B;_合併_&#x200B;遠端分支以部署已驗證的程式碼至基底分支，這會為該環境啟用自動化的[建置和部署](#deployment-workflow)程式。
+下圖示範Pro開發和部署工作流程，此工作流程使用簡單的Git分支方法。 您[使用根據`integration`環境、_推送_&#x200B;和&#x200B;_提取_&#x200B;程式碼變更的實際分支，來開發](#development-workflow)程式碼，以及從您的遠端實際分支提取變更。 您透過&#x200B;_合併_&#x200B;遠端分支以部署已驗證的程式碼至基底分支，這會為該環境啟用自動化的[建置和部署](#deployment-workflow)程式。
 
 ![Pro架構開發工作流程的高階檢視](../../assets/pro-dev-workflow.png)
 
@@ -45,11 +51,11 @@ The disk hosting /app/<cluster_ID> is full
 
 專案環境支援靈活、持續的整合流程。 首先，將`integration`分支複製到您的本機專案資料夾。 建立一個或多個分支、開發新功能、設定變更、新增擴充功能和部署更新：
 
-- **從**&#x200B;擷取`integration`變更
+- **從`integration`擷取**&#x200B;變更
 
-- 來自&#x200B;**的**&#x200B;分支`integration`
+- 來自`integration`的&#x200B;**分支**
 
-- 在本機工作站上開發&#x200B;**程式碼，包括**&#x200B;更新[!DNL Composer]
+- 在本機工作站上開發&#x200B;**程式碼，包括[!DNL Composer]更新**
 
 - 將&#x200B;**推送**&#x200B;程式碼變更至遠端並進行驗證
 
@@ -61,7 +67,7 @@ The disk hosting /app/<cluster_ID> is full
 
 - **正在產生組態管理檔案** — 某些組態設定在已部署的環境中是&#x200B;_唯讀_。
 
-- **設定您的商店** — 您應該使用整合環境完整設定所有商店設定。 您可以在&#x200B;**中的**&#x200B;整合&#x200B;_環境檢視上找到_&#x200B;商店管理員URL _[!DNL Cloud Console]_。
+- **設定您的商店** — 您應該使用整合環境完整設定所有商店設定。 您可以在&#x200B;_[!DNL Cloud Console]_中的_&#x200B;整合&#x200B;_環境檢視上找到&#x200B;**商店管理員URL**。
 
 ## 部署工作流程
 

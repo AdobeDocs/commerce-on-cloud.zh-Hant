@@ -2,9 +2,14 @@
 title: 位元貯體整合
 description: 瞭解如何將雲端基礎結構專案上的Adobe Commerce與Bitbucket整合。
 feature: Cloud, Integration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 903c3064-1821-4f86-a468-4f0ccefb9b77
+TQID: https://experienceleague.adobe.com/S4fSM5ytzpoB1FWMTIlICGHeBPx7LC7CeBt6YzqzXk8
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c32adafa-ed01-4b31-997e-2413013911b0id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: 1057
 ht-degree: 0%
 
 ---
