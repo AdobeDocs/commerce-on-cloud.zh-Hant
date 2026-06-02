@@ -5,9 +5,20 @@ feature: Cloud, Configuration, Cache, Deploy, SCD, Storage, Search
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 980ec809-8c68-450a-9db5-29c5674daa16
-source-git-commit: 208b6f41287156287dd0e84aaa00a9e2ab2557d4
+TQID: https://experienceleague.adobe.com/TNuUxXzCiXnKefww0DmKbjfJygEz2HFG-0PjCsCy2nA
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
 workflow-type: tm+mt
-source-wordcount: '2551'
+source-wordcount: 2575
 ht-degree: 0%
 
 ---
@@ -346,18 +357,18 @@ stage:
 
 ## `LOCK_PROVIDER`
 
-- **預設**—`file`
+- **預設** — 在生產環境和測試環境中，預設為`file`。 若為Pro整合與入門環境，預設值為`db`。
 - **版本**—Adobe Commerce 2.2.5和更新版本
 
-鎖定提供者可防止啟動重複的cron作業和cron群組。 在生產環境中使用`file`鎖定提供者。 入門環境和Pro整合環境不使用[MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md)變數，因此`ece-tools`會自動套用`db`鎖定提供者。
+鎖定提供者可防止啟動重複的cron作業和cron群組。 雲端上的Commerce僅支援`file`和`db`鎖定提供者。
+
+對於生產環境和測試環境，預設值`file`由[MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md)設定，且無法覆寫。 對於入門環境和Pro整合環境，`ece-tools`會自動設定`db`鎖定提供者。 在這些環境中，您可以將預設值變更為`file`，以最佳化本機效能和映象生產架構。
 
 ```yaml
 stage:
   deploy:
     LOCK_PROVIDER: "db"
 ```
-
-請參閱&#x200B;_安裝指南_&#x200B;中的[設定鎖定](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html?lang=zh-Hant)。
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
