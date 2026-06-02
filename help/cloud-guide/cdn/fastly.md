@@ -122,13 +122,13 @@ mywebsite.com/rest/default/V1/inventory/source-items
 
 ### 變更Fastly API權杖
 
-提交Adobe Commerce支援票證，以便在新的Fastly API Token認證[驗證失敗/已過期](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials)時，或如果您認為它已遭破壞，則發出此認證。
+提交Adobe Commerce支援票證，以便在新的Fastly API Token認證[驗證失敗/已過期](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials)時，或如果您認為它已遭破壞，則發出此認證。
 
 當您收到新Token時，請更新您的預備或生產環境以使用新Token。
 
 **若要變更Fastly API權杖認證**：
 
-1. [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，要求新的Fastly API認證。
+1. [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，要求新的Fastly API認證。
 
    在雲端基礎結構專案ID和需要新認證的環境上包含您的Adobe Commerce。
 
@@ -176,18 +176,18 @@ Fastly CDN服務內建了DDOS保護。 一旦您為Adobe Commerce網站啟用了
 
 >[!NOTE]
 >
->與Adobe Commerce整合的Fastly CDN服務不包含針對第7層攻擊的保護。 如需防止第7層攻擊的秘訣，請參閱&#x200B;*Adobe Commerce知識庫*&#x200B;中的[檢查DDoS攻擊](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli)和[如何封鎖惡意攻擊](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)。
+>與Adobe Commerce整合的Fastly CDN服務不包含針對第7層攻擊的保護。 如需防止第7層攻擊的秘訣，請參閱&#x200B;*Adobe Commerce知識庫*&#x200B;中的[檢查DDoS攻擊](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli)和[如何封鎖惡意攻擊](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)。
 
 <!--Link definitions-->
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
+[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=zh-Hant
 
 [Magento 2的Fastly CDN模組]: https://github.com/fastly/fastly-magento2
 
 [Fastly支援票證]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html
+[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=zh-Hant
 
 [使用網域]: https://docs.fastly.com/en/guides/working-with-domains
