@@ -2,9 +2,20 @@
 title: 以案例為基礎的部署
 description: 瞭解如何使用自訂組態檔在雲端基礎結構部署上自訂Adobe Commerce。
 feature: Cloud, Configuration, Deploy, Build
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 44c2a73e-4ea2-49a6-86c1-9fa8cfc8b66e
+TQID: https://experienceleague.adobe.com/BttmvnP2iMbN-EAaPR9g2i9mv7fH4REAEwHFTu-2sw0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: 874
 ht-degree: 0%
 
 ---

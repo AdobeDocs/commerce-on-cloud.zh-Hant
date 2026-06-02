@@ -3,9 +3,23 @@ title: 啟用SSH存取的多重驗證
 description: 瞭解如何管理雲端基礎結構環境中SSH存取Adobe Commerce的驗證需求。
 feature: Cloud, Security
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 90458fa8-42b0-4825-948e-56ef7884eb82
+TQID: https://experienceleague.adobe.com/KWGl-ZyF5aKZ-XxOOmL85ip8arBeH-G1pN5ckUdAqNw
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: 1080
 ht-degree: 0%
 
 ---
@@ -22,7 +36,7 @@ ht-degree: 0%
 
 ## SSH存取的憑證
 
-MFA可讓使用者將OAUTH存取權杖與Adobe雲端認證者API產生的短期SSH憑證交換。 如果使用者擁有管理員或貢獻者角色、有效的SSH金鑰和有效的TFA代碼或API權杖，雲端基礎結構上的Adobe Commerce會使用這些憑證來產生暫時SSH憑證。 憑證到期時間設為一小時，但會在目前的工作階段期間自動重新整理。
+MFA可讓使用者將OAUTH存取權杖與Adobe Cloud Certifier API產生的短期SSH憑證交換。 如果使用者擁有管理員或貢獻者角色、有效的SSH金鑰和有效的TFA代碼或API權杖，雲端基礎結構上的Adobe Commerce會使用這些憑證來產生暫時SSH憑證。 憑證到期時間設為一小時，但會在目前的工作階段期間自動重新整理。
 
 使用MFA登入專案後，使用者必須使用`magento-cloud` CLI來產生SSH憑證：
 

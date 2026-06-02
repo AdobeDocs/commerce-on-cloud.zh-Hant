@@ -3,9 +3,24 @@ title: Pro架構
 description: 瞭解Pro架構支援的環境。
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
+TQID: https://experienceleague.adobe.com/Es-cmVlUrzd4xMf9unOJD-Z-h0OvL-ycoullKVO-yRA
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: 1587
 ht-degree: 0%
 
 ---
@@ -33,7 +48,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe提供適用於Commerce的Cloud Docker工具，用於部署至本機Cloud Docker環境，以便您可以開發和測試Adobe Commerce專案。 請參閱[Docker開發](../dev-tools/cloud-docker.md)。
+>Adobe提供適用於Commerce的Cloud Docker工具，可用於部署到本機Cloud Docker環境，以便您可以開發和測試Adobe Commerce專案。 請參閱[Docker開發](../dev-tools/cloud-docker.md)。
 
 ## 環境架構
 
@@ -65,7 +80,7 @@ ht-degree: 0%
 
 若要在整合環境中取得最佳效能，請遵循下列最佳實務：
 
-- 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。 請嘗試將目錄大小縮減至約4,000至5,000種產品。
+- 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。請嘗試將目錄大小縮減至約4,000至5,000種產品。
 若要檢查目錄中的產品數目，請執行下列MySQL查詢：
 
   ```sql
@@ -170,7 +185,7 @@ ht-degree: 0%
 
 ## 備份與災難回覆
 
-雲端基礎結構上的Adobe Commerce使用高可用性架構，該架構會複製三個獨立AWS或Azure可用性區上的每個Pro專案，每個區有一個獨立的資料中心。 除了此備援之外，Pro中繼和生產環境還會接收定期的即時備份，這些備份是針對&#x200B;_災難性失敗_&#x200B;的情況而設計。
+雲端基礎結構上的Adobe Commerce使用高可用性架構，該架構會複製三個獨立AWS或Azure可用區上的每個Pro專案，每個區都有獨立的資料中心。 除了此備援之外，Pro中繼和生產環境還會接收定期的即時備份，這些備份是針對&#x200B;_災難性失敗_&#x200B;的情況而設計。
 
 **自動備份**&#x200B;包含來自所有執行中服務的永久資料，例如MySQL資料庫和儲存在掛載磁碟區上的檔案。 備份會儲存至與生產環境位於相同區域的加密彈性區塊儲存(EBS)。 無法公開存取自動備份，因為它們儲存在不同的系統中。
 
@@ -180,11 +195,11 @@ ht-degree: 0%
 
 {{pro-backups}}
 
-您可以使用CLI命令，為中繼和生產環境建立資料庫的&#x200B;**手動備份**。 請參閱[備份資料庫](../storage/database-dump.md)。 針對`integration`環境，Adobe建議在雲端基礎結構專案上存取Adobe Commerce後，以及套用任何重大變更之前，先建立備份，作為第一步。 請參閱[備份管理](../storage/snapshots.md)。
+您可以使用CLI命令，為中繼和生產環境建立資料庫的&#x200B;**手動備份**。 請參閱[備份資料庫](../storage/database-dump.md)。 針對`integration`環境，Adobe建議您在雲端基礎結構專案上存取Adobe Commerce後，在應用任何重大變更之前，先建立備份，作為第一步。 請參閱[備份管理](../storage/snapshots.md)。
 
 ### 復原點目標
 
-請連絡您的Adobe客戶成功案例經理，以取得復原點目標上次備份時間的詳細資訊。 備份的頻率取決於您計畫的備份排程，以及寫入儲存服務的變更量。
+請聯絡您的Adobe客戶成功案例經理，以取得復原點目標上次備份時間的詳細資訊。 備份的頻率取決於您計畫的備份排程，以及寫入儲存服務的變更量。
 
 ### 保留原則
 
@@ -206,8 +221,8 @@ RTO取決於儲存的大小。 大型EBS磁碟區需要更多時間來還原。 
 
 ## Pro叢集縮放
 
-Pro叢集大小和&#x200B;_計算_&#x200B;設定會依所選的雲端提供者(AWS、Azure)、地區和服務相依性而有所不同。 Adobe雲端基礎結構可以擴展Pro叢集，以因應流量期望和服務需求變化。
+Pro叢集大小和&#x200B;_計算_&#x200B;設定會依所選的雲端提供者(AWS、Azure)、地區和服務相依性而有所不同。 Adobe雲端基礎結構可以擴充Pro叢集，以因應流量期望和服務需求變化。
 
-備援架構可讓Adobe雲端基礎建設得以升級，無需停機。 升級時，這三個執行個體都會輪換以升級容量，而不會影響網站作業。 例如，如果限制在PHP層級，而不是資料庫層級，則可以將額外的Web伺服器新增到現有的叢集。 這提供&#x200B;_水平縮放_，以補充資料庫層級上額外CPU所提供的垂直縮放。 請參閱[縮放架構](scaled-architecture.md)。
+備援架構讓Adobe雲端基礎建設得以升級，無需停機。 升級時，這三個執行個體都會輪換以升級容量，而不會影響網站作業。 例如，如果限制在PHP層級，而不是資料庫層級，則可以將額外的Web伺服器新增到現有的叢集。 這提供&#x200B;_水平縮放_，以補充資料庫層級上額外CPU所提供的垂直縮放。 請參閱[縮放架構](scaled-architecture.md)。
 
 如果您預期因事件或其他原因而導致流量大幅增加，可請求暫時增加容量。 請參閱[如何在&#x200B;_Commerce說明中心_&#x200B;中要求暫時性的大小調整](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=zh-Hant)。

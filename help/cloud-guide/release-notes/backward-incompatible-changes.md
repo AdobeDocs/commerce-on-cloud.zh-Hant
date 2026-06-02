@@ -4,9 +4,18 @@ description: 瞭解在升級現有Cloud專案時的回溯相容性。
 feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
 exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
-source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
+TQID: https://experienceleague.adobe.com/ekS7f5swOsG2xgXP6ybN6hzwYm2xBbPWvl5oabv7Crc
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: 822
 ht-degree: 0%
 
 ---
@@ -23,7 +32,7 @@ ht-degree: 0%
 
 ### 服務版本需求變更
 
-我們將使用`ece-tools` v2002.1.0和更新版本的雲端專案的最低PHP版本要求從7.0.x變更為7.1.x。 如果您的環境組態指定PHP 7.0，請更新[檔案中的](../application/php-settings.md)php組態`.magento.app.yaml`。
+我們將使用`ece-tools` v2002.1.0和更新版本的雲端專案的最低PHP版本要求從7.0.x變更為7.1.x。 如果您的環境組態指定PHP 7.0，請更新`.magento.app.yaml`檔案中的[php組態](../application/php-settings.md)。
 
 >[!WARNING]
 >
@@ -54,7 +63,7 @@ ht-degree: 0%
 | `vendor/bin/ece-tools docker:build` | `vendor/bin/ece-docker build:compose` |
 | `vendor/bin/ece-tools docker:config:convert` | `vendor/bin/ece-docker  image:generate:php` |
 
-在舊版ECE-Tools中，您可以使用`m2-ece-build`和`m2-ece-deploy`命令來設定`.magento.app.yaml`檔案中的部署掛接。 當您更新至v2002.1.0時，請檢查`hooks`檔案中的`.magento.app.yaml`設定是否有過時的命令，並視需要加以取代。
+在舊版ECE-Tools中，您可以使用`m2-ece-build`和`m2-ece-deploy`命令來設定`.magento.app.yaml`檔案中的部署掛接。 當您更新至v2002.1.0時，請檢查`.magento.app.yaml`檔案中的`hooks`設定是否有過時的命令，並視需要加以取代。
 
 ## 雲端修補程式變更
 
@@ -84,7 +93,7 @@ ht-degree: 0%
 
    - **正在更新Cloud Docker-compose命令** — 我們將命令檔案的路徑從`./bin/docker`重新命名為`./bin/magento-docker`。 更新指令碼和命令以使用新路徑。
 
-   - **Cron容器不再包含在預設Docker設定中** — 現在，您必須將`--with-cron`選項新增到`ece-docker build:compose`命令以在Docker環境設定中包含Cron容器。 請參閱[Commerce適用的Cloud Docker](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)指南中的&#x200B;_管理cron作業_。
+   - **Cron容器不再包含在預設Docker設定中** — 現在，您必須將`--with-cron`選項新增到`ece-docker build:compose`命令以在Docker環境設定中包含Cron容器。 請參閱&#x200B;_Commerce適用的Cloud Docker_&#x200B;指南中的[管理cron作業](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)。
 
      先前使用cron作業產生容器的指令碼現在不含cron容器。
 

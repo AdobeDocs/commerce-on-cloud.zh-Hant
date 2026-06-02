@@ -2,9 +2,21 @@
 title: 設定MySQL服務
 description: 瞭解如何在雲端基礎結構上使用Adobe Commerce管理用於永久資料儲存的MySQL服務。
 feature: Cloud, Services, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 37b893ef-43cf-466b-9d18-ee3b80fdf2d8
+TQID: https://experienceleague.adobe.com/xPikS7qhOEhhWDRuUYBJEqL7EUPObzPDxJEZ4xjKkuE
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: 921
 ht-degree: 1%
 
 ---
@@ -17,7 +29,7 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->將MariaDB從10.1版升級至10.2版時請小心。MariaDB 10.1是支援&#x200B;_XtraDB_&#x200B;做為儲存引擎的最後一個版本。 MariaDB 10.2使用&#x200B;_InnoDB_&#x200B;做為儲存引擎。 從10.1升級至10.2後，您無法復原變更。 Adobe Commerce同時支援兩種儲存引擎；不過，您必須檢查擴充功能及專案使用的其他系統，以確保其與MariaDB 10.2相容。請參閱[10.1與10.2](https://mariadb.com/kb/en/upgrading-from-mariadb-101-to-mariadb-102/#incompatible-changes-between-101-and-102)之間的不相容變更。
+>將MariaDB從10.1版升級至10.2版時，請務必小心。 MariaDB 10.1是支援&#x200B;_XtraDB_&#x200B;做為儲存引擎的最新版本。 MariaDB 10.2使用&#x200B;_InnoDB_&#x200B;做為儲存引擎。 從10.1升級至10.2後，您無法復原變更。 Adobe Commerce同時支援兩種儲存引擎；不過，您必須檢查擴充功能及專案使用的其他系統，以確保其與MariaDB 10.2相容。 請參閱[10.1與10.2](https://mariadb.com/kb/en/upgrading-from-mariadb-101-to-mariadb-102/#incompatible-changes-between-101-and-102)之間的不相容變更。
 
 {{service-instruction}}
 

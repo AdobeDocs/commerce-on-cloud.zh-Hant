@@ -2,9 +2,22 @@
 title: 擴充架構
 description: 瞭解分割層架構，以及它如何根據需求進行擴充。
 feature: Cloud, Auto Scaling, Iaas, Logs
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 45c0cf14-99e6-4643-88f0-98ebcdb3a98c
+TQID: https://experienceleague.adobe.com/jbO3zavC7ZZs6nlYlMC0Isj0QLl-wlr-opAfxOKCNao
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: 828
 ht-degree: 0%
 
 ---
@@ -39,15 +52,15 @@ ht-degree: 0%
 
 這補充了服務層級所提供的垂直擴充功能。 隨著服務層級在規模和能力上擴展以適應不斷增長的資料庫和服務使用，Web層級在規模、能力和執行個體上擴展以適應流程請求的增加和更高的流量要求。
 
-假設一個Web節點執行個體型別為&#x200B;_C5.2xlarge，具有八個CPU和16-Gb RAM_。 對網站的請求數大幅增加。 您可以新增C5.2xlarge節點來處理php-fpm處理序的增加，也可以將每個執行個體型別變更為&#x200B;_C5.4xlarge (具有16個CPU和32-Gb RAM_)。 新增節點可減少浪湧容量不足的風險。
+假設一個Web節點執行個體型別為&#x200B;_C5.2xlarge，具有八個CPU和16-Gb RAM_。 對網站的請求數大幅增加。 您可以新增C5.2xlarge節點來處理php-fpm處理序的增加，也可以將每個執行個體型別變更為&#x200B;_C5.4xlarge （具有16個CPU和32-Gb RAM_）。 新增節點可減少浪湧容量不足的風險。
 
 ## 專案結構
 
 Pro專案中採用「可擴充」架構時，最少會有6個節點可供使用。
 
-- 3個Web節點c5.2xlarge (8個CPU、16-Gb RAM)
+- 3個Web節點c5.2xlarge （8個CPU、16-Gb RAM）
 
-- 3個服務節點m5.2xlarge (8個CPU、32Gb RAM)
+- 3個服務節點m5.2xlarge （8個CPU、32Gb RAM）
 
 然而，每個專案都是獨一無二的，需要效能監控才能正確分析資源管理。 每個帳戶都包含[New Relic服務](../monitor/new-relic-service.md)，該服務會自動與應用程式資料和效能分析連線，以提供動態伺服器監視。 具體來說，您可以使用New Relic服務來監視CPU和RAM使用率，以判斷哪些節點需要其他資源。 當資源達到容量或您注意到根據分析的效能降低時，您可以建立請求來擴展您的基礎架構以滿足需求。
 

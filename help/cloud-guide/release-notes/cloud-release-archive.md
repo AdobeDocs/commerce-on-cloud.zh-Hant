@@ -2,12 +2,31 @@
 title: ece-tools的發行說明封存
 description: 瞭解ece-tools的封存改善。
 hide: true
-hidefromtoc: true
+hidefromtoc: yes
 recommendations: noDisplay, noCatalog
 exl-id: 3ba39fa6-88e9-4177-956d-f3e382bf59e3
-source-git-commit: 84f9a4ba4d3942fc0461b18aeda2405ab2fbf67e
+TQID: https://experienceleague.adobe.com/oO7wTN1rGRxx-34M19dUgivQl9xdmUPtpRycVWQxJ4Y
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '7737'
+source-wordcount: 7737
 ht-degree: 0%
 
 ---

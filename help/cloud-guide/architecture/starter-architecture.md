@@ -3,9 +3,22 @@ title: 入門架構
 description: 瞭解入門架構支援的環境。
 feature: Cloud, Paas
 exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
-source-git-commit: 2236d0b853e2f2b8d1bafcbefaa7c23ebd5d26b3
+TQID: https://experienceleague.adobe.com/NZ2ea2-D3coPcwXTEHL7viNlgpIBSVA0zO2-iVUIhB0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: 1011
 ht-degree: 0%
 
 ---
@@ -18,7 +31,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->無法變更任何入門環境中唯讀資料夾的許可權。 此限制可保護應用程式的完整性和安全性。 無法變更這些唯讀檔案系統上的檔案夾許可權 — 即使「支援」無法修改這些許可權。 任何變更都必須從您本機開發環境的分支進行，並推送至應用程式環境。 您可以使用任何您喜歡的開發和分支方法。 當您取得專案的初始存取權時，請從`staging`環境建立`master`環境。 然後，從`integration`分支以建立`staging`環境。
+>無法變更任何入門環境中唯讀資料夾的許可權。 此限制可保護應用程式的完整性和安全性。 無法變更這些唯讀檔案系統上的檔案夾許可權 — 即使「支援」無法修改這些許可權。 任何變更都必須從您本機開發環境的分支進行，並推送至應用程式環境。 您可以使用任何您喜歡的開發和分支方法。 當您取得專案的初始存取權時，請從`master`環境建立`staging`環境。 然後，從`staging`分支以建立`integration`環境。
 
 ## 入門環境架構
 
@@ -32,11 +45,11 @@ ht-degree: 0%
 
 因為`production`環境是唯讀的，請使用`integration`環境進行程式碼變更，跨架構從`integration`部署到`staging`，最後部署到`production`環境。 請參閱[部署您的存放區](../deploy/staging-production.md)和[網站啟動](../launch/overview.md)。
 
-Adobe建議在推送至`staging`分支（部署至`master`環境）之前，先在您的`production`分支中進行完整測試。
+Adobe建議在推送至`master`分支（部署至`production`環境）之前，先在您的`staging`分支中進行完整測試。
 
 ## 中繼環境
 
-Adobe建議從`staging`建立名為`master`的分支。 `staging`分支將程式碼部署到中繼環境，以提供預先生產環境來測試程式碼、模組和擴充功能、付款閘道、運送、產品資料等。 此環境提供所有服務的設定以符合生產環境，包括Fastly、New Relic APM和搜尋。
+Adobe建議從`master`建立名為`staging`的分支。 `staging`分支將程式碼部署到中繼環境，以提供預先生產環境來測試程式碼、模組和擴充功能、付款閘道、運送、產品資料等。 此環境提供所有服務的設定以符合生產環境，包括Fastly、New Relic APM和搜尋。
 
 本指南的其他章節提供在安全的預備環境中進行最終程式碼部署和測試生產層級互動的說明。 為進行最佳效能和功能測試，請將資料庫復寫至測試環境。
 
@@ -66,7 +79,7 @@ Adobe建議從`staging`建立名為`master`的分支。 `staging`分支將程式
 
 若要在整合環境中取得最佳效能，請遵循下列最佳實務：
 
-- 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。 請嘗試將目錄大小縮減至約4,000至5,000種產品。
+- 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。請嘗試將目錄大小縮減至約4,000至5,000種產品。
 若要檢查目錄中的產品數目，請執行下列MySQL查詢：
 
   ```sql
@@ -98,7 +111,7 @@ Adobe建議從`staging`建立名為`master`的分支。 `staging`分支將程式
 
 ### 服務
 
-雲端基礎結構上的Adobe Commerce目前支援下列服務：PHP、MySQL (MariaDB)、Elasticsearch (Adobe Commerce 2.2到2.4.3-p2)、OpenSearch （2.3.7-p3、2.4.3-p2、2.4.4和更新版本）、Redis和[!DNL RabbitMQ]。
+雲端基礎結構上的Adobe Commerce目前支援下列服務：PHP、MySQL (MariaDB)、Elasticsearch （Adobe Commerce 2.2到2.4.3-p2）、OpenSearch （2.3.7-p3、2.4.3-p2、2.4.4和更新版本）、Redis和[!DNL RabbitMQ]。
 
 每個服務會在個別、安全的容器中執行。 容器在專案中一起管理。 有些是標準服務，例如：
 
@@ -126,15 +139,15 @@ Adobe建議從`staging`建立名為`master`的分支。 `staging`分支將程式
 
 - [OpenSearch](../services/opensearch.md)
 
-在測試和生產環境中，您會將Fastly用於CDN和快取。 最新版本的Fastly CDN擴充功能會在專案的初始布建期間安裝。 您可以升級擴充功能以取得最新的錯誤修正和改善專案。 檢視Magento 2[的](https://github.com/fastly/fastly-magento2)Fastly CDN模組。 此外，您還有權存取[New Relic](../monitor/account-management.md)以進行效能監視。
+在測試和生產環境中，您會將Fastly用於CDN和快取。 最新版本的Fastly CDN擴充功能會在專案的初始布建期間安裝。 您可以升級擴充功能以取得最新的錯誤修正和改善專案。 檢視Magento 2[&#128279;](https://github.com/fastly/fastly-magento2)的Fastly CDN模組。 此外，您還有權存取[New Relic](../monitor/account-management.md)以進行效能監視。
 
 使用下列檔案來設定您要在實施中使用的軟體版本。
 
-- [&#39;.magento.app.yaml&#39;](../application/configure-app-yaml.md)
+- [`.magento.app.yaml`](../application/configure-app-yaml.md)
 
-- [&#39;routes.yaml&#39;](../routes/routes-yaml.md)
+- [`routes.yaml`](../routes/routes-yaml.md)
 
-- [&#39;services.yaml&#39;](../services/services-yaml.md)
+- [`services.yaml`](../services/services-yaml.md)
 
 ### 備份與災難回覆
 
@@ -148,7 +161,7 @@ Adobe建議從`staging`建立名為`master`的分支。 `staging`分支將程式
 
 1. 將`master`分支複製至您的本機環境
 
-1. 從`staging`建立`master`分支
+1. 從`master`建立`staging`分支
 
 1. 從`staging`建立開發分支
 
@@ -158,7 +171,7 @@ Adobe建議從`staging`建立名為`master`的分支。 `staging`分支將程式
 
 - [入門開發與部署工作流程](starter-develop-deploy-workflow.md)
 
-- [Docker開發](../dev-tools/cloud-docker.md) (Cloud Docker for Commerce啟用的本機開發環境)
+- [Docker開發](../dev-tools/cloud-docker.md) （Cloud Docker for Commerce啟用的本機開發環境）
 
 - [管理分支](../project/console-branches.md)
 

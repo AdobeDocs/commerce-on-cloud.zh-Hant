@@ -3,9 +3,21 @@ title: 驗證金鑰
 description: 瞭解如何在雲端基礎結構上將驗證金鑰套用至Adobe Commerce中的開發專案。
 feature: Cloud, Security
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: b5a24fcd-9b43-4ec9-8a0c-52956a74e45e
+TQID: https://experienceleague.adobe.com/nYBr0uvw1SZPSQqAU6uHTiitjZ0kcudsLdWagiWRLP8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: 318
 ht-degree: 0%
 
 ---
@@ -21,7 +33,7 @@ ht-degree: 0%
 
 **安全性注意事項**
 
-Adobe建議將[環境變數](#composer-auth-environment-variable)方法與您的雲端專案搭配使用，以防止您的授權認證意外曝光。
+Adobe建議將[環境變數](#composer-auth-environment-variable)方法與您的雲端專案搭配使用，以防止授權認證意外曝光。
 
 使用Commerce的Cloud Docker作為本機開發工具時，驗證檔案方法非常理想，但請注意，不要將`auth.json`檔案上傳到公用的Git型存放庫。 您可以將`auth.json`檔案新增至[`.gitignore`檔案](../project/file-structure.md#ignoring-files)。
 

@@ -3,9 +3,20 @@ title: 管理磁碟空間
 description: 瞭解如何使用命令列介面管理磁碟空間。
 feature: Cloud, Storage
 exl-id: 1d13dc4e-56eb-4153-a8b1-48d2263ebc4c
-source-git-commit: 45d5a54bfd02fe9e61ca92789689dabf634d4bbe
+TQID: https://experienceleague.adobe.com/645o-d3ZvMtaYOwy0IKwAjSxUyUgkrI36OGLWtZR--g
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: 801
 ht-degree: 0%
 
 ---
@@ -167,7 +178,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 1. 在您的本機開發環境中，開啟`.magento/services.yaml`設定檔。
 
-1. 在檔案中新增或尋找服務。 檢視關於設定服務[的](../services/services-yaml.md)詳細資訊。
+1. 在檔案中新增或尋找服務。 檢視關於設定服務[&#128279;](../services/services-yaml.md)的詳細資訊。
 
 1. 設定磁碟屬性的新值（以MB為單位）。
 

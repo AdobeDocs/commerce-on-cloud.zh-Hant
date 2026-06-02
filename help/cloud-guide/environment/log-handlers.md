@@ -3,9 +3,17 @@ title: 記錄處理常式
 description: 瞭解如何在雲端基礎結構上為Adobe Commerce設定記錄處理常式。
 feature: Cloud, Logs, Configuration
 role: Developer
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 0d7fb653-468b-432c-9830-582b0fed8512
+TQID: https://experienceleague.adobe.com/4dowk2oMMCROVmEc8muHE7CzaZ-T3SaQi4sANVnMeWQ
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: 235
 ht-degree: 0%
 
 ---

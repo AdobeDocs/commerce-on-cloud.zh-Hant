@@ -2,9 +2,20 @@
 title: 設定ActiveMQ服務
 description: 瞭解如何啟用ActiveMQ Artemis服務，以管理雲端基礎結構上Adobe Commerce的訊息佇列。
 feature: Cloud, Services
-source-git-commit: ef22de6873b49f0fb9adfa9fc343a8d738a543e9
+exl-id: 39eb03a7-3345-4db9-88fa-dd7c422228f9
+TQID: https://experienceleague.adobe.com/YYGonI3614QouFjVftfShC1Mq7IJB7YcrxynBt6AnuY
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: 631
 ht-degree: 0%
 
 ---
@@ -115,7 +126,7 @@ MQF可以使用[ActiveMQ Artemis](https://activemq.apache.org/components/artemis
    }
    ```
 
-1. 啟用本機連線埠轉送至ActiveMQ （如果您的專案位於不同的區域，例如US-3、EU-5或AP-3區域，請將``us-3``替換為``eu-5``/``ap-3``/``us``）
+1. 啟用本機連線埠轉送至ActiveMQ （如果您的專案位於不同的區域，例如US-3、EU-5或AP-3區域，請將``us``替換為``us-3``/``eu-5``/``ap-3``）
 
    ```bash
    ssh -L <port-number>:activemq-artemis.internal:<port-number> <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
@@ -145,7 +156,7 @@ MQF可以使用[ActiveMQ Artemis](https://activemq.apache.org/components/artemis
 
 雲端基礎結構上Adobe Commerce中的ActiveMQ Artemis使用STOMP （串流文字導向傳訊通訊協定）通訊協定：
 
-- **STOMP**：用於佇列作業的傳訊通訊協定(連線埠61616)
+- **STOMP**：用於佇列作業的傳訊通訊協定（連線埠61616）
 - **網頁主控台**：可透過HTTP存取的管理介面（連線埠8161）
 
 ## 與RabbitMQ的差異
@@ -174,4 +185,3 @@ MQF可以使用[ActiveMQ Artemis](https://activemq.apache.org/components/artemis
 ```
 
 您可以視需要使用[`QUEUE_CONFIGURATION`](../environment/variables-deploy.md#queue_configuration)環境變數覆寫此設定。
-

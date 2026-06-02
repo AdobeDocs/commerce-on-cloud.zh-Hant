@@ -3,9 +3,22 @@ title: Fastly疑難排解
 description: 瞭解如何疑難排解和管理Adobe Commerce的Fastly CDN模組和服務。
 feature: Cloud, Configuration, Cache, Services
 exl-id: 69954ef9-9ece-411e-934e-814a56542290
-source-git-commit: f496a4a96936558e6808b3ce74eac32dfdb9db19
+TQID: https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: 1911
 ht-degree: 0%
 
 ---
@@ -32,13 +45,13 @@ ht-degree: 0%
 log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 ```
 
-您可以在生產和測試環境中使用相同的VCL。 請參閱[`vcl_log`Fastly檔案](https://www.fastly.com/documentation/reference/vcl/subroutines/log/)中的&#x200B;__。
+您可以在生產和測試環境中使用相同的VCL。 請參閱&#x200B;_Fastly檔案_&#x200B;中的[`vcl_log`](https://www.fastly.com/documentation/reference/vcl/subroutines/log/)。
 
 ## 網站效能、清除和快取問題
 
 使用以下清單來識別和疑難排解與雲端基礎結構環境中Adobe Commerce的Fastly服務設定相關的問題。
 
-- **存放區功能表未顯示或未運作** — 您可能是使用直接連至原始伺服器的連結或暫時連結，而非使用即時網站URL，或您在`-H "host:URL"`cURL命令[中使用](#check-live-site-through-fastly)。 如果您略過Fastly前往原始伺服器，主功能表將無法運作，且顯示的標頭不正確，導致瀏覽器端無法快取。
+- **存放區功能表未顯示或未運作** — 您可能是使用直接連至原始伺服器的連結或暫時連結，而非使用即時網站URL，或您在[cURL命令](#check-live-site-through-fastly)中使用`-H "host:URL"`。 如果您略過Fastly前往原始伺服器，主功能表將無法運作，且顯示的標頭不正確，導致瀏覽器端無法快取。
 
 - **上層導覽無法運作** — 上層導覽仰賴Edge Side Include (ESI)處理，此處理會在您上傳預設的Magento Fastly VCL程式碼片段時啟用。 如果導覽無法運作，請[上傳Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)並重新檢查網站。
 
@@ -243,7 +256,7 @@ php bin/magento module:status Fastly_Cdn
 
   如果您使用[組態管理](../store/store-settings.md#configure-store)，請先檢查`app/etc/config.php`組態檔中的Fastly CDN模組狀態，然後再將變更推送至生產或中繼環境。
 
-  如果未在`Fastly_CDN => 0`檔案中啟用模組(`config.php`)，請刪除檔案並執行以下命令，以最新的組態設定來更新`config.php`。
+  如果未在`config.php`檔案中啟用模組(`Fastly_CDN => 0`)，請刪除檔案並執行以下命令，以最新的組態設定來更新`config.php`。
 
   ```bash
   bin/magento magento-cloud:scd-dump

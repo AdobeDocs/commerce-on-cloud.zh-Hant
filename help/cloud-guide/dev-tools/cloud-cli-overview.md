@@ -2,9 +2,20 @@
 title: 雲端CLI
 description: 瞭解magento-cloud CLI，以及它如何協助您在雲端基礎結構專案上管理Adobe Commerce的本機開發環境。
 exl-id: 71a705f2-8672-4125-b539-b7b1621f2f64
-source-git-commit: 82d89f442792baec995dd0be40f2a49cba168f76
+TQID: https://experienceleague.adobe.com/cp-mG1bOtIxmm4bKKFmABa-vrudh-paS7E6x6IlWHmU
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: 860
 ht-degree: 0%
 
 ---

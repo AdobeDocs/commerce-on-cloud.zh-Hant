@@ -2,9 +2,20 @@
 title: 存放區設定管理
 description: 瞭解如何在雲端基礎結構環境中跨所有Adobe Commerce管理和同步處理存放區組態設定。
 feature: Cloud, Configuration, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 01850a7b-2c03-45e8-8051-b24ae95c5f87
+TQID: https://experienceleague.adobe.com/TF-K8g48q2fnuldOLdnwxjAJrxGzsRJlongd7cRqV9U
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: 1507
 ht-degree: 0%
 
 ---
@@ -43,7 +54,7 @@ ht-degree: 0%
 | 優先順序 | 組態<br>方法 | 說明 |
 | -------- | ------------------------ | ----------- |
 | 1 | [!DNL Cloud Console]<br>環境變數 | 從[!DNL Cloud Console]中環境設定的&#x200B;_變數_&#x200B;索引標籤新增的值。 在此處指定敏感或環境特定設定的值。 無法從管理員編輯此處指定的設定。 請參閱[環境設定變數](../project/overview.md#configure-environment)。 |
-| 2 | `.magento.app.yaml` | 已在`.magento.app.yaml`檔案的`variables`區段中新增值。 在此處指定值以確保在所有環境中設定一致。 **請勿在`.magento.app.yaml`檔案中指定敏感值。**&#x200B;檢視[應用程式設定](../application/configure-app-yaml.md)。 |
+| 2 | `.magento.app.yaml` | 已在`.magento.app.yaml`檔案的`variables`區段中新增值。 在此處指定值以確保在所有環境中設定一致。 **請勿在`.magento.app.yaml`檔案中指定敏感值。** 請參閱[應用程式設定](../application/configure-app-yaml.md)。 |
 | 3 | `app/etc/env.php` | 使用`app:config:dump`命令新增儲存於此的環境特定設定值。 使用環境變數或CLI設定系統專屬的敏感值。 檢視[敏感資料](#sensitive-data)。 `env.php`檔案是&#x200B;**不包括在原始檔控制中**。 |
 | 4 | `app/etc/config.php` | 使用`app:config:dump`命令新增儲存在此處的值。 共用組態值已新增至`config.php`。 從Admin或使用CLI設定共用設定。 `config.php`檔案包含在原始檔控制中。 |
 | 5 | 資料庫 | 透過在Admin中設定設定，可新增此處儲存的值。 使用任何上述方法設定的設定會遭到鎖定（呈現灰色），且無法從Admin進行編輯。 |

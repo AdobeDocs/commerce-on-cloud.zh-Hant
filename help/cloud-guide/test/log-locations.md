@@ -1,11 +1,23 @@
 ---
 title: 檢視和管理記錄檔
 description: 瞭解雲端基礎結構中可用的記錄檔型別以及在何處可以找到它們。
-last-substantial-update: 2023-05-23T00:00:00Z
+last-substantial-update: 2023-05-23T00:00:00.000Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
-source-git-commit: 445c5162f9d3436d9e5fe3df41af47189e344cfd
+TQID: https://experienceleague.adobe.com/VAsmOv6sBa37A2IAubUnWd4UAMRIuKTNt8JGKNJlrCI
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: 1287
 ht-degree: 0%
 
 ---
@@ -107,14 +119,14 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 
 >[!TIP]
 >
->對於Pro Staging和Pro Production環境，會針對具有固定檔案名稱的記錄檔啟用自動記錄旋轉、壓縮和移除。 每個記錄檔型別都有旋轉模式和存留期。
->環境的記錄輪換和壓縮記錄存留期的完整詳細資訊，請參閱： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。
->對於Pro測試和Pro生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以要求變更記錄輪換設定。
+>對於Pro Staging和Pro Production環境，會針對具有固定檔案名稱的記錄檔啟用自動記錄旋轉、壓縮和移除。每個記錄檔型別都有旋轉模式和存留期。
+>環境的記錄輪換和壓縮記錄檔有效期的完整詳細資訊，請參閱： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。
+>針對Pro Staging和Pro Production環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以要求變更記錄輪換設定。
 
 >[!TIP]
 >
 >無法在Pro Integration環境中設定記錄旋轉。
->若為Pro Integration，您必須實作自訂解決方案/指令碼，並[設定您的cron](../application/crons-property.md)以視需要執行指令碼。
+>對於Pro整合，您必須實作自訂解決方案/指令碼，並[設定您的cron](../application/crons-property.md)以視需要執行指令碼。
 
 >[!NOTE]
 >
@@ -220,7 +232,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-大多數錯誤訊息都包含說明和建議的動作。 使用ECE-Tools[的](../dev-tools/error-reference.md)錯誤訊息參考來查詢錯誤碼，以取得進一步的指引。 如需進一步的指引，請使用[Adobe Commerce部署疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=zh-Hant)。
+大多數錯誤訊息都包含說明和建議的動作。 使用ECE-Tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考來查詢錯誤碼，以取得進一步的指引。 如需進一步的指引，請使用[Adobe Commerce部署疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=zh-Hant)。
 
 ## 應用程式記錄
 
@@ -282,7 +294,7 @@ type: warning
 
 >[!TIP]
 >
->縮放架構中的記錄檔位置取決於節點型別。 請參閱縮放架構[主題中的](../architecture/scaled-architecture.md#log-locations)記錄檔位置。
+>縮放架構中的記錄檔位置取決於節點型別。 請參閱縮放架構[&#128279;](../architecture/scaled-architecture.md#log-locations)主題中的記錄檔位置。
 
 ## 記錄Pro生產和測試所需的資料
 

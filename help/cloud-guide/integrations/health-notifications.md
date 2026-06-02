@@ -3,9 +3,15 @@ title: 健康狀態通知
 description: 瞭解如何設定Slack、電子郵件和PagerDuty通知，以取得雲端基礎結構專案上Adobe Commerce的磁碟空間使用量。
 feature: Cloud, Observability, Integration
 exl-id: 5a7f37e9-e8f9-4b6b-b628-60dcaa60cc64
-source-git-commit: c3c708656e3d79c0893d1c02e60dcdf2ad8d7c7c
+TQID: https://experienceleague.adobe.com/Tt4zWTqehO4SLsimUv3IE5VvjJ1OwAA27tT9Mot24FU
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: 386
 ht-degree: 0%
 
 ---

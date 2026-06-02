@@ -1,9 +1,21 @@
 ---
 title: 專案結構
 description: 瞭解雲端基礎結構上Adobe Commerce的檔案結構和專案範本。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 364e40e4-a5b3-4d23-b86d-74fc0696ac19
+TQID: https://experienceleague.adobe.com/B6fTvmHLFa5THSgLKsjl1smPC8ekPdXB9A-vyqFVwG8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: 473
 ht-degree: 0%
 
 ---
@@ -17,7 +29,7 @@ ht-degree: 0%
 | 檔案 | 說明 |
 | ------------------------- | ------------ |
 | `/.magento/routes.yaml` | 將`www`重新導向至Apex網域和`php`應用程式以提供HTTP的組態檔。 請參閱[設定路由](../routes/routes-yaml.md)。 |
-| `/.magento/services.yaml` | 定義MySQL執行個體(MariaDB)、Redis和OpenSearch或Elasticsearch的組態檔。 請參閱[設定服務](../services/services-yaml.md)。 |
+| `/.magento/services.yaml` | 定義MySQL執行個體(MariaDB)、Redis以及OpenSearch或Elasticsearch的組態檔。 請參閱[設定服務](../services/services-yaml.md)。 |
 | `/app` | `code`資料夾用於自訂模組。 `design`資料夾用於[自訂主題](../store/custom-theme.md)。 `etc`資料夾包含應用程式的組態檔。 |
 | `/m2-hotfixes` | 用於自訂修補程式。 |
 | `/update` | 支援模組使用的服務資料夾。 |

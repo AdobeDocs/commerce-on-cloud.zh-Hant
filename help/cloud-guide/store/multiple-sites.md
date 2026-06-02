@@ -3,9 +3,18 @@ title: 設定多個網站或商店
 description: 瞭解如何在雲端基礎結構上為Adobe Commerce設定多個網站或商店。
 feature: Cloud, Configuration, Routes, Site Navigation
 exl-id: 773d8d64-d235-4c2b-87e9-aadbf8471b2c
-source-git-commit: db34528be490f92cc61c609ca143c01ef3284157
+TQID: https://experienceleague.adobe.com/532nrO6XkiqiNDfRMT6gZ4mVRqlv5PszegPJLuemmyc
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: 1094
 ht-degree: 0%
 
 ---
@@ -36,7 +45,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->若要將商店檢視新增至網站基底URL，您不必建立多個目錄。 請參閱[組態指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=zh-Hant)中的&#x200B;_將存放區程式碼新增至基底URL_。
+>若要將商店檢視新增至網站基底URL，您不必建立多個目錄。 請參閱&#x200B;_組態指南_&#x200B;中的[將存放區程式碼新增至基底URL](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=zh-Hant)。
 
 ## 新增網域
 
@@ -50,11 +59,11 @@ https://store.com/second/
 
 - 僅供入門級生產使用
 
-  新增網域至Fastly，請參閱[管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以要求協助。 此外，您必須新增網域至&#x200B;**中的**&#x200B;網域[!DNL Cloud Console]索引標籤： `https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  新增網域至Fastly，請參閱[管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以要求協助。 此外，您必須新增網域至[!DNL Cloud Console]中的&#x200B;**網域**&#x200B;索引標籤： `https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## 設定本機安裝
 
-若要設定本機安裝以使用多個商店，請參閱[設定指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=zh-Hant)中的&#x200B;_多個網站或商店_。
+若要設定本機安裝以使用多個商店，請參閱&#x200B;_設定指南_&#x200B;中的[多個網站或商店](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=zh-Hant)。
 
 成功建立並測試本機安裝以使用多個存放區後，您必須準備整合環境：
 
@@ -64,7 +73,7 @@ https://store.com/second/
    - [共用網域的位置](#configure-locations-for-shared-domains)
 
 1. **設定網站、商店和商店檢視** — 使用Adobe Commerce管理UI設定
-1. **修改變數** — 在`MAGE_RUN_TYPE`檔案中指定`MAGE_RUN_CODE`和`magento-vars.php`變數的值
+1. **修改變數** — 在`magento-vars.php`檔案中指定`MAGE_RUN_TYPE`和`MAGE_RUN_CODE`變數的值
 1. **部署和測試環境** — 部署和測試`integration`分支
 
 >[!TIP]
@@ -101,7 +110,7 @@ https://store.com/second/
 
 ### 設定共用網域的位置
 
-路由設定會定義如何處理URL，`web`檔案中的`.magento.app.yaml`屬性會定義您的應用程式如何公開至網路。 網頁&#x200B;_位置_&#x200B;允許傳入要求的詳細程度。 例如，如果您的網域是`store.com`，您可以針對共用網域的兩個不同存放區之要求，使用`/first` （預設網站）和`/second`。
+路由設定會定義如何處理URL，`.magento.app.yaml`檔案中的`web`屬性會定義您的應用程式如何公開至網路。 網頁&#x200B;_位置_&#x200B;允許傳入要求的詳細程度。 例如，如果您的網域是`store.com`，您可以針對共用網域的兩個不同存放區之要求，使用`/first` （預設網站）和`/second`。
 
 **若要設定新的網站位置**：
 
@@ -213,13 +222,13 @@ https://store.com/second/
 
 ### 設定網站、商店和商店檢視
 
-在&#x200B;_管理UI_&#x200B;中，設定您的Adobe Commerce **網站**、**商店**&#x200B;和&#x200B;**商店檢視**。 請參閱[設定指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=zh-Hant)的Admin _中的_&#x200B;設定多個網站、商店和商店檢視。
+在&#x200B;_管理UI_&#x200B;中，設定您的Adobe Commerce **網站**、**商店**&#x200B;和&#x200B;**商店檢視**。 請參閱&#x200B;_設定指南_&#x200B;的Admin[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=zh-Hant)中的設定多個網站、商店和商店檢視。
 
 當您設定本機安裝時，請務必使用管理員提供的相同名稱和程式碼，代表您的網站、商店和商店檢視。 更新`magento-vars.php`檔案時需要這些值。
 
 ### 修改變數
 
-請使用專案根目錄中的`MAGE_RUN_CODE`檔案傳遞`MAGE_RUN_TYPE`和`magento-vars.php`變數，而不設定NGINX虛擬主機。
+請使用專案根目錄中的`magento-vars.php`檔案傳遞`MAGE_RUN_CODE`和`MAGE_RUN_TYPE`變數，而不設定NGINX虛擬主機。
 
 **若要使用`magento-vars.php`檔案傳遞變數**：
 
@@ -244,7 +253,7 @@ https://store.com/second/
    }
    ```
 
-1. 移動註解的`if`區塊，使其位於&#x200B;_區塊的_&#x200B;之後`function`且不再註解。
+1. 移動註解的`if`區塊，使其位於`function`區塊的&#x200B;_之後_&#x200B;且不再註解。
 
    ```php
    <?php

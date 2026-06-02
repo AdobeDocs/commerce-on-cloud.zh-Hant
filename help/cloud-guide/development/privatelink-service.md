@@ -3,26 +3,40 @@ title: PrivateLink服務
 description: 瞭解如何使用PrivateLink服務，在相同地區的私人雲端和Adobe Commerce雲端平台之間建立安全連線。
 feature: Cloud, Iaas, Security
 exl-id: 13a7899f-9eb5-4c84-b4c9-993c39d611cc
-source-git-commit: 0e7f268de078bd9840358b66606a60b2a2225764
+TQID: https://experienceleague.adobe.com/AxpzTY-Nb7UoKhW-wzAOuWLm5O7XS4OFxjSaIfFUR-I
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: 1798
 ht-degree: 0%
 
 ---
 
 # PrivateLink服務
 
-雲端基礎結構上的Adobe Commerce支援與[AWS PrivateLink](https://aws.amazon.com/privatelink/)或[Azure Private Link](https://learn.microsoft.com/en-us/azure/private-link/)服務的整合。 Adobe Commerce您可以使用PrivateLink在雲端基礎結構環境與託管於外部系統的服務和應用程式之間建立安全的、私人的通訊。 必須透過在同一雲端區域中相同雲端平台(AWS或Azure)上設定的虛擬私人雲端(VPC)端點，才能存取Adobe Commerce應用程式和外部系統。
+雲端基礎結構上的Adobe Commerce支援與[AWS PrivateLink](https://aws.amazon.com/privatelink/)或[Azure Private Link](https://learn.microsoft.com/en-us/azure/private-link/)服務的整合。 您可以使用PrivateLink在雲端基礎結構環境與託管於外部系統的服務和應用程式之間建立安全的、私人的通訊。 必須透過設定在相同雲端平台（AWS或Azure）上的相同雲端區域虛擬私人雲端(VPC)端點，才能存取Adobe Commerce應用程式和外部系統。
 
 >[!TIP]
 >
->PrivateLink最適合用於保護非HTTP整合的連線，例如資料庫或檔案傳輸。 如果您打算將應用程式與Adobe Commerce API整合，請參閱如何在適用於Adobe Developer App Builder[的](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/)Adobe API Mesh中建立&#x200B;_API Mesh_。
+>PrivateLink最適合用於保護非HTTP整合的連線，例如資料庫或檔案傳輸。 如果您打算將應用程式與Adobe Commerce API整合，請參閱如何在適用於Adobe Developer App Builder _的_ Adobe API Mesh中建立[API Mesh](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/)。
 
 ## 功能和支援
 
 雲端基礎結構專案上適用於Adobe Commerce的PrivateLink服務整合包含下列功能和支援：
 
-- 同一雲端區域內，同一雲端平台(VPC或Adobe)上的客戶虛擬私人雲端(AWS)與VPC之間的安全連線。
+- 同一雲端區域內，同一雲端平台（VPC或Adobe）上的客戶虛擬私人雲端(AWS)與Azure VPC之間的安全連線。
 - 支援Adobe和客戶VPC提供的端點服務之間的單向或雙向通訊。
 - 服務啟用：
 
@@ -67,7 +81,7 @@ ht-degree: 0%
 
 ### 先決條件
 
-![檢查](../../assets/fix.svg)雲端帳戶(AWS或Azure)，其所在區域與雲端基礎結構執行個體上的Adobe Commerce相同。
+![檢查](../../assets/fix.svg)雲端帳戶（AWS或Azure），其所在區域與雲端基礎結構執行個體上的Adobe Commerce相同。
 
 ![check](../../assets/fix.svg)客戶環境中的VPC，其託管要透過PrivateLink連線的服務。 請參閱AWS或Azure檔案，以取得VPC設定的說明，或聯絡您的網路管理員。
 
@@ -75,7 +89,7 @@ ht-degree: 0%
 
 收集啟用PrivateLink所需的下列資料：
 
-- **Customer Cloud帳號** (AWS或Azure) — 必須在雲端基礎結構執行個體上與Adobe Commerce相同的區域
+- **Customer Cloud帳號** （AWS或Azure） — 必須在雲端基礎結構執行個體上的Adobe Commerce所在的相同地區
 - **雲端區域** — 提供託管帳戶的雲端區域以進行驗證
 - **服務和通訊連線埠**—Adobe必須開啟連線埠，才能啟用VPC之間的服務通訊，例如SQL連線埠3306、SFTP連線埠2222
 - **專案識別碼** — 提供雲端基礎結構上的Adobe Commerce Pro專案識別碼。 您可以使用下列[雲端CLI](../dev-tools/cloud-cli-overview.md)命令取得專案識別碼和其他專案資訊： `magento-cloud project:info`
@@ -107,14 +121,14 @@ ht-degree: 0%
 
 以下工作流程概述PrivateLink與雲端基礎結構上Adobe Commerce整合的啟用程式。
 
-1. **客戶**&#x200B;提交支援票證，以主旨列`PrivateLink support for <company>`要求PrivateLink啟用。 在票證中包含啟用[所需的](#prerequisites)資料。 Adobe使用支援票證在啟用過程中協調通訊。
+1. **客戶**&#x200B;提交支援票證，以主旨列`PrivateLink support for <company>`要求PrivateLink啟用。 在票證中包含啟用[&#128279;](#prerequisites)所需的資料。 Adobe使用支援票證在啟用過程中協調通訊。
 
 1. **Adobe**&#x200B;可讓客戶帳戶存取Adobe VPC中的端點服務。
 
    - 更新Adobe端點服務設定，以接受從客戶AWS或Azure帳戶起始的請求。
    - 更新支援票證以提供要連線的Adobe VPC端點的服務名稱，例如`com.amazonaws.vpce.<cloud-region>.vpce-svc-<service-id>`。
 
-1. **客戶**&#x200B;將Adobe端點服務新增至其雲端帳戶(AWS或Azure)，這會觸發與Adobe的連線要求。 如需指示，請參閱Cloud平台檔案：
+1. **客戶**&#x200B;將Adobe端點服務新增至其雲端帳戶（AWS或Azure），這會觸發與Adobe的連線要求。 如需指示，請參閱Cloud平台檔案：
 
    - 若為AWS，請參閱[接受及拒絕介面端點連線要求]。
    - 若為Azure，請參閱[管理連線要求]。
@@ -125,7 +139,7 @@ ht-degree: 0%
 
 1. 啟用雙向連線的其他步驟：
 
-   - **Adobe**&#x200B;提供Adobe帳戶主體(AWS或Azure帳戶的根使用者)並要求存取客戶VPC端點服務。
+   - **Adobe**&#x200B;提供Adobe帳戶主體（AWS或Azure帳戶的根使用者）並要求存取客戶VPC端點服務。
    - **客戶**&#x200B;可讓Adobe存取客戶VPC中的端點服務。 這假設Adobe帳戶主體具有`arn:aws:iam::402592597372:root`的存取權，如先前在&#x200B;**已授與端點服務存取權**&#x200B;先決條件中所述。
 
       - 更新客戶端點服務設定，以接受從Adobe帳戶起始的請求。 如需指示，請參閱Cloud平台檔案：
@@ -135,7 +149,7 @@ ht-degree: 0%
 
       - 為Adobe提供客戶VPC的端點服務名稱。
 
-   - **Adobe**&#x200B;將客戶端點服務新增至Adobe平台帳戶(AWS或Azure)，這會觸發與客戶VPC的連線要求。
+   - **Adobe**&#x200B;將客戶端點服務新增至Adobe平台帳戶（AWS或Azure），這會觸發與客戶VPC的連線請求。
    - **客戶**&#x200B;核准來自Adobe的連線要求，以完成設定。
    - **客戶** [驗證Adobe VPC的連線](#test-vpc-endpoint-service-connection)。
 

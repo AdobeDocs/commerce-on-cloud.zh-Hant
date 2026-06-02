@@ -3,9 +3,20 @@ title: 在雲端上布建Commerce
 description: 瞭解如何準備Adobe客戶技術顧問，以在雲端基礎結構專案上布建您的Adobe Commerce。
 recommendations: noDisplay, catalog
 role: Admin
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 77e8c9fb-8c4a-4c98-adbc-e57871c5bdbc
+TQID: https://experienceleague.adobe.com/GzCPqYxn0-ACS34UfvHypqv6BveTRpbLJNN2jNmCL-E
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: 774
 ht-degree: 0%
 
 ---
@@ -14,7 +25,7 @@ ht-degree: 0%
 
 讓我們開始並在雲端基礎結構上初始化您的Commerce專案！
 
-在雲端專案環境中Adobe布建Commerce之前，建議您考量下列策略並準備答案，以首次諮詢Adobe帳戶團隊。 請使用下列章節作為檢查清單，協助您準備與客戶技術顧問的對話，以布建雲端專案：
+在Adobe布建Commerce至雲端專案環境前，建議您考量下列策略並準備答案，以首次諮詢Adobe客戶團隊。 請使用下列章節作為檢查清單，協助您準備與客戶技術顧問的對話，以布建雲端專案：
 
 ## 網域定義
 
@@ -31,7 +42,7 @@ ht-degree: 0%
 
 請參閱&#x200B;_雲端基礎結構上的Commerce_&#x200B;指南中的[設定多個網站或商店](../cloud-guide/store/multiple-sites.md)，以取得多個或唯一網域的進一步指引。
 
-如果您有現有的Fastly帳戶連結您Adobe Commerce網站上使用的相同頂點和子網域，請參閱[多個Fastly帳戶和指派的網域](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}。
+如果您有現有的Fastly帳戶，連結您Adobe Commerce網站上使用的相同頂點和子網域，請參閱[多個Fastly帳戶和指派的網域](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}。
 
 ## 異動電子郵件網域
 
@@ -59,7 +70,7 @@ SendGrid網域的範例： `example@your-store.com`
 
 **問題4**： _哪個雲端服務區域最方便接近您？_
 
-在雲端基礎結構Pro專案上，選擇Amazon Web Services (AWS)或Microsoft Azure作為您Adobe Commerce的基礎結構即服務(IaaS)基礎。 每個服務提供者會在多個區域運作，並提供多個可用區域。 選擇適合您所在位置的區域，降低延遲和成本提升的可能性。
+在雲端基礎結構專業專案上，選擇Amazon Web Services (AWS)或Microsoft Azure作為您的Adobe Commerce基礎結構即服務(IaaS)基礎。 每個服務提供者會在多個區域運作，並提供多個可用區域。 選擇適合您所在位置的區域，降低延遲和成本提升的可能性。
 
 檢視[Adobe Commerce雲端區域](../cloud-guide/overview.md)的地圖。
 
@@ -69,13 +80,13 @@ SendGrid網域的範例： `example@your-store.com`
 
 雲端基礎結構上的Adobe Commerce支援與AWS PrivateLink或Azure Private Link服務整合。 雖然此服務為選購專案，PrivateLink仍可用來在雲端基礎結構環境（服務與託管於外部系統的應用程式）之間建立安全的私人通訊。
 
-請務必考量您的雲端服務策略(AWS或Azure)，以便Adobe Commerce執行個體可在相同地區記憶體取。 如需地區協助工具的進一步說明，請參閱&#x200B;_雲端基礎結構上的Commerce_&#x200B;指南中的[PrivateLink服務](../cloud-guide/development/privatelink-service.md)。
+請務必考量您的雲端服務策略（AWS或Azure），以便Adobe Commerce例項可在相同地區記憶體取。 如需地區協助工具的進一步說明，請參閱&#x200B;_雲端基礎結構上的Commerce_&#x200B;指南中的[PrivateLink服務](../cloud-guide/development/privatelink-service.md)。
 
 ## Target網站啟動
 
 **問題6**： _您預計的目標啟動日期是多久？_
 
-啟動網站需要反複的設定和測試，以確保您的網站啟動成功。 設定目標日期可協助您和您的Adobe帳戶團隊為最後啟動前的活動做好準備，其中包括協調最終步驟的呼叫。
+啟動網站需要反複的設定和測試，以確保您的網站啟動成功。 設定目標日期可協助您和您的Adobe客戶團隊準備最後的啟動前活動，包括協調最終步驟的呼叫。
 
 請參閱&#x200B;_雲端基礎結構上的Commerce_&#x200B;指南中的[啟動網站概觀](../cloud-guide/launch/overview.md)，以檢閱完整程式並下載啟動檢查清單副本。
 

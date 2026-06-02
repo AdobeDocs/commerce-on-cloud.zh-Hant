@@ -2,9 +2,16 @@
 title: 套用修補程式
 description: 瞭解如何在雲端基礎結構專案上套用Adobe Commerce中的修補程式。
 feature: Cloud, Upgrade
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 923c1e43-45da-450f-bdfc-de84a901400d
+TQID: https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: 910
 ht-degree: 0%
 
 ---
@@ -22,7 +29,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->您可以將Commerce的[品質修補工具](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hant)和雲端修補程式用作Magento Open Source和Adobe Commerce專案的獨立套件。 我們建議針對非雲端專案使用品質修補工具。
+>您可以使用Commerce的[品質修補工具](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hant)和雲端修補程式，作為Magento Open Source和Adobe Commerce專案的獨立套件。 我們建議針對非雲端專案使用品質修補工具。
 
 當您部署變更至遠端環境時，`ece-tools`封裝會使用`magento/magento-cloud-patches`和`magento/quality-patches`來檢查擱置的修補程式，並依照下列順序自動套用它們：
 
@@ -91,7 +98,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 狀態表格包含下列資訊型別：
 
 - **型別**：
-   - `Optional` — 在Adobe Commerce和Magento Open Source安裝中，Quality Patches Tool和Cloud Patches套件中的所有修補程式都是選用的。 對於雲端基礎結構上的Adobe Commerce，所有修補程式均為選購。
+   - `Optional`—Quality Patches Tool和Cloud Patches套裝軟體中的所有修補程式都是選用的，適用於Adobe Commerce和Magento Open Source安裝。 對於雲端基礎結構上的Adobe Commerce，所有修補程式均為選購。
    - `Required`—Cloud客戶需要Commerce套件的Cloud Patches中的所有修補程式。
    - `Deprecated` — 個別修補程式已標示為已棄用，若您已套用它，我們建議您還原它。 回覆已棄用的修補程式後，該修補程式將不再顯示在狀態表格中。
    - `Custom` — 來自&#39;m2-hotfix&#39;目錄的所有修補程式。
@@ -112,7 +119,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 **若要在本機開發環境中套用個別修補程式**：
 
-1. 將&#39;QUALITY_PATCH&#39;變數新增至`.magento.env.yaml`檔案，並在下方列出必要的修補程式。
+1. 將&#39;QUALITY_PATCHES&#39;變數新增至`.magento.env.yaml`檔案，並在下方列出必要的修補程式。
 
    ```yaml
    stage:
@@ -179,7 +186,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 ## 套用自訂修補程式
 
-當您部署時，ECE-Tools會套用您新增至專案根目錄`/m2-hotfixes`目錄的所有Adobe修補程式及任何自訂修補程式。
+部署時，ECE-Tools會套用您新增至專案根目錄`/m2-hotfixes`目錄的所有Adobe修補程式及任何自訂修補程式。
 
 >[!NOTE]
 >

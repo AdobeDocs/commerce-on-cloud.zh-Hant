@@ -2,9 +2,22 @@
 title: SendGrid電子郵件服務
 description: 瞭解雲端基礎結構上適用於Adobe Commerce的SendGrid電子郵件服務，以及如何測試您的DNS設定。
 exl-id: 06236068-df32-468f-99ec-c379984be136
-source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
+TQID: https://experienceleague.adobe.com/I4giHpOngkQ0KZYBXZoGJGBXLWme2fxE39uIOGnON-k
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: 1702
 ht-degree: 0%
 
 ---

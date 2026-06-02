@@ -2,9 +2,20 @@
 title: Crons屬性
 description: 請參閱如何在 [!DNL Commerce] 應用程式組態檔中設定'crons'屬性的範例。
 feature: Cloud, Configuration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ff176cb1-5b6c-48a0-ad3c-56cc1d606c97
+TQID: https://experienceleague.adobe.com/E7qXe1VmZezG9AqJ2rchTUmbTibU0pNaGdqb00MkcXo
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: 1172
 ht-degree: 0%
 
 ---
@@ -86,8 +97,8 @@ Adobe Commerce對`crons`規格（規格）使用五值運算式： `* * * * *`
 
 部分範例：
 
-- `00 */3 * * *`會在第一分鐘（上午12:00、凌晨3:00、早上6:00）每三小時執行一次
-- `20 */8 * * *`在分鐘20每8小時執行一次（上午12:20、上午8:20、下午4:20）
+- `00 */3 * * *`會在第一分鐘（上午12:00、上午3:00、上午6:00）每三小時執行一次
+- `20 */8 * * *`在分鐘20 （上午12:20、上午8:20、下午4:20）每8小時執行一次
 - `00 00 * * *`每天午夜執行一次
 - `00 * * * 1`在星期一的午夜每週執行一次。
 
