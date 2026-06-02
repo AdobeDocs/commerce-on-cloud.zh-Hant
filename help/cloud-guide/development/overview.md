@@ -7,10 +7,15 @@ topic: Development
 last-substantial-update: 2024-02-06T00:00:00.000Z
 exl-id: 14fb0b41-1c3a-4abc-8726-cea16ab00ba8
 TQID: https://experienceleague.adobe.com/VrOBK4bPYTxzRz10ZaHYDOdISw0lSl6WPAHcnEI1J-w
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 580
@@ -22,7 +27,7 @@ ht-degree: 0%
 
 雲端基礎結構遠端環境上的Adobe Commerce是&#x200B;**唯讀**，包括所有入門環境以及所有Pro整合、中繼和生產環境。 在本機開發環境中，您可以先撰寫及測試程式碼，再將程式碼推送至整合環境，進一步測試並部署到中繼和生產環境。
 
-在準備本機工作區之前，請確定您有[認證](../../get-started/prepare-workspace.md)。 本機開發需要安裝PHP和Composer，除非您選擇使用適用於Commerce](#docker-environment)的[Cloud Docker。
+在準備本機工作區之前，請確定您有[認證](../../get-started/prepare-workspace.md)。 本機開發需要安裝PHP和Composer，除非您選擇使用適用於Commerce[&#128279;](#docker-environment)的Cloud Docker。
 
 ## 必要的套件
 
@@ -74,7 +79,7 @@ Composer會將專案所需的程式庫和相依性安裝在`vendor`目錄中。 
 
 您可以使用適用於Commerce的Cloud Docker工具，在本地開發的雲端基礎結構生產和開發環境中模擬Adobe Commerce。 適用於Commerce的Cloud Docker不需要在本機安裝PHP和Composer。
 
-- 在Adobe Developer網站中使用Cloud Docker](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)進行[本機開發
+- 在Adobe Developer網站中使用Cloud Docker[&#128279;](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)進行本機開發
 - [Docker架構和常用命令](../dev-tools/cloud-docker.md)
 - [Cloud Docker發行說明](../release-notes/cloud-docker.md)
 

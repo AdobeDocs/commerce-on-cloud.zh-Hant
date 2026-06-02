@@ -6,10 +6,24 @@ hidefromtoc: yes
 recommendations: noDisplay, noCatalog
 exl-id: 3ba39fa6-88e9-4177-956d-f3e382bf59e3
 TQID: https://experienceleague.adobe.com/oO7wTN1rGRxx-34M19dUgivQl9xdmUPtpRycVWQxJ4Y
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 7737
@@ -95,9 +109,9 @@ ht-degree: 0%
 
    - ![新圖示](../../assets/new.svg)您現在可以在Docker環境中使用`ece-tools`套件執行功能測試。 請參閱[應用程式測試](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing).<!-- MAGECLOUD-3129/3684 -->
 
-   - ![新圖示](../../assets/new.svg)已新增使用`.magento.app.yaml`檔案設定PHP模組的支援。 在`.magento.app.yaml`檔案](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)中指定的任何[PHP副檔名都可在Docker PHP容器中使用。<!-- MAGECLOUD-3357 -->
+   - ![新圖示](../../assets/new.svg)已新增使用`.magento.app.yaml`檔案設定PHP模組的支援。 在`.magento.app.yaml`檔案[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)中指定的任何PHP副檔名都可在Docker PHP容器中使用。<!-- MAGECLOUD-3357 -->
 
-   - ![新圖示](../../assets/new.svg)有新命令可用來改善Docker命令列體驗。 檢視Docker參考](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli).<!-- MAGECLOUD-3569 -->的[`bin/magento-docker`區段
+   - ![新圖示](../../assets/new.svg)有新命令可用來改善Docker命令列體驗。 檢視Docker參考&rbrack;(https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli).<!-- MAGECLOUD-3569 -->的&lbrack;`bin/magento-docker`區段
 
    - ![新圖示](../../assets/new.svg)已新增使用Mutagen.io在本機主機和Docker之間的開發期間同步檔案的功能。<!-- MAGECLOUD-3559 -->
 
@@ -149,7 +163,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **Docker更新**—
 
-   - ![新圖示](../../assets/new.svg)現在，Docker環境支援.magento.app.yaml檔案](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)的[crons屬性中定義的cron設定。<!-- MAGECLOUD-3150 -->
+   - ![新圖示](../../assets/new.svg)現在，Docker環境支援.magento.app.yaml檔案[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)的crons屬性中定義的cron設定。<!-- MAGECLOUD-3150 -->
 
    - ![新圖示](../../assets/new.svg) **新Docker容器** — 已新增[TLS終止Proxy容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container)，以方便透過HTTPS終止Varnish SSL。<!-- MAGECLOUD-2890 -->
 

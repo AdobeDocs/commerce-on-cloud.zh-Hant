@@ -3,10 +3,16 @@ title: 專案結構
 description: 瞭解雲端基礎結構上Adobe Commerce的檔案結構和專案範本。
 exl-id: 364e40e4-a5b3-4d23-b86d-74fc0696ac19
 TQID: https://experienceleague.adobe.com/B6fTvmHLFa5THSgLKsjl1smPC8ekPdXB9A-vyqFVwG8
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 473
@@ -65,7 +71,7 @@ ht-degree: 0%
 
 ## 忽略檔案
 
-雲端基礎結構專案存放庫中有具有Adobe Commerce的基底`.gitignore`檔案。 檢視magento-cloud存放庫](https://github.com/magento/magento-cloud/blob/master/.gitignore)中的最新[.gitignore檔案。 若要新增位於`.gitignore`清單中的檔案，您可以在暫存認可時使用`-f` （強制）選項：
+雲端基礎結構專案存放庫中有具有Adobe Commerce的基底`.gitignore`檔案。 檢視magento-cloud存放庫[&#128279;](https://github.com/magento/magento-cloud/blob/master/.gitignore)中的最新.gitignore檔案。 若要新增位於`.gitignore`清單中的檔案，您可以在暫存認可時使用`-f` （強制）選項：
 
 ```bash
 git add <path/filename> -f
@@ -86,7 +92,7 @@ git add <path/filename> -f
    }
    ```
 
-1. 新增為基底範本設計的`.gitignore`檔案。 例如，如果您需要2.2.6版範本的`.gitignore`檔案，請使用2.2.6](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore)檔案的[.gitignore作為參考。
+1. 新增為基底範本設計的`.gitignore`檔案。 例如，如果您需要2.2.6版範本的`.gitignore`檔案，請使用2.2.6[&#128279;](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore)檔案的.gitignore作為參考。
 
 1. 清除Git快取。
 

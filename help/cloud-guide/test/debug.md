@@ -3,10 +3,15 @@ title: 設定 [!DNL Xdebug]
 description: 瞭解如何設定Xdebug擴充功能，以便在雲端基礎結構專案開發上偵錯Adobe Commerce。
 exl-id: 32857c9c-4a49-4337-9c15-a6e46c328df7
 TQID: https://experienceleague.adobe.com/DGrQ8tHkdWCLbWQ6Mt-RvED2SCATyzyqZznZB8dUjGM
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 1955
@@ -35,7 +40,7 @@ ht-degree: 0%
 若要設定[!DNL Xdebug]，請遵循下列步驟：
 
 - [在分支中工作以推送檔案更新](#get-started-with-a-branch)
-- [為環境啟用 [!DNL Xdebug] ](#enable-xdebug-in-your-environment)
+- [為環境啟用 [!DNL Xdebug] &#x200B;](#enable-xdebug-in-your-environment)
 - [設定PHPStorm伺服器](#configure-phpstorm-server)
 - [設定連線埠轉送](#set-up-port-forwarding)
 
@@ -239,7 +244,7 @@ ht-degree: 0%
 
    ![儲存您的SSH通道](../../assets/xdebug/putty-session-save.png)
 
-1. 若要測試SSH通道，請按一下[載入]。****，然後按一下[開啟]。****
+1. 若要測試SSH通道，請按一下[載入]。**&#x200B;**，然後按一下[開啟]。**&#x200B;**
 
    如果顯示「無法連線」錯誤，請確認下列事項：
 

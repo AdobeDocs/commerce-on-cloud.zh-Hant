@@ -3,11 +3,19 @@ title: 雲端基礎結構上的Commerce
 description: 了解如何建置、部署和管理雲端基礎結構上的 Commerce。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
 TQID: https://experienceleague.adobe.com/-sgz85xapPKNipyFVB4yMrLilEku3ff5IJg3OddymsA
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: efe0f95c16d9aab9af6a9c263034b08dce4d7c93
 workflow-type: tm+mt
 source-wordcount: 323
@@ -30,7 +38,7 @@ ht-degree: 3%
 >
 >如需安全性詳細資訊，請參閱[安全性啟動檢查清單](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
 
-詳細檢視[技術棧疊](architecture/tech-stack.md)，或進一步瞭解Commerce ](architecture/cloud-architecture.md)的[雲端架構中的特定功能和支援產品。
+詳細檢視[技術棧疊](architecture/tech-stack.md)，或進一步瞭解Commerce [&#128279;](architecture/cloud-architecture.md)的雲端架構中的特定功能和支援產品。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

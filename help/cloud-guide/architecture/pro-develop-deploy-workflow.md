@@ -4,11 +4,19 @@ description: 瞭解如何使用Pro開發和部署工作流程。
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
 TQID: https://experienceleague.adobe.com/bRmbWxABneX08LwTxhlUMFX2H7WbCqVg8DDS9RRxQNI
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2: id: df5e974b-6742-4873-a687-a6bedaafdaa2
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 904
@@ -67,7 +75,7 @@ The disk hosting /app/<cluster_ID> is full
 
 - **正在產生組態管理檔案** — 某些組態設定在已部署的環境中是&#x200B;_唯讀_。
 
-- **設定您的商店** — 您應該使用整合環境完整設定所有商店設定。 您可以在&#x200B;_[!DNL Cloud Console]_中的_&#x200B;整合&#x200B;_環境檢視上找到&#x200B;**商店管理員URL**。
+- **設定您的商店** — 您應該使用整合環境完整設定所有商店設定。 您可以在&#x200B;_[!DNL Cloud Console]_&#x200B;中的_&#x200B;整合&#x200B;_環境檢視上找到&#x200B;**商店管理員URL**。
 
 ## 部署工作流程
 

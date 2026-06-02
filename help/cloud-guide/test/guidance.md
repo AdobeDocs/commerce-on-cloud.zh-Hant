@@ -3,10 +3,15 @@ title: 測試指南
 description: 閱讀在雲端基礎結構上啟動Adobe Commerce的測試型別和最佳實務。
 exl-id: 70fdfbbd-1763-4b1b-9ffd-9ffdc92f4f91
 TQID: https://experienceleague.adobe.com/uCBGY5eP-R4zbUWeD-WE95F49k-U-nI058FR-rOJfsU
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 371
@@ -24,7 +29,7 @@ ht-degree: 0%
 
 - **應用程式測試** — 使用[Magento功能測試架構(MFTF)](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing)在Cloud Docker環境中測試應用程式。
 
-- **程式碼測試** — 使用PHP](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing)的[Codeception測試架構來驗證要貢獻到Cloud封裝存放庫的程式碼。
+- **程式碼測試** — 使用PHP[&#128279;](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing)的Codeception測試架構來驗證要貢獻到Cloud封裝存放庫的程式碼。
 
 ## 啟動前最佳實務
 
