@@ -2,9 +2,10 @@
 title: Adobe Commerce進階安全性
 description: 瞭解進階安全性如何在雲端基礎結構上的Adobe Commerce中新增機器人管理、進階速率限制和第7層DDoS保護。
 feature: Cloud, Configuration, Security
-source-git-commit: 8a7c1c297092fdf2b75d22ce99c360c85eac0495
+exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
+source-git-commit: 0b3ef117f85c990c2a01ecb655c930b8c4f61acb
 workflow-type: tm+mt
-source-wordcount: '1986'
+source-wordcount: '2474'
 ht-degree: 0%
 
 ---
@@ -34,6 +35,80 @@ ht-degree: 0%
 >[!NOTE]
 >
 >[!DNL Advanced Security]個設定目前需要提交支援票證。 計畫在未來版本中透過管理員UI進行自助設定。 如需詳細資訊，請參閱[要求 [!DNL Advanced Security]](#request-advanced-security)。
+
+>[!IMPORTANT]
+>
+>**目前的限制**
+>
+>在2026年第3季度結束前，客戶無法直接修改或管理「機器人管理」規則。
+>
+>如需任何規則的新增、修改或調整，請透過[支援票證](https://experienceleague.adobe.com/home?lang=zh-Hant&support-tab=home#support)聯絡Adobe Commerce支援。 支援團隊將實施要求的變更。
+>
+>從2026年第4季度開始，Fastly計畫發佈附加功能，允許客戶在Commerce管理面板中管理機器人管理規則。
+
+## 預設規則與保護
+
+[!DNL Advanced Security]提供下列預設規則與保護。
+
+### 第7層DDoS
+
+- DDoS臨界值內建在Fastly CDN平台中，目前無法根據客戶自訂。
+- 客戶無法直接檢視DDoS保護所封鎖的流量記錄。
+- Adobe Commerce支援可根據要求提供已封鎖DDoS流量的相關詳細資料。
+- 未來版本預計將提供原生DDoS記錄檔轉送功能。
+
+### 機器人管理
+
+下列基線機器人管理保護可透過Fastly的Signal Sciences儀表板取得。
+
+| 規則型別 | 狀態 | 可見度 |
+|---|---|---|
+| 封鎖標籤為疑似不良機器人的流量 | 上線期間預設為啟用 | 顯示在`sigsci_tags`下的New Relic記錄檔中 |
+| 根據任何特定標籤（sigsci標籤）封鎖流量 | 只有在與客戶共同作業時才會進行設定 | 顯示在`sigsci_tags`下的New Relic記錄檔中 |
+| 特定API或URL模式的速率限制 | 只有在與客戶共同作業時才會進行設定 | 封鎖的流量會顯示在`Agent_response`下的New Relic記錄檔中 |
+| 特定API或URL模式的動態挑戰 | 只有在與客戶共同作業時才會進行設定 | 封鎖的流量會顯示在`Agent_response`下的New Relic記錄檔中 |
+| 瀏覽器挑戰 | 只有在與客戶共同作業時才會進行設定 | 封鎖的流量會顯示在`Agent_response`下的New Relic記錄檔中 |
+
+## 可觀察性 — 監控機器人保護和NGWAF活動
+
+CDN記錄檔會自動轉送至客戶的New Relic帳戶。 如需其他詳細資料，請參閱[記錄檔管理](../monitor/log-management.md)。
+
+CDN記錄檔包含來自Signal Sciences （機器人保護/新一代WAF）的內建遙測功能，可讓客戶直接在New Relic內監控安全性事件。
+
+主要欄位包括：
+
+- **`Sigsci_Tags`** — 表示Signal Sciences套用的分類和標籤。
+- **`Agent_response`** — 指出機器人保護/NGWAF代理程式所採取的動作。
+
+範例：
+
+- 若要識別機器人保護或NGWAF規則封鎖的流量：
+
+  `Agent_response:"406"`
+
+  回應代碼406表示安全性控制項已封鎖要求。
+
+- 若要識別標籤為疑似不良機器人的請求：
+
+  `Sigsci_Tags:"*SUSPECTED-BAD-BOT*"`
+
+這些欄位可用來在New Relic中建立儀表板、警報和調查，以監控機器人活動、封鎖的請求和其他安全性相關事件。
+
+## 現有的VCL功能保持不變
+
+啟用[!DNL Advanced Security]附加元件不會修改或取代現有的Fastly VCL型安全性控制項。
+
+下列現有VCL封鎖功能可繼續運作，而不會有任何變更：
+
+- IP式封鎖
+- 地理封鎖
+- 基於使用者代理程式的封鎖
+- JA3簽名型封鎖
+- JA4簽名型封鎖
+
+客戶可以繼續使用現有的自訂VCL組態和安全性規則以及[!DNL Advanced Security]附加功能。
+
+除了標準Fastly CDN和[!DNL Adobe Commerce on Cloud Infrastructure]中已提供的現有VCL保護之外，[!DNL Advanced Security]附加元件也運作。
 
 ## 威脅涵蓋範圍
 
