@@ -1,7 +1,7 @@
 ---
-source-git-commit: a15ae4e0e11a84662c980ad351e32362f14e69e1
+source-git-commit: e0e4b21e76a5c1fa9e146695a183a29ec79e6cc1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '376'
 ht-degree: 2%
 
 ---
@@ -147,28 +147,6 @@ ht-degree: 2%
         技術
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/3546f15b4e1d4e192177064c3c72652d8ae7b5cb">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年4月10日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>已將安全性備註新增至雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web屬性組態</a>參考，以澄清Web屬性的預設組態會將<code>scripts:false</code>用於媒體位置，以防止執行已上傳的檔案。</p>
-</td>
-      <td>
-        技術，意見回饋
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/f3fa8339961505f9c8ac2612d7a89e83553eee37">認可</a></td>
     </tr>
   </tbody>
 </table>
