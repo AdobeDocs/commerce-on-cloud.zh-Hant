@@ -1,26 +1,16 @@
 ---
-title: 管理使用者存取權
-description: 瞭解如何在雲端基礎結構專案和環境上管理使用者對Adobe Commerce的存取權。
+title: 管理使用者存取
+description: 瞭解如何使用magento-cloud CLI或Cloud Console在雲端基礎結構專案和環境上，於Adobe Commerce上新增使用者和指派角色。
 role: Admin
 feature: Cloud, Roles/Permissions
-last-substantial-update: 2023-06-27T00:00:00.000Z
+level: Beginner
+short-description: 在Cloud Console或CLI中新增使用者並指派專案和環境角色。
+last-substantial-update: 2026-06-11T00:00:00Z
 topic: Security
 exl-id: 953593de-f675-49fd-988f-f11306f67fbd
-TQID: https://experienceleague.adobe.com/hoRda1DXcWU5ZfsEnOf0JSe-JbCQy0GkXQ4Tw3HIU0g
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: de324897e87232393f20d95b2867d8a95605fa23
 workflow-type: tm+mt
-source-wordcount: 1518
+source-wordcount: '1690'
 ht-degree: 0%
 
 ---
@@ -37,7 +27,7 @@ ht-degree: 0%
 環境層級的存取取決於環境型別：生產、測試和開發。 授與使用者&#x200B;_檢視器_&#x200B;對&#x200B;_開發_&#x200B;環境的許可權，表示他們可以檢視專案中的&#x200B;**所有**&#x200B;開發環境。 下表釐清授予各個許可權層級的功能：
 
 | 許可權層級 | 存取 | SSH存取 |
-| ------------------ | ----------- | :----------: |
+| ---------------- | ------ | :--------: |
 | **管理員** | 執行管理員工作，例如變更設定、推播程式碼、執行工作及分支管理，包括合併父環境 | 是 |
 | **參與者** | 推送程式碼並分支環境；無法變更設定或執行動作 | 是 |
 | **檢視器** | 對環境型別的僅限檢視存取權 | 否 |
@@ -47,14 +37,10 @@ ht-degree: 0%
 
 您可以使用`magento-cloud` CLI或[!DNL Cloud Console]新增使用者並指派角色。
 
->[!BEGINSHADEBOX]
-
-**必要條件：**
-
-- 已註冊Adobe ID的使用者。 使用者必須[註冊Adobe帳戶](https://account.adobe.com)，然後造訪[https://console.adobecommerce.com](https://console.adobecommerce.com)初始化其[雲端帳戶](https://console.adobecommerce.com)，才能將其新增至雲端專案。
-- 已指派&#x200B;**管理員**&#x200B;角色的使用者無法管理具有`magento-cloud` CLI的使用者。 只有被授與&#x200B;**帳戶擁有者**&#x200B;角色的使用者才能管理使用者。
-
->[!ENDSHADEBOX]
+>[!PREREQUISITES]
+>
+>- 已註冊Adobe ID的使用者。 使用者必須[註冊Adobe帳戶](https://account.adobe.com)，然後初始化其[雲端帳戶](https://console.adobecommerce.com)，您才能將其新增至雲端專案。
+>- 已指派&#x200B;**管理員**&#x200B;角色的使用者無法管理具有`magento-cloud` CLI的使用者。 只有被授與&#x200B;**帳戶擁有者**&#x200B;角色的使用者才能管理使用者。
 
 ## 使用CLI管理使用者
 
@@ -78,13 +64,13 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >使用者必須有Adobe ID；請參閱[必要條件](#add-users-and-manage-access)。
+   >使用者必須擁有Adobe ID。 請參閱先決條件。
 
 1. 按照提示操作：指定使用者電子郵件地址、設定專案和環境型別角色，並新增使用者。
 
    > 範例提示
 
-   ```
+   ```text
    Enter the user's email address: alice@example.com
    
    Email address: alice@example.com
@@ -118,7 +104,7 @@ magento-cloud user:get alice@example.com
 
 >範例回應：
 
-```
+```text
 Current role(s) of User (alice@example.com) on Production (project_id):
   Project role: admin
 ```
@@ -145,7 +131,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 >[!IMPORTANT]
 >
->使用者必須有Adobe ID；請參閱[必要條件](#add-users-and-manage-access)。
+>使用者必須擁有Adobe ID。 請參閱先決條件。
 
 ### 將使用者新增至專案
 
@@ -159,7 +145,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. 在&#x200B;_存取_&#x200B;檢視中，按一下&#x200B;**[!UICONTROL Add]**。
 
-1. 完成&#x200B;_[!UICONTROL Add User]_&#x200B;表單：
+1. 完成&#x200B;_[!UICONTROL Add User]_表單：
 
    - 輸入使用者電子郵件地址。
 
@@ -177,9 +163,25 @@ magento-cloud user:update alice@example.com -r production:a
    >
    >新增使用者不會自動觸發部署。
 
-1. 新增使用者後，重新部署所有環境以套用變更。 新增使用者不會自動觸發部署。 重新部署是確保使用者可以使用SSH存取環境或執行管理員工作的重要步驟。
+1. 新增使用者後，重新部署所有環境以套用變更。
+
+   重新部署可確保使用者可以使用SSH存取環境或執行管理員工作。
 
 新增使用者後，Adobe會傳送電子郵件至指定地址，附上存取雲端基礎結構專案上Adobe Commerce的說明。
+
+### 邀請狀態
+
+在[!DNL Cloud Console]中，管理員可以在帳戶初始化完成之前傳送邀請。 在這種情況下，存取清單會顯示狀態為[!UICONTROL Invite pending]的使用者。 上線完成前，存取權不會完全啟用。
+
+根據主控台和使用者的帳戶狀態，使用者可能會以下列其中一種狀態出現：
+
+- **[!UICONTROL Not invited]** — 沒有專案存取記錄存在。
+- **[!UICONTROL Invite pending]** — 已傳送邀請，但帳戶初始化或接受不完整。
+- **[!UICONTROL Active]** — 使用者已完成上線並擁有使用中的專案存取權。
+
+>[!NOTE]
+>
+>[!DNL Cloud Console]顯示的邀請狀態比[!DNL Legacy Cloud Console] (`https://<region-id>.magento.cloud/projects/<project_id>`)更明確。 可見的使用者或邀請專案並不一定表示使用者可以立即存取所有環境。 可能仍需要SSH金鑰設定或其他傳播步驟。 請參閱[使用者驗證需求](#user-authentication-requirements)。
 
 ## 使用者驗證需求
 
@@ -222,7 +224,7 @@ magento-cloud user:update alice@example.com -r production:a
 
    - 在您的行動裝置上，開啟驗證器應用程式。 然後，將安裝程式碼新增至應用程式。
 
-   - 在[!UICONTROL **[!UICONTROL TFA set up - Application]**]頁面的&#x200B;**[!UICONTROL Application verification code]**&#x200B;欄位中，輸入行動裝置的TFA代碼。
+   - 在&#x200B;**[!UICONTROL TFA set up - Application]**&#x200B;頁面的&#x200B;**[!UICONTROL Application verification code]**&#x200B;欄位中，輸入行動裝置的TFA代碼。
 
    - 按一下&#x200B;**[!UICONTROL Verify and save]**。
 
@@ -240,11 +242,11 @@ magento-cloud user:update alice@example.com -r production:a
 
    - 將復原始碼複製到其他位置，或寫下代碼，以防您失去對裝置或驗證應用程式的存取權。
 
-   - 按一下[儲存]&#x200B;**&#x200B;**&#x200B;將程式碼儲存至您的帳戶，以便您可從帳戶安全性設定檢視和管理程式碼。
+   - 按一下[儲存]****&#x200B;將程式碼儲存至您的帳戶，以便您可從帳戶安全性設定檢視和管理程式碼。
 
      >[!WARNING]
      >
-     >如果您無法存取具有TFA的帳戶，且沒有復原始碼清單，則必須連絡專案管理員，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以重設TFA應用程式。
+     >如果您無法存取具有TFA的帳戶，且沒有復原始碼清單，則必須連絡專案管理員，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以重設TFA應用程式。
 
 1. 完成TFA設定後，按一下[儲存] **以更新您的帳戶。**
 
@@ -291,6 +293,10 @@ API權杖可以交換為OAuth 2存取權杖，然後使用它來驗證請求。
 
 1. 按一下&#x200B;**[!UICONTROL Create API token]**&#x200B;並輸入名稱，例如，指定符合電腦使用者或使用API權杖的自動化程式的名稱。
 
-   ![API權杖](../../assets/api-token-name.png)
+   ![Cloud Console API Token索引標籤，包含「建立API Token名稱」欄位](../../assets/api-token-name.png)
 
 1. 按一下&#x200B;**[!UICONTROL Create API token]**。
+
+## 有關此主題的更多說明
+
+- [無法將使用者新增至Adobe Commerce雲端專案](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project) — 新增使用者時進行疑難排解失敗。
