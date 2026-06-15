@@ -21,9 +21,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: e0e1d3994a6b9ceef9e45b55cc9946bc62203ddb
 workflow-type: tm+mt
-source-wordcount: 1637
+source-wordcount: 1667
 ht-degree: 0%
 
 ---
@@ -114,7 +114,7 @@ mywebsite.com/rest/default/V1/inventory/source-items
 
 ## Fastly服務帳戶和認證
 
-雲端基礎結構專案上的Adobe Commerce未獲得專用的Fastly帳戶。 Fastly服務是在註冊到Adobe的集中帳戶中進行管理，並且管理儀表板只能由雲端支援團隊存取。
+雲端基礎結構專案上的Adobe Commerce未獲得專用的Fastly帳戶。 Fastly服務是在註冊到Adobe的集中帳戶中進行管理，控制面板存取僅限於雲端支援團隊。 因此，支援無法提供Fastly儀表板存取權來回應客戶請求。 使用Adobe Commerce管理員和您的環境特定Fastly憑證來執行支援的Fastly設定和管理任務。
 
 相反，每個測試和生產環境都有唯一的Fastly憑證（API權杖和服務ID），可從Commerce管理員設定和管理Fastly服務。 Fastly API可用於執行Fastly服務的進階管理，這需要認證才能提交這些請求。
 
@@ -182,7 +182,7 @@ Fastly CDN服務內建了DDOS保護。 一旦您為Adobe Commerce網站啟用了
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=zh-Hant
+[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
 
 [Magento 2的Fastly CDN模組]: https://github.com/fastly/fastly-magento2
 
