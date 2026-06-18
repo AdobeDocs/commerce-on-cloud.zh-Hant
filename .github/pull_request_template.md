@@ -28,12 +28,12 @@ If you are fixing a GitHub issue, using the GitHub keyword format (https://help.
 
 `main` is the default branch. Merged pull requests to `main` go live on the site automatically. Any requested changes to content on the `main` branch must be related to the released codebase. Any content related to future releases goes in the corrresponding `2.4.x-develop` branch.
 
-See Contribution guidelines (https://github.com/AdobeDocs/commerce-on-cloud.en/blob/main/contributing.md) for more information.
+See Contribution guidelines (https://github.com/AdobeDocs/commerce-on-cloud.zh-Hant/blob/main/contributing.md) for more information.
 -->
 
 ### 新增功能亮點
 
 <!--  _OPTIONAL - REMOVE THIS SECTION IF NOT USED._
 
-If this pull request introduces changes that should be highlighted in the What's New section (https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview#whats-new), see _What's New highlights_ in the Contribution guidelines (https://github.com/AdobeDocs/commerce-on-cloud.en/blob/main/contributing.md#whats-new-highlights).
+If this pull request introduces changes that should be highlighted in the What's New section (https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/overview#whats-new), see _What's New highlights_ in the Contribution guidelines (https://github.com/AdobeDocs/commerce-on-cloud.zh-Hant/blob/main/contributing.md#whats-new-highlights).
 -->
