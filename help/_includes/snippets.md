@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3006f8f7b3eb54f44cf2bda06403441d304b4b81
+source-git-commit: 020a2699befa042a37170a638ded9657a72933e8
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1382'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,16 @@ ht-degree: 0%
 >[!TIP]
 >
 >在開始升級或修補程式之前，請從整合環境建立使用中分支，並將新分支簽出至您的本機工作站。 將分支專用於升級或修補程式，有助於避免干擾您正在進行的工作。
+
+## New Relic中的Valkey {#valkey-newrelic}
+
+>[!NOTE]
+>
+>即使在移轉至Valkey後，New Relic仍可能顯示Redis
+>
+>即使在環境已移轉至Valkey後，預計New Relic仍可能會繼續將快取服務稱為Redis。
+>
+>Valkey是Redis的開放原始碼復本，而且有些工具和整合專案會繼續使用Redis命名來識別服務，而非不同的Valkey標籤。 這並不一定表示仍安裝Redis。
 
 <!-- Fastly-related snippets begin -->
 
