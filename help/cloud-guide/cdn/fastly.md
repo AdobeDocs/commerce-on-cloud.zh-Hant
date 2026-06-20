@@ -182,7 +182,7 @@ Fastly CDN服務內建了DDOS保護。 一旦您為Adobe Commerce網站啟用了
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
+[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=zh-Hant
 
 [Magento 2的Fastly CDN模組]: https://github.com/fastly/fastly-magento2
 
