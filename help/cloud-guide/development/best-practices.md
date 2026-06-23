@@ -11,7 +11,7 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 696
 ht-degree: 0%
@@ -79,3 +79,4 @@ ht-degree: 0%
 - [執行升級相容性工具](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
 
 對於使用全網站分析工具的雲端商家，您也可以從控制面板觸發UCT，並直接從Widget下載HTML報表。 請參閱整合[全網站分析工具](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)。
+

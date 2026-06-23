@@ -14,7 +14,7 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 605
 ht-degree: 0%
@@ -91,3 +91,4 @@ Adobe會先在雲端專案&#x200B;_暫存_&#x200B;叢集上啟用自動縮放。
 - 如果允許清單包含服務節點（1、2和3）的IP位址，則不需要採取任何動作。
 - 如果允許清單包含服務節點（1、2和3）和Web節點（4、5和6）的IP位址（在此例中是全部六個節點），則不需要採取任何動作。
 - 如果允許清單包含您Web節點（4、5和6）的IP位址&#x200B;_only_，則必須更新允許清單以包含服務節點的IP位址。
+

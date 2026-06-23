@@ -21,7 +21,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 987
 ht-degree: 0%
@@ -96,3 +96,4 @@ Adobe和Fastly管理更新流程，以確保新的或修改的WAF規則在您的
 WAF服務可讓您根據IP位址封鎖或允許流量。 您可以將存取控制清單(ACL)和自訂VCL片段新增到Fastly服務中，以指定用於封鎖或允許流量的IP位址和VCL邏輯。 請參閱[自訂Fastly VCL片段](fastly-vcl-custom-snippets.md)。
 
 WAF服務不支援篩選TCP、UDP或ICMP要求。 但是，此功能由Fastly CDN服務隨附的內建DDoS保護提供。 請參閱[DDoS保護](fastly.md#ddos-protection)。
+

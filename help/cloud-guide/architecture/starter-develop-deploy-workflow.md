@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 2168
 ht-degree: 0%
@@ -258,3 +258,4 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 - 在`staging`環境中部署和測試
 
 - 部署至`production`環境
+

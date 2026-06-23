@@ -14,7 +14,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 768
 ht-degree: 0%
@@ -94,3 +94,4 @@ ht-degree: 0%
 ### 跳過SCD
 
 有時您可以選擇完全略過產生靜態內容。 您可以在全域階段中設定[SKIP_SCD](../environment/variables-build.md#skipscd)環境變數，以忽略與SCD相關的其他設定。 這不會影響`~/pub/static`目錄中的現有內容。
+

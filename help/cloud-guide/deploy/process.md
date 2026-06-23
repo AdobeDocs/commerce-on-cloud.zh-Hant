@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 413
 ht-degree: 0%
@@ -54,3 +54,4 @@ _部署後_&#x200B;階段會執行`.magento.app.yaml`檔案中定義的部署後
 >[!NOTE]
 >
 >透過`ece-tools` 2002.1.0和更新版本，您可以使用情境式部署功能，在雲端基礎結構專案上自訂Adobe Commerce的建置、部署和後續部署程式。 請參閱[以案例為基礎的部署](scenario-based.md)。
+

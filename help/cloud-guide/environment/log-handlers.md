@@ -11,7 +11,7 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 235
 ht-degree: 0%
@@ -73,3 +73,4 @@ log:
 - **critical** — 嚴重狀況，例如無法使用的應用程式元件或意外的例外狀況
 - **警示** — 需要立即執行的動作，例如網站已關閉或資料庫無法使用 — 會觸發簡訊警示
 - **緊急** — 系統無法使用
+

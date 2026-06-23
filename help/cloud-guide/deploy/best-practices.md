@@ -18,7 +18,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1979
 ht-degree: 0%
@@ -207,3 +207,4 @@ ht-degree: 0%
 使用`SCD_ON_DEMAND`變數啟用靜態內容產生，並設定[`post_deploy`連結](../application/hooks-property.md)，以便它清除快取並在&#x200B;_之後預先載入（加溫）快取_，容器開始接受連線和&#x200B;_在_&#x200B;正常傳入流量期間。
 
 若要檢視組建和部署記錄，請參閱[檢視記錄](../test/log-locations.md#view-and-manage-logs)。
+

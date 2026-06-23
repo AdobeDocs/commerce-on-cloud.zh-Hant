@@ -21,7 +21,7 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: efe0f95c16d9aab9af6a9c263034b08dce4d7c93
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 405
 ht-degree: 0%
@@ -50,3 +50,4 @@ ht-degree: 0%
 整體式應用程式需要大量資源，且難以快速擴充及服務。 透過雲端基礎結構，Commerce客戶可獲得前所未有的SaaS型微服務存取權，這些服務豐富、智慧且效能優異。 請參閱[支援的軟體與服務](cloud-architecture.md#supported-software-and-services)。
 
 使用[Commerce快速入門手冊](../../get-started/overview.md)來設定新的雲端程式，並開始在雲端原生環境中管理您的[!DNL Commerce]應用程式。
+
