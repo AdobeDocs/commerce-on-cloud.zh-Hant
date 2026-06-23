@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 7828287703ea93d9b84f7991e316bd2286964b90
 workflow-type: tm+mt
-source-wordcount: 212
+source-wordcount: 229
 ht-degree: 0%
 
 ---
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)是選用的後端快取解決方案，可取代Adobe Commerce預設使用的`Zend Framework Zend_Cache_Backend_File`。
 
-請參閱&#x200B;_設定指南_&#x200B;中的[設定Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=zh-Hant){target="_blank"}。
+請參閱&#x200B;_實作行動手冊最佳實務指南_&#x200B;中的[設定Valkey](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"}。
 
 {{service-instruction}}
 
 **若要以Valkey取代Redis，請更新下列三個檔案中的組態**：
 
-1. 將必要的名稱和型別新增到`.magento/services.yaml`檔案。
+1. 以必要的Valkey名稱取代Redis設定，並在`.magento/services.yaml`檔案中輸入。
 
    ```yaml
    cache:
@@ -49,7 +49,7 @@ ht-degree: 0%
        valkey: "cache:valkey"
    ```
 
-1. 設定`.magento.env.yaml`，如下所示：。
+1. 設定`.magento.env.yaml`以取代Redis設定，如下所示：
 
    ```yaml
     stage:
