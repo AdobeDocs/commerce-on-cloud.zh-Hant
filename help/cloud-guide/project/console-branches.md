@@ -5,19 +5,12 @@ role: Developer
 feature: Cloud, Install
 exl-id: 2c254586-b670-4dd7-8f82-edcc139e9800
 TQID: https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1638
 ht-degree: 0%
@@ -47,7 +40,7 @@ ht-degree: 0%
 
 您的帳戶支援有限數量的![使用中分支](../../assets/icon-active.png){width="32"} （使用中）以及無限數量的![非使用中分支](../../assets/icon-inactive.png){width="32"} （非使用中）開發分支。 僅使用[!DNL Cloud Console]或雲端CLI新增或刪除分支，以管理作用中或非作用中分支。 刪除分支之前，請先停用該分支，它仍保留在&#x200B;_環境_&#x200B;清單中，做為&#x200B;_非使用中_。 您可以稍後重新啟用分支，或是在環境設定或使用Cloud CLI中[刪除分支](../dev-tools/cloud-cli-overview.md#)。
 
-如果您需要其他使用中的環境進行開發，請提交[支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)。
+如果您需要其他使用中的環境進行開發，請提交[支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
 
 **若要新增分支**：
 
@@ -101,7 +94,7 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
 
 1. 按一下頂端導覽列右側的設定圖示，開啟環境設定。
 
-1. 在&#x200B;_[!UICONTROL General]_&#x200B;標籤上，向下捲動至&#x200B;_[!UICONTROL Deactivate environment]_&#x200B;區段，然後按一下&#x200B;**[!UICONTROL Deactivate environment and delete data]**&#x200B;並遵循指示。
+1. 在&#x200B;_[!UICONTROL General]_標籤上，向下捲動至_[!UICONTROL Deactivate environment]_&#x200B;區段，然後按一下&#x200B;**[!UICONTROL Deactivate environment and delete data]**&#x200B;並遵循指示。
 
 ## 同步環境
 
@@ -286,3 +279,4 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
    ```
 
 1. 按一下&#x200B;**[!UICONTROL Save]**。 這會重新部署環境以更新安全性和設定。 Adobe建議您在完成安全性設定後測試環境。
+

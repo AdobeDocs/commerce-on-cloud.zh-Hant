@@ -4,18 +4,11 @@ description: 瞭解分割層架構，以及它如何根據需求進行擴充。
 feature: Cloud, Auto Scaling, Iaas, Logs
 exl-id: 45c0cf14-99e6-4643-88f0-98ebcdb3a98c
 TQID: https://experienceleague.adobe.com/jbO3zavC7ZZs6nlYlMC0Isj0QLl-wlr-opAfxOKCNao
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
-  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 828
 ht-degree: 0%
@@ -117,3 +110,4 @@ project-id@server-id:~$
 記錄位置會依節點而略有不同。 例如，資料庫記錄檔，例如&#x200B;**MySQL錯誤記錄檔**，可在服務節點(`/var/log/mysql/mysql-error.log`)上使用，但無法在Web節點上使用。
 
 每個Pro帳戶都包含[New Relic記錄檔服務](../monitor/new-relic-service.md)，該服務會自動與來自應用程式的記錄檔資料連線，以提供動態記錄檔管理。 來自所有節點的彙總記錄檔資料會顯示在New Relic記錄檔應用程式中，這樣您就可以在單一控制面板上疑難排解特定節點的效能問題。
+
