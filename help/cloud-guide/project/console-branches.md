@@ -5,11 +5,18 @@ role: Developer
 feature: Cloud, Install
 exl-id: 2c254586-b670-4dd7-8f82-edcc139e9800
 TQID: https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1638
@@ -94,7 +101,7 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
 
 1. 按一下頂端導覽列右側的設定圖示，開啟環境設定。
 
-1. 在&#x200B;_[!UICONTROL General]_標籤上，向下捲動至_[!UICONTROL Deactivate environment]_&#x200B;區段，然後按一下&#x200B;**[!UICONTROL Deactivate environment and delete data]**&#x200B;並遵循指示。
+1. 在&#x200B;_[!UICONTROL General]_&#x200B;標籤上，向下捲動至&#x200B;_[!UICONTROL Deactivate environment]_&#x200B;區段，然後按一下&#x200B;**[!UICONTROL Deactivate environment and delete data]**&#x200B;並遵循指示。
 
 ## 同步環境
 
