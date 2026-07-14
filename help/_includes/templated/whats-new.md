@@ -1,7 +1,7 @@
 ---
-source-git-commit: 0d5ff7b5e81c76961900560d917dd97cdfac72ee
+source-git-commit: 8273c3ddc0f392b8f5d2163258ba53935b263c71
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '213'
 ht-degree: 2%
 
 ---
@@ -95,80 +95,6 @@ ht-degree: 2%
         技術
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/65898d2007d69d5bd3b8a9eabb9872ced98b8ffc">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年5月12日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>已新增雲端基礎結構上Adobe Commerce的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/cdn/advanced-security">進階安全性</a>產品。</p>
-</td>
-      <td>
-        新主題
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/a145b80df52ed271a15a6374713ac30824a67d2b">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年5月7日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>更新雲端工具檔案的發行說明，以反映最新的版本新增、相容性更新和修正。 請參閱Commerce Cloud Tools Suite</a>的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">發行說明。</p>
-</td>
-      <td>
-        技術
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/812482f88f6ab6400c77b6ec36db73956dd3f202">認可</a></td>
-    </tr>
-    <tr>
-      <td><p>更新ECE-Tools發行後的<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>和<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">錯誤訊息</a> v2002.2.11。</p>
-</td>
-      <td>
-        技術
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/6db7cbfa2edc1e177d1db3047f2574fae4485b63">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年5月5日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">PHP設定</a>以列出可選PHP擴充功能中的LDAP，並注意LDAP和類似的擴充功能是環境特定的（例如，不是Pro Staging/Production上的自助服務）。</p>
-</td>
-      <td>
-        技術
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/3546f15b4e1d4e192177064c3c72652d8ae7b5cb">認可</a></td>
     </tr>
   </tbody>
 </table>
