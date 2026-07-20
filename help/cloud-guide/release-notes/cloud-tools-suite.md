@@ -4,10 +4,16 @@ description: 瞭解適用於Adobe Commerce的Cloud Tools套裝的最新改善。
 feature: Cloud, Release Notes
 exl-id: ee2bc2e9-bdf4-4f7b-9724-8f4dd1e61378
 TQID: https://experienceleague.adobe.com/eQQvGGEwj4D6pOlhZqNA-SMdc6JxH-Wg-hBRZaR1C-M
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 5169e0e93bf44d18ebdce9e0680f80c7cc8be6dc
 workflow-type: tm+mt
 source-wordcount: 220
