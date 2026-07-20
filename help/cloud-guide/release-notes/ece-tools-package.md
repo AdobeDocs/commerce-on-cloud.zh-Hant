@@ -5,20 +5,13 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2026-05-07T00:00:00.000Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
 TQID: https://experienceleague.adobe.com/pa4D-RsauRtCBS7puKWVBQtA37-Mcv9IZG4lah41l1U
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: e7db7e06142322898d7d9a28ae0dd06458fdcf6d
 workflow-type: tm+mt
-source-wordcount: 3542
+source-wordcount: 3580
 ht-degree: 0%
 
 ---
@@ -40,7 +33,15 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.11 {#latest}
+## v2002.2.12 {#latest}
+
+發行日期： 2026年7月20日
+
+- ![新圖示](../../assets/new.svg) **RabbitMQ** — 已新增RabbitMQ 4.3支援。<!-- MCLOUD-15088 -->
+- ![修正圖示](../../assets/fix.svg) **Redis Lua組態** — 新增`USE_LUA_ON_GC`支援並棄用`LUA_KEY`。<!-- MCLOUD-15048 -->
+- ![修正圖示](../../assets/fix.svg) **Symfony L2快取** — 修正ece-tools與Adobe Commerce 2.4.9快取設定的相容性<!-- MCLOUD-15114 -->
+
+## v2002.2.11
 
 發行日期： 2026年5月06日
 
@@ -341,17 +342,17 @@ ht-degree: 0%
 
 **驗證和記錄改善**—
 
-- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考。<!--MCLOUD-5878-->
+- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!--MCLOUD-5878-->
 
 - ![新圖示](../../assets/new.svg)已將雲端錯誤記錄(`/var/log/cloud.error.log`)專案變更為JSON格式，以便以程式設計方式更輕鬆地剖析記錄。<!--MCLOUD-5879-->
 
 - ![新圖示](../../assets/new.svg)已新增其他錯誤檢查以建置、部署和部署後處理，並改善現有檢查：
 
-   - 錯誤碼2026 — 無法將在建置階段產生的一些資料還原到掛載的目錄
+  - 錯誤碼2026 — 無法將在建置階段產生的一些資料還原到掛載的目錄
 
-   - 錯誤碼3004 — 無法建立備份檔案
+  - 錯誤碼3004 — 無法建立備份檔案
 
-   - 錯誤碼102 — 新增當`env.php`檔案不可寫入<!--MCLOUD-6221-->時所發生問題的額外檢查
+  - 錯誤碼102 — 新增當`env.php`檔案不可寫入<!--MCLOUD-6221-->時所發生問題的額外檢查
 
 - ![新圖示](../../assets/new.svg)已新增&#x200B;**QUALITY_PATCHES**&#x200B;環境變數，以指定一或多個要在部署過程中套用的品質修補程式。 檢視[建置變數](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->
 
@@ -361,75 +362,75 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **基礎結構更新**—
 
-   - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
+  - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
 
-   - ![新圖示](../../assets/new.svg)改善資料庫傾印程式(`vendor/bin/ece-tools db-dump`)和更新的記錄訊息，以釐清資料庫傾印作業會將應用程式切換到維護模式、停止消費者佇列程式，以及在傾印開始之前停用cron工作。<!--MCLOUD-5324, MCLOUD-2062-->
+  - ![新圖示](../../assets/new.svg)改善資料庫傾印程式(`vendor/bin/ece-tools db-dump`)和更新的記錄訊息，以釐清資料庫傾印作業會將應用程式切換到維護模式、停止消費者佇列程式，以及在傾印開始之前停用cron工作。<!--MCLOUD-5324, MCLOUD-2062-->
 
-   - ![修正圖示](../../assets/fix.svg)已修正問題，以確保在部署至中繼和生產環境時，專案URL會正確更新。 現在，`ece-tools`使用專案路由設定中設定了`primary:true`屬性的路由URL。 請參閱[部署變數](../environment/variables-deploy.md#update_urls).<!--MCLOUD-5883-->
+  - ![修正圖示](../../assets/fix.svg)已修正問題，以確保在部署至中繼和生產環境時，專案URL會正確更新。 現在，`ece-tools`使用專案路由設定中設定了`primary:true`屬性的路由URL。 請參閱[部署變數](../environment/variables-deploy.md#update_urls).<!--MCLOUD-5883-->
 
-   - ![修正圖示](../../assets/fix.svg)已更新套用修補程式的`generate.xml`組建案例工作流程。 必須先套用修補程式，才能更新Adobe Commerce，修正可能導致`di:compile`和`module:refresh`步驟失敗的任何問題。<!--MCLOUD-5941-->
+  - ![修正圖示](../../assets/fix.svg)已更新套用修補程式的`generate.xml`組建案例工作流程。 必須先套用修補程式，才能更新Adobe Commerce，修正可能導致`di:compile`和`module:refresh`步驟失敗的任何問題。<!--MCLOUD-5941-->
 
-   - ![修正圖示](../../assets/fix.svg)修正安裝過程中傳回`Crypt key missing`錯誤的問題。 `crypt/key`值會在安裝期間自動產生。<!--MCLOUD-6120-->
+  - ![修正圖示](../../assets/fix.svg)修正安裝過程中傳回`Crypt key missing`錯誤的問題。 `crypt/key`值會在安裝期間自動產生。<!--MCLOUD-6120-->
 
 - ![新圖示](../../assets/new.svg) **服務更新**—
 
-   - ![新圖示](../../assets/new.svg)已新增對PHP 7.4和MariaDB 10.4的支援。<!--MAGECLOUD-2957, MCLOUD-4144-->
+  - ![新圖示](../../assets/new.svg)已新增對PHP 7.4和MariaDB 10.4的支援。<!--MAGECLOUD-2957, MCLOUD-4144-->
 
 - ![新圖示](../../assets/new.svg) **環境變數更新**—
 
-   - ![新圖示](../../assets/new.svg)已新增&#x200B;**SCD_USE_BALER**&#x200B;變數，以在Adobe Commerce雲端基礎結構建置程式期間啟用JavaScript套件組合的Baler模組。 檢視[組建變數](../environment/variables-build.md#scd_use_baler).<!-- MCLOUD-3456, MCLOUD-3457-->中的變數說明
+  - ![新圖示](../../assets/new.svg)已新增&#x200B;**SCD_USE_BALER**&#x200B;變數，以在Adobe Commerce雲端基礎結構建置程式期間啟用JavaScript套件組合的Baler模組。 檢視[組建變數](../environment/variables-build.md#scd_use_baler).<!-- MCLOUD-3456, MCLOUD-3457-->中的變數說明
 
-   - ![新圖示](../../assets/new.svg)已新增&#x200B;**REDIS_BACKEND**&#x200B;環境變數，以設定Adobe Commerce 2.3.5或更新版本的Redis快取的Redis後端模型。 檢視[部署變數](../environment/variables-deploy.md#redis_backend).<!--MCLOUD-5721, MCLOUD-5865-->中的變數說明
+  - ![新圖示](../../assets/new.svg)已新增&#x200B;**REDIS_BACKEND**&#x200B;環境變數，以設定Adobe Commerce 2.3.5或更新版本的Redis快取的Redis後端模型。 檢視[部署變數](../environment/variables-deploy.md#redis_backend).<!--MCLOUD-5721, MCLOUD-5865-->中的變數說明
 
 - ![新圖示](../../assets/new.svg) **CLI命令更新**—
 
-   - ![新圖示](../../assets/new.svg)已更新下列CLI命令，其中包含更詳細的記錄選項：
+  - ![新圖示](../../assets/new.svg)已更新下列CLI命令，其中包含更詳細的記錄選項：
 
-      - `app:config:dump`
-      - `app:config:import`
-      - `module:enable`
+    - `app:config:dump`
+    - `app:config:import`
+    - `module:enable`
 
-     每個呼叫的記錄層級由`.magento.env.yaml`檔案中[`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands)變數的組態決定。<!--MCLOUD-3503-->
+    每個呼叫的記錄層級由`.magento.env.yaml`檔案中[`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands)變數的組態決定。<!--MCLOUD-3503-->
 
 - ![新圖示](../../assets/new.svg) **驗證改善**—
 
-   - ![新圖示](../../assets/new.svg) **Elasticsearch 7.x相容性檢查** — 已針對Elasticsearch 7.x軟體相容性檢查更新Elasticsearch驗證。<!--MCLOUD-5542-->
+  - ![新圖示](../../assets/new.svg) **Elasticsearch 7.x相容性檢查** — 已針對Elasticsearch 7.x軟體相容性檢查更新Elasticsearch驗證。<!--MCLOUD-5542-->
 
-   - ![新圖示](../../assets/new.svg) **已更新服務版本和EOL驗證檢查** — 已更新驗證，以根據Adobe Commerce 2.4檢查已安裝的服務版本。 需求。<!--MCLOUD-6144-->
+  - ![新圖示](../../assets/new.svg) **已更新服務版本和EOL驗證檢查** — 已更新驗證，以根據Adobe Commerce 2.4檢查已安裝的服務版本。 需求。<!--MCLOUD-6144-->
 
-   - ![修正圖示](../../assets/fix.svg)修正驗證問題，因此只有在`.magento.app.yaml`檔案中缺少`post-deploy`連結設定時，才會顯示下列部署後警告訊息：
+  - ![修正圖示](../../assets/fix.svg)修正驗證問題，因此只有在`.magento.app.yaml`檔案中缺少`post-deploy`連結設定時，才會顯示下列部署後警告訊息：
 
-     ```text
-     Your application does not have the "post_deploy" hook enabled.
-     ```
+    ```text
+    Your application does not have the "post_deploy" hook enabled.
+    ```
 
-     <!--MCLOUD-4077-->
+    <!--MCLOUD-4077-->
 
-   - ![新圖示](../../assets/new.svg) **已新增Zend Framework相依性的驗證** — 已新增已移轉至Laminas專案的Zend Framework的撰寫器相依性驗證。 如果缺少必要的相依性，則在建置過程中會顯示以下錯誤訊息。
+  - ![新圖示](../../assets/new.svg) **已新增Zend Framework相依性的驗證** — 已新增已移轉至Laminas專案的Zend Framework的撰寫器相依性驗證。 如果缺少必要的相依性，則在建置過程中會顯示以下錯誤訊息。
 
-     ```text
-     Required configuration is missing from the autoload section of the composer.json file.
-     Add ("Laminas\Mvc\Controller\Zend\": "setupsrc/ Zend/Mvc/Controller/") to
-     the `autoload -> psr-4` section. Then, re-run the "composer update" command locally, and
-     commit the updated composer.json and composer.lock files.
-     ```
+    ```text
+    Required configuration is missing from the autoload section of the composer.json file.
+    Add ("Laminas\Mvc\Controller\Zend\": "setupsrc/ Zend/Mvc/Controller/") to
+    the `autoload -> psr-4` section. Then, re-run the "composer update" command locally, and
+    commit the updated composer.json and composer.lock files.
+    ```
 
-     請參閱[驗證Zend Framework相依性](../development/commerce-version.md#verify-zend-framework-composer-dependencies).<!--MCLOUD-4094-->
+    請參閱[驗證Zend Framework相依性](../development/commerce-version.md#verify-zend-framework-composer-dependencies).<!--MCLOUD-4094-->
 
-   - ![新圖示](../../assets/new.svg) **已新增`env.php`檔案和資料的驗證** — 在安裝和升級過程中已新增`env.php`檔案和資料的檢查。<!--MCLOUD-5991-->
+  - ![新圖示](../../assets/new.svg) **已新增`env.php`檔案和資料的驗證** — 在安裝和升級過程中已新增`env.php`檔案和資料的檢查。<!--MCLOUD-5991-->
 
-      - 如果安裝遺失`env.php`檔案，且`.magento.app.yaml`檔案中未指定`crypt/key`值，則部署會失敗，並出現下列通知：
+    - 如果安裝遺失`env.php`檔案，且`.magento.app.yaml`檔案中未指定`crypt/key`值，則部署會失敗，並出現下列通知：
 
-        ```text
-        The crypt/key key value does not exist in the ./app/etc/env.php file or the CRYPT_KEY cloud environment variable``Missing crypt key for upgrading Magento`.
-        ```
+      ```text
+      The crypt/key key value does not exist in the ./app/etc/env.php file or the CRYPT_KEY cloud environment variable``Missing crypt key for upgrading Magento`.
+      ```
 
-      - 如果安裝不包含`env.php`檔案，或組態只包含一個快取型別，則在升級過程中會執行`cron:enable`命令，以還原包含所有`cache_types`的檔案。 下列通知已新增至記錄檔：
+    - 如果安裝不包含`env.php`檔案，或組態只包含一個快取型別，則在升級過程中會執行`cron:enable`命令，以還原包含所有`cache_types`的檔案。 下列通知已新增至記錄檔：
 
-        ```text
-        Magento state indicated as installed but configuration file app/etc/env.php was empty or did not exist.
-        Required data will be restored from environment configurations and from the .magento.env.yaml file.
-        ```
+      ```text
+      Magento state indicated as installed but configuration file app/etc/env.php was empty or did not exist.
+      Required data will be restored from environment configurations and from the .magento.env.yaml file.
+      ```
 
 ## v2002.1.0
 
@@ -437,17 +438,17 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **基礎結構更新**—
 
-   - ![新圖示](../../assets/new.svg) **新增適用於Commerce的Cloud Docker的個別套件** — 將Docker套件與`ece-tools`套件脫鉤，以維持程式碼品質並提供獨立的發行版本。 從[magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub存放庫管理與`ece-tools`相關的更新與修正。<!--MAGECLOUD-2927-->
+  - ![新圖示](../../assets/new.svg) **新增適用於Commerce的Cloud Docker的個別套件** — 將Docker套件與`ece-tools`套件脫鉤，以維持程式碼品質並提供獨立的發行版本。 從[magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub存放庫管理與`ece-tools`相關的更新與修正。<!--MAGECLOUD-2927-->
 
-   - ![新圖示](../../assets/new.svg) **更新的修補功能** — 將修補功能從ECE-Tools套件移至單獨的[magento-cloud-patches](https://github.com/magento/magento-cloud-patches)套件。 部署期間，`ece-tools`會使用新套件套用修補程式。 請參閱[雲端修補程式發行說明](cloud-patches.md).<!--MAGECLOUD-4567-->
+  - ![新圖示](../../assets/new.svg) **更新的修補功能** — 將修補功能從ECE-Tools套件移至單獨的[magento-cloud-patches](https://github.com/magento/magento-cloud-patches)套件。 部署期間，`ece-tools`會使用新套件套用修補程式。 請參閱[雲端修補程式發行說明](cloud-patches.md).<!--MAGECLOUD-4567-->
 
-   - ![新圖示](../../assets/new.svg) **已更新撰寫器相依性** — 已更新雲端基礎結構上Adobe Commerce的`composer.json`檔案與`magento/magento-cloud-docker`套件的相依性。 現在，`ece-tools`包含[`Cloud Tools Suite for Commerce`](cloud-tools-suite.md)中所有套件的相依性。 當您安裝或更新`ece-tools`時，會自動安裝及更新這些套件。
+  - ![新圖示](../../assets/new.svg) **已更新撰寫器相依性** — 已更新雲端基礎結構上Adobe Commerce的`composer.json`檔案與`magento/magento-cloud-docker`套件的相依性。 現在，`ece-tools`包含[`Cloud Tools Suite for Commerce`](cloud-tools-suite.md)中所有套件的相依性。 當您安裝或更新`ece-tools`時，會自動安裝及更新這些套件。
 
 - ![新圖示](../../assets/new.svg) **情境式部署的支援**—<!--MAGECLOUD-4101-->
 
-   - ![新圖示](../../assets/new.svg)現在您可以使用XML組態檔自訂建置、部署和部署後程式，以覆寫或自訂預設組態。
+  - ![新圖示](../../assets/new.svg)現在您可以使用XML組態檔自訂建置、部署和部署後程式，以覆寫或自訂預設組態。
 
-   - ![新圖示](../../assets/new.svg) **已在`.magento.app.yaml`**&#x200B;中變更`hooks`設定 — 我們已更新`hooks`設定格式以支援案例部署。 舊版ECE-Tools 2002.0.x仍受支援。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。 請參閱[案例部署](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks)。
+  - ![新圖示](../../assets/new.svg) **已在`.magento.app.yaml`**&#x200B;中變更`hooks`設定 — 我們已更新`hooks`設定格式以支援案例部署。 舊版ECE-Tools 2002.0.x仍受支援。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。 請參閱[案例部署](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks)。
 
 >[!NOTE]
 >
@@ -455,13 +456,13 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **服務更新**—
 
-   - ![新圖示](../../assets/new.svg)已新增對PHP 7.3的支援。<!--MAGECLOUD-4022-->
+  - ![新圖示](../../assets/new.svg)已新增對PHP 7.3的支援。<!--MAGECLOUD-4022-->
 
-   - ![新圖示](../../assets/new.svg)已新增對RabbitMQ 3.8的支援。<!--MAGECLOUD-4674-->
+  - ![新圖示](../../assets/new.svg)已新增對RabbitMQ 3.8的支援。<!--MAGECLOUD-4674-->
 
-   - ![新圖示](../../assets/new.svg)已新增驗證，以對照每項服務的EOL日期檢查已安裝的服務版本。 現在，如果服務版本在EOL日期後的三個月內，客戶將會收到通知，如果EOL日期是過去，客戶將會收到警告。<!--MAGECLOUD-4076-->
+  - ![新圖示](../../assets/new.svg)已新增驗證，以對照每項服務的EOL日期檢查已安裝的服務版本。 現在，如果服務版本在EOL日期後的三個月內，客戶將會收到通知，如果EOL日期是過去，客戶將會收到警告。<!--MAGECLOUD-4076-->
 
-   - ![修正圖示](../../assets/fix.svg)修正Elasticsearch設定問題，以確保在所有環境中都設定了正確的Elasticsearch設定。<!--MAGECLOUD-4474-->
+  - ![修正圖示](../../assets/fix.svg)修正Elasticsearch設定問題，以確保在所有環境中都設定了正確的Elasticsearch設定。<!--MAGECLOUD-4474-->
 
 >[!NOTE]
 >
@@ -469,21 +470,21 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **環境變數更新**—
 
-   - ![新圖示](../../assets/new.svg)已擴充`WARM_UP_PAGES`環境變數的功能，以支援特定產品頁面的快取預先載入。 請參閱[部署後變數](../environment/variables-post-deploy.md#warm_up_pages)主題中的展開定義。<!--MAGECLOUD-4444-->
+  - ![新圖示](../../assets/new.svg)已擴充`WARM_UP_PAGES`環境變數的功能，以支援特定產品頁面的快取預先載入。 請參閱[部署後變數](../environment/variables-post-deploy.md#warm_up_pages)主題中的展開定義。<!--MAGECLOUD-4444-->
 
-   - ![新圖示](../../assets/new.svg)已新增`ERROR_REPORT_DIR_NESTING_LEVEL`環境變數，以簡化`<magento_root>/var/report/`目錄中的錯誤報告資料管理。 請參閱[組建變數](../environment/variables-build.md#error_report_dir_nesting_level)主題中的變數說明。
+  - ![新圖示](../../assets/new.svg)已新增`ERROR_REPORT_DIR_NESTING_LEVEL`環境變數，以簡化`<magento_root>/var/report/`目錄中的錯誤報告資料管理。 請參閱[組建變數](../environment/variables-build.md#error_report_dir_nesting_level)主題中的變數說明。
 
-   - ![修正圖示](../../assets/fix.svg)已移除`SCD_EXCLUDE_THEMES`、`STATIC_CONTENT_THREADS`、`DO_DEPLOY_STATIC_CONTENT`和`STATIC_CONTENT_SYMLINK`環境變數。 請參閱[回溯不相容的變更](backward-incompatible-changes.md#environment-configuration-changes).<!--MAGECLOUD-4407, MAGECLOUD-3873-->
+  - ![修正圖示](../../assets/fix.svg)已移除`SCD_EXCLUDE_THEMES`、`STATIC_CONTENT_THREADS`、`DO_DEPLOY_STATIC_CONTENT`和`STATIC_CONTENT_SYMLINK`環境變數。 請參閱[回溯不相容的變更](backward-incompatible-changes.md#environment-configuration-changes).<!--MAGECLOUD-4407, MAGECLOUD-3873-->
 
-   - ![修正圖示](../../assets/fix.svg)修正Elastic Suite組態程式中的問題，以便在您設定不含`_merge`選項的`ELASTICSUITE_CONFIGURATION`部署變數時，依照預期覆寫預設組態。<!--MAGECLOUD-4388-->
+  - ![修正圖示](../../assets/fix.svg)修正Elastic Suite組態程式中的問題，以便在您設定不含`_merge`選項的`ELASTICSUITE_CONFIGURATION`部署變數時，依照預期覆寫預設組態。<!--MAGECLOUD-4388-->
 
 - ![新圖示](../../assets/new.svg) **CLI命令更新**—
 
-   - ![新圖示](../../assets/new.svg) **新cron命令** — 您現在可以使用`cron:disable`和`cron:enable`命令，在雲端基礎結構環境上的Adobe Commerce中手動管理cron處理。 使用disable命令可停止所有作用中的cron處理序，並停用所有cron工作。 使用enable指令可在準備就緒時重新啟用cron作業。 請參閱[停用cron工作](../application/crons-property.md#disable-cron-jobs)。
+  - ![新圖示](../../assets/new.svg) **新cron命令** — 您現在可以使用`cron:disable`和`cron:enable`命令，在雲端基礎結構環境上的Adobe Commerce中手動管理cron處理。 使用disable命令可停止所有作用中的cron處理序，並停用所有cron工作。 使用enable指令可在準備就緒時重新啟用cron作業。 請參閱[停用cron工作](../application/crons-property.md#disable-cron-jobs)。
 
-   - ![新圖示](../../assets/new.svg) **已改善錯誤報告** — 已針對ECE-Tools處理期間發生的CLI命令失敗新增更佳的記錄。<!--MAGECLOUD-4849-->
+  - ![新圖示](../../assets/new.svg) **已改善錯誤報告** — 已針對ECE-Tools處理期間發生的CLI命令失敗新增更佳的記錄。<!--MAGECLOUD-4849-->
 
-   - ![新圖示](../../assets/new.svg) **移除已棄用的組建命令** — 移除下列組建命令： `m2-ece-build`、`m2-ece-deploy`、`m2-ece-scd-dump`，並將`ece-tools docker`命令重新命名為`ece-docker`。 請參閱[回溯不相容的變更](backward-incompatible-changes.md)<!--MAGECLOUD-4392-->
+  - ![新圖示](../../assets/new.svg) **移除已棄用的組建命令** — 移除下列組建命令： `m2-ece-build`、`m2-ece-deploy`、`m2-ece-scd-dump`，並將`ece-tools docker`命令重新命名為`ece-docker`。 請參閱[回溯不相容的變更](backward-incompatible-changes.md)<!--MAGECLOUD-4392-->
 
 - ![新圖示](../../assets/new.svg)已移除已棄用的`build_options.ini`檔案，並新增驗證，以便在檔案存在時讓組建失敗。 使用[.magento.env.yaml](../environment/configure-env-yaml.md)檔案來設定組建選項。
 
