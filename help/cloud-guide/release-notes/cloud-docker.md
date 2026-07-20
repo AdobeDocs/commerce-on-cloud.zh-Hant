@@ -18,9 +18,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 5169e0e93bf44d18ebdce9e0680f80c7cc8be6dc
 workflow-type: tm+mt
-source-wordcount: 4496
+source-wordcount: 4509
 ht-degree: 0%
 
 ---
@@ -38,7 +38,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.8 {#latest}
+## v1.4.9 {#latest}
+
+發行日期： 2026年7月20日
+
+- ![新圖示](../../assets/new.svg) **RabbitMQ** — 已新增RabbitMQ 4.3支援。<!-- MCLOUD-15140 -->
+
+## v1.4.8
 
 發行日期： 2026年5月06日
 
@@ -159,9 +165,9 @@ ht-degree: 0%
 - ![新圖示](../../assets/new.svg) **Composer 2.1** — 預設在PHP 8.x影像中設定composer 2.1.x。
 - ![新圖示](../../assets/new.svg) **PHP影像改善**—
 
-   - 新增PHP 8.1影像
-   - 已升級xDebug 3.1.2版
-   - 已升級xmlrpc 1.0.0RC3
+  - 新增PHP 8.1影像
+  - 已升級xDebug 3.1.2版
+  - 已升級xmlrpc 1.0.0RC3
 
 - ![修正圖示](../../assets/fix.svg) **Elasticsearch和OpenSearch改良功能**—Elasticsearch和OpenSearch Dockerfiles中的改良功能；已移除Elasticsearch 5.2影像。
 - ![修復圖示](../../assets/fix.svg) **Na延伸模組** — 預設已在所有PHP影像中啟用`sodium`延伸模組。
@@ -174,9 +180,9 @@ ht-degree: 0%
 
 - ![修正圖示](../../assets/fix.svg) **改善開發人員模式工作流程** — 之前，您需要在建置和部署步驟中指定模式。 現在，`build`步驟中的`--mode`選項會決定稍後`deploy`步驟中的模式。 不再需要於部署後設定模式。 檢視[開發人員模式](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode).<!-- ACMP-1086 -->
 - ![修正圖示](../../assets/fix.svg) **唯讀檔案系統的改善**—<!-- ACMP-1106 -->
-   - 修正啟動郵件設定的PHP容器問題。
-   - 可以在INI檔案中使用環境變數。
-   - 請確定PHP進入點不需要寫入許可權。
+  - 修正啟動郵件設定的PHP容器問題。
+  - 可以在INI檔案中使用環境變數。
+  - 請確定PHP進入點不需要寫入許可權。
 - ![修正圖示](../../assets/fix.svg) **更新節點** — 更新隨附的節點版本；在PHP-CLI影像中安裝Node時，現在會使用目前的LTS版本。<!-- ACMP-1539 -->
 - ![修正圖示](../../assets/fix.svg) **更新Symfony** — 已更新Symfony設定相依性以與Adobe Commerce 2.4.4相容。<!-- ACMP-1533 -->
 
@@ -253,43 +259,43 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **容器更新 —**
 
-   - ![新圖示](../../assets/new.svg) **PHP-FPM容器** — 已新增對gnupg PHP擴充功能的支援。 由G Arvind從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/210).<!--MCLOUD-5981-->
+  - ![新圖示](../../assets/new.svg) **PHP-FPM容器** — 已新增對gnupg PHP擴充功能的支援。 由G Arvind從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/210).<!--MCLOUD-5981-->
 
-   - ![修正圖示](../../assets/fix.svg) **資料庫容器** — 將必要的資料庫密碼加入健康狀態檢查命令，修正資料庫容器健康狀態檢查。<!--MCLOUD-7122-->
+  - ![修正圖示](../../assets/fix.svg) **資料庫容器** — 將必要的資料庫密碼加入健康狀態檢查命令，修正資料庫容器健康狀態檢查。<!--MCLOUD-7122-->
 
-   - ![新圖示](../../assets/new.svg) **Elasticsearch容器**
+  - ![新圖示](../../assets/new.svg) **Elasticsearch容器**
 
-      - 新增對Elasticsearch 7.9的支援，以與即將發行的Adobe Commerce版本相容。<!--MCLOUD-7190-->
+    - 新增對Elasticsearch 7.9的支援，以與即將發行的Adobe Commerce版本相容。<!--MCLOUD-7190-->
 
-      - **Elasticsearch外掛程式組態** — 新增支援，以便使用`services.yaml`檔案中的Elasticsearch外掛程式組態資訊來產生Commerce環境適用的Cloud Docker的`docker-compose.yaml`檔案。 請參閱[Elasticsearch外掛程式](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#elasticsearch-plugins).<!--MCLOUD-2789-->
+    - **Elasticsearch外掛程式組態** — 新增支援，以便使用`services.yaml`檔案中的Elasticsearch外掛程式組態資訊來產生Commerce環境適用的Cloud Docker的`docker-compose.yaml`檔案。 請參閱[Elasticsearch外掛程式](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#elasticsearch-plugins).<!--MCLOUD-2789-->
 
-      - **Elasticsearch外掛程式支援** — 已新增對下列Elasticsearch外掛程式的支援： `analysis-icu`、`analysis-phonetic`、`analysis-stempel`和`analysis-nori`。 預設會安裝`analysis-icu`和`analysis-phonetic`外掛程式。 您可以視需要新增或移除`analysis-stempel`和`analysis-nori`外掛程式。<!--MCLOUD-2789-->
+    - **Elasticsearch外掛程式支援** — 已新增對下列Elasticsearch外掛程式的支援： `analysis-icu`、`analysis-phonetic`、`analysis-stempel`和`analysis-nori`。 預設會安裝`analysis-icu`和`analysis-phonetic`外掛程式。 您可以視需要新增或移除`analysis-stempel`和`analysis-nori`外掛程式。<!--MCLOUD-2789-->
 
-   - ![新圖示](../../assets/new.svg) **CLI容器**
+  - ![新圖示](../../assets/new.svg) **CLI容器**
 
-      - **在Docker PHP容器內執行命令** — 現在您可以使用Cloud Docker CLI在Docker環境中的PHP容器內執行命令，而無需在主機上安裝PHP。 例如，下列命令會建置組態： `./bin/magento-docker php 7.3 vendor/bin/ece-docker build:compose`。 請參閱[Cloud Docker CLI](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli)。 由G Arvind從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/209).<!--MCLOUD-5982-->
+    - **在Docker PHP容器內執行命令** — 現在您可以使用Cloud Docker CLI在Docker環境中的PHP容器內執行命令，而無需在主機上安裝PHP。 例如，下列命令會建置組態： `./bin/magento-docker php 7.3 vendor/bin/ece-docker build:compose`。 請參閱[Cloud Docker CLI](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli)。 由G Arvind從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/209).<!--MCLOUD-5982-->
 
-      - 將OpenSSH-client新增至PHP CLI容器。 現在，如果`composer.json`檔案包含私人Git存放庫，且需要ssh使用者端才能使用Composer命令，您就可以使用Composer的ssh代理程式轉送。<!--MCLOUD-6008-->
+    - 將OpenSSH-client新增至PHP CLI容器。 現在，如果`composer.json`檔案包含私人Git存放庫，且需要ssh使用者端才能使用Composer命令，您就可以使用Composer的ssh代理程式轉送。<!--MCLOUD-6008-->
 
-   - ![修正圖示](../../assets/fix.svg) **TLS容器** — 現在，[TLS容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container)是以`https://hub.docker.com/r/magento/magento-cloud-docker-nginx` Docker影像為基礎，而非CentOS影像。 此變更修正了在Cloud Docker環境中的容器之間傳送HTTPS請求時出現錯誤的問題。<!--MCLOUD-6469-->
+  - ![修正圖示](../../assets/fix.svg) **TLS容器** — 現在，[TLS容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container)是以`https://hub.docker.com/r/magento/magento-cloud-docker-nginx` Docker影像為基礎，而非CentOS影像。 此變更修正了在Cloud Docker環境中的容器之間傳送HTTPS請求時出現錯誤的問題。<!--MCLOUD-6469-->
 
-   - ![新圖示](../../assets/new.svg) **測試容器** — 已新增用於應用程式測試的測試容器，並新增`--with-test`選項至Docker `build:compose`命令，以僅在Docker環境中測試時建立容器。 請參閱[應用程式測試](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing).<!--MCLOUD-6394-->
+  - ![新圖示](../../assets/new.svg) **測試容器** — 已新增用於應用程式測試的測試容器，並新增`--with-test`選項至Docker `build:compose`命令，以僅在Docker環境中測試時建立容器。 請參閱[應用程式測試](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing).<!--MCLOUD-6394-->
 
-   - ![新圖示](../../assets/new.svg) **FPM-XDEBUG容器**
+  - ![新圖示](../../assets/new.svg) **FPM-XDEBUG容器**
 
-      - ![新圖示](../../assets/new.svg) **在Linux上設定Xdebug** — 將`--set-docker-host`選項新增至`ece-docker build:compose`命令，以設定Xdebug容器中的`host.docker.internal`值。 必須在Linux系統上使用Xdebug才能使用此選項。 請參閱[為Docker設定Xdebug](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug)。<!--MCLOUD-6430-->
+    - ![新圖示](../../assets/new.svg) **在Linux上設定Xdebug** — 將`--set-docker-host`選項新增至`ece-docker build:compose`命令，以設定Xdebug容器中的`host.docker.internal`值。 必須在Linux系統上使用Xdebug才能使用此選項。 請參閱[為Docker設定Xdebug](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug)。<!--MCLOUD-6430-->
 
-      - ![修正圖示](../../assets/fix.svg)修正Docker ENTRYPOINT的Xdebug變數設定，以解決記錄中的`uninitialized "with_xdebug" variable`個錯誤。 [由Florent Olivaud提交的修正](https://github.com/magento/magento-cloud-docker/pull/218)<!--MCLOUD-6043-->
+    - ![修正圖示](../../assets/fix.svg)修正Docker ENTRYPOINT的Xdebug變數設定，以解決記錄中的`uninitialized "with_xdebug" variable`個錯誤。 [由Florent Olivaud提交的修正](https://github.com/magento/magento-cloud-docker/pull/218)<!--MCLOUD-6043-->
 
 - ![新圖示](../../assets/new.svg) **Docker設定變更**
 
-   - **MailHog組態** — 現在您可以使用下列`ece-docker build:compose`命令選項來停用MailHog並指定連線埠： `--no-mailhog`、`--mailhog-http-port`和`--mailhog-smtp-port`。 請參閱[設定電子郵件](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#set-up-email).<!--MCLOUD-6898, MCLOUD-6660-->
+  - **MailHog組態** — 現在您可以使用下列`ece-docker build:compose`命令選項來停用MailHog並指定連線埠： `--no-mailhog`、`--mailhog-http-port`和`--mailhog-smtp-port`。 請參閱[設定電子郵件](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#set-up-email).<!--MCLOUD-6898, MCLOUD-6660-->
 
-   - 對於Commerce 1.2.0及更高版本的Cloud Docker，Adobe現在為每個修補版本提供Docker影像，並且Docker配置生成器使用指定的修補版本建立Docker配置，而不是使用最新的修補版本。 以前，Docker配置生成器使用最新修補版本構建配置，這可能破壞使用早期版本構建的Commerce環境的Cloud Docker。<!--MCLOUD-7093-->
+  - 對於Commerce 1.2.0及更高版本的Cloud Docker，Adobe現在為每個修補版本提供Docker影像，並且Docker配置生成器使用指定的修補版本建立Docker配置，而不是使用最新的修補版本。 以前，Docker配置生成器使用最新修補版本構建配置，這可能破壞使用早期版本構建的Commerce環境的Cloud Docker。<!--MCLOUD-7093-->
 
-   - **在自訂Cloud Docker組態中指定自訂影像和版本** — 更新了`build:custom:compose`命令，其中包含產生自訂Docker撰寫組態檔(`docker-compose.yaml`)時指定自訂影像和版本的選項。 請參閱[建置自訂Docker撰寫設定](https://developer.adobe.com/commerce/cloud-tools/docker/configure/custom-docker-compose)。<!--MCLOUD-7089-->
+  - **在自訂Cloud Docker組態中指定自訂影像和版本** — 更新了`build:custom:compose`命令，其中包含產生自訂Docker撰寫組態檔(`docker-compose.yaml`)時指定自訂影像和版本的選項。 請參閱[建置自訂Docker撰寫設定](https://developer.adobe.com/commerce/cloud-tools/docker/configure/custom-docker-compose)。<!--MCLOUD-7089-->
 
-   - 更新Docker主機設定以公開連線埠443，以便啟用從所有CLI容器存取Adobe Commerce (`https://magento2.docker`)。 產生Docker組態檔時，您可以新增`--tls-port`選項來變更預設連線埠。<!--MCLOUD-6806-->
+  - 更新Docker主機設定以公開連線埠443，以便啟用從所有CLI容器存取Adobe Commerce (`https://magento2.docker`)。 產生Docker組態檔時，您可以新增`--tls-port`選項來變更預設連線埠。<!--MCLOUD-6806-->
 
 - ![修正圖示](../../assets/fix.svg)修正在`app/etc/env.php`檔案存在時，導致Commerce組建的Cloud Docker失敗的問題。<!--MCLOUD-6732-->
 
@@ -334,49 +340,49 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **容器更新**
 
-   - **Varnish** — 現在，當您使用支援的雲端應用程式範本版本，在Cloud Docker環境中部署Adobe Commerce時，Varnish是預設的快取。 檢視[光澤容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container).<!--MCLOUD-2634-->
+  - **Varnish** — 現在，當您使用支援的雲端應用程式範本版本，在Cloud Docker環境中部署Adobe Commerce時，Varnish是預設的快取。 檢視[光澤容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container).<!--MCLOUD-2634-->
 
-   - 新增產生Cloud Docker設定檔時略過Varnish服務安裝的`--no-varnish`選項。<!--MCLOUD-2634-->
+  - 新增產生Cloud Docker設定檔時略過Varnish服務安裝的`--no-varnish`選項。<!--MCLOUD-2634-->
 
-   - ![新圖示](../../assets/new.svg) **資料庫**
+  - ![新圖示](../../assets/new.svg) **資料庫**
 
-      - 新增對MySQL資料庫的支援。 現在，您可以使用MariaDB或MySQL來設定Cloud Docker環境。 檢視[服務組態選項](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-configuration-options).<!--MCLOUD-5691-->
+    - 新增對MySQL資料庫的支援。 現在，您可以使用MariaDB或MySQL來設定Cloud Docker環境。 檢視[服務組態選項](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-configuration-options).<!--MCLOUD-5691-->
 
-      - 新增在產生Docker構成檔案時設定資料庫複製的增量與位移設定的功能。 檢視[服務容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-containers).<!--MCLOUD-5735-->
+    - 新增在產生Docker構成檔案時設定資料庫複製的增量與位移設定的功能。 檢視[服務容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-containers).<!--MCLOUD-5735-->
 
-   - ![新圖示](../../assets/new.svg) **PHP-FPM**
+  - ![新圖示](../../assets/new.svg) **PHP-FPM**
 
-      - 新增對PHP 7.4的支援。 由Mohanela Murugan從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/198)<!--MCLOUD-198-->
+    - 新增對PHP 7.4的支援。 由Mohanela Murugan從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/198)<!--MCLOUD-198-->
 
-      - 新增將根專案目錄中的`php.ini`檔案複製到Cloud Docker環境以及套用自訂PHP設定到PHP-FPM和CLI容器的功能。 請參閱[自訂PHP設定](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#customize-php-settings)。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/130).<!--MCLOUD-6012-->
+    - 新增將根專案目錄中的`php.ini`檔案複製到Cloud Docker環境以及套用自訂PHP設定到PHP-FPM和CLI容器的功能。 請參閱[自訂PHP設定](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#customize-php-settings)。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/130).<!--MCLOUD-6012-->
 
-      - 新增容器健康狀態檢查。 [由Visanth Sampath從Zilker Technology提交的修正](https://github.com/magento/magento-cloud-docker/pull/188).<!--MCLOUD-5752-->
+    - 新增容器健康狀態檢查。 [由Visanth Sampath從Zilker Technology提交的修正](https://github.com/magento/magento-cloud-docker/pull/188).<!--MCLOUD-5752-->
 
-   - ![修正圖示](../../assets/fix.svg) **Node.js** — 將預設Node.js版本從版本8更新至版本10以提高安全性。 Node.js版本8已過時，不再透過錯誤修正或安全性修補程式進行更新。 由Mohan Elamurugan從Zilker Technology[&#128279;](https://github.com/magento/magento-cloud-docker/pull/183)提交的修正。<!--MCLOUD-5586-->
+  - ![修正圖示](../../assets/fix.svg) **Node.js** — 將預設Node.js版本從版本8更新至版本10以提高安全性。 Node.js版本8已過時，不再透過錯誤修正或安全性修補程式進行更新。 由Mohan Elamurugan從Zilker Technology[&#128279;](https://github.com/magento/magento-cloud-docker/pull/183)提交的修正。<!--MCLOUD-5586-->
 
-   - ![新圖示](../../assets/new.svg) **Elasticsearch**
+  - ![新圖示](../../assets/new.svg) **Elasticsearch**
 
-      - 新增對Elasticsearch 6.8、7.2、7.5和7.6的支援。<!--MCLOUD-4050, MCLOUD-5855,MCLOUD-5860-->
+    - 新增對Elasticsearch 6.8、7.2、7.5和7.6的支援。<!--MCLOUD-4050, MCLOUD-5855,MCLOUD-5860-->
 
-      - 新增產生Docker構成設定檔案時自訂[Elasticsearch容器設定](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#elasticsearch-container)的功能。<!--MCLOUD-3059-->
+    - 新增產生Docker構成設定檔案時自訂[Elasticsearch容器設定](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#elasticsearch-container)的功能。<!--MCLOUD-3059-->
 
-      - 已將`--no-es`選項新增到服務組態選項中，用於產生Docker構成組態檔。 使用此選項可略過Elasticsearch容器安裝，並改用MySQL搜尋。 只有Adobe Commerce 2.3.5版和更舊版本才支援此選項。<!--MCLOUD-3766-->
+    - 已將`--no-es`選項新增到服務組態選項中，用於產生Docker構成組態檔。 使用此選項可略過Elasticsearch容器安裝，並改用MySQL搜尋。 只有Adobe Commerce 2.3.5版和更舊版本才支援此選項。<!--MCLOUD-3766-->
 
-   - ![新圖示](../../assets/new.svg) **FPM-XDEBUG容器** — 已新增服務組態選項，以便在雲端Docker環境中安裝及設定PHP除錯Xdebug。 請參閱[設定Xdebug](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug).<!--MCLOUD-4098-->
+  - ![新圖示](../../assets/new.svg) **FPM-XDEBUG容器** — 已新增服務組態選項，以便在雲端Docker環境中安裝及設定PHP除錯Xdebug。 請參閱[設定Xdebug](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug).<!--MCLOUD-4098-->
 
 - ![新圖示](../../assets/new.svg) **Docker設定變更**
 
-   - 已新增PHP-FPM、Redis、Elasticsearch和MySQL Docker服務容器的健康狀態檢查。<!--MCLOUD-3335 and MCLOUD-5856-->
+  - 已新增PHP-FPM、Redis、Elasticsearch和MySQL Docker服務容器的健康狀態檢查。<!--MCLOUD-3335 and MCLOUD-5856-->
 
-   - 在開發人員模式下將預設檔案同步處理模式變更為`native`。<!--MCLOUD-3890 -->
+  - 在開發人員模式下將預設檔案同步處理模式變更為`native`。<!--MCLOUD-3890 -->
 
-   - 產生`docker-compose.yml`檔案時，已將版本資訊新增至一般Docker服務容器影像。<!--MCLOUD-3878-->
+  - 產生`docker-compose.yml`檔案時，已將版本資訊新增至一般Docker服務容器影像。<!--MCLOUD-3878-->
 
-   - 透過增加Nginx伺服器的`fastcgi_buffers`值，改善處理來自上游PHP-FPM容器的大型回應的能力。<!--MCLOUD-5980-->
+  - 透過增加Nginx伺服器的`fastcgi_buffers`值，改善處理來自上游PHP-FPM容器的大型回應的能力。<!--MCLOUD-5980-->
 
-   - 透過新增第二個同步工作階段來同步`vendor`目錄中的檔案，改善突變檔案同步處理效能。 此變更可防止誘變在檔案同步程式期間卡住。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
+  - 透過新增第二個同步工作階段來同步`vendor`目錄中的檔案，改善突變檔案同步處理效能。 此變更可防止誘變在檔案同步程式期間卡住。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
 
-   - ![新圖示](../../assets/new.svg) **CLI命令更新**
+  - ![新圖示](../../assets/new.svg) **CLI命令更新**
 
 | 動作 | 命令 |
 | -------- | --------------- |
@@ -415,72 +421,72 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **容器更新**—
 
-   - ![新圖示](../../assets/new.svg) **PHP-FPM容器**—
+  - ![新圖示](../../assets/new.svg) **PHP-FPM容器**—
 
-      - ![新圖示](../../assets/new.svg) **新增Node.js支援** — 已更新PHP-FPM影像以支援PHP容器內的node、npm和grunt-cli功能。<!--MAGECLOUD-3953-->
+    - ![新圖示](../../assets/new.svg) **新增Node.js支援** — 已更新PHP-FPM影像以支援PHP容器內的node、npm和grunt-cli功能。<!--MAGECLOUD-3953-->
 
-      - ![新圖示](../../assets/new.svg) **已新增對[ionCube](https://www.ioncube.com/)**&#x200B;的支援 — 已更新預設Docker設定，以在本機Docker開發環境中支援ionCube。<!--MAGECLOUD-4354-->
+    - ![新圖示](../../assets/new.svg) **已新增對[ionCube](https://www.ioncube.com/)**&#x200B;的支援 — 已更新預設Docker設定，以在本機Docker開發環境中支援ionCube。<!--MAGECLOUD-4354-->
 
-   - ![新圖示](../../assets/new.svg) **Web容器**—
+  - ![新圖示](../../assets/new.svg) **Web容器**—
 
-      - ![新圖示](../../assets/new.svg) **自訂NGINX設定** — 新增將自訂`nginx.conf`檔案掛載到Commerce環境適用的Cloud Docker的功能。 檢視[網頁容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#web-container).<!--MAGECLOUD-4204-->
+    - ![新圖示](../../assets/new.svg) **自訂NGINX設定** — 新增將自訂`nginx.conf`檔案掛載到Commerce環境適用的Cloud Docker的功能。 檢視[網頁容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#web-container).<!--MAGECLOUD-4204-->
 
-      - ![新圖示](../../assets/new.svg) **自動產生的NGINX憑證**—Docker設定檔現在包含自動產生Web容器NGINX憑證的設定。<!--MAGECLOUD-4258-->
+    - ![新圖示](../../assets/new.svg) **自動產生的NGINX憑證**—Docker設定檔現在包含自動產生Web容器NGINX憑證的設定。<!--MAGECLOUD-4258-->
 
-   - ![新圖示](../../assets/new.svg) **新Selenium容器** — 已新增[Selenium容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#selenium-container)，以支援使用Magento功能測試架構(MFTF)進行Adobe Commerce應用程式測試。<!--MAGECLOUD-4040-->
+  - ![新圖示](../../assets/new.svg) **新Selenium容器** — 已新增[Selenium容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#selenium-container)，以支援使用Magento功能測試架構(MFTF)進行Adobe Commerce應用程式測試。<!--MAGECLOUD-4040-->
 
-   - ![新圖示](../../assets/new.svg) **[!DNL RabbitMQ]版本支援** — 已更新[!DNL RabbitMQ]容器組態以支援[!DNL RabbitMQ] 3.8版本。<!--MAGECLOUD-4674-->
+  - ![新圖示](../../assets/new.svg) **[!DNL RabbitMQ]版本支援** — 已更新[!DNL RabbitMQ]容器組態以支援[!DNL RabbitMQ] 3.8版本。<!--MAGECLOUD-4674-->
 
-   - ![修復圖示](../../assets/fix.svg) **永久資料庫容器** — 在您停止並移除Docker組態並在重新啟動Docker組態時復原後，`magento-db: /var/lib/mysql`資料庫磁碟區現在會持續存在。 現在，您必須手動刪除資料庫磁碟區。 請參閱[資料庫容器].<!--MAGECLOUD-3978-->
+  - ![修復圖示](../../assets/fix.svg) **永久資料庫容器** — 在您停止並移除Docker組態並在重新啟動Docker組態時復原後，`magento-db: /var/lib/mysql`資料庫磁碟區現在會持續存在。 現在，您必須手動刪除資料庫磁碟區。 請參閱[資料庫容器].<!--MAGECLOUD-3978-->
 
-   - ![新圖示](../../assets/new.svg) **TLS容器**—
+  - ![新圖示](../../assets/new.svg) **TLS容器**—
 
-      - ![新圖示](../../assets/new.svg) **已更新容器基礎影像以使用正式影像**— [雲端TLS容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container)影像現在是以正式的`debian:jessie` Docker影像為基礎。—<!--MAGECLOUD-4163-->
+    - ![新圖示](../../assets/new.svg) **已更新容器基礎影像以使用正式影像**— [雲端TLS容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container)影像現在是以正式的`debian:jessie` Docker影像為基礎。—<!--MAGECLOUD-4163-->
 
-      - ![新圖示](../../assets/new.svg) **已新增對[Pound TLS Termination Proxy]**&#x200B;的支援 — [Pound組態檔](https://github.com/magento/magento-cloud-docker/blob/1.0/images/tls/)已新增下列ENV變數，以自訂TLS容器的Docker組態：
+    - ![新圖示](../../assets/new.svg) **已新增對[Pound TLS Termination Proxy]**&#x200B;的支援 — [Pound組態檔](https://github.com/magento/magento-cloud-docker/blob/1.0/images/tls/)已新增下列ENV變數，以自訂TLS容器的Docker組態：
 
-         - **`TimeOut`** — 設定第一位元組時間(TTFB)逾時值。 預設值為300秒。
+      - **`TimeOut`** — 設定第一位元組時間(TTFB)逾時值。 預設值為300秒。
 
-         - **`RewriteLocation`** — 決定Pound Proxy是否預設將位置重寫至要求URL。 預設為`0`，以防止重寫中斷重新導向至外部網站，例如外部SSO網站。 由Sorin Sugar提交的[修正](https://github.com/magento/magento-cloud-docker/pull/37)<!--MAGECLOUD-4061-->
+      - **`RewriteLocation`** — 決定Pound Proxy是否預設將位置重寫至要求URL。 預設為`0`，以防止重寫中斷重新導向至外部網站，例如外部SSO網站。 由Sorin Sugar提交的[修正](https://github.com/magento/magento-cloud-docker/pull/37)<!--MAGECLOUD-4061-->
 
-      - ![新圖示](../../assets/new.svg)將TLS容器設定中的逾時值從15秒增加到300秒。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
+    - ![新圖示](../../assets/new.svg)將TLS容器設定中的逾時值從15秒增加到300秒。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
 
-   - ![新圖示](../../assets/new.svg) **塗漆容器**—
+  - ![新圖示](../../assets/new.svg) **塗漆容器**—
 
-      - ![新圖示](../../assets/new.svg) **已更新容器基礎影像以使用正式影像**— [雲端上光容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container)現在是以正式的`centos` Docker影像為基礎。<!--MAGECLOUD-4163-->
+    - ![新圖示](../../assets/new.svg) **已更新容器基礎影像以使用正式影像**— [雲端上光容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container)現在是以正式的`centos` Docker影像為基礎。<!--MAGECLOUD-4163-->
 
-      - ![新圖示](../../assets/new.svg) **已改善預設逾時設定** — 已將`.first_byte_timeout`和`.between_bytes_timeout`設定新增至Varnish容器。 這兩個逾時值預設為`300s` （5分鐘）。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
+    - ![新圖示](../../assets/new.svg) **已改善預設逾時設定** — 已將`.first_byte_timeout`和`.between_bytes_timeout`設定新增至Varnish容器。 這兩個逾時值預設為`300s` （5分鐘）。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
 
-      - ![修正圖示](../../assets/fix.svg) **在Xdebug工作階段期間略過清漆** — 已更新Varnish容器設定，以便在啟用Xdebug時收到要求時傳回`pass`。 在舊版中，如果Docker環境包含Varnish，則無法使用Xdebug。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/111).<!--MAGECLOUD-4873-->
+    - ![修正圖示](../../assets/fix.svg) **在Xdebug工作階段期間略過清漆** — 已更新Varnish容器設定，以便在啟用Xdebug時收到要求時傳回`pass`。 在舊版中，如果Docker環境包含Varnish，則無法使用Xdebug。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/111).<!--MAGECLOUD-4873-->
 
 - ![新圖示](../../assets/new.svg) **Docker設定變更**—
 
-   - ![新圖示](../../assets/new.svg) **管理專案的掛載和磁碟區** — 新增在啟動Docker環境以進行本機開發時管理掛載和磁碟區的功能。 請參閱[共用專案資料].<!--MAGECLOUD-3248-->
+  - ![新圖示](../../assets/new.svg) **管理專案的掛載和磁碟區** — 新增在啟動Docker環境以進行本機開發時管理掛載和磁碟區的功能。 請參閱[共用專案資料].<!--MAGECLOUD-3248-->
 
-   - ![新圖示](../../assets/new.svg) **網路橋接器模式的支援** — 新增網路橋接器模式的支援，以透過本機網路啟用Docker容器之間的連線。<!--MAGECLOUD-4165-->
+  - ![新圖示](../../assets/new.svg) **網路橋接器模式的支援** — 新增網路橋接器模式的支援，以透過本機網路啟用Docker容器之間的連線。<!--MAGECLOUD-4165-->
 
-   - ![新圖示](../../assets/new.svg) **預設為停用Cron容器** — 為了改善效能，當您建置Docker環境時，不再預設設定Cron容器。 您可以在Docker構建命令上使用`--with-cron`選項將Cron容器新增到您的環境中。 請參閱[管理cron工作](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#manage-cron-jobs).<!--MAGECLOUD-5181-->
+  - ![新圖示](../../assets/new.svg) **預設為停用Cron容器** — 為了改善效能，當您建置Docker環境時，不再預設設定Cron容器。 您可以在Docker構建命令上使用`--with-cron`選項將Cron容器新增到您的環境中。 請參閱[管理cron工作](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#manage-cron-jobs).<!--MAGECLOUD-5181-->
 
-   - ![新圖示](../../assets/new.svg) **停止同步處理大型備份檔案** — 已將資料庫傾印和封存檔案（ZIP、SQL、GZ和BZ2）新增至`dist/docker-sync.yml`和`dist/mutagen.sh`檔案的排除清單。 同步處理大型檔案(>1 GB)可能會造成一段閒置時間，而且備份檔案通常不需要同步處理，因為您可以重新產生它們。<!--MAGECLOUD-3979-->
+  - ![新圖示](../../assets/new.svg) **停止同步處理大型備份檔案** — 已將資料庫傾印和封存檔案（ZIP、SQL、GZ和BZ2）新增至`dist/docker-sync.yml`和`dist/mutagen.sh`檔案的排除清單。 同步處理大型檔案(>1 GB)可能會造成一段閒置時間，而且備份檔案通常不需要同步處理，因為您可以重新產生它們。<!--MAGECLOUD-3979-->
 
 - ![新圖示](../../assets/new.svg) **命令變更**—
 
-   - ![修正圖示](../../assets/fix.svg)將`./bin/docker`檔案重新命名為`./bin/magento-docker`以修正由於`./bin/docker`檔案覆寫現有的Docker二進位檔案而導致部分Docker環境中斷的問題。 這是[向後不相容的變更](backward-incompatible-changes.md)，需要更新您的指令碼和命令。<!-- MAGECLOUD-4038 -->
+  - ![修正圖示](../../assets/fix.svg)將`./bin/docker`檔案重新命名為`./bin/magento-docker`以修正由於`./bin/docker`檔案覆寫現有的Docker二進位檔案而導致部分Docker環境中斷的問題。 這是[向後不相容的變更](backward-incompatible-changes.md)，需要更新您的指令碼和命令。<!-- MAGECLOUD-4038 -->
 
-   - ![新圖示](../../assets/new.svg) **已新增服務組態選項，以將資料庫連線埠公開給主機** — 在建置`docker-compose.yml`檔案時，請使用`--expose-db-port= [Fix submitted by Adarsh Manickam from Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/101).<PORT>`選項將資料庫連線埠公開給主機： `bin/ece-docker build:compose --expose-db-port=<PORT>`<!--MAGECLOUD-4454-->
+  - ![新圖示](../../assets/new.svg) **已新增服務組態選項，以將資料庫連線埠公開給主機** — 在建置`docker-compose.yml`檔案時，請使用`--expose-db-port= [Fix submitted by Adarsh Manickam from Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/101).<PORT>`選項將資料庫連線埠公開給主機： `bin/ece-docker build:compose --expose-db-port=<PORT>`<!--MAGECLOUD-4454-->
 
-   - ![新圖示](../../assets/new.svg) **新的部署後命令** — 之前，在您使用`cloud-deploy`命令將Adobe Commerce部署到Cloud Docker容器後，`.magento.app.yaml`檔案中定義的部署後掛接會自動執行。 現在，您必須發出單獨的`cloud-post-deploy`命令，才能在您部署後執行部署後掛接。 檢視[開發人員](https://developer.adobe.com/commerce/cloud-tools/docker/deploy)和[生產](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode)模式的更新啟動指示。<!--MAGECLOUD-3996-->
+  - ![新圖示](../../assets/new.svg) **新的部署後命令** — 之前，在您使用`cloud-deploy`命令將Adobe Commerce部署到Cloud Docker容器後，`.magento.app.yaml`檔案中定義的部署後掛接會自動執行。 現在，您必須發出單獨的`cloud-post-deploy`命令，才能在您部署後執行部署後掛接。 檢視[開發人員](https://developer.adobe.com/commerce/cloud-tools/docker/deploy)和[生產](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode)模式的更新啟動指示。<!--MAGECLOUD-3996-->
 
-   - ![新圖示](../../assets/new.svg)已將`--rm`選項新增至組建和部署容器的`./bin/magento-docker`命令。 這會在工作完成後移除容器。<!--MAGECLOUD-4205-->
+  - ![新圖示](../../assets/new.svg)已將`--rm`選項新增至組建和部署容器的`./bin/magento-docker`命令。 這會在工作完成後移除容器。<!--MAGECLOUD-4205-->
 
-   - ![新圖示](../../assets/new.svg) **`build:compose`命令的更新**—
+  - ![新圖示](../../assets/new.svg) **`build:compose`命令的更新**—
 
-      - ![新圖示](../../assets/new.svg)已將`--sync-engine="native"`選項新增到`docker-build`命令，以在您以開發人員模式產生Docker撰寫設定檔案時停用檔案同步。 在Linux系統上開發時，使用此選項，這些系統不需要本機Docker開發的檔案同步。 請參閱[在Docker環境中同步處理資料](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data).<!--MCLOUD-3231, MCLOUD-3890-->
+    - ![新圖示](../../assets/new.svg)已將`--sync-engine="native"`選項新增到`docker-build`命令，以在您以開發人員模式產生Docker撰寫設定檔案時停用檔案同步。 在Linux系統上開發時，使用此選項，這些系統不需要本機Docker開發的檔案同步。 請參閱[在Docker環境中同步處理資料](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data).<!--MCLOUD-3231, MCLOUD-3890-->
 
-   - ![新圖示](../../assets/new.svg)已將預設檔案同步處理設定從`docker-sync`變更為`native`。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/124).<!--MAGECLOUD-5066-->
+  - ![新圖示](../../assets/new.svg)已將預設檔案同步處理設定從`docker-sync`變更為`native`。 由Mathew Beane從Zilker Technology提交的[修正](https://github.com/magento/magento-cloud-docker/pull/124).<!--MAGECLOUD-5066-->
 
 - ![新圖示](../../assets/new.svg) **驗證改善**—
 
-   - ![新圖示](../../assets/new.svg)已新增本機Docker開發環境的部署程式驗證，以驗證雲端環境設定是否包含解密資料庫所需的加密金鑰。 現在，如果環境設定未指定加密金鑰的值，記錄中會顯示錯誤訊息。<!--MAGECLOUD-4423-->
+  - ![新圖示](../../assets/new.svg)已新增本機Docker開發環境的部署程式驗證，以驗證雲端環境設定是否包含解密資料庫所需的加密金鑰。 現在，如果環境設定未指定加密金鑰的值，記錄中會顯示錯誤訊息。<!--MAGECLOUD-4423-->
 
-   - ![新圖示](../../assets/new.svg)已新增容器健康狀態檢查至Elasticsearch服務，以確保服務準備就緒，再繼續建置和部署處理。 如果健康情況檢查傳回錯誤，容器會自動重新啟動。<!--MAGECLOUD-4456-->
+  - ![新圖示](../../assets/new.svg)已新增容器健康狀態檢查至Elasticsearch服務，以確保服務準備就緒，再繼續建置和部署處理。 如果健康情況檢查傳回錯誤，容器會自動重新啟動。<!--MAGECLOUD-4456-->
