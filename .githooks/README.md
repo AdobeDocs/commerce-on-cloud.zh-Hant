@@ -1,7 +1,7 @@
 ---
-source-git-commit: ee2ed3a78939af36572f0baa6672b2e9f9a2557f
+source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -11,10 +11,11 @@ ht-degree: 0%
 
 ## 鉤子會做什麼
 
-- **自動偵測**&#x200B;個暫存的影像檔案(PNG、JPG、JPEG、GIF)
-- **執行`image_optim`**&#x200B;以壓縮和最佳化影像
+- **自動偵測**&#x200B;個暫存的影像檔案(PNG、JPEG、GIF、SVG)
+- **執行`image_optim`**&#x200B;以壓縮和最佳化點陣影像(PNG、JPEG、GIF)
 - **自動重新存放最佳化的影像**
-- **確定所有認可的影像都已正確最佳化**
+- **確定所有認可的點陣化影像**&#x200B;已正確最佳化
+- **根據大小限制檢查分段SVG**，如果任何SVG超過此限制，則中止認可
 
 ## 優點
 
@@ -87,9 +88,16 @@ Image optimization complete!
 - **PNG**：用於熒幕擷取畫面和UI元素（將會自動最佳化）
 - **JPEG**：用於像片（將自動最佳化）
 - **GIF**：用於動畫（將會自動最佳化）
-- **SVG**：用於圖示和簡單圖形（不是由勾點處理，按原樣確認）
+- **SVG**：用於圖示和簡單圖形（未最佳化，但已根據大小限制檢查；如果超過限制，則認可失敗）
 
-預先提交勾點會在提交時自動最佳化PNG、JPEG和GIF影像。
+預先提交鉤點會在提交時自動最佳化PNG、JPEG和GIF影像，並依據大小限制(140 KB)檢查階段SVG。
+
+如果暫存的SVG超過限制，則會中止認可。 請改用PNG：
+
+```bash
+cd _jekyll
+bundle exec rake images:svg_to_png path=path/to/image.svg
+```
 
 ## 手動最佳化
 
@@ -107,7 +115,7 @@ bundle exec rake images:optimize path=../path/to/images
 - **PNG**：使用`advpng`、`optipng`和`pngquant`
 - **JPEG**：使用`jhead`、`jpegoptim`和`jpegtran`
 - **GIF**：使用`gifsicle`
-- **SVG**：未處理（從偵測中排除，以保留向量圖形和動畫）
+- **SVG**：未最佳化（從`image_optim`排除，以保留向量圖形和動畫），但檢查140 KB大小限制
 
 ## 疑難排解
 
@@ -123,6 +131,12 @@ bundle exec rake images:optimize path=../path/to/images
 - 檢查是否已安裝`adobe-comdox-exl-rake-tasks` gem （提供`image_optim`）
 - 檢閱`.image_optim.yml`設定檔
 
+### SVG超出大小限制
+
+- 如果暫存的SVG超過140 KB，則認可會中止
+- 將SVG轉換為PNG： `cd _jekyll && bundle exec rake images:svg_to_png path=path/to/image.svg`
+- 然後暫存PNG以取代SVG並再次認可
+
 ### 效能問題
 
 - 在`_jekyll/.image_optim.yml`中調整執行緒計數
@@ -132,16 +146,17 @@ bundle exec rake images:optimize path=../path/to/images
 
 1. **預先認可觸發器**：當您執行`git commit`時，掛接會自動執行
 2. **影像偵測**：掃描暫存檔案的影像副檔名
-3. **最佳化**：在每個暫存的影像上執行`image_optim`
+3. **最佳化**：在每個階段式PNG、JPEG或GIF上執行`image_optim`
 4. **重新暫存**：自動將最佳化的影像新增回暫存區域
-5. **認可繼續進行**：如果最佳化成功，認可會正常繼續
+5. **SVG大小檢查**：根據140 KB大小限制檢查每個分段的SVG
+6. **認可繼續進行**：如果最佳化成功，且沒有任何SVG超過大小限制，則認可會正常繼續；否則認可會中止
 
 ## 支援的影像格式
 
 - **PNG** (`.png`) — 無失真和失真壓縮
 - **JPEG** (`.jpg`， `.jpeg`) — 包含中繼資料清理的失真壓縮
 - **GIF** (`.gif`) — 動畫和靜態最佳化
-- **SVG** (`.svg`) — 未由鉤點處理（認可以保留品質）
+- **SVG** (`.svg`) — 未最佳化（以原樣認可以保留品質），但已根據140 KB大小限制進行檢查；如果超過限制，則認可會中止
 
 ## 最佳實務
 
