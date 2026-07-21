@@ -9,8 +9,8 @@ ht-degree: 0%
 
 本網站包含雲端基礎結構上Commerce的最新開發人員檔案。
 
-- [雲端基礎結構上的Commerce指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
-- [開始使用雲端基礎結構上的Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
+- [雲端基礎結構上的Commerce指南](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/overview)
+- [開始使用雲端基礎結構上的Commerce](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source行為準則
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ### 來自Adobe員工的重大變更
 
-若您是Adobe Experience Cloud解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en`的私人存放庫。
+若您是Adobe Experience Cloud解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.zh-Hant`的私人存放庫。
 
 ## 工具與設定
 
