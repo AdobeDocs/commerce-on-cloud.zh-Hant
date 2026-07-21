@@ -14,20 +14,20 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 5951c3001d665423634f06cd7cc277cd0fd80bbd
+source-git-commit: 9e1fd3699623816ea3368816820daf799a43284f
 workflow-type: tm+mt
-source-wordcount: 391
+source-wordcount: 388
 ht-degree: 0%
 
 ---
 
 # 設定Redis服務
 
-[Redis](https://redis.io)是選用的後端快取解決方案，可取代Adobe Commerce預設使用的Zend Framework Zend_Cache_Backend_File。
+[Redis](https://redis.io)是選用的後端快取解決方案，可取代Adobe Commerce預設使用的`Zend Framework Zend_Cache_Backend_File`。
 
 >[!IMPORTANT]
 >
->Adobe Commerce 2.4.9或更新於2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p5的修補程式版本不支援Redis快取。 對於不支援Redis的快取設定，請使用Valkey。 如需依版本支援的快取服務，請參閱[系統需求](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/system-requirements)。
+>Adobe Commerce 2.4.9或更新於2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4的修補程式版本不支援Redis快取。 對於不支援Redis的快取設定，請使用Valkey。 如需依版本支援的快取服務，請參閱[系統需求](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/system-requirements)。
 
 {{service-instruction}}
 

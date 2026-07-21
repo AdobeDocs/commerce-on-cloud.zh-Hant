@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
+source-git-commit: c16f4ad68bb3d57f021c552f7aca2d2ee2e8c365
 workflow-type: tm+mt
-source-wordcount: 2575
+source-wordcount: 2798
 ht-degree: 0%
 
 ---
@@ -792,6 +792,52 @@ stage:
   deploy:
     UPDATE_URLS: false
 ```
+
+## `USE_LUA`
+
+- **預設**—`false`
+- **版本**—Adobe Commerce 2.4.7和更新版本
+
+控制預設快取前端的`env.php`中的`use_lua`快取後端選項（以及使用`symfony_l2`後端時，`stale_cache_enabled`前端遠端後端選項）。 此選項未套用至`page_cache`前端。
+
+使用預設值`false`，除非Adobe支援另有明確指示。
+
+```yaml
+stage:
+  deploy:
+    USE_LUA: false
+```
+
+>[!WARNING]
+>
+>在Adobe Commerce 2.4.7和2.4.8上，設定`USE_LUA: true`可能會導致快取損毀和GraphQL快取遺漏問題。
+>
+>從Adobe Commerce 2.4.9開始，請針對您的Commerce版本使用Valkey快取設定指南，並且不要仰賴`USE_LUA`進行新部署。 請參閱[為預設和頁面快取設定Redis](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)。
+
+## `LUA_KEY`
+
+`LUA_KEY`變數已過時。 如果`LUA_KEY`包含在`.magento.env.yaml`中，請在移轉期間將其移除。 請改用`USE_LUA`和`USE_LUA_ON_GC`變數。
+
+## `USE_LUA_ON_GC`
+
+- **預設**—`true`
+- **版本**—Adobe Commerce 2.4.8和更新版本
+
+控制預設快取前端的`env.php`中的`use_lua_on_gc`快取後端選項（以及使用`symfony_l2`後端時，`stale_cache_enabled`前端遠端後端選項）用於記憶體收集。 此選項未套用至`page_cache`前端。
+
+使用預設值`true`，在`backend_clean_cache` cron作業期間保留原子快取標籤清除。
+
+```yaml
+stage:
+  deploy:
+    USE_LUA_ON_GC: true
+```
+
+>[!WARNING]
+>
+>在Adobe Commerce 2.4.8上，設定`USE_LUA_ON_GC: false`可能會導致以標籤為基礎的快取失效無訊息地失敗，並需要完整快取排清才能復原。
+>
+>在2.4.9和更新版本上，請遵循已安裝版本的[快取服務指南](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)。
 
 ## `VERBOSE_COMMANDS`
 
