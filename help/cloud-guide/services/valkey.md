@@ -4,9 +4,13 @@ description: 瞭解如何在Cloud Infrastructure上為Adobe Commerce設定及最
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
 TQID: https://experienceleague.adobe.com/-aBnwClJGQlRkEfugtChxbjLObLzTu0xl1IvkYUVRsk
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: a12aa37d41a68df2fd4c84b589a08e128e5ec103
 workflow-type: tm+mt
 source-wordcount: 286
