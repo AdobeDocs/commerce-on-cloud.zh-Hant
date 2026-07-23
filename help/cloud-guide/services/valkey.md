@@ -4,16 +4,12 @@ description: 瞭解如何在Cloud Infrastructure上為Adobe Commerce設定及最
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
 TQID: https://experienceleague.adobe.com/-aBnwClJGQlRkEfugtChxbjLObLzTu0xl1IvkYUVRsk
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 988a098ec800616898a4ad0ab460a09ec64c4fc3
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: a12aa37d41a68df2fd4c84b589a08e128e5ec103
 workflow-type: tm+mt
-source-wordcount: 259
+source-wordcount: 286
 ht-degree: 0%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)是選用的後端快取解決方案，可取代Adobe Commerce預設使用的`Zend Framework Zend_Cache_Backend_File`。 如果您覆寫Commerce 2.4.9+版或2.4.5-p16、2.4.6-p14、2.4.7-p9以上修補程式發行版本的預設值，以及2.4.8-p4版本行，則必須使用Valkey。
 
-請參閱&#x200B;_實作行動手冊最佳實務指南_&#x200B;中的[設定Valkey](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"}。
+請參閱&#x200B;_實作行動手冊最佳實務指南_&#x200B;中的[設定Valkey](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"}。
 
 {{service-instruction}}
 
@@ -57,6 +53,10 @@ ht-degree: 0%
         VALKEY_USE_SLAVE_CONNECTION: true
         VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
    ```
+
+   >[!TIP]
+   >
+   >若是Adobe Commerce 2.4.9和更新版本，您可以設定`VALKEY_BACKEND: symfony_l2`，改用現代的Symfony快取型L2快取實作，而非`RemoteSynchronizedCache`。 請參閱&#x200B;_部署變數_&#x200B;參考中的[`VALKEY_BACKEND`](../environment/variables-deploy.md#valkey_backend)。
 
 1. 新增、提交和推送您的程式碼變更。
 
