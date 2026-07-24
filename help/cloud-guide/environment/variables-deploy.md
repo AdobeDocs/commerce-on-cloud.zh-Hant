@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: c16f4ad68bb3d57f021c552f7aca2d2ee2e8c365
+source-git-commit: 1aaf04500648a72b061db67af39a732871f4e886
 workflow-type: tm+mt
-source-wordcount: 2798
+source-wordcount: 3031
 ht-degree: 0%
 
 ---
@@ -495,17 +495,21 @@ stage:
 ## `VALKEY_BACKEND`
 
 - **預設**—`Cm_Cache_Backend_Redis`
-- **版本**—Adobe Commerce 2.8.0和更新版本
+- **版本**—Adobe Commerce 2.4.8和更新版本
 
 `VALKEY_BACKEND`指定Valkey快取的後端模型組態。
 
-Adobe Commerce 2.8.0版和更新版本包含下列後端模型：
+Adobe Commerce 2.4.8版和更新版本包含下列後端模型：
 
 - `Cm_Cache_Backend_Redis`
 - `\Magento\Framework\Cache\Backend\Redis`
 - `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`
 
-下列範例說明如何設定`VALKEY_BACKEND`：
+Adobe Commerce 2.4.9和更新版本也支援`symfony_l2`後端模型，此模型可啟用現代Symfony快取型L2快取實作。
+
+### 設定遠端同步化快取
+
+對於Adobe Commerce 2.4.8，下列範例說明如何將`VALKEY_BACKEND`設定到遠端同步處理快取：
 
 ```yaml
 stage:
@@ -514,9 +518,23 @@ stage:
   VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
+將遠端同步處理快取指定為Valkey後端模型可啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant)，而`ece-tools`會自動產生快取組態。 檢視[設定檔範例](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant#configuration-example)。 若要覆寫設定，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
+
+### 設定現代Symfony L2快取實作
+
+對於Adobe Commerce 2.4.9和更新版本，下列範例說明如何將`VALKEY_BACKEND`設定為現代Symfony L2快取實作：
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: symfony_l2
+```
+
+將`symfony_l2`指定為Valkey後端模型可啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant){target="_blank"}，而`ece-tools`會自動從您的Valkey服務連線詳細資料產生L2快取組態，包括`default`前端和`stale_cache_enabled`前端。 定義`CACHE_CONFIGURATION`是選擇性的，僅需要自訂特定的後端選項，例如本機快取目錄。 請參閱「_Adobe Commerce設定指南_」中的[Modern Symfony L2快取實作](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant#modern-symfony-l2-cache-implementation){target="_blank"}，以及「_實作行動手冊_」中的[設定Symfony L2快取](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}以取得自訂範例。
+
 >[!NOTE]
 >
->如果您指定`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`作為Valkey後端模型以啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant)，`ece-tools`會自動產生快取組態。 請參閱&#x200B;_Adobe Commerce組態指南_&#x200B;中的[組態檔](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant#configuration-example)範例。 若要覆寫產生的快取組態，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
+>Adobe Commerce 2.4.9包含Symfony L2快取改善功能，包括快取標籤儲存、失效和壓縮，以及修補程式ACP2E-5132，減少磁碟I/O、消除過時的快取專案，並降低記憶體與網路負荷。 請參閱&#x200B;_Adobe Commerce設定指南_&#x200B;中的[增強型Symfony L2快取效能和可靠性](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant#enhanced-symfony-l2-cache-performance-and-reliability)。
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 

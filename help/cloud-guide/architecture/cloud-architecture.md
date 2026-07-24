@@ -24,9 +24,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: fb61610380b7b60e274ce8c89f7dda41674f1107
 workflow-type: tm+mt
-source-wordcount: 807
+source-wordcount: 803
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 |          | 入門者 | Pro |
 | -------- | --------------------| ------------------ |
 | 核心功能 | <ul><li>[所有Adobe Commerce功能](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=zh-Hant)</li><li>PayPal入門工具</li><li>[Commerce報告](https://business.adobe.com/tw/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[所有Adobe Commerce功能](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=zh-Hant)</li><li>PayPal入門工具</li><li>[Commerce報告](https://business.adobe.com/tw/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[B2B模組](https://business.adobe.com/tw/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
-| 基礎結構和部署 | <ul><li>持續雲端整合工具，使用者不限</li><li>Fastly Content Delivery Network (CDN)、影像最佳化(IO)，以及寬頻寬裕量的額外安全性。 Web應用程式防火牆(WAF)服務僅適用於生產環境。</li><li>3個分支上的[New Relic](../monitor/new-relic-service.md) APM （效能監視）：您選擇的`master`和2<br>Platform as a Service (PaaS)生產、測試和開發環境（共4個使用中環境），已針對Adobe Commerce最佳化</li><li>輸出篩選（輸出防火牆）</li></ul> | <ul><li>持續雲端整合工具，使用者不限</li><li>Fastly Content Delivery Network (CDN)、影像最佳化(IO)，以及寬頻寬裕量的額外安全性。 Web應用程式防火牆(WAF)服務僅適用於生產環境。</li><li>生產環境上的[New Relic](../monitor/new-relic-service.md)基礎結構+中繼和生產環境上的APM （效能監視）。 Adobe Commerce原則的[受管理警示原則](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)實作監視最佳實務，以主動通知您影響網站效能的應用程式和基礎結構問題。</li><li>以Platform as a Service (PaaS)為基礎，針對Adobe Commerce最佳化的[整合開發](pro-architecture.md#integration-environment)環境（共2個使用中環境）</li><li>基礎架構即服務(IaaS)：專為中繼和生產環境提供的虛擬基礎架構</li></ul> |
+| 基礎結構和部署 | <ul><li>持續雲端整合工具，使用者不限</li><li>Fastly Content Delivery Network (CDN)、影像最佳化(IO)，以及寬頻寬裕量的額外安全性。 Web應用程式防火牆(WAF)服務僅適用於生產環境。</li><li>3個分支上的[New Relic](../monitor/new-relic-service.md) APM （效能監視）：您選擇的`master`和2<br>Platform as a Service (PaaS)生產、測試和開發環境（共4個使用中環境），已針對Adobe Commerce最佳化</li></ul> | <ul><li>持續雲端整合工具，使用者不限</li><li>Fastly Content Delivery Network (CDN)、影像最佳化(IO)，以及寬頻寬裕量的額外安全性。 Web應用程式防火牆(WAF)服務僅適用於生產環境。</li><li>生產環境上的[New Relic](../monitor/new-relic-service.md)基礎結構+中繼和生產環境上的APM （效能監視）。 Adobe Commerce原則的[受管理警示原則](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)實作監視最佳實務，以主動通知您影響網站效能的應用程式和基礎結構問題。</li><li>以Platform as a Service (PaaS)為基礎，針對Adobe Commerce最佳化的[整合開發](pro-architecture.md#integration-environment)環境（共2個使用中環境）</li><li>基礎架構即服務(IaaS)：專為中繼和生產環境提供的虛擬基礎架構</li></ul> |
 | 高可用性基礎建設 | | [高可用性架構](pro-architecture.md#redundant-hardware)在基礎基礎基礎建設即服務(IaaS)中設定三部伺服器，以提供企業級可靠性和可用性 |
 | 專屬硬體 | | 基礎基礎基礎建設服務(IaaS)中的獨立專用硬體，可提供更高等級的可靠性和可用性 |
 | 全年無休電子郵件支援 | 核心應用程式和雲端基礎建設的全年無休監控和電子郵件支援 | 核心應用程式和雲端基礎建設的全年無休監控和電子郵件支援 |
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 - **整合** — 整合環境提供可測試的環境，包括資料庫、網頁伺服器、快取、部分服務、環境變數和設定。 您可以開發、部署和測試程式碼，然後再合併至測試環境。
 
-   - _非作用中_ — 根據`integration`環境，您可以有不限數量的非作用中分支，但只能有一個作用中分支（不包括`integration` ）。
+  - _非作用中_ — 根據`integration`環境，您可以有不限數量的非作用中分支，但只能有一個作用中分支（不包括`integration` ）。
 
 - **暫存** — 暫存環境是用於生產前的測試，包括資料庫、Web伺服器、快取、協力廠商服務、環境變數、設定以及服務（例如Fastly）。
 
