@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
+source-git-commit: 3d3df68ab5e1781974348190b30372c0b8169d1d
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -157,11 +157,11 @@ bundle exec rake --tasks
 
 ### 鉤子會做什麼
 
-- 自動偵測分階段影像檔案(PNG、JPEG、GIF、SVG)
-- 執行`image_optim`以壓縮和最佳化點陣影像(PNG、JPEG、GIF)
+- 自動偵測暫存的影像檔案(`.png`， `.jpeg`， `.jpg`， `.gif`， `.svg`)
+- 執行`image_optim`以壓縮和最佳化點陣影像(`.png`， `.jpeg`， `.jpg`， `.gif`)
 - 自動重新存放最佳化的影像
 - 確保所有認可的點陣化影像都已適當最佳化
-- 根據大小限制檢查分段SVG，並在任何SVG超過時中止認可
+- 根據大小限制檢查分段的SVG，如果從`help/`引用了過大的SVG，則中止認可（否則僅警告）
 
 ### 優點
 
