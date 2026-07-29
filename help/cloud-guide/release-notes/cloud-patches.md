@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 9f2b598b52d26b3d9239c54c778f07a5b10f9a60
+source-git-commit: 898bbc1b96478de6693d7634d4f0cff359ccc12f
 workflow-type: tm+mt
-source-wordcount: 2965
+source-wordcount: 3019
 ht-degree: 0%
 
 ---
@@ -44,7 +44,14 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 <!--Add release notes below-->
 
-## v1.1.16 {#latest}
+## v1.1.17 {#latest}
+
+發行日期： 2026年7月29日
+
+- ![修正圖示](../../assets/fix.svg) **最佳化的Symfony L2快取效能、可靠性和標籤管理** — 改善快取擴充性、減少不必要的檔案系統I/O、增強快取一致性，以及解決過時的標籤成員資格、備援遠端寫入和L1快取移除清除。<!-- ACP2E-5132 -->
+- ![修正圖示](../../assets/fix.svg) **安全性改善** — 改善2026年7月隔離安全性修補程式的相容性。<!-- AC-17674 -->
+
+## v1.1.16
 
 發行日期： 2026年7月23日
 
