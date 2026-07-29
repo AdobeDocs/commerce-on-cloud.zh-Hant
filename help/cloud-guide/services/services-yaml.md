@@ -4,19 +4,13 @@ description: 瞭解如何在雲端基礎結構上設定Adobe Commerce使用的�
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
 TQID: https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: ce1afe358fc8596fa6eba1c2cf76a721060164c6
 workflow-type: tm+mt
-source-wordcount: 1136
+source-wordcount: 1186
 ht-degree: 0%
 
 ---
@@ -27,9 +21,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`.magento/services.yaml`檔案是在您專案的`.magento`目錄中本機管理的。 在建置過程中可存取設定，以便僅在整合環境中定義所需的服務版本，部署完成後便會移除設定，導致您在伺服器上找不到這些設定。
+>`.magento/services.yaml`檔案是在您專案的`.magento`目錄中本機管理的。 在部署期間，雲端基礎結構上的Adobe Commerce會使用此設定，為目標環境布建支援的服務。 `.magento`目錄會在部署後從遠端伺服器移除，因此在部署的環境中找不到`services.yaml`。
 
 部署指令碼使用`.magento`目錄中的組態檔，以設定的服務布建環境。 如果服務包含在`.magento.app.yaml`檔案的[`relationships`](../application/properties.md#relationships)屬性中，您的應用程式便可使用它。 `services.yaml`檔案包含&#x200B;_型別_&#x200B;和&#x200B;_磁碟_&#x200B;值。 服務型別定義服務&#x200B;_名稱_&#x200B;和&#x200B;_版本_。
+
+`.magento/services.yaml`中的服務組態與`composer.json`中定義的PHP和Composer套件相依性不同，且鎖定在`composer.lock`中。
+
+## 套用服務變更的位置
 
 變更服務設定會讓部署在環境中布建更新的服務，進而影響下列環境：
 
@@ -40,36 +38,41 @@ ht-degree: 0%
 
 ## 預設與支援的服務
 
-雲端基礎結構支援和部署以下服務：
+雲端基礎結構上的Adobe Commerce支援以下服務，這些服務可針對您的專案進行設定：
 
 - [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
+- [Valkey](valkey.md)
 - [Redis](redis.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->您必須在可用版本[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之間依序升級RabbitMQ，例如，您無法直接從3.9升級至4.1
+>您必須在可用版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之間依序[升級RabbitMQ，例如，您無法直接從3.9升級至4.1
 >
 >升級至新版RabbitMQ後，請觸發完整部署，以確保在RabbitMQ中重新建立自訂訊息佇列。
 
-您可以在目前的[預設`services.yaml`檔案](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中檢視預設版本和磁碟值。 下列範例顯示`services.yaml`組態檔中定義的`mysql`、`redis`、`opensearch`或`elasticsearch`、`rabbitmq`及`activemq-artemis`服務：
+## 檢視已設定的服務和版本
+
+您可以在目前的範本[`services.yaml`檔案](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中檢視範例服務定義和磁碟值。 實際的預設和支援服務版本取決於您的Adobe Commerce版本和目前的雲端範本。
+
+下列範例顯示`services.yaml`組態檔中的服務定義：
 
 ```yaml
 mysql:
-    type: mysql:10.4
+    type: mysql:11.8
     disk: 5120
 
-redis:
-    type: redis:6.2
+cache:
+    type: valkey:9.0
 
 opensearch:
-    type: opensearch:2  # minor version not required; uses latest
+    type: opensearch:3  # minor version not required; uses latest
     disk: 1024
 
 rabbitmq:
-    type: rabbitmq:3.9
+    type: rabbitmq:4.3
     disk: 1024
 
 activemq-artemis:
@@ -142,9 +145,9 @@ mysql:
 
 您可以從[`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md)環境變數擷取所有服務關係的設定資料。 設定資料包括服務名稱、型別和版本，以及任何必要的連線詳細資訊，例如連線埠號碼和登入認證。
 
-**驗證本機環境中的關係**：
+**若要驗證您本機開發環境的關係**：
 
-1. 在您的本機環境中，顯示使用中環境的關係。
+1. 從您的本機開發環境中，顯示使用中環境的關係。
 
    ```bash
    magento-cloud relationships
@@ -160,7 +163,7 @@ mysql:
    ...
            type: 'redis:7.0'
            port: 6379
-   elasticsearch:
+   opensearch:
        -
    ...
            type: 'opensearch:2'
@@ -168,7 +171,7 @@ mysql:
    database:
        -
    ...
-           type: 'mysql:10.6'
+           type: 'mysql:11.8'
            port: 3306
    ```
 
@@ -192,7 +195,7 @@ mysql:
 
 ## 服務版本
 
-雲端基礎結構上Adobe Commerce的服務版本和相容性支援取決於雲端基礎結構上部署和測試的版本，有時與Adobe Commerce內部部署支援的版本不同。 請參閱&#x200B;_安裝_&#x200B;指南中的[系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)，以取得Adobe已針對特定Adobe Commerce和Magento Open Source版本測試的協力廠商軟體相依性清單。
+雲端基礎結構上Adobe Commerce的服務版本和相容性支援取決於雲端基礎結構上部署和測試的版本，有時與Adobe Commerce內部部署支援的版本不同。 請參閱&#x200B;_安裝_&#x200B;指南中的[系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)，以取得Adobe已針對特定Adobe Commerce和Magento Open Source版本測試的協力廠商軟體相依性清單。
 
 ### 軟體EOL檢查
 
@@ -225,7 +228,7 @@ mysql:
 
    ```yaml
    mysql:
-       type: mysql:10.3
+       type: mysql:11.8
        disk: 2048
    ```
 
@@ -233,7 +236,7 @@ mysql:
 
    ```yaml
    mysql:
-       type: mysql:10.4
+       type: mysql:12.3
        disk: 5120
    ```
 
@@ -244,7 +247,7 @@ mysql:
    ```
 
    ```bash
-   git commit -m "Upgrade MySQL from MariaDB 10.3 to 10.4."
+   git commit -m "Upgrade MySQL from MariaDB 11.8 to 12.3."
    ```
 
    ```bash
