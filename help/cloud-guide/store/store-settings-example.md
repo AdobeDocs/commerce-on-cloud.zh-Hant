@@ -4,7 +4,7 @@ description: 檢視如何在雲端基礎結構環境中跨所有Adobe Commerce�
 hidefromtoc: true
 source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ magento-cloud db:dump
 
 ### 使用新設定編輯config.php
 
-在本機上，使用文字編輯器來編輯更新的`app/etc/config.php`檔案。 編輯這些設定以縮小JavaScript、HTML和CSS檔案。
+在本機上，使用文字編輯器來編輯更新的`app/etc/config.php`檔案。 編輯這些設定以簡化JavaScript、HTML和CSS檔案。
 
 ```php?start_inline=1
  'dev' => [
