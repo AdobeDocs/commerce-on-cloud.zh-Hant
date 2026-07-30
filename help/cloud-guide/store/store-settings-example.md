@@ -4,7 +4,7 @@ description: 檢視如何在雲端基礎結構環境中跨所有Adobe Commerce�
 hidefromtoc: true
 source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ _靜態檔案最佳化_&#x200B;是指合併並縮制JavaScript和階層式樣式
    ![變更地區設定](../../assets/locale-options.png)
 
 1. 按一下&#x200B;**儲存設定**。
-1. 如果出現提示，[排清快取](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/tools/cache-management)。
+1. 如果出現提示，[排清快取](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
 1. 登出Admin。
 
 ## 匯出值並將config.php傳輸至您的本機系統
@@ -159,7 +159,7 @@ git add app/etc/config.php && git commit -m "Add system-specific configuration" 
 1. 在右窗格中，展開&#x200B;**JavaScript設定**。
 1. 從&#x200B;**合併JavaScript檔案**&#x200B;清單，按一下&#x200B;**是**。
 1. 按一下&#x200B;**儲存設定**。
-1. 如果出現提示，[排清快取](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/tools/cache-management)。
+1. 如果出現提示，[排清快取](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
 1. 登出Admin。
 
 再次執行dump命令後，新配置會附加到檔案中。
@@ -170,7 +170,7 @@ magento-cloud db:dump
 
 ### 使用新設定編輯config.php
 
-在本機上，使用文字編輯器來編輯更新的`app/etc/config.php`檔案。 編輯這些設定以縮小JavaScript、HTML和CSS檔案。
+在本機上，使用文字編輯器來編輯更新的`app/etc/config.php`檔案。 編輯這些設定以簡化JavaScript、HTML和CSS檔案。
 
 ```php?start_inline=1
  'dev' => [
