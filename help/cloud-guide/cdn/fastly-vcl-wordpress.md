@@ -4,14 +4,11 @@ description: 瞭解如何使用Fastly邊緣模組將來自Adobe Commerce商店�
 feature: Cloud, Configuration, Routes
 exl-id: ef024c68-395b-4d47-9362-a8404a93dbbe
 TQID: https://experienceleague.adobe.com/zRM-iTFGNPgSmT5xu1B9Lo3-onUtCHh-tVY-WPPiVC8
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: bcac8986e748f6e513d4db22ee7eb7f64bac1a3a
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+last-update: 2025-01-29
+source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
 workflow-type: tm+mt
 source-wordcount: 322
 ht-degree: 0%

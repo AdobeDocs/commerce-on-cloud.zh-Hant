@@ -4,17 +4,12 @@ description: 使用Fastly Edge字典和自訂VCL程式碼片段，封鎖來自�
 feature: Cloud, Configuration, Security
 exl-id: 4ed47a71-7fee-4f37-a7da-3e30052004df
 TQID: https://experienceleague.adobe.com/Ssuym1h44Jr5-yJxD7adItpPIx-tDWR9b3sRyijXzEA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+last-update: 2025-01-29
+source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
 workflow-type: tm+mt
 source-wordcount: 725
 ht-degree: 0%
@@ -101,7 +96,7 @@ Edge字典會建立VCL程式碼片段處理期間VCL函式可存取的鍵值值�
 
 - [從Admin](#add-the-custom-vcl-snippet)新增自訂VCL程式碼片段。 如果您可以存取Admin，則建議使用此方法。 （需要[Fastly 1.2.58](fastly-configuration.md#upgrade)或更新版本。）
 
-- 將JSON程式碼範例儲存至檔案（例如，`allowlist.json`）並使用Fastly API[&#128279;](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)上傳。 如果您無法存取Admin，請使用此方法。
+- 將JSON程式碼範例儲存至檔案（例如，`allowlist.json`）並使用Fastly API](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)上傳[。 如果您無法存取Admin，請使用此方法。
 
 ## 新增自訂VCL片段
 
