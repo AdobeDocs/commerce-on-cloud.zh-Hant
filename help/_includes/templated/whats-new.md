@@ -23,7 +23,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>在ECE-Tools版本v2002.2.12之後更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。 除了版本號碼外，沒有進行其他變更。</p>
+      <td><p>在ECE-Tools版本v2002.2.12之後更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。 除了版本號碼外，沒有進行其他變更。</p>
 </td>
       <td>
         技術
@@ -45,7 +45,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access">管理使用者存取權</a>，其中包含更清楚的先決條件、Cloud Console邀請狀態、重新部署指引和相關疑難排解。</p>
+      <td><p>更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/project/user-access">管理使用者存取權</a>，其中包含更清楚的先決條件、Cloud Console邀請狀態、重新部署指引和相關疑難排解。</p>
 </td>
       <td>
         意見反應
