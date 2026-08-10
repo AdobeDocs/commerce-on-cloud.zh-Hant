@@ -16,8 +16,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2026-08-03
-source-git-commit: 0da9d7b8a74d37eac69f13854ce44a47f6144422
+last-update: 2026-08-07
+source-git-commit: 49d686ca6f08a3a94f103c89f61b17e5b11357a7
 workflow-type: tm+mt
 source-wordcount: 323
 ht-degree: 3%
