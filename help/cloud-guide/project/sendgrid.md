@@ -3,10 +3,18 @@ title: SendGrid電子郵件服務
 description: 瞭解雲端基礎結構上適用於Adobe Commerce的SendGrid電子郵件服務，以及如何測試您的DNS設定。
 exl-id: 06236068-df32-468f-99ec-c379984be136
 TQID: https://experienceleague.adobe.com/I4giHpOngkQ0KZYBXZoGJGBXLWme2fxE39uIOGnON-k
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: beb7a3c1-66ab-4786-b879-7621375b3c40id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
 workflow-type: tm+mt
 source-wordcount: 1702
@@ -80,7 +88,7 @@ DKIM是一種電子郵件驗證技術，可讓網際網路服務提供者(ISP)�
 
 >[!TIP]
 >
->請確定您使用&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**&#x200B;中的適當網域來設定&#x200B;**[!UICONTROLS儲存電子郵件地址]**。 對寄件者的電子郵件地址執行網域驗證。 如果設定了預設設定(`example.com`)，Sendgrid將會封鎖來自`example.com`的電子郵件。
+>請確定您使用&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**&#x200B;中的適當網域來設定&#x200B;**[!UICONTROL S儲存電子郵件地址]**。 對寄件者的電子郵件地址執行網域驗證。 如果設定了預設設定(`example.com`)，Sendgrid將會封鎖來自`example.com`的電子郵件。
 
 **若要啟用網域驗證**：
 
@@ -135,7 +143,7 @@ dig CNAME s2._domainkey.domain_name
 
 交易式電子郵件臨界值是指在特定時段內您可從Pro環境傳送的交易式電子郵件訊息數量，例如每月從非生產環境傳送12,000封電子郵件。 此臨界值旨在防止傳送垃圾郵件，並防止可能對您的電子郵件信譽造成損害。
 
-只要寄件者信譽分數超過95%，生產環境中可傳送的電子郵件數量就沒有嚴格限制。 信譽受退回或拒絕的電子郵件數量以及基於DNS的垃圾郵件註冊是否將您的網域標籤為潛在垃圾郵件來源的影響。 檢視&#x200B;_Commerce支援知識庫_&#x200B;中Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded)超過SendGrid信用額時未傳送的[電子郵件。
+只要寄件者信譽分數超過95%，生產環境中可傳送的電子郵件數量就沒有嚴格限制。 信譽受退回或拒絕的電子郵件數量以及基於DNS的垃圾郵件註冊是否將您的網域標籤為潛在垃圾郵件來源的影響。 檢視&#x200B;_Commerce支援知識庫_&#x200B;中Adobe Commerce[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded)超過SendGrid信用額時未傳送的電子郵件。
 
 **若要檢查是否已超過最大積分**：
 
