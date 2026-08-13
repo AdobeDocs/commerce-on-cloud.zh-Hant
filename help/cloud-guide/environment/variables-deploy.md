@@ -74,7 +74,7 @@ stage:
             database: 11
 ```
 
-下列範例使用&#x200B;_設定指南_&#x200B;中定義的[Redis預先載入功能](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html#redis-preload-feature)：
+下列範例使用&#x200B;_設定指南_&#x200B;中定義的[Redis預先載入功能](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html?lang=zh-Hant#redis-preload-feature)：
 
 ```yaml
 stage:
@@ -109,7 +109,7 @@ stage:
 - **預設**—`true`
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-啟用或停用清除在建置或部署階段產生的[靜態內容檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)。 在開發中使用預設值&#x200B;_true_&#x200B;作為最佳實務。
+啟用或停用清除在建置或部署階段產生的[靜態內容檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=zh-Hant)。 在開發中使用預設值&#x200B;_true_&#x200B;作為最佳實務。
 
 - **`true`** — 在部署更新的靜態內容之前，移除所有現有的靜態內容。
 - **`false`** — 如果產生的內容包含較新的版本，部署只會覆寫現有的靜態內容檔案。
@@ -168,7 +168,7 @@ stage:
       consumers: []
 ```
 
-依預設，部署程式會覆寫`env.php`檔案中的所有設定。 請參閱內部部署Adobe Commerce的&#x200B;_Commerce設定指南_&#x200B;中的[管理訊息佇列](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html)。
+依預設，部署程式會覆寫`env.php`檔案中的所有設定。 請參閱內部部署Adobe Commerce的&#x200B;_Commerce設定指南_&#x200B;中的[管理訊息佇列](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html?lang=zh-Hant)。
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -198,7 +198,7 @@ stage:
 
 >[!WARNING]
 >
->透過[!DNL Cloud Console]而非`.magento.env.yaml`檔案設定`CRYPT_KEY`值，以避免公開您環境的原始程式碼存放庫中的金鑰。 請參閱[設定環境和專案變數](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html#configure-environment)。
+>透過[!DNL Cloud Console]而非`.magento.env.yaml`檔案設定`CRYPT_KEY`值，以避免公開您環境的原始程式碼存放庫中的金鑰。 請參閱[設定環境和專案變數](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html?lang=zh-Hant#configure-environment)。
 
 將資料庫從一個環境移動到另一個環境時，若沒有安裝程式，則需要相應的密碼編譯資訊。 Adobe Commerce使用[!DNL Cloud Console]中設定的加密金鑰值做為`env.php`檔案中的`crypt/key`值。
 
@@ -289,7 +289,7 @@ stage:
 
 >[!NOTE]
 >
->在[縮放架構](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)上具有三個節點（或三個服務節點）的Pro測試/生產叢集上，`indices_settings`應設定如下：
+>在[縮放架構](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)上具有三個節點（或三個服務節點）的Pro測試/生產叢集上，`indices_settings`應設定如下：
 >
 >```yaml
 >           indices_settings:
@@ -467,7 +467,7 @@ stage:
 
 >[!NOTE]
 >
->如果您指定`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`作為Redis後端模型以啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)，`ece-tools`會自動產生快取組態。 請參閱&#x200B;_Adobe Commerce組態指南_&#x200B;中的[組態檔](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)範例。 若要覆寫產生的快取組態，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
+>如果您指定`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`作為Redis後端模型以啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant)，`ece-tools`會自動產生快取組態。 請參閱&#x200B;_Adobe Commerce組態指南_&#x200B;中的[組態檔](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant#configuration-example)範例。 若要覆寫產生的快取組態，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -518,7 +518,7 @@ stage:
   VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-將遠端同步處理快取指定為Valkey後端模型可啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)，而`ece-tools`會自動產生快取組態。 檢視[設定檔範例](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)。 若要覆寫設定，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
+將遠端同步處理快取指定為Valkey後端模型可啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant)，而`ece-tools`會自動產生快取組態。 檢視[設定檔範例](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant#configuration-example)。 若要覆寫設定，請使用[CACHE_CONFIGURATION](#cache_configuration)部署變數。
 
 ### 設定現代Symfony L2快取實作
 
@@ -530,11 +530,11 @@ stage:
     VALKEY_BACKEND: symfony_l2
 ```
 
-將`symfony_l2`指定為Valkey後端模型可啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html){target="_blank"}，而`ece-tools`會自動從您的Valkey服務連線詳細資料產生L2快取組態，包括`default`前端和`stale_cache_enabled`前端。 定義`CACHE_CONFIGURATION`是選擇性的，僅需要自訂特定的後端選項，例如本機快取目錄。 請參閱「_Adobe Commerce設定指南_」中的[Modern Symfony L2快取實作](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#modern-symfony-l2-cache-implementation){target="_blank"}，以及「_實作行動手冊_」中的[設定Symfony L2快取](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}以取得自訂範例。
+將`symfony_l2`指定為Valkey後端模型可啟用[L2快取](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant){target="_blank"}，而`ece-tools`會自動從您的Valkey服務連線詳細資料產生L2快取組態，包括`default`前端和`stale_cache_enabled`前端。 定義`CACHE_CONFIGURATION`是選擇性的，僅需要自訂特定的後端選項，例如本機快取目錄。 請參閱「_Adobe Commerce設定指南_」中的[Modern Symfony L2快取實作](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant#modern-symfony-l2-cache-implementation){target="_blank"}，以及「_實作行動手冊_」中的[設定Symfony L2快取](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}以取得自訂範例。
 
 >[!NOTE]
 >
->Adobe Commerce 2.4.9包含Symfony L2快取改善功能，包括快取標籤儲存、失效和壓縮，以及修補程式ACP2E-5132，減少磁碟I/O、消除過時的快取專案，並降低記憶體與網路負荷。 請參閱&#x200B;_Adobe Commerce設定指南_&#x200B;中的[增強型Symfony L2快取效能和可靠性](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#enhanced-symfony-l2-cache-performance-and-reliability)。
+>Adobe Commerce 2.4.9包含Symfony L2快取改善功能，包括快取標籤儲存、失效和壓縮，以及修補程式ACP2E-5132，減少磁碟I/O、消除過時的快取專案，並降低記憶體與網路負荷。 請參閱&#x200B;_Adobe Commerce設定指南_&#x200B;中的[增強型Symfony L2快取效能和可靠性](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hant#enhanced-symfony-l2-cache-performance-and-reliability)。
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
@@ -669,7 +669,7 @@ stage:
 - **預設**—`quick`
 - **版本**—Adobe Commerce 2.2.0和更新版本
 
-可讓您自訂靜態內容的[部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)。 請參閱[部署靜態檢視檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)。
+可讓您自訂靜態內容的[部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=zh-Hant)。 請參閱[部署靜態檢視檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=zh-Hant)。
 
 如果您有多個地區設定，請只使用這些選項&#x200B;_1&rbrace;：_
 
@@ -830,7 +830,7 @@ stage:
 >
 >在Adobe Commerce 2.4.7和2.4.8上，設定`USE_LUA: true`可能會導致快取損毀和GraphQL快取遺漏問題。
 >
->從Adobe Commerce 2.4.9開始，請針對您的Commerce版本使用Valkey快取設定指南，並且不要仰賴`USE_LUA`進行新部署。 請參閱[為預設和頁面快取設定Redis](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)。
+>從Adobe Commerce 2.4.9開始，請針對您的Commerce版本使用Valkey快取設定指南，並且不要仰賴`USE_LUA`進行新部署。 請參閱[為預設和頁面快取設定Redis](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)。
 
 ## `LUA_KEY`
 
@@ -855,7 +855,7 @@ stage:
 >
 >在Adobe Commerce 2.4.8上，設定`USE_LUA_ON_GC: false`可能會導致以標籤為基礎的快取失效無訊息地失敗，並需要完整快取排清才能復原。
 >
->在2.4.9和更新版本上，請遵循已安裝版本的[快取服務指南](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)。
+>在2.4.9和更新版本上，請遵循已安裝版本的[快取服務指南](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)。
 
 ## `VERBOSE_COMMANDS`
 
