@@ -5,14 +5,11 @@ feature: Cloud, Observability
 last-substantial-update: 2023-09-06T00:00:00.000Z
 exl-id: 10966241-311d-4b68-804d-4c9569bf933d
 TQID: https://experienceleague.adobe.com/TzgxuxAgzcExYd8BsFh5FTsgFAMy5-qjAOmUdlwqMME
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 83bab481da52667e8ffb81563109429c7c6b65dd
 workflow-type: tm+mt
-source-wordcount: 456
+source-wordcount: 457
 ht-degree: 0%
 
 ---
@@ -52,4 +49,4 @@ Pro專案包含[New Relic基礎結構(NRI)](https://docs.newrelic.com/docs/infra
 
 ## New Relic記錄管理
 
-所有雲端基礎結構專案都包含[New Relic記錄管理](log-management.md)。 此服務已預先設定為彙總測試和生產環境的所有記錄資料，並在集中式記錄管理儀表板中顯示。
+所有Pro Cloud基礎結構專案都包含[New Relic記錄管理](log-management.md)。 此服務已預先設定為彙總測試和生產環境的所有記錄資料，並在集中式記錄管理儀表板中顯示。
