@@ -11,7 +11,7 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
 workflow-type: tm+mt
 source-wordcount: 788
 ht-degree: 0%
@@ -197,7 +197,7 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
 
 ```yaml
 opensearch:
-    type: opensearch:2
+    type: opensearch:3
     disk: 1024
     configuration:
         plugins:

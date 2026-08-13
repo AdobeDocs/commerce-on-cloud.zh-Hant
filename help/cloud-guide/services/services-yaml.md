@@ -14,7 +14,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: ce1afe358fc8596fa6eba1c2cf76a721060164c6
+source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
 workflow-type: tm+mt
 source-wordcount: 1186
 ht-degree: 0%
@@ -172,7 +172,7 @@ mysql:
    opensearch:
        -
    ...
-           type: 'opensearch:2'
+           type: 'opensearch:3'
            port: 9200
    database:
        -
