@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 643134d5bf2ab03b0c9cace884e9a020a2aebdb7
+source-git-commit: 1a0261c2c7ca9c058e18af5cbc86319501d75e57
 workflow-type: tm+mt
-source-wordcount: 3054
+source-wordcount: 3086
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 發行日期： 2026年8月11日
 
 - ![修正圖示](../../assets/fix.svg) **已改善修補程式處理** — 修補程式現在會略過透過`composer.json` `replace`移除的Hunk鎖定目標模組，並繼續套用剩餘的安裝部分。<!-- MCLOUD-15325 -->
-- ![修正圖示](../../assets/fix.svg) **安全性改善** — 已套用最新的安全性修補程式。<!--MCLOUD-15035 -->
+- ![修正圖示](../../assets/fix.svg) **安全性改善** — 已套用[Adobe Commerce安全性更新APSB26-92](https://helpx.adobe.com/tw/security/products/magento/apsb26-92.html)中參考的安全性修正。<!--MCLOUD-15035 -->
 
 ## v1.1.17
 
@@ -68,7 +68,7 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 發行日期： 2026年7月14日
 
-- ![修正圖示](../../assets/fix.svg) **安全性改善** — 已套用最新的安全性修補程式。<!--MCLOUD-15066 -->
+- ![修正圖示](../../assets/fix.svg) **安全性改善** — 已套用[Adobe Commerce安全性更新APSB26-73](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-37421)中參考的安全性修正。<!--MCLOUD-15066 -->
 
 ## v1.1.14
 
