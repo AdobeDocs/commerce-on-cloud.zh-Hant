@@ -1,7 +1,7 @@
 ---
-source-git-commit: c99769c36020dea4b7321c791fd47ee162075ef3
+source-git-commit: e89fcc1e14016d767941719e5835cee3c744a339
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '78'
 ht-degree: 3%
 
 ---
@@ -29,28 +29,6 @@ ht-degree: 3%
         技術
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/136f8312d1c125a49538ee050394c722ab68d9b6">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年6月15日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/project/user-access">管理使用者存取權</a>，其中包含更清楚的先決條件、Cloud Console邀請狀態、重新部署指引和相關疑難排解。</p>
-</td>
-      <td>
-        意見反應
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/747367a8808b0b22f810f4e26b94a06ee995281d">認可</a></td>
     </tr>
   </tbody>
 </table>
