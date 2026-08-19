@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: e7db7e06142322898d7d9a28ae0dd06458fdcf6d
+source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
 workflow-type: tm+mt
-source-wordcount: 3580
+source-wordcount: 3631
 ht-degree: 0%
 
 ---
@@ -40,7 +40,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.12 {#latest}
+## v2002.2.13 {#latest}
+
+發行日期： 2026年8月19日
+
+- ![修正圖示](../../assets/fix.svg) **快取改善** Redis和Valkey從屬連線的增強Symfony_l2快取支援，以及解決相關快取、標籤索引、預先載入和靜態部署問題……<!-- MCLOUD-15433 -->
+
+## v2002.2.12
 
 發行日期： 2026年7月20日
 
@@ -291,7 +297,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **新SCD_NO_PARENT環境變數** — 已新增`SCD_NO_PARENT`環境變數（適用於Adobe Commerce >=2.4.2）以管理父系主題的靜態內容產生。<!--MCLOUD-7284-->
 
-- ![修正圖示](../../assets/fix.svg) **記憶體限制和命令** — 修正`cloud.log`檔案大小超過PHP memory_limit時，`php vendor/bin/ece-tools`命令無法運作的問題。我們現在只從記錄檔讀取較小的資料子集，而不將整個`cloud.log`檔案讀取到記憶體中。
+- ![修正圖示](../../assets/fix.svg) **記憶體限制和命令** — 修正`cloud.log`檔案大小超過PHP memory_limit時，`php vendor/bin/ece-tools`命令無法運作的問題。 我們現在只從記錄檔讀取較小的資料子集，而不將整個`cloud.log`檔案讀取到記憶體中。
   <!--MCLOUD-7275-->
   <!--MCLOUD-7400-->
 
