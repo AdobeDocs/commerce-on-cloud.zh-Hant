@@ -202,7 +202,7 @@ Fastly支援自訂版本的Varnish Configuration Language (VCL)以自訂Fastly�
 
 - 對於入門專案，請移至[!DNL Cloud Console]中[!UICONTROL Domains]標籤下的專案URL以新增您的專案URL。
 
-- 若為Pro專案，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，以將網域新增至您的雲端專案設定。 支援團隊也會更新Adobe Commerce Fastly帳戶設定以新增網域。
+- 若為Pro專案，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，以將網域新增至您的雲端專案設定。 支援團隊也會更新Adobe Commerce Fastly帳戶設定以新增網域。
 
 **若要從管理員管理Fastly網域設定**：
 

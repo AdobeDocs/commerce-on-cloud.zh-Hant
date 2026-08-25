@@ -21,4 +21,4 @@ ht-degree: 0%
 
 ## 相關閱讀
 
-[在開發人員檔案中管理磁碟空間](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space?lang=en)。
+[在開發人員檔案中管理磁碟空間](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space?lang=en)。
