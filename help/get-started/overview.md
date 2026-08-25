@@ -4,8 +4,11 @@ description: 開始使用雲端基礎結構上新的自助服務Adobe Commerce�
 recommendations: noDisplay, catalog
 exl-id: be93ef73-ae10-4d87-83ed-8da90bb5527c
 TQID: https://experienceleague.adobe.com/Dc7EadNPF5I2NrEZKD2TvV9otmLoN6-gnTF-c2k20wA
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
 source-wordcount: 173

@@ -4,10 +4,16 @@ description: 瞭解在Adobe Commerce上雲端基礎結構專案部署靜態內�
 feature: Cloud, Build, Deploy, SCD
 exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
 TQID: https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 860
@@ -47,7 +53,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >在您執行`ece-tools`封裝中的`config:dump`命令後，傾印至`config.php`檔案[的設定會在管理儀表板](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26879)中鎖定（呈現灰色）。 在Admin中更新這些設定的唯一方法是從本機檔案中刪除它們，然後重新部署專案。
->此外，每次將新的商店/商店群組/網站新增至執行個體時，您應該記得執行`config:dump`命令，以確保資料庫同步。 您也可以選擇應將哪些組態](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)傾印到`config.php`檔案中[。
+>此外，每次將新的商店/商店群組/網站新增至執行個體時，您應該記得執行`config:dump`命令，以確保資料庫同步。 您也可以選擇應將哪些組態[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)傾印到`config.php`檔案中。
 >如果您從`config.php`檔案中刪除商店/商店群組/網站組態，因為欄位呈現灰色，但未執行此步驟，則在下次部署時，未傾印的新實體將會從資料庫中刪除。
 
 **若要將專案設定為在組建**&#x200B;上產生SCD：

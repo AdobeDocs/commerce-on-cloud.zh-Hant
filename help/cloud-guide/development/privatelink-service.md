@@ -4,10 +4,19 @@ description: 瞭解如何使用PrivateLink服務，在相同地區的私人雲�
 feature: Cloud, Iaas, Security
 exl-id: 13a7899f-9eb5-4c84-b4c9-993c39d611cc
 TQID: https://experienceleague.adobe.com/AxpzTY-Nb7UoKhW-wzAOuWLm5O7XS4OFxjSaIfFUR-I
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 1799
@@ -112,7 +121,7 @@ ht-degree: 0%
 
 以下工作流程概述PrivateLink與雲端基礎結構上Adobe Commerce整合的啟用程式。
 
-1. **客戶**&#x200B;提交支援票證，以主旨列`PrivateLink support for <company>`要求PrivateLink啟用。 在票證中包含啟用](#prerequisites)所需的[資料。 Adobe使用支援票證在啟用過程中協調通訊。
+1. **客戶**&#x200B;提交支援票證，以主旨列`PrivateLink support for <company>`要求PrivateLink啟用。 在票證中包含啟用[&#128279;](#prerequisites)所需的資料。 Adobe使用支援票證在啟用過程中協調通訊。
 
 1. **Adobe**&#x200B;可讓客戶帳戶存取Adobe VPC中的端點服務。
 

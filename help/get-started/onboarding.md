@@ -5,9 +5,12 @@ role: Admin
 recommendations: noDisplay, catalog
 exl-id: 9b48212a-2560-4090-b483-a8b04471de95
 TQID: https://experienceleague.adobe.com/y1WQfRLHOhgyZfCISQEsIRju7g79oq-ikJH1Tl7z420
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
 source-wordcount: 521
@@ -53,5 +56,5 @@ Adobe在雲端基礎結構訂閱上啟用Commerce後，初始專案和程式碼�
 >
 > 開啟新的[!DNL Cloud Console]並檢視專案和環境活動。
 >
->**下一步**： [登入Cl[！DNL ]oud主控台](cloud-console.md)
+>**下一步**： [登入Cloud主控台](cloud-console.md)
 

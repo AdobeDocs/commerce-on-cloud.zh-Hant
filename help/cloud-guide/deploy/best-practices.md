@@ -4,10 +4,20 @@ description: 探索在雲端基礎結構上部署Adobe Commerce的最佳作法�
 feature: Cloud, Deploy, Best Practices
 exl-id: 87aabee7-4629-4a3c-9587-dbde4cf268e1
 TQID: https://experienceleague.adobe.com/sXtq-V7nDHm5IvDX0CqpxLcO3eQXem-YlMPG-kxTsmc
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c32adafa-ed01-4b31-997e-2413013911b0id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: c32adafa-ed01-4b31-997e-2413013911b0
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 1982
@@ -35,7 +45,7 @@ ht-degree: 0%
 >
 >在整合環境中，您無法從[!DNL Cloud Console]檢視部署記錄檔。 此功能僅適用於生產和測試環境。 不過，您可以使用[建置和部署](../test/log-locations.md#build-and-deploy-logs)記錄檔，檢視任何環境中每個部署階段的記錄。 如需疑難排解資訊，請參閱[部署錯誤參考](../dev-tools/error-reference.md)。
 
-您可以使用New Relic](../monitor/track-deployments.md)啟用[追蹤部署，以監視部署事件並分析部署之間的效能。
+您可以使用New Relic[&#128279;](../monitor/track-deployments.md)啟用追蹤部署，以監視部署事件並分析部署之間的效能。
 
 ## 建置和部署的最佳實務
 
@@ -43,7 +53,7 @@ ht-degree: 0%
 
 - **請確定您執行的是`ece-tools`封裝的最新版本**
 
-  請參閱ECE-Tools](../release-notes/ece-tools-package.md)的[發行說明。
+  請參閱ECE-Tools[&#128279;](../release-notes/ece-tools-package.md)的發行說明。
 
 - **遵循建置和部署程式**
 
@@ -178,7 +188,7 @@ ht-degree: 0%
 
 - 如果Adobe Commerce為&#x200B;**未安裝**，則會安裝`bin/magento setup:install`、更新部署組態`app/etc/env.php`以及您指定環境的資料庫，例如Redis和網站URL。 **重要：**&#x200B;當您在安裝期間完成[首次部署](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/overview)時，Adobe Commerce已安裝在所有環境中並已部署。
 
-- 如果已安裝Adobe Commerce ****，請執行任何必要的升級。 部署指令碼執行`bin/magento setup:upgrade`以更新資料庫結構描述和資料（在擴充功能或核心程式碼更新後需要），也會更新您環境的部署組態、`app/etc/env.php`和資料庫。 最後，部署指令碼會清除Adobe Commerce快取。
+- 如果已安裝Adobe Commerce **&#x200B;**，請執行任何必要的升級。 部署指令碼執行`bin/magento setup:upgrade`以更新資料庫結構描述和資料（在擴充功能或核心程式碼更新後需要），也會更新您環境的部署組態、`app/etc/env.php`和資料庫。 最後，部署指令碼會清除Adobe Commerce快取。
 
 - 指令碼可選擇使用命令`magento setup:static-content:deploy`產生靜態網頁內容。
 

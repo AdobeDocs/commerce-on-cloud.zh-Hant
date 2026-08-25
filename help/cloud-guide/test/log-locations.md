@@ -4,10 +4,17 @@ description: 瞭解雲端基礎結構中可用的記錄檔型別以及在何處�
 last-substantial-update: 2023-05-23T00:00:00.000Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
 TQID: https://experienceleague.adobe.com/VAsmOv6sBa37A2IAubUnWd4UAMRIuKTNt8JGKNJlrCI
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 1369
@@ -225,7 +232,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-大多數錯誤訊息都包含說明和建議的動作。 使用ECE-Tools](../dev-tools/error-reference.md)的[錯誤訊息參考來查詢錯誤碼，以取得進一步的指引。 如需進一步的指引，請使用[Adobe Commerce部署疑難排解員](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29640)。
+大多數錯誤訊息都包含說明和建議的動作。 使用ECE-Tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考來查詢錯誤碼，以取得進一步的指引。 如需進一步的指引，請使用[Adobe Commerce部署疑難排解員](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29640)。
 
 ## 應用程式記錄
 
@@ -287,7 +294,7 @@ type: warning
 
 >[!TIP]
 >
->縮放架構中的記錄檔位置取決於節點型別。 請參閱縮放架構](../architecture/scaled-architecture.md#log-locations)主題中的[記錄檔位置。
+>縮放架構中的記錄檔位置取決於節點型別。 請參閱縮放架構[&#128279;](../architecture/scaled-architecture.md#log-locations)主題中的記錄檔位置。
 
 ## 記錄Pro生產和測試所需的資料
 
