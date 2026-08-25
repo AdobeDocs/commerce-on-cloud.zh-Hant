@@ -11,9 +11,9 @@ feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: 517
+source-wordcount: 521
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Adobe在雲端基礎結構訂閱上啟用Commerce後，初始專案和程式碼�
 
 ### 共用帳戶存取權
 
-授權擁有者可以設定帳戶的共用存取權。 共用存取可讓信任的員工和服務供應商使用說明中心，提交和追蹤與雲端基礎結構專案中Adobe Commerce相關的支援票證。 如需設定指示，請參閱說明中心的[共用存取](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#shared-access)文章。
+授權擁有者可以設定帳戶的共用存取權。 共用存取可讓信任的員工和服務供應商使用說明中心，提交和追蹤與雲端基礎結構專案中Adobe Commerce相關的支援票證。 如需設定指示，請參閱說明中心的[共用存取](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#shared-access)文章。
 
 ### [!DNL Cloud Console]
 

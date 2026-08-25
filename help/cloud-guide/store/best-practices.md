@@ -15,26 +15,26 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1178
+source-wordcount: 1185
 ht-degree: 0%
 
 ---
 
 # 存放區設定的最佳做法
 
-如需設定商店、網站和網站的詳細資訊，請檢閱[Adobe Commerce使用手冊](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=zh-Hant)。 此頁面提供設定存放區、網站等的最佳實務、實用資訊和准則，以及隨著時間和不同版本張貼的其他內容。
+如需設定商店、網站和網站的詳細資訊，請檢閱[Adobe Commerce使用手冊](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/user-guides/home)。 此頁面提供設定存放區、網站等的最佳實務、實用資訊和准則，以及隨著時間和不同版本張貼的其他內容。
 
 ## 行銷活動和促銷活動
 
 此資訊有助於雲端基礎結構2.1.X和2.2.X上的Adobe Commerce。
 
-若要建立行銷活動和促銷活動，請在[內容測試](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html?lang=zh-Hant)中建立選項和設定。 此功能可讓您在將行銷活動公開給客戶銷售之前，先建立和預覽行銷活動。 下列資訊提供實用資訊。 如需確切的指示，請參閱連結的Adobe Commerce使用手冊內容。
+若要建立行銷活動和促銷活動，請在[內容測試](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/content-design/staging/content-staging)中建立選項和設定。 此功能可讓您在將行銷活動公開給客戶銷售之前，先建立和預覽行銷活動。 下列資訊提供實用資訊。 如需確切的指示，請參閱連結的Adobe Commerce使用手冊內容。
 
 _行銷活動_&#x200B;是季節性銷售、新產品線等行銷活動。 每個行銷活動可包含自訂主題、內容區塊、控制及顯示內容的Widget，以及與價格規則相關聯的行銷活動。 由於行銷活動的廣泛性質，您可以透過「內容分段」以開始和結束日期建立它們。
 
-_促銷活動_&#x200B;提供折扣、單次優惠、優惠券、首次購買獎勵等等。 您建立這些促銷活動作為&#x200B;_價格規則_，設定條件、折扣和選項，以鼓勵客戶購買。 您可以在[購物車](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html?lang=zh-Hant)或[目錄](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html?lang=zh-Hant)上建立價格規則，並提供橫幅、獎勵點數等額外選項。 您可以針對促銷活動排程行銷活動，針對如新產品線或季節性銷售等主要活動套用價格規則。
+_促銷活動_&#x200B;提供折扣、單次優惠、優惠券、首次購買獎勵等等。 您建立這些促銷活動作為&#x200B;_價格規則_，設定條件、折扣和選項，以鼓勵客戶購買。 您可以在[購物車](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart)或[目錄](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog)上建立價格規則，並提供橫幅、獎勵點數等額外選項。 您可以針對促銷活動排程行銷活動，針對如新產品線或季節性銷售等主要活動套用價格規則。
 
 以下是協助建立、更新和管理促銷活動和行銷活動的秘訣：
 
@@ -47,7 +47,7 @@ _促銷活動_&#x200B;提供折扣、單次優惠、優惠券、首次購買獎�
 
 此資訊有助於雲端基礎結構2.1.X和2.2.X上的Adobe Commerce。
 
-一般而言，您可以透過Admin的&#x200B;**Products** > **Catalogs**&#x200B;區域為產品設定[進階價格](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html?lang=zh-Hant)。 使用分階段內容，完成一些額外的步驟，將價格新增至促銷活動和行銷活動。
+一般而言，您可以透過Admin的&#x200B;**Products** > **Catalogs**&#x200B;區域為產品設定[進階價格](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/catalog/products/pricing/pricing-advanced)。 使用分階段內容，完成一些額外的步驟，將價格新增至促銷活動和行銷活動。
 
 若要編輯「進階訂價」與更新「內容暫存」，請執行下列步驟：
 
@@ -60,13 +60,13 @@ _促銷活動_&#x200B;提供折扣、單次優惠、優惠券、首次購買獎�
 1. 儲存促銷活動。 系統會建立非作用中的初始行銷活動。
 1. 您可以預覽以檢閱行銷活動的特殊價格、促銷名稱、一般價格和排程日期範圍。
 
-如需其他步驟，您可以繼續使用[型錄價格規則的排程變更](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html?lang=zh-Hant)的說明。 按一下&#x200B;**下一步**&#x200B;逐步完成這些步驟。
+如需其他步驟，您可以繼續使用[型錄價格規則的排程變更](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes)的說明。 按一下&#x200B;**下一步**&#x200B;逐步完成這些步驟。
 
 ## 價格規則
 
 價格規則可包含邏輯和條件，如同行銷想像力一樣無限制。 熱門範例包括「買一送一」、「買一送一」50%優惠、超過$100美元的訂單有$25美元的折扣等等。
 
-若要建立價格規則，請參閱[Adobe Commerce使用手冊](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html?lang=zh-Hant)。
+若要建立價格規則，請參閱[Adobe Commerce使用手冊](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create)。
 
 以下提供建立「僅限第一筆訂單」折扣的「價格規則」的範例。 針對此折扣，您需要：
 

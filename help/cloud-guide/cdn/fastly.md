@@ -21,9 +21,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: e0e1d3994a6b9ceef9e45b55cc9946bc62203ddb
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1667
+source-wordcount: 1650
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->為維持部署在雲端平台上的Adobe Commerce網站的PCI相容性，請在您的入門主要分支、Pro生產和Pro測試環境中設定Fastly。 如果您在Headless部署中使用Adobe Commerce，強烈建議您使用Fastly來快取GraphQL回應。 請參閱&#x200B;*GraphQL開發人員指南*&#x200B;中的[使用Fastly](https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly)快取。
+>為維持部署在雲端平台上的Adobe Commerce網站的PCI相容性，請在您的入門主要分支、Pro生產和Pro測試環境中設定Fastly。 如果您在Headless部署中使用Adobe Commerce，強烈建議您使用Fastly來快取GraphQL回應。 請參閱&#x200B;*GraphQL開發人員指南*&#x200B;中的[使用Fastly](https://developer.adobe.com/commerce/webapi/graphql/usage/caching#caching-with-fastly)快取。
 
 Fastly提供下列服務，以最佳化並確保Adobe Commerce在雲端基礎結構專案上的內容傳遞作業安全。 這些服務包含在雲端基礎結構的Adobe Commerce中，不需額外付費。
 
@@ -40,25 +40,25 @@ Fastly提供下列服務，以最佳化並確保Adobe Commerce在雲端基礎結
 
 - **快取管理** — 在您設定的後端資料中心快取您的網站頁面、資產、CSS等，以降低頻寬負載和成本
 
-   - 使用[Fastly自訂VCL片段](fastly-vcl-custom-snippets.md) （符合Varnish 2.1）來修改快取回應要求的方式
+  - 使用[Fastly自訂VCL片段](fastly-vcl-custom-snippets.md) （符合Varnish 2.1）來修改快取回應要求的方式
 
-   - 設定[GeoIP服務支援](fastly-custom-cache-configuration.md#configure-geoip-handling)
+  - 設定[GeoIP服務支援](fastly-custom-cache-configuration.md#configure-geoip-handling)
 
-   - [強制未加密的請求傳送至TLS](fastly-custom-cache-configuration.md#force-tls)
+  - [強制未加密的請求傳送至TLS](fastly-custom-cache-configuration.md#force-tls)
 
-   - [自訂Fastly逾時](fastly-custom-cache-configuration.md#extend-fastly-timeout)設定，以防止大量作業請求出現503個回應
+  - [自訂Fastly逾時](fastly-custom-cache-configuration.md#extend-fastly-timeout)設定，以防止大量作業請求出現503個回應
 
-   - 建立[自訂錯誤回應頁面](fastly-custom-response.md)
+  - 建立[自訂錯誤回應頁面](fastly-custom-response.md)
 
 - **安全性** — 在您啟用Adobe Commerce網站的Fastly服務後，可以使用其他安全性功能來保護您的網站和網路：
 
-   - [Web應用程式防火牆](fastly-waf-service.md) (WAF) — 受管理的Web應用程式防火牆服務，可提供PCI相容的保護，在惡意流量可能損害雲端基礎結構網站與網路上的生產Adobe Commerce之前，先封鎖惡意流量。 WAF服務僅適用於Pro和Starter Production環境。
+  - [Web應用程式防火牆](fastly-waf-service.md) (WAF) — 受管理的Web應用程式防火牆服務，可提供PCI相容的保護，在惡意流量可能損害雲端基礎結構網站與網路上的生產Adobe Commerce之前，先封鎖惡意流量。 WAF服務僅適用於Pro和Starter Production環境。
 
-   - [分散式阻斷服務(DDoS)保護](#ddos-protection) — 內建DDoS保護，可抵禦Ping of Death、Smurf攻擊和其他以ICMP為基礎的泛濫攻擊，是常見的第3層和第4層攻擊。 內建的保護功能不包含針對第7層攻擊的保護。 請參閱[DDoS保護](#ddos-protection)。
+  - [分散式阻斷服務(DDoS)保護](#ddos-protection) — 內建DDoS保護，可抵禦Ping of Death、Smurf攻擊和其他以ICMP為基礎的泛濫攻擊，是常見的第3層和第4層攻擊。 內建的保護功能不包含針對第7層攻擊的保護。 請參閱[DDoS保護](#ddos-protection)。
 
-   - [SSL/TLS憑證](fastly-configuration.md#provision-ssltls-certificates)—Fastly服務需要SSL/TLS憑證才能透過HTTPS提供安全流量。
+  - [SSL/TLS憑證](fastly-configuration.md#provision-ssltls-certificates)—Fastly服務需要SSL/TLS憑證才能透過HTTPS提供安全流量。
 
-     Adobe Commerce提供網域驗證讓我們為每個中繼和生產環境加密SSL/TLS憑證。 Adobe Commerce會在Fastly設定過程中完成網域驗證和憑證布建。
+    Adobe Commerce提供網域驗證讓我們為每個中繼和生產環境加密SSL/TLS憑證。 Adobe Commerce會在Fastly設定過程中完成網域驗證和憑證布建。
 
 - **原始遮罩** — 安全性功能，可確保所有流量流經Fastly並封鎖對原始伺服器的直接存取。 請參閱下方的[原始遮罩](#origin-cloaking)區段。
 
@@ -128,7 +128,7 @@ mywebsite.com/rest/default/V1/inventory/source-items
 
 **若要變更Fastly API權杖認證**：
 
-1. [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，要求新的Fastly API認證。
+1. [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，要求新的Fastly API認證。
 
    在雲端基礎結構專案ID和需要新認證的環境上包含您的Adobe Commerce。
 
@@ -176,18 +176,16 @@ Fastly CDN服務內建了DDOS保護。 一旦您為Adobe Commerce網站啟用了
 
 >[!NOTE]
 >
->與Adobe Commerce整合的Fastly CDN服務不包含針對第7層攻擊的保護。 如需防止第7層攻擊的秘訣，請參閱&#x200B;*Adobe Commerce知識庫*&#x200B;中的[檢查DDoS攻擊](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli)和[如何封鎖惡意攻擊](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)。
+>與Adobe Commerce整合的Fastly CDN服務不包含針對第7層攻擊的保護。 如需防止第7層攻擊的秘訣，請參閱&#x200B;*Adobe Commerce知識庫*&#x200B;中的[如何封鎖惡意攻擊](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)。
 
 <!--Link definitions-->
 
-[Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
-
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=zh-Hant
+[Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching#caching-with-fastly
 
 [Magento 2的Fastly CDN模組]: https://github.com/fastly/fastly-magento2
 
 [Fastly支援票證]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=zh-Hant
+[How to block malicious traffic]: https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level
 
 [使用網域]: https://docs.fastly.com/en/guides/working-with-domains

@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 910
+source-wordcount: 915
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ https://www.example.com/blog
       upstream: "mymagento:http"
   ```
 
-- 對於測試和生產環境，請從管理UI啟用[強制Fastly上的TLS](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=zh-Hant)選項。 使用此選項時，Fastly會處理到HTTPS的重新導向，因此您不必更新`routes.yaml`設定。
+- 對於測試和生產環境，請從管理UI啟用[強制Fastly上的TLS](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls)選項。 使用此選項時，Fastly會處理到HTTPS的重新導向，因此您不必更新`routes.yaml`設定。
 
 ## 路由選項
 

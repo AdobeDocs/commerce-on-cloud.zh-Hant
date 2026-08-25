@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 413
+source-wordcount: 414
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ _組建_&#x200B;階段會為組態檔中定義的服務組裝容器、根據`com
 
 ## ![部署階段](../../assets/status-deploy.png)部署階段
 
-_部署_&#x200B;階段會暫時保留傳入的要求，並將網站轉換成[維護模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=zh-Hant)。 部署階段會使用新的容器，掛載檔案系統之後會開啟網路連線、啟用`.magento.app.yaml`檔案的`relationships`區段中定義的服務，以及執行`.magento.app.yaml`檔案中定義的部署掛接。 除了`.magento.app.yaml`檔案中定義的目錄之外，所有專案都是&#x200B;_唯讀_。 依預設，[`mounts`屬性](../application/properties.md#mounts)包含下列目錄：
+_部署_&#x200B;階段會暫時保留傳入的要求，並將網站轉換成[維護模式](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/setup/application-modes)。 部署階段會使用新的容器，掛載檔案系統之後會開啟網路連線、啟用`.magento.app.yaml`檔案的`relationships`區段中定義的服務，以及執行`.magento.app.yaml`檔案中定義的部署掛接。 除了`.magento.app.yaml`檔案中定義的目錄之外，所有專案都是&#x200B;_唯讀_。 依預設，[`mounts`屬性](../application/properties.md#mounts)包含下列目錄：
 
 - `app/etc` — 包含`env.php`與`config.php`組態檔
 - `pub/media` — 包含所有媒體資料，例如產品或類別

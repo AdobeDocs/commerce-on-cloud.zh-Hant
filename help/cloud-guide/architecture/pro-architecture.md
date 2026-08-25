@@ -18,9 +18,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1587
+source-wordcount: 1619
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 若要在整合環境中取得最佳效能，請遵循下列最佳實務：
 
-- 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。請嘗試將目錄大小縮減至約4,000至5,000種產品。
+- 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。 請嘗試將目錄大小縮減至約4,000至5,000種產品。
 若要檢查目錄中的產品數目，請執行下列MySQL查詢：
 
   ```sql
@@ -155,10 +155,10 @@ ht-degree: 0%
 
 - **GlusterFS** — 用來管理所有靜態檔案部署及與四個目錄掛載同步化的檔案伺服器：
 
-   - `var`
-   - `pub/media`
-   - `pub/static`
-   - `app/etc`
+  - `var`
+  - `pub/media`
+  - `pub/static`
+  - `app/etc`
 
 - **Redis** — 每個VM一台伺服器，只有一個作用中，另外兩個做為復本
 
@@ -225,4 +225,4 @@ Pro叢集大小和&#x200B;_計算_&#x200B;設定會依所選的雲端提供者(A
 
 備援架構讓Adobe雲端基礎建設得以升級，無需停機。 升級時，這三個執行個體都會輪換以升級容量，而不會影響網站作業。 例如，如果限制在PHP層級，而不是資料庫層級，則可以將額外的Web伺服器新增到現有的叢集。 這提供&#x200B;_水平縮放_，以補充資料庫層級上額外CPU所提供的垂直縮放。 請參閱[縮放架構](scaled-architecture.md)。
 
-如果您預期因事件或其他原因而導致流量大幅增加，可請求暫時增加容量。 請參閱[如何在&#x200B;_Commerce說明中心_&#x200B;中要求暫時性的大小調整](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=zh-Hant)。
+如果您預期因事件或其他原因而導致流量大幅增加，可請求暫時增加容量。 請參閱[如何在&#x200B;_Commerce說明中心_&#x200B;中要求暫時性的大小調整](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)。

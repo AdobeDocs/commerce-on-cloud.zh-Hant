@@ -11,16 +11,16 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 502
+source-wordcount: 503
 ht-degree: 0%
 
 ---
 
 # 零停機部署
 
-雲端基礎結構上的Adobe Commerce會在部署階段期間以&#x200B;[_維護_&#x200B;模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=zh-Hant#production-mode)執行應用程式，讓您的網站離線，直到部署完成。 您的生產網站處於維護模式的時間長度取決於網站大小、部署期間套用的變更數量，以及靜態內容部署的設定。 您可以設定專案，使其部署時具有&#x200B;**零**&#x200B;停機時間效應。
+雲端基礎結構上的Adobe Commerce會在部署階段期間以&#x200B;[_維護_&#x200B;模式](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/setup/application-modes#production-mode)執行應用程式，讓您的網站離線，直到部署完成。 您的生產網站處於維護模式的時間長度取決於網站大小、部署期間套用的變更數量，以及靜態內容部署的設定。 您可以設定專案，使其部署時具有&#x200B;**零**&#x200B;停機時間效應。
 
 在部署過程中，所有連線都會佇列長達5分鐘，保留任何作用中工作階段和擱置中的動作，例如加入購物車或結帳。 部署後，佇列會釋放，連線會持續進行而不會中斷。 若要使用此&#x200B;_連線保留_&#x200B;以利您並將部署減少到&#x200B;_零_&#x200B;停機時間，您必須設定專案以使用最有效的部署策略。
 

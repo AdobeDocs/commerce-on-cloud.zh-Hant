@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 3631
 ht-degree: 0%
@@ -206,7 +206,7 @@ ht-degree: 0%
 
 發行日期： 2022年10月27日
 
-- ![新圖示](../../assets/new.svg) **已新增Adobe Commerce的Adobe I/O Events支援**。 擴充功能開發人員現在可以使用[Adobe I/O Events](https://developer.adobe.com/events/docs/)架構，將Commerce事件資訊從雲端執行個體傳送至其為[Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)撰寫的應用程式。 適用於Adobe Commerce的Adobe I/O Events在合作夥伴預覽中。<!-- CEXT-932 -->
+- ![新圖示](../../assets/new.svg) **已新增Adobe Commerce的Adobe I/O Events支援**。 擴充功能開發人員現在可以使用[Adobe I/O Events](https://developer.adobe.com/events/docs/)架構，將Commerce事件資訊從雲端執行個體傳送至其為[Adobe App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/)撰寫的應用程式。 適用於Adobe Commerce的Adobe I/O Events在合作夥伴預覽中。<!-- CEXT-932 -->
 - ![新圖示](../../assets/new.svg) **OPcache組態的驗證器** — 新增驗證器以檢查排除路徑的OPcache組態。<!-- MCLOUD-9485 -->
 - ![修正圖示](../../assets/fix.svg) **修正GraphQL快取組態的問題** — 現在ECE-Tools會將GraphQL `id_salt`值保留在`app/etc/env.php`檔案的`cache`組態中。<!-- MCLOUD-9486 -->
 

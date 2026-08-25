@@ -13,9 +13,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 860
+source-wordcount: 862
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 **若要安裝`magento-cloud` CLI**：
 
-1. 在您的&#x200B;_本機工作站_&#x200B;上，變更至您要複製雲端專案的目錄，且[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hant)具有&#x200B;_寫入_&#x200B;存取權。
+1. 在您的&#x200B;_本機工作站_&#x200B;上，變更至您要複製雲端專案的目錄，且[檔案系統擁有者](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)具有&#x200B;_寫入_&#x200B;存取權。
 
 1. 安裝`magento-cloud` CLI。
 
@@ -148,7 +148,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
 
 1. 在本機工作站上，變更至專案目錄。
 
-1. 切換至[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hant)。
+1. 切換至[檔案系統擁有者](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)。
 
 1. 登入您的專案。
 

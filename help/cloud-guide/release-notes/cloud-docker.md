@@ -18,7 +18,7 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 5169e0e93bf44d18ebdce9e0680f80c7cc8be6dc
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 4509
 ht-degree: 0%
@@ -475,7 +475,7 @@ ht-degree: 0%
 
   - ![新圖示](../../assets/new.svg) **已新增服務組態選項，以將資料庫連線埠公開給主機** — 在建置`docker-compose.yml`檔案時，請使用`--expose-db-port= [Fix submitted by Adarsh Manickam from Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/101).<PORT>`選項將資料庫連線埠公開給主機： `bin/ece-docker build:compose --expose-db-port=<PORT>`<!--MAGECLOUD-4454-->
 
-  - ![新圖示](../../assets/new.svg) **新的部署後命令** — 之前，在您使用`cloud-deploy`命令將Adobe Commerce部署到Cloud Docker容器後，`.magento.app.yaml`檔案中定義的部署後掛接會自動執行。 現在，您必須發出單獨的`cloud-post-deploy`命令，才能在您部署後執行部署後掛接。 檢視[開發人員](https://developer.adobe.com/commerce/cloud-tools/docker/deploy)和[生產](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode)模式的更新啟動指示。<!--MAGECLOUD-3996-->
+  - ![新圖示](../../assets/new.svg) **新的部署後命令** — 之前，在您使用`cloud-deploy`命令將Adobe Commerce部署到Cloud Docker容器後，`.magento.app.yaml`檔案中定義的部署後掛接會自動執行。 現在，您必須發出單獨的`cloud-post-deploy`命令，才能在您部署後執行部署後掛接。 檢視[開發人員](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/)和[生產](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode)模式的更新啟動指示。<!--MAGECLOUD-3996-->
 
   - ![新圖示](../../assets/new.svg)已將`--rm`選項新增至組建和部署容器的`./bin/magento-docker`命令。 這會在工作完成後移除容器。<!--MAGECLOUD-4205-->
 

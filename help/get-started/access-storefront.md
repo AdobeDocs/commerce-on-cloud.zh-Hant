@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: 362
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果密碼重設失敗或您無法登入「管理員」面板，具有管理員存取許可權的使用者可以使用SSH連線至專案，並使用`admin:user:create` CLI命令新增管理員使用者。 請參閱&#x200B;_安裝指南_&#x200B;中的[建立、編輯或解除鎖定系統管理員帳戶](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=zh-Hant)。
+>如果密碼重設失敗或您無法登入「管理員」面板，具有管理員存取許可權的使用者可以使用SSH連線至專案，並使用`admin:user:create` CLI命令新增管理員使用者。 請參閱&#x200B;_安裝指南_&#x200B;中的[建立、編輯或解除鎖定系統管理員帳戶](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/tutorials/admin)。
 
 ## 監視網站健康狀況
 

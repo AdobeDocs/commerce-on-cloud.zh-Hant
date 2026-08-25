@@ -2,7 +2,8 @@
 title: 檢查雲端基礎結構上Adobe Commerce的磁碟空間限制
 description: 瞭解如何使用Cloud Console在雲端基礎結構專案上檢查Adobe Commerce的可用磁碟空間。
 feature: REST
-source-git-commit: f8fafa7a3660b9c3661a54ef76a4e013a50d71e9
+exl-id: 2c83f469-ca45-4ba8-a2c3-5ca1e633c16d
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
@@ -20,5 +21,4 @@ ht-degree: 0%
 
 ## 相關閱讀
 
-[在開發人員檔案中管理磁碟空間](https://experienceleague.adobe.com/zh-hant/docs/commerce-cloud-service/user-guide/develop/storage/manage-disk-space?lang=en)。
-
+[在開發人員檔案中管理磁碟空間](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space?lang=en)。

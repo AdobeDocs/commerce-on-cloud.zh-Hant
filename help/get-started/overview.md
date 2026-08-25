@@ -9,9 +9,9 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: 172
+source-wordcount: 173
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 - [Adobe Commerce開發人員檔案](https://developer.adobe.com/commerce/docs/) （Adobe Developer網站） — 開發、自訂、整合、擴充及使用進階功能
 
-- [Adobe Commerce檔案](https://experienceleague.adobe.com/docs/commerce.html?lang=zh-Hant) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的Commerce專案
+- [Adobe Commerce檔案](https://experienceleague.adobe.com/zh-hant/docs/commerce) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的Commerce專案
 
 >[!TIP]
 >

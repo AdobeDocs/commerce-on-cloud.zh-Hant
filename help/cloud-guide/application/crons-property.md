@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1172
+source-wordcount: 1190
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 0%
 
 Adobe Commerce使用`crons`屬性來排程重複活動。 它非常適合用於排程在一天中的特定時間執行的特定工作。 由於唯讀環境的性質，在雲端基礎結構專案的Adobe Commerce的Web執行個體上一次只能執行一個cron工作。 最佳實務是將長期執行的工作分解為較小的已排入佇列的工作。 或者，您也可以建置[背景工作執行個體](workers-property.md)。
 
-Adobe建議您以[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hant)身分執行`crons`。 請&#x200B;_不要_&#x200B;以`root`或網頁伺服器使用者的身分執行`crons`。
+Adobe建議您以[檔案系統擁有者](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)身分執行`crons`。 請&#x200B;_不要_&#x200B;以`root`或網頁伺服器使用者的身分執行`crons`。
 
-此設定不同於Adobe Commerce的內部部署，後者有多個預設的cron工作。 請參閱&#x200B;_設定指南_&#x200B;中的[設定cron工作](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=zh-Hant)。
+此設定不同於Adobe Commerce的內部部署，後者有多個預設的cron工作。 請參閱&#x200B;_設定指南_&#x200B;中的[設定cron工作](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs)。
 
 ## 設定cron工作
 
@@ -66,7 +66,7 @@ Adobe Commerce僅將auto-crons設定選項新增至Pro專案，以支援中繼�
 
    >[!NOTE]
    >
-   >如果`crontab -l`命令傳回`Command not found`錯誤（僅適用於Pro測試和生產環境），您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以在您的專案上啟用auto-crons自助設定選項。
+   >如果`crontab -l`命令傳回`Command not found`錯誤（僅適用於Pro測試和生產環境），您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以在您的專案上啟用auto-crons自助設定選項。
 
 下列範例顯示僅具有預設`crons`組態之環境的`crontab`輸出：
 
@@ -97,8 +97,8 @@ Adobe Commerce對`crons`規格（規格）使用五值運算式： `* * * * *`
 
 部分範例：
 
-- `00 */3 * * *`會在第一分鐘（上午12:00、上午3:00、上午6:00）每三小時執行一次
-- `20 */8 * * *`在分鐘20 （上午12:20、上午8:20、下午4:20）每8小時執行一次
+- `00 */3 * * *`會在第一分鐘（上午12:00、凌晨3:00、早上6:00）每三小時執行一次
+- `20 */8 * * *`在分鐘20每8小時執行一次（上午12:20、上午8:20、下午4:20）
 - `00 00 * * *`每天午夜執行一次
 - `00 * * * 1`在星期一的午夜每週執行一次。
 
@@ -134,7 +134,7 @@ crons:
 >
 >對於入門環境和Pro `integration`環境，最小間隔為每5分鐘一次。 對於Pro測試和生產環境，最小間隔為每分鐘一次。 您無法設定比預設最小值更頻繁的間隔。
 
-在Adobe Commerce Pro專案上，您必須先在您的專案上啟用[自動程式碼功能](#set-up-cron-jobs)，才能使用`.magento.app.yaml`檔案將自訂cron工作新增到中繼和生產環境。 如果未啟用此功能，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以啟用自動確認。
+在Adobe Commerce Pro專案上，您必須先在您的專案上啟用[自動程式碼功能](#set-up-cron-jobs)，才能使用`.magento.app.yaml`檔案將自訂cron工作新增到中繼和生產環境。 如果未啟用此功能，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以啟用自動確認。
 
 **若要新增自訂cron工作**：
 
@@ -208,7 +208,7 @@ Adobe已更新雲端基礎結構上的Adobe Commerce套件，以最佳化雲端�
 
 請參閱下列Adobe Commerce支援文章，以取得疑難排解cron相關問題的說明：
 
-- [Cron任務會鎖定來自其他群組的任務](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups.html?lang=zh-Hant)
+- [Cron任務會鎖定來自其他群組的任務](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups)
 
-- [在雲端上手動重設停滯的cron工作](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud.html?lang=zh-Hant)
+- [在雲端上手動重設停滯的cron工作](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud)
 

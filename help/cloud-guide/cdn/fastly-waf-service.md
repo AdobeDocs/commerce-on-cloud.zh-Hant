@@ -21,9 +21,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 987
+source-wordcount: 990
 ht-degree: 0%
 
 ---
@@ -38,9 +38,9 @@ WAF服務提供下列優點：
 - **預設WAF原則** — 由Fastly設定和維護的預設WAF原則，提供量身打造的安全性規則集合，可保護您的Adobe Commerce Web應用程式免受各種攻擊，包括插入攻擊、惡意輸入、跨網站指令碼、資料匯出、HTTP通訊協定違規，以及其他[OWASP十大](https://owasp.org/www-project-top-ten/)安全性威脅。
 - **WAF上線和啟用** — 布建完成後的2至3週內，Adobe會在您的生產環境中部署並啟用預設WAF原則。
 - **操作與維護支援**—
-   - Adobe和Fastly會設定及管理WAF服務的記錄、規則和警示。
-   - Adobe會分類與WAF服務問題相關的客戶支援票證，這些服務問題會將合法流量封鎖為優先順序1問題。
-   - 自動升級至WAF服務版本，確保可立即涵蓋新的或不斷演變的利用漏洞行為。 請參閱[WAF維護與升級](#waf-maintenance-and-updates)。
+  - Adobe和Fastly會設定及管理WAF服務的記錄、規則和警示。
+  - Adobe會分類與WAF服務問題相關的客戶支援票證，這些服務問題會將合法流量封鎖為優先順序1問題。
+  - 自動升級至WAF服務版本，確保可立即涵蓋新的或不斷演變的利用漏洞行為。 請參閱[WAF維護與升級](#waf-maintenance-and-updates)。
 
 >[!TIP]
 >
@@ -68,7 +68,7 @@ WAF服務啟用時，會根據WAF規則檢查所有網頁和管理員流量，�
 
 您可以從管理員自訂此錯誤回應頁面。 請參閱[自訂WAF回應頁面](fastly-custom-response.md#customize-the-waf-error-page)。
 
-如果您的Adobe Commerce管理頁面或店面傳回`403 Forbidden`錯誤頁面以回應合法的URL請求，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)。 從錯誤回應頁面複製參考ID，並將其貼到票證說明中。
+如果您的Adobe Commerce管理頁面或店面傳回`403 Forbidden`錯誤頁面以回應合法的URL請求，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)。 從錯誤回應頁面複製參考ID，並將其貼到票證說明中。
 
 若要使用New Relic識別特定請求的WAF回應，請參閱下列內容：
 
@@ -90,7 +90,7 @@ Adobe和Fastly管理更新流程，以確保新的或修改的WAF規則在您的
 由Fastly支援的標準WAF服務不支援下列功能：
 
 - 防止惡意程式碼或機器人降低 — 請考慮使用[存取控制清單](./fastly-vcl-allowlist.md)或協力廠商服務。
-- 速率限制 — 請參閱Fastly檔案中的[速率限制](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)，或參閱&#x200B;_Commerce Web API_&#x200B;安全性章節中的[速率限制](https://developer.adobe.com/commerce/webapi/get-started/rate-limiting/)。
+- 速率限制 — 請參閱Fastly檔案中的[速率限制](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)，或參閱&#x200B;_Commerce Web API_&#x200B;安全性章節中的[速率限制](https://developer.adobe.com/commerce/webapi/get-started/rate-limiting)。
 - 正在設定客戶的記錄端點 — 請參閱[PrivateLink服務](../development/privatelink-service.md)作為替代方法。
 
 WAF服務可讓您根據IP位址封鎖或允許流量。 您可以將存取控制清單(ACL)和自訂VCL片段新增到Fastly服務中，以指定用於封鎖或允許流量的IP位址和VCL邏輯。 請參閱[自訂Fastly VCL片段](fastly-vcl-custom-snippets.md)。

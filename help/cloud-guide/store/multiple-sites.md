@@ -12,9 +12,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1094
+source-wordcount: 1105
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->若要將商店檢視新增至網站基底URL，您不必建立多個目錄。 請參閱&#x200B;_組態指南_&#x200B;中的[將存放區程式碼新增至基底URL](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=zh-Hant)。
+>若要將商店檢視新增至網站基底URL，您不必建立多個目錄。 請參閱&#x200B;_組態指南_&#x200B;中的[將存放區程式碼新增至基底URL](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/multi-sites/ms-admin)。
 
 ## 新增網域
 
@@ -55,15 +55,15 @@ https://store.com/second/
 
 - 適用於Pro測試與生產
 
-  將新網域新增到Fastly，請參閱[管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或開啟支援票證以請求協助。 此外，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，才能要求將新網域新增至叢集。
+  將新網域新增到Fastly，請參閱[管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或開啟支援票證以請求協助。 此外，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，才能要求將新網域新增至叢集。
 
 - 僅供入門級生產使用
 
-  新增網域至Fastly，請參閱[管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以要求協助。 此外，您必須新增網域至[!DNL Cloud Console]中的&#x200B;**網域**&#x200B;索引標籤： `https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  新增網域至Fastly，請參閱[管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以要求協助。 此外，您必須新增網域至[!DNL Cloud Console]中的&#x200B;**網域**&#x200B;索引標籤： `https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## 設定本機安裝
 
-若要設定本機安裝以使用多個商店，請參閱&#x200B;_設定指南_&#x200B;中的[多個網站或商店](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=zh-Hant)。
+若要設定本機安裝以使用多個商店，請參閱&#x200B;_設定指南_&#x200B;中的[多個網站或商店](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/multi-sites/ms-overview)。
 
 成功建立並測試本機安裝以使用多個存放區後，您必須準備整合環境：
 
@@ -222,7 +222,7 @@ https://store.com/second/
 
 ### 設定網站、商店和商店檢視
 
-在&#x200B;_管理UI_&#x200B;中，設定您的Adobe Commerce **網站**、**商店**&#x200B;和&#x200B;**商店檢視**。 請參閱&#x200B;_設定指南_&#x200B;的Admin[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=zh-Hant)中的設定多個網站、商店和商店檢視。
+在&#x200B;_管理UI_&#x200B;中，設定您的Adobe Commerce **網站**、**商店**&#x200B;和&#x200B;**商店檢視**。 請參閱&#x200B;_設定指南_&#x200B;的Admin[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/multi-sites/ms-admin)中的設定多個網站、商店和商店檢視。
 
 當您設定本機安裝時，請務必使用管理員提供的相同名稱和程式碼，代表您的網站、商店和商店檢視。 更新`magento-vars.php`檔案時需要這些值。
 
@@ -278,8 +278,8 @@ https://store.com/second/
    - `example.com` — 使用您&#x200B;_網站_&#x200B;的基本URL
    - `default` — 具有您&#x200B;_網站_&#x200B;或&#x200B;_商店檢視_&#x200B;的唯一代碼
    - `store` — 使用下列其中一個值：
-      - `website` — 載入店面中的&#x200B;_網站_
-      - `store` — 在店面中載入&#x200B;_商店檢視_
+     - `website` — 載入店面中的&#x200B;_網站_
+     - `store` — 在店面中載入&#x200B;_商店檢視_
 
    針對使用唯一網域的多個網站：
 

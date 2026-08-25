@@ -13,16 +13,16 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 631
+source-wordcount: 632
 ht-degree: 0%
 
 ---
 
 # 設定[!DNL ActiveMQ]服務
 
-[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=zh-Hant)是Adobe Commerce中的系統，可讓[模組](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/glossary#module)將訊息發佈至佇列。 它也會定義非同步接收訊息的消費者。
+[Message Queue Framework (MQF)](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework)是Adobe Commerce中的系統，可讓[模組](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/glossary#module)將訊息發佈至佇列。 它也會定義非同步接收訊息的消費者。
 
 MQF可以使用[ActiveMQ Artemis](https://activemq.apache.org/components/artemis/)做為傳訊代理人，提供可擴充的平台來傳送及接收訊息。 它也包括儲存未傳遞訊息的機制。 [!DNL ActiveMQ Artemis]支援訊息的STOMP （串流文字導向訊息通訊協定）通訊協定。
 

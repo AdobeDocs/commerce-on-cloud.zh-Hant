@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 131
+source-wordcount: 135
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在更新生產環境之前，請務必在中繼環境中測試變更。 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，以取得更新這些環境設定的協助。
+>在更新生產環境之前，請務必在中繼環境中測試變更。 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，以取得更新這些環境設定的協助。
 
 1. 在`.magento.app.yaml`檔案的[`web`屬性](web-property.md)中指定TTL時間（秒）。 您可以在`locations`底下或在`"/media"`與`"/static"`底下新增`expires`金鑰。
 

@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: de2e5072775d032d46f91394ed870768271fa9a1
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 849
+source-wordcount: 857
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ disk: 5120
 
 >[!NOTE]
 >
->對於Pro測試和生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以更新應用程式的`mounts`和`disk`設定。 當您提交票證時，請指出必要的組態變更，並包含更新版本的`.magento.app.yaml`檔案。
+>對於Pro測試和生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以更新應用程式的`mounts`和`disk`設定。 當您提交票證時，請指出必要的組態變更，並包含更新版本的`.magento.app.yaml`檔案。
 >
 >暫時無法在預備或生產環境中增加磁碟儲存空間；此程式無法還原。
 
@@ -198,7 +198,7 @@ mounts:
 
 >[!NOTE]
 >
->對於Pro測試和生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以更新應用程式的`mounts`和`disk`設定。 當您提交票證時，請指出必要的組態變更，並包含更新版本的`.magento.app.yaml`檔案。
+>對於Pro測試和生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以更新應用程式的`mounts`和`disk`設定。 當您提交票證時，請指出必要的組態變更，並包含更新版本的`.magento.app.yaml`檔案。
 
 您可以將掛載網頁新增至位置的[`web`](web-property.md)區塊，使其可供存取。
 

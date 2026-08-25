@@ -15,9 +15,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 2168
+source-wordcount: 2170
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 
 若要協助將生產資料匯出為測試資料，以用於中繼和整合環境：
 
-- [使用您的Adobe Commerce加密金鑰匯出客戶和存放區資料的受保護備份時，執行支援公用程式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=zh-Hant) CLI命令（建議）
+- [使用您的Adobe Commerce加密金鑰匯出客戶和存放區資料的受保護備份時，執行支援公用程式](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/cli/run-support-utilities) CLI命令（建議）
 
 - 用於產生及匯出資料的[資料彙集](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/tools/support#data-collector)工具
 
@@ -185,7 +185,7 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 
 >[!NOTE]
 >
->將資料推送至另一個環境之前，您應該考慮清除資料。 您有幾個選項，包括[使用支援公用程式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=zh-Hant)或開發指令碼以清除客戶資料。
+>將資料推送至另一個環境之前，您應該考慮清除資料。 您有幾個選項，包括[使用支援公用程式](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/cli/run-support-utilities)或開發指令碼以清除客戶資料。
 
 >[!WARNING]
 >

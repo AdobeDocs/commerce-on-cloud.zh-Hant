@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 705
+source-wordcount: 706
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->對於雲端基礎結構專案上的Adobe Commerce，在`routes.yaml`檔案中設定許多非規則運算式重新導向和重新寫入，可能會導致效能問題。 如果`routes.yaml`檔案大於或等於32 KB，請將非規則運算式重新導向解除安裝並重新寫入Fastly。 檢視&#x200B;_Adobe Commerce說明中心_&#x200B;中的[解除安裝非Regex重新導向至Fastly而非Nginx （路由）](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html?lang=zh-Hant)。
+>對於雲端基礎結構專案上的Adobe Commerce，在`routes.yaml`檔案中設定許多非規則運算式重新導向和重新寫入，可能會導致效能問題。 如果`routes.yaml`檔案大於或等於32 KB，請將非規則運算式重新導向解除安裝並重新寫入Fastly。 檢視&#x200B;_Adobe Commerce說明中心_&#x200B;中的[解除安裝非Regex重新導向至Fastly而非Nginx （路由）](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes)。
 
 ## 整個路由重新導向
 

@@ -17,9 +17,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1638
+source-wordcount: 1642
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 您的帳戶支援有限數量的![使用中分支](../../assets/icon-active.png){width="32"} （使用中）以及無限數量的![非使用中分支](../../assets/icon-inactive.png){width="32"} （非使用中）開發分支。 僅使用[!DNL Cloud Console]或雲端CLI新增或刪除分支，以管理作用中或非作用中分支。 刪除分支之前，請先停用該分支，它仍保留在&#x200B;_環境_&#x200B;清單中，做為&#x200B;_非使用中_。 您可以稍後重新啟用分支，或是在環境設定或使用Cloud CLI中[刪除分支](../dev-tools/cloud-cli-overview.md#)。
 
-如果您需要其他使用中的環境進行開發，請提交[支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)。
+如果您需要其他使用中的環境進行開發，請提交[支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
 
 **若要新增分支**：
 

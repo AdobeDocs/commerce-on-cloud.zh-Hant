@@ -17,9 +17,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 last-update: 2026-08-14
-source-git-commit: 95e742c5e1fcdc3f95457a70527a41a5b5a3b677
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 323
+source-wordcount: 324
 ht-degree: 3%
 
 ---
@@ -74,7 +74,7 @@ Commerce雲端基礎結構指南假設您具備一些關於Adobe Commerce應用�
 
 - [Adobe Commerce開發人員檔案](https://developer.adobe.com/commerce/docs/) （Adobe Developer網站） — 開發、自訂、整合、擴充及使用進階功能
 
-- [Adobe Commerce檔案](https://experienceleague.adobe.com/docs/commerce.html?lang=zh-Hant) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的[!DNL Commerce]專案
+- [Adobe Commerce檔案](https://experienceleague.adobe.com/zh-hant/docs/commerce) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的[!DNL Commerce]專案
 
 {{$include /help/_includes/templated/whats-new.md}}
 

@@ -17,9 +17,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1080
+source-wordcount: 1084
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->雲端專案預設不會啟用MFA。 雲端基礎結構專案上Adobe Commerce的帳戶擁有者必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)才能啟用它。 啟用MFA時，所有使用者必須在雲端基礎結構帳戶上的Adobe Commerce上啟用雙因素驗證(TFA)，才能以ssh存取專案環境。
+>雲端專案預設不會啟用MFA。 雲端基礎結構專案上Adobe Commerce的帳戶擁有者必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)才能啟用它。 啟用MFA時，所有使用者必須在雲端基礎結構帳戶上的Adobe Commerce上啟用雙因素驗證(TFA)，才能以ssh存取專案環境。
 
 ## SSH存取的憑證
 

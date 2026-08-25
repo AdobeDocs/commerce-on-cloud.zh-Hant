@@ -6,9 +6,9 @@ breadcrumb-title: 雲端上的Commerce
 user-guide-description: 了解如何在雲端基礎結構上管理 Adobe Commerce 應用程式。
 product: magento
 feature: Cloud
-source-git-commit: de2e5072775d032d46f91394ed870768271fa9a1
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '390'
 ht-degree: 8%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 8%
   + [專業工作流程](architecture/pro-develop-deploy-workflow.md)
   + [擴充架構](architecture/scaled-architecture.md)
   + [自動縮放](architecture/autoscaling.md)
-+ [開始使用](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=zh-Hant)
++ [開始使用](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/start/overview)
 + 發行說明 {#release-notes}
   + [雲端工具套裝](release-notes/cloud-tools-suite.md)
   + [ECE-Tools套件](release-notes/ece-tools-package.md)

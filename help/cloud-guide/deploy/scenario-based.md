@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 874
+source-wordcount: 884
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ hooks:
 
 >[!NOTE]
 >
->隨著`ece-tools` 2002.1.x的發行，有新的[鉤點組態](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=zh-Hant)格式。 仍支援`ece-tools` 2002.0.x版的舊版格式。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。
+>隨著`ece-tools` 2002.1.x的發行，有新的[鉤點組態](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)格式。 仍支援`ece-tools` 2002.0.x版的舊版格式。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。
 
 ## 檢閱案例步驟
 
@@ -92,9 +92,9 @@ hooks:
 
   在此範例中，案例的優先順序如下：
 
-   1. `vendor/vendor-name/module-name/deploy2.xml`
-   1. `vendor/vendor-name/module-name/deploy.xml`
-   1. `scenario/deploy.xml` （預設或基準案例）
+  1. `vendor/vendor-name/module-name/deploy2.xml`
+  1. `vendor/vendor-name/module-name/deploy.xml`
+  1. `scenario/deploy.xml` （預設或基準案例）
 
 - 最高優先順序案例中的步驟會覆寫其他案例中具有相同名稱的步驟。 新步驟將新增至設定。 相同的規則適用於兩個以上的情境，每個情境都會從右到左排序，例如(C → B → A)。
 

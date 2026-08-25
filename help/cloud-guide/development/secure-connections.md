@@ -14,9 +14,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1071
+source-wordcount: 1079
 ht-degree: 0%
 
 ---
@@ -164,10 +164,10 @@ Secure Shell (SSH)是用來安全登入遠端伺服器和系統的常見通訊�
 
 針對&#x200B;**入門環境和Pro整合環境**，您可能也會考慮[新增`mount`](../application/properties.md#mounts)以存取特定目錄。 您會將掛載新增至`.magento.app.yaml`檔案。 如需可寫入目錄的清單，請參閱[專案結構](../project/file-structure.md)。 此掛接點僅適用於這些環境。
 
-針對&#x200B;**Pro測試和生產環境**，如果您沒有環境的SSH存取權，則必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，以要求sFTP存取權和特定資料夾（例如`pub/media`）的存取權掛載點。
+針對&#x200B;**Pro測試和生產環境**，如果您沒有環境的SSH存取權，則必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，以要求sFTP存取權和特定資料夾（例如`pub/media`）的存取權掛載點。
 
 >[!NOTE]
->對於Pro測試和生產，如果sFTP連線是針對執行&#x200B;**不**&#x200B;的&#x200B;_一般_&#x200B;使用者，則需要[將其新增至雲端專案](../project/user-access.md)，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，並附加其&#x200B;**公開**&#x200B;金鑰。 **絕不提供您的私人SSH金鑰。**
+>對於Pro測試和生產，如果sFTP連線是針對執行&#x200B;**不**&#x200B;的&#x200B;_一般_&#x200B;使用者，則需要[將其新增至雲端專案](../project/user-access.md)，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，並附加其&#x200B;**公開**&#x200B;金鑰。 **絕不提供您的私人SSH金鑰。**
 
 ## SSH通道
 

@@ -21,9 +21,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 405
+source-wordcount: 413
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 1. [**雲端基礎結構**](pro-architecture.md)：在雲端基礎結構Pro專案上，選擇Amazon Web Services (AWS)或Microsoft Azure作為您Adobe Commerce的基礎結構(IaaS)基礎。
 
-   Adobe會定期分析您的虛擬運算資源(vCPU)使用量，並自動配置資源以最佳化您的長期使用量，並降低超出年度vCPU日允許量上限的風險。 如果您預期特定期間的網站流量會增加，您必須繼續開啟支援票證，以[要求暫時升級](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=zh-Hant)。
+   Adobe會定期分析您的虛擬運算資源(vCPU)使用量，並自動配置資源以最佳化您的長期使用量，並降低超出年度vCPU日允許量上限的風險。 如果您預期特定期間的網站流量會增加，您必須繼續開啟支援票證，以[要求暫時升級](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)。
 
 1. [**Platform as a Service**](cloud-architecture.md)：雲端基礎結構專案上的每個Adobe Commerce都提供Platform as a Service (PaaS)整合環境，用於開發、測試和整合服務。
 1. [**Adobe Commerce**](../project/overview.md)：雲端基礎結構上的Adobe Commerce提供預先布建的基礎結構，其中包括PHP、MySQL (MariaDB)、Redis、訊息佇列服務（[!DNL RabbitMQ]或[!DNL ActiveMQ]），以及支援的搜尋引擎技術。

@@ -3,9 +3,9 @@ title: Adobe Commerce進階安全性
 description: 瞭解進階安全性如何在雲端基礎結構上的Adobe Commerce中新增機器人管理、進階速率限制和第7層DDoS保護。
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 0b3ef117f85c990c2a01ecb655c930b8c4f61acb
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2482'
 ht-degree: 0%
 
 ---
@@ -254,7 +254,7 @@ CDN記錄檔包含來自Signal Sciences （機器人保護/新一代WAF）的內
 
 1. 請聯絡您的Adobe客戶團隊或Adobe銷售代表，討論您專案的[!DNL Advanced Security]。
 
-1. 購買[!DNL Advanced Security]後，[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)，要求[!DNL Advanced Security]啟用。 包含您的[!DNL Adobe Commerce on Cloud Infrastructure]專案ID和需要啟用的環境（例如，生產和測試）。
+1. 購買[!DNL Advanced Security]後，[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，要求[!DNL Advanced Security]啟用。 包含您的[!DNL Adobe Commerce on Cloud Infrastructure]專案ID和需要啟用的環境（例如，生產和測試）。
 
 1. Adobe會在您的Fastly服務上啟用[!DNL Advanced Security]並設定初始保護原則。 啟用通常會在票證提交後的幾個工作日內完成。
 
@@ -262,7 +262,7 @@ CDN記錄檔包含來自Signal Sciences （機器人保護/新一代WAF）的內
 
 >[!NOTE]
 >
->對[!DNL Advanced Security]的組態變更目前需要[提交支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)。 計畫在未來版本中透過管理員UI進行自助設定。
+>對[!DNL Advanced Security]的組態變更目前需要[提交支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 計畫在未來版本中透過管理員UI進行自助設定。
 
 ## 限制
 

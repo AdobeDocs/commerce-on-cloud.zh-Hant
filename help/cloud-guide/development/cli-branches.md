@@ -12,9 +12,9 @@ feature_v2:
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 688
+source-wordcount: 689
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 **若要複製專案`master`環境**：
 
-1. 使用[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hant)帳戶登入您的本機工作站。
+1. 使用[檔案系統擁有者](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)帳戶登入您的本機工作站。
 
 1. 變更至網頁伺服器或虛擬主機&#x200B;_docroot_&#x200B;目錄。
 

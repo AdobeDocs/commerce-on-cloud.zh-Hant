@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 873
+source-wordcount: 874
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ Edge ACL會建立IP位址清單，用於管理對您網站的存取。 在此範
 }
 ```
 
-在此範例中[建立自訂程式碼片段](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=zh-Hant#add-the-custom-vcl-snippet)之前，請檢閱值以判斷是否需要進行任何變更。 然後在個別欄位中輸入每個值，例如，在[型別]欄位中輸入`type`，在[內容]欄位中輸入`content`。
+在此範例中[建立自訂程式碼片段](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist#add-the-custom-vcl-snippet)之前，請檢閱值以判斷是否需要進行任何變更。 然後在個別欄位中輸入每個值，例如，在[型別]欄位中輸入`type`，在[內容]欄位中輸入`content`。
 
 - `name` — VCL程式碼片段名稱。 在此範例中，`allowlist`。
 

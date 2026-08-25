@@ -15,9 +15,9 @@ topic_v2:
   - id: beb7a3c1-66ab-4786-b879-7621375b3c40
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1702
+source-wordcount: 1713
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ SendGrid SMTP Proxy並非旨在作為一般用途電子郵件伺服器來接收�
 
 依預設，在Pro生產和中繼環境中會啟用外寄電子郵件。 不過，在您透過[命令列](outgoing-emails.md#enable-emails-in-the-cli)或[雲端主控台](outgoing-emails.md#enable-emails-in-the-cloud-console)設定`enable_smtp`屬性之前，[!UICONTROL Outgoing emails]可能在環境設定中顯示為停用。 您可以為整合和中繼環境啟用傳出電子郵件，以傳送雙因素驗證或為雲端專案使用者重設密碼電子郵件。 請參閱[設定電子郵件以進行測試](outgoing-emails.md)。
 
-如果外寄電子郵件必須在Pro生產或測試環境中停用或重新啟用，您可以提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)。
+如果外寄電子郵件必須在Pro生產或測試環境中停用或重新啟用，您可以提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)。
 
 >[!TIP]
 >
@@ -54,7 +54,7 @@ SendGrid SMTP Proxy並非旨在作為一般用途電子郵件伺服器來接收�
 
 所有雲端專案都可在中央帳戶下管理，因此只有「支援人員」可以存取SendGrid儀表板。 SendGrid不提供附屬帳戶限制功能。
 
-若要檢閱活動記錄檔的傳遞狀態或已退回、已拒絕或已封鎖電子郵件地址的清單，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)。 支援團隊&#x200B;**無法**&#x200B;擷取超過30天的活動記錄。
+若要檢閱活動記錄檔的傳遞狀態或已退回、已拒絕或已封鎖電子郵件地址的清單，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 支援團隊&#x200B;**無法**&#x200B;擷取超過30天的活動記錄。
 
 可能的話，請在請求中加入下列資訊：
 
@@ -68,7 +68,7 @@ SendGrid SMTP Proxy並非旨在作為一般用途電子郵件伺服器來接收�
 >
 >如果您使用自己的SendGrid帳戶，您將不再透過Adobe獲得SendGrid支援。
 >
->若要啟用您專屬的SendGrid服務或更新現有的API金鑰，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)，並包含您SendGrid帳戶的API金鑰。
+>若要啟用您專屬的SendGrid服務或更新現有的API金鑰，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，並包含您SendGrid帳戶的API金鑰。
 
 ## 網域金鑰識別郵件(DKIM)
 
@@ -92,7 +92,7 @@ DKIM是一種電子郵件驗證技術，可讓網際網路服務提供者(ISP)�
 
 **若要啟用網域驗證**：
 
-1. 提交[支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)以請求為特定網域啟用DKIM （**僅限Pro測試和生產環境**）。
+1. 提交[支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以請求為特定網域啟用DKIM （**僅限Pro測試和生產環境**）。
 1. 使用在支援票證中提供給您的`TXT`和`CNAME`記錄更新您的DNS設定。
 
 **帳戶識別碼為**&#x200B;的範例`TXT`記錄：
@@ -143,7 +143,7 @@ dig CNAME s2._domainkey.domain_name
 
 交易式電子郵件臨界值是指在特定時段內您可從Pro環境傳送的交易式電子郵件訊息數量，例如每月從非生產環境傳送12,000封電子郵件。 此臨界值旨在防止傳送垃圾郵件，並防止可能對您的電子郵件信譽造成損害。
 
-只要寄件者信譽分數超過95%，生產環境中可傳送的電子郵件數量就沒有嚴格限制。 信譽受退回或拒絕的電子郵件數量以及基於DNS的垃圾郵件註冊是否將您的網域標籤為潛在垃圾郵件來源的影響。 檢視&#x200B;_Commerce支援知識庫_&#x200B;中Adobe Commerce[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded)超過SendGrid信用額時未傳送的電子郵件。
+只要寄件者信譽分數超過95%，生產環境中可傳送的電子郵件數量就沒有嚴格限制。 信譽受退回或拒絕的電子郵件數量以及基於DNS的垃圾郵件註冊是否將您的網域標籤為潛在垃圾郵件來源的影響。 檢視&#x200B;_Commerce支援知識庫_&#x200B;中Adobe Commerce[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-25701)超過SendGrid信用額時未傳送的電子郵件。
 
 **若要檢查是否已超過最大積分**：
 
@@ -157,7 +157,7 @@ dig CNAME s2._domainkey.domain_name
 
 1. 檢查`/var/log/mail.log`中是否有`authentication failed : Maxium credits exceeded`個專案。
 
-   如果您看到任何`authentication failed`個記錄專案，且&#x200B;**電子郵件傳送信譽**&#x200B;至少為95，您可以[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)以要求增加信用配額。
+   如果您看到任何`authentication failed`個記錄專案，且&#x200B;**電子郵件傳送信譽**&#x200B;至少為95，您可以[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以要求增加信用配額。
 
 >[!NOTE]
 >
@@ -173,6 +173,6 @@ dig CNAME s2._domainkey.domain_name
 
 若要防止電子郵件從一開始就傳送到垃圾郵件資料夾，請遵循Sendgrid的最佳實務文章，[為什麼我的電子郵件會傳送至垃圾郵件？](https://sendgrid.com/en-us/blog/10-tips-to-keep-email-out-of-the-spam-folder)。
 
-如果某些收件者沒有收到您的電子郵件，您可以[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)以要求檢閱隱藏清單，並視需要移除收件者。
+如果某些收件者沒有收到您的電子郵件，您可以[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以要求檢閱隱藏清單，並視需要移除收件者。
 
 如需詳細資訊，請參閱[什麼是隱藏清單？](https://sendgrid.com/en-us/blog/what-is-a-suppression-list)
