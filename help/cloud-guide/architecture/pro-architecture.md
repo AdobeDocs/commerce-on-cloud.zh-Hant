@@ -5,22 +5,14 @@ feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
 TQID: https://experienceleague.adobe.com/Es-cmVlUrzd4xMf9unOJD-Z-h0OvL-ycoullKVO-yRA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
-  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1587
+source-wordcount: 1619
 ht-degree: 0%
 
 ---
@@ -80,7 +72,7 @@ ht-degree: 0%
 
 若要在整合環境中取得最佳效能，請遵循下列最佳實務：
 
-- 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。請嘗試將目錄大小縮減至約4,000至5,000種產品。
+- 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。 請嘗試將目錄大小縮減至約4,000至5,000種產品。
 若要檢查目錄中的產品數目，請執行下列MySQL查詢：
 
   ```sql
@@ -155,10 +147,10 @@ ht-degree: 0%
 
 - **GlusterFS** — 用來管理所有靜態檔案部署及與四個目錄掛載同步化的檔案伺服器：
 
-   - `var`
-   - `pub/media`
-   - `pub/static`
-   - `app/etc`
+  - `var`
+  - `pub/media`
+  - `pub/static`
+  - `app/etc`
 
 - **Redis** — 每個VM一台伺服器，只有一個作用中，另外兩個做為復本
 
@@ -191,7 +183,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->掛接的磁碟區僅包含/參考[可寫入的掛接](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)，不會包含所有`app/`目錄。 至於其他檔案，它們是由[建置和部署程式](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)所建立/產生，您也必須檢查Git存放庫中的剩餘檔案。
+>掛接的磁碟區僅包含/參考[可寫入的掛接](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)，不會包含所有`app/`目錄。 至於其他檔案，它們是由[建置和部署程式](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)所建立/產生，您也必須檢查Git存放庫中的剩餘檔案。
 
 {{pro-backups}}
 
@@ -225,4 +217,4 @@ Pro叢集大小和&#x200B;_計算_&#x200B;設定會依所選的雲端提供者(A
 
 備援架構讓Adobe雲端基礎建設得以升級，無需停機。 升級時，這三個執行個體都會輪換以升級容量，而不會影響網站作業。 例如，如果限制在PHP層級，而不是資料庫層級，則可以將額外的Web伺服器新增到現有的叢集。 這提供&#x200B;_水平縮放_，以補充資料庫層級上額外CPU所提供的垂直縮放。 請參閱[縮放架構](scaled-architecture.md)。
 
-如果您預期因事件或其他原因而導致流量大幅增加，可請求暫時增加容量。 請參閱[如何在&#x200B;_Commerce說明中心_&#x200B;中要求暫時性的大小調整](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=zh-Hant)。
+如果您預期因事件或其他原因而導致流量大幅增加，可請求暫時增加容量。 請參閱[如何在&#x200B;_Commerce說明中心_&#x200B;中要求暫時性的大小調整](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)。

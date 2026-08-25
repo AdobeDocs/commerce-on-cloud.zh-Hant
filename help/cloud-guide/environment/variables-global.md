@@ -6,19 +6,13 @@ recommendations: noDisplay, catalog
 role: Developer
 exl-id: 1f1ef6db-6836-4f71-b1e4-3629352d7e74
 TQID: https://experienceleague.adobe.com/2aBPh7We4-KqoUVDfd4B-ZNWoaUVO-3mWVbqErdgyoQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 774
+source-wordcount: 775
 ht-degree: 0%
 
 ---
@@ -65,7 +59,7 @@ stage:
 - **預設**-_未設定_
 - **版本**—Adobe Commerce 2.4.4和更新版本
 
-設定為`true`時，啟用Commerce Webhook。 webhook會在外部端點上執行，例如App Builder執行階段動作或第三方清查管理系統。 [_Webhooks指南_](https://developer.adobe.com/commerce/extensibility/webhooks)詳細說明此功能。
+設定為`true`時，啟用Commerce Webhook。 webhook會在外部端點上執行，例如App Builder執行階段動作或第三方清查管理系統。 [_Webhooks指南_](https://developer.adobe.com/commerce/extensibility/webhooks/)詳細說明此功能。
 
 ```yaml
 stage:
@@ -167,8 +161,8 @@ stage:
 ## `SKIP_HTML_MINIFICATION`
 
 - **預設**：
-   - `true` — 適用於`ece-tools` 2002.0.13和更新版本
-   - `false` — 適用於舊版`ece-tools`
+  - `true` — 適用於`ece-tools` 2002.0.13和更新版本
+  - `false` — 適用於舊版`ece-tools`
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
 啟用或停用在建置階段結束時複製靜態檢視檔案至`<magento_root>/init/`目錄。 如果設為`true`，將不會複製檔案，而且可依請求使用HTML縮制。 將此值設為`true`可減少部署至中繼和生產環境時的停機時間。
@@ -189,7 +183,7 @@ stage:
 - **預設**—_未設定_
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-使用`X_FRAME_CONFIGURATION`變數來變更Adobe Commerce網站的[`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html?lang=zh-Hant)標頭設定。 此設定控制瀏覽器如何呈現`<frame>`、`<iframe>`或`<object>`中的頁面。 使用下列其中一個選項：
+使用`X_FRAME_CONFIGURATION`變數來變更Adobe Commerce網站的[`X-Frame-Options`](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/security/xframe-options)標頭設定。 此設定控制瀏覽器如何呈現`<frame>`、`<iframe>`或`<object>`中的頁面。 使用下列其中一個選項：
 
 - `DENY` — 頁面無法顯示在框架中。
 - `SAMEORIGIN` — （預設Adobe Commerce設定。） 頁面只能在與頁面本身相同原點的框架中顯示。

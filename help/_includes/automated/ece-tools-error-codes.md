@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7f2934af84c947046fed3a32c3b6e2937aed418a
+source-git-commit: 5fefabb5795e68abd467a7115bc2a6e554e0d832
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2714'
 ht-degree: 4%
 
 ---
@@ -53,22 +53,22 @@ ht-degree: 4%
 | 104 |  | 無法剖析`.magento.env.yaml`檔案 | 未在`./vendor/magento/ece-tools/config/schema.yaml`檔案中定義設定。 檢查設定變數名稱是否正確，以及是否已定義。 |
 | 105 |  | 無法讀取`.magento.env.yaml`檔案 | 無法讀取`./.magento.env.yaml`檔案。 檢查檔案許可權。 |
 | 106 |  | 無法讀取`.schema.yaml`檔案 |  |
-| 107 | 預先部署： clean-redis-cache | 無法清除Redis快取 | 無法清除Redis快取。 檢查Redis快取設定是否正確，以及Redis服務是否可用。 請參閱[安裝Redis服務](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/redis.html?lang=zh-Hant)。 |
-| 140 | 預先部署： clean-valkey-cache | 無法清除Valkey快取 | 無法清除Valkey快取。 檢查Valkey快取設定是否正確，以及Valkey服務是否可用。 請參閱[Setup Valkey服務](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/valkey.html?lang=zh-Hant)。 |
+| 107 | 預先部署： clean-redis-cache | 無法清除Redis快取 | 無法清除Redis快取。 檢查Redis快取設定是否正確，以及Redis服務是否可用。 請參閱[安裝Redis服務](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/redis)。 |
+| 140 | 預先部署： clean-valkey-cache | 無法清除Valkey快取 | 無法清除Valkey快取。 檢查Valkey快取設定是否正確，以及Valkey服務是否可用。 請參閱[Setup Valkey服務](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey)。 |
 | 108 | 預先部署：set-production-mode | 命令`/bin/magento maintenance:enable`失敗 | 如需詳細資訊，請檢視`cloud.log`。 如需更詳細的命令輸出，請將`VERBOSE_COMMANDS: '-vvv'`選項新增至`.magento.env.yaml`檔案。 |
 | 109 | validate-config | 不正確的資料庫設定 | 檢查`DATABASE_CONFIGURATION`環境變數是否已正確設定。 |
 | 110 | validate-config | 不正確的工作階段設定 | 檢查`SESSION_CONFIGURATION`環境變數是否已正確設定。 組態至少必須包含`save`引數。 |
 | 111 | validate-config | 不正確的搜尋設定 | 檢查`SEARCH_CONFIGURATION`環境變數是否已正確設定。 組態至少必須包含`engine`引數。 |
 | 112 | validate-config | 資源設定不正確 | 檢查`RESOURCE_CONFIGURATION`環境變數是否已正確設定。 組態必須包含至少`connection`個引數。 |
-| 113 | validate-config：elasticsuite-integrity | ElasticSuite已安裝，但Elasticsearch服務無法使用 | 檢查`SEARCH_CONFIGURATION`環境變數是否已正確設定，並驗證Elasticsearch服務是否可用。 |
-| 114 | validate-config：elasticsuite-integrity | ElasticSuite已安裝，但使用的是其他搜尋引擎 | ElasticSuite已安裝，但已設定其他搜尋引擎。 更新`SEARCH_CONFIGURATION`環境變數以啟用Elasticsearch，並在`services.yaml`檔案中驗證Elasticsearch服務設定。 |
+| 113 | validate-config:elasticsuite-integrity | ElasticSuite已安裝，但Elasticsearch服務無法使用 | 檢查`SEARCH_CONFIGURATION`環境變數是否已正確設定，並驗證Elasticsearch服務是否可用。 |
+| 114 | validate-config:elasticsuite-integrity | ElasticSuite已安裝，但使用的是其他搜尋引擎 | ElasticSuite已安裝，但已設定其他搜尋引擎。 更新`SEARCH_CONFIGURATION`環境變數以啟用Elasticsearch，並在`services.yaml`檔案中驗證Elasticsearch服務設定。 |
 | 115 |  | 資料庫查詢執行失敗 |  |
 | 116 | install-update： setup | 命令`/bin/magento setup:install`失敗 | 如需詳細資訊，請檢視`cloud.log`和`install_upgrade.log`。 如需更詳細的命令輸出，請將`VERBOSE_COMMANDS: '-vvv'`選項新增至`.magento.env.yaml`檔案。 |
 | 117 | install-update： config-import | 命令`app:config:import`失敗 | 如需詳細資訊，請檢視`cloud.log`。 如需更詳細的命令輸出，請將`VERBOSE_COMMANDS: '-vvv'`選項新增至`.magento.env.yaml`檔案。 |
 | 118 |  | 找不到必要的公用程式（逾時、bash） |  |
 | 119 | install-update： deploy-static-content | 命令`/bin/magento setup:static-content:deploy`失敗 | 如需詳細資訊，請檢視`cloud.log`。 如需更詳細的命令輸出，請將`VERBOSE_COMMANDS: '-vvv'`選項新增至`.magento.env.yaml`檔案。 |
 | 120 | compress-static-content | 靜態內容壓縮失敗 | 如需詳細資訊，請檢視`cloud.log`。 |
-| 121 | deploy-static-content：generate | 無法更新已部署的版本 | 無法更新`./pub/static/deployed_version.txt`檔案。 檢查您的檔案系統許可權。 |
+| 121 | deploy-static-content:generate | 無法更新已部署的版本 | 無法更新`./pub/static/deployed_version.txt`檔案。 檢查您的檔案系統許可權。 |
 | 122 | clean-static-content | 無法清除靜態內容檔案 |  |
 | 123 | install-update： split-db | 命令`/bin/magento setup:db-schema:split`失敗 | 如需詳細資訊，請檢視`cloud.log`。 如需更詳細的命令輸出，請將`VERBOSE_COMMANDS: '-vvv'`選項新增至`.magento.env.yaml`檔案。 |
 | 124 | clean-view-preprocessed | 無法清除`var/view_preprocessed`資料夾 | 無法清除`./var/view_preprocessed`資料夾。 檢查您的檔案系統許可權。 |
@@ -78,7 +78,7 @@ ht-degree: 4%
 | 128 | disable-maintenance-mode | 命令`/bin/magento maintenance:disable`失敗 | 如需詳細資訊，請檢視`cloud.log`。 將`VERBOSE_COMMANDS: '-vvv'`新增至`.magento.env.yaml`，以取得更詳細的命令輸出。 |
 | 129 | install-update： reset-password | 無法讀取重設密碼範本 |  |
 | 130 | install-update： cache_type | 命令失敗： `php ./bin/magento cache:enable` | 命令`php ./bin/magento cache:enable`只有在安裝Adobe Commerce時執行，但在部署開始時有`./app/etc/env.php`檔案不存在或空白。 如需詳細資訊，請檢視`cloud.log`。 將`VERBOSE_COMMANDS: '-vvv'`新增至`.magento.env.yaml`，以取得更詳細的命令輸出。 |
-| 131 | install-update | `crypt/key`機碼值不存在於`./app/etc/env.php`檔案或`CRYPT_KEY`雲端環境變數中 | 如果Adobe Commerce部署開始時`./app/etc/env.php`檔案不存在，或未定義`crypt/key`值，便會發生此錯誤。 如果您從其他環境移轉資料庫，請擷取該環境的加密金鑰值。 然後，將值新增至您目前環境中的[CRYPT_KEY](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hant#crypt_key)雲端環境變數。 請參閱[Adobe Commerce加密金鑰](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/overview.html?lang=zh-Hant#gather-credentials)。 如果您不小心移除了`./app/etc/env.php`檔案，請使用下列命令，從先前部署建立的備份檔案還原檔案： `./vendor/bin/ece-tools backup:restore` CLI命令。」 |
+| 131 | install-update | `crypt/key`機碼值不存在於`./app/etc/env.php`檔案或`CRYPT_KEY`雲端環境變數中 | 如果Adobe Commerce部署開始時`./app/etc/env.php`檔案不存在，或未定義`crypt/key`值，便會發生此錯誤。 如果您從其他環境移轉資料庫，請擷取該環境的加密金鑰值。 然後，將值新增至您目前環境中的[CRYPT_KEY](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#crypt_key)雲端環境變數。 請參閱[Adobe Commerce加密金鑰](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/overview#gather-credentials)。 如果您不小心移除了`./app/etc/env.php`檔案，請使用下列命令，從先前部署建立的備份檔案還原檔案： `./vendor/bin/ece-tools backup:restore` CLI命令。」 |
 | 132 |  | 無法連線到Elasticsearch服務 | 檢查有效的Elasticsearch憑證，並確認服務執行中 |
 | 137 |  | 無法連線到OpenSearch服務 | 檢查有效的OpenSearch認證，並確認服務執行中 |
 | 133 | validate-config | 移除Magento Braintree模組設定，Adobe Commerce或Magento Open Source 2.4及更新版本已不再支援此設定。 | Adobe Commerce或Braintree 2.4.0和更新版本不再支援Magento Open Source模組。 從`.magento.app.yaml`檔案的變數區段中移除CONFIG__STORES__DEFAULT__PAYMENT__BRAINTREE__CHANNEL變數。 如需Braintree支援，請改用Commerce Marketplace的官方Braintree支付擴充功能。 |
@@ -124,7 +124,7 @@ ht-degree: 4%
 | 錯誤碼 | 建置步驟 | 錯誤說明（標題） | 建議的動作 |
 | - | - | - | - |
 | 1001 | validate-config | 檔案app/etc/config.php不存在 |  |
-| 1002 | validate-config | 「 」。不再支援/build_options.ini檔案 |  |
+| 1002 | validate-config | 不再支援./build_options.ini檔案 |  |
 | 1003 | validate-config | 共用設定檔案中缺少模組區段 |  |
 | 1004 | validate-config | 此設定與此版本的Magento不相容 |  |
 | 1005 | validate-config | 已忽略SCD選項 |  |
@@ -135,11 +135,11 @@ ht-degree: 4%
 
 | 錯誤碼 | 部署步驟 | 錯誤說明（標題） | 建議的動作 |
 | - | - | - | - |
-| 2001 | 預先部署：快取 | 快取設定用於無法使用的Redis服務。 已忽略設定。 |  |
-| 2032 | 預先部署：快取 | 快取已針對無法使用的Valkey服務進行設定。 已忽略設定。 |  |
+| 2001 | 預先部署:cache | 快取設定用於無法使用的Redis服務。 已忽略設定。 |  |
+| 2032 | 預先部署:cache | 快取已針對無法使用的Valkey服務進行設定。 已忽略設定。 |  |
 | 2002 | validate-config | 設定的狀態不理想 |  |
 | 2003 | validate-config | 尚未設定錯誤報告的目錄巢狀層級值 |  |
-| 2004 | validate-config | 中的設定無效。/pub/errors/local.xml檔案。 |  |
+| 2004 | validate-config | ./pub/errors/local.xml檔案中的設定無效。 |  |
 | 2005 | validate-config | 管理資料僅在初始安裝期間用於建立管理使用者。 在升級程式期間，將忽略對管理員資料所做的任何變更。 | 初始安裝後，您可以從設定中移除管理員資料。 |
 | 2006 | validate-config | 未建立管理員使用者，因為未設定管理員電子郵件 | 安裝後，您可以手動建立管理員使用者：使用ssh連線至您的環境。 然後，執行`bin/magento admin:user:create`命令。 |
 | 2007 | validate-config | 將php版本更新至建議的版本 |  |
@@ -157,13 +157,13 @@ ht-degree: 4%
 | 2019 | validate-config | MySQL搜尋組態選項已過時 | 請改用Elasticsearch。 |
 | 2029 | validate-config | Adobe Commerce和Magento Open Source 2.4.2已棄用分割資料庫，2.5將移除這些資料庫。 | 如果您使用分割資料庫，您應該開始計畫回覆或移轉至單一資料庫，或使用替代方法。 |
 | 2020 | install-update | Adobe Commerce安裝完成，但`app/etc/env.php`設定檔遺失或空白。 | 必要的資料會從環境設定和.magento.env.yaml檔案中還原。 |
-| 2021 | install-update：db-connection | 用於使用自訂連線的分割資料庫 |  |
-| 2022 | install-update：db-connection | 您已經變更為與從屬連線不相容的資料庫設定。 |  |
-| 2023 | install-update：split-db | 會略過啟用分割資料庫。 |  |
-| 2024 | install-update：split-db | SPLIT_DB變數缺少分割連線對型別的組態。 |  |
-| 2025 | install-update：split-db | 未設定從屬連線。 |  |
-| 2026 | 預先部署：restore-writable-dirs | 無法將建置階段期間產生的部分資料還原至掛載的目錄 | 如需詳細資訊，請檢視`cloud.log`。 |
-| 2027 | validate-config：mage-mode-variable | 不支援MAGE_MODE環境變數的模式值 | 移除MAGE_MODE環境變數，或將其值變更為「生產」。 雲端基礎結構上的Adobe Commerce僅支援「生產」模式。 |
+| 2021 | install-update:db-connection | 用於使用自訂連線的分割資料庫 |  |
+| 2022 | install-update:db-connection | 您已經變更為與從屬連線不相容的資料庫設定。 |  |
+| 2023 | install-update:split-db | 會略過啟用分割資料庫。 |  |
+| 2024 | install-update:split-db | SPLIT_DB變數缺少分割連線對型別的組態。 |  |
+| 2025 | install-update:split-db | 未設定從屬連線。 |  |
+| 2026 | 預先部署:restore-writable-dirs | 無法將建置階段期間產生的部分資料還原至掛載的目錄 | 如需詳細資訊，請檢視`cloud.log`。 |
+| 2027 | validate-config:mage-mode-variable | 不支援MAGE_MODE環境變數的模式值 | 移除MAGE_MODE環境變數，或將其值變更為「生產」。 雲端基礎結構上的Adobe Commerce僅支援「生產」模式。 |
 | 2028 | 遠端儲存 | 無法啟用遠端儲存。 | 驗證遠端儲存憑證。 |
 | 2030 | validate-config | Elasticsearch和OpenSearch服務都安裝在基礎建設層。 Adobe Commerce和Magento Open Source 2.4.4及更新版本預設使用OpenSearch | 請考慮從基礎結構層移除Elasticsearch或OpenSearch服務，以最佳化資源使用。 |
 

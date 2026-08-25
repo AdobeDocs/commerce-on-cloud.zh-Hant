@@ -4,18 +4,13 @@ description: 瞭解如何在雲端基礎結構專案上管理Adobe Commerce的�
 feature: Cloud, Routes
 exl-id: f70a9035-bbae-4d23-bb7c-c0de6a7ccf6c
 TQID: https://experienceleague.adobe.com/53acuGMa93oysIKX-agqJCttbxCdIFgyRpmeZh-G9gI
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 705
+source-wordcount: 706
 ht-degree: 0%
 
 ---
@@ -34,7 +29,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->對於雲端基礎結構專案上的Adobe Commerce，在`routes.yaml`檔案中設定許多非規則運算式重新導向和重新寫入，可能會導致效能問題。 如果`routes.yaml`檔案大於或等於32 KB，請將非規則運算式重新導向解除安裝並重新寫入Fastly。 檢視&#x200B;_Adobe Commerce說明中心_&#x200B;中的[解除安裝非Regex重新導向至Fastly而非Nginx （路由）](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html?lang=zh-Hant)。
+>對於雲端基礎結構專案上的Adobe Commerce，在`routes.yaml`檔案中設定許多非規則運算式重新導向和重新寫入，可能會導致效能問題。 如果`routes.yaml`檔案大於或等於32 KB，請將非規則運算式重新導向解除安裝並重新寫入Fastly。 檢視&#x200B;_Adobe Commerce說明中心_&#x200B;中的[解除安裝非Regex重新導向至Fastly而非Nginx （路由）](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes)。
 
 ## 整個路由重新導向
 

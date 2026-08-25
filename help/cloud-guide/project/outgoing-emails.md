@@ -3,16 +3,12 @@ title: 設定傳出電子郵件
 description: 瞭解如何在雲端基礎結構上為Adobe Commerce啟用傳出電子郵件。
 exl-id: 616e287b-960a-4933-916e-37896ee6b533
 TQID: https://experienceleague.adobe.com/qTZHcNU58ZVNRE9FgaIdcVsRg6--ae6dL-hKCjpUt3w
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 402
+source-wordcount: 405
 ht-degree: 0%
 
 ---
@@ -35,7 +31,7 @@ ht-degree: 0%
 
 在&#x200B;_設定環境_&#x200B;檢視中使用&#x200B;**[!UICONTROL Outgoing emails]**&#x200B;切換來啟用或停用電子郵件支援。
 
-如果外寄電子郵件必須在Pro生產或測試環境中停用或重新啟用，您可以提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)。
+如果外寄電子郵件必須在Pro生產或測試環境中停用或重新啟用，您可以提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)。
 
 >[!TIP]
 >

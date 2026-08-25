@@ -4,16 +4,12 @@ description: 瞭解如何設定雲端基礎結構環境，以支援部署和管�
 feature: Cloud, Configuration, Services, Iaas, Paas
 exl-id: 305380b0-1920-4037-a1db-80e72c6af333
 TQID: https://experienceleague.adobe.com/mFjzrTN6R7LC3e9ADnzzulcWAwun4k-g3aCjc9Bo3gQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 280
+source-wordcount: 284
 ht-degree: 0%
 
 ---
@@ -36,7 +32,7 @@ ht-degree: 0%
 
 ## Pro環境的設定更新
 
-對於雲端基礎結構專業測試和生產環境上的Adobe Commerce，您可以更新本機開發環境中的許多設定選項，並提交變更以將其套用至這些環境。 不過，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hant#submit-ticket)以更新下列組態選項：
+對於雲端基礎結構專業測試和生產環境上的Adobe Commerce，您可以更新本機開發環境中的許多設定選項，並提交變更以將其套用至這些環境。 不過，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以更新下列組態選項：
 
 - 在`.magento/services.yaml`檔案中安裝或更新服務。
 - 變更`.magento.app.yaml`檔案中`mounts`和`disk`屬性的組態。

@@ -5,9 +5,9 @@ user-guide-description: 在雲端基礎結構中開始您對 [!DNL Commerce] 應
 feature: Cloud
 product: magento
 recommendations: noDisplay, noCatalog
-source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '53'
 ht-degree: 0%
 
 ---
@@ -21,4 +21,4 @@ ht-degree: 0%
 + [登入 [!DNL Cloud Console]](cloud-console.md)
 + [存取店面](access-storefront.md)
 + [準備開發](prepare-workspace.md)
-+ [返回雲端基礎結構指南](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=zh-Hant)
++ [返回雲端基礎結構指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)

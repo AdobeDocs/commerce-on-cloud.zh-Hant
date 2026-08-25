@@ -1,8 +1,8 @@
 ---
-source-git-commit: 305df8acb8c41369b34e2c20d9c7df6824222931
+source-git-commit: eab32e2f5155e3aa6c0924fa332cbef6e4dc502d
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 1%
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 # 投稿
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 ## 行為準則
 
-此專案遵守 Adobe [行為準則](code-of-conduct.md)。透過參與，
+此專案遵守Adobe [行為準則](code-of-conduct.md)。 透過參與，
 您應遵守此准則。 如發現不良行為，請向
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com)。
 
 ## 投稿人指南檔案
 
-請參閱[貢獻者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hant)。
+請參閱[貢獻者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
 
 ## 有疑問嗎？
 
@@ -55,11 +55,11 @@ ht-degree: 1%
 
 ## 安全性問題
 
-不應在此問題追蹤器上回報安全性問題。 請改為[向我們的安全性專家提出問題](https://helpx.adobe.com/tw/security/alertus.html)
+不應在此問題追蹤器上回報安全性問題。 請改為[向我們的安全性專家提出問題](https://helpx.adobe.com/security/alertus.html)
 
 ## 最新資訊
 
-如果您的變更引進新主題、重大更新或需要強調的更正，您可以從提取要求內文直接在[新增功能區段](https://experienceleague.adobe.com/zh-hant/docs/commerce-cloud-service/user-guide/overview#whats-new)新增簡短說明。
+如果您的變更引進新主題、重大更新或需要強調的更正，您可以從提取要求內文直接在[新增功能區段](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview#whats-new)新增簡短說明。
 
 新增「新增功能」反白顯示：
 
@@ -67,29 +67,29 @@ ht-degree: 1%
 
    ```text
    whatsnew
-   Short description of the change in the [target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/target-topic.html).
+   Short description of the change in the [target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/target-topic.html).
    ```
 
    或者，如果有多個主題：
 
    ```text
    whatsnew
-   Short description of the changes in the [first target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/target-topic.html), [second target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-target-topic.html), and [third target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/third-target-topic.html).
+   Short description of the changes in the [first target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/target-topic.html), [second target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-target-topic.html), and [third target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/third-target-topic.html).
    ```
 
    您也可以將清單用於多個反白專案：
 
    ```text
    whatsnew
-   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/first-topic.html).
-   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-topic.html).
+   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/first-topic.html).
+   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-topic.html).
    ```
 
    ```text
    whatsnew
    The following changes were made to the documentation:
-   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/first-topic.html).
-   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-topic.html).
+   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/first-topic.html).
+   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-topic.html).
    ```
 
 1. 新增支援的標籤，以指出變更型別。 支援的標籤包括每種變更型別的標籤，例如：
@@ -103,4 +103,4 @@ ht-degree: 1%
 1. `whatsnew`部分必須從`whatsnew`標籤開始，並且位於提取請求主體的結尾。
 1. 變更的說明必須包含工作連結。 請確定連結正確且指向預期的主題。 如果是新主題，請在合併提取請求並發佈新主題後，確認連結運作正常。 可以在提取請求合併後修正連結。
 
-例如，搜尋存放庫中的已關閉提取要求，瞭解現有醒目提示的格式設定，並與[新增功能區段](https://experienceleague.adobe.com/zh-hant/docs/commerce-cloud-service/user-guide/overview#whats-new)進行比較，瞭解它們在檔案中的顯示方式。
+例如，搜尋存放庫中的已關閉提取要求，瞭解現有醒目提示的格式設定，並與[新增功能區段](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview#whats-new)進行比較，瞭解它們在檔案中的顯示方式。

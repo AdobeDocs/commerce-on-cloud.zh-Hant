@@ -4,35 +4,28 @@ description: 瞭解如何在雲端基礎結構環境中升級Adobe Commerce版�
 feature: Cloud, Upgrade
 exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
 TQID: https://experienceleague.adobe.com/XCHw9c0bX8UE8LLmFOYjMFRLTaIk8sT57dESptRTUXs
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1020
+source-wordcount: 1024
 ht-degree: 0%
 
 ---
 
 # 升級Commerce版本
 
-您可以將Adobe Commerce程式碼基底升級至較新版本。 升級環境之前，請檢閱&#x200B;_安裝_&#x200B;指南中的[系統需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hant)，以取得最新的軟體版本需求。
+您可以將Adobe Commerce程式碼基底升級至較新版本。 升級環境之前，請檢閱&#x200B;_安裝_&#x200B;指南中的[系統需求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)，以取得最新的軟體版本需求。
 
 根據環境型別（開發、測試或生產），您的升級任務可能包括以下內容：
 
 - 將協力廠商擴充功能升級至最新支援的版本。
 - 對於Pro專案，您必須提交Adobe Commerce支援票證，才能在中繼和生產環境中安裝或更新服務。
 - 對於開發/整合/PR分支：
-   - 使用MariaDB (MySQL)、OpenSearch、RabbitMQ和Redis的新版本更新`.magento/services.yaml`檔案，以相容於新的Adobe Commerce版本。
-   - 以掛接和環境變數的新設定更新`.magento.app.yaml`檔案。
+  - 使用MariaDB (MySQL)、OpenSearch、RabbitMQ和Redis的新版本更新`.magento/services.yaml`檔案，以相容於新的Adobe Commerce版本。
+  - 以掛接和環境變數的新設定更新`.magento.app.yaml`檔案。
 
 {{upgrade-tip}}
 
@@ -142,7 +135,7 @@ ht-degree: 0%
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. 如果您使用B2B，請以Commerce的[支援版本](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/release/product-availability#adobe-authored-extensions)更新您的`composer.json`檔案。
+1. 如果您使用B2B，請以Commerce的[支援版本](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions)更新您的`composer.json`檔案。
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -156,15 +149,15 @@ ht-degree: 0%
 
 1. 檢閱目前套用的修正程式：
 
-   - 如果`m2-hotfixes`目錄中有安裝任何修補程式，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)，並與Adobe Commerce支援人員合作，確認哪些修補程式仍可套用至新版本。 從`m2-hotfixes`目錄移除不適用的修補程式。
+   - 如果`m2-hotfixes`目錄中有安裝任何修補程式，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)，並與Adobe Commerce支援人員合作，確認哪些修補程式仍可套用至新版本。 從`m2-hotfixes`目錄移除不適用的修補程式。
 
    - 如果`.magento.env.yaml`檔案中套用了任何[品質修補程式]，請確認它們是否仍可套用至新版本。 從`.magento.env.yaml`檔案的`QUALITY_PATCHES`區段中移除不適用的修補程式。
 
-   **方法1**： [驗證Quality Patches發行說明中的適用版本](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **方法1**： [驗證Quality Patches發行說明中的適用版本](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **方法2**： [檢視可用的修補程式和狀態](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **方法2**： [檢視可用的修補程式和狀態](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法3**： [搜尋修補程式](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hant)
+   **方法3**： [搜尋修補程式](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
 
 
 1. 新增、提交和推送程式碼變更。

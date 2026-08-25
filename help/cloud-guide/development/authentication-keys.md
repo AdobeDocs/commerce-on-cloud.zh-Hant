@@ -5,19 +5,13 @@ feature: Cloud, Security
 topic: Security
 exl-id: b5a24fcd-9b43-4ec9-8a0c-52956a74e45e
 TQID: https://experienceleague.adobe.com/nYBr0uvw1SZPSQqAU6uHTiitjZ0kcudsLdWagiWRLP8
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 318
+source-wordcount: 319
 ht-degree: 0%
 
 ---
@@ -26,7 +20,7 @@ ht-degree: 0%
 
 您必須擁有驗證金鑰才能存取Adobe Commerce存放庫，並在雲端基礎結構專案上為Adobe Commerce啟用安裝和更新命令。 指定Composer授權認證有兩個方法。
 
-- **驗證檔案** — 在雲端基礎結構根目錄上的Adobe Commerce中，包含您的Adobe Commerce [授權認證](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=zh-Hant)的檔案。
+- **驗證檔案** — 在雲端基礎結構根目錄上的Adobe Commerce中，包含您的Adobe Commerce [授權認證](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/authentication-keys)的檔案。
 - **環境變數** — 一個環境變數，可在Adobe Commerce雲端基礎結構專案中設定驗證金鑰，以防止意外曝光。
 
 >[!BEGINSHADEBOX]
@@ -69,7 +63,7 @@ Adobe建議將[環境變數](#composer-auth-environment-variable)方法與您的
 
 **若要使用環境變數**&#x200B;新增驗證金鑰：
 
-1. 在&#x200B;_[!DNL Cloud Console]_&#x200B;中，按一下專案導覽右側的設定圖示。
+1. 在&#x200B;_[!DNL Cloud Console]_中，按一下專案導覽右側的設定圖示。
 
    ![設定專案](../../assets/icon-configure.png){width="36"}
 

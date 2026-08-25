@@ -6,14 +6,10 @@ feature: Cloud, Integration
 last-substantial-update: 2024-02-06T00:00:00.000Z
 exl-id: 97c5f70d-1465-46c9-bb33-98897262c5ef
 TQID: https://experienceleague.adobe.com/07ozUcb8SWNcyRzgxClhaG5S-cOHqywkYWfke1rJB1g
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: c32adafa-ed01-4b31-997e-2413013911b0
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c32adafa-ed01-4b31-997e-2413013911b0id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 574
 ht-degree: 0%
@@ -74,7 +70,7 @@ magento-cloud integration:list
 
 ## Commerce webhook
 
-您可以使用[ENABLE_WEBHOOKS全域變數](../environment/variables-global.md#enable_webhooks)在雲端專案中設定Commerce Webhooks。 Commerce webhook會傳送請求至外部伺服器，以回應Commerce產生的事件。 [_Webhooks指南_](https://developer.adobe.com/commerce/extensibility/webhooks)詳細說明此功能。
+您可以使用[ENABLE_WEBHOOKS全域變數](../environment/variables-global.md#enable_webhooks)在雲端專案中設定Commerce Webhooks。 Commerce webhook會傳送請求至外部伺服器，以回應Commerce產生的事件。 [_Webhooks指南_](https://developer.adobe.com/commerce/extensibility/webhooks/)詳細說明此功能。
 
 ## 通用Webhook
 

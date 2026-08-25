@@ -5,17 +5,12 @@ feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
 exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
 TQID: https://experienceleague.adobe.com/ekS7f5swOsG2xgXP6ybN6hzwYm2xBbPWvl5oabv7Crc
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 822
+source-wordcount: 823
 ht-degree: 0%
 
 ---
@@ -67,7 +62,7 @@ ht-degree: 0%
 
 ## 雲端修補程式變更
 
-- **移除已下載的修補程式**- `magento/magento-cloud-patches`套件會將[軟體下載](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=zh-Hant)頁面上所有可用的修補程式套裝，並在您部署至雲端時自動套用這些修補程式。 為避免升級至ECE-Tools 2002.1.0或更新版本後發生修補程式衝突，請移除您手動下載並新增至專案的Adobe提供的任何修補程式。
+- **移除已下載的修補程式**- `magento/magento-cloud-patches`套件會將[軟體下載](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/commerce)頁面上所有可用的修補程式套裝，並在您部署至雲端時自動套用這些修補程式。 為避免升級至ECE-Tools 2002.1.0或更新版本後發生修補程式衝突，請移除您手動下載並新增至專案的Adobe提供的任何修補程式。
 
 - **更新套用修補程式命令** — 我們將套用修補程式的命令從`vendor/bin/ece-tools`目錄移至`vendor/bin/ece-patches`目錄。 如果您使用此指令來手動套用修補程式，請使用新路徑。
 
@@ -83,45 +78,45 @@ ht-degree: 0%
 
 - **適用於Commerce的雲端Docker命令變更**-
 
-   - **正在更新Docker建置作業中Commerce命令的Cloud Docker** — 我們已將適用於Commerce命令的Cloud Docker從`vendor/bin/ece-tools`目錄移至`vendor/bin/ece-docker`目錄。 更新指令碼和命令以使用新路徑。
+  - **正在更新Docker建置作業中Commerce命令的Cloud Docker** — 我們已將適用於Commerce命令的Cloud Docker從`vendor/bin/ece-tools`目錄移至`vendor/bin/ece-docker`目錄。 更新指令碼和命令以使用新路徑。
 
-     升級至`ece-tools` 2002.1.0之後，請使用下列命令檢視可用的`ece-docker`命令。
+    升級至`ece-tools` 2002.1.0之後，請使用下列命令檢視可用的`ece-docker`命令。
 
-     ```bash
-     php ./vendor/bin/ece-docker list
-     ```
+    ```bash
+    php ./vendor/bin/ece-docker list
+    ```
 
-   - **正在更新Cloud Docker-compose命令** — 我們將命令檔案的路徑從`./bin/docker`重新命名為`./bin/magento-docker`。 更新指令碼和命令以使用新路徑。
+  - **正在更新Cloud Docker-compose命令** — 我們將命令檔案的路徑從`./bin/docker`重新命名為`./bin/magento-docker`。 更新指令碼和命令以使用新路徑。
 
-   - **Cron容器不再包含在預設Docker設定中** — 現在，您必須將`--with-cron`選項新增到`ece-docker build:compose`命令以在Docker環境設定中包含Cron容器。 請參閱&#x200B;_Commerce適用的Cloud Docker_&#x200B;指南中的[管理cron作業](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)。
+  - **Cron容器不再包含在預設Docker設定中** — 現在，您必須將`--with-cron`選項新增到`ece-docker build:compose`命令以在Docker環境設定中包含Cron容器。 請參閱&#x200B;_Commerce適用的Cloud Docker_&#x200B;指南中的[管理cron作業](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)。
 
-     先前使用cron作業產生容器的指令碼現在不含cron容器。
+    先前使用cron作業產生容器的指令碼現在不含cron容器。
 
-   - **使用暫存容器** — 在舊版中，`bin/magento-docker`命令作業所建立的容器並未移除，因此您可以將其用於其他作業。 現在，`magento-docker`命令會移除命令完成後所建立的任何容器。
+  - **使用暫存容器** — 在舊版中，`bin/magento-docker`命令作業所建立的容器並未移除，因此您可以將其用於其他作業。 現在，`magento-docker`命令會移除命令完成後所建立的任何容器。
 
-     如果要保留由Docker-Compose操作建立的容器，請使用`docker-compose run`命令，而不是`bin/magento-docker`命令。
+    如果要保留由Docker-Compose操作建立的容器，請使用`docker-compose run`命令，而不是`bin/magento-docker`命令。
 
-   - **正在執行部署後鉤點**- `cloud-deploy`命令不再執行部署後鉤點。 使用新的`cloud-post-deploy`命令在您部署後執行部署後掛接。 更新您的指令碼以新增命令以執行部署後鉤點。
+  - **正在執行部署後鉤點**- `cloud-deploy`命令不再執行部署後鉤點。 使用新的`cloud-post-deploy`命令在您部署後執行部署後掛接。 更新您的指令碼以新增命令以執行部署後鉤點。
 
-     ```shell
-     bin/magento-docker ece-deploy
-     bin/magento-docker ece-post-deploy
-     ```
+    ```shell
+    bin/magento-docker ece-deploy
+    bin/magento-docker ece-post-deploy
+    ```
 
-     或者，如果您直接使用`docker-compose`命令，請在部署命令之後執行`docker-compose run deploy cloud-post-deploy`命令。
+    或者，如果您直接使用`docker-compose`命令，請在部署命令之後執行`docker-compose run deploy cloud-post-deploy`命令。
 
 - **正在重新整理資料庫** — 資料庫容器現在儲存在`magento-db`永久Docker磁碟區。 當您重新整理Docker環境時，資料庫不再自動刪除。 如有需要，請使用下列其中一個指令來手動移除它。
 
-   - 移除`magento-db`容器：
+  - 移除`magento-db`容器：
 
-     ```bash
-     docker volume rm magento-db
-     ```
+    ```bash
+    docker volume rm magento-db
+    ```
 
-   - 關閉Docker容器時移除所有關聯的磁碟區：
+  - 關閉Docker容器時移除所有關聯的磁碟區：
 
-     ```bash
-     docker-compose down -v
-     ```
+    ```bash
+    docker-compose down -v
+    ```
 
 - **覆寫封存和備份檔案的檔案同步設定** — 使用docker-sync或mutagen時，具有下列副檔名的封存和備份檔案不再同步：SQL、GZ、ZIP和BZ2。 您可以將檔案重新命名為以不同的副檔名結尾，以覆寫這些檔案型別的預設檔案同步化。 例如： `synchronize-me.zip-backup`

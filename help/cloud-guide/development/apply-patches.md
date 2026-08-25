@@ -4,14 +4,11 @@ description: 瞭解如何在雲端基礎結構專案上套用Adobe Commerce中�
 feature: Cloud, Upgrade
 exl-id: 923c1e43-45da-450f-bdfc-de84a901400d
 TQID: https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 910
+source-wordcount: 911
 ht-degree: 0%
 
 ---
@@ -21,15 +18,15 @@ ht-degree: 0%
 [適用於Commerce](https://github.com/magento/magento-cloud-patches)的雲端修補程式[品質修補程式](https://github.com/magento/quality-patches)可將修補程式傳送至您安裝的Adobe Commerce應用程式。
 
 - Commerce套件的雲端修補程式提供必要修補程式，並包含關鍵修正
-- 品質修補程式提供選用的低影響品質修正，作為[不含回溯不相容變更的個別修補程式](https://experienceleague.adobe.com/docs/commerce-operations/release/planning/versioning-policy.html?lang=zh-Hant#individual-patch)
+- 品質修補程式提供選用的低影響品質修正，作為[不含回溯不相容變更的個別修補程式](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/versioning-policy#individual-patch)
 
-請參閱&#x200B;_Commerce Operations Tools Guide_&#x200B;中的[可用修補程式](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hant)，以檢閱已發行修補程式的完整清單。
+請參閱&#x200B;_Commerce Operations Tools Guide_&#x200B;中的[可用修補程式](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以檢閱已發行修補程式的完整清單。
 
 這兩個套件都改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送關鍵、選用和自訂修正。 您可以使用這些套裝程式來套用、還原和檢視Commerce可用的所有個別修補程式的一般資訊。
 
 >[!TIP]
 >
->您可以使用Commerce的[品質修補工具](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hant)和雲端修補程式，作為Magento Open Source和Adobe Commerce專案的獨立套件。 我們建議針對非雲端專案使用品質修補工具。
+>您可以使用Commerce的[品質修補工具](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)和雲端修補程式，作為Magento Open Source和Adobe Commerce專案的獨立套件。 我們建議針對非雲端專案使用品質修補工具。
 
 當您部署變更至遠端環境時，`ece-tools`封裝會使用`magento/magento-cloud-patches`和`magento/quality-patches`來檢查擱置的修補程式，並依照下列順序自動套用它們：
 
@@ -98,20 +95,20 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 狀態表格包含下列資訊型別：
 
 - **型別**：
-   - `Optional`—Quality Patches Tool和Cloud Patches套裝軟體中的所有修補程式都是選用的，適用於Adobe Commerce和Magento Open Source安裝。 對於雲端基礎結構上的Adobe Commerce，所有修補程式均為選購。
-   - `Required`—Cloud客戶需要Commerce套件的Cloud Patches中的所有修補程式。
-   - `Deprecated` — 個別修補程式已標示為已棄用，若您已套用它，我們建議您還原它。 回覆已棄用的修補程式後，該修補程式將不再顯示在狀態表格中。
-   - `Custom` — 來自&#39;m2-hotfix&#39;目錄的所有修補程式。
+  - `Optional`—Quality Patches Tool和Cloud Patches套裝軟體中的所有修補程式都是選用的，適用於Adobe Commerce和Magento Open Source安裝。 對於雲端基礎結構上的Adobe Commerce，所有修補程式均為選購。
+  - `Required`—Cloud客戶需要Commerce套件的Cloud Patches中的所有修補程式。
+  - `Deprecated` — 個別修補程式已標示為已棄用，若您已套用它，我們建議您還原它。 回覆已棄用的修補程式後，該修補程式將不再顯示在狀態表格中。
+  - `Custom` — 來自&#39;m2-hotfix&#39;目錄的所有修補程式。
 
 - **狀態**：
-   - `Applied` — 已套用修補程式。
-   - `Not applied` — 尚未套用修補程式。
-   - `N/A` — 由於發生衝突，無法定義修補程式的狀態。
+  - `Applied` — 已套用修補程式。
+  - `Not applied` — 尚未套用修補程式。
+  - `N/A` — 由於發生衝突，無法定義修補程式的狀態。
 
 - **詳細資料**：
-   - `Affected components` — 受影響模組的清單。
-   - `Required patches` — 必要的修補程式（相依性）清單。
-   - `Recommended replacement` — 建議用來取代已棄用修補程式的修補程式。
+  - `Affected components` — 受影響模組的清單。
+  - `Required patches` — 必要的修補程式（相依性）清單。
+  - `Recommended replacement` — 建議用來取代已棄用修補程式的修補程式。
 
 ## 在本機環境中套用修補程式
 
