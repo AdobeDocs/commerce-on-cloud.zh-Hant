@@ -1,25 +1,15 @@
 ---
 title: 網站啟動
-description: 瞭解如何開始網站啟動的準備工作。
+description: 瞭解如何在Adobe Commerce雲端基礎結構上準備網站啟動，包括檢查清單、最佳實務以及測試和生產測試。
 exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
 TQID: https://experienceleague.adobe.com/-aWGtM8yXIMPfKihDMD6LS1r2-UIuceyf9X4TTIFTf0
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: c32adafa-ed01-4b31-997e-2413013911b0
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c32adafa-ed01-4b31-997e-2413013911b0id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 970
+source-wordcount: 984
 ht-degree: 0%
 
 ---
@@ -58,7 +48,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您要為貴公司部署自己的延伸驗證SSL憑證，而不使用Let&#39;s Encrypt憑證，請連絡您的CTA或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
+>如果您要為貴公司部署自己的延伸驗證SSL憑證，而不使用Let&#39;s Encrypt憑證，請連絡您的CTA或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
 
 ## 設定安全性掃描工具
 
@@ -84,7 +74,7 @@ ht-degree: 0%
 >
 >Adobe建議使用安全性掃描工具，而不使用其他協力廠商工具，以便在調查結果期間確保最佳服務品質。
 
-請參閱[使用手冊](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/security/security-scan)，瞭解設定和使用安全性掃描工具的資訊。 通常，當您開始使用者驗收測試(UAT)時，就會開始使用此工具。
+請參閱[使用手冊](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)，瞭解設定和使用安全性掃描工具的資訊。 通常，當您開始使用者驗收測試(UAT)時，就會開始使用此工具。
 
 您掃描的每個站台都必須透過[安全性掃描]索引標籤登入。 在註冊過程中，您必須接受免責宣告，才能開始掃描。 您可以控制排程並授權使用者在每次掃描完成時接收通知。 您可以排程特定週期性日期與時間的掃描，或視需要執行掃描。
 

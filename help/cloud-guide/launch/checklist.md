@@ -1,23 +1,15 @@
 ---
 title: 啟動檢查清單
-description: 檢閱網站啟動時的檢查清單專案。
+description: 檢閱Adobe Commerce雲端基礎結構的Launch檢查清單，以在部署到生產環境之前確認設定、測試和Fastly設定。
 exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
 TQID: https://experienceleague.adobe.com/-27J2-qKGpa71AJliIomIC7heTbTelOnFf960NODt0E
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 1180
+source-wordcount: 1194
 ht-degree: 0%
 
 ---
@@ -104,7 +96,7 @@ Adobe為每個環境提供Let&#39;s Encrypt SSL/TLS憑證。 Fastly需要此憑�
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **注意**：您也可以從Admin更新基底URL。 請參閱&#x200B;_Adobe Commerce商店與購買體驗指南_&#x200B;中的[商店URL](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/stores-sales/site-store/store-urls)。
+   **注意**：您也可以從Admin更新基底URL。 請參閱&#x200B;_Adobe Commerce商店與購買體驗指南_&#x200B;中的[商店URL](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)。
 
 1. 請稍候幾分鐘讓網站更新。
 
@@ -118,7 +110,7 @@ Adobe為每個環境提供Let&#39;s Encrypt SSL/TLS憑證。 Fastly需要此憑�
 
 - [已完成傳出電子郵件的測試](../project/outgoing-emails.md)
 
-- [管理員憑證和基本管理員URL的安全設定](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/security/security-admin)
+- [管理員憑證和基本管理員URL的安全設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
 - [最佳化網頁的所有影像](../cdn/fastly-image-optimization.md)
 
@@ -150,9 +142,9 @@ Adobe為每個環境提供Let&#39;s Encrypt SSL/TLS憑證。 Fastly需要此憑�
 
 - [設定您的安全性掃描](overview.md#set-up-the-security-scan-tool)
 
-- [管理員使用者的安全設定](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/systems/security/security-admin)
+- [管理員使用者的安全設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
-- [管理員URL的安全設定](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- [管理員URL的安全設定](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [移除雲端基礎結構專案上任何不再使用Adobe Commerce的使用者](../project/user-access.md)
 
