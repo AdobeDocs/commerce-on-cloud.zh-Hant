@@ -1,6 +1,6 @@
 ---
 title: 網站啟動
-description: 瞭解如何開始網站啟動的準備工作。
+description: 瞭解如何在Adobe Commerce雲端基礎結構上準備網站啟動，包括檢查清單、最佳實務以及測試和生產測試。
 exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
 TQID: https://experienceleague.adobe.com/-aWGtM8yXIMPfKihDMD6LS1r2-UIuceyf9X4TTIFTf0
 product_v2:
@@ -17,9 +17,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 970
+source-wordcount: 984
 ht-degree: 0%
 
 ---

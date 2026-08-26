@@ -1,6 +1,6 @@
 ---
 title: 啟動檢查清單
-description: 檢閱網站啟動時的檢查清單專案。
+description: 檢閱Adobe Commerce雲端基礎結構的Launch檢查清單，以在部署到生產環境之前確認設定、測試和Fastly設定。
 exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
 TQID: https://experienceleague.adobe.com/-27J2-qKGpa71AJliIomIC7heTbTelOnFf960NODt0E
 product_v2:
@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 1180
+source-wordcount: 1194
 ht-degree: 0%
 
 ---
