@@ -11,8 +11,8 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-last-update: 2026-05-05
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+last-update: 2026-08-25
+source-git-commit: ccff84c55425e8e4f91812b54f5e6ccf9a700104
 workflow-type: tm+mt
 source-wordcount: 612
 ht-degree: 0%
