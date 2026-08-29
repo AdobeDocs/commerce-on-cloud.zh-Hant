@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>在ECE-Tools版本v2002.2.13之後更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。</p>
+      <td><p>在ECE-Tools版本v2002.2.13之後更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。</p>
 </td>
       <td>
         技術
@@ -31,7 +31,7 @@ ht-degree: 2%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/0ac31574952505e92744535f861591abcdd8ac56">認可</a></td>
     </tr>
     <tr>
-      <td><p>在雲端基礎結構上為Adobe Commerce新增<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">垂直自動縮放</a>可用性。</p>
+      <td><p>在雲端基礎結構上為Adobe Commerce新增<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">垂直自動縮放</a>可用性。</p>
 </td>
       <td>
         重大更新
@@ -53,7 +53,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>在ECE-Tools版本v2002.2.12之後更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。 除了版本號碼外，沒有進行其他變更。</p>
+      <td><p>在ECE-Tools版本v2002.2.12之後更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。 除了版本號碼外，沒有進行其他變更。</p>
 </td>
       <td>
         技術
