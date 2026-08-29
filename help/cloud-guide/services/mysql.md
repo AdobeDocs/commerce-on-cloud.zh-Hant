@@ -232,5 +232,5 @@ relationships:
 
 - [正在檢查緩慢的查詢和處理MySQL](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql)
 - [在雲端上建立資料庫傾印](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)
-- [資料移轉工具疑難排解](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
+- [資料移轉工具疑難排解](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hant)
 - [Adobe Commerce升級：壓縮至動態表格2.2.x、2.3.x至2.4.x](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade)
