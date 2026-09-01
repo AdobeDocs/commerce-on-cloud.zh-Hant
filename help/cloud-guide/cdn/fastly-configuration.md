@@ -1,24 +1,16 @@
 ---
 title: 設定Fastly服務
-description: 瞭解如何為您的Adobe Commerce專案設定和設定Fastly服務。
+description: 瞭解如何為測試環境和生產環境設定、設定和測試Fastly快取、VCL代碼片段和Web應用程式防火牆(WAF)。
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
 TQID: https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 2254
+source-wordcount: 2216
 ht-degree: 0%
 
 ---
@@ -33,7 +25,7 @@ Fastly與Varnish合作，提供快速快取功能以及用於靜態資產的內�
 >
 >Fastly在整合環境中不可用。
 
-請完成下列步驟，在網站開發程式早期啟用、設定和測試Fastly，以啟用對網站的安全存取。
+請完成下列步驟，在網站開發流程的早期階段啟用、設定和測試Fastly，以啟用對網站的安全存取。
 
 - 取得測試和生產環境的Fastly認證
 - 啟用Fastly CDN快取
@@ -53,7 +45,7 @@ Fastly與Varnish合作，提供快速快取功能以及用於靜態資產的內�
 
 在雲端基礎結構上使用Adobe Commerce，您無法直接存取Fastly管理員儀表板。
 
-使用Adobe Commerce管理員檢閱和更新環境的Fastly設定。 如果您無法在管理員中使用Fastly功能解決問題，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)。
+使用Adobe Commerce管理員檢閱和更新環境的Fastly設定。 如果您無法在管理員中使用Fastly功能解決問題，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)。
 
 ## 取得Fastly認證
 
@@ -89,7 +81,7 @@ Fastly與Varnish合作，提供快速快取功能以及用於靜態資產的內�
 
 - 如果您找不到測試或生產環境的Fastly憑證，請聯絡您的Adobe客戶技術顧問(CTA)。
 
-- [驗證Fastly認證時發生錯誤](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
+- [驗證Fastly認證時發生錯誤](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
 
 ## 保護您的認證
 
@@ -103,7 +95,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
 您需要以下元件來啟用和設定Fastly服務：
 
-- 適用於Magento 2模組[&#128279;](fastly.md#fastly-cdn-module-for-magento-2)的最新版Fastly CDN已安裝在中繼和生產環境中。 請參閱[Fastly升級](#upgrade-the-fastly-module)。
+- 適用於Magento 2模組](fastly.md#fastly-cdn-module-for-magento-2)的最新版[Fastly CDN已安裝在中繼和生產環境中。 請參閱[Fastly升級](#upgrade-the-fastly-module)。
 
 - 雲端基礎結構中繼和生產環境上Adobe Commerce的[Fastly認證](#get-fastly-credentials)
 
@@ -111,37 +103,37 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
 {{admin-login-step}}
 
-1. 按一下&#x200B;**存放區** >設定> **組態** > **進階** > **系統**，然後展開&#x200B;**完整頁面快取**。
+1. 按一下「**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]**」並展開&#x200B;**[!UICONTROL Full Page Cache]**。
 
    ![展開以選取Fastly](../../assets/cdn/fastly-menu.png)
 
-1. 在&#x200B;_快取應用程式_&#x200B;區段中，從&#x200B;**使用系統值**&#x200B;移除選取專案，然後從下拉式清單中選取&#x200B;**Fastly CDN**。
+1. 在&#x200B;_[!UICONTROL Caching Application]_區段中，從&#x200B;**[!UICONTROL Use system value]**移除選取專案，然後從下拉式清單中選取&#x200B;**[!UICONTROL Fastly CDN]**。
 
    ![選擇Fastly](../../assets/cdn/fastly-enable-admin.png)
 
-1. 展開&#x200B;**Fastly組態**&#x200B;並[選擇快取選項](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module)。
+1. 展開&#x200B;**[!UICONTROL Fastly Configuration]**&#x200B;並[選擇快取選項](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module)。
 
-1. 設定快取選項之後，按一下頁面頂端的&#x200B;**儲存設定**。
+1. 設定快取選項後，按一下頁面頂端的&#x200B;**[!UICONTROL Save Config]**。
 
 1. 根據通知清除快取。
 
-1. 繼續設定Fastly，瀏覽回&#x200B;**商店** > **設定** > **設定** > **進階** > **系統** > **Fastly設定**。
+1. 導覽回&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Fastly Configuration]**，繼續設定Fastly。
 
 ### 測試Fastly認證
 
-1. 在管理員上，瀏覽至&#x200B;**商店** >設定> **設定** > **進階** > **系統** > **快速設定**。
+1. 在管理員中，瀏覽至&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Fastly Configuration]**。
 
-1. 如有需要，請為您的專案環境新增&#x200B;**Fastly服務ID**&#x200B;和&#x200B;**API權杖**&#x200B;值。
+1. 如有需要，請為您的專案環境新增&#x200B;**[!UICONTROL Fastly service ID]**&#x200B;和&#x200B;**[!UICONTROL API token]**&#x200B;值。
 
    ![Fastly認證管理員](../../assets/cdn/fastly-credentials-admin-ui.png)
 
    >[!NOTE]
    >
-   >請勿選取連結來建立Fastly API權杖。 請改用Adobe[&#128279;](#get-fastly-credentials)提供的Fastly認證（服務ID和API權杖）。
+   >請勿選取連結來建立Fastly API權杖。 請改用Adobe](#get-fastly-credentials)提供的[Fastly認證（服務ID和API權杖）。
 
-1. 按一下&#x200B;**測試認證**。
+1. 按一下&#x200B;**[!UICONTROL Test credentials]**。
 
-1. 如果測試成功，請按一下&#x200B;**儲存組態**，然後清除快取。
+1. 如果測試成功，請按一下&#x200B;**[!UICONTROL Save Config]**，然後清除快取。
 
    如果測試失敗，請確認正確的服務ID和API權杖值符合目前環境的認證。
 
@@ -161,7 +153,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
 **若要上傳Fastly VCL**：
 
-1. 在&#x200B;_Fastly組態_&#x200B;區段中，按一下&#x200B;**將VCL上傳至Fastly**，如下圖所示。
+1. 在&#x200B;_[!UICONTROL Fastly Configuration]_區段中，按一下&#x200B;**[!UICONTROL Upload VCL to Fastly]**，如下圖所示。
 
    ![將Magento VCL上傳至Fastly](../../assets/cdn/fastly-upload-vcl-admin.png)
 
@@ -169,7 +161,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
 ## 布建SSL/TLS憑證
 
-Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的安全HTTPS流量。 Adobe為每個Pro生產、測試和入門生產環境提供一個憑證，以保護該環境中的所有網域。 如需所提供憑證的詳細資訊，請參閱雲端基礎結構上Adobe Commerce的[Adobe SSL (TLS)憑證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)。
+Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的安全HTTPS流量。 Adobe為每個Pro生產、測試和入門生產環境提供一個憑證，以保護該環境中的所有網域。 如需所提供憑證的詳細資訊，請參閱雲端基礎結構上Adobe Commerce的[Adobe SSL (TLS)憑證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)。
 
 >[!NOTE]
 >
@@ -190,7 +182,7 @@ Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的�
 >
 >如果您的生產網域未啟用，請使用ACME挑戰CNAME記錄進行網域驗證。 及早將記錄新增至您的DNS設定可讓Adobe在網站啟動之前，以正確的網域布建SSL/TLS憑證。 在啟動至生產環境之前，您必須以Adobe提供的CNAME記錄取代這些預留位置記錄。
 
-網域驗證完成後，Adobe會布建「讓我們加密TLS/SSL」憑證，並將其上傳至即時中繼或生產環境。 此程式最多可能需要12小時的時間。 Adobe建議您提前幾天完成DNS設定更新，以免網站開發和網站啟動延遲。
+網域驗證完成後，Adobe會布建「讓我們加密TLS/SSL」憑證，並將其上傳至即時中繼或生產環境。 此程式最多可能需要12小時的時間。 Adobe建議您提前幾天完成DNS設定更新，以防止網站開發和啟動延遲。
 
 ## 使用開發設定更新DNS設定
 
@@ -273,7 +265,7 @@ Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的�
 
    >[!NOTE]
    >
-   >除了使用Cloud CLI之外，您也可以從[管理員](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/stores-sales/site-store/store-urls)更新基底URL
+   >除了使用Cloud CLI之外，您也可以從[管理員](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)更新基底URL
 
 1. 重新啟動網頁瀏覽器。
 
@@ -297,7 +289,7 @@ Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的�
    curl -vo /dev/null -H Fastly-Debug:1 --resolve <live-URL-hostname>:443:<live-IP-address>
    ```
 
-1. 在回應中，驗證[標頭](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)以確保Fastly正常運作。 例如，您應該會在回應中看到下列唯一標題：
+1. 在回應中，驗證[標頭](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)以確保Fastly正常運作。 例如，請參閱回應中的下列唯一標題：
 
    ```http
    < Fastly-Magento-VCL-Uploaded: 1.2.228
@@ -311,7 +303,7 @@ Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的�
 Fastly更新Magento 2模組的Fastly CDN以解決問題、提高效能並提供新功能。
 Adobe建議您更新測試和生產環境中的Fastly模組至[最新版本](https://github.com/fastly/fastly-magento2/blob/master/VERSION)。
 
-如需模組版本和更新的最新資訊，請參閱GitHub上Magento2模組[&#128279;](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)的Fastly CDN發行說明。
+如需模組版本和更新的最新資訊，請參閱GitHub上Magento2模組](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)的Fastly CDN發行說明[。
 
 更新模組後，您必須上傳VCL程式碼以將變更套用至Fastly服務組態。
 
@@ -350,4 +342,4 @@ Adobe建議您更新測試和生產環境中的Fastly模組至[最新版本](htt
 
 >[!TIP]
 >
-> 如果您的Adobe Commerce環境中遇到Fastly服務問題，請參閱[Adobe Commerce Fastly疑難排解員](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-29661)。
+> 如果您的Adobe Commerce環境中遇到Fastly服務問題，請參閱[Adobe Commerce Fastly疑難排解員](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29661)。

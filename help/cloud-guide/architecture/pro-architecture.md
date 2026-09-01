@@ -1,26 +1,18 @@
 ---
 title: Pro架構
-description: 瞭解Pro架構支援的環境。
+description: 瞭解Pro環境架構，包括主要、整合、測試和生產環境，以及叢集擴充和備份。
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
 TQID: https://experienceleague.adobe.com/Es-cmVlUrzd4xMf9unOJD-Z-h0OvL-ycoullKVO-yRA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
-  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
 workflow-type: tm+mt
-source-wordcount: 1619
+source-wordcount: 1621
 ht-degree: 0%
 
 ---
@@ -46,6 +38,8 @@ ht-degree: 0%
 | 包含New Relic服務 | 否 | APM | APM + NRI |
 | 自動備份 | 否 | 是 | 是 |
 
+**APM**&#x200B;參考[!DNL New Relic's]應用程式效能監視。
+
 >[!NOTE]
 >
 >Adobe提供適用於Commerce的Cloud Docker工具，可用於部署到本機Cloud Docker環境，以便您可以開發和測試Adobe Commerce專案。 請參閱[Docker開發](../dev-tools/cloud-docker.md)。
@@ -64,7 +58,7 @@ ht-degree: 0%
 
 - 請&#x200B;**不**&#x200B;根據`master`分支建立分支。 使用整合環境建立用於開發的有效分支。
 
-- 請勿使用`master`環境進行開發、UAT或效能測試
+- 請勿使用`master`環境進行開發、使用者驗收測試(UAT)或效能測試
 
 ### 整合環境
 
@@ -99,11 +93,11 @@ ht-degree: 0%
 
 - 整合環境架構不符合測試和生產架構
 
-- 請勿使用`integration`環境進行開發測試、效能測試或使用者驗收測試(UAT)
+- 請勿使用`integration`環境進行開發測試、效能測試或UAT
 
 - 請勿使用`integration`環境來測試B2B的Adobe Commerce功能
 
-- 您無法從資料庫生產或中繼還原整合環境中的資料庫
+- 您無法從生產或中繼資料庫還原整合環境中的資料庫
 
 {{enhanced-integration-envs}}
 
@@ -160,11 +154,9 @@ ht-degree: 0%
   - `pub/static`
   - `app/etc`
 
-- **Redis** — 每個VM一台伺服器，只有一個作用中，另外兩個做為復本
+- **Redis**&#x200B;或&#x200B;**Valkey** — 每個VM有一部伺服器，其中只有一部作用中，另外兩部為復本。
 
-- **Elasticsearch** — 在雲端基礎結構2.2到2.4.3-p2上搜尋Adobe Commerce
-
-- **OpenSearch** — 在雲端基礎結構2.3.7-p3、2.4.3-p2、2.4.4和更新版本上搜尋Adobe Commerce
+- **OpenSearch** — 在雲端基礎結構2.4.4和更新版本上搜尋Adobe Commerce
 
 - **Galera** — 資料庫叢集，每個節點有一個MariaDB MySQL資料庫，每個資料庫的唯一識別碼的自動增加設定為3
 
@@ -191,7 +183,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->掛接的磁碟區僅包含/參考[可寫入的掛接](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)，不會包含所有`app/`目錄。 至於其他檔案，它們是由[建置和部署程式](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)所建立/產生，您也必須檢查Git存放庫中的剩餘檔案。
+>掛接的磁碟區僅包含或參考[可寫入的掛接](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)，不包含您的所有`app/`目錄。 至於其他檔案，它們是由[建置和部署程式](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)所建立/產生，您也必須檢查Git存放庫中的剩餘檔案。
 
 {{pro-backups}}
 
@@ -213,11 +205,11 @@ Adobe會根據下列資料保留原則保留自動備份：
 | 第8週至第12週 | 每兩週備份一次 |
 | 第3個月到第5個月 | 每月一次備份 |
 
-此政策可能會因您的雲端基礎結構計畫而異。
+此政策視您的雲端基礎結構計畫而異。
 
 ### 復原時間目標
 
-RTO取決於儲存的大小。 大型EBS磁碟區需要更多時間來還原。 還原時間可能會因資料庫大小而異。 如需詳細資訊，請聯絡您的Adobe客戶成功案例經理。
+RTO取決於儲存的大小。 大型EBS磁碟區需要更多時間來還原。 還原時間會依資料庫的大小而有所不同。 如需詳細資訊，請聯絡您的Adobe客戶成功案例經理。
 
 ## Pro叢集縮放
 
@@ -225,4 +217,4 @@ Pro叢集大小和&#x200B;_計算_&#x200B;設定會依所選的雲端提供者(A
 
 備援架構讓Adobe雲端基礎建設得以升級，無需停機。 升級時，這三個執行個體都會輪換以升級容量，而不會影響網站作業。 例如，如果限制在PHP層級，而不是資料庫層級，則可以將額外的Web伺服器新增到現有的叢集。 這提供&#x200B;_水平縮放_，以補充資料庫層級上額外CPU所提供的垂直縮放。 請參閱[縮放架構](scaled-architecture.md)。
 
-如果您預期因事件或其他原因而導致流量大幅增加，可請求暫時增加容量。 請參閱[如何在&#x200B;_Commerce說明中心_&#x200B;中要求暫時性的大小調整](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)。
+如果您預期因事件或其他原因而導致流量大幅增加，可請求暫時增加容量。 請參閱[如何在&#x200B;_Commerce說明中心_&#x200B;中要求暫時性的大小調整](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)。
