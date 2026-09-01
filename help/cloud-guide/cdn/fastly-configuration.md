@@ -4,10 +4,18 @@ description: 瞭解如何為測試環境和生產環境設定、設定和測試F
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
 TQID: https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
 source-wordcount: 2216
@@ -95,7 +103,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
 您需要以下元件來啟用和設定Fastly服務：
 
-- 適用於Magento 2模組](fastly.md#fastly-cdn-module-for-magento-2)的最新版[Fastly CDN已安裝在中繼和生產環境中。 請參閱[Fastly升級](#upgrade-the-fastly-module)。
+- 適用於Magento 2模組[&#128279;](fastly.md#fastly-cdn-module-for-magento-2)的最新版Fastly CDN已安裝在中繼和生產環境中。 請參閱[Fastly升級](#upgrade-the-fastly-module)。
 
 - 雲端基礎結構中繼和生產環境上Adobe Commerce的[Fastly認證](#get-fastly-credentials)
 
@@ -107,7 +115,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
    ![展開以選取Fastly](../../assets/cdn/fastly-menu.png)
 
-1. 在&#x200B;_[!UICONTROL Caching Application]_區段中，從&#x200B;**[!UICONTROL Use system value]**移除選取專案，然後從下拉式清單中選取&#x200B;**[!UICONTROL Fastly CDN]**。
+1. 在&#x200B;_[!UICONTROL Caching Application]_&#x200B;區段中，從&#x200B;**[!UICONTROL Use system value]**&#x200B;移除選取專案，然後從下拉式清單中選取&#x200B;**[!UICONTROL Fastly CDN]**。
 
    ![選擇Fastly](../../assets/cdn/fastly-enable-admin.png)
 
@@ -129,7 +137,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
    >[!NOTE]
    >
-   >請勿選取連結來建立Fastly API權杖。 請改用Adobe](#get-fastly-credentials)提供的[Fastly認證（服務ID和API權杖）。
+   >請勿選取連結來建立Fastly API權杖。 請改用Adobe[&#128279;](#get-fastly-credentials)提供的Fastly認證（服務ID和API權杖）。
 
 1. 按一下&#x200B;**[!UICONTROL Test credentials]**。
 
@@ -153,7 +161,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
 **若要上傳Fastly VCL**：
 
-1. 在&#x200B;_[!UICONTROL Fastly Configuration]_區段中，按一下&#x200B;**[!UICONTROL Upload VCL to Fastly]**，如下圖所示。
+1. 在&#x200B;_[!UICONTROL Fastly Configuration]_&#x200B;區段中，按一下&#x200B;**[!UICONTROL Upload VCL to Fastly]**，如下圖所示。
 
    ![將Magento VCL上傳至Fastly](../../assets/cdn/fastly-upload-vcl-admin.png)
 
@@ -303,7 +311,7 @@ Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的�
 Fastly更新Magento 2模組的Fastly CDN以解決問題、提高效能並提供新功能。
 Adobe建議您更新測試和生產環境中的Fastly模組至[最新版本](https://github.com/fastly/fastly-magento2/blob/master/VERSION)。
 
-如需模組版本和更新的最新資訊，請參閱GitHub上Magento2模組](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)的Fastly CDN發行說明[。
+如需模組版本和更新的最新資訊，請參閱GitHub上Magento2模組[&#128279;](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)的Fastly CDN發行說明。
 
 更新模組後，您必須上傳VCL程式碼以將變更套用至Fastly服務組態。
 
