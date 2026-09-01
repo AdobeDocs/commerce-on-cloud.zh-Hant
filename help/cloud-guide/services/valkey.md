@@ -98,7 +98,7 @@ git push origin <branch-name>
 
 ## 自訂Valkey設定
 
-如需快取、工作階段、L2和復本連線建議，請參閱&#x200B;_實作Playbook最佳作法指南_&#x200B;中的[Valkey和Redis服務組態的最佳作法](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
+如需快取、工作階段、L2和復本連線建議，請參閱&#x200B;_實作Playbook最佳作法指南_&#x200B;中的[Valkey和Redis服務組態的最佳作法](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
 
 ## 驗證服務關係
 
