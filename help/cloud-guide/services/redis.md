@@ -27,7 +27,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe Commerce 2.4.9或更新於2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4的修補程式版本不支援Redis快取。 在不支援Redis的快取設定中使用[Valkey](valkey.md)。 如需依版本支援的快取服務，請參閱[系統需求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)。
+>Adobe Commerce 2.4.9或更新於2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4的修補程式版本不支援Redis快取。 在不支援Redis的快取設定中使用[Valkey](valkey.md)。 如需依版本支援的快取服務，請參閱[系統需求](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/system-requirements)。
 
 {{service-instruction}}
 
@@ -54,7 +54,7 @@ cache:
   type: redis:7.2
 ```
 
-範例版本並非通用。 實際的預設和支援服務版本取決於您的Adobe Commerce版本、修補程式層級和目前的雲端範本。 驗證[系統需求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)中支援的組合以及目前的專案範本。
+範例版本並非通用。 實際的預設和支援服務版本取決於您的Adobe Commerce版本、修補程式層級和目前的雲端範本。 驗證[系統需求](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/system-requirements)中支援的組合以及目前的專案範本。
 
 ### 設定服務關係
 
@@ -142,7 +142,7 @@ printf '%s' "$MAGENTO_CLOUD_RELATIONSHIPS" \
 
 ## 自訂Redis設定
 
-如需快取、工作階段、L2和復本連線建議，請參閱&#x200B;_實作Playbook最佳作法指南_&#x200B;中的[Valkey和Redis服務組態的最佳作法](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
+如需快取、工作階段、L2和復本連線建議，請參閱&#x200B;_實作Playbook最佳作法指南_&#x200B;中的[Valkey和Redis服務組態的最佳作法](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
 
 ## 使用Redis CLI
 
@@ -203,8 +203,8 @@ Redis server v=<installed-version> ...
 
 請參閱下列Adobe Commerce支援文章，以取得疑難排解Redis問題的說明：
 
-- [Adobe Commerce上的受管理警報： Redis記憶體警告警報](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert)
-- [Adobe Commerce上的受管理警報：Redis記憶體嚴重警報](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert)
+- [Adobe Commerce上的受管理警報： Redis記憶體警告警報](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert)
+- [Adobe Commerce上的受管理警報：Redis記憶體嚴重警報](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert)
 
 ### 快取清除錯誤參考Valkey設定的快取上的Redis
 
