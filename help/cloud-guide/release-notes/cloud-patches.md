@@ -1,6 +1,6 @@
 ---
 title: Commerce雲端修補程式
-description: 請參閱「雲端修補程式」套裝軟體的最新改良專案清單。
+description: 瞭解Commerce套件雲端修補程式的最新改善，包括安全性修正、快取增強功能和修補程式可靠性更新。
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 2969
+source-wordcount: 2978
 ht-degree: 0%
 
 ---
@@ -300,7 +300,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的關鍵修補程式：
 
 - **修正套用B2B分層導覽修補程式所造成的問題** — 此修正解決了在切換存放區檢視後顯示在「搜尋」頁面上的`Undefined offset`錯誤。<!--MCLOUD-5287-->
 
-- **Paypal結帳修補程式** — 修正PayPal Express顯示先前訂單價格的Adobe Commerce 2.3.7問題。<!--MC-42674-->
+- **PayPal結帳修補程式** — 修正PayPal Express顯示先前訂單價格的Adobe Commerce 2.3.7問題。<!--MC-42674-->
 
 - **修補程式類別支援** — 已新增處理指派給品質修補程式的修補程式類別與來源支援。 類別可讓客戶在使用[品質修補程式工具](https://github.com/magento/quality-patches)和全網站分析工具(SWAT)時，使用篩選器和排序來更快速地尋找修補程式。<!--MC-38577-->
 

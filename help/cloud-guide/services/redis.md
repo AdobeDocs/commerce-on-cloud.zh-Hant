@@ -14,9 +14,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: df2792f9d653c4561e4e40cbc71499095f63ff71
 workflow-type: tm+mt
-source-wordcount: 392
+source-wordcount: 710
 ht-degree: 0%
 
 ---
@@ -27,126 +27,187 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe Commerce 2.4.9或更新於2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4的修補程式版本不支援Redis快取。 對於不支援Redis的快取設定，請使用Valkey。 如需依版本支援的快取服務，請參閱[系統需求](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/system-requirements)。
+>Adobe Commerce 2.4.9或更新於2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4的修補程式版本不支援Redis快取。 在不支援Redis的快取設定中使用[Valkey](valkey.md)。 如需依版本支援的快取服務，請參閱[系統需求](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/system-requirements)。
 
 {{service-instruction}}
 
-**若要啟用Redis**：
+## 啟用Redis
 
-1. 將必要的名稱和型別新增到`.magento/services.yaml`檔案。
+若要啟用Redis，請更新下列檔案：
 
-   ```yaml
-   myredis:
-       type: redis:<version>
-   ```
+- `.magento/services.yaml`
+- `.magento.app.yaml`
 
-   若要提供您自己的Redis設定，請在`.magento/services.yaml`檔案中新增`core_config`金鑰：
+### 設定服務
 
-   ```yaml
-   cache:
-       type: redis:<version>
-   ```
+在`.magento/services.yaml`中，新增Redis服務定義。 以您的Adobe Commerce版本和目前的雲端範本支援的Redis版本取代`<version>`。
 
-1. 設定`.magento.app.yaml`檔案中的關聯性。
+```yaml
+cache:
+  type: redis:<version>
+```
 
-   ```yaml
-   runtime:
-       extensions:
-           - redis
-   
-   relationships:
-       redis: "redis:redis"
-   ```
+例如，對於支援Redis 7.2的Commerce版本和雲端範本：
 
-1. 新增、提交和推送您的程式碼變更。
+```yaml
+cache:
+  type: redis:7.2
+```
 
-   ```bash
-   git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable redis service" && git push origin <branch-name>
-   ```
+範例版本並非通用。 實際的預設和支援服務版本取決於您的Adobe Commerce版本、修補程式層級和目前的雲端範本。 驗證[系統需求](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/system-requirements)中支援的組合以及目前的專案範本。
 
-1. [驗證服務關係](services-yaml.md#service-relationships)。
+### 設定服務關係
+
+在`.magento.app.yaml`中，設定應用程式與Redis服務之間的關係：
+
+```yaml
+runtime:
+  extensions:
+    - redis
+
+relationships:
+  redis: "cache:redis"
+```
+
+關聯性索引鍵`redis`是應用程式用來存取服務的名稱。 值`cache:redis`包含在`.magento/services.yaml`中定義的服務識別碼(`cache`)和服務型別(`redis`)。
+
+### 認可並部署變更
+
+新增、認可及推送設定變更：
+
+```terminal
+git add .magento/services.yaml .magento.app.yaml
+git commit -m "Enable Redis service"
+git push origin <branch-name>
+```
+
+部署完成後，請確認Redis服務關係可用。
 
 {{service-change-tip}}
 
+## 驗證服務關係
+
+部署組態之後，從應用程式容器執行下列命令，以顯示已解碼的`MAGENTO_CLOUD_RELATIONSHIPS`物件：
+
+使用SSH連線到遠端雲端環境，然後執行：
+
+```terminal
+echo "$MAGENTO_CLOUD_RELATIONSHIPS" | base64 -d | json_pp
+```
+
+命令會顯示所有已設定的服務關係。 找出`redis`關聯以識別Redis連線詳細資料。
+
+下列縮寫範例顯示`redis`關係。 這不是通用結構描述。
+
+```json
+{
+   "database" : [
+      {
+         "host" : "database.internal",
+         "port" : 3306,
+         "path" : "main",
+         "scheme" : "mysql"
+      }
+   ],
+   "opensearch" : [
+      {
+         "host" : "opensearch.internal",
+         "port" : 9200,
+         "path" : null,
+         "scheme" : "http"
+      }
+   ],
+   "redis" : [
+      {
+         "host" : "redis.internal",
+         "port" : 6379,
+         "path" : null,
+         "scheme" : "redis"
+      }
+   ]
+}
+```
+
+輸出會因環境和服務設定而異。 請勿在此範例中硬式編碼主機名稱、連線埠、IP位址、叢集名稱、服務版本、使用者名稱或密碼。 在目標環境中使用`MAGENTO_CLOUD_RELATIONSHIPS`傳回的值。
+
+如果`jq`可用，請使用以下命令以僅顯示Redis關係：
+
+```terminal
+printf '%s' "$MAGENTO_CLOUD_RELATIONSHIPS" \
+  | base64 -d \
+  | jq '{redis: .redis}'
+```
+
+如需有關服務關係的詳細資訊，請參閱[設定服務](services-yaml.md)。
+
 ## 自訂Redis設定
 
-如需自訂Redis設定的詳細資訊，請參閱&#x200B;_實作Playbook最佳實務指南_&#x200B;中的[設定Redis](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
+如需快取、工作階段、L2和復本連線建議，請參閱&#x200B;_實作Playbook最佳作法指南_&#x200B;中的[Valkey和Redis服務組態的最佳作法](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
 
 ## 使用Redis CLI
 
-假設您的Redis關係名稱為`redis`，您可以使用`redis-cli`工具來存取它。
+假設您的Redis關係名稱為`redis`，請使用`MAGENTO_CLOUD_RELATIONSHIPS`傳回的主機與連線埠連線到Redis。
 
-1. 使用SSH連線至已安裝並設定Redis的整合環境。
+在安裝及設定Redis的情況下連線到環境，然後執行以下命令：
 
-1. 開啟連線至主機的SSH通道。
+```terminal
+redis-cli -h <host> -p <port>
+```
 
-   ```bash
-   redis-cli -h redis.internal
-   ```
+**範例**
+
+```terminal
+redis-cli -h redis.internal -p 6379
+```
 
 ## 取得已安裝的Redis版本
 
-使用下列命令取得Redis版本安裝在整合環境中：
+>[!BEGINTABS]
 
-```bash
-redis-cli -h redis.internal info | grep version
+>[!TAB 整合環境]
+
+在整合環境中，使用`redis`關聯性傳回的主機與連線埠來執行：
+
+```terminal
+redis-cli -h <host> -p <port> info | grep version
 ```
 
-範例回應：
+**範例回應**
 
+```text
+redis_version:<installed-version>
+gcc_version:<gcc-version>
 ```
-redis_version:7.0.5
-gcc_version:8.3.0
-```
 
-### Redis on Pro測試和生產
+版本和組建詳細資料會因環境而異。 請勿將顯示的範例版本視為必要或通用服務版本。
 
-若要在測試或生產環境中安裝Redis版本，請使用`redis-server`命令：
+>[!TAB Pro測試和生產]
 
-```bash
+在Pro測試和生產環境中，執行：
+
+```terminal
 redis-server -v
 ```
 
-```
-Redis server v=7.0.5 ...
-```
+**範例回應**
 
-使用下列命令取得Redis組態安裝在Pro Staging或生產環境中：
-
-```bash
-echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
+```text
+Redis server v=<installed-version> ...
 ```
 
-範例回應：
+版本和組建詳細資料會因環境而異。 請勿將顯示的範例版本視為必要或通用服務版本。
 
-```json
-"redis" : [
-    {
-        "cluster" : "project-master-123abc4",
-        "fragment" : null,
-        "host" : "redis.internal",
-        "host_mapped" : false,
-        "hostname" : "oblahblahblahblahe.redis.service._.magentosite.cloud",
-        "ip" : "169.254.10.10",
-        "password" : null,
-        "path" : null,
-        "port" : 6379,
-        "public" : false,
-        "query" : {},
-        "rel" : "redis",
-        "scheme" : "redis",
-        "service" : "redis",
-        "type" : "redis:7.0.5",
-        "username" : null
-    }
-]
-```
+>[!ENDTABS]
 
 ## 疑難排解Redis
 
 請參閱下列Adobe Commerce支援文章，以取得疑難排解Redis問題的說明：
 
-- [Redis問題延遲Admin登入或結帳](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html)
-- [延伸的Redis快取實作Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)
 - [Adobe Commerce上的受管理警報： Redis記憶體警告警報](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert)
 - [Adobe Commerce上的受管理警報：Redis記憶體嚴重警報](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert)
+
+### 快取清除錯誤參考Valkey設定的快取上的Redis
+
+預先部署快取清除失敗會顯示錯誤代碼`[107]` (`clean-redis-cache`)和`Connection to Redis`訊息，即使`cache`服務設定為Valkey亦然。 `ece-tools`將這個舊版Redis導向的錯誤碼和訊息用於快取清除步驟，無論哪個服務支援`cache`關係，因此措辭不會表示已安裝Redis。
+
+如果基礎錯誤是DNS失敗（例如關聯性主機的`Name or service not known`），則部署步驟會在服務關聯性可用之前執行，或`.magento.app.yaml`中的關聯性名稱與`.magento/services.yaml`中的服務識別碼不符。 請參閱[驗證服務關係](#verify-the-service-relationship)。

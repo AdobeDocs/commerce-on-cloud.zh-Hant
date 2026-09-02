@@ -12,9 +12,9 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
 workflow-type: tm+mt
-source-wordcount: 344
+source-wordcount: 340
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 | `MAGENTO_CLOUD_ROUTES` | 說明環境`.magento/routes.yaml`檔案中定義的路由。 |
 | `MAGENTO_CLOUD_TREE_ID` | 應用程式的樹狀結構ID，對應至Git中樹狀結構的SHA。 |
 | `MAGENTO_CLOUD_VARIABLES` | 具有索引鍵值配對的base64編碼JSON物件，例如`"key":"value"`。 |
-| `MAGENTO_CLOUD_LOCKS_DIR` | 提供雲端基礎結構上鎖定提供者的掛載點路徑。 鎖定提供者可防止啟動重複的cron作業和cron群組。<br><br>僅支援`file`和`db`鎖定提供者。<br><br>**Pro生產與暫存環境**&#x200B;預設為`file`鎖定提供者。 此值無法變更。<br><br>**Pro整合與入門環境**，請勿使用`MAGENTO_CLOUD_LOCKS_DIR`變數。 預設會套用`db`鎖定提供者。 您可以更新`.magento.env.yaml`檔案中的`[LOCK_PROVIDER](variables-deploy.md#lock_provider`環境部署變數來變更預設值。 |
+| `MAGENTO_CLOUD_LOCKS_DIR` | 提供雲端基礎結構上鎖定提供者的掛載點路徑。 鎖定提供者可防止啟動重複的cron作業和cron群組。<br><br>僅支援`file`和`db`鎖定提供者。<br><br>**Pro生產與暫存環境**&#x200B;預設為`file`鎖定提供者。 此值無法變更。<br><br>**Pro整合與入門環境**，請勿使用`MAGENTO_CLOUD_LOCKS_DIR`變數。 預設會套用`db`鎖定提供者。 您可以更新`.magento.env.yaml`檔案中的[`LOCK_PROVIDER`](variables-deploy.md#lock_provider)環境部署變數來變更預設值。 |
 
 >[!WARNING]
 >
@@ -43,7 +43,7 @@ ht-degree: 0%
 >
 >![環境變數範例](../../assets/set-env-variable-ui.png)
 
-由於值會隨著時間變更，因此最好在執行階段檢查變數，並使用它來設定應用程式。 例如，使用`MAGENTO_CLOUD_RELATIONSHIPS`變數來擷取環境相關關係，如下所示：
+由於值可能會隨著時間變更，請在執行階段檢查變數，並使用它來設定應用程式。 例如，使用`MAGENTO_CLOUD_RELATIONSHIPS`變數來擷取環境相關關係，如下所示：
 
 ```php
 <?php

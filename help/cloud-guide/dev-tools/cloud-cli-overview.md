@@ -13,9 +13,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 862
+source-wordcount: 859
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->這是本機工具，僅支援Unix作業系統。 不支援Windows。 無法使用此頁面所述的方法將其安裝在雲端環境（唯讀）上。 您只能透過下列&#x200B;**部署工作流程**&#x200B;之一在雲端環境中安裝模組。
+>此本機工具僅支援基於Unix的作業系統。 不支援Windows。 無法使用此頁面所述的方法將其安裝在雲端環境（唯讀）上。 您只能透過下列&#x200B;**部署工作流程**&#x200B;之一在雲端環境中安裝模組。
 >
 >- [專業部署工作流程](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
 >- [入門部署工作流程](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
@@ -105,7 +105,11 @@ magento-cloud environment:list
 
 ### 重新部署環境
 
-不使用推播觸發重新部署。 驗證並確認要重新部署的環境。 如果有處於擱置狀態的組建，請勿使用重新部署。
+不使用推播觸發重新部署。 驗證並確認要重新部署的環境。
+
+>[!CAUTION]
+>
+>如果有處於擱置狀態的組建，請勿使用重新部署。
 
 ```bash
 magento-cloud environment:redeploy
@@ -121,7 +125,7 @@ Are you sure you want to redeploy the environment <environment-name>? [Y/n]
 
 ## Git命令
 
-您可能會注意到其中有些指令類似於Git指令。 `magento-cloud`命令會直接連線至具有其他功能的Git型Cloud專案。 如果您未使用`magento-cloud` CLI建立分支，則不會「啟動」，而且當您推送變更至遠端環境時，也不會自動建置。 `magento-cloud` CLI命令包含啟用。
+其中有些指令類似於Git指令。 `magento-cloud`命令會直接連線至具有其他功能的Git型Cloud專案。 如果您未使用`magento-cloud` CLI建立分支，則不會「啟動」，而且當您推送變更至遠端環境時，也不會自動建置。 `magento-cloud` CLI命令包含啟用。
 
 若要建立分支，請使用`magento-cloud`命令，讓分支啟動。
 
@@ -190,7 +194,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
    >
    >您可以使用`magento-cloud environment:branch <environment-name> <parent-environment-ID>`命令語法來建立環境分支。 建立及啟用環境分支可能需要一些額外的時間。
 
-1. 使用環境ID將任何更新的程式碼提取到您的本機。 如果環境分支是新的，則不需要這樣做。
+1. 使用環境ID將任何更新的程式碼提取到您的本機環境。 如果環境分支是新的，則不需要執行此步驟。
 
    ```bash
    git pull origin <environment-ID>

@@ -24,9 +24,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 806
+source-wordcount: 808
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ ht-degree: 0%
 
 - [PHP](../application/php-settings.md)
 - [MySQL](../services/mysql.md)
-- [Redis](../services/redis.md)
+- [Redis](../services/redis.md)或[Valkey](../services/valkey.md)
 - [RabbitMQ](../services/rabbitmq.md)
 - [ActiveMQ](../services/activemq.md)
 - [Elasticsearch](../services/elasticsearch.md)

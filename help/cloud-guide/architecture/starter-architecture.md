@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fb61610380b7b60e274ce8c89f7dda41674f1107
+source-git-commit: 8465292300c871aaa85e57cbb25e7ae5358bcd2f
 workflow-type: tm+mt
-source-wordcount: 1007
+source-wordcount: 1010
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Adobe建議從`master`建立名為`staging`的分支。 `staging`分支將程式
 
 若要在整合環境中取得最佳效能，請遵循下列最佳實務：
 
-- 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。請嘗試將目錄大小縮減至約4,000至5,000種產品。
+- 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。 請嘗試將目錄大小縮減至約4,000至5,000種產品。
 若要檢查目錄中的產品數目，請執行下列MySQL查詢：
 
   ```sql
@@ -104,13 +104,12 @@ Adobe建議從`master`建立名為`staging`的分支。 `staging`分支將程式
 
 - Fastly用於HTTP快取和CDN
 - 與PHP-FPM對話的Nginx網頁伺服器，一個執行個體具有多個背景工作
-- Redis伺服器
-- 適用於Adobe Commerce 2.2至2.4.3-p2目錄搜尋的Elasticsearch
-- Adobe Commerce 2.3.7-p3、2.4.3-p2及2.4.4和更新版本的目錄搜尋OpenSearch
+- Redis或Valkey伺服器
+- Adobe Commerce 2.4.4和更新版本的目錄搜尋OpenSearch
 
 ### 服務
 
-雲端基礎結構上的Adobe Commerce目前支援下列服務：PHP、MySQL (MariaDB)、Elasticsearch （Adobe Commerce 2.2到2.4.3-p2）、OpenSearch （2.3.7-p3、2.4.3-p2、2.4.4和更新版本）、Redis和[!DNL RabbitMQ]。
+雲端基礎結構上的Adobe Commerce目前支援下列服務：PHP、MySQL (MariaDB)、OpenSearch （2.4.4和更新版本）、Redis或Valkey以及[!DNL RabbitMQ]。
 
 每個服務會在個別、安全的容器中執行。 容器在專案中一起管理。 有些是標準服務，例如：
 
@@ -130,7 +129,7 @@ Adobe建議從`master`建立名為`staging`的分支。 `staging`分支將程式
 
 - [MySQL](../services/mysql.md)
 
-- [Redis](../services/redis.md)
+- [Redis](../services/redis.md)或[Valkey](../services/valkey.md)
 
 - [RabbitMQ](../services/rabbitmq.md)
 

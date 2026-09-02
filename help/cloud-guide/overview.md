@@ -1,6 +1,6 @@
 ---
 title: 雲端基礎結構上的Commerce
-description: 了解如何建置、部署和管理雲端基礎結構上的 Commerce。
+description: 瞭解如何在雲端基礎結構上建置、部署和管理Adobe Commerce，這是一種跨AWS和Azure區域託管的安全平台即服務(PaaS)。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
 TQID: https://experienceleague.adobe.com/-sgz85xapPKNipyFVB4yMrLilEku3ff5IJg3OddymsA
 product_v2:
@@ -16,19 +16,19 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2026-08-25
-source-git-commit: ccff84c55425e8e4f91812b54f5e6ccf9a700104
+last-update: 2026-08-28
+source-git-commit: d5d947f9858ab15e2e5daed7848163846580f883
 workflow-type: tm+mt
-source-wordcount: 324
-ht-degree: 3%
+source-wordcount: 356
+ht-degree: 0%
 
 ---
 
 # 雲端基礎結構上的Commerce
 
-雲端基礎結構上的Adobe Commerce提供自動化託管平台，在雲端原生環境中建置、部署及管理您的[!DNL Commerce]應用程式時，可採用&#x200B;**自助服務**&#x200B;方法。 雲端基礎結構上的Adobe Commerce除了內部部署Adobe Commerce和Magento Open Source平台外，還隨附其他功能：
+雲端基礎結構上的Adobe Commerce提供自動化託管平台，在雲端原生環境中建置、部署及管理您的[!DNL Commerce]應用程式時，可採用&#x200B;**自助服務**&#x200B;方法。 雲端基礎結構上的Adobe Commerce隨附其他功能，可與內部部署Adobe Commerce和Magento Open Source平台區分開來：
 
-- 預先布建的基礎結構，包括PHP、MySQL (MariaDB)、Redis、訊息佇列服務（[!DNL RabbitMQ]或[!DNL ActiveMQ]）以及支援的搜尋引擎技術。
+- 預先布建的基礎結構，包括PHP、MySQL (MariaDB)、Redis或Valkey、訊息佇列服務（[!DNL RabbitMQ]或[!DNL ActiveMQ]）以及支援的搜尋引擎技術。
 - Git型工作流程，具有自動建置和部署功能，可在您每次推播Platform as a Service (PaaS)環境中的程式碼變更時，有效率地快速開發和持續部署。
 - 可高度自訂的環境組態檔和命令列介面(CLI)管理與部署工具。
 - Amazon Web Services (AWS)主機服務，為線上銷售及零售提供可擴充且安全的環境。
@@ -58,7 +58,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> 僅限在中國及俄羅斯進行內部部署。
+> 雲端基礎結構上的Adobe Commerce在中國或俄羅斯無法使用。 在這些國家/地區僅支援內部部署。
 
 ## Azure地區
 
@@ -66,7 +66,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> 僅限在中國及俄羅斯進行內部部署。 所有需要整合環境的商家都必須使用美國地區。
+> 中國和俄羅斯僅支援內部部署。 所有需要整合環境的商家都必須使用美國地區。
 
 ## Adobe Commerce檔案
 

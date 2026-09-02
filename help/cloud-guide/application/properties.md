@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 330a8bbd9298a28b5c007f4a79f684ce7adca9ff
 workflow-type: tm+mt
-source-wordcount: 857
+source-wordcount: 858
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 | [`hooks`](hooks-property.md) | 自訂建置、部署和部署後階段的殼層命令 | — | 否 |
 | [`mounts`](#mounts) | 設定路徑 | 路徑：<ul><li>`"var": "shared:files/var"`</li><li>`"app/etc": "shared:files/etc"`</li><li>`"pub/media": "shared:files/media"`</li><li>`"pub/static": "shared:files/static"`</li></ul> | 否 |
 | [`name`](#name) | 定義應用程式名稱 | `mymagento` | 是 |
-| [`relationships`](#relationships) | 對應服務 | 服務：<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | 否 |
+| [`relationships`](#relationships) | 對應服務 | 服務：<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`或`valkey: "cache:valkey"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | 否 |
 | [`runtime`](#runtime) | 執行階段屬性包含[!DNL Commerce]應用程式所需的擴充功能。 | 擴充功能：<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | 是 |
 | [`type`](#type-and-build) | 設定基本容器影像 | `php:8.3` | 是 |
 | [`variables`](variables-property.md) | 為特定Commerce版本套用環境變數 | — | 否 |

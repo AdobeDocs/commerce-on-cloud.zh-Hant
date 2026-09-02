@@ -21,9 +21,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 413
+source-wordcount: 415
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 0%
    Adobe會定期分析您的虛擬運算資源(vCPU)使用量，並自動配置資源以最佳化您的長期使用量，並降低超出年度vCPU日允許量上限的風險。 如果您預期特定期間的網站流量會增加，您必須繼續開啟支援票證，以[要求暫時升級](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)。
 
 1. [**Platform as a Service**](cloud-architecture.md)：雲端基礎結構專案上的每個Adobe Commerce都提供Platform as a Service (PaaS)整合環境，用於開發、測試和整合服務。
-1. [**Adobe Commerce**](../project/overview.md)：雲端基礎結構上的Adobe Commerce提供預先布建的基礎結構，其中包括PHP、MySQL (MariaDB)、Redis、訊息佇列服務（[!DNL RabbitMQ]或[!DNL ActiveMQ]），以及支援的搜尋引擎技術。
+1. [**Adobe Commerce**](../project/overview.md)：雲端基礎結構上的Adobe Commerce提供預先布建的基礎結構，其中包括PHP、MySQL (MariaDB)、Redis或Valkey、訊息佇列服務（[!DNL RabbitMQ]或[!DNL ActiveMQ]）以及支援的搜尋引擎技術。
 1. [**效能工具**](../monitor/new-relic-service.md)： New Relic效能工具可讓您透過收集、分析和顯示雲端基礎結構專案上來自Adobe Commerce的資料，來偵錯、監視和管理您的應用程式和基礎結構。
 1. [**內容傳遞網路(CDN)、Web應用程式防火牆([!DNL WAF])和影像最佳化(IO)**](../cdn/fastly.md)：
 

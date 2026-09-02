@@ -3,16 +3,16 @@ title: Adobe Commerce進階安全性
 description: 瞭解進階安全性如何在雲端基礎結構上的Adobe Commerce中新增機器人管理、進階速率限制和第7層DDoS保護。
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: '2482'
+source-wordcount: '2487'
 ht-degree: 0%
 
 ---
 
 # [!DNL Adobe Commerce Advanced Security]
 
-[!DNL Adobe Commerce Advanced Security]是與[!DNL Adobe Commerce on Cloud Infrastructure]搭配使用的產品，可讓您的線上商店保持快速、可用和安全。 這有助於保護營收、減少停機時間，並在流量尖峰事件和自動攻擊期間維持客戶信任。
+[!DNL Adobe Commerce Advanced Security]是與[!DNL Adobe Commerce on Cloud Infrastructure]搭配使用的產品，可讓您的線上商店保持快速、可用和安全。 這些功能有助於在流量尖峰事件和自動攻擊期間保護營收、減少停機時間，並維持客戶信任。
 
 [!DNL Adobe Commerce on Cloud Infrastructure]包含內建[第3層和第4層DDoS保護](./fastly.md#ddos-protection)以及[Web應用程式防火牆(WAF)](./fastly-waf-service.md)。 在[共用職責模型](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/security-and-compliance/shared-responsibility)下，第7層DDoS偵測、機器人保護和主動IP封鎖是商家職責，[!DNL Adobe Commerce Advanced Security]旨在解決這些職責。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 - **[DDoS保護](https://docs.fastly.com/products/fastly-ddos-protection)** — 提供第7層（應用程式層） DDoS保護，超出所有[!DNL Adobe Commerce on Cloud Infrastructure]專案所包含的現有第3層和第4層保護。 DDoS Protection服務會吸收大規模體積攻擊，並確保在分散式拒絕服務(DDoS)事件期間能持續使用應用程式，保護尖峰流量期間的營收。
 
-- **[進階速率限制](https://www.fastly.com/documentation/guides/next-gen-waf/rules/working-with-advanced-rate-limiting-rules/)** — 提供可設定的速率限制規則，可保護特定URL、API端點和應用程式資源不受濫用。 進階速率限制服務超越了透過Fastly CDN模組提供的[基本速率限制](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)，以鎖定特定流量模式和攻擊向量，減少基礎建設緊張和雲端成本。
+- **[進階速率限制](https://www.fastly.com/documentation/guides/next-gen-waf/rules/working-with-advanced-rate-limiting-rules/)** — 提供可設定的速率限制規則，可保護特定URL、API端點和應用程式資源不受濫用。 進階速率限制服務可延伸透過Fastly CDN模組提供的[基本速率限制](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)，以鎖定特定流量模式和攻擊向量，減少基礎建設緊張和雲端成本。
 
 >[!NOTE]
 >
@@ -69,7 +69,7 @@ ht-degree: 0%
 | 特定API或URL模式的動態挑戰 | 只有在與客戶共同作業時才會進行設定 | 封鎖的流量會顯示在`Agent_response`下的New Relic記錄檔中 |
 | 瀏覽器挑戰 | 只有在與客戶共同作業時才會進行設定 | 封鎖的流量會顯示在`Agent_response`下的New Relic記錄檔中 |
 
-## 可觀察性 — 監控機器人保護和NGWAF活動
+## 監視機器人保護和NGWAF活動
 
 CDN記錄檔會自動轉送至客戶的New Relic帳戶。 如需其他詳細資料，請參閱[記錄檔管理](../monitor/log-management.md)。
 
@@ -198,7 +198,7 @@ CDN記錄檔包含來自Signal Sciences （機器人保護/新一代WAF）的內
 - **[原始遮罩](./fastly.md#origin-cloaking)** — 確保所有流經Fastly的流量路由，封鎖對原始伺服器的直接存取。
 - **[VCL型安全性片段](./fastly-vcl-custom-snippets.md)** — 適用於IP封鎖、加入允許清單及要求篩選的自訂清漆組態語言(VCL)規則。
 
-### [!DNL Advanced Security]
+### 針對進階安全性提供額外保護
 
 [!DNL Advanced Security]提供的保護比[!DNL Adobe Commerce on Cloud Infrastructure]包含的內建保護更強大，但需額外付費：
 
@@ -269,7 +269,7 @@ CDN記錄檔包含來自Signal Sciences （機器人保護/新一代WAF）的內
 [!DNL Advanced Security]提供邊緣層店面保護。 下列功能無法使用，最適合搭配互補解決方案使用：
 
 - **交易層級的詐騙評分**—[!DNL Advanced Security]不會評估個別付款交易的詐騙風險。 使用專用的防欺詐平台進行交易層級的評分。
-- **識別與存取管理(IAM)**—[!DNL Advanced Security]未管理使用者驗證、授權或工作階段管理。 這些仍然是客戶的責任。
+- **識別與存取管理(IAM)**—[!DNL Advanced Security]未管理使用者驗證、授權或工作階段管理。 這些專案仍為客戶責任。
 - **靜態和動態應用程式安全性測試(SAST/DAST)**—[!DNL Advanced Security]不包含程式碼層級的弱點掃描或滲透測試。
 - **API安全性** — 雖然進階速率限制可以保護API端點不受濫用，但是未提供如結構描述驗證和API閘道管理的完整API安全性功能。
 - **完全預防詐騙**—[!DNL Advanced Security]著重於邊緣層店面保護，不是完整的詐騙管理平台。

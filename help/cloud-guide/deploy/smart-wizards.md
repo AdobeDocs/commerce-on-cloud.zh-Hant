@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 326
+source-wordcount: 328
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 智慧型精靈可協助您判斷雲端設定是否遵循最佳實務。 可用的精靈可協助進行下列設定：
 
 - 最理想的狀態，可將部署停機時間降到最低
-- 資料庫和Redis的負載平衡設定
+- 資料庫和Redis或Valkey的負載平衡設定
 - 隨選、建置階段或部署階段的靜態內容部署(SCD)
 
 每個智慧型精靈指令都會提供驗證回應，以及適當設定的建議（如適用）。

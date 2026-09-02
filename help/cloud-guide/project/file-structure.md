@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 473
+source-wordcount: 475
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 | 檔案 | 說明 |
 | ------------------------- | ------------ |
 | `/.magento/routes.yaml` | 將`www`重新導向至Apex網域和`php`應用程式以提供HTTP的組態檔。 請參閱[設定路由](../routes/routes-yaml.md)。 |
-| `/.magento/services.yaml` | 定義MySQL執行個體(MariaDB)、Redis以及OpenSearch或Elasticsearch的組態檔。 請參閱[設定服務](../services/services-yaml.md)。 |
+| `/.magento/services.yaml` | 定義MySQL執行個體(MariaDB)、Redis或Valkey以及OpenSearch或Elasticsearch的組態檔。 請參閱[設定服務](../services/services-yaml.md)。 |
 | `/app` | `code`資料夾用於自訂模組。 `design`資料夾用於[自訂主題](../store/custom-theme.md)。 `etc`資料夾包含應用程式的組態檔。 |
 | `/m2-hotfixes` | 用於自訂修補程式。 |
 | `/update` | 支援模組使用的服務資料夾。 |

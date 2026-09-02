@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: c754e69243236bbf862ea636261c6d2a6cae9eb7
 workflow-type: tm+mt
 source-wordcount: 706
 ht-degree: 0%
@@ -33,14 +33,14 @@ ht-degree: 0%
 `.magento.env.yaml`檔案包含兩個區段： `stage`和`log`。 `stage`區段會控制[雲端部署程式](../deploy/process.md)階段期間發生的動作。
 
 - `stage` — 使用階段區段來定義下列部署階段的特定動作：
-   - `global` — 控制建置、部署和部署後階段的動作。 您可以在「建置」、「部署」和「部署後」區段中覆寫這些設定。
-   - `build` — 僅控制建置階段中的動作。 如果您未在此區段中指定設定，則建置階段會使用全域區段的設定。
-   - `deploy` — 僅控制部署階段中的動作。 如果您未在此段落中指定設定，部署階段會使用全域段落中的設定。
-   - `post-deploy` — 控制部署應用程式後&#x200B;_的動作_&#x200B;以及容器開始接受連線&#x200B;_後的_。
+  - `global` — 控制建置、部署和部署後階段的動作。 您可以在「建置」、「部署」和「部署後」區段中覆寫這些設定。
+  - `build` — 僅控制建置階段中的動作。 如果您未在此區段中指定設定，則建置階段會使用全域區段的設定。
+  - `deploy` — 僅控制部署階段中的動作。 如果您未在此段落中指定設定，部署階段會使用全域段落中的設定。
+  - `post-deploy` — 控制部署應用程式後&#x200B;_的動作_&#x200B;以及容器開始接受連線&#x200B;_後的_。
 - `log` — 使用記錄區段來設定[通知](set-up-notifications.md)，包括通知型別和詳細資訊層級。
-   - `slack` — 設定要傳送至Slack機器人的訊息。
-   - `email` — 設定要傳送給一或多個電子郵件收件者的電子郵件。
-   - [記錄處理常式](log-handlers.md) — 設定傳送至遠端記錄伺服器的軟硬體應用程式訊息。
+  - `slack` — 設定要傳送至Slack機器人的訊息。
+  - `email` — 設定要傳送給一或多個電子郵件收件者的電子郵件。
+  - [記錄處理常式](log-handlers.md) — 設定傳送至遠端記錄伺服器的軟硬體應用程式訊息。
 
 ### 環境變數
 
@@ -172,7 +172,7 @@ stage:
     SCD_STRATEGY: compact
     SCD_MATRIX:
       ...
-    REDIS_USE_SLAVE_CONNECTION: 1
+    MYSQL_USE_SLAVE_CONNECTION: 1
 ```
 
 >啟用「組態管理」後，將SCD_*變數移至建置階段：
@@ -182,10 +182,9 @@ stage:
     CRON_CONSUMERS_RUNNER:
       cron_run: true
       consumers: []
-    REDIS_USE_SLAVE_CONNECTION: 1
+    MYSQL_USE_SLAVE_CONNECTION: 1
   build:
     SCD_STRATEGY: compact
     SCD_MATRIX:
       ...
 ```
-
