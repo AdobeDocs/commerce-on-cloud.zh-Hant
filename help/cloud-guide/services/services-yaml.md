@@ -1,6 +1,6 @@
 ---
 title: 設定服務
-description: 瞭解如何在雲端基礎結構上設定Adobe Commerce使用的服務。
+description: 瞭解如何在雲端基礎結構上設定Adobe Commerce使用的服務，例如MySQL、Redis和Elasticsearch。
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
 TQID: https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg
@@ -14,20 +14,21 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+last-update: 2026-09-01
+source-git-commit: 0f88ef7d75bc2a02eb7988dc815071c5894a4662
 workflow-type: tm+mt
-source-wordcount: 1187
+source-wordcount: 1176
 ht-degree: 0%
 
 ---
 
 # 設定服務
 
-`services.yaml`檔案定義Adobe Commerce在雲端基礎結構上支援及使用的服務，例如MySQL、Redis和Elasticsearch或OpenSearch。 您不需要訂閱外部服務提供者。
+`services.yaml`檔案定義Adobe Commerce在雲端基礎結構上支援及使用的服務，例如MySQL、Redis或Valkey，以及Elasticsearch或OpenSearch。 您不需要訂閱外部服務提供者。
 
 >[!NOTE]
 >
->`.magento/services.yaml`檔案是在您專案的`.magento`目錄中本機管理的。 在部署期間，雲端基礎結構上的Adobe Commerce會使用此設定，為目標環境布建支援的服務。 `.magento`目錄會在部署後從遠端伺服器移除，因此在部署的環境中找不到`services.yaml`。
+>`.magento/services.yaml`檔案是在您專案的`.magento`目錄中本機管理的。 在部署期間，雲端基礎結構上的Adobe Commerce會使用此設定，為目標環境布建支援的服務。 `.magento`目錄會在部署後從遠端伺服器移除，因此部署的環境中不存在`services.yaml`。
 
 部署指令碼使用`.magento`目錄中的組態檔，以設定的服務布建環境。 如果服務包含在`.magento.app.yaml`檔案的[`relationships`](../application/properties.md#relationships)屬性中，您的應用程式便可使用它。 `services.yaml`檔案包含&#x200B;_型別_&#x200B;和&#x200B;_磁碟_&#x200B;值。 服務型別定義服務&#x200B;_名稱_&#x200B;和&#x200B;_版本_。
 
@@ -40,7 +41,7 @@ ht-degree: 0%
 - 所有入門環境，包括生產`master`
 - Pro整合環境
 
-{{pro-update-service}}
+{{$include /help/_includes/pro-services-support.md}}
 
 ## 預設與支援的服務
 
@@ -48,16 +49,15 @@ ht-degree: 0%
 
 - [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
-- [Valkey](valkey.md)
-- [Redis](redis.md)
+- [Redis](redis.md)或[Valkey](valkey.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->您必須在可用版本[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之間依序升級RabbitMQ，例如，您無法直接從3.9升級至4.1
+>[在可用的版本](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之間依序升級RabbitMQ。 例如，請勿直接從3.9升級至4.1。
 >
->升級至新版RabbitMQ後，請觸發完整部署，以確保在RabbitMQ中重新建立自訂訊息佇列。
+>為了確保升級至新版本後，在RabbitMQ中重新建立自訂訊息佇列，請觸發完整部署。
 
 ## 檢視已設定的服務和版本
 
@@ -88,7 +88,7 @@ activemq-artemis:
 
 ## 服務值
 
-您必須提供服務識別碼和服務型別組態`type: <name>:<version>`。 如果服務使用永久儲存體，則必須提供磁碟值。
+提供服務識別碼和服務型別組態`type: <name>:<version>`。 如果服務使用永久儲存體，則必須提供磁碟值。
 
 使用以下格式：
 
@@ -100,29 +100,29 @@ activemq-artemis:
 
 ### `service-id`
 
-`service-id`值會識別專案中的服務。 您只能使用小寫字母數字字元： `a`到`z`和`0`到`9`，例如`redis`。
+`service-id`值會識別專案中的服務。 您只能使用小寫字母數字字元： `a`到`z`和`0`到`9`，例如`valkey`。
 
 此&#x200B;_service-id_&#x200B;值用於`.magento.app.yaml`組態檔的[`relationships`](../application/properties.md#relationships)屬性：
 
 ```yaml
 relationships:
-    redis: "<name>:redis"
+    valkey: "valkey:valkey"
 ```
 
-您可以為每種服務型別的多個執行個體命名。 例如，您可以使用多個Redis例項，一個用於作業階段，一個用於快取。
+您可以為每種服務型別的多個執行個體命名。 例如，您可以使用多個Valkey例項，一個用於工作階段，一個用於快取。
 
 ```yaml
-redis:
-    type: redis:<version>
+valkey:
+    type: valkey:<version>
 
-redis2:
-    type: redis:<version>
+valkey2:
+    type: valkey:<version>
 ```
 
-重新命名`services.yaml`檔案&#x200B;**中的服務將會永久移除**&#x200B;下列專案：
+重新命名`services.yaml`檔案中的服務：
 
 - 使用您指定的新名稱建立服務之前的現有服務。
-- 服務的所有現有資料都會被移除。 Adobe強烈建議您[先備份您的入門環境](../storage/snapshots.md)，然後再變更現有服務的名稱。
+- 服務的所有現有資料都會被移除。 Adobe建議您[先備份您的Starter環境](../storage/snapshots.md)，然後再變更現有服務的名稱。
 
 ### `type`
 
@@ -135,7 +135,7 @@ mysql:
 
 ### `disk`
 
-`disk`值指定要配置給服務的永久磁碟儲存大小（以MB為單位）。 使用永久儲存體的服務（例如MySQL）必須提供磁碟值。 使用記憶體而非永久儲存體的服務（例如Redis）不需要磁碟值。
+`disk`值指定要配置給服務的永久磁碟儲存大小（以MB為單位）。 使用永久儲存體的服務（例如MySQL）必須提供磁碟值。 使用記憶體而非永久儲存體的服務（例如Valkey）不需要磁碟值。
 
 ```yaml
 mysql:
@@ -143,7 +143,7 @@ mysql:
     disk: 5120
 ```
 
-目前每個專案的預設儲存容量為5 GB，即512 0MB。 您可以在應用程式及其每項服務之間分配此金額。
+目前每個專案的預設儲存容量為5 GB或5120 MB。 您可以在應用程式及其每項服務之間分配此金額。
 
 ## 服務關係
 
@@ -151,7 +151,7 @@ mysql:
 
 您可以從[`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md)環境變數擷取所有服務關係的設定資料。 設定資料包括服務名稱、型別和版本，以及任何必要的連線詳細資訊，例如連線埠號碼和登入認證。
 
-**若要驗證您本機開發環境的關係**：
+### 驗證來自您本機開發環境的關係
 
 1. 從您的本機開發環境中，顯示使用中環境的關係。
 
@@ -164,10 +164,10 @@ mysql:
    >縮寫的範例回應
 
    ```yaml
-   redis:
+   valkey:
        -
    ...
-           type: 'redis:7.0'
+           type: 'valkey:8.0'
            port: 6379
    opensearch:
        -
@@ -181,7 +181,7 @@ mysql:
            port: 3306
    ```
 
-**若要驗證遠端環境中的關係**：
+### 驗證遠端環境中的關係
 
 1. 使用SSH登入遠端環境。
 
@@ -197,11 +197,11 @@ mysql:
    php ./vendor/bin/ece-tools env:config:show services
    ```
 
-1. 確認回應中的`service`和`type`。 回應會提供連線資訊，例如IP位址和連線埠號碼，以及任何必要的使用者名稱和密碼認證。
+1. 確認回應中的`service`和`type`。 回應會提供連線資訊，例如IP位址、連線埠號碼，以及必要的使用者名稱和密碼認證。
 
 ## 服務版本
 
-雲端基礎結構上Adobe Commerce的服務版本和相容性支援取決於雲端基礎結構上部署和測試的版本，有時與Adobe Commerce內部部署支援的版本不同。 請參閱&#x200B;_安裝_&#x200B;指南中的[系統需求](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/system-requirements)，以取得Adobe已針對特定Adobe Commerce和Magento Open Source版本測試的協力廠商軟體相依性清單。
+在雲端基礎結構上部署和測試的版本，會決定雲端基礎結構上Adobe Commerce的服務版本和相容性支援，這有時與Adobe Commerce內部部署支援的版本不同。 請參閱&#x200B;_安裝_&#x200B;指南中的[系統需求](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/system-requirements)，以取得Adobe已針對特定Adobe Commerce和Magento Open Source版本測試的協力廠商軟體相依性清單。
 
 ### 軟體EOL檢查
 
@@ -270,7 +270,7 @@ mysql:
 
 當您變更服務版本時，您必須更新`services.yaml`檔案中的服務組態，並更新`.magento.app.yaml`檔案中的關聯性。
 
-**若要藉由重新命名現有服務來降級服務版本**：
+#### 重新命名現有服務以降級服務版本
 
 1. 重新命名`.magento/services.yaml`檔案中的現有服務並變更版本。
 
@@ -314,7 +314,7 @@ mysql:
 
 1. 新增、提交和推送您的程式碼變更。
 
-**若要藉由建立服務來降級服務**：
+#### 藉由建立服務來降級服務
 
 1. 將服務定義新增至具有降級版本規格的專案的`services.yaml`檔案。 請參閱下列範例中的&#x200B;_mysql2_：
 
@@ -329,7 +329,7 @@ mysql:
        disk: 5120
    ```
 
-1. 變更`.magento.app.yaml`檔案中的關係設定以使用新服務。
+1. 若要使用新服務，請變更`.magento.app.yaml`檔案中的關係組態。
 
    > 原始`.magento.app.yaml`設定
 

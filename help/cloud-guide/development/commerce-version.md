@@ -15,9 +15,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+last-update: 2026-09-01
+source-git-commit: 0f88ef7d75bc2a02eb7988dc815071c5894a4662
 workflow-type: tm+mt
-source-wordcount: 1024
+source-wordcount: 1050
 ht-degree: 0%
 
 ---
@@ -29,18 +30,18 @@ ht-degree: 0%
 根據環境型別（開發、測試或生產），您的升級任務可能包括以下內容：
 
 - 將協力廠商擴充功能升級至最新支援的版本。
-- 對於Pro專案，您必須提交Adobe Commerce支援票證，才能在中繼和生產環境中安裝或更新服務。
-- 對於開發/整合/PR分支：
-  - 使用MariaDB (MySQL)、OpenSearch、RabbitMQ和Redis的新版本更新`.magento/services.yaml`檔案，以相容於新的Adobe Commerce版本。
-  - 以掛接和環境變數的新設定更新`.magento.app.yaml`檔案。
+- 以MariaDB (MySQL)、OpenSearch、RabbitMQ以及Redis或Valkey的必要服務版本更新`.magento/services.yaml`檔案，使其與目標Adobe Commerce版本保持相容。
+  - 對於開發/整合/PR分支，這些變更會直接用作環境設定的一部分。
+  - 對於Pro測試和生產環境，Adobe Commerce支援會執行實際的服務安裝或更新，但您仍必須保持`.magento/services.yaml`最新、完整和有效，因為其內容在部署期間經過驗證。
+- 以掛接和環境變數的新設定更新`.magento.app.yaml`檔案。
 
 {{upgrade-tip}}
 
-{{pro-update-service}}
+{{$include /help/_includes/pro-services-support.md}}
 
 ## 組態檔
 
-在升級應用程式之前，您必須更新專案設定檔，以考慮雲端基礎結構或應用程式上Adobe Commerce預設設定值的變更。 您可以在[magento-cloud GitHub存放庫](https://github.com/magento/magento-cloud)中找到最新的預設值。
+若要說明雲端基礎結構或應用程式上Adobe Commerce預設組態設定的變更，請在升級應用程式之前更新您的專案組態檔。 您可以在[magento-cloud GitHub存放庫](https://github.com/magento/magento-cloud)中找到最新的預設值。
 
 ### composer.json
 
@@ -84,7 +85,7 @@ ht-degree: 0%
 
 ## 環境備份
 
-我們建議在升級之前建立執行個體的備份。 使用下列步驟來備份您的整合、測試和生產環境。
+Adobe建議在升級前建立執行個體的備份。 使用下列步驟來備份您的整合、測試和生產環境。
 
 **若要備份您的整合環境資料庫和程式碼**：
 
@@ -164,7 +165,7 @@ ht-degree: 0%
 
    **方法2**： [檢視可用的修補程式和狀態](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法3**： [搜尋修補程式](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hant)
+   **方法3**： [搜尋修補程式](https://experienceleague.adobe.com/zh-hant/tools/commerce-quality-patches)
 
 
 1. 新增、提交和推送程式碼變更。
@@ -185,7 +186,7 @@ ht-degree: 0%
 
    Composer封送處理的檔案屬於新版Adobe Commerce，以便覆寫這些相同檔案的過時版本。 目前，Adobe Commerce中已停用封送處理，因此您必須將封送處理檔案新增至原始檔控制。
 
-1. 等待部署完成。
+1. 若要完成升級，請等待部署。
 
 1. 使用SSH登入並檢查版本，在整合、測試或生產環境中驗證升級。
 
@@ -213,9 +214,9 @@ ht-degree: 0%
 
 1. 推送至並在您的整合環境中測試。
 
-1. 推送至測試環境，以便在預先生產環境中測試。
+1. 若要在預先生產環境中測試，請推送至測試環境。
 
-Adobe強烈建議您在網站啟動程式中&#x200B;_之前升級您的生產環境_，包括升級的擴充功能。
+Adobe建議在&#x200B;_之前升級您的生產環境_，包括在您的網站啟動程式中升級的擴充功能。
 
 >[!NOTE]
 >

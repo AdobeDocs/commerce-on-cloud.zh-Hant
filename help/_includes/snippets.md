@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5fefabb5795e68abd467a7115bc2a6e554e0d832
+source-git-commit: 67ed09e3b7c5f5218407b6648e8ca2c32933bbda
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->雲端基礎結構上的Adobe Commerce不支援Elasticsearch 7和更新版本。 Adobe Commerce版本2.3.7-p3、2.4.3-p2以及2.4.4和更新版本支援OpenSearch服務。
+>雲端基礎結構上的Adobe Commerce不支援Elasticsearch 7和更新版本。 Adobe Commerce 2.4.4和更新版本支援OpenSearch服務。
 
 ## 增強型整合 {#enhanced-integration-envs}
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe強烈建議您在雲端基礎結構專案上為Adobe Commerce使用私人存放庫，以保護任何專屬資訊或開發工作，例如擴充功能和敏感設定。
+>Adobe建議您在雲端基礎結構專案上為Adobe Commerce使用私人存放庫，以保護任何專屬資訊或開發工作，例如擴充功能和敏感設定。
 
 ## 專業自助服務警告 {#pro-self-service-warning}
 
@@ -41,44 +41,13 @@ ht-degree: 0%
 >有些&#x200B;**Pro專案**&#x200B;需要Adobe支援的協助，才能更新`routes.yaml`檔案中的路由設定和`.magento.app.yaml`檔案中的cron設定。 Adobe建議先在整合環境中進行及驗證所有YAML設定變更，然後將其部署至中繼環境。
 >
 >
->如果重新部署後您的變更未反映在測試網站上，且記錄檔中沒有相關的錯誤訊息，您&#x200B;**必須** [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 在票證中，清楚說明您嘗試的組態變更，並在票證中附加任何更新的YAML組態檔。
-
-## Pro服務支援 {#pro-update-service}
-
->[!BEGINSHADEBOX]
-
-- 對於Pro專案，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，才能僅在`Staging`和`Production`環境中安裝或更新[服務](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
-
-- 指示所需的服務變更，包括更新的`.magento.app.yaml`和`services.yaml`檔案，並在票證中說明PHP版本。 如需自行變更PHP版本、擴充功能或環境設定，請參閱&#x200B;_應用程式組態_&#x200B;中的[PHP設定](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/php-settings)。
-
-  >[!IMPORTANT]
-  >
-  >在新票證表單中選取「環境」欄位時，請使用Adobe的環境命名。 例如，即使您在內部呼叫該環境&#x200B;**Dev**，也選取「暫存」。 您可以在說明中提及內部名稱，但「環境」欄位本身必須使用Adobe的命名法。
-
-- 若要變更即時生產環境（**僅限Pro**），至少需要48小時的通知。 這可讓雲端基礎結構團隊有充足的時間來調配資源並進行安全升級。 通知期間從基礎架構團隊認可請求並安排升級（不包括週末）開始。 例如，若要在星期一完成服務升級，必須在星期三收到排程升級的確認。 在需求尖峰期間，處理您的請求可能需要更多時間。
-
-  >[!NOTE]
-  >
-  >所有排程的維護時段都必須以UTC格式提供，以確保所有通訊的清晰度和一致性。 無法在中繼環境中排程服務升級；在大多數情況下，在中繼環境中進行的升級會在請求執行的同一天進行。
-  >
-  >如果您要求RabbitMQ升級，請務必在升級完成後重新部署環境，以便重新初始化訊息佇列。
-
-- **排程升級的兩部分交握程式**
-
-  為確保升級流程順暢且協調，Adobe Commerce支援會針對所有生產環境升級遵循兩部分交握流程：
-
-  1. **客戶確認**： Adobe支援會先要求客戶確認所需的升級日期和時間。 此步驟可確保時間安排符合客戶的業務需求和維護期間。
-  2. **排程與最終確認**：客戶確認時間後，Adobe支援將請求提交給基礎結構團隊，然後該團隊會稽核請求並提供排程升級期間的最終確認。
-
-在基礎架構團隊提供最終確認前，不會將升級視為已排程。 我們鼓勵客戶在升級時段前至少48小時立即回應，以免延遲，並允許適當通知。
-
->[!ENDSHADEBOX]
+>如果重新部署後您的變更未反映在測試網站上，且記錄檔中沒有相關的錯誤訊息，則您&#x200B;**必須** [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 在票證中，清楚說明您嘗試的組態變更，並在票證中附加任何更新的YAML組態檔。
 
 ## 專業備份 {#pro-backups}
 
 >[!TIP]
 >
->在Pro測試和生產環境中，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以擷取票證中的特定備份，並註明日期、時間和時區。
+>若要在Pro測試和生產環境中擷取特定備份，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，並在票證中註明日期、時間和時區。
 >
 >Adobe **不會**&#x200B;從自動備份還原任何環境。 請參閱[從測試或生產還原資料庫快照](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production)，以取得選擇還原測試或生產快照的方法。
 
@@ -118,13 +87,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以變更Pro生產和中繼環境上的服務組態。
+>若要變更Pro生產和中繼環境上的服務組態，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 如需排程需求與客戶可用性指引，請參閱&#x200B;_設定服務_&#x200B;中的[專業服務支援](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support)。
 
 ## 服務變更 {#service-change-tip}
 
 >[!TIP]
 >
->初始服務安裝之後，您可以更新`services.yaml`和`.magento.app.yaml`組態檔，以變更已安裝服務的軟體版本。 請參閱[變更服務版本](/help/cloud-guide/services/services-yaml.md#change-service-version)以取得升級或降級服務的指引。
+>初始服務安裝之後，您可以更新`services.yaml`和`.magento.app.yaml`組態檔，以變更已安裝服務的軟體版本。 請參閱[變更服務版本](/help/cloud-guide/services/services-yaml.md#change-service-version)以取得升級或降級服務的指引。 此自助式方法不適用於Pro測試或生產環境 — 請參閱&#x200B;_設定服務_&#x200B;中的[Pro服務支援](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support)。
 
 ## 停滯的部署提示 {#stuck-deployment-tip}
 
@@ -136,7 +105,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您在不包含`ece-tools`套件的雲端基礎結構上使用Adobe Commerce版本，則您必須對您的雲端專案執行[一次性升級](/help/cloud-guide/dev-tools/install-package.md)以移除已棄用的套件。 如果您目前使用`ece-tools`套件，而且需要更新它，請參閱[更新ECE-Tools套件](/help/cloud-guide/dev-tools/update-package.md)。
+>若要移除雲端基礎結構上不包含`ece-tools`套件的Adobe Commerce版本上已棄用的套件，您必須對您的雲端專案執行[一次性升級](/help/cloud-guide/dev-tools/install-package.md)。 如果您目前使用`ece-tools`套件，而且需要更新它，請參閱[更新ECE-Tools套件](/help/cloud-guide/dev-tools/update-package.md)。
 
 ## 升級秘訣 {#upgrade-tip}
 
@@ -148,11 +117,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->即使在移轉至Valkey後，New Relic仍可能顯示Redis
+>即使在移轉至Valkey後，New Relic仍可能會顯示Redis。
 >
->即使在環境已移轉至Valkey後，預計New Relic仍可能會繼續將快取服務稱為Redis。
+>即使在環境已移轉至Valkey後，預計New Relic仍會繼續將快取服務稱為Redis。
 >
->Valkey是Redis的開放原始碼復本，而且有些工具和整合專案會繼續使用Redis命名來識別服務，而非不同的Valkey標籤。 這並不一定表示仍安裝Redis。
+>Valkey是Redis的開放原始碼復本，而且有些工具和整合專案會繼續使用Redis命名來識別服務，而非不同的Valkey標籤。 此行為並不一定表示仍安裝Redis。
 
 <!-- Fastly-related snippets begin -->
 
