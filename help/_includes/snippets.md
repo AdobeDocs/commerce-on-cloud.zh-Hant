@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在2020年6月5日之前布建的專案具有多個較小的整合環境。 如果您需要更大的整合環境以進行測試和開發，請要求升級至增強型整合環境。 如需詳細資訊，請參閱&#x200B;_Adobe Commerce說明中心_&#x200B;中的[整合環境要求](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27242)文章。
+>在2020年6月5日之前布建的專案具有多個較小的整合環境。 如果您需要更大的整合環境以進行測試和開發，請要求升級至增強型整合環境。 如需詳細資訊，請參閱&#x200B;_Adobe Commerce說明中心_&#x200B;中的[整合環境要求](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-27242)文章。
 
 ## 合併選項 {#merge-options}
 
@@ -41,15 +41,15 @@ ht-degree: 0%
 >有些&#x200B;**Pro專案**&#x200B;需要Adobe支援的協助，才能更新`routes.yaml`檔案中的路由設定和`.magento.app.yaml`檔案中的cron設定。 Adobe建議先在整合環境中進行及驗證所有YAML設定變更，然後將其部署至中繼環境。
 >
 >
->如果重新部署後您的變更未反映在測試網站上，且記錄檔中沒有相關的錯誤訊息，則您&#x200B;**必須** [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 在票證中，清楚說明您嘗試的組態變更，並在票證中附加任何更新的YAML組態檔。
+>如果重新部署後您的變更未反映在測試網站上，且記錄檔中沒有相關的錯誤訊息，則您&#x200B;**必須** [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 在票證中，清楚說明您嘗試的組態變更，並在票證中附加任何更新的YAML組態檔。
 
 ## 專業備份 {#pro-backups}
 
 >[!TIP]
 >
->若要在Pro測試和生產環境中擷取特定備份，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，並在票證中註明日期、時間和時區。
+>若要在Pro測試和生產環境中擷取特定備份，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，並在票證中註明日期、時間和時區。
 >
->Adobe **不會**&#x200B;從自動備份還原任何環境。 請參閱[從測試或生產還原資料庫快照](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production)，以取得選擇還原測試或生產快照的方法。
+>Adobe **不會**&#x200B;從自動備份還原任何環境。 請參閱[從測試或生產還原資料庫快照](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production)，以取得選擇還原測試或生產快照的方法。
 
 ## 重新部署警告 {#redeploy-warning}
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->若要變更Pro生產和中繼環境上的服務組態，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 如需排程需求與客戶可用性指引，請參閱&#x200B;_設定服務_&#x200B;中的[專業服務支援](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support)。
+>若要變更Pro生產和中繼環境上的服務組態，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 如需排程需求與客戶可用性指引，請參閱&#x200B;_設定服務_&#x200B;中的[專業服務支援](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support)。
 
 ## 服務變更 {#service-change-tip}
 
@@ -99,7 +99,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->若要取得停滯部署的協助，請使用&#x200B;_Adobe Commerce說明中心_&#x200B;中的[Commerce部署疑難排解員](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29640)。
+>若要取得停滯部署的協助，請使用&#x200B;_Adobe Commerce說明中心_&#x200B;中的[Commerce部署疑難排解員](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-29640)。
 
 ## ECE-Tools更新 {#ece-tools-package}
 
