@@ -4,18 +4,13 @@ description: 瞭解如何在雲端基礎結構上啟用適用於Adobe Commerce�
 feature: Cloud, Search, Services
 exl-id: 238b9ed5-ce73-428f-9459-35de8573d5d8
 TQID: https://experienceleague.adobe.com/RYv3SjF62YHhPtM9vFrlPD0MVwfPS7EIhHxQXaMEeuI
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
 workflow-type: tm+mt
-source-wordcount: 739
+source-wordcount: 783
 ht-degree: 0%
 
 ---
@@ -204,7 +199,7 @@ ht-degree: 0%
 
    - 將`services.yaml`檔案中的Elasticsearch服務版本變更為與Elasticsearch PHP使用者端相容的版本。
 
-     {{pro-update-service}}
+     如需Pro服務升級排程需求與客戶可用性指引，請參閱&#x200B;_設定服務_&#x200B;中的[Pro服務支援](services-yaml.md#pro-services-support)。
 
 ## 重新啟動Elasticsearch服務
 
@@ -231,7 +226,7 @@ elasticsearch:
 ```
 
 如果您使用Elastic Suite協力廠商外掛程式，您必須[將`ece-tools`套件](../dev-tools/update-package.md)更新至2002.0.19或更新版本。
-設定Elastic Suite時，請將組態設定新增至`ELASTICSUITE_CONFIGURATION`部署變數。此設定可跨部署儲存設定。
+設定Elastic Suite時，請將組態設定新增至`ELASTICSUITE_CONFIGURATION`部署變數。 此設定可跨部署儲存設定。
 
 ### 移除Elasticsearch的外掛程式
 
