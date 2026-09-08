@@ -23,7 +23,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新Redis和Valkey服務檔案，以反映目前的版本和修補程式層級支援，並新增雲端指南架構和服務頁面中的Valkey參考，包括<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/redis">設定Redis服務</a>、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey">設定Valkey服務</a>和<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/environment/variables-deploy">部署變數</a>。</p>
+      <td><p>更新Redis和Valkey服務檔案，以反映目前的版本和修補程式層級支援，並新增雲端指南架構和服務頁面中的Valkey參考，包括<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/redis">設定Redis服務</a>、<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/valkey">設定Valkey服務</a>和<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/environment/variables-deploy">部署變數</a>。</p>
 </td>
       <td>
         意見反應，重大更新
@@ -31,7 +31,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/89a9594b50dfeacc4e0e7765f195d9bade00413d">認可</a></td>
     </tr>
     <tr>
-      <td><p>新增在Commerce升級期間客戶可用性需求的指引，並在<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">升級Commerce版本</a>和<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml">設定服務</a>中釐清Pro服務升級請求和排程程式。</p>
+      <td><p>新增在Commerce升級期間客戶可用性需求的指引，並在<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">升級Commerce版本</a>和<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/service/services-yaml">設定服務</a>中釐清Pro服務升級請求和排程程式。</p>
 </td>
       <td>
         意見反應
@@ -53,7 +53,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>在ECE-Tools版本v2002.2.13之後更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。</p>
+      <td><p>在ECE-Tools版本v2002.2.13之後更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。</p>
 </td>
       <td>
         技術
@@ -61,7 +61,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/0ac31574952505e92744535f861591abcdd8ac56">認可</a></td>
     </tr>
     <tr>
-      <td><p>在雲端基礎結構上為Adobe Commerce新增<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">垂直自動縮放</a>可用性。</p>
+      <td><p>在雲端基礎結構上為Adobe Commerce新增<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">垂直自動縮放</a>可用性。</p>
 </td>
       <td>
         重大更新
@@ -83,7 +83,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>在ECE-Tools版本v2002.2.12之後更新<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。 除了版本號碼外，沒有進行其他變更。</p>
+      <td><p>在ECE-Tools版本v2002.2.12之後更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。 除了版本號碼外，沒有進行其他變更。</p>
 </td>
       <td>
         技術
