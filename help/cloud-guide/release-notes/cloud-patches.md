@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
+source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
 workflow-type: tm+mt
-source-wordcount: 2978
+source-wordcount: 2997
 ht-degree: 0%
 
 ---
@@ -44,7 +44,13 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 <!--Add release notes below-->
 
-## v1.1.19 {#latest}
+## v1.1.20 {#latest}
+
+發行日期： 2026年9月08日
+
+- ![修正圖示](../../assets/fix.svg) **安全性改善** — 包含2026年9月獨立安全性修補程式的支援。<!-- MCLOUD-15053 -->
+
+## v1.1.19
 
 發行日期： 2026年8月19日
 

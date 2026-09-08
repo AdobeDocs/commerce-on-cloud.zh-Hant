@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
 workflow-type: tm+mt
-source-wordcount: 3631
+source-wordcount: 3685
 ht-degree: 0%
 
 ---
@@ -40,11 +40,19 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.13 {#latest}
+## v2002.2.14 {#latest}
+
+發行日期： 2026年9月08日
+
+- ![修正圖示](../../assets/fix.svg) **Valkey 8.5功能測試涵蓋範圍** — 改善Symfony L2快取設定的涵蓋範圍。<!-- MCLOUD-15487 -->
+- ![修正圖示](../../assets/fix.svg) **快取改善** — 解決頁面快取隔離問題。<!-- MCLOUD-15509 -->
+- ![修正圖示](../../assets/fix.svg) **Redis和Valkey改善** — 增強`REDIS_BACKEND`和`VALKEY_BACKEND`處理，以支援舊版和現代(Symfony Cache， 2.4.9+) Redis和Valkey快取設定。<!-- MCLOUD-15546 -->
+
+## v2002.2.13
 
 發行日期： 2026年8月19日
 
-- ![修正圖示](../../assets/fix.svg) **快取改善** Redis和Valkey從屬連線的增強Symfony_l2快取支援，以及解決相關快取、標籤索引、預先載入和靜態部署問題……<!-- MCLOUD-15433 -->
+- ![修正圖示](../../assets/fix.svg) **快取改善** — 增強了Redis和Valkey從屬連線的Symfony_l2快取支援，並解決相關快取、標籤索引、預先載入和靜態部署問題……<!-- MCLOUD-15433 -->
 
 ## v2002.2.12
 
