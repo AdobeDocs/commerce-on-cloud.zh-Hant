@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需安全性詳細資訊，請參閱[安全性啟動檢查清單](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
+>如需安全性詳細資訊，請參閱[安全性啟動檢查清單](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
 
 詳細檢視[技術棧疊](architecture/tech-stack.md)，或進一步瞭解Commerce [&#128279;](architecture/cloud-architecture.md)的雲端架構中的特定功能和支援產品。
 
@@ -74,7 +74,7 @@ Commerce雲端基礎結構指南假設您具備一些關於Adobe Commerce應用�
 
 - [Adobe Commerce開發人員檔案](https://developer.adobe.com/commerce/docs/) （Adobe Developer網站） — 開發、自訂、整合、擴充及使用進階功能
 
-- [Adobe Commerce檔案](https://experienceleague.adobe.com/en/docs/commerce) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的[!DNL Commerce]專案
+- [Adobe Commerce檔案](https://experienceleague.adobe.com/zh-hant/docs/commerce) (Adobe Experience League) — 規劃、實作、操作、升級及維護您的[!DNL Commerce]專案
 
 {{$include /help/_includes/templated/whats-new.md}}
 
