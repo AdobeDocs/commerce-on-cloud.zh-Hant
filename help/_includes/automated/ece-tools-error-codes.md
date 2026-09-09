@@ -53,8 +53,8 @@ ht-degree: 4%
 | 104 |  | 無法剖析`.magento.env.yaml`檔案 | 未在`./vendor/magento/ece-tools/config/schema.yaml`檔案中定義設定。 檢查設定變數名稱是否正確，以及是否已定義。 |
 | 105 |  | 無法讀取`.magento.env.yaml`檔案 | 無法讀取`./.magento.env.yaml`檔案。 檢查檔案許可權。 |
 | 106 |  | 無法讀取`.schema.yaml`檔案 |  |
-| 107 | 預先部署： clean-redis-cache | 無法清除Redis快取 | 無法清除Redis快取。 檢查Redis快取設定是否正確，以及Redis服務是否可用。 請參閱[安裝Redis服務](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/redis.html)。 |
-| 140 | 預先部署： clean-valkey-cache | 無法清除Valkey快取 | 無法清除Valkey快取。 檢查Valkey快取設定是否正確，以及Valkey服務是否可用。 請參閱[Setup Valkey服務](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/valkey.html)。 |
+| 107 | 預先部署： clean-redis-cache | 無法清除Redis快取 | 無法清除Redis快取。 檢查Redis快取設定是否正確，以及Redis服務是否可用。 請參閱[安裝Redis服務](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/redis.html?lang=zh-Hant)。 |
+| 140 | 預先部署： clean-valkey-cache | 無法清除Valkey快取 | 無法清除Valkey快取。 檢查Valkey快取設定是否正確，以及Valkey服務是否可用。 請參閱[Setup Valkey服務](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/valkey.html?lang=zh-Hant)。 |
 | 108 | 預先部署：set-production-mode | 命令`/bin/magento maintenance:enable`失敗 | 如需詳細資訊，請檢視`cloud.log`。 如需更詳細的命令輸出，請將`VERBOSE_COMMANDS: '-vvv'`選項新增至`.magento.env.yaml`檔案。 |
 | 109 | validate-config | 不正確的資料庫設定 | 檢查`DATABASE_CONFIGURATION`環境變數是否已正確設定。 |
 | 110 | validate-config | 不正確的工作階段設定 | 檢查`SESSION_CONFIGURATION`環境變數是否已正確設定。 組態至少必須包含`save`引數。 |
@@ -78,7 +78,7 @@ ht-degree: 4%
 | 128 | disable-maintenance-mode | 命令`/bin/magento maintenance:disable`失敗 | 如需詳細資訊，請檢視`cloud.log`。 將`VERBOSE_COMMANDS: '-vvv'`新增至`.magento.env.yaml`，以取得更詳細的命令輸出。 |
 | 129 | install-update： reset-password | 無法讀取重設密碼範本 |  |
 | 130 | install-update： cache_type | 命令失敗： `php ./bin/magento cache:enable` | 命令`php ./bin/magento cache:enable`只有在安裝Adobe Commerce時執行，但在部署開始時有`./app/etc/env.php`檔案不存在或空白。 如需詳細資訊，請檢視`cloud.log`。 將`VERBOSE_COMMANDS: '-vvv'`新增至`.magento.env.yaml`，以取得更詳細的命令輸出。 |
-| 131 | install-update | `crypt/key`機碼值不存在於`./app/etc/env.php`檔案或`CRYPT_KEY`雲端環境變數中 | 如果Adobe Commerce部署開始時`./app/etc/env.php`檔案不存在，或未定義`crypt/key`值，便會發生此錯誤。 如果您從其他環境移轉資料庫，請擷取該環境的加密金鑰值。 然後，將值新增至您目前環境中的[CRYPT_KEY](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#crypt_key)雲端環境變數。 請參閱[Adobe Commerce加密金鑰](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/overview.html#gather-credentials)。 如果您不小心移除了`./app/etc/env.php`檔案，請使用下列命令，從先前部署建立的備份檔案還原檔案： `./vendor/bin/ece-tools backup:restore` CLI命令。」 |
+| 131 | install-update | `crypt/key`機碼值不存在於`./app/etc/env.php`檔案或`CRYPT_KEY`雲端環境變數中 | 如果Adobe Commerce部署開始時`./app/etc/env.php`檔案不存在，或未定義`crypt/key`值，便會發生此錯誤。 如果您從其他環境移轉資料庫，請擷取該環境的加密金鑰值。 然後，將值新增至您目前環境中的[CRYPT_KEY](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hant#crypt_key)雲端環境變數。 請參閱[Adobe Commerce加密金鑰](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/overview.html?lang=zh-Hant#gather-credentials)。 如果您不小心移除了`./app/etc/env.php`檔案，請使用下列命令，從先前部署建立的備份檔案還原檔案： `./vendor/bin/ece-tools backup:restore` CLI命令。」 |
 | 132 |  | 無法連線到Elasticsearch服務 | 檢查有效的Elasticsearch憑證，並確認服務執行中 |
 | 137 |  | 無法連線到OpenSearch服務 | 檢查有效的OpenSearch認證，並確認服務執行中 |
 | 133 | validate-config | 移除Magento Braintree模組設定，Adobe Commerce或Magento Open Source 2.4及更新版本已不再支援此設定。 | Adobe Commerce或Braintree 2.4.0和更新版本不再支援Magento Open Source模組。 從`.magento.app.yaml`檔案的變數區段中移除CONFIG__STORES__DEFAULT__PAYMENT__BRAINTREE__CHANNEL變數。 如需Braintree支援，請改用Commerce Marketplace的官方Braintree支付擴充功能。 |
