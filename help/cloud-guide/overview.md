@@ -17,7 +17,7 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 last-update: 2026-09-01
-source-git-commit: 0f88ef7d75bc2a02eb7988dc815071c5894a4662
+source-git-commit: 205287e813ec7358273f95df87189b9b663679f5
 workflow-type: tm+mt
 source-wordcount: 356
 ht-degree: 0%
@@ -78,4 +78,4 @@ Commerce雲端基礎結構指南假設您具備一些關於Adobe Commerce應用�
 
 {{$include /help/_includes/templated/whats-new.md}}
 
-<!-- Last updated from includes: 2026-08-14 20:31:55 -->
+<!-- Last updated from includes: 2026-09-04 20:31:52 -->
