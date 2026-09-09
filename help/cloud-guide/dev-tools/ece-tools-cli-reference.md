@@ -6,15 +6,11 @@ mini-toc-levels: 1
 last-substantial-update: 2023-06-14T00:00:00.000Z
 exl-id: 1154a066-f8c2-42df-97f6-7f703ab883ea
 TQID: https://experienceleague.adobe.com/VrLzgOu0RKeuOwAW7mlJnbawbxy0nxR1da3VQFWUh8c
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 last-update: 2026-08-24
-source-git-commit: bb6ebfe555cfb963323279669b9050284c25e670
+source-git-commit: 205287e813ec7358273f95df87189b9b663679f5
 workflow-type: tm+mt
 source-wordcount: 24
 ht-degree: 0%
@@ -25,4 +21,4 @@ ht-degree: 0%
 
 {{$include /help/_includes/templated/ece-tools.md}}
 
-<!-- Last updated from includes: 2026-07-20 16:32:00 -->
+<!-- Last updated from includes: 2026-08-21 12:29:41 -->
