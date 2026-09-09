@@ -3,9 +3,9 @@ title: Adobe Commerce進階安全性
 description: 瞭解進階安全性如何在雲端基礎結構上的Adobe Commerce中新增機器人管理、進階速率限制和第7層DDoS保護。
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
+source-git-commit: 6bab2df0240c8b74a455de73fbf7a7645a46e904
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2514'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 0%
 # [!DNL Adobe Commerce Advanced Security]
 
 [!DNL Adobe Commerce Advanced Security]是與[!DNL Adobe Commerce on Cloud Infrastructure]搭配使用的產品，可讓您的線上商店保持快速、可用和安全。 這些功能有助於在流量尖峰事件和自動攻擊期間保護營收、減少停機時間，並維持客戶信任。
+
+>[!TIP]
+>
+>在New Relic中使用[Adobe Commerce流量深入分析](../monitor/traffic-insights/overview.md)應用程式來分析您的Fastly流量和機器人模式，並判斷進階安全性是否適合您。
 
 [!DNL Adobe Commerce on Cloud Infrastructure]包含內建[第3層和第4層DDoS保護](./fastly.md#ddos-protection)以及[Web應用程式防火牆(WAF)](./fastly-waf-service.md)。 在[共用職責模型](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/security-and-compliance/shared-responsibility)下，第7層DDoS偵測、機器人保護和主動IP封鎖是商家職責，[!DNL Adobe Commerce Advanced Security]旨在解決這些職責。
 
