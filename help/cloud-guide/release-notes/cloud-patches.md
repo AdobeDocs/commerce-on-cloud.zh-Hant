@@ -5,30 +5,24 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
 TQID: https://experienceleague.adobe.com/ZN1TwgU2EFiIezQcZZT-CglLQGY1xZcXoi-BslV3sGQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 9e10bdbdc726a85bea99a9b5f23d9211ac09c661
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 1195121d2c83da858744839e82e14bd423ea5528
 workflow-type: tm+mt
-source-wordcount: 3043
+source-wordcount: 3067
 ht-degree: 0%
 
 ---
 
 # Commerce雲端修補程式
 
-[雲端修補程式](https://github.com/magento/magento-cloud-patches)套件提供一組必要的修補程式，可改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送重要修正。
+`magento/magento-cloud-patches` Composer套件提供一組必要的修補程式，可改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送關鍵修正。 Adobe透過`repo.magento.com`的Commerce Composer存放庫散發此套件。
+
+>[!NOTE]
+>
+>從1.1.15版開始，Adobe會透過`repo.magento.com`的Commerce Composer存放庫獨家發佈`magento/magento-cloud-patches`套件。 您必須擁有Adobe Commerce EE許可權才能下載此套件。
 
 Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或更新ECE-Tools套件時安裝與更新。 您也可以使用和管理Commerce的雲端修補程式做為獨立的套件，將修補程式套用至不在Cloud Platform上的Adobe Commerce專案。 以下發行說明說明說明此套裝軟體的最新改善。
 
@@ -87,7 +81,7 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 發行日期： 2026年7月14日
 
-- ![修正圖示](../../assets/fix.svg) **安全性改善** — 已套用[Adobe Commerce安全性更新APSB26-73](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-37421)中參考的安全性修正。<!--MCLOUD-15066 -->
+- ![修正圖示](../../assets/fix.svg) **安全性改善** — 已套用[Adobe Commerce安全性更新APSB26-73](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-37421)中參考的安全性修正。<!--MCLOUD-15066 -->
 
 ## v1.1.14
 
@@ -109,7 +103,7 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 發行日期： 2025年11月13日
 
 - ![修正圖示](../../assets/fix.svg) **Symfony套件** — 已新增對最新Symfony YAML套件的支援。<!-- MCLOUD-14020 -->
-- ![修正圖示](../../assets/fix.svg) **修補程式** — 啟用JS縮制和套件組合時，[簽出的修正會失敗](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-27997)問題，如&#x200B;*Commerce知識庫*&#x200B;所述。
+- ![修正圖示](../../assets/fix.svg) **修補程式** — 啟用JS縮制和套件組合時，[簽出的修正會失敗](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997)問題，如&#x200B;*Commerce知識庫*&#x200B;所述。
 - ![修正圖示](../../assets/fix.svg) **已改善的類別檢視**—MCLOUD-13752：已改善類別檢視。<!-- MCLOUD-13752 | MCLOUD-14139  -->
 
 ## v1.1.11
@@ -141,13 +135,13 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 發行日期： 2025年5月5日
 
-- ![新圖示](../../assets/new.svg) **已將Commerce 2.4.4的修補程式更新至2.4.8** — 這是[CVE-2025-24434](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-27148)的更新修補程式，已在1.1.7<!-- MCLOUD-13619 -->中發行
+- ![新圖示](../../assets/new.svg) **已將Commerce 2.4.4的修補程式更新至2.4.8** — 此更新會修訂[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27148)的修補程式，此修補程式已在1.1.7<!-- MCLOUD-13619 -->中發行
 
 ## v1.1.6
 
 發行日期： 2025年4月24日
 
-- ![新圖示](../../assets/new.svg) **已將Commerce 2.4.4的修補程式更新至2.4.7** — 此更新是[CVE-2025-24434](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-27149)的更新修補程式，已在1.1.4<!-- MCLOUD-13240 -->中發行
+- ![新圖示](../../assets/new.svg) **已將Commerce 2.4.4的修補程式更新至2.4.7** — 此更新是[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149)的更新修補程式，已在1.1.4<!-- MCLOUD-13240 -->中發行
 
 ## v1.1.5
 
@@ -159,7 +153,7 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 發行日期： 2025年2月13日
 
-- ![新圖示](../../assets/new.svg) **已新增Commerce 2.4.4至2.4.7**&#x200B;的修補程式 — 此更新修補程式[CVE-2025-24434](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-27149)。<!-- MCLOUD-13240     - -->
+- ![新圖示](../../assets/new.svg) **已新增Commerce 2.4.4至2.4.7**&#x200B;的修補程式 — 此更新修補程式[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149)。<!-- MCLOUD-13240     - -->
 
 ## v1.1.3
 
@@ -171,13 +165,13 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 發行日期： 2024年11月5日
 
-- ![修正圖示](../../assets/fix.svg) **已新增Commerce 2.4.4至2.4.7**&#x200B;的修補程式 — 此更新修正使用B2B模組時Adobe Commerce的嚴重[CVE-2024-45115](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-27151)漏洞。<!-- MCLOUD-12980 - -->
+- ![修正圖示](../../assets/fix.svg) **已新增Commerce 2.4.4至2.4.7**&#x200B;的修補程式 — 此更新修正使用B2B模組時Adobe Commerce的嚴重[CVE-2024-45115](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27151)漏洞。<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
 發行日期： 2024年11月5日
 
-- ![修正圖示](../../assets/fix.svg) **已新增Commerce 2.4.4至2.4.7**&#x200B;的修補程式 — 此更新可修補嚴重的[CVE-2024-34102](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-27136) CosmicSting漏洞。<!-- MCLOUD-12980 - -->
+- ![修正圖示](../../assets/fix.svg) **已新增Commerce 2.4.4至2.4.7**&#x200B;的修補程式 — 此更新可修補嚴重的[CVE-2024-34102](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136) CosmicSting漏洞。<!-- MCLOUD-12980 - -->
 
 ## v1.1.0
 
@@ -255,7 +249,7 @@ Adobe Commerce 2.4.5的重要修補程式：
 
 - **使用Braintree付款的訂單問題** — 此修補程式解決管理員無法下新訂單或重新訂購的重大問題。<!-- MCLOUD-9137 -->
 
-請參閱[啟用Braintree付款時，管理員無法建立訂單/重新排序](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-27169)。
+請參閱[啟用Braintree付款時，管理員無法建立訂單/重新排序](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27169)。
 
 ## v1.0.17
 
@@ -304,7 +298,7 @@ Adobe Commerce 2.3.3-p1及更高版本的重要修補程式：
 
 Adobe Commerce 2.4.3和2.3.7-p1的關鍵修補程式：
 
-- **API速率限制問題** — 此修補程式更正了預設速率限制，該限制導致Web API無法處理陣列中超過20個專案的請求。 此修補程式會提高速率限制的預設值。 請參閱Adobe Commerce [2.4.3發行說明](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
+- **API速率限制問題** — 此修補程式更正了預設速率限制，該限制導致Web API無法處理陣列中超過20個專案的請求。 此修補程式會提高速率限制的預設值。 請參閱Adobe Commerce [2.4.3發行說明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## v1.0.11
 
@@ -444,7 +438,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的關鍵修補程式：
 
 發行日期： 2019年11月14日
 
-此版本是[`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches)封裝的第一個版本，這是`ece-tools`封裝版本2002.0.22或更新版本的新相依性。
+此版本是`magento/magento-cloud-patches`封裝的第一個版本，這是`ece-tools`封裝版本2002.0.22或更新版本的新相依性。
 
 此版本包含下列修補程式和重要修正：
 
