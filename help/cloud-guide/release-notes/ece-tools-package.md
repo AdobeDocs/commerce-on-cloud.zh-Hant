@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
+source-git-commit: 9e21b435447f7b87b1105f9d435314b5a3efb072
 workflow-type: tm+mt
-source-wordcount: 3685
+source-wordcount: 3676
 ht-degree: 0%
 
 ---
@@ -461,7 +461,7 @@ ht-degree: 0%
 
   - ![新圖示](../../assets/new.svg) **新增適用於Commerce的Cloud Docker的個別套件** — 將Docker套件與`ece-tools`套件脫鉤，以維持程式碼品質並提供獨立的發行版本。 從[magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub存放庫管理與`ece-tools`相關的更新與修正。<!--MAGECLOUD-2927-->
 
-  - ![新圖示](../../assets/new.svg) **更新的修補功能** — 將修補功能從ECE-Tools套件移至單獨的[magento-cloud-patches](https://github.com/magento/magento-cloud-patches)套件。 部署期間，`ece-tools`會使用新套件套用修補程式。 請參閱[雲端修補程式發行說明](cloud-patches.md).<!--MAGECLOUD-4567-->
+  - ![新圖示](../../assets/new.svg) **已更新修補功能** — 已將修補功能從ECE-Tools封裝移至單獨的`magento-cloud-patches`封裝。 部署期間，`ece-tools`會使用新套件套用修補程式。 請參閱[雲端修補程式發行說明](cloud-patches.md).<!--MAGECLOUD-4567-->
 
   - ![新圖示](../../assets/new.svg) **已更新撰寫器相依性** — 已更新雲端基礎結構上Adobe Commerce的`composer.json`檔案與`magento/magento-cloud-docker`套件的相依性。 現在，`ece-tools`包含[`Cloud Tools Suite for Commerce`](cloud-tools-suite.md)中所有套件的相依性。 當您安裝或更新`ece-tools`時，會自動安裝及更新這些套件。
 

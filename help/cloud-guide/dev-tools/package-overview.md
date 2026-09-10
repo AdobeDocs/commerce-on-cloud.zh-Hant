@@ -10,9 +10,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 32426a82db5a81306c1dcc670a8268a9f5959874
 workflow-type: tm+mt
-source-wordcount: 450
+source-wordcount: 449
 ht-degree: 0%
 
 ---
@@ -101,5 +101,5 @@ Ideal state is configured
 
 ## Adobe修補程式和自訂修補程式
 
-`ece-tools`套件包含對[magento/magento-cloud-patches](https://github.com/magento/magento-cloud-patches)套件的相依性，此套件提供Adobe修補程式和Hot Fix，可改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送關鍵修正。 「 」也會提供您新增至雲端基礎結構專案Adobe Commerce的自訂修補程式。 請參閱[套用修補程式](../development/apply-patches.md)。
+`ece-tools`套件包含`magento/magento-cloud-patches` Composer套件的相依性（請參閱[Commerce的Cloud Patches發行說明](../release-notes/cloud-patches.md)），此套件提供Adobe修補程式和Hot Fix，可改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送關鍵修正。 此套件也會提供您新增至雲端基礎結構專案Adobe Commerce的自訂修補程式。 請參閱[套用修補程式](../development/apply-patches.md)。
 

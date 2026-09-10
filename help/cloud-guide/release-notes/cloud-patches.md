@@ -19,16 +19,20 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 9e10bdbdc726a85bea99a9b5f23d9211ac09c661
+source-git-commit: 1195121d2c83da858744839e82e14bd423ea5528
 workflow-type: tm+mt
-source-wordcount: 3043
+source-wordcount: 3067
 ht-degree: 0%
 
 ---
 
 # Commerce雲端修補程式
 
-[雲端修補程式](https://github.com/magento/magento-cloud-patches)套件提供一組必要的修補程式，可改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送重要修正。
+`magento/magento-cloud-patches` Composer套件提供一組必要的修補程式，可改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送關鍵修正。 Adobe透過`repo.magento.com`的Commerce Composer存放庫散發此套件。
+
+>[!NOTE]
+>
+>從1.1.15版開始，Adobe會透過`repo.magento.com`的Commerce Composer存放庫獨家發佈`magento/magento-cloud-patches`套件。 您必須擁有Adobe Commerce EE許可權才能下載此套件。
 
 Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或更新ECE-Tools套件時安裝與更新。 您也可以使用和管理Commerce的雲端修補程式做為獨立的套件，將修補程式套用至不在Cloud Platform上的Adobe Commerce專案。 以下發行說明說明說明此套裝軟體的最新改善。
 
@@ -68,7 +72,7 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 發行日期： 2026年8月11日
 
 - ![修正圖示](../../assets/fix.svg) **已改善修補程式處理** — 修補程式現在會略過透過`composer.json` `replace`移除的Hunk鎖定目標模組，並繼續套用剩餘的安裝部分。<!-- MCLOUD-15325 -->
-- ![修正圖示](../../assets/fix.svg) **安全性改善** — 已套用[Adobe Commerce安全性更新APSB26-92](https://helpx.adobe.com/security/products/magento/apsb26-92.html)中參考的安全性修正。<!--MCLOUD-15035 -->
+- ![修正圖示](../../assets/fix.svg) **安全性改善** — 已套用[Adobe Commerce安全性更新APSB26-92](https://helpx.adobe.com/tw/security/products/magento/apsb26-92.html)中參考的安全性修正。<!--MCLOUD-15035 -->
 
 ## v1.1.17
 
@@ -141,7 +145,7 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 發行日期： 2025年5月5日
 
-- ![新圖示](../../assets/new.svg) **已將Commerce 2.4.4的修補程式更新至2.4.8** — 這是[CVE-2025-24434](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-27148)的更新修補程式，已在1.1.7<!-- MCLOUD-13619 -->中發行
+- ![新圖示](../../assets/new.svg) **已將Commerce 2.4.4的修補程式更新至2.4.8** — 此更新會修訂[CVE-2025-24434](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-27148)的修補程式，此修補程式已在1.1.7<!-- MCLOUD-13619 -->中發行
 
 ## v1.1.6
 
@@ -271,7 +275,7 @@ Adobe Commerce 2.3.3-p1及更高版本的重要修補程式：
 
 已更新修補程式，以解決導致未驗證遠端程式碼執行的&#x200B;**嚴重**&#x200B;漏洞。<!-- MCLOUD-8479 -->
 
-請參閱[Adobe安全性公告APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)。
+請參閱[Adobe安全性公告APSB22-12](https://helpx.adobe.com/tw/security/products/magento/apsb22-12.html)。
 
 ## v1.0.15
 
@@ -288,7 +292,7 @@ Adobe Commerce 2.3.3-p1及更高版本的重要修補程式：
 
 已新增修補程式，以解決導致未驗證遠端程式碼執行的&#x200B;**嚴重**&#x200B;漏洞。<!-- MCLOUD-8461 -->
 
-請參閱[Adobe安全性公告APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)。
+請參閱[Adobe安全性公告APSB22-12](https://helpx.adobe.com/tw/security/products/magento/apsb22-12.html)。
 
 ## v1.0.13
 
@@ -444,7 +448,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的關鍵修補程式：
 
 發行日期： 2019年11月14日
 
-此版本是[`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches)封裝的第一個版本，這是`ece-tools`封裝版本2002.0.22或更新版本的新相依性。
+此版本是`magento/magento-cloud-patches`封裝的第一個版本，這是`ece-tools`封裝版本2002.0.22或更新版本的新相依性。
 
 此版本包含下列修補程式和重要修正：
 
