@@ -21,15 +21,15 @@ ht-degree: 0%
 `magento/magento-cloud-patches` Composer套件（請參閱[Commerce發行說明的Cloud Patches](../release-notes/cloud-patches.md)）和[品質修補工具](https://github.com/magento/quality-patches)將修補程式傳送至您安裝的Adobe Commerce應用程式。
 
 - Commerce套件的雲端修補程式提供必要修補程式，並包含關鍵修正
-- 品質修補程式提供選用的低影響品質修正，作為[不含回溯不相容變更的個別修補程式](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/versioning-policy#individual-patch)
+- 品質修補程式提供選用的低影響品質修正，作為[不含回溯不相容變更的個別修補程式](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/release/planning/versioning-policy#individual-patch)
 
-若要檢閱已發行修補程式的完整清單，請參閱&#x200B;_Commerce作業工具指南_&#x200B;中的[可用修補程式](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)。
+若要檢閱已發行修補程式的完整清單，請參閱&#x200B;_Commerce作業工具指南_&#x200B;中的[可用修補程式](https://experienceleague.adobe.com/zh-hant/tools/commerce-quality-patches)。
 
 這兩個套件都改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送關鍵、選用和自訂修正。 您可以使用這些套裝程式來套用、還原和檢視Commerce可用的所有個別修補程式的一般資訊。
 
 >[!TIP]
 >
->您可以使用Commerce的[品質修補工具](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)和雲端修補程式，作為Magento Open Source和Adobe Commerce專案的獨立套件。 Adobe建議您將品質修補工具用於非雲端專案。
+>您可以使用Commerce的[品質修補工具](https://experienceleague.adobe.com/zh-hant/tools/commerce-quality-patches)和雲端修補程式，作為Magento Open Source和Adobe Commerce專案的獨立套件。 Adobe建議您將品質修補工具用於非雲端專案。
 
 當您部署變更至遠端環境時，`ece-tools`封裝會使用`magento/magento-cloud-patches`和`magento/quality-patches`來檢查擱置的修補程式，並依照下列順序自動套用它們：
 
