@@ -52,13 +52,13 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 發行日期： 2026年9月08日
 
-- ![修正圖示](../../assets/fix.svg) **安全性改善** — 已套用[Adobe Commerce安全性更新APSB26-146](https://helpx.adobe.com/security/products/magento/apsb26-146.html)中參考的安全性修正。<!--MCLOUD-15587 -->
+- ![修正圖示](../../assets/fix.svg) **安全性改善** — 已套用[Adobe Commerce安全性更新APSB26-146](https://helpx.adobe.com/tw/security/products/magento/apsb26-146.html)中參考的安全性修正。<!--MCLOUD-15587 -->
 
 ## v1.1.20
 
 發行日期： 2026年9月08日
 
-- ![修正圖示](../../assets/fix.svg) **安全性改善** — 包含對[Adobe Commerce安全性更新APSB26-138](https://helpx.adobe.com/security/products/magento/apsb26-138.html)中參考的2026年9月隔離安全性修補程式的支援。<!-- MCLOUD-15053 -->
+- ![修正圖示](../../assets/fix.svg) **安全性改善** — 包含對[Adobe Commerce安全性更新APSB26-138](https://helpx.adobe.com/tw/security/products/magento/apsb26-138.html)中參考的2026年9月隔離安全性修補程式的支援。<!-- MCLOUD-15053 -->
 
 ## v1.1.19
 
