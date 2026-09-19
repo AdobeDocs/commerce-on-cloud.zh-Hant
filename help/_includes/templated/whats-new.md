@@ -1,9 +1,8 @@
 ---
-source-git-commit: 8370be461f731f73fcb382d74f5e20886abde2db
+source-git-commit: ad0b2ef144a1ad8579eb5e8d0c5a98690fd91fdd
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '454'
 ht-degree: 1%
-
 ---
 # 新功能範本
 
@@ -133,28 +132,6 @@ ht-degree: 1%
         重大更新
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/cd222546c1c57f5250408d9e423dc586284a34fc">認可</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年7月20日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>說明</th>
-      <th>型別</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>在ECE-Tools版本v2002.2.12之後更新<a href="https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI參考</a>。 除了版本號碼外，沒有進行其他變更。</p>
-</td>
-      <td>
-        技術
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/136f8312d1c125a49538ee050394c722ab68d9b6">認可</a></td>
     </tr>
   </tbody>
 </table>
