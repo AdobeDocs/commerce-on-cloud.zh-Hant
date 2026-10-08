@@ -7,22 +7,27 @@ exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
 TQID: https://experienceleague.adobe.com/pa4D-RsauRtCBS7puKWVBQtA37-Mcv9IZG4lah41l1U
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+    internal-label: Reporting
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 9e21b435447f7b87b1105f9d435314b5a3efb072
+    internal-label: Data management
+source-git-commit: a0962ad43c0f496dbd687460ef1d4dbd0da4dacb
 workflow-type: tm+mt
-source-wordcount: 3676
+source-wordcount: '3715'
 ht-degree: 0%
-
 ---
-
 # ECE-Tools發行說明
 
 [ece-tools](https://github.com/magento/ece-tools)套件是一組指令碼和工具，用來管理和部署雲端專案。 此發行說明說明說明說明此套件的最新改善，此套件隸屬於Commerce適用的[雲端工具套裝](cloud-tools-suite.md)。
@@ -40,7 +45,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.14 {#latest}
+## v2002.2.15 {#latest}
+
+發行日期： 2026年10月08日
+
+- ![新圖示](../../assets/new.svg) **服務的功能測試** — 新增Magento 2.4.10 ActiveMQ Artemis、OpenSearch、RabbitMQ、MariaDB和Valkey的功能測試涵蓋範圍。<!-- MCLOUD-15399 -->
+- ![修正圖示](../../assets/fix.svg) **EOL驗證器** — 已更新Opensearch的生命週期結束(EOL)服務日期。<!-- MCLOUD-15384 -->
+
+## v2002.2.14
 
 發行日期： 2026年9月08日
 
@@ -363,7 +375,7 @@ ht-degree: 0%
 
 **驗證和記錄改善**—
 
-- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考。<!--MCLOUD-5878-->
+- ![新圖示](../../assets/new.svg)已新增`schema.error.yaml`檔案，其中包含建置、部署和部署後程式期間可能發生的所有錯誤和警告通知，以及解決錯誤的建議。 此檔案中的資訊也可在Commerce的&#x200B;_雲端指南_&#x200B;中取得。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!--MCLOUD-5878-->
 
 - ![新圖示](../../assets/new.svg)已將雲端錯誤記錄(`/var/log/cloud.error.log`)專案變更為JSON格式，以便以程式設計方式更輕鬆地剖析記錄。<!--MCLOUD-5879-->
 
@@ -383,7 +395,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **基礎結構更新**—
 
-  - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools[&#128279;](../dev-tools/error-reference.md)的錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
+  - ![新圖示](../../assets/new.svg) **記錄改善** — 將退出代碼指派給嚴重的部署錯誤，並在錯誤訊息通知和記錄事件中公開退出代碼，藉此改善記錄追蹤功能。 檢視ece-tools](../dev-tools/error-reference.md)的[錯誤訊息參考。<!-- MCLOUD-5637, 5531-->
 
   - ![新圖示](../../assets/new.svg)改善資料庫傾印程式(`vendor/bin/ece-tools db-dump`)和更新的記錄訊息，以釐清資料庫傾印作業會將應用程式切換到維護模式、停止消費者佇列程式，以及在傾印開始之前停用cron工作。<!--MCLOUD-5324, MCLOUD-2062-->
 
