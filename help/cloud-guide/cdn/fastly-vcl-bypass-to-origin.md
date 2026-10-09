@@ -3,24 +3,34 @@ title: 自訂VCL以略過Fastly快取
 description: 建立自訂VCL程式碼片段來略過Fastly快取，以疑難排解到原始伺服器的請求流量。
 feature: Cloud, Configuration, Cache
 exl-id: 4e19d6d4-b5a1-4623-b0be-804ddc81ff3d
-TQID: https://experienceleague.adobe.com/67LdlbG62T-cBEgNTwQ5p5MvvYQwNuHUYVQhrVBSn1A
+last-update: 2025-01-29
+TQID: 'https://experienceleague.adobe.com/67LdlbG62T-cBEgNTwQ5p5MvvYQwNuHUYVQhrVBSn1A'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+    internal-label: Troubleshooting
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
-source-wordcount: 303
+source-wordcount: '303'
 ht-degree: 0%
-
 ---
-
 # 自訂VCL以略過Fastly快取
 
 您可以建立自訂VCL程式碼片段，略過Fastly快取，這樣您就可以疑難排解原始伺服器的請求流量。 例如，您可以建立程式碼片段來判斷網站問題是否由快取引起，或是為了疑難排解標題。

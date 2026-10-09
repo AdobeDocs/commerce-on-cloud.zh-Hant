@@ -3,25 +3,31 @@ title: 允許要求的自訂VCL
 description: 使用Fastly Edge ACL清單和自訂VCL程式碼片段，篩選傳入的請求並允許透過IP位址存取Adobe Commerce網站。
 feature: Cloud, Configuration, Security
 exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
-TQID: https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY
+last-update: 2026-08-25
+TQID: 'https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2026-08-25
-source-git-commit: ccff84c55425e8e4f91812b54f5e6ccf9a700104
+    internal-label: Security
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
-source-wordcount: 874
+source-wordcount: '874'
 ht-degree: 0%
-
 ---
-
 # 允許要求的自訂VCL
 
 您可以使用Fastly Edge ACL清單搭配自訂VCL程式碼片段，篩選傳入的請求並允許依IP位址存取。 ACL清單指定要允許的IP位址。
@@ -103,7 +109,7 @@ Edge ACL會建立IP位址清單，用於管理對您網站的存取。 在此範
 
 檢閱並更新您環境的程式碼後，請使用下列其中一種方法，將自訂VCL程式碼片段新增至您的Fastly服務設定：
 
-- [從Admin](#add-the-custom-vcl-snippet)新增自訂VCL程式碼片段。 如果您可以存取Admin，則建議使用此方法。 （需要Magento 2 1.2.58[&#128279;](fastly-configuration.md#upgrade)或更新版本的Fastly CDN模組。）
+- [從Admin](#add-the-custom-vcl-snippet)新增自訂VCL程式碼片段。 如果您可以存取Admin，則建議使用此方法。 （需要Magento 2版本1.2.58[&#128279;](fastly-configuration.md#upgrade)或更新版本的Fastly CDN模組。）
 
 - 將JSON程式碼範例儲存至檔案（例如，`allowlist.json`）並使用Fastly API[&#128279;](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)上傳。 如果您無法存取Admin，請使用此方法。
 
