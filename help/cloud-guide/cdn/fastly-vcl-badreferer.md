@@ -3,25 +3,31 @@ title: 封鎖轉介垃圾訊息
 description: 使用Fastly Edge字典和自訂VCL程式碼片段，封鎖來自您網站的轉介垃圾郵件。
 feature: Cloud, Configuration, Security
 exl-id: 4ed47a71-7fee-4f37-a7da-3e30052004df
-TQID: https://experienceleague.adobe.com/Ssuym1h44Jr5-yJxD7adItpPIx-tDWR9b3sRyijXzEA
+last-update: 2025-01-29
+TQID: 'https://experienceleague.adobe.com/Ssuym1h44Jr5-yJxD7adItpPIx-tDWR9b3sRyijXzEA'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+    internal-label: Security
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
-source-wordcount: 725
+source-wordcount: '725'
 ht-degree: 0%
-
 ---
-
 # 封鎖轉介垃圾訊息
 
 下列範例說明如何使用自訂VCL程式碼片段設定[Fastly Edge Dictionary](https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api)，以封鎖雲端基礎結構網站上來自Adobe Commerce的反向連結垃圾訊息。
@@ -102,7 +108,7 @@ Edge字典會建立VCL程式碼片段處理期間VCL函式可存取的鍵值值�
 
 - [從Admin](#add-the-custom-vcl-snippet)新增自訂VCL程式碼片段。 如果您可以存取Admin，則建議使用此方法。 （需要[Fastly 1.2.58](fastly-configuration.md#upgrade)或更新版本。）
 
-- 將JSON程式碼範例儲存至檔案（例如，`allowlist.json`）並使用Fastly API[&#128279;](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)上傳。 如果您無法存取Admin，請使用此方法。
+- 將JSON程式碼範例儲存至檔案（例如，`allowlist.json`）並使用Fastly API](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)上傳[。 如果您無法存取Admin，請使用此方法。
 
 ## 新增自訂VCL片段
 
