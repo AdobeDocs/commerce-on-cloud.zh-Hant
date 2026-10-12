@@ -3,24 +3,37 @@ title: 靜態內容部署
 description: 瞭解在Adobe Commerce上雲端基礎結構專案部署靜態內容（例如影像、指令碼和CSS）的策略。
 feature: Cloud, Build, Deploy, SCD
 exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
-TQID: https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8
+TQID: 'https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 860
+source-wordcount: '860'
 ht-degree: 0%
-
 ---
-
 # 靜態內容部署策略
 
 靜態內容部署(SCD)對存放區部署程式有重大影響，這取決於要產生多少內容（例如影像、指令碼、CSS、影片、主題、區域設定和網頁）以及何時產生內容。 例如，當網站處於維護模式時，預設策略會在[部署階段](process.md#deploy-phase-deploy-phase)期間產生靜態內容；然而，此部署策略需要一些時間才能將內容直接寫入掛接的`pub/static`目錄。 您有多種選項或策略可協助您根據需求改善部署時間。
@@ -52,8 +65,8 @@ ht-degree: 0%
 產生靜態內容需要存取主題和區域設定。 Adobe Commerce會將主題儲存在檔案系統中（可在建置階段存取），但Adobe Commerce會將地區設定儲存在資料庫中。 資料庫在建置階段中&#x200B;_無法使用_。 為了在建置階段產生靜態內容，您必須使用`ece-tools`封裝中的`config:dump`命令，將地區設定移至檔案系統。 它會讀取地區設定並將它們儲存在`app/etc/config.php`檔案中。
 
 >[!NOTE]
->在您執行`ece-tools`封裝中的`config:dump`命令後，傾印至`config.php`檔案[的設定會在管理儀表板](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-26879)中鎖定（呈現灰色）。 在Admin中更新這些設定的唯一方法是從本機檔案中刪除它們，然後重新部署專案。
->此外，每次將新的商店/商店群組/網站新增至執行個體時，您應該記得執行`config:dump`命令，以確保資料庫同步。 您也可以選擇應將哪些組態[&#128279;](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)傾印到`config.php`檔案中。
+>在您執行`ece-tools`封裝中的`config:dump`命令後，傾印至`config.php`檔案[的設定會在管理儀表板](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26879)中鎖定（呈現灰色）。 在Admin中更新這些設定的唯一方法是從本機檔案中刪除它們，然後重新部署專案。
+>此外，每次將新的商店/商店群組/網站新增至執行個體時，您應該記得執行`config:dump`命令，以確保資料庫同步。 您也可以選擇應將哪些組態](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)傾印到`config.php`檔案中[。
 >如果您從`config.php`檔案中刪除商店/商店群組/網站組態，因為欄位呈現灰色，但未執行此步驟，則在下次部署時，未傾印的新實體將會從資料庫中刪除。
 
 **若要將專案設定為在組建**&#x200B;上產生SCD：

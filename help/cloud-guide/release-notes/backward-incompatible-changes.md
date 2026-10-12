@@ -4,22 +4,29 @@ description: 瞭解在升級現有Cloud專案時的回溯相容性。
 feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
 exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
-TQID: https://experienceleague.adobe.com/ekS7f5swOsG2xgXP6ybN6hzwYm2xBbPWvl5oabv7Crc
+TQID: 'https://experienceleague.adobe.com/ekS7f5swOsG2xgXP6ybN6hzwYm2xBbPWvl5oabv7Crc'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: adedf70c-c1e1-5734-acdc-c5c43b114964
+    internal-label: Release Notes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 823
+source-wordcount: '823'
 ht-degree: 0%
-
 ---
-
 # 與舊版不相容的變更
 
 當您升級到最新版本的`ece-tools`套件或其他Commerce套件的雲端工具套裝時，與回溯不相容的變更可能會要求您調整現有雲端專案的雲端設定和程式。
@@ -67,7 +74,7 @@ ht-degree: 0%
 
 ## 雲端修補程式變更
 
-- **移除已下載的修補程式**- `magento/magento-cloud-patches`套件會將[軟體下載](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/prerequisites/commerce)頁面上所有可用的修補程式套裝，並在您部署至雲端時自動套用這些修補程式。 為避免升級至ECE-Tools 2002.1.0或更新版本後發生修補程式衝突，請移除您手動下載並新增至專案的Adobe提供的任何修補程式。
+- **移除已下載的修補程式**- `magento/magento-cloud-patches`套件會將[軟體下載](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/commerce)頁面上所有可用的修補程式套裝，並在您部署至雲端時自動套用這些修補程式。 為避免升級至ECE-Tools 2002.1.0或更新版本後發生修補程式衝突，請移除您手動下載並新增至專案的Adobe提供的任何修補程式。
 
 - **更新套用修補程式命令** — 我們將套用修補程式的命令從`vendor/bin/ece-tools`目錄移至`vendor/bin/ece-patches`目錄。 如果您使用此指令來手動套用修補程式，請使用新路徑。
 

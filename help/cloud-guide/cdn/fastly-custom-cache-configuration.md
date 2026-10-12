@@ -3,24 +3,39 @@ title: 自訂快取設定
 description: 瞭解如何在Fastly服務設定完成後檢閱及自訂快取配置設定。
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-TQID: https://experienceleague.adobe.com/X7N0dITHF7mzdFUrwQ1JlUYKweLcTibTclWETf3P5SU
+TQID: 'https://experienceleague.adobe.com/X7N0dITHF7mzdFUrwQ1JlUYKweLcTibTclWETf3P5SU'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+    internal-label: IaaS
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 2130
+source-wordcount: '2130'
 ht-degree: 0%
-
 ---
-
 # 自訂快取設定
 
 在測試和生產環境中設定並測試Fastly服務後，請檢閱並自訂快取組態設定。 例如，您可以更新設定以啟用強制TLS將HTTP請求重新導向到Fastly、更新清除設定，以及啟用基本驗證以在開發期間以密碼保護您的網站。
@@ -29,11 +44,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->設定Fastly快取的可用管理選項取決於已安裝的Magento 2的Fastly CDN模組版本。 Adobe建議您[將測試環境和生產環境中的Fastly模組](fastly-configuration.md#upgrade) Fastly模組升級至最新版本。 如需最新資訊，請參閱[Magento2模組](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)的Fastly CDN發行說明。
+>設定Fastly快取的可用管理選項取決於已安裝的Magento 2的Fastly CDN模組版本。 Adobe建議您[將測試環境和生產環境中的Fastly模組](fastly-configuration.md#upgrade) Fastly模組升級至最新版本。 如需最新資訊，請參閱[Magento2模組Fastly CDN的發行說明](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)。
 
 ## 強制TLS
 
-Fastly提供&#x200B;_強制TLS_&#x200B;選項，可將未加密的請求(HTTP)重新導向至Fastly。 為您的預備或生產環境布建了[有效的SSL/TLS憑證](fastly-configuration.md#provision-ssltls-certificates)後，您可以更新存放區的Fastly設定以啟用「強制TLS」選項。 請參閱Magento 2 _的_ Fastly CDN模組檔案中的Fastly [強制TLS指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)。
+Fastly提供&#x200B;_強制TLS_&#x200B;選項，可將未加密的請求(HTTP)重新導向至Fastly。 為您的預備或生產環境布建了[有效的SSL/TLS憑證](fastly-configuration.md#provision-ssltls-certificates)後，您可以更新存放區的Fastly設定以啟用「強制TLS」選項。 請參閱Magento 2 _適用的_ Fastly CDN模組檔案中的Fastly [Force TLS指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)。
 
 >[!NOTE]
 >
@@ -73,7 +88,7 @@ Fastly會擷取Admin路徑，以從`app/etc/env.php`組態檔產生VCL檔案。
 
 ## 設定清除選項
 
-Fastly在您的Magento Cache Management頁面上提供多種型別的清除選項，包括清除產品類別、產品資產和內容的選項。 啟用後，Fastly會監視事件以自動清除這些快取。 如果停用永久刪除選項，您可以在完成更新後，透過「快取管理」頁面手動永久刪除Fastly快取。
+Fastly在您的「Magento快取管理」頁面上提供多種型別的清除選項，包括清除產品類別、產品資產和內容的選項。 啟用後，Fastly會監視事件以自動清除這些快取。 如果停用永久刪除選項，您可以在完成更新後，透過「快取管理」頁面手動永久刪除Fastly快取。
 
 永久刪除選項包括：
 
@@ -202,7 +217,7 @@ Fastly支援自訂版本的Varnish Configuration Language (VCL)以自訂Fastly�
 
 - 對於入門專案，請移至[!DNL Cloud Console]中[!UICONTROL Domains]標籤下的專案URL以新增您的專案URL。
 
-- 若為Pro專案，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，以將網域新增至您的雲端專案設定。 支援團隊也會更新Adobe Commerce Fastly帳戶設定以新增網域。
+- 若為Pro專案，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，以將網域新增至您的雲端專案設定。 支援團隊也會更新Adobe Commerce Fastly帳戶設定以新增網域。
 
 **若要從管理員管理Fastly網域設定**：
 
@@ -242,4 +257,4 @@ Fastly支援自訂版本的Varnish Configuration Language (VCL)以自訂Fastly�
 
    啟用維護模式後，除了來自`maint_allowlist` ACL中IP位址的請求之外，所有流量都會遭到封鎖。 您可以更新`maint_allowlist`以變更ACL中的IP位址。
 
-   如需詳細的設定指示，請參閱Magento 2模組檔案的Fastly CDN中的[維護模式指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md)。
+   如需詳細的設定指示，請參閱Fastly CDN for Magento 2模組檔案中的[維護模式指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md)。

@@ -3,23 +3,30 @@ title: 重新導向
 description: 瞭解如何在雲端基礎結構專案上管理Adobe Commerce的重新導向規則。
 feature: Cloud, Routes
 exl-id: f70a9035-bbae-4d23-bb7c-c0de6a7ccf6c
-TQID: https://experienceleague.adobe.com/53acuGMa93oysIKX-agqJCttbxCdIFgyRpmeZh-G9gI
+TQID: 'https://experienceleague.adobe.com/53acuGMa93oysIKX-agqJCttbxCdIFgyRpmeZh-G9gI'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 1783ae9f-7157-5aeb-a915-91e260301e46
+    internal-label: Routes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 706
+source-wordcount: '706'
 ht-degree: 0%
-
 ---
-
 # 重新導向
 
 管理重新導向規則是Web應用程式的常見需求，尤其是在您不想失去隨著時間變更或移除的傳入連結的情況下。
@@ -34,7 +41,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->對於雲端基礎結構專案上的Adobe Commerce，在`routes.yaml`檔案中設定許多非規則運算式重新導向和重新寫入，可能會導致效能問題。 如果`routes.yaml`檔案大於或等於32 KB，請將非規則運算式重新導向解除安裝並重新寫入Fastly。 檢視&#x200B;_Adobe Commerce說明中心_&#x200B;中的[解除安裝非Regex重新導向至Fastly而非Nginx （路由）](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes)。
+>對於雲端基礎結構專案上的Adobe Commerce，在`routes.yaml`檔案中設定許多非規則運算式重新導向和重新寫入，可能會導致效能問題。 如果`routes.yaml`檔案大於或等於32 KB，請將非規則運算式重新導向解除安裝並重新寫入Fastly。 檢視&#x200B;_Adobe Commerce說明中心_&#x200B;中的[解除安裝非Regex重新導向至Fastly而非Nginx （路由）](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes)。
 
 ## 整個路由重新導向
 

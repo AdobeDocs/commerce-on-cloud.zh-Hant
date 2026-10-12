@@ -3,28 +3,47 @@ title: 部署至測試與生產
 description: 瞭解如何將雲端基礎結構上的Adobe Commerce程式碼部署到中繼和生產環境，以供進一步測試。
 feature: Cloud, Console, Deploy, SCD, Storage
 exl-id: 1cfeb472-c6ec-44ff-9b32-516ffa1b30d2
-TQID: https://experienceleague.adobe.com/SJZ2BuPEe6QsgkPyODiZx6118qd6vxh72r3nVuPrLnM
+TQID: 'https://experienceleague.adobe.com/SJZ2BuPEe6QsgkPyODiZx6118qd6vxh72r3nVuPrLnM'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+    internal-label: Storefront
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+  - id: aa037b12-c774-5642-a947-459024feb1a2
+    internal-label: Storage
+  - id: 125c1f49-aefd-5f34-a252-288937f95f6b
+    internal-label: Marketing Tools
 subfeature_v2:
   - id: b01a71b7-d17a-42b2-a9ac-af4b8d9d2ef5
+    internal-label: 2FA
+  - id: c4af0798-d497-5e6b-8380-19812c26d00a
+    internal-label: Console
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1374
+source-wordcount: '1374'
 ht-degree: 0%
-
 ---
-
 # 部署至測試與生產
 
 部署和上線的程式從開發開始，接著是測試，最後是在生產環境中上線。 Adobe提供端對端環境解決方案，確保設定的一致性。 每個環境都支援對店面進行直接URL存取，以及對CLI命令進行管理員和SSH存取。
@@ -35,7 +54,7 @@ ht-degree: 0%
 >
 >Adobe建議在部署之前建立環境的[備份](../storage/snapshots.md)。
 
-此外，您可以使用New Relic[&#128279;](../monitor/track-deployments.md)啟用追蹤部署，以監視部署事件，並協助您分析部署之間的效能。
+此外，您可以使用New Relic](../monitor/track-deployments.md)啟用[追蹤部署，以監視部署事件，並協助您分析部署之間的效能。
 
 ## 入門部署流程
 
@@ -155,7 +174,7 @@ Pro隨附大型整合環境，其中包含兩個作用中的分支：全域`mast
 
 ## 移轉靜態檔案
 
-[靜態檔案](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/implementation-playbook/glossary)儲存在`mounts`中。 將檔案從來源掛載位置（例如您的本機環境）移轉至目的地掛載位置的方法有兩種。 這兩種方法都使用`rsync`公用程式，但Adobe建議使用`magento-cloud` CLI在本機和遠端環境之間移動檔案。 而且Adobe建議在將檔案從遠端來源移動到其他遠端位置時使用`rsync`方法。
+[靜態檔案](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)儲存在`mounts`中。 將檔案從來源掛載位置（例如您的本機環境）移轉至目的地掛載位置的方法有兩種。 這兩種方法都使用`rsync`公用程式，但Adobe建議使用`magento-cloud` CLI在本機和遠端環境之間移動檔案。 而且Adobe建議在將檔案從遠端來源移動到其他遠端位置時使用`rsync`方法。
 
 ### 使用CLI移轉檔案
 

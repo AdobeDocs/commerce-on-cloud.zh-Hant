@@ -3,22 +3,31 @@ title: 設定PayPal付款方法
 description: 在雲端基礎結構上為Adobe Commerce設定PayPal付款方法。
 feature: Cloud, Checkout, Payments
 exl-id: 577639f8-74a1-4bb2-96fc-72135252cbd1
-TQID: https://experienceleague.adobe.com/wGyqg7fnVgAglBAqnaA0ak-JaBLHGn5-Bkj-jx8qwoo
+TQID: 'https://experienceleague.adobe.com/wGyqg7fnVgAglBAqnaA0ak-JaBLHGn5-Bkj-jx8qwoo'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 8cd50456-5eb0-5364-922a-f14161feb828
+    internal-label: Checkout
+  - id: 3dcbfa9e-51f8-569c-a0e4-7f59098f730f
+    internal-label: Payments
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 697
+source-wordcount: '697'
 ht-degree: 0%
-
 ---
-
 # 設定PayPal付款方法
 
 雲端基礎結構上的Adobe Commerce提供上線工具，以便直接透過管理員設定PayPal Express結帳帳戶。 此工具適用於ECE 2.1.8和更新版本。 為了更妥善地支援上線及測試PayPal付款方法，您可以為沙箱或生產帳戶啟用並設定您的PayPal Express結帳帳戶。
@@ -68,7 +77,7 @@ PayPal支援全球各地的PayPal Express Checkout連線，但下列限制除外
    * **沙箱模式**&#x200B;選取「是」或「否」以指出您輸入的認證是否適用於沙箱。 如果您已輸入生產認證，請選取「否」。
    * **API使用Proxy**&#x200B;如果系統使用Proxy伺服器建立Adobe Commerce與PayPal付款系統之間的連線，請選取「是」或「否」以設定。 如果是，請輸入Proxy主機和連線埠。
 
-1. 如需設定帳戶的詳細資訊和步驟，請參閱[PayPal Express結帳](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) （從步驟2開始）。完成必要的設定。
+1. 如需設定帳戶的詳細資訊和步驟，請參閱[PayPal Express結帳](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) （從步驟2開始）。完成必要的設定。
 
 設定並驗證帳戶後，您可以在「必要的PayPal設定」下啟用和停用PayPal付款選項：
 

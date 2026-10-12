@@ -3,27 +3,37 @@ title: 以案例為基礎的部署
 description: 瞭解如何使用自訂組態檔在雲端基礎結構部署上自訂Adobe Commerce。
 feature: Cloud, Configuration, Deploy, Build
 exl-id: 44c2a73e-4ea2-49a6-86c1-9fa8cfc8b66e
-TQID: https://experienceleague.adobe.com/BttmvnP2iMbN-EAaPR9g2i9mv7fH4REAEwHFTu-2sw0
+TQID: 'https://experienceleague.adobe.com/BttmvnP2iMbN-EAaPR9g2i9mv7fH4REAEwHFTu-2sw0'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 884
+source-wordcount: '884'
 ht-degree: 0%
-
 ---
-
 # 以案例為基礎的部署
 
 透過`ece-tools` 2002.1.0和更新版本，您可以使用情境式部署功能來自訂預設部署行為。
-此功能在設定中使用&#x200B;**案例**&#x200B;和&#x200B;**步驟**：
+此功能在設定中使用**案例**&#x200B;和&#x200B;**步驟**：
 
 - **案例組態** — 每個部署勾點都是&#x200B;*案例*，這是描述完成部署工作的順序和組態引數的XML組態檔。 您可以在`.magento.app.yaml`檔案的`hooks`區段中設定情境。
 
@@ -51,7 +61,7 @@ hooks:
 
 >[!NOTE]
 >
->隨著`ece-tools` 2002.1.x的發行，有新的[鉤點組態](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)格式。 仍支援`ece-tools` 2002.0.x版的舊版格式。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。
+>隨著`ece-tools` 2002.1.x的發行，有新的[鉤點組態](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)格式。 仍支援`ece-tools` 2002.0.x版的舊版格式。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。
 
 ## 檢閱案例步驟
 

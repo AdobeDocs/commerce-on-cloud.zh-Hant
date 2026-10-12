@@ -5,20 +5,28 @@ feature: Cloud, Configuration, Cache
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 42523ff9-d8ca-470a-ac7b-d2ce21edd830
-TQID: https://experienceleague.adobe.com/w60X0FgUZr-ff1cJJmo5y8frgYW5MlR0pyBy8tTFfSg
+TQID: 'https://experienceleague.adobe.com/w60X0FgUZr-ff1cJJmo5y8frgYW5MlR0pyBy8tTFfSg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 516
+source-wordcount: '516'
 ht-degree: 0%
-
 ---
-
 # 部署後變數
 
 下列&#x200B;_部署後_&#x200B;變數控制部署後階段中的動作，可以繼承及覆寫來自[全域變數](variables-global.md)的值。 在`.magento.env.yaml`檔案的`post-deploy`階段中插入這些變數：
@@ -104,54 +112,54 @@ stage:
   <entity_type>:<pattern|url|product_sku>:<store_id|store_code>
   ```
 
-   - `entity_type`：可能的變體`category`、`cms-page`、`product`、`store-page`
-   - `pattern|url|product_sku`：使用`regexp`模式或完全符合`url`來篩選URL，或對所有頁面使用星號(\*)。 對`product`實體型別使用產品SKU
-   - `store_id|store_code`：使用商店的識別碼或代碼，或所有商店的星號(\*)，您可以傳遞數個以`|`分隔的商店識別碼或代碼
+  - `entity_type`：可能的變體`category`、`cms-page`、`product`、`store-page`
+  - `pattern|url|product_sku`：使用`regexp`模式或完全符合`url`來篩選URL，或對所有頁面使用星號(\*)。 對`product`實體型別使用產品SKU
+  - `store_id|store_code`：使用商店的識別碼或代碼，或所有商店的星號(\*)，您可以傳遞數個以`|`分隔的商店識別碼或代碼
 
   以下範例會根據這些條件來快取`category`和`cms-page`實體型別：
-   - ID為`1`之商店的所有類別頁面
-   - 程式碼為`store1`和`store2`之商店的所有類別頁面
-   - 程式碼為`store_en`之商店的類別頁面`cars`
-   - 所有商店的cms頁面`contact`
-   - 識別碼為`1`和`2`之存放區的CMS頁面`contact`
-   - 任何包含`car_`且結尾為`html`且儲存識別碼為2的類別頁面
-   - 任何包含`tires_`且代碼為`store_gb`之存放區的類別頁面
+  - ID為`1`之商店的所有類別頁面
+  - 程式碼為`store1`和`store2`之商店的所有類別頁面
+  - 程式碼為`store_en`之商店的類別頁面`cars`
+  - 所有商店的cms頁面`contact`
+  - 識別碼為`1`和`2`之存放區的CMS頁面`contact`
+  - 任何包含`car_`且結尾為`html`且儲存識別碼為2的類別頁面
+  - 任何包含`tires_`且代碼為`store_gb`之存放區的類別頁面
 
-     ```yaml
-     stage:
-       post-deploy:
-         WARM_UP_PAGES:
-           - "category:*:1"
-           - "category:*:store1|store2"
-           - "category:cars:store_en"
-           - "cms-page:contact:*"
-           - "cms-page:contact:1|2"
-           - "category:|car_.*?\\.html$|:2"
-           - "category:|tires_.*|:store_gb"
-     ```
+    ```yaml
+    stage:
+      post-deploy:
+        WARM_UP_PAGES:
+          - "category:*:1"
+          - "category:*:store1|store2"
+          - "category:cars:store_en"
+          - "cms-page:contact:*"
+          - "cms-page:contact:1|2"
+          - "category:|car_.*?\\.html$|:2"
+          - "category:|tires_.*|:store_gb"
+    ```
 
   以下範例會根據這些條件來快取`product`實體型別：
-   - 所有商店的所有產品（以程式設計方式限製為每家商店100項，以避免效能問題）
-   - 商店`store1`的所有產品
-   - 所有商店中具有`sku1`的產品
-   - 程式碼為`store1`和`store2`之商店的`sku1`產品
-   - 程式碼為`store1`和`store2`之商店的`sku1`、`sku2`和`sku3`產品
+  - 所有商店的所有產品（以程式設計方式限製為每家商店100項，以避免效能問題）
+  - 商店`store1`的所有產品
+  - 所有商店中具有`sku1`的產品
+  - 程式碼為`store1`和`store2`之商店的`sku1`產品
+  - 程式碼為`store1`和`store2`之商店的`sku1`、`sku2`和`sku3`產品
 
-     ```yaml
-     stage:
-       post-deploy:
-         WARM_UP_PAGES:
-           - "product:*:*"
-           - "product:*:store1"
-           - "product:sku1:*"
-           - "product:sku1:store1|store2"
-           - "product:sku1|sku2|sku3:store1|store2"
-     ```
+    ```yaml
+    stage:
+      post-deploy:
+        WARM_UP_PAGES:
+          - "product:*:*"
+          - "product:*:store1"
+          - "product:sku1:*"
+          - "product:sku1:store1|store2"
+          - "product:sku1|sku2|sku3:store1|store2"
+    ```
 
   以下範例會根據這些條件來快取`store-page`實體型別：
-   - 所有商店的頁面`/contact-us`
-   - 識別碼為`1`之存放區的頁面`/contact-us`
-   - 程式碼為`code1`和`code2`之商店的頁面`/contact-us`
+  - 所有商店的頁面`/contact-us`
+  - 識別碼為`1`之存放區的頁面`/contact-us`
+  - 程式碼為`code1`和`code2`之商店的頁面`/contact-us`
 
   ```yaml
         stage:

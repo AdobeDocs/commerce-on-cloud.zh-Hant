@@ -3,23 +3,30 @@ title: Fastly影像最佳化
 description: 瞭解如何透過啟用和設定Fastly影像最佳化，來最佳化影像傳送並簡化Adobe Commerce網站的影像管理。
 feature: Cloud, Configuration, Media
 exl-id: 3457ebb0-dbb4-4cb0-b6ab-837b15dce03e
-TQID: https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI
+TQID: 'https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4ca54350-01cb-5b22-8966-5f2873dc6d90
+    internal-label: Media
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Optimization
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1211
+source-wordcount: '1290'
 ht-degree: 0%
-
 ---
-
 # Fastly影像最佳化
 
 Fastly影像最佳化(Fastly IO)提供即時影像操控和最佳化，以加速影像傳送並簡化回應式網頁應用程式影像來源集的維護。 設定好Fastly IO後，可提供下列影像最佳化功能：
@@ -89,11 +96,11 @@ Fastly影像最佳化(Fastly IO)提供即時影像操控和最佳化，以加速
 
    - **調整篩選器大小** — 保留預設設定(`Lancsoz3`)，或選取替代專案。 此設定會指定用來傳送調整大小影像的濾鏡。 根據選取的濾鏡，調整大小的影像可以有較高或較低的畫素數量。
 
-      - `Lanczos3` （預設） — 提供最佳品質的影像。 它會增加偵測影像中邊緣和線性特徵的能力，並使用&#x200B;_[!DNL sinc]_&#x200B;重新取樣以提供最佳可能的重新建構。
-      - `Lanczos2` — 使用與`Lancsoz3`相同的篩選器，但使用&#x200B;_[!DNL sinc]_&#x200B;重新取樣函式的近似值較不準確。
-      - `Bicubic` — 將影像縮小時具有自然銳利化效果。
-      - `Bilinear` — 在放大影像時具有自然的平滑效果。
-      - `Nearest` — 在調整畫素圖稿大小時，具有自然的畫素化效果。
+     - `Lanczos3` （預設） — 提供最佳品質的影像。 它會增加偵測影像中邊緣和線性特徵的能力，並使用&#x200B;_[!DNL sinc]_重新取樣以提供最佳可能的重新建構。
+     - `Lanczos2` — 使用與`Lancsoz3`相同的篩選器，但使用&#x200B;_[!DNL sinc]_重新取樣函式的近似值較不準確。
+     - `Bicubic` — 將影像縮小時具有自然銳利化效果。
+     - `Bilinear` — 在放大影像時具有自然的平滑效果。
+     - `Nearest` — 在調整畫素圖稿大小時，具有自然的畫素化效果。
 
 1. 指定Fastly服務的IO組態設定後，選取&#x200B;**取消**&#x200B;以返回Fastly組態設定。
 
@@ -125,8 +132,8 @@ Fastly影像最佳化(Fastly IO)提供即時影像操控和最佳化，以加速
 
 ### 深度影像最佳化
 
-預設會關閉深層影像最佳化。啟用此選項會關閉內建的Adobe Commerce調整大小並將其完全解除安裝到Fastly IO服務。
-此功能只會調整_產品_&#x200B;影像的大小。CMS影像不會調整大小。
+預設會關閉深層影像最佳化。 啟用此選項會關閉內建的Adobe Commerce調整大小並將其完全解除安裝到Fastly IO服務。
+此功能只會調整_產品_&#x200B;影像的大小。 CMS影像不會調整大小。
 
 啟用深層影像最佳化會將背景色彩定義新增至主題中定義的每個影像。 因此，WebP影像會從WebP lossless切換為WebP lossy。 無損與有損之間的主要差異之一是，有損會捨棄PNG影像的Alpha色版，因而產生小得多的影像。 不過，在使用不同背景的產品和行銷活動頁面上，具有透明度的影像可能會看起來有些奇怪。
 

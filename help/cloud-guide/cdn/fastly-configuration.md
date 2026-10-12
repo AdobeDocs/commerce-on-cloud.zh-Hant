@@ -3,26 +3,43 @@ title: 設定Fastly服務
 description: 瞭解如何為測試環境和生產環境設定、設定和測試Fastly快取、VCL代碼片段和Web應用程式防火牆(WAF)。
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
-TQID: https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w
+TQID: 'https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+    internal-label: IaaS
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 2216
+source-wordcount: '2216'
 ht-degree: 0%
-
 ---
-
 # 設定Fastly服務
 
 雲端基礎結構測試和生產環境上的Adobe Commerce需要Fastly。
@@ -53,7 +70,7 @@ Fastly與Varnish合作，提供快速快取功能以及用於靜態資產的內�
 
 在雲端基礎結構上使用Adobe Commerce，您無法直接存取Fastly管理員儀表板。
 
-使用Adobe Commerce管理員檢閱和更新環境的Fastly設定。 如果您無法在管理員中使用Fastly功能解決問題，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)。
+使用Adobe Commerce管理員檢閱和更新環境的Fastly設定。 如果您無法在管理員中使用Fastly功能解決問題，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)。
 
 ## 取得Fastly認證
 
@@ -89,7 +106,7 @@ Fastly與Varnish合作，提供快速快取功能以及用於靜態資產的內�
 
 - 如果您找不到測試或生產環境的Fastly憑證，請聯絡您的Adobe客戶技術顧問(CTA)。
 
-- [驗證Fastly認證時發生錯誤](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
+- [驗證Fastly認證時發生錯誤](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
 
 ## 保護您的認證
 
@@ -103,7 +120,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
 您需要以下元件來啟用和設定Fastly服務：
 
-- 適用於Magento 2模組[&#128279;](fastly.md#fastly-cdn-module-for-magento-2)的最新版Fastly CDN已安裝在中繼和生產環境中。 請參閱[Fastly升級](#upgrade-the-fastly-module)。
+- Magento 2模組](fastly.md#fastly-cdn-module-for-magento-2)適用的[Fastly CDN最新版本已安裝在中繼和生產環境中。 請參閱[Fastly升級](#upgrade-the-fastly-module)。
 
 - 雲端基礎結構中繼和生產環境上Adobe Commerce的[Fastly認證](#get-fastly-credentials)
 
@@ -115,7 +132,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
    ![展開以選取Fastly](../../assets/cdn/fastly-menu.png)
 
-1. 在&#x200B;_[!UICONTROL Caching Application]_&#x200B;區段中，從&#x200B;**[!UICONTROL Use system value]**&#x200B;移除選取專案，然後從下拉式清單中選取&#x200B;**[!UICONTROL Fastly CDN]**。
+1. 在&#x200B;_[!UICONTROL Caching Application]_區段中，從&#x200B;**[!UICONTROL Use system value]**移除選取專案，然後從下拉式清單中選取&#x200B;**[!UICONTROL Fastly CDN]**。
 
    ![選擇Fastly](../../assets/cdn/fastly-enable-admin.png)
 
@@ -137,7 +154,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
    >[!NOTE]
    >
-   >請勿選取連結來建立Fastly API權杖。 請改用Adobe[&#128279;](#get-fastly-credentials)提供的Fastly認證（服務ID和API權杖）。
+   >請勿選取連結來建立Fastly API權杖。 請改用Adobe](#get-fastly-credentials)提供的[Fastly認證（服務ID和API權杖）。
 
 1. 按一下&#x200B;**[!UICONTROL Test credentials]**。
 
@@ -161,7 +178,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
 **若要上傳Fastly VCL**：
 
-1. 在&#x200B;_[!UICONTROL Fastly Configuration]_&#x200B;區段中，按一下&#x200B;**[!UICONTROL Upload VCL to Fastly]**，如下圖所示。
+1. 在&#x200B;_[!UICONTROL Fastly Configuration]_區段中，按一下&#x200B;**[!UICONTROL Upload VCL to Fastly]**，如下圖所示。
 
    ![將Magento VCL上傳至Fastly](../../assets/cdn/fastly-upload-vcl-admin.png)
 
@@ -169,7 +186,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
 ## 布建SSL/TLS憑證
 
-Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的安全HTTPS流量。 Adobe為每個Pro生產、測試和入門生產環境提供一個憑證，以保護該環境中的所有網域。 如需所提供憑證的詳細資訊，請參閱雲端基礎結構上Adobe Commerce的[Adobe SSL (TLS)憑證](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)。
+Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的安全HTTPS流量。 Adobe為每個Pro生產、測試和入門生產環境提供一個憑證，以保護該環境中的所有網域。 如需所提供憑證的詳細資訊，請參閱雲端基礎結構上Adobe Commerce的[Adobe SSL (TLS)憑證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)。
 
 >[!NOTE]
 >
@@ -273,7 +290,7 @@ Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的�
 
    >[!NOTE]
    >
-   >除了使用Cloud CLI之外，您也可以從[管理員](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/stores-sales/site-store/store-urls)更新基底URL
+   >除了使用Cloud CLI之外，您也可以從[管理員](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)更新基底URL
 
 1. 重新啟動網頁瀏覽器。
 
@@ -311,7 +328,7 @@ Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的�
 Fastly更新Magento 2模組的Fastly CDN以解決問題、提高效能並提供新功能。
 Adobe建議您更新測試和生產環境中的Fastly模組至[最新版本](https://github.com/fastly/fastly-magento2/blob/master/VERSION)。
 
-如需模組版本和更新的最新資訊，請參閱GitHub上Magento2模組[&#128279;](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)的Fastly CDN發行說明。
+如需模組版本和更新的最新資訊，請參閱GitHub上Fastly CDN for Magento2模組](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)的[發行說明。
 
 更新模組後，您必須上傳VCL程式碼以將變更套用至Fastly服務組態。
 
@@ -350,4 +367,4 @@ Adobe建議您更新測試和生產環境中的Fastly模組至[最新版本](htt
 
 >[!TIP]
 >
-> 如果您的Adobe Commerce環境中遇到Fastly服務問題，請參閱[Adobe Commerce Fastly疑難排解員](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-29661)。
+> 如果您的Adobe Commerce環境中遇到Fastly服務問題，請參閱[Adobe Commerce Fastly疑難排解員](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29661)。

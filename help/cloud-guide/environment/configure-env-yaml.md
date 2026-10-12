@@ -4,22 +4,33 @@ description: 瞭解如何使用環境變數，在雲端基礎結構環境中設�
 feature: Cloud, Build, Configuration, Deploy, SCD
 role: Developer
 exl-id: f39c73fc-351a-41ed-9e74-2c3f14871246
-TQID: https://experienceleague.adobe.com/Ub0FWkUN9uOVzLhVbNbPhUV5kj808ODlbjVrRDDA-4E
+TQID: 'https://experienceleague.adobe.com/Ub0FWkUN9uOVzLhVbNbPhUV5kj808ODlbjVrRDDA-4E'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: c754e69243236bbf862ea636261c6d2a6cae9eb7
+    internal-label: Optimization
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 706
+source-wordcount: '706'
 ht-degree: 0%
-
 ---
-
 # 設定用於部署的環境變數
 
 `.magento.env.yaml`檔案使用環境變數，集中管理所有環境的建置和部署動作，包括Pro Staging和生產環境。 若要在每個環境中設定唯一的動作，您必須在每個環境中修改此檔案。
@@ -44,7 +55,7 @@ ht-degree: 0%
 
 ### 環境變數
 
-`ece-tools`套件根據[雲端變數](variables-cloud.md)、[!DNL Cloud Console]中設定的變數及`.magento.env.yaml`組態檔的值，在`env.php`檔案中設定值。 `.magento.env.yaml`檔案中的環境變數會覆寫您現有的Commerce設定來自訂雲端環境。 如果預設值為`Not Set`，則`ece-tools`封裝會採取&#x200B;**NO**&#x200B;動作，並使用[!DNL Commerce]預設值或MAGENTO_CLOUD_RELATIONSHIPS設定的值。 如果設定了預設值，則`ece-tools`套件會動作來設定該預設值。
+`ece-tools`套件根據[雲端變數](variables-cloud.md)、[!DNL Cloud Console]中設定的變數及`.magento.env.yaml`組態檔的值，在`env.php`檔案中設定值。 `.magento.env.yaml`檔案中的環境變數會覆寫您現有的Commerce設定來自訂雲端環境。 如果預設值為`Not Set`，則`ece-tools`封裝會採取&#x200B;**NO**&#x200B;動作，並使用[!DNL Commerce]預設值或來自MAGENTO_CLOUD_RELATIONSHIPS設定的值。 如果設定了預設值，則`ece-tools`套件會動作來設定該預設值。
 
 下列主題包含您可以在`.magento.env.yaml`檔案中使用的所有變數的詳細定義，例如預設值是否已設定：
 

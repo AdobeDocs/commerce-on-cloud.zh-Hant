@@ -3,23 +3,32 @@ title: 最佳化雲端部署
 description: 瞭解在雲端基礎結構專案上最佳化Adobe Commerce部署流程的方法，包括減少停機時間、靜態內容部署、情境式部署和智慧型精靈。
 feature: Cloud, Deploy, SCD
 exl-id: 4315e2f4-06af-4a5c-9db9-e7b2f63660df
-TQID: https://experienceleague.adobe.com/bd9n9CFrpyn1UZG6SX8qkoZGBOFd2N7z9Hoa1hQ8rew
+TQID: 'https://experienceleague.adobe.com/bd9n9CFrpyn1UZG6SX8qkoZGBOFd2N7z9Hoa1hQ8rew'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Optimization
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 230
+source-wordcount: '230'
 ht-degree: 0%
-
 ---
-
 # 最佳化部署
 
 網站效能在部署過程中可能會受到影響。 部署到生產網站時，網站處於維護模式的時間長度取決於許多因素，例如環境設定和網站包含的內容量。 最佳化雲端部署的第一個最佳實務是[升級以使用`ece-tools`](../dev-tools/install-package.md)來受益於封裝功能，例如建立資料庫備份及驗證環境設定的命令。

@@ -5,20 +5,23 @@ feature: Cloud, Configuration
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 82923b6f-221d-4902-a1b8-5ba6c7b3339a
-TQID: https://experienceleague.adobe.com/Zk52OMqjrB74v9djO1PVOYd3wOS8EbdfL1rnqIdA8B4
+TQID: 'https://experienceleague.adobe.com/Zk52OMqjrB74v9djO1PVOYd3wOS8EbdfL1rnqIdA8B4'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 340
+source-wordcount: '340'
 ht-degree: 0%
-
 ---
-
 # 雲端專用變數
 
 雲端基礎結構上Adobe Commerce專屬的環境變數使用`MAGENTO_CLOUD_*`前置詞：
@@ -39,7 +42,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->若要使用[[!DNL Cloud Console]](../project/overview.md)將環境變數新增至[覆寫組態設定](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/paths/override-config-settings)，您必須在變數名稱前面加上`env:`，如下列範例所示：
+>若要使用[[!DNL Cloud Console]](../project/overview.md)將環境變數新增至[覆寫組態設定](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/paths/override-config-settings)，您必須在變數名稱前面加上`env:`，如下列範例所示：
 >
 >![環境變數範例](../../assets/set-env-variable-ui.png)
 
@@ -60,7 +63,7 @@ ht-degree: 0%
 
 ## 檢視環境變數
 
-您可以使用來自[&#x200B; `ece-tools`套件](../dev-tools/package-overview.md)的`env:config:show`命令，顯示目前環境的變數清單。
+您可以使用來自[ `ece-tools`套件](../dev-tools/package-overview.md)的`env:config:show`命令，顯示目前環境的變數清單。
 
 ```bash
 php ./vendor/bin/ece-tools env:config:show variables

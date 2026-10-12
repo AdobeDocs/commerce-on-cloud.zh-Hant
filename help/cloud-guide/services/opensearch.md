@@ -3,24 +3,33 @@ title: 設定OpenSearch服務
 description: 瞭解如何在雲端基礎結構上啟用Adobe Commerce的OpenSearch服務。
 feature: Cloud, Search, Services
 exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
-TQID: https://experienceleague.adobe.com/DIH1i-hJKlsoFFmDsws-w6iuJ56B7dcdiJP5Zh1iRII
+TQID: 'https://experienceleague.adobe.com/DIH1i-hJKlsoFFmDsws-w6iuJ56B7dcdiJP5Zh1iRII'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+subfeature_v2:
+  - id: a1d22079-48b9-5e69-9ee6-eb236068ef34
+    internal-label: Search
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 816
+source-wordcount: '816'
 ht-degree: 0%
-
 ---
-
 # 設定OpenSearch服務
 
-在Elasticsearch的授權變更後，[OpenSearch](https://www.opensearch.org)服務是Elasticsearch 7.10.2的開放原始碼復本。 檢視GitHub中的[OpenSource專案](https://github.com/opensearch-project)。 [系統需求](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/system-requirements)列出支援的版本。
+在Elasticsearch的授權變更後，[OpenSearch](https://www.opensearch.org)服務是Elasticsearch 7.10.2的開放原始碼復本。 檢視GitHub中的[OpenSource專案](https://github.com/opensearch-project)。 [系統需求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)列出支援的版本。
 
 {{elasticsearch-support}}
 
@@ -35,7 +44,7 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
 
 >[!TIP]
 >
->對於未使用[即時搜尋](https://experienceleague.adobe.com/zh-hant/docs/commerce/live-search/overview)的雲端基礎結構專案上的Adobe Commerce，Adobe建議設定[!DNL OpenSearch]以提供協力廠商搜尋工具的備援選項。 但是，[!DNL OpenSearch]和[!DNL Live Search]不能同時在同一Commerce執行個體上啟用。
+>對於未使用[即時搜尋](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview)的雲端基礎結構專案上的Adobe Commerce，Adobe建議設定[!DNL OpenSearch]以提供協力廠商搜尋工具的備援選項。 但是，[!DNL OpenSearch]和[!DNL Live Search]不能同時在同一Commerce執行個體上啟用。
 
 **若要啟用OpenSearch**：
 
@@ -47,7 +56,7 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
        disk: 1024
    ```
 
-   對於Pro專案，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)才能在測試和生產環境中變更OpenSearch版本。
+   對於Pro專案，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)才能在測試和生產環境中變更OpenSearch版本。
 
 1. 設定或驗證`.magento.app.yaml`檔案中的`relationships`屬性。
 
@@ -100,7 +109,7 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
 
 - **專案升級** — 確認新應用程式版本中的OpenSearch PHP使用者端與安裝在雲端基礎結構上的OpenSearch服務版本相容。
 
-服務版本和相容性支援取決於在雲端基礎結構上測試和部署的版本，有時與Adobe Commerce內部部署支援的版本不同。 如需支援的版本清單，請參閱&#x200B;_安裝指南_&#x200B;中的[系統需求](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/installation-guide/system-requirements)。
+服務版本和相容性支援取決於在雲端基礎結構上測試和部署的版本，有時與Adobe Commerce內部部署支援的版本不同。 如需支援的版本清單，請參閱&#x200B;_安裝指南_&#x200B;中的[系統需求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)。
 
 **若要驗證OpenSearch軟體相容性**：
 
@@ -192,7 +201,7 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
 
 >[!NOTE]
 >
->這僅適用於整合和入門環境。 若要在Pro測試或生產叢集中安裝外掛程式，[請提交支援要求](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)。
+>這僅適用於整合和入門環境。 若要在Pro測試或生產叢集中安裝外掛程式，[請提交支援要求](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)。
 
 
 ```yaml
@@ -216,7 +225,7 @@ opensearch:
 
 >[!NOTE]
 >
->這項變更僅適用於整合和入門環境。 您必須[提交支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)，才能移除Pro測試或生產叢集中的外掛程式。
+>這項變更僅適用於整合和入門環境。 您必須[提交支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)，才能移除Pro測試或生產叢集中的外掛程式。
 
 1. 從您的`.magento/services.yaml`檔案移除OpenSearch外掛程式專案。
 1. 新增、提交和推送您的程式碼變更。

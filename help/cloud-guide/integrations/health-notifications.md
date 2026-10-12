@@ -3,19 +3,27 @@ title: 健康狀態通知
 description: 瞭解如何設定Slack、電子郵件和PagerDuty通知，以取得雲端基礎結構專案上Adobe Commerce的磁碟空間使用量。
 feature: Cloud, Observability, Integration
 exl-id: 5a7f37e9-e8f9-4b6b-b628-60dcaa60cc64
-TQID: https://experienceleague.adobe.com/Tt4zWTqehO4SLsimUv3IE5VvjJ1OwAA27tT9Mot24FU
+TQID: 'https://experienceleague.adobe.com/Tt4zWTqehO4SLsimUv3IE5VvjJ1OwAA27tT9Mot24FU'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+  - id: cc04bd17-78d5-5120-8c3d-1b8a57e49280
+    internal-label: Integration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 386
+source-wordcount: '386'
 ht-degree: 0%
-
 ---
-
 # 健康狀態通知
 
 雲端基礎結構上的Adobe Commerce會監視您入門環境或Pro整合環境中所有應用程式和服務上的磁碟空間使用情況。 空間不足的資料庫磁碟可能會導致資料損毀。 健康狀態檢查每5分鐘進行一次，可以透過電子郵件或其他外部服務通知您。 健全狀態通知有三個低磁碟警告：

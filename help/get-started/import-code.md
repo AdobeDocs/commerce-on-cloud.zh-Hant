@@ -2,15 +2,21 @@
 title: 匯入現有的Commerce程式碼
 description: 瞭解如何將現有Commerce程式碼匯入新的雲端基礎結構專案。
 hide: true
-hidefromtoc: true
+hidefromtoc: 'yes'
 recommendations: noDisplay, noCatalog
-source-git-commit: bdbb6e21c8d7af1c2726382333ec5184b87ac7b7
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
-
 ---
-
 
 # 匯入現有的Commerce程式碼
 

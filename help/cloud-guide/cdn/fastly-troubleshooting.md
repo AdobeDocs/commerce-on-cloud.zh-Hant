@@ -3,26 +3,41 @@ title: Fastly疑難排解
 description: 瞭解如何疑難排解和管理Adobe Commerce的Fastly CDN模組和服務。
 feature: Cloud, Configuration, Cache, Services
 exl-id: 69954ef9-9ece-411e-934e-814a56542290
-TQID: https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c
+TQID: 'https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1911
+source-wordcount: '1911'
 ht-degree: 0%
-
 ---
-
 # Fastly疑難排解
 
 使用下列資訊在雲端基礎結構專案環境中，對Adobe Commerce中Magento 2的Fastly CDN模組進行疑難排解和管理。 例如，您可以調查回應標頭值和快取行為來解決Fastly服務和效能問題。
@@ -55,9 +70,9 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 
 - **上層導覽無法運作** — 上層導覽仰賴Edge Side Include (ESI)處理，此處理會在您上傳預設的Magento Fastly VCL程式碼片段時啟用。 如果導覽無法運作，請[上傳Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)並重新檢查網站。
 
-- **地理位置/GeoIP無法運作** — 預設的Magento Fastly VCL程式碼片段會將國家/地區代碼附加至URL。 如果國家/地區代碼無法運作，請[上傳Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)並重新檢查網站。
+- **地理位置/GeoIP無法運作** — 預設的Magento Fastly VCL片段會將國家/地區代碼附加至URL。 如果國家/地區代碼無法運作，請[上傳Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)並重新檢查網站。
 
-- **頁面未快取** — 依預設，Fastly不會快取具有`Set-Cookies`標頭的頁面。 Adobe Commerce甚至會在可快取的頁面上設定Cookie (TTL > 0)。 預設的Magento Fastly VCL會移除可快取頁面上的這些Cookie。 如果頁面未快取，[請上傳Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)並重新檢查網站。
+- **頁面未快取** — 依預設，Fastly不會快取具有`Set-Cookies`標頭的頁面。 Adobe Commerce甚至會在可快取的頁面上設定Cookie (TTL > 0)。 預設Magento Fastly VCL會移除可快取頁面上的這些Cookie。 如果頁面未快取，[請上傳Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)並重新檢查網站。
 
   如果範本中的頁面區塊標示為無法快取，也會發生此問題。 在這種情況下，問題很可能是因為協力廠商模組或擴充功能封鎖或移除Adobe Commerce標頭所造成。 若要解決此問題，請參閱[X-Cache只包含MISS，沒有HIT](#x-cache-contains-only-miss-no-hit)。
 
@@ -69,8 +84,8 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 
   此問題可能是由以下任一問題造成：
 
-   - 雲端基礎結構專案環境上Adobe Commerce的Fastly服務設定中有無效的Fastly認證
-   - 自訂VCL程式碼片段中的程式碼無效
+  - 雲端基礎結構專案環境上Adobe Commerce的Fastly服務設定中有無效的Fastly認證
+  - 自訂VCL程式碼片段中的程式碼無效
 
   若要解決此問題，請參閱Adobe Commerce說明中心的[清除Cloud上的Fastly快取時發生錯誤](https://support.magento.com/hc/en-us/articles/115001853194-Error-purging-Fastly-cache-on-Cloud-The-purge-request-was-not-processed-successfully-)。
 
@@ -189,7 +204,7 @@ Fastly API請求會透過Fastly擴充功能傳遞，以從原始伺服器取得�
 
 - 包含`X-Magento-Tags`標頭
 
-- `Fastly-Module-Enabled`標頭的值為`Yes`或專案環境中安裝的CDN Magento 2模組的Fastly版本號碼
+- `Fastly-Module-Enabled`標頭的值為`Yes`或專案環境中安裝的CDN Magento 2模組適用的Fastly版本號碼
 
 - [Cache-Control： max-age](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)大於0
 
@@ -250,7 +265,7 @@ php bin/magento module:status Fastly_Cdn
 
 根據傳回的狀態，使用以下指示來更新Fastly設定。
 
-- `Module does not exist` — 如果模組不存在，[請在整合分支中安裝和設定](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md)適用於Magento 2的Fastly CDN模組。 安裝完成後，請啟用並設定模組。 檢視[設定Fastly](fastly-configuration.md)。
+- `Module does not exist` — 如果模組不存在[，請在整合分支中安裝和設定](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md)適用於Magento 2的Fastly CDN模組。 安裝完成後，請啟用並設定模組。 檢視[設定Fastly](fastly-configuration.md)。
 
 - `Module is disabled` — 如果Fastly模組已停用，請更新您本機環境中`integration`分支上的環境設定以啟用它。 然後，將變更推送到「測試」和「生產」。 請參閱[管理擴充功能](../store/extensions.md#install-an-extension)。
 

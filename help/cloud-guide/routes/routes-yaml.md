@@ -3,21 +3,27 @@ title: 設定路由
 description: 瞭解如何在雲端基礎結構環境中為Adobe Commerce定義傳入HTTPS要求的路由。
 feature: Cloud, Configuration, Routes
 exl-id: f0d6eefa-1122-4753-8a7c-1fa0c77590f0
-TQID: https://experienceleague.adobe.com/4EUSHNE6YAfXk4e7ooGRjZiICgHueLKrEA-tDskIPl0
+TQID: 'https://experienceleague.adobe.com/4EUSHNE6YAfXk4e7ooGRjZiICgHueLKrEA-tDskIPl0'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 1783ae9f-7157-5aeb-a915-91e260301e46
+    internal-label: Routes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 915
+source-wordcount: '915'
 ht-degree: 0%
-
 ---
-
 # 設定路由
 
 `.magento/routes.yaml`目錄中的`routes.yaml`檔案定義了雲端基礎結構整合、中繼和生產環境上Adobe Commerce的路由。 路由決定應用程式如何處理傳入的HTTP和HTTPS要求。
@@ -176,7 +182,7 @@ https://www.example.com/blog
       upstream: "mymagento:http"
   ```
 
-- 對於測試和生產環境，請從管理UI啟用[強制Fastly上的TLS](https://experienceleague.adobe.com/zh-hant/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls)選項。 使用此選項時，Fastly會處理到HTTPS的重新導向，因此您不必更新`routes.yaml`設定。
+- 對於測試和生產環境，請從管理UI啟用[強制Fastly上的TLS](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls)選項。 使用此選項時，Fastly會處理到HTTPS的重新導向，因此您不必更新`routes.yaml`設定。
 
 ## 路由選項
 
@@ -186,7 +192,7 @@ https://www.example.com/blog
 | ---------------- | ----------- |
 | `type: upstream` | 為應用程式提供服務。 此外，它有`upstream`屬性，指定了應用程式的名稱（如`.magento.app.yaml`中所定義），後面接著`:http`端點。 |
 | `type: redirect` | 重新導向至其他路由。 它後面接著的是`to`屬性，這是HTTP重新導向至由其範本識別的另一個路由。 |
-| `cache:` | 控制路由[&#128279;](caching.md)的快取。 |
+| `cache:` | 控制路由](caching.md)的[快取。 |
 | `redirects:` | 控制[重新導向規則](redirects.md)。 |
 | `ssi:` | 控制項啟用[伺服器端包含](server-side-includes.md)。 |
 

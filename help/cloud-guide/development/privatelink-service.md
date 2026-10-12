@@ -3,27 +3,39 @@ title: PrivateLink服務
 description: 瞭解如何使用PrivateLink服務，在相同地區的私人雲端和Adobe Commerce雲端平台之間建立安全連線。
 feature: Cloud, Iaas, Security
 exl-id: 13a7899f-9eb5-4c84-b4c9-993c39d611cc
-TQID: https://experienceleague.adobe.com/AxpzTY-Nb7UoKhW-wzAOuWLm5O7XS4OFxjSaIfFUR-I
+TQID: 'https://experienceleague.adobe.com/AxpzTY-Nb7UoKhW-wzAOuWLm5O7XS4OFxjSaIfFUR-I'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+subfeature_v2:
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+    internal-label: IaaS
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Administration
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1799
+source-wordcount: '1799'
 ht-degree: 0%
-
 ---
-
 # PrivateLink服務
 
 雲端基礎結構上的Adobe Commerce支援與[AWS PrivateLink](https://aws.amazon.com/privatelink/)或[Azure Private Link](https://learn.microsoft.com/en-us/azure/private-link/)服務的整合。 您可以使用PrivateLink在雲端基礎結構環境與託管於外部系統的服務和應用程式之間建立安全的、私人的通訊。 必須透過設定在相同雲端平台（AWS或Azure）上的相同雲端區域虛擬私人雲端(VPC)端點，才能存取Adobe Commerce應用程式和外部系統。
@@ -51,7 +63,7 @@ ht-degree: 0%
 - Adobe Commerce支援不包含疑難排解AWS PrivateLink初始啟用以外的問題。
 - 客戶需自行負責與管理自己VPC相關的成本。
 - 平台支援&#x200B;**HTTPS通訊協定（連線埠443）：**
-  - **Azure私人連結**：由於[Fastly來源遮罩](https://experienceleague.adobe.com/zh-hant/docs/commerce-on-cloud/user-guide/cdn/fastly)，您無法使用HTTPS通訊協定（連線埠443）連線到雲端基礎結構上的Adobe Commerce。
+  - **Azure私人連結**：由於[Fastly來源遮罩](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)，您無法使用HTTPS通訊協定（連線埠443）連線到雲端基礎結構上的Adobe Commerce。
   - **AWS PrivateLink**：支援HTTPS通訊協定（連線埠443）連線。
 - 無法使用PrivateDNS。
 
@@ -121,7 +133,7 @@ ht-degree: 0%
 
 以下工作流程概述PrivateLink與雲端基礎結構上Adobe Commerce整合的啟用程式。
 
-1. **客戶**&#x200B;提交支援票證，以主旨列`PrivateLink support for <company>`要求PrivateLink啟用。 在票證中包含啟用[&#128279;](#prerequisites)所需的資料。 Adobe使用支援票證在啟用過程中協調通訊。
+1. **客戶**&#x200B;提交支援票證，以主旨列`PrivateLink support for <company>`要求PrivateLink啟用。 在票證中包含啟用](#prerequisites)所需的[資料。 Adobe使用支援票證在啟用過程中協調通訊。
 
 1. **Adobe**&#x200B;可讓客戶帳戶存取Adobe VPC中的端點服務。
 
@@ -219,7 +231,7 @@ ht-degree: 0%
 
 ## 變更PrivateLink設定
 
-[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以變更現有的PrivateLink設定。 例如，您可以要求進行如下的變更：
+[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以變更現有的PrivateLink設定。 例如，您可以要求進行如下的變更：
 
 - 在雲端基礎結構Pro生產或中繼環境中，從Adobe Commerce移除PrivateLink連線。
 - 變更用於存取Adobe端點服務的客戶Cloud平台帳號。
