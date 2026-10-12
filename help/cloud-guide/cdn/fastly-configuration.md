@@ -120,7 +120,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
 您需要以下元件來啟用和設定Fastly服務：
 
-- Magento 2模組](fastly.md#fastly-cdn-module-for-magento-2)適用的[Fastly CDN最新版本已安裝在中繼和生產環境中。 請參閱[Fastly升級](#upgrade-the-fastly-module)。
+- Magento 2模組[&#128279;](fastly.md#fastly-cdn-module-for-magento-2)適用的Fastly CDN最新版本已安裝在中繼和生產環境中。 請參閱[Fastly升級](#upgrade-the-fastly-module)。
 
 - 雲端基礎結構中繼和生產環境上Adobe Commerce的[Fastly認證](#get-fastly-credentials)
 
@@ -132,7 +132,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
    ![展開以選取Fastly](../../assets/cdn/fastly-menu.png)
 
-1. 在&#x200B;_[!UICONTROL Caching Application]_區段中，從&#x200B;**[!UICONTROL Use system value]**移除選取專案，然後從下拉式清單中選取&#x200B;**[!UICONTROL Fastly CDN]**。
+1. 在&#x200B;_[!UICONTROL Caching Application]_&#x200B;區段中，從&#x200B;**[!UICONTROL Use system value]**&#x200B;移除選取專案，然後從下拉式清單中選取&#x200B;**[!UICONTROL Fastly CDN]**。
 
    ![選擇Fastly](../../assets/cdn/fastly-enable-admin.png)
 
@@ -154,7 +154,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
    >[!NOTE]
    >
-   >請勿選取連結來建立Fastly API權杖。 請改用Adobe](#get-fastly-credentials)提供的[Fastly認證（服務ID和API權杖）。
+   >請勿選取連結來建立Fastly API權杖。 請改用Adobe[&#128279;](#get-fastly-credentials)提供的Fastly認證（服務ID和API權杖）。
 
 1. 按一下&#x200B;**[!UICONTROL Test credentials]**。
 
@@ -178,7 +178,7 @@ Adobe Commerce支援已可存取必要的金鑰，因此您在尋求協助時不
 
 **若要上傳Fastly VCL**：
 
-1. 在&#x200B;_[!UICONTROL Fastly Configuration]_區段中，按一下&#x200B;**[!UICONTROL Upload VCL to Fastly]**，如下圖所示。
+1. 在&#x200B;_[!UICONTROL Fastly Configuration]_&#x200B;區段中，按一下&#x200B;**[!UICONTROL Upload VCL to Fastly]**，如下圖所示。
 
    ![將Magento VCL上傳至Fastly](../../assets/cdn/fastly-upload-vcl-admin.png)
 
@@ -328,7 +328,7 @@ Adobe提供網域驗證讓我們加密SSL/TLS憑證，以提供來自Fastly的�
 Fastly更新Magento 2模組的Fastly CDN以解決問題、提高效能並提供新功能。
 Adobe建議您更新測試和生產環境中的Fastly模組至[最新版本](https://github.com/fastly/fastly-magento2/blob/master/VERSION)。
 
-如需模組版本和更新的最新資訊，請參閱GitHub上Fastly CDN for Magento2模組](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)的[發行說明。
+如需模組版本和更新的最新資訊，請參閱GitHub上Fastly CDN for Magento2模組[&#128279;](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)的發行說明。
 
 更新模組後，您必須上傳VCL程式碼以將變更套用至Fastly服務組態。
 

@@ -71,7 +71,7 @@ stage:
 
 >[!NOTE]
 >
->如需詳細的Redis和Valkey服務組態指南，請參閱[ Valkey和Redis服務組態的最佳實務](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)
+>如需詳細的Redis和Valkey服務組態指南，請參閱[&#x200B; Valkey和Redis服務組態的最佳實務](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)
 
 依預設，部署程式會覆寫對應的快取設定。 若要將指定的值與產生的組態合併，請將`_merge`設為`true`：
 
@@ -693,7 +693,7 @@ stage:
 
 可讓您自訂靜態內容的[部署策略](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)。 請參閱[部署靜態檢視檔案](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)。
 
-如果您有多個地區設定，請只使用這些選項&#x200B;_1}：_
+如果您有多個地區設定，請只使用這些選項&#x200B;_1&rbrace;：_
 
 - `standard` — 為所有封裝部署所有靜態檢視檔案。
 - `quick` — （_預設_）可縮短部署時間。
