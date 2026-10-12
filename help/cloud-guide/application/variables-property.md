@@ -1,23 +1,27 @@
 ---
 title: 變數屬性
-description: 使用variables屬性自訂 [!DNL Commerce] 應用程式的存放區組態選項。
+description: 使用variables屬性自訂[!DNL Commerce]應用程式的存放區組態選項。
 feature: Cloud, Configuration
 exl-id: 9909d4a1-d9c8-492b-a5cc-cfbf17b5b7a8
-TQID: https://experienceleague.adobe.com/bNdcqNxAAE1E1Qe2C-y1LWpFX-8Kzuwc9rJYEnbRz0U
+TQID: 'https://experienceleague.adobe.com/bNdcqNxAAE1E1Qe2C-y1LWpFX-8Kzuwc9rJYEnbRz0U'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 86
+source-wordcount: '87'
 ht-degree: 0%
-
 ---
-
 # 變數屬性
 
 您可以使用應用程式型環境變數來自訂商店設定。 這些變數使用特定語法。 請參閱&#x200B;_組態指南_&#x200B;中的[覆寫組態設定](https://experienceleague.adobe.com/zh-hant/docs/commerce-operations/configuration-guide/paths/override-config-settings)。

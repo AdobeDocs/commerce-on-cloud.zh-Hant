@@ -3,13 +3,26 @@ title: Adobe Commerce進階安全性
 description: 瞭解進階安全性如何在雲端基礎結構上的Adobe Commerce中新增機器人管理、進階速率限制和第7層DDoS保護。
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 6bab2df0240c8b74a455de73fbf7a7645a46e904
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
 source-wordcount: '2514'
 ht-degree: 0%
-
 ---
-
 # [!DNL Adobe Commerce Advanced Security]
 
 [!DNL Adobe Commerce Advanced Security]是與[!DNL Adobe Commerce on Cloud Infrastructure]搭配使用的產品，可讓您的線上商店保持快速、可用和安全。 這些功能有助於在流量尖峰事件和自動攻擊期間保護營收、減少停機時間，並維持客戶信任。

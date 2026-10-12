@@ -3,23 +3,30 @@ title: 存放區設定管理
 description: 瞭解如何在雲端基礎結構環境中跨所有Adobe Commerce管理和同步處理存放區組態設定。
 feature: Cloud, Configuration, SCD
 exl-id: 01850a7b-2c03-45e8-8051-b24ae95c5f87
-TQID: https://experienceleague.adobe.com/TF-K8g48q2fnuldOLdnwxjAJrxGzsRJlongd7cRqV9U
+TQID: 'https://experienceleague.adobe.com/TF-K8g48q2fnuldOLdnwxjAJrxGzsRJlongd7cRqV9U'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Optimization
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1512
+source-wordcount: '1512'
 ht-degree: 0%
-
 ---
-
 # 存放區設定管理
 
 您存放區的預設設定儲存在適當模組的`config.xml`中。 當您在Commerce管理或CLI `bin/magento config:set`命令中變更設定時，這些變更會反映在核心資料庫中，特別是`core_config_data`表格。 這些設定會覆寫儲存在`config.xml`檔案中的預設組態。

@@ -4,21 +4,27 @@ description: 瞭解如何在雲端基礎結構專案上將Adobe Commerce與GitHu
 feature: Cloud, Integration
 last-substantial-update: 2023-05-25T00:00:00.000Z
 exl-id: 08e569fa-5ab4-45c0-82e6-476f25c17fe0
-TQID: https://experienceleague.adobe.com/7Lt2uWkU1kD8VoZAX--lGcJawdg3VEy9U39IS45dBvY
+TQID: 'https://experienceleague.adobe.com/7Lt2uWkU1kD8VoZAX--lGcJawdg3VEy9U39IS45dBvY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: cc04bd17-78d5-5120-8c3d-1b8a57e49280
+    internal-label: Integration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 972
+source-wordcount: '972'
 ht-degree: 0%
-
 ---
-
 # GitHub整合
 
 GitHub整合可讓您直接從GitHub存放庫在雲端基礎結構環境中管理Adobe Commerce。 此整合可管理GitHub中的內容，並在雲端基礎結構程式碼存放庫上與您的Adobe Commerce同步。 本質上，程式碼存放庫會成為GitHub存放庫的映象。

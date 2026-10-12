@@ -1,23 +1,27 @@
 ---
 title: 工作者
-description: 瞭解如何在 [!DNL Commerce] 應用程式設定檔案中設定Worker屬性。
+description: 瞭解如何在[!DNL Commerce]應用程式設定檔案中設定Worker屬性。
 feature: Cloud, Configuration
 exl-id: 62d9dfaf-6265-4016-8d68-26362cf6a63a
-TQID: https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o
+TQID: 'https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: '362'
 ht-degree: 0%
-
 ---
-
 # Workers屬性
 
 您可以定義工作程式獨立於Web執行個體執行，而不需要執行中的Nginx執行個體；但是，工作程式確實使用[!DNL Commerce]應用程式使用的相同網路儲存空間。 您不需要在背景工作執行個體上設定Web伺服器（使用Node.js或Go），因為路由器無法將公開要求導向背景工作。 這使得工作者執行個體非常適合用於背景工作或持續執行工作，這些工作可能會阻礙部署。

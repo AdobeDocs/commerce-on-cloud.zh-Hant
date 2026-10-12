@@ -5,21 +5,27 @@ role: Developer
 feature: Cloud, Integration
 last-substantial-update: 2024-02-06T00:00:00.000Z
 exl-id: 97c5f70d-1465-46c9-bb33-98897262c5ef
-TQID: https://experienceleague.adobe.com/07ozUcb8SWNcyRzgxClhaG5S-cOHqywkYWfke1rJB1g
+TQID: 'https://experienceleague.adobe.com/07ozUcb8SWNcyRzgxClhaG5S-cOHqywkYWfke1rJB1g'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: c32adafa-ed01-4b31-997e-2413013911b0
+    internal-label: Integrations
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: cc04bd17-78d5-5120-8c3d-1b8a57e49280
+    internal-label: Integration
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 574
+source-wordcount: '574'
 ht-degree: 0%
-
 ---
-
 # 整合總覽
 
 整合對於使用外部服務（例如Git託管或Slack機器人）和維護您目前的開發流程（例如使用GitHub中的程式碼檢閱提取請求函式）非常有用。 您可以在雲端基礎結構專案上新增下列整合至Adobe Commerce：

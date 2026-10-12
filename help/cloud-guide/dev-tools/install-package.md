@@ -3,21 +3,27 @@ title: 升級專案以使用ECE-Tools
 description: 瞭解如何在雲端基礎結構專案上升級Adobe Commerce，以使用ECE-Tools套件並利用最新的修正和功能。
 feature: Cloud, Install
 exl-id: 164c47e4-c871-41a3-b268-581d426e7a7f
-TQID: https://experienceleague.adobe.com/CH-wgIk-5aM6qIO7tdHI2jHlx1YgaEbLvfp4cEpSqTc
+TQID: 'https://experienceleague.adobe.com/CH-wgIk-5aM6qIO7tdHI2jHlx1YgaEbLvfp4cEpSqTc'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 376
+source-wordcount: '376'
 ht-degree: 0%
-
 ---
-
 # 升級專案以使用ECE-Tools套件
 
 Adobe已棄用`magento/magento-cloud-configuration`和`magento/ece-patches`套件，而改用`ece-tools`套件，這會簡化許多雲端程式。 如果您在雲端基礎結構專案上使用舊版的Adobe Commerce，但&#x200B;_不_&#x200B;包含`ece-tools`套件，則必須執行一次性的手動&#x200B;_升級_&#x200B;程式至您的專案。

@@ -3,25 +3,34 @@ title: 存放區設定的最佳做法
 description: 閱讀在Adobe Commerce雲端基礎結構上設定存放區的最佳實務。
 feature: Cloud, Best Practices
 exl-id: ae7da73b-f874-4623-bf29-821ee0a00eb9
-TQID: https://experienceleague.adobe.com/dhZ3IlMZ-8xCdbEQzjDNWoFALPxUIaIFN1ch0w6O6R0
+TQID: 'https://experienceleague.adobe.com/dhZ3IlMZ-8xCdbEQzjDNWoFALPxUIaIFN1ch0w6O6R0'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+    internal-label: Order Management System
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1185
+source-wordcount: '1185'
 ht-degree: 0%
-
 ---
-
 # 存放區設定的最佳做法
 
 如需設定商店、網站和網站的詳細資訊，請檢閱[Adobe Commerce使用手冊](https://experienceleague.adobe.com/zh-hant/docs/commerce-admin/user-guides/home)。 此頁面提供設定存放區、網站等的最佳實務、實用資訊和准則，以及隨著時間和不同版本張貼的其他內容。

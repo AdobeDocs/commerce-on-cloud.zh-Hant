@@ -3,24 +3,30 @@ title: 變數層級和選項
 description: 瞭解在雲端基礎結構專案執行階段環境中自訂Adobe Commerce時所使用的不同變數層級和選項。
 feature: Cloud, Configuration, Security
 exl-id: 6761cb45-9c8d-4a4e-940f-d62e0e15dcb4
-TQID: https://experienceleague.adobe.com/MRFC5zU5M3PtRiB-g69HqTIu--dN7iYjOcENNVp5cmA
+TQID: 'https://experienceleague.adobe.com/MRFC5zU5M3PtRiB-g69HqTIu--dN7iYjOcENNVp5cmA'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 456
+source-wordcount: '456'
 ht-degree: 0%
-
 ---
-
 # 變數層級
 
 專案變數適用於專案內的所有環境。 環境變數會套用至特定環境或分支。 環境&#x200B;_從父環境繼承_&#x200B;變數定義。

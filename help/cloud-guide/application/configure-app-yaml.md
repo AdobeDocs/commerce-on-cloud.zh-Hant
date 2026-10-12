@@ -1,23 +1,32 @@
 ---
 title: 設定應用程式部署
-description: 瞭解如何在應用程式設定檔案中設定屬性，以控制 [!DNL Commerce] 應用程式建置和部署到雲端環境的方式。
+description: 瞭解如何在應用程式設定檔案中設定屬性，以控制[!DNL Commerce]應用程式建置和部署到雲端環境的方式。
 feature: Cloud, Configuration, Build, Deploy
 exl-id: 47dcb13f-8873-495d-956f-08a5e04844d9
-TQID: https://experienceleague.adobe.com/LCTu-HeJCO1pp9trlZ7h74CxSQtyBr5SDmYP9DgCtkU
+TQID: 'https://experienceleague.adobe.com/LCTu-HeJCO1pp9trlZ7h74CxSQtyBr5SDmYP9DgCtkU'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 190
+source-wordcount: '191'
 ht-degree: 0%
-
 ---
-
 # 設定應用程式部署
 
 `.magento.app.yaml`檔案控制應用程式建置和部署的方式。 雖然雲端基礎結構上的Adobe Commerce支援每個專案使用多個應用程式，但通常一個專案有一個應用程式，且存放庫根目錄中有`.magento.app.yaml`個檔案。

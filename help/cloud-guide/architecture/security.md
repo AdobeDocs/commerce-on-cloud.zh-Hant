@@ -3,33 +3,47 @@ title: 雲端基礎結構安全性
 description: 瞭解Adobe如何確保雲端基礎結構上的Adobe Commerce安全。
 feature: Cloud, Security
 exl-id: ae934401-2c32-427a-8162-98df9a047cd4
-TQID: https://experienceleague.adobe.com/3qXIdZWVJ-jxSodN8YGSzE2TOvMzlMKXHgRizgLVoHk
+TQID: 'https://experienceleague.adobe.com/3qXIdZWVJ-jxSodN8YGSzE2TOvMzlMKXHgRizgLVoHk'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+    internal-label: Compliance
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: c32adafa-ed01-4b31-997e-2413013911b0
+    internal-label: Integrations
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
   - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+    internal-label: Reporting
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 subfeature_v2:
   - id: bcbf87e7-9b75-4596-bffe-0f376b4c73a7
+    internal-label: GDPR
   - id: f2261633-201d-46c5-8a66-999e70527a83
+    internal-label: PCI
   - id: f8ddfd3b-6194-46e8-a176-0e918039be56
+    internal-label: Cloud architecture
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Privacy
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1724
+source-wordcount: '1724'
 ht-degree: 0%
-
 ---
-
 # 安全性
 
 Adobe Commerce [Pro計畫架構](pro-architecture.md)可提供高度安全的環境。 每個客戶都會部署至各自獨立的伺服器環境，與其他客戶分開。 生產環境的安全性詳細資訊如下所述。

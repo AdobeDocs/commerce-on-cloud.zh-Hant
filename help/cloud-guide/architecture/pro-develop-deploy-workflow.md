@@ -3,27 +3,37 @@ title: Pro專案工作流程
 description: 瞭解如何使用Pro開發和部署工作流程。
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-TQID: https://experienceleague.adobe.com/bRmbWxABneX08LwTxhlUMFX2H7WbCqVg8DDS9RRxQNI
+TQID: 'https://experienceleague.adobe.com/bRmbWxABneX08LwTxhlUMFX2H7WbCqVg8DDS9RRxQNI'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 00451af3-7b97-5414-9992-3a6c269e413f
+    internal-label: Paas
 subfeature_v2:
   - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+    internal-label: IaaS
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 904
+source-wordcount: '904'
 ht-degree: 0%
-
 ---
-
 # Pro專案工作流程
 
 Pro專案包含單一Git存放庫，其中包含全域`master`分支和三個主要環境：

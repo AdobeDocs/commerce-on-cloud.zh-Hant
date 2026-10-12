@@ -3,22 +3,30 @@ title: 資料擷取
 description: 瞭解如何在New Relic中檢視和管理Commerce資料擷取。
 feature: Cloud, Observability
 exl-id: b457b4de-deeb-4e92-b95a-c2b89d6f7a05
-TQID: https://experienceleague.adobe.com/60hhI0IvazUSrw6cCRoXfbGjA4fkLLPXb8Q4Q08AqeE
+TQID: 'https://experienceleague.adobe.com/60hhI0IvazUSrw6cCRoXfbGjA4fkLLPXb8Q4Q08AqeE'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Administration
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 209
+source-wordcount: '221'
 ht-degree: 0%
-
 ---
-
 # 資料擷取
 
 New Relic仰賴豐富的資料來提供有效的監控和分析，但大型資料集可能會影響即時的結果、效能和合規性。 本主題提供有關管理資料擷取的一些指引，以及精簡資料的策略，以便使其最有效。
@@ -33,7 +41,7 @@ New Relic提供&#x200B;_資料管理_&#x200B;檢視，可依資料來源彙總�
    ![資料管理](../../assets/new-relic/data-ingestion.png)
 
    **[!UICONTROL Data ingestion]**&#x200B;索引標籤會顯示擷取的當天資料以及資料來源。
-資料保留索引標籤會顯示並控制資料儲存的時間。
+   資料保留索引標籤會顯示並控制資料儲存的時間。
 
 1. 選取「**[!UICONTROL Limits]**」標籤，並檢視您帳戶的限制。
 

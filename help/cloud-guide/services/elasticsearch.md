@@ -3,23 +3,33 @@ title: 設定Elasticsearch服務
 description: 瞭解如何在雲端基礎結構上啟用適用於Adobe Commerce的Elasticsearch服務。
 feature: Cloud, Search, Services
 exl-id: 238b9ed5-ce73-428f-9459-35de8573d5d8
-TQID: https://experienceleague.adobe.com/RYv3SjF62YHhPtM9vFrlPD0MVwfPS7EIhHxQXaMEeuI
+TQID: 'https://experienceleague.adobe.com/RYv3SjF62YHhPtM9vFrlPD0MVwfPS7EIhHxQXaMEeuI'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+subfeature_v2:
+  - id: a1d22079-48b9-5e69-9ee6-eb236068ef34
+    internal-label: Search
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 783
+source-wordcount: '783'
 ht-degree: 0%
-
 ---
-
 # 設定Elasticsearch服務
 
 [Elasticsearch](https://www.elastic.co)是開放原始碼產品，可讓您從任何來源取得資料、任何格式，並即時搜尋和視覺化資料。

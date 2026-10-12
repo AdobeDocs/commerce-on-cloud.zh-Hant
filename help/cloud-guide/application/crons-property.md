@@ -1,25 +1,30 @@
 ---
 title: Crons屬性
-description: 請參閱如何在 [!DNL Commerce] 應用程式組態檔中設定'crons'屬性的範例。
+description: 請參閱如何在[!DNL Commerce]應用程式設定檔案中設定'crons'屬性的範例。
 feature: Cloud, Configuration
 exl-id: ff176cb1-5b6c-48a0-ad3c-56cc1d606c97
-TQID: https://experienceleague.adobe.com/E7qXe1VmZezG9AqJ2rchTUmbTibU0pNaGdqb00MkcXo
+TQID: 'https://experienceleague.adobe.com/E7qXe1VmZezG9AqJ2rchTUmbTibU0pNaGdqb00MkcXo'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1190
+source-wordcount: '1191'
 ht-degree: 0%
-
 ---
-
 # Crons屬性
 
 Adobe Commerce使用`crons`屬性來排程重複活動。 它非常適合用於排程在一天中的特定時間執行的特定工作。 由於唯讀環境的性質，在雲端基礎結構專案的Adobe Commerce的Web執行個體上一次只能執行一個cron工作。 最佳實務是將長期執行的工作分解為較小的已排入佇列的工作。 或者，您也可以建置[背景工作執行個體](workers-property.md)。

@@ -4,19 +4,25 @@ description: 瞭解您的Adobe Commerce在雲端基礎結構專案中可用的Ne
 feature: Cloud, Observability
 last-substantial-update: 2023-09-06T00:00:00.000Z
 exl-id: 10966241-311d-4b68-804d-4c9569bf933d
-TQID: https://experienceleague.adobe.com/TzgxuxAgzcExYd8BsFh5FTsgFAMy5-qjAOmUdlwqMME
+TQID: 'https://experienceleague.adobe.com/TzgxuxAgzcExYd8BsFh5FTsgFAMy5-qjAOmUdlwqMME'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 83bab481da52667e8ffb81563109429c7c6b65dd
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 457
+source-wordcount: '457'
 ht-degree: 0%
-
 ---
-
 # New Relic服務總覽
 
 雲端基礎結構上的所有Adobe Commerce專案都包含存取New Relic服務，以協助監視效能和調查[!DNL Commerce]應用程式和雲端基礎結構的事件。

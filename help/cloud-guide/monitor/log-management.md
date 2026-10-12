@@ -3,19 +3,30 @@ title: New Relic記錄管理
 description: 瞭解如何使用New Relic記錄管理來彙總、搜尋及視覺化您的Commerce雲端測試和生產環境中的記錄資料。
 feature: Cloud, Logs, Observability
 exl-id: b7636075-56fd-4227-b7e8-67acbe1defc5
-TQID: https://experienceleague.adobe.com/gh3OUHKvbN462Z4w-2qnTwVQHA0IbwWNvRBfdrQKkrE
+TQID: 'https://experienceleague.adobe.com/gh3OUHKvbN462Z4w-2qnTwVQHA0IbwWNvRBfdrQKkrE'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+subfeature_v2:
+  - id: 3c398179-d35a-51ba-b317-6c5b95feef5e
+    internal-label: Logs
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 397
+source-wordcount: '397'
 ht-degree: 0%
-
 ---
-
 # New Relic記錄管理
 
 所有雲端基礎結構專案都包含[New Relic記錄管理](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/)。 此服務已預先設定為彙總測試和生產環境的所有記錄資料，並在集中式記錄管理儀表板中顯示。
