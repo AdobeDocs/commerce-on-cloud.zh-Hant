@@ -8,21 +8,23 @@ exl-id: 1154a066-f8c2-42df-97f6-7f703ab883ea
 TQID: https://experienceleague.adobe.com/VrLzgOu0RKeuOwAW7mlJnbawbxy0nxR1da3VQFWUh8c
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 last-update: 2026-09-09
-source-git-commit: 2bd8125217ddba99d38629d5d01b2875a5392841
+source-git-commit: 74cb44aaa4a1c178561bfd1ac7b40c0f3ceb7551
 workflow-type: tm+mt
-source-wordcount: 24
+source-wordcount: '24'
 ht-degree: 0%
-
 ---
-
 # ECE-Tools CLI參考
 
 {{$include /help/_includes/templated/ece-tools.md}}
 
-<!-- Last updated from includes: 2026-08-21 12:29:41 -->
+<!-- Last updated from includes: 2026-09-09 12:34:41 -->
