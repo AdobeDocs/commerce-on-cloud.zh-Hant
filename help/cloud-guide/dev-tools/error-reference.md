@@ -7,21 +7,24 @@ exl-id: e240c268-b171-44e9-9fa4-f0e91b0d9899
 TQID: https://experienceleague.adobe.com/FpWmyt0POi3RgKQOf6ihQQVV6GazxRByu-4HdPIhTPY
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+    internal-label: Reporting
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
 last-update: 2026-09-09
-source-git-commit: 2bd8125217ddba99d38629d5d01b2875a5392841
+source-git-commit: 74cb44aaa4a1c178561bfd1ac7b40c0f3ceb7551
 workflow-type: tm+mt
-source-wordcount: 253
+source-wordcount: '253'
 ht-degree: 0%
-
 ---
-
 # ECE工具的錯誤訊息
 
 此錯誤訊息參考提供在Adobe Commerce雲端基礎結構建置、部署和部署後程式期間可能發生的錯誤疑難排解資訊。
@@ -45,4 +48,4 @@ ht-degree: 0%
 
 {{$include /help/_includes/automated/ece-tools-error-codes.md}}
 
-<!-- Last updated from includes: 2026-08-24 17:12:04 -->
+<!-- Last updated from includes: 2026-09-09 12:34:41 -->

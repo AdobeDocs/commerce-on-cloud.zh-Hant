@@ -25,9 +25,9 @@ role_v2:
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: f25bd014c1b6f546d3395db1691128b3e63bfa85
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '555'
 ht-degree: 0%
 ---
 # 開發概覽
@@ -75,7 +75,6 @@ Composer會將專案所需的程式庫和相依性安裝在`vendor`目錄中。 
 - **vendor/magento/ece-tools** — 此`ece-tools`套件與Adobe Commerce 2.1.4版或更新版本相容，提供您可用來在雲端基礎結構專案上管理Adobe Commerce的豐富功能。 它包含雲端基礎結構命令上的指令碼和Adobe Commerce，旨在協助管理您的程式碼並自動建置和部署您的專案。 檢視[`ece-tools`封裝總覽](../dev-tools/package-overview.md)。
 - **vendor/magento/product-enterprise-edition** — 此中繼資料需要應用程式元件，包括模組、架構、主題等。
 - **vendor/fastly2/magento2** — 此模組管理Pro測試環境、生產環境和入門生產環境的Fastly CDN和服務。 檢視[Fastly服務](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2)。
-- **vendor/magento/module-paypal-on-boarding** — 此模組會連線至您的PayPal商家帳戶，以提供PayPal付款閘道結帳。 請參閱[PayPal上線工具](../store/paypal.md)。
 - **廠商/aem/rum** — 此模組管理[作業遙測](../monitor/operational-telemetry.md)資料收集工具。
 
 >[!TIP]

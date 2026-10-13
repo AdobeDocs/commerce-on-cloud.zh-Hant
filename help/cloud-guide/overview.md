@@ -25,7 +25,7 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
 last-update: 2026-09-18
-source-git-commit: 6b9cbce898860cf5d35c6ee81c9ee60841a2c304
+source-git-commit: 74cb44aaa4a1c178561bfd1ac7b40c0f3ceb7551
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
@@ -84,4 +84,4 @@ Commerce雲端基礎結構指南假設您具備一些關於Adobe Commerce應用�
 
 {{$include /help/_includes/templated/whats-new.md}}
 
-<!-- Last updated from includes: 2026-09-04 20:31:52 -->
+<!-- Last updated from includes: 2026-09-18 20:31:39 -->
