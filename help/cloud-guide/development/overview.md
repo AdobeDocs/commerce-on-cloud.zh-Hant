@@ -25,16 +25,16 @@ role_v2:
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: f25bd014c1b6f546d3395db1691128b3e63bfa85
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '555'
 ht-degree: 0%
 ---
 # 開發概覽
 
 雲端基礎結構遠端環境上的Adobe Commerce是&#x200B;**唯讀**，包括所有入門環境以及所有Pro整合、中繼和生產環境。 在本機開發環境中，您可以先撰寫及測試程式碼，再將程式碼推送至整合環境，進一步測試並部署到中繼和生產環境。
 
-在準備本機工作區之前，請確定您有[認證](../../get-started/prepare-workspace.md)。 本機開發需要安裝PHP和Composer，除非您選擇使用適用於Commerce[&#128279;](#docker-environment)的Cloud Docker。
+在準備本機工作區之前，請確定您有[認證](../../get-started/prepare-workspace.md)。 本機開發需要安裝PHP和Composer，除非您選擇使用適用於Commerce](#docker-environment)的[Cloud Docker。
 
 ## 必要的套件
 
@@ -75,7 +75,6 @@ Composer會將專案所需的程式庫和相依性安裝在`vendor`目錄中。 
 - **vendor/magento/ece-tools** — 此`ece-tools`套件與Adobe Commerce 2.1.4版或更新版本相容，提供您可用來在雲端基礎結構專案上管理Adobe Commerce的豐富功能。 它包含雲端基礎結構命令上的指令碼和Adobe Commerce，旨在協助管理您的程式碼並自動建置和部署您的專案。 檢視[`ece-tools`封裝總覽](../dev-tools/package-overview.md)。
 - **vendor/magento/product-enterprise-edition** — 此中繼資料需要應用程式元件，包括模組、架構、主題等。
 - **vendor/fastly2/magento2** — 此模組管理Pro測試環境、生產環境和入門生產環境的Fastly CDN和服務。 檢視[Fastly服務](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2)。
-- **vendor/magento/module-paypal-on-boarding** — 此模組會連線至您的PayPal商家帳戶，以提供PayPal付款閘道結帳。 請參閱[PayPal上線工具](../store/paypal.md)。
 - **廠商/aem/rum** — 此模組管理[作業遙測](../monitor/operational-telemetry.md)資料收集工具。
 
 >[!TIP]
@@ -86,7 +85,7 @@ Composer會將專案所需的程式庫和相依性安裝在`vendor`目錄中。 
 
 您可以使用適用於Commerce的Cloud Docker工具，在本地開發的雲端基礎結構生產和開發環境中模擬Adobe Commerce。 適用於Commerce的Cloud Docker不需要在本機安裝PHP和Composer。
 
-- 在Adobe Developer網站中使用Cloud Docker[&#128279;](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)進行本機開發
+- 在Adobe Developer網站中使用Cloud Docker](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)進行[本機開發
 - [Docker架構和常用命令](../dev-tools/cloud-docker.md)
 - [Cloud Docker發行說明](../release-notes/cloud-docker.md)
 
