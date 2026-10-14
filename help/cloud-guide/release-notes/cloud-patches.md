@@ -29,9 +29,9 @@ topic_v2:
     internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
+source-git-commit: df46dbad973a1042e02fccc47c3fc17227a453a5
 workflow-type: tm+mt
-source-wordcount: '3097'
+source-wordcount: '3098'
 ht-degree: 0%
 ---
 # Commerce雲端修補程式
@@ -60,7 +60,7 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 發行日期： 2026年10月13日
 
-- ![修正圖示](../../assets/fix.svg) **安全性改善** — 已套用[Adobe Commerce安全性更新APSB26-153](https://helpx.adobe.com/security/products/magento/apsb26-153.html)中參考的安全性修正。<!--MCLOUD-15727 -->
+- ![修正圖示](../../assets/fix.svg) **安全性改善** — 已套用[Adobe Commerce安全性更新APSB26-153](https://www.adobe.com/trust/security/products/commerce/apsb26-153.html)中參考的安全性修正。<!--MCLOUD-15727 -->
 
 ## v1.1.21
 
