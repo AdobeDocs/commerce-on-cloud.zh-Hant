@@ -24,8 +24,8 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-last-update: 2026-09-18
-source-git-commit: 74cb44aaa4a1c178561bfd1ac7b40c0f3ceb7551
+last-update: 2026-10-16
+source-git-commit: 0126689d3df966fe5d4000e2acd10bdce8c0b77e
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
