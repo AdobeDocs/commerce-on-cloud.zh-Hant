@@ -5,11 +5,15 @@ exl-id: 15d762ef-bca7-480b-b719-caf131dc9180
 TQID: https://experienceleague.adobe.com/YMuy2Ta0Ylkewxb2EhQgpZG8WW8bG4kFzrCXm0A7rX0
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 source-git-commit: 32426a82db5a81306c1dcc670a8268a9f5959874
 workflow-type: tm+mt
 source-wordcount: 449
