@@ -57,7 +57,7 @@ ht-degree: 0%
 
 您可以將[!DNL Xdebug]直接啟用至所有入門環境和Pro整合環境。 Pro生產和中繼環境不需要此設定步驟。 請參閱[Pro Staging和生產的Debug](#debug-for-pro-staging-and-production)。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437407?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505685?captions=chi_hant&learn=on)
 
 若要啟用專案的[!DNL Xdebug]，請新增`xdebug`至`.magento.app.yaml`檔案的`runtime:extensions`區段。
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 ### 設定PhpStorm伺服器
 
->[!VIDEO](https://video.tv.adobe.com/v/3437409?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505703?captions=chi_hant&learn=on)
 
 [PhpStorm](https://www.jetbrains.com/phpstorm/) IDE必須設定為可正確搭配[!DNL Xdebug]使用。
 
@@ -137,7 +137,7 @@ ht-degree: 0%
 
 這可讓應用程式擁有正確的偵錯設定，以處理來自Adobe Commerce應用程式的請求。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437426?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505748?captions=chi_hant&learn=on)
 
 1. 開啟PHPStorm應用程式，然後按一下畫面右上角的&#x200B;**[!UICONTROL Add Configuration]**。
 
@@ -154,7 +154,7 @@ ht-degree: 0%
 
 ### 設定連線埠轉送
 
->[!VIDEO](https://video.tv.adobe.com/v/3437410?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505694?captions=chi_hant&learn=on)
 
 將伺服器的`XDEBUG`連線對應到您的本機系統。 若要執行任何型別的偵錯，您必須將連線埠9000從雲端基礎結構伺服器上的Adobe Commerce轉送至本機電腦。 請參閱下列其中一節：
 
@@ -323,7 +323,7 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 
 這是使用的組態示範，以及啟動遠端偵錯工作階段的GET引數示範。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437417?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505729?captions=chi_hant&learn=on)
 
 1. 啟用遠端偵錯；造訪瀏覽器中的網站，並將下列專案附加至`KEY`為`xdebug_key`值的URL。
 
