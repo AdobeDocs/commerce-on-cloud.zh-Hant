@@ -32,9 +32,9 @@ topic_v2:
     internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 20c3ed7b632d940ccb63a4c1c506969867e72e36
 workflow-type: tm+mt
-source-wordcount: '4535'
+source-wordcount: '4586'
 ht-degree: 0%
 ---
 # Cloud Docker包
@@ -50,7 +50,15 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.10 {#latest}
+## v1.4.11 {#latest}
+
+發行日期： 2026年11月19日
+
+- ![新圖示](../../assets/new.svg) **Nginx** — 已新增影像nginx v1.30.7。<!-- MCLOUD-16080 -->
+- ![新圖示](../../assets/new.svg) **已升級PHP 8.1 FPM基礎映像** — 已將Cloud Docker `php-fpm` 8.1映像更新為`php:8.1-fpm`基礎映像(PHP 8.1.34)。<!-- MCLOUD-16082 -->
+- ![修正圖示](../../assets/fix.svg) **Java安全性強化** — 評估雲端工具中的Java使用方式，並套用必要的修正和緩解。<!-- MCLOUD-16055 -->
+
+## v1.4.10
 
 發行日期： 2026年10月08日
 
